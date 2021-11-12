@@ -71,7 +71,6 @@
 80050EC0,osVirtualToPhysical
 80055B40,__osVoiceContWrite4
 800583F0,__osSiGetAccess
-80052610,bcopy
 80058460,__osSiRawStartDma
 80055630,__osVoiceGetStatus
 80058434,__osSiRelAccess
