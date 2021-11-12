@@ -91,7 +91,7 @@ glabel func_800503B0 # 0
 /* 050090 800504E0 AFA80038 */  sw          $t0, 0x38($sp)
 /* 050094 800504E4 8E040040 */  lw          $a0, 0x40($s0)
 /* 050098 800504E8 AFA2002C */  sw          $v0, 0x2c($sp)
-/* 05009C 800504EC 0C0143B0 */  jal         func_80050EC0
+/* 05009C 800504EC 0C0143B0 */  jal         osVirtualToPhysical
 /* 0500A0 800504F0 AFA30044 */   sw         $v1, 0x44($sp)
 /* 0500A4 800504F4 3C0100FF */  lui         $at, 0xff
 /* 0500A8 800504F8 3421FFFF */  ori         $at, $at, 0xffff

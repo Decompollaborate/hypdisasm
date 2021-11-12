@@ -94,7 +94,7 @@ glabel func_800583A0 # 1
 /* 057F98 800583E8 03E00008 */  jr          $ra
 /* 057F9C 800583EC 00000000 */   nop
 
-glabel func_800583F0 # 2
+glabel __osSiGetAccess # 2
 /* 057FA0 800583F0 3C0E800A */  lui         $t6, %hi(D_8009F8B0)
 /* 057FA4 800583F4 8DCEF8B0 */  lw          $t6, %lo(D_8009F8B0)($t6)
 /* 057FA8 800583F8 27BDFFE0 */  addiu       $sp, $sp, -0x20
@@ -114,7 +114,7 @@ glabel func_800583F0 # 2
 /* 057FDC 8005842C 03E00008 */  jr          $ra
 /* 057FE0 80058430 00000000 */   nop
 
-glabel func_80058434 # 3
+glabel __osSiRelAccess # 3
 /* 057FE4 80058434 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 057FE8 80058438 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 057FEC 8005843C 3C048010 */  lui         $a0, %hi(D_80100318)
@@ -127,7 +127,7 @@ glabel func_80058434 # 3
 /* 058008 80058458 03E00008 */  jr          $ra
 /* 05800C 8005845C 00000000 */   nop
 
-glabel func_80058460 # 4
+glabel __osSiRawStartDma # 4
 /* 058010 80058460 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 058014 80058464 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 058018 80058468 AFA5001C */  sw          $a1, 0x1c($sp)
@@ -149,7 +149,7 @@ glabel func_80058460 # 4
 /* 058054 800584A4 8FA60018 */  lw          $a2, 0x18($sp)
 .L800584A8:
 /* 058058 800584A8 8FA4001C */  lw          $a0, 0x1c($sp)
-/* 05805C 800584AC 0C0143B0 */  jal         func_80050EC0
+/* 05805C 800584AC 0C0143B0 */  jal         osVirtualToPhysical
 /* 058060 800584B0 AFA60018 */   sw         $a2, 0x18($sp)
 /* 058064 800584B4 8FA60018 */  lw          $a2, 0x18($sp)
 /* 058068 800584B8 3C19A480 */  lui         $t9, %hi(D_A4800000)

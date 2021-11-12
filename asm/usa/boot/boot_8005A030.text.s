@@ -27,7 +27,7 @@ glabel func_8005A030 # 0
 /* 059C14 8005A064 55E0FFFE */  bnel        $t7, $zero, .L8005A060
 /* 059C18 8005A068 8C620000 */   lw         $v0, 0x0($v1)
 .L8005A06C:
-/* 059C1C 8005A06C 0C0143B0 */  jal         func_80050EC0
+/* 059C1C 8005A06C 0C0143B0 */  jal         osVirtualToPhysical
 /* 059C20 8005A070 AFA70024 */   sw         $a3, 0x24($sp)
 /* 059C24 8005A074 8FA30018 */  lw          $v1, 0x18($sp)
 /* 059C28 8005A078 8FA70024 */  lw          $a3, 0x24($sp)

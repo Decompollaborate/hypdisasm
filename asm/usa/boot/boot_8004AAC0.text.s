@@ -2011,7 +2011,7 @@ glabel func_8004AB94 # 2
 /* 04C480 8004C8D0 00C02825 */  move        $a1, $a2
 /* 04C484 8004C8D4 00809825 */  move        $s3, $a0
 /* 04C488 8004C8D8 27A60033 */  addiu       $a2, $sp, 0x33
-/* 04C48C 8004C8DC 0C01558C */  jal         func_80055630
+/* 04C48C 8004C8DC 0C01558C */  jal         __osVoiceGetStatus
 /* 04C490 8004C8E0 AFA7004C */   sw         $a3, 0x4c($sp)
 /* 04C494 8004C8E4 10400003 */  beq         $v0, $zero, .L8004C8F4
 /* 04C498 8004C8E8 02602025 */   move       $a0, $s3
@@ -2063,7 +2063,7 @@ glabel func_8004AB94 # 2
 /* 04C540 8004C990 02602025 */  move        $a0, $s3
 .L8004C994:
 /* 04C544 8004C994 02402825 */  move        $a1, $s2
-/* 04C548 8004C998 0C01558C */  jal         func_80055630
+/* 04C548 8004C998 0C01558C */  jal         __osVoiceGetStatus
 /* 04C54C 8004C99C 27A60033 */   addiu      $a2, $sp, 0x33
 /* 04C550 8004C9A0 50400004 */  beql        $v0, $zero, .L8004C9B4
 /* 04C554 8004C9A4 8FA2004C */   lw         $v0, 0x4c($sp)
@@ -2100,7 +2100,7 @@ glabel func_8004AB94 # 2
 /* 04C5C4 8004CA14 02602025 */   move       $a0, $s3
 /* 04C5C8 8004CA18 02602025 */  move        $a0, $s3
 /* 04C5CC 8004CA1C 02402825 */  move        $a1, $s2
-/* 04C5D0 8004CA20 0C01558C */  jal         func_80055630
+/* 04C5D0 8004CA20 0C01558C */  jal         __osVoiceGetStatus
 /* 04C5D4 8004CA24 27A60033 */   addiu      $a2, $sp, 0x33
 /* 04C5D8 8004CA28 10400003 */  beq         $v0, $zero, .L8004CA38
 /* 04C5DC 8004CA2C 93AC0033 */   lbu        $t4, 0x33($sp)
@@ -2117,7 +2117,7 @@ glabel func_8004AB94 # 2
 /* 04C600 8004CA50 02602025 */  move        $a0, $s3
 /* 04C604 8004CA54 02402825 */  move        $a1, $s2
 /* 04C608 8004CA58 00003025 */  move        $a2, $zero
-/* 04C60C 8004CA5C 0C0156D0 */  jal         func_80055B40
+/* 04C60C 8004CA5C 0C0156D0 */  jal         __osVoiceContWrite4
 /* 04C610 8004CA60 27A7002C */   addiu      $a3, $sp, 0x2c
 /* 04C614 8004CA64 10400003 */  beq         $v0, $zero, .L8004CA74
 /* 04C618 8004CA68 8FA4004C */   lw         $a0, 0x4c($sp)
@@ -2150,7 +2150,7 @@ glabel func_8004CAAC # 3
 /* 04C66C 8004CABC AFA50094 */  sw          $a1, 0x94($sp)
 /* 04C670 8004CAC0 8E050004 */  lw          $a1, 0x4($s0)
 /* 04C674 8004CAC4 8C840000 */  lw          $a0, 0x0($a0)
-/* 04C678 8004CAC8 0C01558C */  jal         func_80055630
+/* 04C678 8004CAC8 0C01558C */  jal         __osVoiceGetStatus
 /* 04C67C 8004CACC 27A60083 */   addiu      $a2, $sp, 0x83
 /* 04C680 8004CAD0 10400003 */  beq         $v0, $zero, .L8004CAE0
 /* 04C684 8004CAD4 93AE0083 */   lbu        $t6, 0x83($sp)
@@ -2277,7 +2277,7 @@ glabel func_8004CC5C # 4
 /* 04C824 8004CC74 8E050004 */  lw          $a1, 0x4($s0)
 /* 04C828 8004CC78 8C840000 */  lw          $a0, 0x0($a0)
 /* 04C82C 8004CC7C AFA70070 */  sw          $a3, 0x70($sp)
-/* 04C830 8004CC80 0C01558C */  jal         func_80055630
+/* 04C830 8004CC80 0C01558C */  jal         __osVoiceGetStatus
 /* 04C834 8004CC84 27A6005B */   addiu      $a2, $sp, 0x5b
 /* 04C838 8004CC88 10400003 */  beq         $v0, $zero, .L8004CC98
 /* 04C83C 8004CC8C 8FA70070 */   lw         $a3, 0x70($sp)
@@ -2369,7 +2369,7 @@ glabel func_8004CDA4 # 5
 /* 04C964 8004CDB4 AFA50034 */  sw          $a1, 0x34($sp)
 /* 04C968 8004CDB8 8E050004 */  lw          $a1, 0x4($s0)
 /* 04C96C 8004CDBC 8C840000 */  lw          $a0, 0x0($a0)
-/* 04C970 8004CDC0 0C01558C */  jal         func_80055630
+/* 04C970 8004CDC0 0C01558C */  jal         __osVoiceGetStatus
 /* 04C974 8004CDC4 27A6002B */   addiu      $a2, $sp, 0x2b
 /* 04C978 8004CDC8 10400003 */  beq         $v0, $zero, .L8004CDD8
 /* 04C97C 8004CDCC 93AE002B */   lbu        $t6, 0x2b($sp)
@@ -2391,7 +2391,7 @@ glabel func_8004CDA4 # 5
 /* 04C9B4 8004CE04 A0E20002 */  sb          $v0, 0x2($a3)
 /* 04C9B8 8004CE08 8E050004 */  lw          $a1, 0x4($s0)
 /* 04C9BC 8004CE0C 8E040000 */  lw          $a0, 0x0($s0)
-/* 04C9C0 8004CE10 0C0156D0 */  jal         func_80055B40
+/* 04C9C0 8004CE10 0C0156D0 */  jal         __osVoiceContWrite4
 /* 04C9C4 8004CE14 00003025 */   move       $a2, $zero
 /* 04C9C8 8004CE18 10400003 */  beq         $v0, $zero, .L8004CE28
 /* 04C9CC 8004CE1C 02002025 */   move       $a0, $s0

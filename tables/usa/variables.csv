@@ -7,3 +7,6 @@
 8009F890,__osThreadTail,OSThread*,4
 8009F8A0,__osRunningThread,OSThread*,4
 8009EE70,sintable,s16,0x800
+8009F8C0,__osPfsLastChannel,s32,4
+800FDC50,__osContLastPoll,u8,1
+80100390,__osPfsPifRam,OSPifRam,0x40

@@ -106,7 +106,7 @@ glabel func_8005A100 # 0
 /* 059DF8 8005A248 A0690008 */  sb          $t1, 0x8($v1)
 /* 059DFC 8005A24C 00E02025 */  move        $a0, $a3
 .L8005A250:
-/* 059E00 8005A250 0C0143B0 */  jal         func_80050EC0
+/* 059E00 8005A250 0C0143B0 */  jal         osVirtualToPhysical
 /* 059E04 8005A254 AFA50024 */   sw         $a1, 0x24($sp)
 /* 059E08 8005A258 8FA50024 */  lw          $a1, 0x24($sp)
 /* 059E0C 8005A25C 3C0AA460 */  lui         $t2, %hi(D_A4600000)
