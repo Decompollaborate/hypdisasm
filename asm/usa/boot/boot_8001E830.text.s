@@ -214,9 +214,9 @@ glabel func_8001EAF4 # 3
 /* 01E6B8 8001EB08 AFB00014 */  sw          $s0, 0x14($sp)
 /* 01E6BC 8001EB0C 00809025 */  move        $s2, $a0
 /* 01E6C0 8001EB10 8C900054 */  lw          $s0, 0x54($a0)
-/* 01E6C4 8001EB14 3C04800B */  lui         $a0, 0x800b
+/* 01E6C4 8001EB14 3C04800B */  lui         $a0, %hi(D_800B6C54)
 /* 01E6C8 8001EB18 0C0462B3 */  jal         func_80118ACC
-/* 01E6CC 8001EB1C 8C846C54 */   lw         $a0, 0x6c54($a0)
+/* 01E6CC 8001EB1C 8C846C54 */   lw         $a0, %lo(D_800B6C54)($a0)
 /* 01E6D0 8001EB20 3C04800F */  lui         $a0, %hi(D_800EF6A0)
 /* 01E6D4 8001EB24 3C06800B */  lui         $a2, %hi(D_800B6C58)
 /* 01E6D8 8001EB28 00409825 */  move        $s3, $v0

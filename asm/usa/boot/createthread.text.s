@@ -80,12 +80,12 @@ glabel osCreateThread # 0
 /* 05075C 80050BAC 8D4AF89C */  lw          $t2, %lo(__osActiveQueue)($t2)
 /* 050760 80050BB0 8FAB0028 */  lw          $t3, 0x28($sp)
 /* 050764 80050BB4 00408025 */  move        $s0, $v0
-/* 050768 80050BB8 3C01800A */  lui         $at, 0x800a
+/* 050768 80050BB8 3C01800A */  lui         $at, %hi(__osActiveQueue)
 /* 05076C 80050BBC AD6A000C */  sw          $t2, 0xc($t3)
 /* 050770 80050BC0 8FB90028 */  lw          $t9, 0x28($sp)
 /* 050774 80050BC4 02002025 */  move        $a0, $s0
 /* 050778 80050BC8 0C016018 */  jal         __osRestoreInt
-/* 05077C 80050BCC AC39F89C */   sw         $t9, -0x764($at)
+/* 05077C 80050BCC AC39F89C */   sw         $t9, %lo(__osActiveQueue)($at)
 /* 050780 80050BD0 8FBF001C */  lw          $ra, 0x1c($sp)
 /* 050784 80050BD4 8FB00018 */  lw          $s0, 0x18($sp)
 /* 050788 80050BD8 27BD0028 */  addiu       $sp, $sp, 0x28

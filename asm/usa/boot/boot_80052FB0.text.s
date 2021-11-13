@@ -35,10 +35,10 @@ glabel func_80052FB0 # 0
 /* 052BB4 80053004 0C016118 */  jal         func_80058460
 /* 052BB8 80053008 00002025 */   move       $a0, $zero
 /* 052BBC 8005300C 240F0001 */  addiu       $t7, $zero, 0x1
-/* 052BC0 80053010 3C018010 */  lui         $at, 0x8010
+/* 052BC0 80053010 3C018010 */  lui         $at, %hi(D_800FDC50)
 /* 052BC4 80053014 AFA2001C */  sw          $v0, 0x1c($sp)
 /* 052BC8 80053018 0C01610D */  jal         func_80058434
-/* 052BCC 8005301C A02FDC50 */   sb         $t7, -0x23b0($at)
+/* 052BCC 8005301C A02FDC50 */   sb         $t7, %lo(D_800FDC50)($at)
 /* 052BD0 80053020 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 052BD4 80053024 8FA2001C */  lw          $v0, 0x1c($sp)
 /* 052BD8 80053028 27BD0020 */  addiu       $sp, $sp, 0x20
