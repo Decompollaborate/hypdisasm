@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005B030 # 0
+glabel __osVoiceContDataCrc # 0
 /* 000000 8005B030 00803025 */  move        $a2, $a0
 /* 000004 8005B034 00001825 */  move        $v1, $zero
 /* 000008 8005B038 10A00018 */  beq         $a1, $zero, .L8005B09C

@@ -90,7 +90,7 @@ glabel func_8005AAE0 # 0
 .L8005ABFC:
 /* 00011C 8005ABFC 8FB80048 */  lw          $t8, 0x48($sp)
 /* 000120 8005AC00 30A4FFFF */  andi        $a0, $a1, 0xffff
-/* 000124 8005AC04 0C0161A8 */  jal         func_800586A0
+/* 000124 8005AC04 0C0161A8 */  jal         __osContAddressCrc
 /* 000128 8005AC08 A2180004 */   sb         $t8, 0x4($s0)
 /* 00012C 8005AC0C 8FB90044 */  lw          $t9, 0x44($sp)
 /* 000130 8005AC10 24040001 */  addiu       $a0, $zero, 0x1
@@ -116,7 +116,7 @@ glabel func_8005AAE0 # 0
 /* 000180 8005AC60 00099903 */  sra         $s3, $t1, 4
 /* 000184 8005AC64 56600014 */  bnel        $s3, $zero, .L8005ACB8
 /* 000188 8005AC68 24130001 */   addiu      $s3, $zero, 0x1
-/* 00018C 8005AC6C 0C016C0C */  jal         func_8005B030
+/* 00018C 8005AC6C 0C016C0C */  jal         __osVoiceContDataCrc
 /* 000190 8005AC70 24050024 */   addiu      $a1, $zero, 0x24
 /* 000194 8005AC74 920B002A */  lbu         $t3, 0x2a($s0)
 /* 000198 8005AC78 27A60063 */  addiu       $a2, $sp, 0x63

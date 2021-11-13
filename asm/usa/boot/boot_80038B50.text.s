@@ -9,14 +9,14 @@
 
 .balign 16
 
-glabel func_80038B50 # 0
+glabel Math_FTanF # 0
 /* 000000 80038B50 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 000004 80038B54 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 000008 80038B58 E7AC0020 */  swc1        $f12, 0x20($sp)
-/* 00000C 80038B5C 0C014FF0 */  jal         func_80053FC0
+/* 00000C 80038B5C 0C014FF0 */  jal         __sinf
 /* 000010 80038B60 C7AC0020 */   lwc1       $f12, 0x20($sp)
 /* 000014 80038B64 E7A0001C */  swc1        $f0, 0x1c($sp)
-/* 000018 80038B68 0C015060 */  jal         func_80054180
+/* 000018 80038B68 0C015060 */  jal         __cosf
 /* 00001C 80038B6C C7AC0020 */   lwc1       $f12, 0x20($sp)
 /* 000020 80038B70 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 000024 80038B74 C7A4001C */  lwc1        $f4, 0x1c($sp)
@@ -285,10 +285,10 @@ glabel func_80038E80 # 4
 /* 0003C0 80038F10 03E00008 */  jr          $ra
 /* 0003C4 80038F14 00000000 */   nop
 
-glabel func_80038F18 # 5
+glabel Math_FCscF # 5
 /* 0003C8 80038F18 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 0003CC 80038F1C AFBF0014 */  sw          $ra, 0x14($sp)
-/* 0003D0 80038F20 0C014FF0 */  jal         func_80053FC0
+/* 0003D0 80038F20 0C014FF0 */  jal         __sinf
 /* 0003D4 80038F24 00000000 */   nop
 /* 0003D8 80038F28 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0003DC 80038F2C 3C013F80 */  lui         $at, 0x3f80
@@ -297,10 +297,10 @@ glabel func_80038F18 # 5
 /* 0003E8 80038F38 03E00008 */  jr          $ra
 /* 0003EC 80038F3C 46002003 */   div.s      $f0, $f4, $f0
 
-glabel func_80038F40 # 6
+glabel Math_FSecF # 6
 /* 0003F0 80038F40 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 0003F4 80038F44 AFBF0014 */  sw          $ra, 0x14($sp)
-/* 0003F8 80038F48 0C015060 */  jal         func_80054180
+/* 0003F8 80038F48 0C015060 */  jal         __cosf
 /* 0003FC 80038F4C 00000000 */   nop
 /* 000400 80038F50 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 000404 80038F54 3C013F80 */  lui         $at, 0x3f80
@@ -309,10 +309,10 @@ glabel func_80038F40 # 6
 /* 000410 80038F60 03E00008 */  jr          $ra
 /* 000414 80038F64 46002003 */   div.s      $f0, $f4, $f0
 
-glabel func_80038F68 # 7
+glabel Math_FCotF # 7
 /* 000418 80038F68 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 00041C 80038F6C AFBF0014 */  sw          $ra, 0x14($sp)
-/* 000420 80038F70 0C00E2D4 */  jal         func_80038B50
+/* 000420 80038F70 0C00E2D4 */  jal         Math_FTanF
 /* 000424 80038F74 00000000 */   nop
 /* 000428 80038F78 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 00042C 80038F7C 3C013F80 */  lui         $at, 0x3f80

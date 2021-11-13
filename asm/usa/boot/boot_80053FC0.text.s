@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80053FC0 # 0
+glabel __sinf # 0
 /* 000000 80053FC0 E7AC0000 */  swc1        $f12, 0x0($sp)
 /* 000004 80053FC4 8FA20000 */  lw          $v0, 0x0($sp)
 /* 000008 80053FC8 C7A40000 */  lwc1        $f4, 0x0($sp)
@@ -130,7 +130,7 @@ glabel func_80053FC0 # 0
 /* 0001B8 80054178 03E00008 */  jr          $ra
 /* 0001BC 8005417C 00000000 */   nop
 
-glabel func_80054180 # 1
+glabel __cosf # 1
 /* 0001C0 80054180 E7AC0000 */  swc1        $f12, 0x0($sp)
 /* 0001C4 80054184 8FA20000 */  lw          $v0, 0x0($sp)
 /* 0001C8 80054188 C7A60000 */  lwc1        $f6, 0x0($sp)

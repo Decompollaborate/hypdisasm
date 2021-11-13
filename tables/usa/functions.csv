@@ -10,3 +10,15 @@
 8000C040,func_8000C040
 80050D40,func_80050D40
 8000BD70,func_8000BD70
+80038B50,Math_FTanF
+80038F18,Math_FCscF
+80038F40,Math_FSecF
+80038F68,Math_FCotF
+80050600,__createSpeedParam
+8005069C,osInitialize
+80050948,__osInitialize_autodetect
+80053FC0,__sinf
+80054180,__cosf
+800586A0,__osContAddressCrc
+80058770,__osContDataCrc
+8005B030,__osVoiceContDataCrc

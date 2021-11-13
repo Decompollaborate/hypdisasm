@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_800586A0 # 0
+glabel __osContAddressCrc # 0
 /* 000000 800586A0 AFA40000 */  sw          $a0, 0x0($sp)
 /* 000004 800586A4 308EFFFF */  andi        $t6, $a0, 0xffff
 /* 000008 800586A8 01C02025 */  move        $a0, $t6
@@ -72,7 +72,7 @@ glabel func_800586A0 # 0
 /* 0000C8 80058768 03E00008 */  jr          $ra
 /* 0000CC 8005876C 03201025 */   move       $v0, $t9
 
-glabel func_80058770 # 1
+glabel __osContDataCrc # 1
 /* 0000D0 80058770 00802825 */  move        $a1, $a0
 /* 0000D4 80058774 00001825 */  move        $v1, $zero
 /* 0000D8 80058778 24020020 */  addiu       $v0, $zero, 0x20
