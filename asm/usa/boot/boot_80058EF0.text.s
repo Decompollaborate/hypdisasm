@@ -16,7 +16,7 @@ glabel func_80058EF0 # 0
 /* 058AAC 80058EFC AFA5002C */  sw          $a1, 0x2c($sp)
 /* 058AB0 80058F00 AFA60030 */  sw          $a2, 0x30($sp)
 /* 058AB4 80058F04 AFB10018 */  sw          $s1, 0x18($sp)
-/* 058AB8 80058F08 0C015FFC */  jal         func_80057FF0
+/* 058AB8 80058F08 0C015FFC */  jal         __osDisableInt
 /* 058ABC 80058F0C AFB00014 */   sw         $s0, 0x14($sp)
 /* 058AC0 80058F10 8FAE0028 */  lw          $t6, 0x28($sp)
 /* 058AC4 80058F14 00408025 */  move        $s0, $v0
@@ -35,12 +35,12 @@ glabel func_80058EF0 # 0
 /* 058AF4 80058F44 24080008 */  addiu       $t0, $zero, 0x8
 /* 058AF8 80058F48 A5280010 */  sh          $t0, 0x10($t1)
 /* 058AFC 80058F4C 8FA40028 */  lw          $a0, 0x28($sp)
-/* 058B00 80058F50 0C015F11 */  jal         func_80057C44
+/* 058B00 80058F50 0C015F11 */  jal         __osEnqueueAndYield
 /* 058B04 80058F54 24840004 */   addiu      $a0, $a0, 0x4
 /* 058B08 80058F58 10000005 */  b           .L80058F70
 /* 058B0C 80058F5C 00000000 */   nop
 .L80058F60:
-/* 058B10 80058F60 0C016018 */  jal         func_80058060
+/* 058B10 80058F60 0C016018 */  jal         __osRestoreInt
 /* 058B14 80058F64 02002025 */   move       $a0, $s0
 /* 058B18 80058F68 10000030 */  b           .L8005902C
 /* 058B1C 80058F6C 2402FFFF */   addiu      $v0, $zero, -0x1
@@ -87,13 +87,13 @@ glabel func_80058EF0 # 0
 /* 058BB0 80059000 8D4C0000 */  lw          $t4, 0x0($t2)
 /* 058BB4 80059004 11800006 */  beq         $t4, $zero, .L80059020
 /* 058BB8 80059008 00000000 */   nop
-/* 058BBC 8005900C 0C015F63 */  jal         func_80057D8C
+/* 058BBC 8005900C 0C015F63 */  jal         __osPopThread
 /* 058BC0 80059010 01A02025 */   move       $a0, $t5
 /* 058BC4 80059014 00408825 */  move        $s1, $v0
-/* 058BC8 80059018 0C0142FC */  jal         func_80050BF0
+/* 058BC8 80059018 0C0142FC */  jal         osStartThread
 /* 058BCC 8005901C 02202025 */   move       $a0, $s1
 .L80059020:
-/* 058BD0 80059020 0C016018 */  jal         func_80058060
+/* 058BD0 80059020 0C016018 */  jal         __osRestoreInt
 /* 058BD4 80059024 02002025 */   move       $a0, $s0
 /* 058BD8 80059028 00001025 */  move        $v0, $zero
 .L8005902C:

@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80057FF0 # 0
+glabel __osDisableInt # 0
 /* 057BA0 80057FF0 3C0A800A */  lui         $t2, %hi(D_8009DC80)
 /* 057BA4 80057FF4 254ADC80 */  addiu       $t2, $t2, %lo(D_8009DC80)
 /* 057BA8 80057FF8 8D4B0000 */  lw          $t3, 0x0($t2)
@@ -40,7 +40,7 @@ glabel func_80057FF0 # 0
 /* 057C08 80058058 03E00008 */  jr          $ra
 /* 057C0C 8005805C 00000000 */   nop
 
-glabel func_80058060 # 1
+glabel __osRestoreInt # 1
 /* 057C10 80058060 40086000 */  cop0        0x0086000
 /* 057C14 80058064 01044025 */  or          $t0, $t0, $a0
 /* 057C18 80058068 40886000 */  cop0        0x0886000

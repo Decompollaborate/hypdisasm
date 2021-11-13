@@ -26,10 +26,10 @@ glabel bootproc # 0
 /* 000034 80000484 24849688 */  addiu       $a0, $a0, %lo(D_800A9688)
 /* 000038 80000488 AFAE0010 */  sw          $t6, 0x10($sp)
 /* 00003C 8000048C 2405000A */  addiu       $a1, $zero, 0xa
-/* 000040 80000490 0C0142A8 */  jal         func_80050AA0
+/* 000040 80000490 0C0142A8 */  jal         osCreateThread
 /* 000044 80000494 00003825 */   move       $a3, $zero
 /* 000048 80000498 3C04800B */  lui         $a0, %hi(D_800A9688)
-/* 00004C 8000049C 0C0142FC */  jal         func_80050BF0
+/* 00004C 8000049C 0C0142FC */  jal         osStartThread
 /* 000050 800004A0 24849688 */   addiu      $a0, $a0, %lo(D_800A9688)
 /* 000054 800004A4 8FBF001C */  lw          $ra, 0x1c($sp)
 /* 000058 800004A8 27BD0020 */  addiu       $sp, $sp, 0x20
@@ -2433,10 +2433,10 @@ glabel func_80002764 # 38
 /* 002370 800027C0 24050028 */  addiu       $a1, $zero, 0x28
 /* 002374 800027C4 27A70024 */  addiu       $a3, $sp, 0x24
 /* 002378 800027C8 AFAE0028 */  sw          $t6, 0x28($sp)
-/* 00237C 800027CC 0C0142A8 */  jal         func_80050AA0
+/* 00237C 800027CC 0C0142A8 */  jal         osCreateThread
 /* 002380 800027D0 AFAF002C */   sw         $t7, 0x2c($sp)
 /* 002384 800027D4 3C04800B */  lui         $a0, %hi(D_800AC4C0)
-/* 002388 800027D8 0C0142FC */  jal         func_80050BF0
+/* 002388 800027D8 0C0142FC */  jal         osStartThread
 /* 00238C 800027DC 2484C4C0 */   addiu      $a0, $a0, %lo(D_800AC4C0)
 /* 002390 800027E0 8FA80024 */  lw          $t0, 0x24($sp)
 /* 002394 800027E4 55000007 */  bnel        $t0, $zero, .L80002804

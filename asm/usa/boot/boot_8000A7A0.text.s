@@ -1710,10 +1710,10 @@ glabel func_8000C040 # 21
 /* 00BC14 8000C064 24C6BD70 */  addiu       $a2, $a2, %lo(func_8000BD70)
 /* 00BC18 8000C068 24846538 */  addiu       $a0, $a0, %lo(D_800B6538)
 /* 00BC1C 8000C06C AFAE0010 */  sw          $t6, 0x10($sp)
-/* 00BC20 8000C070 0C0142A8 */  jal         func_80050AA0
+/* 00BC20 8000C070 0C0142A8 */  jal         osCreateThread
 /* 00BC24 8000C074 2405001E */   addiu      $a1, $zero, 0x1e
 /* 00BC28 8000C078 3C04800B */  lui         $a0, %hi(D_800B6538)
-/* 00BC2C 8000C07C 0C0142FC */  jal         func_80050BF0
+/* 00BC2C 8000C07C 0C0142FC */  jal         osStartThread
 /* 00BC30 8000C080 24846538 */   addiu      $a0, $a0, %lo(D_800B6538)
 /* 00BC34 8000C084 8FBF001C */  lw          $ra, 0x1c($sp)
 /* 00BC38 8000C088 27BD0020 */  addiu       $sp, $sp, 0x20

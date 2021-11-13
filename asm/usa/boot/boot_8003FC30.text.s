@@ -100,9 +100,9 @@ glabel func_8003FC30 # 0
 /* 03F93C 8003FD8C AFA40034 */  sw          $a0, 0x34($sp)
 /* 03F940 8003FD90 AFAC0010 */  sw          $t4, 0x10($sp)
 /* 03F944 8003FD94 02003825 */  move        $a3, $s0
-/* 03F948 8003FD98 0C0142A8 */  jal         func_80050AA0
+/* 03F948 8003FD98 0C0142A8 */  jal         osCreateThread
 /* 03F94C 8003FD9C 24A50002 */   addiu      $a1, $a1, 0x2
-/* 03F950 8003FDA0 0C0142FC */  jal         func_80050BF0
+/* 03F950 8003FDA0 0C0142FC */  jal         osStartThread
 /* 03F954 8003FDA4 8FA40034 */   lw         $a0, 0x34($sp)
 /* 03F958 8003FDA8 8FB80040 */  lw          $t8, 0x40($sp)
 /* 03F95C 8003FDAC 8FA5003C */  lw          $a1, 0x3c($sp)
@@ -116,9 +116,9 @@ glabel func_8003FC30 # 0
 /* 03F97C 8003FDCC AFA40034 */  sw          $a0, 0x34($sp)
 /* 03F980 8003FDD0 AFAF0010 */  sw          $t7, 0x10($sp)
 /* 03F984 8003FDD4 02003825 */  move        $a3, $s0
-/* 03F988 8003FDD8 0C0142A8 */  jal         func_80050AA0
+/* 03F988 8003FDD8 0C0142A8 */  jal         osCreateThread
 /* 03F98C 8003FDDC 24A50001 */   addiu      $a1, $a1, 0x1
-/* 03F990 8003FDE0 0C0142FC */  jal         func_80050BF0
+/* 03F990 8003FDE0 0C0142FC */  jal         osStartThread
 /* 03F994 8003FDE4 8FA40034 */   lw         $a0, 0x34($sp)
 /* 03F998 8003FDE8 8FA90040 */  lw          $t1, 0x40($sp)
 /* 03F99C 8003FDEC 3C088010 */  lui         $t0, %hi(D_800F8AC0)
@@ -130,9 +130,9 @@ glabel func_8003FC30 # 0
 /* 03F9B4 8003FE04 AFA80010 */  sw          $t0, 0x10($sp)
 /* 03F9B8 8003FE08 8FA5003C */  lw          $a1, 0x3c($sp)
 /* 03F9BC 8003FE0C 02003825 */  move        $a3, $s0
-/* 03F9C0 8003FE10 0C0142A8 */  jal         func_80050AA0
+/* 03F9C0 8003FE10 0C0142A8 */  jal         osCreateThread
 /* 03F9C4 8003FE14 AFA90014 */   sw         $t1, 0x14($sp)
-/* 03F9C8 8003FE18 0C0142FC */  jal         func_80050BF0
+/* 03F9C8 8003FE18 0C0142FC */  jal         osStartThread
 /* 03F9CC 8003FE1C 8FA40034 */   lw         $a0, 0x34($sp)
 /* 03F9D0 8003FE20 8FBF0024 */  lw          $ra, 0x24($sp)
 /* 03F9D4 8003FE24 8FB00020 */  lw          $s0, 0x20($sp)

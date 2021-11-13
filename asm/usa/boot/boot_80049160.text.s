@@ -460,9 +460,9 @@ glabel func_800496B8 # 5
 /* 0493A0 800497F0 AFB00010 */  sw          $s0, 0x10($sp)
 /* 0493A4 800497F4 8FA50040 */  lw          $a1, 0x40($sp)
 /* 0493A8 800497F8 02803825 */  move        $a3, $s4
-/* 0493AC 800497FC 0C0142A8 */  jal         func_80050AA0
+/* 0493AC 800497FC 0C0142A8 */  jal         osCreateThread
 /* 0493B0 80049800 AFA80014 */   sw         $t0, 0x14($sp)
-/* 0493B4 80049804 0C0142FC */  jal         func_80050BF0
+/* 0493B4 80049804 0C0142FC */  jal         osStartThread
 /* 0493B8 80049808 02002025 */   move       $a0, $s0
 /* 0493BC 8004980C 8FBF0034 */  lw          $ra, 0x34($sp)
 /* 0493C0 80049810 8FB00020 */  lw          $s0, 0x20($sp)

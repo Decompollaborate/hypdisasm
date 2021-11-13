@@ -378,10 +378,10 @@ glabel func_800427C8 # 5
 /* 0423BC 8004280C AFAE0010 */  sw          $t6, 0x10($sp)
 /* 0423C0 80042810 8FA50020 */  lw          $a1, 0x20($sp)
 /* 0423C4 80042814 00003825 */  move        $a3, $zero
-/* 0423C8 80042818 0C0142A8 */  jal         func_80050AA0
+/* 0423C8 80042818 0C0142A8 */  jal         osCreateThread
 /* 0423CC 8004281C AFAF0014 */   sw         $t7, 0x14($sp)
 /* 0423D0 80042820 3C048010 */  lui         $a0, %hi(D_800F8B20)
-/* 0423D4 80042824 0C0142FC */  jal         func_80050BF0
+/* 0423D4 80042824 0C0142FC */  jal         osStartThread
 /* 0423D8 80042828 24848B20 */   addiu      $a0, $a0, %lo(D_800F8B20)
 /* 0423DC 8004282C 8FBF001C */  lw          $ra, 0x1c($sp)
 /* 0423E0 80042830 27BD0020 */  addiu       $sp, $sp, 0x20

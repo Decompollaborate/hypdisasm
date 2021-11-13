@@ -12,17 +12,17 @@
 glabel func_80051690 # 0
 /* 051240 80051690 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 051244 80051694 AFBF001C */  sw          $ra, 0x1c($sp)
-/* 051248 80051698 0C015FFC */  jal         func_80057FF0
+/* 051248 80051698 0C015FFC */  jal         __osDisableInt
 /* 05124C 8005169C AFB00018 */   sw         $s0, 0x18($sp)
 /* 051250 800516A0 3C0F800A */  lui         $t7, %hi(D_8009F8A0)
 /* 051254 800516A4 8DEFF8A0 */  lw          $t7, %lo(D_8009F8A0)($t7)
 /* 051258 800516A8 240E0002 */  addiu       $t6, $zero, 0x2
-/* 05125C 800516AC 3C04800A */  lui         $a0, %hi(D_8009F898)
+/* 05125C 800516AC 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 051260 800516B0 00408025 */  move        $s0, $v0
-/* 051264 800516B4 2484F898 */  addiu       $a0, $a0, %lo(D_8009F898)
-/* 051268 800516B8 0C015F11 */  jal         func_80057C44
+/* 051264 800516B4 2484F898 */  addiu       $a0, $a0, %lo(__osRunQueue)
+/* 051268 800516B8 0C015F11 */  jal         __osEnqueueAndYield
 /* 05126C 800516BC A5EE0010 */   sh         $t6, 0x10($t7)
-/* 051270 800516C0 0C016018 */  jal         func_80058060
+/* 051270 800516C0 0C016018 */  jal         __osRestoreInt
 /* 051274 800516C4 02002025 */   move       $a0, $s0
 /* 051278 800516C8 8FBF001C */  lw          $ra, 0x1c($sp)
 /* 05127C 800516CC 8FB00018 */  lw          $s0, 0x18($sp)

@@ -2,8 +2,15 @@
 80000450,bootproc
 8005069C,func_8005069C
 80050950,func_80050950
-80050AA0,func_80050AA0
-80050BF0,func_80050BF0
+80050AA0,osCreateThread
+80050BF0,osStartThread
+80057F20,__osCleanupThread
+80057FF0,__osDisableInt
+80058060,__osRestoreInt
+80057D44,__osEnqueueThread
+80057D8C,__osPopThread
+80057DA4,__osDispatchThread
+80057C44,__osEnqueueAndYield
 800004B4,func_800004B4
 80037AE0,func_80037AE0
 80037AE8,func_80037AE8
