@@ -1,0 +1,2 @@
+makerom 0
+boot 1050
