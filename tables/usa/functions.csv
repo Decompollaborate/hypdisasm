@@ -29,3 +29,6 @@
 800586A0,__osContAddressCrc
 80058770,__osContDataCrc
 8005B030,__osVoiceContDataCrc
+800516E0,osCreateMesgQueue
+800427C8,Fault_Start
+800426B4,Fault_ThreadEntry

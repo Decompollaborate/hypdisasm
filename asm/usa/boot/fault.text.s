@@ -244,8 +244,8 @@ glabel func_8004237C # 3
 /* 0421C0 80042610 24847B6C */  addiu       $a0, $a0, %lo(D_800A7B6C)
 /* 0421C4 80042614 0C0108BA */  jal         func_800422E8
 /* 0421C8 80042618 8E05018C */   lw         $a1, 0x18c($s0)
-/* 0421CC 8004261C 3C04800A */  lui         $a0, %hi(D_800A7B74)
-/* 0421D0 80042620 24847B74 */  addiu       $a0, $a0, %lo(D_800A7B74)
+/* 0421CC 8004261C 3C04800A */  lui         $a0, %hi(_faultstring_FiT)
+/* 0421D0 80042620 24847B74 */  addiu       $a0, $a0, %lo(_faultstring_FiT)
 /* 0421D4 80042624 24050028 */  addiu       $a1, $zero, 0x28
 /* 0421D8 80042628 0C00F2A6 */  jal         func_8003CA98
 /* 0421DC 8004262C 24060009 */   addiu      $a2, $zero, 0x9
@@ -283,7 +283,7 @@ glabel func_8004237C # 3
 /* 04225C 800426AC 03E00008 */  jr          $ra
 /* 042260 800426B0 00000000 */   nop
 
-glabel func_800426B4 # 4
+glabel Fault_ThreadEntry # 4
 /* 042264 800426B4 27BDFFB0 */  addiu       $sp, $sp, -0x50
 /* 042268 800426B8 AFB20020 */  sw          $s2, 0x20($sp)
 /* 04226C 800426BC 3C128010 */  lui         $s2, %hi(D_800F8ED0)
@@ -357,7 +357,7 @@ glabel func_800426B4 # 4
 /* 042370 800427C0 03E00008 */  jr          $ra
 /* 042374 800427C4 27BD0050 */   addiu      $sp, $sp, 0x50
 
-glabel func_800427C8 # 5
+glabel Fault_Start # 5
 /* 042378 800427C8 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 04237C 800427CC AFA40020 */  sw          $a0, 0x20($sp)
 /* 042380 800427D0 AFA50024 */  sw          $a1, 0x24($sp)
@@ -366,14 +366,14 @@ glabel func_800427C8 # 5
 /* 04238C 800427DC 3C048010 */  lui         $a0, %hi(D_800F8ED0)
 /* 042390 800427E0 24848ED0 */  addiu       $a0, $a0, %lo(D_800F8ED0)
 /* 042394 800427E4 24A58EE8 */  addiu       $a1, $a1, %lo(D_800F8EE8)
-/* 042398 800427E8 0C0145B8 */  jal         func_800516E0
+/* 042398 800427E8 0C0145B8 */  jal         osCreateMesgQueue
 /* 04239C 800427EC 24060001 */   addiu      $a2, $zero, 0x1
 /* 0423A0 800427F0 8FAF0024 */  lw          $t7, 0x24($sp)
 /* 0423A4 800427F4 3C0E8010 */  lui         $t6, %hi(D_800F8ED0)
 /* 0423A8 800427F8 25CE8ED0 */  addiu       $t6, $t6, %lo(D_800F8ED0)
 /* 0423AC 800427FC 3C048010 */  lui         $a0, %hi(D_800F8B20)
-/* 0423B0 80042800 3C068004 */  lui         $a2, %hi(func_800426B4)
-/* 0423B4 80042804 24C626B4 */  addiu       $a2, $a2, %lo(func_800426B4)
+/* 0423B0 80042800 3C068004 */  lui         $a2, %hi(Fault_ThreadEntry)
+/* 0423B4 80042804 24C626B4 */  addiu       $a2, $a2, %lo(Fault_ThreadEntry)
 /* 0423B8 80042808 24848B20 */  addiu       $a0, $a0, %lo(D_800F8B20)
 /* 0423BC 8004280C AFAE0010 */  sw          $t6, 0x10($sp)
 /* 0423C0 80042810 8FA50020 */  lw          $a1, 0x20($sp)

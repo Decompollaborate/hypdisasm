@@ -36,29 +36,29 @@ glabel func_8003FC30 # 0
 /* 03F83C 8003FC8C 26040074 */  addiu       $a0, $s0, 0x74
 /* 03F840 8003FC90 AFA40034 */  sw          $a0, 0x34($sp)
 /* 03F844 8003FC94 2605008C */  addiu       $a1, $s0, 0x8c
-/* 03F848 8003FC98 0C0145B8 */  jal         func_800516E0
+/* 03F848 8003FC98 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F84C 8003FC9C 24060008 */   addiu      $a2, $zero, 0x8
 /* 03F850 8003FCA0 260400AC */  addiu       $a0, $s0, 0xac
 /* 03F854 8003FCA4 AFA40030 */  sw          $a0, 0x30($sp)
 /* 03F858 8003FCA8 260500C4 */  addiu       $a1, $s0, 0xc4
-/* 03F85C 8003FCAC 0C0145B8 */  jal         func_800516E0
+/* 03F85C 8003FCAC 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F860 8003FCB0 24060008 */   addiu      $a2, $zero, 0x8
 /* 03F864 8003FCB4 260400E4 */  addiu       $a0, $s0, 0xe4
 /* 03F868 8003FCB8 AFA4002C */  sw          $a0, 0x2c($sp)
 /* 03F86C 8003FCBC 260500FC */  addiu       $a1, $s0, 0xfc
-/* 03F870 8003FCC0 0C0145B8 */  jal         func_800516E0
+/* 03F870 8003FCC0 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F874 8003FCC4 24060008 */   addiu      $a2, $zero, 0x8
 /* 03F878 8003FCC8 2604003C */  addiu       $a0, $s0, 0x3c
 /* 03F87C 8003FCCC 26050054 */  addiu       $a1, $s0, 0x54
-/* 03F880 8003FCD0 0C0145B8 */  jal         func_800516E0
+/* 03F880 8003FCD0 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F884 8003FCD4 24060008 */   addiu      $a2, $zero, 0x8
 /* 03F888 8003FCD8 26040004 */  addiu       $a0, $s0, 0x4
 /* 03F88C 8003FCDC 2605001C */  addiu       $a1, $s0, 0x1c
-/* 03F890 8003FCE0 0C0145B8 */  jal         func_800516E0
+/* 03F890 8003FCE0 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F894 8003FCE4 24060008 */   addiu      $a2, $zero, 0x8
 /* 03F898 8003FCE8 2604011C */  addiu       $a0, $s0, 0x11c
 /* 03F89C 8003FCEC 26050134 */  addiu       $a1, $s0, 0x134
-/* 03F8A0 8003FCF0 0C0145B8 */  jal         func_800516E0
+/* 03F8A0 8003FCF0 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F8A4 8003FCF4 24060008 */   addiu      $a2, $zero, 0x8
 /* 03F8A8 8003FCF8 0C015100 */  jal         func_80054400
 /* 03F8AC 8003FCFC 240400FE */   addiu      $a0, $zero, 0xfe

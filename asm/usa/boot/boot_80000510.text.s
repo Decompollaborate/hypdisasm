@@ -2537,13 +2537,13 @@ glabel func_80002998 # 42
 /* 002580 800029D0 AC38D080 */  sw          $t8, %lo(D_800AD080)($at)
 /* 002584 800029D4 24A5D0A0 */  addiu       $a1, $a1, %lo(D_800AD0A0)
 /* 002588 800029D8 2484D088 */  addiu       $a0, $a0, %lo(D_800AD088)
-/* 00258C 800029DC 0C0145B8 */  jal         func_800516E0
+/* 00258C 800029DC 0C0145B8 */  jal         osCreateMesgQueue
 /* 002590 800029E0 24060010 */   addiu      $a2, $zero, 0x10
 /* 002594 800029E4 3C04800B */  lui         $a0, %hi(D_800AD038)
 /* 002598 800029E8 3C05800B */  lui         $a1, %hi(D_800AD050)
 /* 00259C 800029EC 24A5D050 */  addiu       $a1, $a1, %lo(D_800AD050)
 /* 0025A0 800029F0 2484D038 */  addiu       $a0, $a0, %lo(D_800AD038)
-/* 0025A4 800029F4 0C0145B8 */  jal         func_800516E0
+/* 0025A4 800029F4 0C0145B8 */  jal         osCreateMesgQueue
 /* 0025A8 800029F8 2406000A */   addiu      $a2, $zero, 0xa
 /* 0025AC 800029FC 3C05800B */  lui         $a1, %hi(D_800AD038)
 /* 0025B0 80002A00 24A5D038 */  addiu       $a1, $a1, %lo(D_800AD038)

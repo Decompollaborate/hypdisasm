@@ -3,3 +3,5 @@
 800B6538,D_800B6538,UNK_TYPE
 8009F89C,__osActiveQueue,UNK_TYPE
 8009F898,__osRunQueue,OSThread*
+800A7B74,_faultstring_FiT,char*
+8009F890,__osThreadTail,OSThread*

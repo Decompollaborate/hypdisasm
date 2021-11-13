@@ -187,7 +187,7 @@ glabel func_80023388 # 6
 /* 022F58 800233A8 AC990404 */  sw          $t9, 0x404($a0)
 /* 022F5C 800233AC 24E50420 */  addiu       $a1, $a3, 0x420
 /* 022F60 800233B0 24840408 */  addiu       $a0, $a0, 0x408
-/* 022F64 800233B4 0C0145B8 */  jal         func_800516E0
+/* 022F64 800233B4 0C0145B8 */  jal         osCreateMesgQueue
 /* 022F68 800233B8 24060001 */   addiu      $a2, $zero, 0x1
 /* 022F6C 800233BC 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 022F70 800233C0 27BD0018 */  addiu       $sp, $sp, 0x18

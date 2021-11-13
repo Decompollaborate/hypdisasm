@@ -9,11 +9,11 @@
 
 .balign 16
 
-glabel func_800516E0 # 0
-/* 051290 800516E0 3C0E800A */  lui         $t6, %hi(D_8009F890)
-/* 051294 800516E4 3C0F800A */  lui         $t7, %hi(D_8009F890)
-/* 051298 800516E8 25CEF890 */  addiu       $t6, $t6, %lo(D_8009F890)
-/* 05129C 800516EC 25EFF890 */  addiu       $t7, $t7, %lo(D_8009F890)
+glabel osCreateMesgQueue # 0
+/* 051290 800516E0 3C0E800A */  lui         $t6, %hi(__osThreadTail)
+/* 051294 800516E4 3C0F800A */  lui         $t7, %hi(__osThreadTail)
+/* 051298 800516E8 25CEF890 */  addiu       $t6, $t6, %lo(__osThreadTail)
+/* 05129C 800516EC 25EFF890 */  addiu       $t7, $t7, %lo(__osThreadTail)
 /* 0512A0 800516F0 AC8E0000 */  sw          $t6, 0x0($a0)
 /* 0512A4 800516F4 AC8F0004 */  sw          $t7, 0x4($a0)
 /* 0512A8 800516F8 AC800008 */  sw          $zero, 0x8($a0)

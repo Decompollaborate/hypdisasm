@@ -39,7 +39,7 @@ glabel func_8000A7A8 # 1
 /* 00A3B0 8000A800 24080001 */  addiu       $t0, $zero, 0x1
 /* 00A3B4 8000A804 AC280B70 */  sw          $t0, %lo(D_800F0B70)($at)
 /* 00A3B8 8000A808 2404006E */  addiu       $a0, $zero, 0x6e
-/* 00A3BC 8000A80C 0C0109F2 */  jal         func_800427C8
+/* 00A3BC 8000A80C 0C0109F2 */  jal         Fault_Start
 /* 00A3C0 8000A810 2405006E */   addiu      $a1, $zero, 0x6e
 /* 00A3C4 8000A814 3C028000 */  lui         $v0, %hi(D_80000300)
 /* 00A3C8 8000A818 8C420300 */  lw          $v0, %lo(D_80000300)($v0)
@@ -1527,7 +1527,7 @@ glabel func_8000BD70 # 20
 /* 00B94C 8000BD9C 3C05800B */  lui         $a1, %hi(D_800AE518)
 /* 00B950 8000BDA0 24A5E518 */  addiu       $a1, $a1, %lo(D_800AE518)
 /* 00B954 8000BDA4 02202025 */  move        $a0, $s1
-/* 00B958 8000BDA8 0C0145B8 */  jal         func_800516E0
+/* 00B958 8000BDA8 0C0145B8 */  jal         osCreateMesgQueue
 /* 00B95C 8000BDAC 24060008 */   addiu      $a2, $zero, 0x8
 /* 00B960 8000BDB0 3C05800B */  lui         $a1, %hi(D_800AE4D8)
 /* 00B964 8000BDB4 24A5E4D8 */  addiu       $a1, $a1, %lo(D_800AE4D8)

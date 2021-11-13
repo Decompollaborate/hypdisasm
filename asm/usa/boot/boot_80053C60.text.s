@@ -142,13 +142,13 @@ glabel func_80053E30 # 2
 /* 053A04 80053E54 AFA60038 */   sw         $a2, 0x38($sp)
 /* 053A08 80053E58 00A02025 */  move        $a0, $a1
 /* 053A0C 80053E5C 00C02825 */  move        $a1, $a2
-/* 053A10 80053E60 0C0145B8 */  jal         func_800516E0
+/* 053A10 80053E60 0C0145B8 */  jal         osCreateMesgQueue
 /* 053A14 80053E64 00E03025 */   move       $a2, $a3
 /* 053A18 80053E68 3C048010 */  lui         $a0, %hi(D_800FF080)
 /* 053A1C 80053E6C 3C058010 */  lui         $a1, %hi(D_800FF098)
 /* 053A20 80053E70 24A5F098 */  addiu       $a1, $a1, %lo(D_800FF098)
 /* 053A24 80053E74 2484F080 */  addiu       $a0, $a0, %lo(D_800FF080)
-/* 053A28 80053E78 0C0145B8 */  jal         func_800516E0
+/* 053A28 80053E78 0C0145B8 */  jal         osCreateMesgQueue
 /* 053A2C 80053E7C 24060001 */   addiu      $a2, $zero, 0x1
 /* 053A30 80053E80 3C0F800A */  lui         $t7, %hi(D_8009F8E0)
 /* 053A34 80053E84 8DEFF8E0 */  lw          $t7, %lo(D_8009F8E0)($t7)
