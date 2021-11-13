@@ -57,3 +57,7 @@ dkms.conf
 *.z64
 *.n64
 *.v64
+
+build/
+*.bin
+
