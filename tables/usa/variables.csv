@@ -5,3 +5,4 @@
 8009F898,__osRunQueue,OSThread*
 800A7B74,_faultstring_FiT,char*
 8009F890,__osThreadTail,OSThread*
+8009F8A0,__osRunningThread,OSThread*

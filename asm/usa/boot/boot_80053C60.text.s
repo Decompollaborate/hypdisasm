@@ -172,7 +172,7 @@ glabel func_80053E30 # 2
 /* 053A78 80053EC8 0059082A */  slt         $at, $v0, $t9
 /* 053A7C 80053ECC 10200003 */  beq         $at, $zero, .L80053EDC
 /* 053A80 80053ED0 03202825 */   move       $a1, $t9
-/* 053A84 80053ED4 0C014350 */  jal         func_80050D40
+/* 053A84 80053ED4 0C014350 */  jal         osSetThreadPri
 /* 053A88 80053ED8 AFA20028 */   sw         $v0, 0x28($sp)
 .L80053EDC:
 /* 053A8C 80053EDC 0C015FFC */  jal         __osDisableInt
@@ -217,7 +217,7 @@ glabel func_80053E30 # 2
 /* 053B28 80053F78 00002025 */  move        $a0, $zero
 /* 053B2C 80053F7C 53010004 */  beql        $t8, $at, .L80053F90
 /* 053B30 80053F80 8FBF0024 */   lw         $ra, 0x24($sp)
-/* 053B34 80053F84 0C014350 */  jal         func_80050D40
+/* 053B34 80053F84 0C014350 */  jal         osSetThreadPri
 /* 053B38 80053F88 03002825 */   move       $a1, $t8
 .L80053F8C:
 /* 053B3C 80053F8C 8FBF0024 */  lw          $ra, 0x24($sp)
@@ -230,8 +230,8 @@ glabel func_80053E30 # 2
 glabel func_80053FA0 # 3
 /* 053B50 80053FA0 14800003 */  bne         $a0, $zero, .L80053FB0
 /* 053B54 80053FA4 00000000 */   nop
-/* 053B58 80053FA8 3C04800A */  lui         $a0, %hi(D_8009F8A0)
-/* 053B5C 80053FAC 8C84F8A0 */  lw          $a0, %lo(D_8009F8A0)($a0)
+/* 053B58 80053FA8 3C04800A */  lui         $a0, %hi(__osRunningThread)
+/* 053B5C 80053FAC 8C84F8A0 */  lw          $a0, %lo(__osRunningThread)($a0)
 .L80053FB0:
 /* 053B60 80053FB0 03E00008 */  jr          $ra
 /* 053B64 80053FB4 8C820014 */   lw         $v0, 0x14($a0)

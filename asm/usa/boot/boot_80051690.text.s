@@ -14,8 +14,8 @@ glabel func_80051690 # 0
 /* 051244 80051694 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 051248 80051698 0C015FFC */  jal         __osDisableInt
 /* 05124C 8005169C AFB00018 */   sw         $s0, 0x18($sp)
-/* 051250 800516A0 3C0F800A */  lui         $t7, %hi(D_8009F8A0)
-/* 051254 800516A4 8DEFF8A0 */  lw          $t7, %lo(D_8009F8A0)($t7)
+/* 051250 800516A0 3C0F800A */  lui         $t7, %hi(__osRunningThread)
+/* 051254 800516A4 8DEFF8A0 */  lw          $t7, %lo(__osRunningThread)($t7)
 /* 051258 800516A8 240E0002 */  addiu       $t6, $zero, 0x2
 /* 05125C 800516AC 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 051260 800516B0 00408025 */  move        $s0, $v0

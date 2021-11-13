@@ -30,8 +30,8 @@ glabel func_80058EF0 # 0
 /* 058AE0 80058F30 24010001 */  addiu       $at, $zero, 0x1
 /* 058AE4 80058F34 1721000A */  bne         $t9, $at, .L80058F60
 /* 058AE8 80058F38 00000000 */   nop
-/* 058AEC 80058F3C 3C09800A */  lui         $t1, %hi(D_8009F8A0)
-/* 058AF0 80058F40 8D29F8A0 */  lw          $t1, %lo(D_8009F8A0)($t1)
+/* 058AEC 80058F3C 3C09800A */  lui         $t1, %hi(__osRunningThread)
+/* 058AF0 80058F40 8D29F8A0 */  lw          $t1, %lo(__osRunningThread)($t1)
 /* 058AF4 80058F44 24080008 */  addiu       $t0, $zero, 0x8
 /* 058AF8 80058F48 A5280010 */  sh          $t0, 0x10($t1)
 /* 058AFC 80058F4C 8FA40028 */  lw          $a0, 0x28($sp)

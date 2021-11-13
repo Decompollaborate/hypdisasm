@@ -28,8 +28,8 @@ glabel func_80057600 # 0
 /* 0571EC 8005763C AF400018 */  sw          $zero, 0x18($k0)
 /* 0571F0 80057640 40086800 */  cop0        0x0086800
 /* 0571F4 80057644 03404025 */  move        $t0, $k0
-/* 0571F8 80057648 3C1A800A */  lui         $k0, %hi(D_8009F8A0)
-/* 0571FC 8005764C 8F5AF8A0 */  lw          $k0, %lo(D_8009F8A0)($k0)
+/* 0571F8 80057648 3C1A800A */  lui         $k0, %hi(__osRunningThread)
+/* 0571FC 8005764C 8F5AF8A0 */  lw          $k0, %lo(__osRunningThread)($k0)
 /* 057200 80057650 DD090020 */  ld          $t1, 0x20($t0)
 /* 057204 80057654 FF490020 */  sd          $t1, 0x20($k0)
 /* 057208 80057658 DD090118 */  ld          $t1, 0x118($t0)
@@ -435,8 +435,8 @@ glabel func_80057600 # 0
 /* 0577E8 80057C38 AF490018 */  sw          $t1, 0x18($k0)
 /* 0577EC 80057C3C 1000FFB5 */  b           .L80057B14
 /* 0577F0 80057C40 AF5B0118 */   sw         $k1, 0x118($k0)
-/* 0577F4 80057C44 3C05800A */  lui         $a1, %hi(D_8009F8A0)
-/* 0577F8 80057C48 8CA5F8A0 */  lw          $a1, %lo(D_8009F8A0)($a1)
+/* 0577F4 80057C44 3C05800A */  lui         $a1, %hi(__osRunningThread)
+/* 0577F8 80057C48 8CA5F8A0 */  lw          $a1, %lo(__osRunningThread)($a1)
 /* 0577FC 80057C4C 40086000 */  cop0        0x0086000
 /* 057800 80057C50 8CBB0018 */  lw          $k1, 0x18($a1)
 /* 057804 80057C54 35080002 */  ori         $t0, $t0, 0x2
@@ -539,8 +539,8 @@ fakefunc_80057DA4:
 /* 057954 80057DA4 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 057958 80057DA8 0C015F63 */  jal         __osPopThread
 /* 05795C 80057DAC 2484F898 */   addiu      $a0, $a0, %lo(__osRunQueue)
-/* 057960 80057DB0 3C01800A */  lui         $at, %hi(D_8009F8A0)
-/* 057964 80057DB4 AC22F8A0 */  sw          $v0, %lo(D_8009F8A0)($at)
+/* 057960 80057DB0 3C01800A */  lui         $at, %hi(__osRunningThread)
+/* 057964 80057DB4 AC22F8A0 */  sw          $v0, %lo(__osRunningThread)($at)
 /* 057968 80057DB8 24080004 */  addiu       $t0, $zero, 0x4
 /* 05796C 80057DBC A4480010 */  sh          $t0, 0x10($v0)
 /* 057970 80057DC0 0040D025 */  move        $k0, $v0

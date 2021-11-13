@@ -12,8 +12,8 @@
 glabel func_8005A010 # 0
 /* 059BC0 8005A010 14800003 */  bne         $a0, $zero, .L8005A020
 /* 059BC4 8005A014 00000000 */   nop
-/* 059BC8 8005A018 3C04800A */  lui         $a0, %hi(D_8009F8A0)
-/* 059BCC 8005A01C 8C84F8A0 */  lw          $a0, %lo(D_8009F8A0)($a0)
+/* 059BC8 8005A018 3C04800A */  lui         $a0, %hi(__osRunningThread)
+/* 059BCC 8005A01C 8C84F8A0 */  lw          $a0, %lo(__osRunningThread)($a0)
 .L8005A020:
 /* 059BD0 8005A020 03E00008 */  jr          $ra
 /* 059BD4 8005A024 8C820004 */   lw         $v0, 0x4($a0)

@@ -22,8 +22,8 @@ glabel __osDisableInt # 0
 /* 057BC4 80058014 8D480000 */  lw          $t0, 0x0($t2)
 /* 057BC8 80058018 3108FF00 */  andi        $t0, $t0, 0xff00
 /* 057BCC 8005801C 110B000E */  beq         $t0, $t3, .L80058058
-/* 057BD0 80058020 3C0A800A */   lui        $t2, %hi(D_8009F8A0)
-/* 057BD4 80058024 254AF8A0 */  addiu       $t2, $t2, %lo(D_8009F8A0)
+/* 057BD0 80058020 3C0A800A */   lui        $t2, %hi(__osRunningThread)
+/* 057BD4 80058024 254AF8A0 */  addiu       $t2, $t2, %lo(__osRunningThread)
 /* 057BD8 80058028 8D490118 */  lw          $t1, 0x118($t2)
 /* 057BDC 8005802C 312AFF00 */  andi        $t2, $t1, 0xff00
 /* 057BE0 80058030 01485024 */  and         $t2, $t2, $t0

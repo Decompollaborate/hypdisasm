@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80058080 # 0
+glabel __osDequeueThread # 0
 /* 057C30 80058080 00803025 */  move        $a2, $a0
 /* 057C34 80058084 8CC70000 */  lw          $a3, 0x0($a2)
 /* 057C38 80058088 27BDFFF8 */  addiu       $sp, $sp, -0x8

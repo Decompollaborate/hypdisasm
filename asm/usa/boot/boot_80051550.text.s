@@ -32,8 +32,8 @@ glabel func_80051550 # 0
 /* 051148 80051598 10000036 */  b           .L80051674
 /* 05114C 8005159C 2402FFFF */   addiu      $v0, $zero, -0x1
 .L800515A0:
-/* 051150 800515A0 3C08800A */  lui         $t0, %hi(D_8009F8A0)
-/* 051154 800515A4 8D08F8A0 */  lw          $t0, %lo(D_8009F8A0)($t0)
+/* 051150 800515A0 3C08800A */  lui         $t0, %hi(__osRunningThread)
+/* 051154 800515A4 8D08F8A0 */  lw          $t0, %lo(__osRunningThread)($t0)
 /* 051158 800515A8 24190008 */  addiu       $t9, $zero, 0x8
 /* 05115C 800515AC A5190010 */  sh          $t9, 0x10($t0)
 /* 051160 800515B0 0C015F11 */  jal         __osEnqueueAndYield

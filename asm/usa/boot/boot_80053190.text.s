@@ -31,8 +31,8 @@ glabel func_80053190 # 0
 /* 052D84 800531D4 24010001 */  addiu       $at, $zero, 0x1
 /* 052D88 800531D8 1721000A */  bne         $t9, $at, .L80053204
 /* 052D8C 800531DC 00000000 */   nop
-/* 052D90 800531E0 3C09800A */  lui         $t1, %hi(D_8009F8A0)
-/* 052D94 800531E4 8D29F8A0 */  lw          $t1, %lo(D_8009F8A0)($t1)
+/* 052D90 800531E0 3C09800A */  lui         $t1, %hi(__osRunningThread)
+/* 052D94 800531E4 8D29F8A0 */  lw          $t1, %lo(__osRunningThread)($t1)
 /* 052D98 800531E8 24080008 */  addiu       $t0, $zero, 0x8
 /* 052D9C 800531EC A5280010 */  sh          $t0, 0x10($t1)
 /* 052DA0 800531F0 8FA40038 */  lw          $a0, 0x38($sp)
