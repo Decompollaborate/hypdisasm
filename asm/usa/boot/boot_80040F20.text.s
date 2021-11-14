@@ -14,7 +14,7 @@ glabel func_80040F20 # 0
 /* 040AD4 80040F24 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 040AD8 80040F28 AFA5001C */  sw          $a1, 0x1c($sp)
 /* 040ADC 80040F2C AFA40018 */  sw          $a0, 0x18($sp)
-/* 040AE0 80040F30 0C014388 */  jal         func_80050E20
+/* 040AE0 80040F30 0C014388 */  jal         bzero
 /* 040AE4 80040F34 2405000C */   addiu      $a1, $zero, 0xc
 /* 040AE8 80040F38 8FAE001C */  lw          $t6, 0x1c($sp)
 /* 040AEC 80040F3C 8FAF0018 */  lw          $t7, 0x18($sp)
@@ -47,7 +47,7 @@ glabel func_80040F54 # 1
 .L80040FA0:
 /* 040B50 80040FA0 27B00070 */  addiu       $s0, $sp, 0x70
 /* 040B54 80040FA4 02002025 */  move        $a0, $s0
-/* 040B58 80040FA8 0C014388 */  jal         func_80050E20
+/* 040B58 80040FA8 0C014388 */  jal         bzero
 /* 040B5C 80040FAC 24050018 */   addiu      $a1, $zero, 0x18
 /* 040B60 80040FB0 27AF007C */  addiu       $t7, $sp, 0x7c
 /* 040B64 80040FB4 AFB00068 */  sw          $s0, 0x68($sp)

@@ -329,7 +329,7 @@ glabel func_80040064 # 7
 /* 03FC70 800400C0 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FC74 800400C4 8FAE0058 */  lw          $t6, 0x58($sp)
 /* 03FC78 800400C8 8DC40040 */  lw          $a0, 0x40($t6)
-/* 03FC7C 800400CC 0C0151DC */  jal         func_80054770
+/* 03FC7C 800400CC 0C0151DC */  jal         osWriteBackDCache
 /* 03FC80 800400D0 8DC50044 */   lw         $a1, 0x44($t6)
 /* 03FC84 800400D4 8E53066C */  lw          $s3, 0x66c($s2)
 /* 03FC88 800400D8 5260000E */  beql        $s3, $zero, .L80040114

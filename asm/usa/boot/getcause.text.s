@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80057FE0 # 0
+glabel __osGetCause # 0
 /* 057B90 80057FE0 40026800 */  cop0        0x0026800
 /* 057B94 80057FE4 03E00008 */  jr          $ra
 /* 057B98 80057FE8 00000000 */   nop

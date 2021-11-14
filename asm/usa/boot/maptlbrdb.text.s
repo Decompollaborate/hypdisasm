@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80057F80 # 0
+glabel osMapTLBRdb # 0
 /* 057B30 80057F80 40085000 */  cop0        0x0085000
 /* 057B34 80057F84 2409001F */  addiu       $t1, $zero, 0x1f
 /* 057B38 80057F88 40890000 */  cop0        0x0890000

@@ -17,7 +17,7 @@ glabel func_80037F00 # 0
 /* 037AC0 80037F10 00A02025 */  move        $a0, $a1
 /* 037AC4 80037F14 AFA60020 */  sw          $a2, 0x20($sp)
 /* 037AC8 80037F18 00C02825 */  move        $a1, $a2
-/* 037ACC 80037F1C 0C014388 */  jal         func_80050E20
+/* 037ACC 80037F1C 0C014388 */  jal         bzero
 /* 037AD0 80037F20 AFA7001C */   sw         $a3, 0x1c($sp)
 /* 037AD4 80037F24 8FA7001C */  lw          $a3, 0x1c($sp)
 /* 037AD8 80037F28 3418FFFF */  ori         $t8, $zero, 0xffff

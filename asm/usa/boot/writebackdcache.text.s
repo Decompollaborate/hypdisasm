@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80054770 # 0
+glabel osWriteBackDCache # 0
 /* 054320 80054770 18A00011 */  blez        $a1, .L800547B8
 /* 054324 80054774 00000000 */   nop
 /* 054328 80054778 240B2000 */  addiu       $t3, $zero, 0x2000

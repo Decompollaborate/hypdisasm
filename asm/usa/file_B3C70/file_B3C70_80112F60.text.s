@@ -658,7 +658,7 @@ glabel func_8011386C # 11
 /* 008DA4 80113894 240602C7 */   addiu      $a2, $zero, 0x2c7
 /* 008DA8 80113898 00408825 */  move        $s1, $v0
 /* 008DAC 8011389C 00402025 */  move        $a0, $v0
-/* 008DB0 801138A0 0C014388 */  jal         func_80050E20
+/* 008DB0 801138A0 0C014388 */  jal         bzero
 /* 008DB4 801138A4 240500F0 */   addiu      $a1, $zero, 0xf0
 /* 008DB8 801138A8 A6200004 */  sh          $zero, 0x4($s1)
 /* 008DBC 801138AC A620003E */  sh          $zero, 0x3e($s1)

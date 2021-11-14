@@ -306,7 +306,7 @@ glabel func_8001DADC # 8
 /* 01D6A8 8001DAF8 24060061 */   addiu      $a2, $zero, 0x61
 /* 01D6AC 8001DAFC 00402025 */  move        $a0, $v0
 /* 01D6B0 8001DB00 24050008 */  addiu       $a1, $zero, 0x8
-/* 01D6B4 8001DB04 0C014388 */  jal         func_80050E20
+/* 01D6B4 8001DB04 0C014388 */  jal         bzero
 /* 01D6B8 8001DB08 AFA2001C */   sw         $v0, 0x1c($sp)
 /* 01D6BC 8001DB0C 8FA20020 */  lw          $v0, 0x20($sp)
 /* 01D6C0 8001DB10 8FA3001C */  lw          $v1, 0x1c($sp)
@@ -653,7 +653,7 @@ glabel func_8001DFD4 # 17
 /* 01DB88 8001DFD8 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 01DB8C 8001DFDC 3C04800B */  lui         $a0, %hi(D_800B6BB8)
 /* 01DB90 8001DFE0 24846BB8 */  addiu       $a0, $a0, %lo(D_800B6BB8)
-/* 01DB94 8001DFE4 0C014388 */  jal         func_80050E20
+/* 01DB94 8001DFE4 0C014388 */  jal         bzero
 /* 01DB98 8001DFE8 24050090 */   addiu      $a1, $zero, 0x90
 /* 01DB9C 8001DFEC 3C04800B */  lui         $a0, %hi(D_800B6B90)
 /* 01DBA0 8001DFF0 24846B90 */  addiu       $a0, $a0, %lo(D_800B6B90)

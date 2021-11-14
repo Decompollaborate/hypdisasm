@@ -158,7 +158,7 @@ glabel func_8005497C # 3
 /* 0545A4 800549F4 8DCF0000 */  lw          $t7, 0x0($t6)
 /* 0545A8 800549F8 AC4F0010 */  sw          $t7, 0x10($v0)
 .L800549FC:
-/* 0545AC 800549FC 0C0151DC */  jal         func_80054770
+/* 0545AC 800549FC 0C0151DC */  jal         osWriteBackDCache
 /* 0545B0 80054A00 24050040 */   addiu      $a1, $zero, 0x40
 /* 0545B4 80054A04 0C016A80 */  jal         func_8005AA00
 /* 0545B8 80054A08 24042B00 */   addiu      $a0, $zero, 0x2b00

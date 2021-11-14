@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80050E20 # 0
+glabel bzero # 0
 /* 0509D0 80050E20 28A1000C */  slti        $at, $a1, 0xc
 /* 0509D4 80050E24 1420001D */  bne         $at, $zero, .L80050E9C
 /* 0509D8 80050E28 00041823 */   subu       $v1, $zero, $a0

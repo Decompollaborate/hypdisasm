@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80053860 # 0
+glabel osInvalICache # 0
 /* 053410 80053860 18A00011 */  blez        $a1, .L800538A8
 /* 053414 80053864 00000000 */   nop
 /* 053418 80053868 240B4000 */  addiu       $t3, $zero, 0x4000

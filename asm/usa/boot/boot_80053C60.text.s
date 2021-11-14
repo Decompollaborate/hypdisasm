@@ -122,7 +122,7 @@ glabel func_80053DE4 # 1
 /* 0539BC 80053E0C 0C014F18 */  jal         func_80053C60
 /* 0539C0 80053E10 E7A40010 */   swc1       $f4, 0x10($sp)
 /* 0539C4 80053E14 27A40020 */  addiu       $a0, $sp, 0x20
-/* 0539C8 80053E18 0C016074 */  jal         func_800581D0
+/* 0539C8 80053E18 0C016074 */  jal         guMtxF2L
 /* 0539CC 80053E1C 8FA50060 */   lw         $a1, 0x60($sp)
 /* 0539D0 80053E20 8FBF001C */  lw          $ra, 0x1c($sp)
 /* 0539D4 80053E24 27BD0060 */  addiu       $sp, $sp, 0x60

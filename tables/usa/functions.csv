@@ -38,3 +38,14 @@
 800542F0,coss
 80054320,sins
 80053FA0,osGetThreadId
+80050E20,bzero
+80053860,osInvalICache
+80054770,osWriteBackDCache
+80057520,__osSetSR
+80057530,__osGetSR
+80057540,__osSetFpcCsr
+80057550,__osGetWatchLo
+80057F80,osMapTLBRdb
+80057FE0,__osGetCause
+800581D0,guMtxF2L
+80058240,guMtxL2F

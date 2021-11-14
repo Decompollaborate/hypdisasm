@@ -46,7 +46,7 @@ glabel func_8001C150 # 1
 /* 01BD38 8001C188 24060040 */   addiu      $a2, $zero, 0x40
 /* 01BD3C 8001C18C 00402025 */  move        $a0, $v0
 /* 01BD40 8001C190 24050010 */  addiu       $a1, $zero, 0x10
-/* 01BD44 8001C194 0C014388 */  jal         func_80050E20
+/* 01BD44 8001C194 0C014388 */  jal         bzero
 /* 01BD48 8001C198 AFA20020 */   sw         $v0, 0x20($sp)
 /* 01BD4C 8001C19C 8FA30020 */  lw          $v1, 0x20($sp)
 /* 01BD50 8001C1A0 8FAE0030 */  lw          $t6, 0x30($sp)

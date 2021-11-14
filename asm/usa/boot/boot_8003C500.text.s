@@ -1796,7 +1796,7 @@ glabel func_8003DE00 # 28
 /* 03DA54 8003DEA4 24060282 */   addiu      $a2, $zero, 0x282
 /* 03DA58 8003DEA8 AFA20074 */  sw          $v0, 0x74($sp)
 /* 03DA5C 8003DEAC 00402025 */  move        $a0, $v0
-/* 03DA60 8003DEB0 0C014388 */  jal         func_80050E20
+/* 03DA60 8003DEB0 0C014388 */  jal         bzero
 /* 03DA64 8003DEB4 02002825 */   move       $a1, $s0
 /* 03DA68 8003DEB8 AFB10064 */  sw          $s1, 0x64($sp)
 /* 03DA6C 8003DEBC AFA00084 */  sw          $zero, 0x84($sp)
@@ -1896,7 +1896,7 @@ glabel func_8003DE00 # 28
 .L8003E018:
 /* 03DBC8 8003E018 01C08825 */  move        $s1, $t6
 /* 03DBCC 8003E01C 02402025 */  move        $a0, $s2
-/* 03DBD0 8003E020 0C014388 */  jal         func_80050E20
+/* 03DBD0 8003E020 0C014388 */  jal         bzero
 /* 03DBD4 8003E024 24050004 */   addiu      $a1, $zero, 0x4
 /* 03DBD8 8003E028 8FA20054 */  lw          $v0, 0x54($sp)
 /* 03DBDC 8003E02C 8FB80058 */  lw          $t8, 0x58($sp)
@@ -2515,7 +2515,7 @@ glabel func_8003E894 # 32
 /* 03E510 8003E960 01402825 */   move       $a1, $t2
 /* 03E514 8003E964 AFA20088 */  sw          $v0, 0x88($sp)
 /* 03E518 8003E968 00402025 */  move        $a0, $v0
-/* 03E51C 8003E96C 0C014388 */  jal         func_80050E20
+/* 03E51C 8003E96C 0C014388 */  jal         bzero
 /* 03E520 8003E970 02002825 */   move       $a1, $s0
 /* 03E524 8003E974 AFA000A8 */  sw          $zero, 0xa8($sp)
 /* 03E528 8003E978 AFB10078 */  sw          $s1, 0x78($sp)

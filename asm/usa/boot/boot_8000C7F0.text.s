@@ -1937,7 +1937,7 @@ glabel func_8000E208 # 32
 /* 00DEDC 8000E32C E7B40080 */  swc1        $f20, 0x80($sp)
 /* 00DEE0 8000E330 E7B40084 */  swc1        $f20, 0x84($sp)
 /* 00DEE4 8000E334 02A02025 */  move        $a0, $s5
-/* 00DEE8 8000E338 0C014388 */  jal         func_80050E20
+/* 00DEE8 8000E338 0C014388 */  jal         bzero
 /* 00DEEC 8000E33C 2405000C */   addiu      $a1, $zero, 0xc
 /* 00DEF0 8000E340 4407A000 */  mfc1        $a3, $f20
 /* 00DEF4 8000E344 02202025 */  move        $a0, $s1

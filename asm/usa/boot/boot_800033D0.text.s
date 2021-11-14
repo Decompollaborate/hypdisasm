@@ -297,7 +297,7 @@ glabel func_800037AC # 5
 /* 003378 800037C8 3C04800B */  lui         $a0, %hi(D_800AD1E0)
 /* 00337C 800037CC AC22D3FC */  sw          $v0, %lo(D_800AD3FC)($at)
 /* 003380 800037D0 2484D1E0 */  addiu       $a0, $a0, %lo(D_800AD1E0)
-/* 003384 800037D4 0C014388 */  jal         func_80050E20
+/* 003384 800037D4 0C014388 */  jal         bzero
 /* 003388 800037D8 2405021C */   addiu      $a1, $zero, 0x21c
 /* 00338C 800037DC 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 003390 800037E0 3C01800B */  lui         $at, %hi(D_800AD1E0)
