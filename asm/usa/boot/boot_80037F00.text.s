@@ -30,7 +30,7 @@ glabel func_80037F00 # 0
 /* 037AF4 80037F44 25CFFFF0 */  addiu       $t7, $t6, -0x10
 /* 037AF8 80037F48 ACEF0008 */  sw          $t7, 0x8($a3)
 /* 037AFC 80037F4C A0F9000E */  sb          $t9, 0xe($a3)
-/* 037B00 80037F50 0C014FE8 */  jal         func_80053FA0
+/* 037B00 80037F50 0C014FE8 */  jal         osGetThreadId
 /* 037B04 80037F54 A0E0000F */   sb         $zero, 0xf($a3)
 /* 037B08 80037F58 8FA30018 */  lw          $v1, 0x18($sp)
 /* 037B0C 80037F5C 8FA7001C */  lw          $a3, 0x1c($sp)
