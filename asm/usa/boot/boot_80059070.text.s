@@ -44,7 +44,7 @@ glabel func_800590C0 # 1
 /* 058C90 800590E0 3C048010 */  lui         $a0, %hi(D_80100378)
 /* 058C94 800590E4 24840378 */  addiu       $a0, $a0, %lo(D_80100378)
 /* 058C98 800590E8 27A5001C */  addiu       $a1, $sp, 0x1c
-/* 058C9C 800590EC 0C014554 */  jal         func_80051550
+/* 058C9C 800590EC 0C014554 */  jal         osRecvMesg
 /* 058CA0 800590F0 24060001 */   addiu      $a2, $zero, 0x1
 /* 058CA4 800590F4 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 058CA8 800590F8 27BD0020 */  addiu       $sp, $sp, 0x20

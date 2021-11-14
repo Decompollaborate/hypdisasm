@@ -27,7 +27,7 @@ glabel func_80052FB0 # 0
 /* 052B98 80052FE8 24040001 */   addiu      $a0, $zero, 0x1
 /* 052B9C 80052FEC 8FA40020 */  lw          $a0, 0x20($sp)
 /* 052BA0 80052FF0 00002825 */  move        $a1, $zero
-/* 052BA4 80052FF4 0C014554 */  jal         func_80051550
+/* 052BA4 80052FF4 0C014554 */  jal         osRecvMesg
 /* 052BA8 80052FF8 24060001 */   addiu      $a2, $zero, 0x1
 .L80052FFC:
 /* 052BAC 80052FFC 3C058010 */  lui         $a1, %hi(D_800FDC10)

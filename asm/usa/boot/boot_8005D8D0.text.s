@@ -26,7 +26,7 @@ glabel func_8005D8D0 # 0
 /* 05D4B4 8005D904 24040001 */   addiu      $a0, $zero, 0x1
 /* 05D4B8 8005D908 8FA40030 */  lw          $a0, 0x30($sp)
 /* 05D4BC 8005D90C 27A50028 */  addiu       $a1, $sp, 0x28
-/* 05D4C0 8005D910 0C014554 */  jal         func_80051550
+/* 05D4C0 8005D910 0C014554 */  jal         osRecvMesg
 /* 05D4C4 8005D914 24060001 */   addiu      $a2, $zero, 0x1
 /* 05D4C8 8005D918 3C058010 */  lui         $a1, %hi(D_80100390)
 /* 05D4CC 8005D91C 24A50390 */  addiu       $a1, $a1, %lo(D_80100390)
@@ -35,7 +35,7 @@ glabel func_8005D8D0 # 0
 /* 05D4D8 8005D928 AFA2002C */  sw          $v0, 0x2c($sp)
 /* 05D4DC 8005D92C 8FA40030 */  lw          $a0, 0x30($sp)
 /* 05D4E0 8005D930 27A50028 */  addiu       $a1, $sp, 0x28
-/* 05D4E4 8005D934 0C014554 */  jal         func_80051550
+/* 05D4E4 8005D934 0C014554 */  jal         osRecvMesg
 /* 05D4E8 8005D938 24060001 */   addiu      $a2, $zero, 0x1
 /* 05D4EC 8005D93C 8FA40034 */  lw          $a0, 0x34($sp)
 /* 05D4F0 8005D940 0C017699 */  jal         func_8005DA64

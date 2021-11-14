@@ -173,7 +173,7 @@ glabel func_8003FE44 # 3
 /* 03FA48 8003FE98 02E02025 */  move        $a0, $s7
 .L8003FE9C:
 /* 03FA4C 8003FE9C 02402825 */  move        $a1, $s2
-/* 03FA50 8003FEA0 0C014554 */  jal         func_80051550
+/* 03FA50 8003FEA0 0C014554 */  jal         osRecvMesg
 /* 03FA54 8003FEA4 02C03025 */   move       $a2, $s6
 /* 03FA58 8003FEA8 8E2E0000 */  lw          $t6, 0x0($s1)
 /* 03FA5C 8003FEAC 8FB80044 */  lw          $t8, 0x44($sp)
@@ -325,7 +325,7 @@ glabel func_80040064 # 7
 /* 03FC64 800400B4 02A02025 */  move        $a0, $s5
 .L800400B8:
 /* 03FC68 800400B8 02C02825 */  move        $a1, $s6
-/* 03FC6C 800400BC 0C014554 */  jal         func_80051550
+/* 03FC6C 800400BC 0C014554 */  jal         osRecvMesg
 /* 03FC70 800400C0 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FC74 800400C4 8FAE0058 */  lw          $t6, 0x58($sp)
 /* 03FC78 800400C8 8DC40040 */  lw          $a0, 0x40($t6)
@@ -338,7 +338,7 @@ glabel func_80040064 # 7
 /* 03FC94 800400E4 265000AC */   addiu      $s0, $s2, 0xac
 /* 03FC98 800400E8 02002025 */  move        $a0, $s0
 /* 03FC9C 800400EC 02802825 */  move        $a1, $s4
-/* 03FCA0 800400F0 0C014554 */  jal         func_80051550
+/* 03FCA0 800400F0 0C014554 */  jal         osRecvMesg
 /* 03FCA4 800400F4 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FCA8 800400F8 0C015204 */  jal         func_80054810
 /* 03FCAC 800400FC 26640010 */   addiu      $a0, $s3, 0x10
@@ -359,7 +359,7 @@ glabel func_80040064 # 7
 /* 03FCE0 80040130 24840010 */   addiu      $a0, $a0, 0x10
 /* 03FCE4 80040134 02002025 */  move        $a0, $s0
 /* 03FCE8 80040138 02802825 */  move        $a1, $s4
-/* 03FCEC 8004013C 0C014554 */  jal         func_80051550
+/* 03FCEC 8004013C 0C014554 */  jal         osRecvMesg
 /* 03FCF0 80040140 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FCF4 80040144 8E580674 */  lw          $t8, 0x674($s2)
 /* 03FCF8 80040148 AE400670 */  sw          $zero, 0x670($s2)
@@ -431,7 +431,7 @@ glabel func_80040200 # 8
 /* 03FDE8 80040238 02A02025 */  move        $a0, $s5
 .L8004023C:
 /* 03FDEC 8004023C 02802825 */  move        $a1, $s4
-/* 03FDF0 80040240 0C014554 */  jal         func_80051550
+/* 03FDF0 80040240 0C014554 */  jal         osRecvMesg
 /* 03FDF4 80040244 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FDF8 80040248 02002025 */  move        $a0, $s0
 /* 03FDFC 8004024C 0C0100DD */  jal         func_80040374
@@ -442,7 +442,7 @@ glabel func_80040200 # 8
 /* 03FE10 80040260 11C00005 */  beq         $t6, $zero, .L80040278
 /* 03FE14 80040264 02602825 */   move       $a1, $s3
 /* 03FE18 80040268 AE0F0674 */  sw          $t7, 0x674($s0)
-/* 03FE1C 8004026C 0C014554 */  jal         func_80051550
+/* 03FE1C 8004026C 0C014554 */  jal         osRecvMesg
 /* 03FE20 80040270 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FE24 80040274 AE000674 */  sw          $zero, 0x674($s0)
 .L80040278:
@@ -458,12 +458,12 @@ glabel func_80040200 # 8
 /* 03FE4C 8004029C 24840010 */   addiu      $a0, $a0, 0x10
 /* 03FE50 800402A0 02202025 */  move        $a0, $s1
 /* 03FE54 800402A4 02602825 */  move        $a1, $s3
-/* 03FE58 800402A8 0C014554 */  jal         func_80051550
+/* 03FE58 800402A8 0C014554 */  jal         osRecvMesg
 /* 03FE5C 800402AC 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FE60 800402B0 AE00066C */  sw          $zero, 0x66c($s0)
 /* 03FE64 800402B4 02402025 */  move        $a0, $s2
 /* 03FE68 800402B8 02602825 */  move        $a1, $s3
-/* 03FE6C 800402BC 0C014554 */  jal         func_80051550
+/* 03FE6C 800402BC 0C014554 */  jal         osRecvMesg
 /* 03FE70 800402C0 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FE74 800402C4 8FB90040 */  lw          $t9, 0x40($sp)
 /* 03FE78 800402C8 8F280008 */  lw          $t0, 0x8($t9)
@@ -538,7 +538,7 @@ glabel func_80040374 # 9
 /* 03FF7C 800403CC 02202025 */   move       $a0, $s1
 /* 03FF80 800403D0 02002025 */  move        $a0, $s0
 /* 03FF84 800403D4 02802825 */  move        $a1, $s4
-/* 03FF88 800403D8 0C014554 */  jal         func_80051550
+/* 03FF88 800403D8 0C014554 */  jal         osRecvMesg
 /* 03FF8C 800403DC 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FF90 800403E0 02202025 */  move        $a0, $s1
 /* 03FF94 800403E4 0C00FFE3 */  jal         func_8003FF8C

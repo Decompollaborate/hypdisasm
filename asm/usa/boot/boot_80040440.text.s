@@ -717,7 +717,7 @@ glabel func_80040DD4 # 15
 /* 0409A4 80040DF4 8FA40030 */   lw         $a0, 0x30($sp)
 /* 0409A8 80040DF8 8FA40030 */  lw          $a0, 0x30($sp)
 /* 0409AC 80040DFC 00002825 */  move        $a1, $zero
-/* 0409B0 80040E00 0C014554 */  jal         func_80051550
+/* 0409B0 80040E00 0C014554 */  jal         osRecvMesg
 /* 0409B4 80040E04 24060001 */   addiu      $a2, $zero, 0x1
 /* 0409B8 80040E08 0C01472F */  jal         func_80051CBC
 /* 0409BC 80040E0C 27A40020 */   addiu      $a0, $sp, 0x20

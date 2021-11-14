@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80051550 # 0
+glabel osRecvMesg # 0
 /* 051100 80051550 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 051104 80051554 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 051108 80051558 AFA40028 */  sw          $a0, 0x28($sp)

@@ -33,3 +33,5 @@
 800427C8,Fault_Start
 800426B4,Fault_ThreadEntry
 80058080,__osDequeueThread
+80053340,osInvalDCache
+80051550,osRecvMesg
