@@ -4,6 +4,26 @@ MAKEFLAGS += --no-builtin-rules
 
 
 
+#### Tools ####
+ifeq ($(shell type mips-linux-gnu-ld >/dev/null 2>/dev/null; echo $$?), 0)
+  MIPS_BINUTILS_PREFIX := mips-linux-gnu-
+else
+  $(error Please install or build mips-linux-gnu)
+endif
+
+
+
+AS         := $(MIPS_BINUTILS_PREFIX)as
+LD         := $(MIPS_BINUTILS_PREFIX)ld
+OBJCOPY    := $(MIPS_BINUTILS_PREFIX)objcopy
+OBJDUMP    := $(MIPS_BINUTILS_PREFIX)objdump
+
+
+
+ASFLAGS := -march=vr4300 -32 -Iinclude
+MIPS_VERSION := -mips2
+
+
 # create asm directories
 $(shell mkdir -p asm data baserom/usa baserom/jp)
 
@@ -19,3 +39,9 @@ $(shell mkdir -p asm data baserom/usa baserom/jp)
 ## Extraction step
 setup:
 	$(MAKE) -C tools
+
+
+
+build/asm/%.o: asm/%.s
+	$(AS) $(ASFLAGS) $< -o $@
+
