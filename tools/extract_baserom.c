@@ -71,6 +71,10 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
         printf("Writing '%s'. From offset %06X to %06X\n", outputFilepath, offset_last, offset);
 
         FILE* outputFile = fopen(outputFilepath, "wb");
+        if (outputFile == NULL) {
+            fprintf(stderr, "Could not open '%s' to write file\n  Probably an intermediate folder is missing\n", outputFilepath);
+            exit(EXIT_FAILURE);
+        }
         fwrite(&rom[offset_last], sizeof(uint8_t), offset - offset_last, outputFile);
         fclose(outputFile);
 
@@ -83,6 +87,10 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
         printf("Writing '%s'. From offset %06X to %06zX\n", outputFilepath, offset_last, romsize);
 
         FILE* outputFile = fopen(outputFilepath, "wb");
+        if (outputFile == NULL) {
+            fprintf(stderr, "Could not open '%s' to write file\n  Probably an intermediate folder is missing\n", outputFilepath);
+            exit(EXIT_FAILURE);
+        }
         fwrite(&rom[offset_last], sizeof(uint8_t), romsize - offset_last, outputFile);
         fclose(outputFile);
     }
@@ -114,6 +122,10 @@ int main(int argc, char *argv[]) {
     }
 
     FILE *romfile = fopen(argv[2], "rb");
+    if (romfile == NULL) {
+        fprintf(stderr, "Could not open ROM '%s'\n", argv[2]);
+        exit(EXIT_FAILURE);
+    }
     assert(romfile != NULL);
 
     size_t fileSize = GetFileSize(romfile);

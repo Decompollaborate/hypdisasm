@@ -28,7 +28,7 @@ endif
 all: $(PROGRAMS)
 
 clean:
-	$(RM) -r $(ELF)
+	$(RM) -r $(PROGRAMS)
 
 .PHONY: all clean
 
