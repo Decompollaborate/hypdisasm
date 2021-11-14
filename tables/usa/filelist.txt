@@ -6,3 +6,5 @@ file_B3C70 B3C70
 file_B3C70_data CC5B4
 file_B3C70_rodata D4EE0
 file_DCF60 DCF60
+file_DCF60_data DD190
+file_DCF60_rodata FE530
