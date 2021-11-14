@@ -35,3 +35,5 @@
 80058080,__osDequeueThread
 80053340,osInvalDCache
 80051550,osRecvMesg
+800542F0,coss
+80054320,sins

@@ -709,8 +709,8 @@ glabel func_80117B14 # 31
 /* 00D02C 80117B1C A424F6D0 */   sh         $a0, %lo(D_800EF6D0)($at)
 
 glabel func_80117B20 # 32
-/* 00D030 80117B20 3C02800F */  lui         $v0, %hi(D_800EF6D2)
-/* 00D034 80117B24 944EF6D2 */  lhu         $t6, %lo(D_800EF6D2)($v0)
+/* 00D030 80117B20 3C02800F */  lui         $v0, %hi(D_800EF6D0 + 0x2)
+/* 00D034 80117B24 944EF6D2 */  lhu         $t6, %lo(D_800EF6D0 + 0x2)($v0)
 /* 00D038 80117B28 03E00008 */  jr          $ra
 /* 00D03C 80117B2C 01C01025 */   move       $v0, $t6
 

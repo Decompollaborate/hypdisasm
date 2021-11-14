@@ -1642,8 +1642,8 @@ glabel func_8000DE58 # 25
 /* 00DAC0 8000DF10 92840000 */  lbu         $a0, 0x0($s4)
 /* 00DAC4 8000DF14 0460000C */  bltz        $v1, .L8000DF48
 /* 00DAC8 8000DF18 24110001 */   addiu      $s1, $zero, 0x1
-/* 00DACC 8000DF1C 3C10800B */  lui         $s0, %hi(D_800B6811)
-/* 00DAD0 8000DF20 26106811 */  addiu       $s0, $s0, %lo(D_800B6811)
+/* 00DACC 8000DF1C 3C10800B */  lui         $s0, %hi(D_800B6810 + 0x1)
+/* 00DAD0 8000DF20 26106811 */  addiu       $s0, $s0, %lo(D_800B6810 + 0x1)
 .L8000DF24:
 /* 00DAD4 8000DF24 26310001 */  addiu       $s1, $s1, 0x1
 /* 00DAD8 8000DF28 0071C023 */  subu        $t8, $v1, $s1

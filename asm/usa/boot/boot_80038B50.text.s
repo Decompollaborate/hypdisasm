@@ -1598,7 +1598,7 @@ glabel func_8003A18C # 30
 /* 039DE8 8003A238 5020FFFE */  beql        $at, $zero, .L8003A234
 /* 039DEC 8003A23C 00441021 */   addu       $v0, $v0, $a0
 .L8003A240:
-/* 039DF0 8003A240 0C0150BC */  jal         func_800542F0
+/* 039DF0 8003A240 0C0150BC */  jal         coss
 /* 039DF4 8003A244 3044FFFF */   andi       $a0, $v0, 0xffff
 /* 039DF8 8003A248 44825000 */  mtc1        $v0, $f10
 /* 039DFC 8003A24C 3C01800A */  lui         $at, %hi(D_800A6E20)
@@ -1662,7 +1662,7 @@ glabel func_8003A26C # 31
 /* 039EC8 8003A318 5020FFFE */  beql        $at, $zero, .L8003A314
 /* 039ECC 8003A31C 00441021 */   addu       $v0, $v0, $a0
 .L8003A320:
-/* 039ED0 8003A320 0C0150C8 */  jal         func_80054320
+/* 039ED0 8003A320 0C0150C8 */  jal         sins
 /* 039ED4 8003A324 3044FFFF */   andi       $a0, $v0, 0xffff
 /* 039ED8 8003A328 44825000 */  mtc1        $v0, $f10
 /* 039EDC 8003A32C 3C01800A */  lui         $at, %hi(D_800A6E30)

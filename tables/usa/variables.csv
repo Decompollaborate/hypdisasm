@@ -1,8 +1,9 @@
-800A8C00,sBootThreadInfo,UNK_TYPE
-800A9000,gIrqMgr,UNK_TYPE
-800B6538,D_800B6538,UNK_TYPE
-8009F89C,__osActiveQueue,UNK_TYPE
-8009F898,__osRunQueue,OSThread*
-800A7B74,_faultstring_FiT,char*
-8009F890,__osThreadTail,OSThread*
-8009F8A0,__osRunningThread,OSThread*
+800A8C00,sBootThreadInfo,UNK_TYPE,4
+800A9000,gIrqMgr,UNK_TYPE,4
+800B6538,D_800B6538,UNK_TYPE,4
+8009F89C,__osActiveQueue,UNK_TYPE,4
+8009F898,__osRunQueue,OSThread*,4
+800A7B74,_faultstring_FiT,char,4
+8009F890,__osThreadTail,OSThread*,4
+8009F8A0,__osRunningThread,OSThread*,4
+8009EE70,sintable,s16,0x800
