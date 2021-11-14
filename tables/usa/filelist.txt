@@ -3,4 +3,6 @@ boot 1050
 boot_data 63CA0
 boot_rodata A0830
 file_B3C70 B3C70
+file_B3C70_data CC5B4
 file_B3C70_rodata D4EE0
+file_DCF60 DCF60
