@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005DB10 # 0
+glabel _Litob # 0
 /* 05D6C0 8005DB10 27BDFF70 */  addiu       $sp, $sp, -0x90
 /* 05D6C4 8005DB14 AFB10020 */  sw          $s1, 0x20($sp)
 /* 05D6C8 8005DB18 30A200FF */  andi        $v0, $a1, 0xff
@@ -21,12 +21,12 @@ glabel func_8005DB10 # 0
 /* 05D6E0 8005DB30 AFB0001C */  sw          $s0, 0x1c($sp)
 /* 05D6E4 8005DB34 14620004 */  bne         $v1, $v0, .L8005DB48
 /* 05D6E8 8005DB38 AFA50094 */   sw         $a1, 0x94($sp)
-/* 05D6EC 8005DB3C 3C13800A */  lui         $s3, %hi(D_8009FBF4)
+/* 05D6EC 8005DB3C 3C13800A */  lui         $s3, %hi(udigs)
 /* 05D6F0 8005DB40 10000003 */  b           .L8005DB50
-/* 05D6F4 8005DB44 2673FBF4 */   addiu      $s3, $s3, %lo(D_8009FBF4)
+/* 05D6F4 8005DB44 2673FBF4 */   addiu      $s3, $s3, %lo(udigs)
 .L8005DB48:
-/* 05D6F8 8005DB48 3C13800A */  lui         $s3, %hi(D_8009FBE0)
-/* 05D6FC 8005DB4C 2673FBE0 */  addiu       $s3, $s3, %lo(D_8009FBE0)
+/* 05D6F8 8005DB48 3C13800A */  lui         $s3, %hi(ldigs)
+/* 05D6FC 8005DB4C 2673FBE0 */  addiu       $s3, $s3, %lo(ldigs)
 .L8005DB50:
 /* 05D700 8005DB50 2401006F */  addiu       $at, $zero, 0x6f
 /* 05D704 8005DB54 14410003 */  bne         $v0, $at, .L8005DB64

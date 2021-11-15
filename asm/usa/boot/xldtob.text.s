@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005DDB0 # 0
+glabel _Ldtob # 0
 /* 05D960 8005DDB0 27BDFF40 */  addiu       $sp, $sp, -0xc0
 /* 05D964 8005DDB4 AFBF0044 */  sw          $ra, 0x44($sp)
 /* 05D968 8005DDB8 AFB50040 */  sw          $s5, 0x40($sp)
@@ -43,7 +43,7 @@ glabel func_8005DDB0 # 0
 .L8005DE20:
 /* 05D9D0 8005DE20 27A4008A */  addiu       $a0, $sp, 0x8a
 /* 05D9D4 8005DE24 00C02825 */  move        $a1, $a2
-/* 05D9D8 8005DE28 0C017890 */  jal         func_8005E240
+/* 05D9D8 8005DE28 0C017890 */  jal         _Ldunscale
 /* 05D9DC 8005DE2C AFA600C0 */   sw         $a2, 0xc0($sp)
 /* 05D9E0 8005DE30 1840000F */  blez        $v0, .L8005DE70
 /* 05D9E4 8005DE34 24010002 */   addiu      $at, $zero, 0x2
@@ -330,7 +330,7 @@ glabel func_8005DDB0 # 0
 /* 05DDB0 8005E200 8FA400C0 */  lw          $a0, 0xc0($sp)
 /* 05DDB4 8005E204 93A500C7 */  lbu         $a1, 0xc7($sp)
 /* 05DDB8 8005E208 02403025 */  move        $a2, $s2
-/* 05DDBC 8005E20C 0C0178BE */  jal         func_8005E2F8
+/* 05DDBC 8005E20C 0C0178BE */  jal         _Genld
 /* 05DDC0 8005E210 AFB80010 */   sw         $t8, 0x10($sp)
 /* 05DDC4 8005E214 8FBF0044 */  lw          $ra, 0x44($sp)
 .L8005E218:
@@ -345,7 +345,7 @@ glabel func_8005DDB0 # 0
 /* 05DDE8 8005E238 03E00008 */  jr          $ra
 /* 05DDEC 8005E23C 27BD00C0 */   addiu      $sp, $sp, 0xc0
 
-glabel func_8005E240 # 1
+glabel _Ldunscale # 1
 /* 05DDF0 8005E240 94A60000 */  lhu         $a2, 0x0($a1)
 /* 05DDF4 8005E244 240107FF */  addiu       $at, $zero, 0x7ff
 /* 05DDF8 8005E248 30C37FF0 */  andi        $v1, $a2, 0x7ff0
@@ -398,7 +398,7 @@ glabel func_8005E240 # 1
 /* 05DEA0 8005E2F0 03E00008 */  jr          $ra
 /* 05DEA4 8005E2F4 00000000 */   nop
 
-glabel func_8005E2F8 # 2
+glabel _Genld # 2
 /* 05DEA8 8005E2F8 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 05DEAC 8005E2FC AFA7002C */  sw          $a3, 0x2c($sp)
 /* 05DEB0 8005E300 00077400 */  sll         $t6, $a3, 16
@@ -810,29 +810,3 @@ glabel func_8005E2F8 # 2
 /* 05E464 8005E8B4 8FB10018 */  lw          $s1, 0x18($sp)
 /* 05E468 8005E8B8 03E00008 */  jr          $ra
 /* 05E46C 8005E8BC 27BD0020 */   addiu      $sp, $sp, 0x20
-
-glabel func_8005E8C0 # 3
-/* 05E470 8005E8C0 27BDFFD8 */  addiu       $sp, $sp, -0x28
-/* 05E474 8005E8C4 AFBF001C */  sw          $ra, 0x1c($sp)
-/* 05E478 8005E8C8 AFA40028 */  sw          $a0, 0x28($sp)
-/* 05E47C 8005E8CC 0C015FFC */  jal         __osDisableInt
-/* 05E480 8005E8D0 AFB00018 */   sw         $s0, 0x18($sp)
-/* 05E484 8005E8D4 8FAF0028 */  lw          $t7, 0x28($sp)
-/* 05E488 8005E8D8 3C0E800A */  lui         $t6, %hi(__OSGlobalIntMask)
-/* 05E48C 8005E8DC 8DCEDC80 */  lw          $t6, %lo(__OSGlobalIntMask)($t6)
-/* 05E490 8005E8E0 2401FBFE */  addiu       $at, $zero, -0x402
-/* 05E494 8005E8E4 01E1C024 */  and         $t8, $t7, $at
-/* 05E498 8005E8E8 0300C827 */  nor         $t9, $t8, $zero
-/* 05E49C 8005E8EC 00408025 */  move        $s0, $v0
-/* 05E4A0 8005E8F0 3C01800A */  lui         $at, %hi(__OSGlobalIntMask)
-/* 05E4A4 8005E8F4 01D94024 */  and         $t0, $t6, $t9
-/* 05E4A8 8005E8F8 AC28DC80 */  sw          $t0, %lo(__OSGlobalIntMask)($at)
-/* 05E4AC 8005E8FC 0C016018 */  jal         __osRestoreInt
-/* 05E4B0 8005E900 02002025 */   move       $a0, $s0
-/* 05E4B4 8005E904 8FBF001C */  lw          $ra, 0x1c($sp)
-/* 05E4B8 8005E908 8FB00018 */  lw          $s0, 0x18($sp)
-/* 05E4BC 8005E90C 27BD0028 */  addiu       $sp, $sp, 0x28
-/* 05E4C0 8005E910 03E00008 */  jr          $ra
-/* 05E4C4 8005E914 00000000 */   nop
-/* 05E4C8 8005E918 00000000 */  nop
-/* 05E4CC 8005E91C 00000000 */  nop

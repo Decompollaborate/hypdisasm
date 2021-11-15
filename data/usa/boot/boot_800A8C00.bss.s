@@ -12,7 +12,7 @@
 glabel dummyBssVarBootStart
 /* 0A87B0 800A8C00 */  .space  0x400
 
-glabel D_800A9000
+glabel gIrqMgr
 /* 0A87B4 800A9000 */  .space  0x688
 
 glabel D_800A9688
