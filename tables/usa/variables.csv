@@ -11,5 +11,6 @@
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40
 8009DC80,__OSGlobalIntMask,u32,4
+8009F950,__osViCurr,__OSViContext*,4
 8009F954,__osViNext,__OSViContext*,4
-8009F950,__additional_scanline,u32,4
+8009F68C,__additional_scanline,u32,4

@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80054B70 # 0
+glabel osViGetNextFramebuffer # 0
 /* 054720 80054B70 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 054724 80054B74 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 054728 80054B78 0C015FFC */  jal         __osDisableInt

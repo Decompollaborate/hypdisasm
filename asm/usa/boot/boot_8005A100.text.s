@@ -423,7 +423,7 @@ glabel func_8005A2E0 # 1
 /* 05A29C 8005A6EC 27BD0078 */   addiu      $sp, $sp, 0x78
 
 glabel func_8005A6F0 # 2
-/* 05A2A0 8005A6F0 3C02800A */  lui         $v0, %hi(D_8009F950)
+/* 05A2A0 8005A6F0 3C02800A */  lui         $v0, %hi(__osViCurr)
 /* 05A2A4 8005A6F4 03E00008 */  jr          $ra
-/* 05A2A8 8005A6F8 8C42F950 */   lw         $v0, %lo(D_8009F950)($v0)
+/* 05A2A8 8005A6F8 8C42F950 */   lw         $v0, %lo(__osViCurr)($v0)
 /* 05A2AC 8005A6FC 00000000 */  nop

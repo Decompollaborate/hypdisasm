@@ -21,10 +21,10 @@ glabel func_80054400 # 0
 /* 053FD0 80054420 8FBF0024 */   lw         $ra, 0x24($sp)
 /* 053FD4 80054424 0C0162B0 */  jal         func_80058AC0
 /* 053FD8 80054428 00000000 */   nop
-/* 053FDC 8005442C 3C01800A */  lui         $at, %hi(D_8009F68C)
+/* 053FDC 8005442C 3C01800A */  lui         $at, %hi(__additional_scanline)
 /* 053FE0 80054430 3C048010 */  lui         $a0, %hi(D_80100250)
 /* 053FE4 80054434 3C058010 */  lui         $a1, %hi(D_80100268)
-/* 053FE8 80054438 AC20F68C */  sw          $zero, %lo(D_8009F68C)($at)
+/* 053FE8 80054438 AC20F68C */  sw          $zero, %lo(__additional_scanline)($at)
 /* 053FEC 8005443C 24A50268 */  addiu       $a1, $a1, %lo(D_80100268)
 /* 053FF0 80054440 24840250 */  addiu       $a0, $a0, %lo(D_80100250)
 /* 053FF4 80054444 0C0145B8 */  jal         osCreateMesgQueue
@@ -155,7 +155,7 @@ glabel func_80054580 # 1
 /* 0541CC 8005461C 1000FFF6 */  b           .L800545F8
 /* 0541D0 80054620 8EE4000C */   lw         $a0, 0xc($s7)
 .L80054624:
-/* 0541D4 80054624 0C0169C0 */  jal         func_8005A700
+/* 0541D4 80054624 0C0169C0 */  jal         __osViSwapContext
 /* 0541D8 80054628 00000000 */   nop
 /* 0541DC 8005462C 3C038010 */  lui         $v1, %hi(D_801002B0)
 /* 0541E0 80054630 946302B0 */  lhu         $v1, %lo(D_801002B0)($v1)

@@ -109,7 +109,7 @@ glabel func_8000A7A8 # 1
 /* 00A4B4 8000A904 AFB90054 */  sw          $t9, 0x54($sp)
 /* 00A4B8 8000A908 0C00F227 */  jal         func_8003C89C
 /* 00A4BC 8000A90C AFB80050 */   sw         $t8, 0x50($sp)
-/* 00A4C0 8000A910 0C014D58 */  jal         func_80053560
+/* 00A4C0 8000A910 0C014D58 */  jal         osViSetMode
 /* 00A4C4 8000A914 8FA4006C */   lw         $a0, 0x6c($sp)
 /* 00A4C8 8000A918 0C014D70 */  jal         osViBlack
 /* 00A4CC 8000A91C 24040001 */   addiu      $a0, $zero, 0x1
@@ -1287,7 +1287,7 @@ glabel func_8000BA1C # 17
 /* 00B5EC 8000BA3C AFB20020 */  sw          $s2, 0x20($sp)
 /* 00B5F0 8000BA40 AFB1001C */  sw          $s1, 0x1c($sp)
 /* 00B5F4 8000BA44 AFB00018 */  sw          $s0, 0x18($sp)
-/* 00B5F8 8000BA48 0C014DE4 */  jal         func_80053790
+/* 00B5F8 8000BA48 0C014DE4 */  jal         osViSetYScale
 /* 00B5FC 8000BA4C AFA0003C */   sw         $zero, 0x3c($sp)
 /* 00B600 8000BA50 0C001283 */  jal         func_80004A0C
 /* 00B604 8000BA54 00002025 */   move       $a0, $zero
