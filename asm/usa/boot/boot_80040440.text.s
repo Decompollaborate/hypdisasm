@@ -377,7 +377,7 @@ glabel func_8004090C # 6
 /* 0404F4 80040944 3C048010 */  lui         $a0, %hi(D_800F8AF8)
 /* 0404F8 80040948 1300001A */  beq         $t8, $zero, .L800409B4
 /* 0404FC 8004094C 256B8AC4 */   addiu      $t3, $t3, %lo(D_800F8AC4)
-/* 040500 80040950 0C0152EC */  jal         func_80054BB0
+/* 040500 80040950 0C0152EC */  jal         osVoiceStartReadData
 /* 040504 80040954 24848AF8 */   addiu      $a0, $a0, %lo(D_800F8AF8)
 /* 040508 80040958 3C038010 */  lui         $v1, %hi(D_800F8ACC)
 /* 04050C 8004095C 24638ACC */  addiu       $v1, $v1, %lo(D_800F8ACC)
@@ -434,7 +434,7 @@ glabel func_800409CC # 7
 /* 0405BC 80040A0C 10000060 */  b           .L80040B90
 /* 0405C0 80040A10 AC228B10 */   sw         $v0, %lo(D_800F8B10)($at)
 .L80040A14:
-/* 0405C4 80040A14 0C01531C */  jal         func_80054C70
+/* 0405C4 80040A14 0C01531C */  jal         osVoiceGetReadData
 /* 0405C8 80040A18 27A50018 */   addiu      $a1, $sp, 0x18
 /* 0405CC 80040A1C 3C058010 */  lui         $a1, %hi(D_800F8AF8)
 /* 0405D0 80040A20 24A58AF8 */  addiu       $a1, $a1, %lo(D_800F8AF8)
@@ -510,7 +510,7 @@ glabel func_800409CC # 7
 /* 0406D8 80040B28 8F2A0000 */  lw          $t2, 0x0($t9)
 /* 0406DC 80040B2C 55400019 */  bnel        $t2, $zero, .L80040B94
 /* 0406E0 80040B30 8FBF0014 */   lw         $ra, 0x14($sp)
-/* 0406E4 80040B34 0C015410 */  jal         func_80055040
+/* 0406E4 80040B34 0C015410 */  jal         osVoiceStopReadData
 /* 0406E8 80040B38 00A02025 */   move       $a0, $a1
 /* 0406EC 80040B3C 3C038010 */  lui         $v1, %hi(D_800F8ACC)
 /* 0406F0 80040B40 24638ACC */  addiu       $v1, $v1, %lo(D_800F8ACC)
@@ -762,7 +762,7 @@ glabel func_80040E64 # 16
 /* 040A44 80040E94 24428AF8 */  addiu       $v0, $v0, %lo(D_800F8AF8)
 /* 040A48 80040E98 8C440000 */  lw          $a0, 0x0($v0)
 /* 040A4C 80040E9C 8C450004 */  lw          $a1, 0x4($v0)
-/* 040A50 80040EA0 0C015470 */  jal         func_800551C0
+/* 040A50 80040EA0 0C015470 */  jal         __osVoiceSetADConverter
 /* 040A54 80040EA4 93A6001B */   lbu        $a2, 0x1b($sp)
 /* 040A58 80040EA8 3C038010 */  lui         $v1, %hi(D_800F8ACC)
 /* 040A5C 80040EAC 24638ACC */  addiu       $v1, $v1, %lo(D_800F8ACC)

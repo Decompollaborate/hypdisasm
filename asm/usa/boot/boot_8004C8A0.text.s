@@ -88,7 +88,7 @@ glabel func_8004C8A0 # 0
 /* 04C564 8004C9B4 00003025 */  move        $a2, $zero
 /* 04C568 8004C9B8 27A70034 */  addiu       $a3, $sp, 0x34
 /* 04C56C 8004C9BC 8C440000 */  lw          $a0, 0x0($v0)
-/* 04C570 8004C9C0 0C015644 */  jal         func_80055910
+/* 04C570 8004C9C0 0C015644 */  jal         __osVoiceContRead2
 /* 04C574 8004C9C4 8C450004 */   lw         $a1, 0x4($v0)
 /* 04C578 8004C9C8 93A80035 */  lbu         $t0, 0x35($sp)
 /* 04C57C 8004C9CC 93AA0034 */  lbu         $t2, 0x34($sp)
@@ -103,7 +103,7 @@ glabel func_8004C8A0 # 0
 /* 04C5A0 8004C9F0 02602025 */  move        $a0, $s3
 .L8004C9F4:
 /* 04C5A4 8004C9F4 02402825 */  move        $a1, $s2
-/* 04C5A8 8004C9F8 0C015470 */  jal         func_800551C0
+/* 04C5A8 8004C9F8 0C015470 */  jal         __osVoiceSetADConverter
 /* 04C5AC 8004C9FC 92060000 */   lbu        $a2, 0x0($s0)
 /* 04C5B0 8004CA00 10400003 */  beq         $v0, $zero, .L8004CA10
 /* 04C5B4 8004CA04 26100001 */   addiu      $s0, $s0, 0x1
@@ -138,7 +138,7 @@ glabel func_8004C8A0 # 0
 /* 04C61C 8004CA6C 10000009 */  b           .L8004CA94
 /* 04C620 8004CA70 8FBF0024 */   lw         $ra, 0x24($sp)
 .L8004CA74:
-/* 04C624 8004CA74 0C01575C */  jal         func_80055D70
+/* 04C624 8004CA74 0C01575C */  jal         __osVoiceCheckResult
 /* 04C628 8004CA78 27A50033 */   addiu      $a1, $sp, 0x33
 /* 04C62C 8004CA7C 304FFF00 */  andi        $t7, $v0, 0xff00
 /* 04C630 8004CA80 11E00002 */  beq         $t7, $zero, .L8004CA8C
@@ -219,7 +219,7 @@ glabel func_8004CAAC # 1
 /* 04C730 8004CB80 A139007A */  sb          $t9, 0x7a($t1)
 /* 04C734 8004CB84 8E050004 */  lw          $a1, 0x4($s0)
 /* 04C738 8004CB88 8E040000 */  lw          $a0, 0x0($s0)
-/* 04C73C 8004CB8C 0C015788 */  jal         func_80055E20
+/* 04C73C 8004CB8C 0C015788 */  jal         __osVoiceContWrite20
 /* 04C740 8004CB90 00003025 */   move       $a2, $zero
 /* 04C744 8004CB94 10400003 */  beq         $v0, $zero, .L8004CBA4
 /* 04C748 8004CB98 00003025 */   move       $a2, $zero
@@ -228,7 +228,7 @@ glabel func_8004CAAC # 1
 .L8004CBA4:
 /* 04C754 8004CBA4 8E040000 */  lw          $a0, 0x0($s0)
 /* 04C758 8004CBA8 8E050004 */  lw          $a1, 0x4($s0)
-/* 04C75C 8004CBAC 0C015788 */  jal         func_80055E20
+/* 04C75C 8004CBAC 0C015788 */  jal         __osVoiceContWrite20
 /* 04C760 8004CBB0 27A70044 */   addiu      $a3, $sp, 0x44
 /* 04C764 8004CBB4 10400003 */  beq         $v0, $zero, .L8004CBC4
 /* 04C768 8004CBB8 00003025 */   move       $a2, $zero
@@ -237,7 +237,7 @@ glabel func_8004CAAC # 1
 .L8004CBC4:
 /* 04C774 8004CBC4 8E040000 */  lw          $a0, 0x0($s0)
 /* 04C778 8004CBC8 8E050004 */  lw          $a1, 0x4($s0)
-/* 04C77C 8004CBCC 0C015788 */  jal         func_80055E20
+/* 04C77C 8004CBCC 0C015788 */  jal         __osVoiceContWrite20
 /* 04C780 8004CBD0 27A70058 */   addiu      $a3, $sp, 0x58
 /* 04C784 8004CBD4 10400003 */  beq         $v0, $zero, .L8004CBE4
 /* 04C788 8004CBD8 00003025 */   move       $a2, $zero
@@ -246,14 +246,14 @@ glabel func_8004CAAC # 1
 .L8004CBE4:
 /* 04C794 8004CBE4 8E040000 */  lw          $a0, 0x0($s0)
 /* 04C798 8004CBE8 8E050004 */  lw          $a1, 0x4($s0)
-/* 04C79C 8004CBEC 0C015788 */  jal         func_80055E20
+/* 04C79C 8004CBEC 0C015788 */  jal         __osVoiceContWrite20
 /* 04C7A0 8004CBF0 27A7006C */   addiu      $a3, $sp, 0x6c
 /* 04C7A4 8004CBF4 10400003 */  beq         $v0, $zero, .L8004CC04
 /* 04C7A8 8004CBF8 02002025 */   move       $a0, $s0
 /* 04C7AC 8004CBFC 10000013 */  b           .L8004CC4C
 /* 04C7B0 8004CC00 8FBF001C */   lw         $ra, 0x1c($sp)
 .L8004CC04:
-/* 04C7B4 8004CC04 0C01575C */  jal         func_80055D70
+/* 04C7B4 8004CC04 0C01575C */  jal         __osVoiceCheckResult
 /* 04C7B8 8004CC08 27A50083 */   addiu      $a1, $sp, 0x83
 /* 04C7BC 8004CC0C 1040000D */  beq         $v0, $zero, .L8004CC44
 /* 04C7C0 8004CC10 00401825 */   move       $v1, $v0
@@ -344,22 +344,22 @@ glabel func_8004CC5C # 2
 .L8004CD34:
 /* 04C8E4 8004CD34 8E040000 */  lw          $a0, 0x0($s0)
 /* 04C8E8 8004CD38 8E050004 */  lw          $a1, 0x4($s0)
-/* 04C8EC 8004CD3C 0C015788 */  jal         func_80055E20
+/* 04C8EC 8004CD3C 0C015788 */  jal         __osVoiceContWrite20
 /* 04C8F0 8004CD40 27A70030 */   addiu      $a3, $sp, 0x30
 /* 04C8F4 8004CD44 14400003 */  bne         $v0, $zero, .L8004CD54
 /* 04C8F8 8004CD48 02002025 */   move       $a0, $s0
-/* 04C8FC 8004CD4C 0C01575C */  jal         func_80055D70
+/* 04C8FC 8004CD4C 0C01575C */  jal         __osVoiceCheckResult
 /* 04C900 8004CD50 27A5005B */   addiu      $a1, $sp, 0x5b
 .L8004CD54:
 /* 04C904 8004CD54 8E040000 */  lw          $a0, 0x0($s0)
 /* 04C908 8004CD58 8E050004 */  lw          $a1, 0x4($s0)
 /* 04C90C 8004CD5C 00003025 */  move        $a2, $zero
-/* 04C910 8004CD60 0C015788 */  jal         func_80055E20
+/* 04C910 8004CD60 0C015788 */  jal         __osVoiceContWrite20
 /* 04C914 8004CD64 27A70044 */   addiu      $a3, $sp, 0x44
 /* 04C918 8004CD68 14400008 */  bne         $v0, $zero, .L8004CD8C
 /* 04C91C 8004CD6C 00401825 */   move       $v1, $v0
 /* 04C920 8004CD70 02002025 */  move        $a0, $s0
-/* 04C924 8004CD74 0C01575C */  jal         func_80055D70
+/* 04C924 8004CD74 0C01575C */  jal         __osVoiceCheckResult
 /* 04C928 8004CD78 27A5005B */   addiu      $a1, $sp, 0x5b
 /* 04C92C 8004CD7C 304EFF00 */  andi        $t6, $v0, 0xff00
 /* 04C930 8004CD80 11C00002 */  beq         $t6, $zero, .L8004CD8C
@@ -412,7 +412,7 @@ glabel func_8004CDA4 # 3
 /* 04C9D0 8004CE20 10000009 */  b           .L8004CE48
 /* 04C9D4 8004CE24 8FBF001C */   lw         $ra, 0x1c($sp)
 .L8004CE28:
-/* 04C9D8 8004CE28 0C01575C */  jal         func_80055D70
+/* 04C9D8 8004CE28 0C01575C */  jal         __osVoiceCheckResult
 /* 04C9DC 8004CE2C 27A5002B */   addiu      $a1, $sp, 0x2b
 /* 04C9E0 8004CE30 304AFF00 */  andi        $t2, $v0, 0xff00
 /* 04C9E4 8004CE34 11400002 */  beq         $t2, $zero, .L8004CE40

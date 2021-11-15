@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80055910 # 0
+glabel __osVoiceContRead2 # 0
 /* 0554C0 80055910 27BDFF98 */  addiu       $sp, $sp, -0x68
 /* 0554C4 80055914 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 0554C8 80055918 AFB60030 */  sw          $s6, 0x30($sp)

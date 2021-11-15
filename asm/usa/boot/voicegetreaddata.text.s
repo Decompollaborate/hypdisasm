@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80054C70 # 0
+glabel osVoiceGetReadData # 0
 /* 054820 80054C70 27BDFF98 */  addiu       $sp, $sp, -0x68
 /* 054824 80054C74 AFBF0024 */  sw          $ra, 0x24($sp)
 /* 054828 80054C78 AFB20020 */  sw          $s2, 0x20($sp)
@@ -47,7 +47,7 @@ glabel func_80054C70 # 0
 .L80054CF0:
 /* 0548A0 80054CF0 8E440000 */  lw          $a0, 0x0($s2)
 /* 0548A4 80054CF4 8E450004 */  lw          $a1, 0x4($s2)
-/* 0548A8 80054CF8 0C015644 */  jal         func_80055910
+/* 0548A8 80054CF8 0C015644 */  jal         __osVoiceContRead2
 /* 0548AC 80054CFC 00003025 */   move       $a2, $zero
 /* 0548B0 80054D00 10400003 */  beq         $v0, $zero, .L80054D10
 /* 0548B4 80054D04 93B80038 */   lbu        $t8, 0x38($sp)
@@ -116,7 +116,7 @@ glabel func_80054C70 # 0
 .L80054DE0:
 /* 054990 80054DE0 8E440000 */  lw          $a0, 0x0($s2)
 /* 054994 80054DE4 8E450004 */  lw          $a1, 0x4($s2)
-/* 054998 80054DE8 0C016AB8 */  jal         func_8005AAE0
+/* 054998 80054DE8 0C016AB8 */  jal         __osVoiceContRead36
 /* 05499C 80054DEC 02003825 */   move       $a3, $s0
 /* 0549A0 80054DF0 10400003 */  beq         $v0, $zero, .L80054E00
 /* 0549A4 80054DF4 00404025 */   move       $t0, $v0
@@ -244,7 +244,7 @@ glabel func_80054C70 # 0
 .L80054FCC:
 /* 054B7C 80054FCC 8E440000 */  lw          $a0, 0x0($s2)
 /* 054B80 80054FD0 8E450004 */  lw          $a1, 0x4($s2)
-/* 054B84 80054FD4 0C015644 */  jal         func_80055910
+/* 054B84 80054FD4 0C015644 */  jal         __osVoiceContRead2
 /* 054B88 80054FD8 02003825 */   move       $a3, $s0
 /* 054B8C 80054FDC 10400003 */  beq         $v0, $zero, .L80054FEC
 /* 054B90 80054FE0 00404025 */   move       $t0, $v0

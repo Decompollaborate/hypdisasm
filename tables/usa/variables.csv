@@ -10,3 +10,5 @@
 8009F8C0,__osPfsLastChannel,s32,4
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40
+8009DC80,__OSGlobalIntMask,u32,4
+8009F954,__osViNext,__OSViContext*,4

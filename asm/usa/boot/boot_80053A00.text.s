@@ -12,8 +12,8 @@
 glabel osSetIntMask # 0
 /* 0535B0 80053A00 400C6000 */  mfc0        $t4, Status
 /* 0535B4 80053A04 3182FF01 */  andi        $v0, $t4, 0xff01
-/* 0535B8 80053A08 3C08800A */  lui         $t0, %hi(D_8009DC80)
-/* 0535BC 80053A0C 2508DC80 */  addiu       $t0, $t0, %lo(D_8009DC80)
+/* 0535B8 80053A08 3C08800A */  lui         $t0, %hi(__OSGlobalIntMask)
+/* 0535BC 80053A0C 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 0535C0 80053A10 8D0B0000 */  lw          $t3, 0x0($t0)
 /* 0535C4 80053A14 2401FFFF */  addiu       $at, $zero, -0x1
 /* 0535C8 80053A18 01614026 */  xor         $t0, $t3, $at

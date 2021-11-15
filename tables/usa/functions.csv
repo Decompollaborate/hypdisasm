@@ -74,3 +74,12 @@
 80058460,__osSiRawStartDma
 80055630,__osVoiceGetStatus
 80058434,__osSiRelAccess
+80055E20,__osVoiceContWrite20
+8005AAE0,__osVoiceContRead36
+80055910,__osVoiceContRead2
+80055D70,__osVoiceCheckResult
+80054C70,osVoiceGetReadData
+80054BB0,osVoiceStartReadData
+80055040,osVoiceStopReadData
+800551C0,__osVoiceSetADConverter
+800535C0,osViBlack

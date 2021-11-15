@@ -342,7 +342,7 @@ glabel func_8003C89C # 4
 .L8003C9C8:
 /* 03C578 8003C9C8 0C014D58 */  jal         func_80053560
 /* 03C57C 8003C9CC 00000000 */   nop
-/* 03C580 8003C9D0 0C014D70 */  jal         func_800535C0
+/* 03C580 8003C9D0 0C014D70 */  jal         osViBlack
 /* 03C584 8003C9D4 24040001 */   addiu      $a0, $zero, 0x1
 /* 03C588 8003C9D8 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 03C58C 8003C9DC 8FAE0068 */  lw          $t6, 0x68($sp)

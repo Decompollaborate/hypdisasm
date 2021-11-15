@@ -10,8 +10,8 @@
 .balign 16
 
 glabel __osDisableInt # 0
-/* 057BA0 80057FF0 3C0A800A */  lui         $t2, %hi(D_8009DC80)
-/* 057BA4 80057FF4 254ADC80 */  addiu       $t2, $t2, %lo(D_8009DC80)
+/* 057BA0 80057FF0 3C0A800A */  lui         $t2, %hi(__OSGlobalIntMask)
+/* 057BA4 80057FF4 254ADC80 */  addiu       $t2, $t2, %lo(__OSGlobalIntMask)
 /* 057BA8 80057FF8 8D4B0000 */  lw          $t3, 0x0($t2)
 /* 057BAC 80057FFC 316BFF00 */  andi        $t3, $t3, 0xff00
 /* 057BB0 80058000 40086000 */  mfc0        $t0, Status

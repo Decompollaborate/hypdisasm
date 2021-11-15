@@ -14,8 +14,8 @@ glabel func_80054B70 # 0
 /* 054724 80054B74 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 054728 80054B78 0C015FFC */  jal         __osDisableInt
 /* 05472C 80054B7C 00000000 */   nop
-/* 054730 80054B80 3C0E800A */  lui         $t6, %hi(D_8009F954)
-/* 054734 80054B84 8DCEF954 */  lw          $t6, %lo(D_8009F954)($t6)
+/* 054730 80054B80 3C0E800A */  lui         $t6, %hi(__osViNext)
+/* 054734 80054B84 8DCEF954 */  lw          $t6, %lo(__osViNext)($t6)
 /* 054738 80054B88 00402025 */  move        $a0, $v0
 /* 05473C 80054B8C 8DCF0004 */  lw          $t7, 0x4($t6)
 /* 054740 80054B90 0C016018 */  jal         __osRestoreInt

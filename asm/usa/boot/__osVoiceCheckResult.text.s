@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80055D70 # 0
+glabel __osVoiceCheckResult # 0
 /* 055920 80055D70 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 055924 80055D74 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 055928 80055D78 AFB00018 */  sw          $s0, 0x18($sp)
@@ -32,7 +32,7 @@ glabel func_80055D70 # 0
 /* 05596C 80055DBC 2403000F */   addiu      $v1, $zero, 0xf
 /* 055970 80055DC0 8E040000 */  lw          $a0, 0x0($s0)
 .L80055DC4:
-/* 055974 80055DC4 0C015644 */  jal         func_80055910
+/* 055974 80055DC4 0C015644 */  jal         __osVoiceContRead2
 /* 055978 80055DC8 8E050004 */   lw         $a1, 0x4($s0)
 /* 05597C 80055DCC 1440000C */  bne         $v0, $zero, .L80055E00
 /* 055980 80055DD0 00401825 */   move       $v1, $v0

@@ -72,8 +72,8 @@ glabel func_80057600 # 0
 /* 05729C 800576EC FF5F0100 */  sd          $ra, 0x100($k0)
 /* 0572A0 800576F0 11200011 */  beq         $t1, $zero, .L80057738
 /* 0572A4 800576F4 FF480110 */   sd         $t0, 0x110($k0)
-/* 0572A8 800576F8 3C08800A */  lui         $t0, %hi(D_8009DC80)
-/* 0572AC 800576FC 2508DC80 */  addiu       $t0, $t0, %lo(D_8009DC80)
+/* 0572A8 800576F8 3C08800A */  lui         $t0, %hi(__OSGlobalIntMask)
+/* 0572AC 800576FC 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 0572B0 80057700 8D080000 */  lw          $t0, 0x0($t0)
 /* 0572B4 80057704 2401FFFF */  addiu       $at, $zero, -0x1
 /* 0572B8 80057708 01015026 */  xor         $t2, $t0, $at
@@ -93,8 +93,8 @@ glabel func_80057600 # 0
 /* 0572EC 8005773C 8D29000C */  lw          $t1, %lo(D_A430000C)($t1)
 /* 0572F0 80057740 1120000B */  beq         $t1, $zero, .L80057770
 /* 0572F4 80057744 00000000 */   nop
-/* 0572F8 80057748 3C08800A */  lui         $t0, %hi(D_8009DC80)
-/* 0572FC 8005774C 2508DC80 */  addiu       $t0, $t0, %lo(D_8009DC80)
+/* 0572F8 80057748 3C08800A */  lui         $t0, %hi(__OSGlobalIntMask)
+/* 0572FC 8005774C 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 057300 80057750 8D080000 */  lw          $t0, 0x0($t0)
 /* 057304 80057754 8F4C0128 */  lw          $t4, 0x128($k0)
 /* 057308 80057758 2401FFFF */  addiu       $at, $zero, -0x1
@@ -193,8 +193,8 @@ glabel func_80057600 # 0
 /* 057468 800578B8 24040010 */   addiu      $a0, $zero, 0x10
 /* 05746C 800578BC 1000FFD4 */  b           .L80057810
 /* 057470 800578C0 00000000 */   nop
-/* 057474 800578C4 3C08800A */  lui         $t0, %hi(D_8009DC80)
-/* 057478 800578C8 2508DC80 */  addiu       $t0, $t0, %lo(D_8009DC80)
+/* 057474 800578C4 3C08800A */  lui         $t0, %hi(__OSGlobalIntMask)
+/* 057478 800578C8 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 05747C 800578CC 8D080000 */  lw          $t0, 0x0($t0)
 /* 057480 800578D0 3C11A430 */  lui         $s1, %hi(D_A4300008)
 /* 057484 800578D4 8E310008 */  lw          $s1, %lo(D_A4300008)($s1)
@@ -468,8 +468,8 @@ glabel func_80057600 # 0
 /* 057868 80057CB8 3369FF00 */  andi        $t1, $k1, 0xff00
 /* 05786C 80057CBC 1120000D */  beq         $t1, $zero, .L80057CF4
 /* 057870 80057CC0 00000000 */   nop
-/* 057874 80057CC4 3C08800A */  lui         $t0, %hi(D_8009DC80)
-/* 057878 80057CC8 2508DC80 */  addiu       $t0, $t0, %lo(D_8009DC80)
+/* 057874 80057CC4 3C08800A */  lui         $t0, %hi(__OSGlobalIntMask)
+/* 057878 80057CC8 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 05787C 80057CCC 8D080000 */  lw          $t0, 0x0($t0)
 /* 057880 80057CD0 2401FFFF */  addiu       $at, $zero, -0x1
 /* 057884 80057CD4 01014026 */  xor         $t0, $t0, $at
@@ -485,8 +485,8 @@ glabel func_80057600 # 0
 /* 0578A8 80057CF8 8F7B000C */  lw          $k1, %lo(D_A430000C)($k1)
 /* 0578AC 80057CFC 1360000B */  beq         $k1, $zero, .L80057D2C
 /* 0578B0 80057D00 00000000 */   nop
-/* 0578B4 80057D04 3C1A800A */  lui         $k0, %hi(D_8009DC80)
-/* 0578B8 80057D08 275ADC80 */  addiu       $k0, $k0, %lo(D_8009DC80)
+/* 0578B4 80057D04 3C1A800A */  lui         $k0, %hi(__OSGlobalIntMask)
+/* 0578B8 80057D08 275ADC80 */  addiu       $k0, $k0, %lo(__OSGlobalIntMask)
 /* 0578BC 80057D0C 8F5A0000 */  lw          $k0, 0x0($k0)
 /* 0578C0 80057D10 8CA80128 */  lw          $t0, 0x128($a1)
 /* 0578C4 80057D14 2401FFFF */  addiu       $at, $zero, -0x1
@@ -544,9 +544,9 @@ fakefunc_80057DA4:
 /* 057968 80057DB8 24080004 */  addiu       $t0, $zero, 0x4
 /* 05796C 80057DBC A4480010 */  sh          $t0, 0x10($v0)
 /* 057970 80057DC0 0040D025 */  move        $k0, $v0
-/* 057974 80057DC4 3C08800A */  lui         $t0, %hi(D_8009DC80)
+/* 057974 80057DC4 3C08800A */  lui         $t0, %hi(__OSGlobalIntMask)
 /* 057978 80057DC8 8F5B0118 */  lw          $k1, 0x118($k0)
-/* 05797C 80057DCC 2508DC80 */  addiu       $t0, $t0, %lo(D_8009DC80)
+/* 05797C 80057DCC 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 057980 80057DD0 8D080000 */  lw          $t0, 0x0($t0)
 /* 057984 80057DD4 3C01FFFF */  lui         $at, 0xffff
 /* 057988 80057DD8 3369FF00 */  andi        $t1, $k1, 0xff00
@@ -614,8 +614,8 @@ fakefunc_80057DA4:
 /* 057A80 80057ED0 D75E01A8 */  ldc1        $f30, 0x1a8($k0)
 .L80057ED4:
 /* 057A84 80057ED4 8F5B0128 */  lw          $k1, 0x128($k0)
-/* 057A88 80057ED8 3C1A800A */  lui         $k0, %hi(D_8009DC80)
-/* 057A8C 80057EDC 275ADC80 */  addiu       $k0, $k0, %lo(D_8009DC80)
+/* 057A88 80057ED8 3C1A800A */  lui         $k0, %hi(__OSGlobalIntMask)
+/* 057A8C 80057EDC 275ADC80 */  addiu       $k0, $k0, %lo(__OSGlobalIntMask)
 /* 057A90 80057EE0 8F5A0000 */  lw          $k0, 0x0($k0)
 /* 057A94 80057EE4 001AD402 */  srl         $k0, $k0, 16
 /* 057A98 80057EE8 037AD824 */  and         $k1, $k1, $k0
