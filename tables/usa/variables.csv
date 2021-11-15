@@ -8,10 +8,12 @@
 8009F8C0,__osPfsLastChannel,s32,4
 8009F950,__osViCurr,__OSViContext*,4
 8009F954,__osViNext,__OSViContext*,4
-8009F960,spaces,u8,0x21
-8009F984,zeros,u8,0x21
-8009FBE0,ldigs,u8,0x10
-8009FBF4,udigs,u8,0x10
+
+8009F960,spaces,char,0x21
+8009F984,zeros,char,0x21
+8009FBE0,ldigs,char,0x10
+8009FBF4,udigs,char,0x10
+800A78E4,_faultstring_cause,char,6
 800A7B74,_faultstring_FiT,char,4
 800A7F10,_xprint_hlL,u8,4
 800A7F14,_xprint_fchar,u8,6
@@ -21,3 +23,5 @@
 800B6538,D_800B6538,UNK_TYPE,4
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40
+
+800A8C00,dummyBssVarBootStart,UNK_TYPE,4

@@ -86,7 +86,7 @@ glabel func_8002D104 # 1
 /* 02CCC8 8002D118 00C02825 */  move        $a1, $a2
 /* 02CCCC 8002D11C 000E78C0 */  sll         $t7, $t6, 3
 /* 02CCD0 8002D120 AFA7002C */  sw          $a3, 0x2c($sp)
-/* 02CCD4 8002D124 0C00DEC7 */  jal         func_80037B1C
+/* 02CCD4 8002D124 0C00DEC7 */  jal         func_80037B1C_RomToRam
 /* 02CCD8 8002D128 01E73021 */   addu       $a2, $t7, $a3
 /* 02CCDC 8002D12C 8FB90034 */  lw          $t9, 0x34($sp)
 /* 02CCE0 8002D130 8FA80038 */  lw          $t0, 0x38($sp)

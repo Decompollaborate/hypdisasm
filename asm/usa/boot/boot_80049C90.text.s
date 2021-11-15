@@ -114,7 +114,7 @@ glabel func_80049DFC # 2
 /* 0499AC 80049DFC 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 0499B0 80049E00 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 0499B4 80049E04 27A50018 */  addiu       $a1, $sp, 0x18
-/* 0499B8 80049E08 0C00DEC7 */  jal         func_80037B1C
+/* 0499B8 80049E08 0C00DEC7 */  jal         func_80037B1C_RomToRam
 /* 0499BC 80049E0C 24060004 */   addiu      $a2, $zero, 0x4
 /* 0499C0 80049E10 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0499C4 80049E14 8FA20018 */  lw          $v0, 0x18($sp)
@@ -172,7 +172,7 @@ glabel func_80049E44 # 4
 /* 049A7C 80049ECC AFA20024 */  sw          $v0, 0x24($sp)
 /* 049A80 80049ED0 00402825 */  move        $a1, $v0
 /* 049A84 80049ED4 8FA60030 */  lw          $a2, 0x30($sp)
-/* 049A88 80049ED8 0C00DEC7 */  jal         func_80037B1C
+/* 049A88 80049ED8 0C00DEC7 */  jal         func_80037B1C_RomToRam
 /* 049A8C 80049EDC 02072021 */   addu       $a0, $s0, $a3
 /* 049A90 80049EE0 8FA40038 */  lw          $a0, 0x38($sp)
 /* 049A94 80049EE4 0C0127CB */  jal         func_80049F2C

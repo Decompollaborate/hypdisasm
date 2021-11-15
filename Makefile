@@ -3,6 +3,9 @@ MAKEFLAGS += --no-builtin-rules
 # Build options can either be changed by modifying the makefile, or by building with 'make SETTING=value'
 
 
+MAKE = make
+CPPFLAGS += -P
+
 
 #### Tools ####
 ifeq ($(shell type mips-linux-gnu-ld >/dev/null 2>/dev/null; echo $$?), 0)
@@ -20,6 +23,9 @@ OBJDUMP    := $(MIPS_BINUTILS_PREFIX)objdump
 
 
 
+CPP        := cpp
+
+OPTFLAGS := 
 ASFLAGS := -march=vr4300 -32 -Iinclude
 MIPS_VERSION := -mips2
 
@@ -41,6 +47,9 @@ setup:
 	$(MAKE) -C tools
 
 
+
+build/baserom/%.o: baserom/%.bin
+	$(OBJCOPY) -I binary -O elf32-big $< $@
 
 build/asm/%.o: asm/%.s
 	$(AS) $(ASFLAGS) $< -o $@

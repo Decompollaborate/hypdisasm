@@ -593,7 +593,7 @@ glabel func_800337FC # 5
 /* 0333DC 8003382C 8FA6001C */  lw          $a2, 0x1c($sp)
 /* 0333E0 80033830 AFA20024 */  sw          $v0, 0x24($sp)
 /* 0333E4 80033834 8FA40028 */  lw          $a0, 0x28($sp)
-/* 0333E8 80033838 0C00DEC7 */  jal         func_80037B1C
+/* 0333E8 80033838 0C00DEC7 */  jal         func_80037B1C_RomToRam
 /* 0333EC 8003383C 00402825 */   move       $a1, $v0
 /* 0333F0 80033840 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0333F4 80033844 8FA20024 */  lw          $v0, 0x24($sp)
@@ -739,7 +739,7 @@ glabel func_80033A24 # 8
 /* 0335FC 80033A4C AFA60020 */  sw          $a2, 0x20($sp)
 /* 033600 80033A50 00AF2821 */  addu        $a1, $a1, $t7
 /* 033604 80033A54 8CA5BD7C */  lw          $a1, %lo(D_800ABD7C)($a1)
-/* 033608 80033A58 0C00DEC7 */  jal         func_80037B1C
+/* 033608 80033A58 0C00DEC7 */  jal         func_80037B1C_RomToRam
 /* 03360C 80033A5C 00C73023 */   subu       $a2, $a2, $a3
 /* 033610 80033A60 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 033614 80033A64 27BD0018 */  addiu       $sp, $sp, 0x18

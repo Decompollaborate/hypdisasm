@@ -62532,7 +62532,7 @@ glabel D_8009F670
 /* 09F234 8009F684 */ .word 0x00000000
 /* 09F238 8009F688 */ .word 0x00000000
 
-glabel D_8009F68C
+glabel __additional_scanline
 /* 09F23C 8009F68C */ .word 0x00000000
 
 glabel D_8009F690
@@ -62753,7 +62753,7 @@ glabel D_8009F920
 /* 09F4F8 8009F948 */ .word 0x00000000
 /* 09F4FC 8009F94C */ .word 0x00000000
 
-glabel D_8009F950
+glabel __osViCurr
 /* 09F500 8009F950 */ .word D_8009F8F0
 
 glabel __osViNext

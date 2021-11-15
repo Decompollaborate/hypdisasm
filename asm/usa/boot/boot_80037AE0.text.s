@@ -28,7 +28,7 @@ glabel func_80037AE8 # 1
 /* 0376C4 80037B14 03E00008 */  jr          $ra
 /* 0376C8 80037B18 00000000 */   nop
 
-glabel func_80037B1C # 2
+glabel func_80037B1C_RomToRam # 2
 /* 0376CC 80037B1C 27BDFF80 */  addiu       $sp, $sp, -0x80
 /* 0376D0 80037B20 AFB40034 */  sw          $s4, 0x34($sp)
 /* 0376D4 80037B24 AFB30030 */  sw          $s3, 0x30($sp)
