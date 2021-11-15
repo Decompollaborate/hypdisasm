@@ -11,6 +11,8 @@
 80038F68,Math_FCotF
 800426B4,Fault_ThreadEntry
 800427C8,Fault_Start
+80049A78,strcpy
+80049AAC,strlen
 80050600,__createSpeedParam
 8005069C,func_8005069C
 8005069C,osInitialize
@@ -83,7 +85,13 @@
 80058460,__osSiRawStartDma
 800586A0,__osContAddressCrc
 80058770,__osContDataCrc
+800592D0,_Printf
+80059918,_Putfld
 8005A700,__osViSwapContext
 8005AAE0,__osVoiceContRead36
 8005B030,__osVoiceContDataCrc
+8005DB10,_Litob
+8005DDB0,_Ldtob
+8005E240,_Ldunscale
+8005E2F8,_Genld
 8008B600,guMtxIdentF
