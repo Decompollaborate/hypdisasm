@@ -34,6 +34,7 @@ def main():
     parser = argparse.ArgumentParser(description="ROM - VRAM convertor tool")
     parser.add_argument("number", help="ROM offset. In hex")
     parser.add_argument("-v", "--vram", help="Treat the input as VRAM instead of a ROM offset", action="store_true")
+    # TODO: Add region/format
     args = parser.parse_args()
 
     if args.vram:
