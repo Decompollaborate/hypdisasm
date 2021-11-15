@@ -1,1 +1,6 @@
-80133DE0,file_DCF60_80133DE0,0
+offset,vram,.text
+0,80133DE0,file_DCF60_80133DE0
+offset,vram,.data
+230,80134010,file_DCF60_80134010
+offset,vram,.rodata
+215D0,801553B0,file_DCF60_801553B0
