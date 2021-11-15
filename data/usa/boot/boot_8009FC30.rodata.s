@@ -8640,9 +8640,9 @@ glabel jtbl_800A73FC
 /* 0A748C 800A78DC 3038780A */  .word  0x3038780A
 /* 0A7490 800A78E0 00000000 */  .word  0x00000000
 
-glabel D_800A78E4
-/* 0A7494 800A78E4 63617573 */  .word  0x63617573
-/* 0A7498 800A78E8 65000000 */  .word  0x65000000
+glabel _faultstring_cause
+/* 0A7494 800A78E4  */  .asciz  "cause"
+                        .balign 4
 
 glabel D_800A78EC
 /* 0A749C 800A78EC 73720000 */  .word  0x73720000
@@ -8875,7 +8875,8 @@ glabel D_800A7B6C
 /* 0A7720 800A7B70 0A000000 */  .word  0x0A000000
 
 glabel _faultstring_FiT
-/* 0A7724 800A7B74 46695400 */  .word  0x46695400
+/* 0A7724 800A7B74  */  .asciz  "FiT"
+                        .balign 4
 
 glabel D_800A7B78
 /* 0A7728 800A7B78 25640000 */  .word  0x25640000

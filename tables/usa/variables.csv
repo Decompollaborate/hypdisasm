@@ -8,6 +8,7 @@
 8009F8C0,__osPfsLastChannel,s32,4
 8009F950,__osViCurr,__OSViContext*,4
 8009F954,__osViNext,__OSViContext*,4
+800A78E4,_faultstring_cause,char,6
 800A7B74,_faultstring_FiT,char,4
 800A8C00,sBootThreadInfo,UNK_TYPE,4
 800A9000,gIrqMgr,UNK_TYPE,4

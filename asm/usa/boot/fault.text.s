@@ -80,10 +80,10 @@ glabel func_8004237C # 3
 /* 041F30 80042380 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 041F34 80042384 AFB00018 */  sw          $s0, 0x18($sp)
 /* 041F38 80042388 AFA40038 */  sw          $a0, 0x38($sp)
-/* 041F3C 8004238C 3C05800A */  lui         $a1, %hi(D_800A78E4)
+/* 041F3C 8004238C 3C05800A */  lui         $a1, %hi(_faultstring_cause)
 /* 041F40 80042390 3C06800A */  lui         $a2, %hi(D_8009D550)
 /* 041F44 80042394 24C6D550 */  addiu       $a2, $a2, %lo(D_8009D550)
-/* 041F48 80042398 24A578E4 */  addiu       $a1, $a1, %lo(D_800A78E4)
+/* 041F48 80042398 24A578E4 */  addiu       $a1, $a1, %lo(_faultstring_cause)
 /* 041F4C 8004239C 0C0108A8 */  jal         func_800422A0
 /* 041F50 800423A0 8C840120 */   lw         $a0, 0x120($a0)
 /* 041F54 800423A4 8FB00038 */  lw          $s0, 0x38($sp)
