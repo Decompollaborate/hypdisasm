@@ -83,3 +83,7 @@
 80055040,osVoiceStopReadData
 800551C0,__osVoiceSetADConverter
 800535C0,osViBlack
+8005A700,__osViSwapContext
+80054B70,osViGetNextFramebuffer
+80053560,osViSetMode
+80053790,osViSetYScale
