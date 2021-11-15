@@ -24,7 +24,7 @@ glabel func_8005AA20 # 0
 .L8005AA4C:
 /* 05A5FC 8005AA4C 3C0FA404 */  lui         $t7, %hi(D_A4040000)
 /* 05A600 8005AA50 ADEE0000 */  sw          $t6, %lo(D_A4040000)($t7)
-/* 05A604 8005AA54 0C0143B0 */  jal         func_80050EC0
+/* 05A604 8005AA54 0C0143B0 */  jal         osVirtualToPhysical
 /* 05A608 8005AA58 8FA40020 */   lw         $a0, 0x20($sp)
 /* 05A60C 8005AA5C 3C18A404 */  lui         $t8, %hi(D_A4040004)
 /* 05A610 8005AA60 AF020004 */  sw          $v0, %lo(D_A4040004)($t8)

@@ -127,7 +127,7 @@ glabel func_8005CF30 # 0
 /* 05CC9C 8005D0EC 01095825 */  or          $t3, $t0, $t1
 /* 05CCA0 8005D0F0 AC4B0008 */  sw          $t3, 0x8($v0)
 /* 05CCA4 8005D0F4 8E040014 */  lw          $a0, 0x14($s0)
-/* 05CCA8 8005D0F8 0C0143B0 */  jal         func_80050EC0
+/* 05CCA8 8005D0F8 0C0143B0 */  jal         osVirtualToPhysical
 /* 05CCAC 8005D0FC 24510010 */   addiu      $s1, $v0, 0x10
 /* 05CCB0 8005D100 8FAA0038 */  lw          $t2, 0x38($sp)
 /* 05CCB4 8005D104 AD420004 */  sw          $v0, 0x4($t2)

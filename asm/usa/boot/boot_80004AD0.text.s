@@ -342,12 +342,12 @@ glabel func_80004F64 # 4
 /* 004B3C 80004F8C 00402025 */  move        $a0, $v0
 /* 004B40 80004F90 00602825 */  move        $a1, $v1
 /* 004B44 80004F94 24060000 */  addiu       $a2, $zero, 0x0
-/* 004B48 80004F98 0C01492E */  jal         func_800524B8
+/* 004B48 80004F98 0C01492E */  jal         __ll_mul
 /* 004B4C 80004F9C 24070BB8 */   addiu      $a3, $zero, 0xbb8
 /* 004B50 80004FA0 00402025 */  move        $a0, $v0
 /* 004B54 80004FA4 00602825 */  move        $a1, $v1
 /* 004B58 80004FA8 24060000 */  addiu       $a2, $zero, 0x0
-/* 004B5C 80004FAC 0C0148EE */  jal         func_800523B8
+/* 004B5C 80004FAC 0C0148EE */  jal         __ull_div
 /* 004B60 80004FB0 24070040 */   addiu      $a3, $zero, 0x40
 /* 004B64 80004FB4 3C01800B */  lui         $at, %hi(D_800AD9BC)
 /* 004B68 80004FB8 AC22D9B8 */  sw          $v0, %lo(D_800AD9B8)($at)
@@ -361,12 +361,12 @@ glabel func_80004F64 # 4
 /* 004B88 80004FD8 00402025 */  move        $a0, $v0
 /* 004B8C 80004FDC 00602825 */  move        $a1, $v1
 /* 004B90 80004FE0 24060000 */  addiu       $a2, $zero, 0x0
-/* 004B94 80004FE4 0C01492E */  jal         func_800524B8
+/* 004B94 80004FE4 0C01492E */  jal         __ll_mul
 /* 004B98 80004FE8 24070BB8 */   addiu      $a3, $zero, 0xbb8
 /* 004B9C 80004FEC 00402025 */  move        $a0, $v0
 /* 004BA0 80004FF0 00602825 */  move        $a1, $v1
 /* 004BA4 80004FF4 24060000 */  addiu       $a2, $zero, 0x0
-/* 004BA8 80004FF8 0C0148EE */  jal         func_800523B8
+/* 004BA8 80004FF8 0C0148EE */  jal         __ull_div
 /* 004BAC 80004FFC 24070040 */   addiu      $a3, $zero, 0x40
 /* 004BB0 80005000 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 004BB4 80005004 3C01800B */  lui         $at, %hi(D_800AD9C4)
@@ -437,12 +437,12 @@ glabel func_80005018 # 5
 /* 004CA0 800050F0 012B082B */  sltu        $at, $t1, $t3
 /* 004CA4 800050F4 00812023 */  subu        $a0, $a0, $at
 /* 004CA8 800050F8 24070040 */  addiu       $a3, $zero, 0x40
-/* 004CAC 800050FC 0C01492E */  jal         func_800524B8
+/* 004CAC 800050FC 0C01492E */  jal         __ll_mul
 /* 004CB0 80005100 012B2823 */   subu       $a1, $t1, $t3
 /* 004CB4 80005104 00402025 */  move        $a0, $v0
 /* 004CB8 80005108 00602825 */  move        $a1, $v1
 /* 004CBC 8000510C 24060000 */  addiu       $a2, $zero, 0x0
-/* 004CC0 80005110 0C0148EE */  jal         func_800523B8
+/* 004CC0 80005110 0C0148EE */  jal         __ull_div
 /* 004CC4 80005114 24070BB8 */   addiu      $a3, $zero, 0xbb8
 /* 004CC8 80005118 00402025 */  move        $a0, $v0
 /* 004CCC 8000511C 0C0148C6 */  jal         func_80052318

@@ -358,7 +358,7 @@ glabel func_800177B8 # 5
 /* 0173C0 80017810 00084880 */  sll         $t1, $t0, 2
 /* 0173C4 80017814 03295021 */  addu        $t2, $t9, $t1
 /* 0173C8 80017818 8D440008 */  lw          $a0, 0x8($t2)
-/* 0173CC 8001781C 0C0143B0 */  jal         func_80050EC0
+/* 0173CC 8001781C 0C0143B0 */  jal         osVirtualToPhysical
 /* 0173D0 80017820 AFA20018 */   sw         $v0, 0x18($sp)
 /* 0173D4 80017824 8FA30018 */  lw          $v1, 0x18($sp)
 /* 0173D8 80017828 AC620004 */  sw          $v0, 0x4($v1)
@@ -1219,7 +1219,7 @@ glabel func_80018474 # 18
 /* 01807C 800184CC 8D44003C */  lw          $a0, 0x3c($t2)
 /* 018080 800184D0 AFA7001C */  sw          $a3, 0x1c($sp)
 /* 018084 800184D4 AFA60020 */  sw          $a2, 0x20($sp)
-/* 018088 800184D8 0C0143B0 */  jal         func_80050EC0
+/* 018088 800184D8 0C0143B0 */  jal         osVirtualToPhysical
 /* 01808C 800184DC AFA30018 */   sw         $v1, 0x18($sp)
 /* 018090 800184E0 8FA30018 */  lw          $v1, 0x18($sp)
 /* 018094 800184E4 8FA7001C */  lw          $a3, 0x1c($sp)
@@ -2620,7 +2620,7 @@ glabel func_80019900 # 37
 /* 019508 80019958 8D44003C */  lw          $a0, 0x3c($t2)
 /* 01950C 8001995C AFA7001C */  sw          $a3, 0x1c($sp)
 /* 019510 80019960 AFA60020 */  sw          $a2, 0x20($sp)
-/* 019514 80019964 0C0143B0 */  jal         func_80050EC0
+/* 019514 80019964 0C0143B0 */  jal         osVirtualToPhysical
 /* 019518 80019968 AFA30018 */   sw         $v1, 0x18($sp)
 /* 01951C 8001996C 8FA30018 */  lw          $v1, 0x18($sp)
 /* 019520 80019970 8FA7001C */  lw          $a3, 0x1c($sp)
@@ -3461,7 +3461,7 @@ glabel func_8001A55C # 46
 /* 01A15C 8001A5AC 00A95021 */  addu        $t2, $a1, $t1
 /* 01A160 8001A5B0 8D44003C */  lw          $a0, 0x3c($t2)
 /* 01A164 8001A5B4 AFA8001C */  sw          $t0, 0x1c($sp)
-/* 01A168 8001A5B8 0C0143B0 */  jal         func_80050EC0
+/* 01A168 8001A5B8 0C0143B0 */  jal         osVirtualToPhysical
 /* 01A16C 8001A5BC AFA70018 */   sw         $a3, 0x18($sp)
 /* 01A170 8001A5C0 8FA70018 */  lw          $a3, 0x18($sp)
 /* 01A174 8001A5C4 8FA8001C */  lw          $t0, 0x1c($sp)
@@ -4055,7 +4055,7 @@ glabel func_8001AE30 # 51
 /* 01AA30 8001AE80 00A95021 */  addu        $t2, $a1, $t1
 /* 01AA34 8001AE84 8D44003C */  lw          $a0, 0x3c($t2)
 /* 01AA38 8001AE88 AFA8001C */  sw          $t0, 0x1c($sp)
-/* 01AA3C 8001AE8C 0C0143B0 */  jal         func_80050EC0
+/* 01AA3C 8001AE8C 0C0143B0 */  jal         osVirtualToPhysical
 /* 01AA40 8001AE90 AFA60018 */   sw         $a2, 0x18($sp)
 /* 01AA44 8001AE94 8FA60018 */  lw          $a2, 0x18($sp)
 /* 01AA48 8001AE98 8FA8001C */  lw          $t0, 0x1c($sp)
@@ -4539,7 +4539,7 @@ glabel func_8001B550 # 56
 /* 01B150 8001B5A0 00A95021 */  addu        $t2, $a1, $t1
 /* 01B154 8001B5A4 8D44003C */  lw          $a0, 0x3c($t2)
 /* 01B158 8001B5A8 AFA8001C */  sw          $t0, 0x1c($sp)
-/* 01B15C 8001B5AC 0C0143B0 */  jal         func_80050EC0
+/* 01B15C 8001B5AC 0C0143B0 */  jal         osVirtualToPhysical
 /* 01B160 8001B5B0 AFA70018 */   sw         $a3, 0x18($sp)
 /* 01B164 8001B5B4 8FA70018 */  lw          $a3, 0x18($sp)
 /* 01B168 8001B5B8 8FA8001C */  lw          $t0, 0x1c($sp)

@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80055B40 # 0
+glabel __osVoiceContWrite4 # 0
 /* 0556F0 80055B40 27BDFF90 */  addiu       $sp, $sp, -0x70
 /* 0556F4 80055B44 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 0556F8 80055B48 AFB60030 */  sw          $s6, 0x30($sp)
@@ -25,19 +25,19 @@ glabel func_80055B40 # 0
 /* 055720 80055B70 AFB20020 */  sw          $s2, 0x20($sp)
 /* 055724 80055B74 AFB00018 */  sw          $s0, 0x18($sp)
 /* 055728 80055B78 AFA60078 */  sw          $a2, 0x78($sp)
-/* 05572C 80055B7C 0C0160FC */  jal         func_800583F0
+/* 05572C 80055B7C 0C0160FC */  jal         __osSiGetAccess
 /* 055730 80055B80 24140002 */   addiu      $s4, $zero, 0x2
 /* 055734 80055B84 97A5007A */  lhu         $a1, 0x7a($sp)
-/* 055738 80055B88 3C1E800A */  lui         $fp, %hi(D_8009F8C0)
-/* 05573C 80055B8C 3C178010 */  lui         $s7, %hi(D_800FDC50)
-/* 055740 80055B90 3C138010 */  lui         $s3, %hi(D_80100390)
+/* 055738 80055B88 3C1E800A */  lui         $fp, %hi(__osPfsLastChannel)
+/* 05573C 80055B8C 3C178010 */  lui         $s7, %hi(__osContLastPoll)
+/* 055740 80055B90 3C138010 */  lui         $s3, %hi(__osPfsPifRam)
 /* 055744 80055B94 000570C3 */  sra         $t6, $a1, 3
 /* 055748 80055B98 00057940 */  sll         $t7, $a1, 5
 /* 05574C 80055B9C AFAF0048 */  sw          $t7, 0x48($sp)
 /* 055750 80055BA0 AFAE004C */  sw          $t6, 0x4c($sp)
-/* 055754 80055BA4 26730390 */  addiu       $s3, $s3, %lo(D_80100390)
-/* 055758 80055BA8 26F7DC50 */  addiu       $s7, $s7, %lo(D_800FDC50)
-/* 05575C 80055BAC 27DEF8C0 */  addiu       $fp, $fp, %lo(D_8009F8C0)
+/* 055754 80055BA4 26730390 */  addiu       $s3, $s3, %lo(__osPfsPifRam)
+/* 055758 80055BA8 26F7DC50 */  addiu       $s7, $s7, %lo(__osContLastPoll)
+/* 05575C 80055BAC 27DEF8C0 */  addiu       $fp, $fp, %lo(__osPfsLastChannel)
 .L80055BB0:
 /* 055760 80055BB0 92F80000 */  lbu         $t8, 0x0($s7)
 /* 055764 80055BB4 2401000C */  addiu       $at, $zero, 0xc
@@ -97,10 +97,10 @@ glabel func_80055B40 # 0
 /* 055824 80055C74 26050006 */  addiu       $a1, $s0, 0x6
 /* 055828 80055C78 00594025 */  or          $t0, $v0, $t9
 /* 05582C 80055C7C A2080005 */  sb          $t0, 0x5($s0)
-/* 055830 80055C80 0C014984 */  jal         func_80052610
+/* 055830 80055C80 0C014984 */  jal         bcopy
 /* 055834 80055C84 24060004 */   addiu      $a2, $zero, 0x4
 /* 055838 80055C88 24040001 */  addiu       $a0, $zero, 0x1
-/* 05583C 80055C8C 0C016118 */  jal         func_80058460
+/* 05583C 80055C8C 0C016118 */  jal         __osSiRawStartDma
 /* 055840 80055C90 02602825 */   move       $a1, $s3
 /* 055844 80055C94 02C02025 */  move        $a0, $s6
 /* 055848 80055C98 0C016C0C */  jal         __osVoiceContDataCrc
@@ -111,7 +111,7 @@ glabel func_80055B40 # 0
 /* 05585C 80055CAC 0C014554 */  jal         osRecvMesg
 /* 055860 80055CB0 24060001 */   addiu      $a2, $zero, 0x1
 /* 055864 80055CB4 00002025 */  move        $a0, $zero
-/* 055868 80055CB8 0C016118 */  jal         func_80058460
+/* 055868 80055CB8 0C016118 */  jal         __osSiRawStartDma
 /* 05586C 80055CBC 02602825 */   move       $a1, $s3
 /* 055870 80055CC0 02A02025 */  move        $a0, $s5
 /* 055874 80055CC4 00002825 */  move        $a1, $zero
@@ -127,7 +127,7 @@ glabel func_80055B40 # 0
 /* 05589C 80055CEC 02202825 */  move        $a1, $s1
 /* 0558A0 80055CF0 51720009 */  beql        $t3, $s2, .L80055D18
 /* 0558A4 80055CF4 24010004 */   addiu      $at, $zero, 0x4
-/* 0558A8 80055CF8 0C01558C */  jal         func_80055630
+/* 0558A8 80055CF8 0C01558C */  jal         __osVoiceGetStatus
 /* 0558AC 80055CFC 27A6006B */   addiu      $a2, $sp, 0x6b
 /* 0558B0 80055D00 14400009 */  bne         $v0, $zero, .L80055D28
 /* 0558B4 80055D04 00401825 */   move       $v1, $v0
@@ -142,7 +142,7 @@ glabel func_80055B40 # 0
 /* 0558D0 80055D20 1040FFA3 */  beq         $v0, $zero, .L80055BB0
 /* 0558D4 80055D24 2694FFFF */   addiu      $s4, $s4, -0x1
 .L80055D28:
-/* 0558D8 80055D28 0C01610D */  jal         func_80058434
+/* 0558D8 80055D28 0C01610D */  jal         __osSiRelAccess
 /* 0558DC 80055D2C AFA3006C */   sw         $v1, 0x6c($sp)
 /* 0558E0 80055D30 8FBF003C */  lw          $ra, 0x3c($sp)
 /* 0558E4 80055D34 8FA2006C */  lw          $v0, 0x6c($sp)

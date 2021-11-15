@@ -26,7 +26,7 @@ glabel func_80032FA0 # 0
 /* 032B84 80032FD4 AC8F0000 */  sw          $t7, 0x0($a0)
 /* 032B88 80032FD8 AE180000 */  sw          $t8, 0x0($s0)
 /* 032B8C 80032FDC 8C44008C */  lw          $a0, 0x8c($v0)
-/* 032B90 80032FE0 0C0143B0 */  jal         func_80050EC0
+/* 032B90 80032FE0 0C0143B0 */  jal         osVirtualToPhysical
 /* 032B94 80032FE4 AFB0004C */   sw         $s0, 0x4c($sp)
 /* 032B98 80032FE8 8FA6004C */  lw          $a2, 0x4c($sp)
 /* 032B9C 80032FEC 3C09E700 */  lui         $t1, 0xe700
@@ -61,7 +61,7 @@ glabel func_80032FA0 # 0
 /* 032C10 80033060 000F7880 */  sll         $t7, $t7, 2
 /* 032C14 80033064 01EE7823 */  subu        $t7, $t7, $t6
 /* 032C18 80033068 000F7AC0 */  sll         $t7, $t7, 11
-/* 032C1C 8003306C 0C0143B0 */  jal         func_80050EC0
+/* 032C1C 8003306C 0C0143B0 */  jal         osVirtualToPhysical
 /* 032C20 80033070 01F82021 */   addu       $a0, $t7, $t8
 /* 032C24 80033074 8FA80040 */  lw          $t0, 0x40($sp)
 /* 032C28 80033078 3C09E700 */  lui         $t1, 0xe700
@@ -312,7 +312,7 @@ glabel func_800333D4 # 3
 /* 032FC0 80033410 260F0008 */  addiu       $t7, $s0, 0x8
 /* 032FC4 80033414 AC4F0000 */  sw          $t7, 0x0($v0)
 /* 032FC8 80033418 AE180000 */  sw          $t8, 0x0($s0)
-/* 032FCC 8003341C 0C0143B0 */  jal         func_80050EC0
+/* 032FCC 8003341C 0C0143B0 */  jal         osVirtualToPhysical
 /* 032FD0 80033420 8C84BD7C */   lw         $a0, %lo(D_800ABD7C)($a0)
 /* 032FD4 80033424 8FA80060 */  lw          $t0, 0x60($sp)
 /* 032FD8 80033428 AE020004 */  sw          $v0, 0x4($s0)
@@ -347,7 +347,7 @@ glabel func_800333D4 # 3
 /* 03304C 8003349C 0018C080 */  sll         $t8, $t8, 2
 /* 033050 800334A0 030FC023 */  subu        $t8, $t8, $t7
 /* 033054 800334A4 0018C2C0 */  sll         $t8, $t8, 11
-/* 033058 800334A8 0C0143B0 */  jal         func_80050EC0
+/* 033058 800334A8 0C0143B0 */  jal         osVirtualToPhysical
 /* 03305C 800334AC 03192021 */   addu       $a0, $t8, $t9
 /* 033060 800334B0 8FA70040 */  lw          $a3, 0x40($sp)
 /* 033064 800334B4 3C0A800B */  lui         $t2, %hi(D_800ABD88)

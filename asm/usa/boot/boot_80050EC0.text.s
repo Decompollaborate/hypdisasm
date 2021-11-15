@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80050EC0 # 0
+glabel osVirtualToPhysical # 0
 /* 050A70 80050EC0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 050A74 80050EC4 AFA40018 */  sw          $a0, 0x18($sp)
 /* 050A78 80050EC8 8FAE0018 */  lw          $t6, 0x18($sp)
