@@ -1,0 +1,6 @@
+offset,vram,.text
+0,80000450,boot_main
+offset,vram,.data
+B3C70,800B40C0,boot_800B40C0
+offset,vram,.rodata
+DCF60,800DD3B0,boot_800DD3B0

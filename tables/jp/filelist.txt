@@ -1,4 +1,3 @@
 makerom 0
 boot 1050
-boot_data 61B70
-boot_rodata A5ED0
+file_B6970 B6970
