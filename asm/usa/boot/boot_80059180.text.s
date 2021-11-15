@@ -16,12 +16,12 @@ glabel func_80059180 # 0
 /* 058D3C 8005918C 2484F8F0 */  addiu       $a0, $a0, %lo(D_8009F8F0)
 /* 058D40 80059190 0C014388 */  jal         bzero
 /* 058D44 80059194 24050060 */   addiu      $a1, $zero, 0x60
-/* 058D48 80059198 3C02800A */  lui         $v0, %hi(D_8009F950)
+/* 058D48 80059198 3C02800A */  lui         $v0, %hi(__osViCurr)
 /* 058D4C 8005919C 3C04800A */  lui         $a0, %hi(__osViNext)
 /* 058D50 800591A0 3C0E800A */  lui         $t6, %hi(D_8009F8F0)
 /* 058D54 800591A4 3C0F800A */  lui         $t7, %hi(D_8009F920)
 /* 058D58 800591A8 2484F954 */  addiu       $a0, $a0, %lo(__osViNext)
-/* 058D5C 800591AC 2442F950 */  addiu       $v0, $v0, %lo(D_8009F950)
+/* 058D5C 800591AC 2442F950 */  addiu       $v0, $v0, %lo(__osViCurr)
 /* 058D60 800591B0 25CEF8F0 */  addiu       $t6, $t6, %lo(D_8009F8F0)
 /* 058D64 800591B4 25EFF920 */  addiu       $t7, $t7, %lo(D_8009F920)
 /* 058D68 800591B8 24050001 */  addiu       $a1, $zero, 0x1
@@ -78,7 +78,7 @@ glabel func_80059180 # 0
 /* 058E24 80059274 5020FFFE */  beql        $at, $zero, .L80059270
 /* 058E28 80059278 8C4B0000 */   lw         $t3, 0x0($v0)
 .L8005927C:
-/* 058E2C 8005927C 0C0169C0 */  jal         func_8005A700
+/* 058E2C 8005927C 0C0169C0 */  jal         __osViSwapContext
 /* 058E30 80059280 AD800000 */   sw         $zero, %lo(D_A4400000)($t4)
 /* 058E34 80059284 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 058E38 80059288 27BD0018 */  addiu       $sp, $sp, 0x18

@@ -340,7 +340,7 @@ glabel func_8003C89C # 4
 /* 03C570 8003C9C0 00000000 */   nop
 /* 03C574 8003C9C4 0006000D */  break       6
 .L8003C9C8:
-/* 03C578 8003C9C8 0C014D58 */  jal         func_80053560
+/* 03C578 8003C9C8 0C014D58 */  jal         osViSetMode
 /* 03C57C 8003C9CC 00000000 */   nop
 /* 03C580 8003C9D0 0C014D70 */  jal         osViBlack
 /* 03C584 8003C9D4 24040001 */   addiu      $a0, $zero, 0x1

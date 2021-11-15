@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005A700 # 0
+glabel __osViSwapContext # 0
 /* 05A2B0 8005A700 27BDFFB8 */  addiu       $sp, $sp, -0x48
 /* 05A2B4 8005A704 AFB00018 */  sw          $s0, 0x18($sp)
 /* 05A2B8 8005A708 AFBF001C */  sw          $ra, 0x1c($sp)
@@ -108,8 +108,8 @@ glabel func_8005A700 # 0
 .L8005A864:
 /* 05A414 8005A864 AE0E002C */  sw          $t6, 0x2c($s0)
 .L8005A868:
-/* 05A418 8005A868 3C02800A */  lui         $v0, %hi(D_8009F68C)
-/* 05A41C 8005A86C 8C42F68C */  lw          $v0, %lo(D_8009F68C)($v0)
+/* 05A418 8005A868 3C02800A */  lui         $v0, %hi(__additional_scanline)
+/* 05A41C 8005A86C 8C42F68C */  lw          $v0, %lo(__additional_scanline)($v0)
 /* 05A420 8005A870 8CCF0030 */  lw          $t7, 0x30($a2)
 /* 05A424 8005A874 0002C400 */  sll         $t8, $v0, 16
 /* 05A428 8005A878 01F8C823 */  subu        $t9, $t7, $t8
@@ -170,11 +170,11 @@ glabel func_8005A700 # 0
 /* 05A4F8 8005A948 AD6A0018 */  sw          $t2, %lo(D_A4400018)($t3)
 /* 05A4FC 8005A94C 8CAD0014 */  lw          $t5, 0x14($a1)
 /* 05A500 8005A950 3C0AA440 */  lui         $t2, %hi(D_A440002C)
-/* 05A504 8005A954 3C02800A */  lui         $v0, %hi(D_8009F950)
+/* 05A504 8005A954 3C02800A */  lui         $v0, %hi(__osViCurr)
 /* 05A508 8005A958 AD8D001C */  sw          $t5, %lo(D_A440001C)($t4)
 /* 05A50C 8005A95C 8CAE0018 */  lw          $t6, 0x18($a1)
 /* 05A510 8005A960 3C0DA440 */  lui         $t5, %hi(D_A440000C)
-/* 05A514 8005A964 2442F950 */  addiu       $v0, $v0, %lo(D_8009F950)
+/* 05A514 8005A964 2442F950 */  addiu       $v0, $v0, %lo(__osViCurr)
 /* 05A518 8005A968 ADEE0020 */  sw          $t6, %lo(D_A4400020)($t7)
 /* 05A51C 8005A96C AF070024 */  sw          $a3, %lo(D_A4400024)($t8)
 /* 05A520 8005A970 8FB90034 */  lw          $t9, 0x34($sp)

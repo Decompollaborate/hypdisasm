@@ -68,7 +68,7 @@ glabel func_8003FC30 # 0
 /* 03F8BC 8003FD0C 00095080 */  sll         $t2, $t1, 2
 /* 03F8C0 8003FD10 01495021 */  addu        $t2, $t2, $t1
 /* 03F8C4 8003FD14 000A5100 */  sll         $t2, $t2, 4
-/* 03F8C8 8003FD18 0C014D58 */  jal         func_80053560
+/* 03F8C8 8003FD18 0C014D58 */  jal         osViSetMode
 /* 03F8CC 8003FD1C 014B2021 */   addu       $a0, $t2, $t3
 /* 03F8D0 8003FD20 0C014D70 */  jal         osViBlack
 /* 03F8D4 8003FD24 24040001 */   addiu      $a0, $zero, 0x1
@@ -525,7 +525,7 @@ glabel func_80040374 # 9
 /* 03FF4C 8004039C 8CB3000C */   lw         $s3, 0xc($a1)
 /* 03FF50 800403A0 50530005 */  beql        $v0, $s3, .L800403B8
 /* 03FF54 800403A4 27B2003C */   addiu      $s2, $sp, 0x3c
-/* 03FF58 800403A8 0C0152DC */  jal         func_80054B70
+/* 03FF58 800403A8 0C0152DC */  jal         osViGetNextFramebuffer
 /* 03FF5C 800403AC 00000000 */   nop
 /* 03FF60 800403B0 14530016 */  bne         $v0, $s3, .L8004040C
 /* 03FF64 800403B4 27B2003C */   addiu      $s2, $sp, 0x3c
@@ -547,7 +547,7 @@ glabel func_80040374 # 9
 /* 03FFA0 800403F0 00000000 */   nop
 /* 03FFA4 800403F4 5053FFF0 */  beql        $v0, $s3, .L800403B8
 /* 03FFA8 800403F8 27B2003C */   addiu      $s2, $sp, 0x3c
-/* 03FFAC 800403FC 0C0152DC */  jal         func_80054B70
+/* 03FFAC 800403FC 0C0152DC */  jal         osViGetNextFramebuffer
 /* 03FFB0 80040400 00000000 */   nop
 /* 03FFB4 80040404 5053FFEC */  beql        $v0, $s3, .L800403B8
 /* 03FFB8 80040408 27B2003C */   addiu      $s2, $sp, 0x3c

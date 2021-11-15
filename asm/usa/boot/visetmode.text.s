@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80053560 # 0
+glabel osViSetMode # 0
 /* 053110 80053560 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 053114 80053564 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 053118 80053568 0C015FFC */  jal         __osDisableInt
