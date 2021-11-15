@@ -29,7 +29,7 @@ glabel func_80020340 # 0
 /* 01FF30 80020380 AFA20028 */  sw          $v0, 0x28($sp)
 /* 01FF34 80020384 8FA40034 */  lw          $a0, 0x34($sp)
 /* 01FF38 80020388 00402825 */  move        $a1, $v0
-/* 01FF3C 8002038C 0C00DEC7 */  jal         func_80037B1C
+/* 01FF3C 8002038C 0C00DEC7 */  jal         func_80037B1C_RomToRam
 /* 01FF40 80020390 8FA60024 */   lw         $a2, 0x24($sp)
 /* 01FF44 80020394 8FA40028 */  lw          $a0, 0x28($sp)
 /* 01FF48 80020398 0C0080FD */  jal         func_800203F4

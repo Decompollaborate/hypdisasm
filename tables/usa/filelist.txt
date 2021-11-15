@@ -1,5 +1,6 @@
 makerom 0
 boot 1050
+assets_A9800 A9800
 file_B3C70 B3C70
 file_DCF60 DCF60
 placeholder_100000 100000
