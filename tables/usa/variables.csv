@@ -18,7 +18,6 @@
 800A7F14,_xprint_fchar,u8,6
 800A7F1C,_xprint_fbit,u32,0x18
 800A8C00,sBootThreadInfo,UNK_TYPE,4
-800A9000,gIrqMgr,UNK_TYPE,4
 800B6538,D_800B6538,UNK_TYPE,4
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40

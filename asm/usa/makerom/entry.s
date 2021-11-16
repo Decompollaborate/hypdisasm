@@ -10,9 +10,9 @@
 .balign 16
 
 glabel entrypoint
-/* 000000 80000400 3C08800B */  lui         $t0, %hi(D_800A8C00)
+/* 000000 80000400 3C08800B */  lui         $t0, %hi(dummyBssVarBootStart)
 /* 000004 80000404 3C090005 */  lui         $t1, 0x5
-/* 000008 80000408 25088C00 */  addiu       $t0, $t0, %lo(D_800A8C00)
+/* 000008 80000408 25088C00 */  addiu       $t0, $t0, %lo(dummyBssVarBootStart)
 /* 00000C 8000040C 35297A80 */  ori         $t1, $t1, 0x7a80
 .L80000410:
 /* 000010 80000410 2129FFF8 */  addi        $t1, $t1, -0x8
