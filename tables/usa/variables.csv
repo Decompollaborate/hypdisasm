@@ -12,3 +12,4 @@
 800A7B74,_faultstring_FiT,char,4
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40
+800A8C00,dummyBssVarBootStart,UNK_TYPE,4

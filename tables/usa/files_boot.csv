@@ -218,3 +218,7 @@ offset,vram,.data
 62C50,800630A0,boot_800630A0
 offset,vram,.rodata
 9F7E0,8009FC30,boot_8009FC30
+
+offset,vram,.bss
+A87B0,800A8C00,boot_800A8C00
+100230,80100680,.end
