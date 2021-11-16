@@ -49,21 +49,27 @@ glabel func_8004F6A0 # 0
 /* 04F2E0 8004F730 8C387CE0 */  lw          $t8, %lo(jtbl_800A7CE0)($at)
 /* 04F2E4 8004F734 03000008 */  jr          $t8
 /* 04F2E8 8004F738 00000000 */   nop
+glabel jmplabel_8004F73C
 /* 04F2EC 8004F73C 3C13800A */  lui         $s3, %hi(D_8009DAE0)
 /* 04F2F0 8004F740 1000000F */  b           .L8004F780
 /* 04F2F4 8004F744 2673DAE0 */   addiu      $s3, $s3, %lo(D_8009DAE0)
+glabel jmplabel_8004F748
 /* 04F2F8 8004F748 3C13800A */  lui         $s3, %hi(D_8009DB48)
 /* 04F2FC 8004F74C 1000000C */  b           .L8004F780
 /* 04F300 8004F750 2673DB48 */   addiu      $s3, $s3, %lo(D_8009DB48)
+glabel jmplabel_8004F754
 /* 04F304 8004F754 3C13800A */  lui         $s3, %hi(D_8009DBD0)
 /* 04F308 8004F758 10000009 */  b           .L8004F780
 /* 04F30C 8004F75C 2673DBD0 */   addiu      $s3, $s3, %lo(D_8009DBD0)
+glabel jmplabel_8004F760
 /* 04F310 8004F760 3C13800A */  lui         $s3, %hi(D_8009DBF8)
 /* 04F314 8004F764 10000006 */  b           .L8004F780
 /* 04F318 8004F768 2673DBF8 */   addiu      $s3, $s3, %lo(D_8009DBF8)
+glabel jmplabel_8004F76C
 /* 04F31C 8004F76C 3C13800A */  lui         $s3, %hi(D_8009DC20)
 /* 04F320 8004F770 10000003 */  b           .L8004F780
 /* 04F324 8004F774 2673DC20 */   addiu      $s3, $s3, %lo(D_8009DC20)
+glabel jmplabel_8004F778
 /* 04F328 8004F778 10000001 */  b           .L8004F780
 /* 04F32C 8004F77C 8C730020 */   lw         $s3, 0x20($v1)
 .L8004F780:

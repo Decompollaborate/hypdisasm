@@ -2350,6 +2350,7 @@ glabel func_8003ABA4 # 48
 /* 03A82C 8003AC7C 8C2F6E3C */  lw          $t7, %lo(jtbl_800A6E3C)($at)
 /* 03A830 8003AC80 01E00008 */  jr          $t7
 /* 03A834 8003AC84 00000000 */   nop
+glabel jmplabel_8003AC88
 /* 03A838 8003AC88 0043001A */  div         $zero, $v0, $v1
 /* 03A83C 8003AC8C 0000C010 */  mfhi        $t8
 /* 03A840 8003AC90 44985000 */  mtc1        $t8, $f10
@@ -2375,6 +2376,7 @@ glabel func_8003ABA4 # 48
 /* 03A888 8003ACD8 460A7100 */  add.s       $f4, $f14, $f10
 /* 03A88C 8003ACDC 10000076 */  b           .L8003AEB8
 /* 03A890 8003ACE0 E7A40004 */   swc1       $f4, 0x4($sp)
+glabel jmplabel_8003ACE4
 /* 03A894 8003ACE4 0043001A */  div         $zero, $v0, $v1
 /* 03A898 8003ACE8 0000C810 */  mfhi        $t9
 /* 03A89C 8003ACEC 44993000 */  mtc1        $t9, $f6
@@ -2400,6 +2402,7 @@ glabel func_8003ABA4 # 48
 /* 03A8E4 8003AD34 46060201 */  sub.s       $f8, $f0, $f6
 /* 03A8E8 8003AD38 1000005F */  b           .L8003AEB8
 /* 03A8EC 8003AD3C E7A80008 */   swc1       $f8, 0x8($sp)
+glabel jmplabel_8003AD40
 /* 03A8F0 8003AD40 0043001A */  div         $zero, $v0, $v1
 /* 03A8F4 8003AD44 00004010 */  mfhi        $t0
 /* 03A8F8 8003AD48 44882000 */  mtc1        $t0, $f4
@@ -2426,6 +2429,7 @@ glabel func_8003ABA4 # 48
 /* 03A944 8003AD94 46047180 */  add.s       $f6, $f14, $f4
 /* 03A948 8003AD98 10000047 */  b           .L8003AEB8
 /* 03A94C 8003AD9C E7A60000 */   swc1       $f6, 0x0($sp)
+glabel jmplabel_8003ADA0
 /* 03A950 8003ADA0 0043001A */  div         $zero, $v0, $v1
 /* 03A954 8003ADA4 00004810 */  mfhi        $t1
 /* 03A958 8003ADA8 44895000 */  mtc1        $t1, $f10
@@ -2452,6 +2456,7 @@ glabel func_8003ABA4 # 48
 /* 03A9A4 8003ADF4 460A0101 */  sub.s       $f4, $f0, $f10
 /* 03A9A8 8003ADF8 1000002F */  b           .L8003AEB8
 /* 03A9AC 8003ADFC E7A40004 */   swc1       $f4, 0x4($sp)
+glabel jmplabel_8003AE00
 /* 03A9B0 8003AE00 0043001A */  div         $zero, $v0, $v1
 /* 03A9B4 8003AE04 00005010 */  mfhi        $t2
 /* 03A9B8 8003AE08 448A3000 */  mtc1        $t2, $f6
@@ -2477,6 +2482,7 @@ glabel func_8003ABA4 # 48
 /* 03AA00 8003AE50 46067200 */  add.s       $f8, $f14, $f6
 /* 03AA04 8003AE54 10000018 */  b           .L8003AEB8
 /* 03AA08 8003AE58 E7A80008 */   swc1       $f8, 0x8($sp)
+glabel jmplabel_8003AE5C
 /* 03AA0C 8003AE5C 0043001A */  div         $zero, $v0, $v1
 /* 03AA10 8003AE60 00005810 */  mfhi        $t3
 /* 03AA14 8003AE64 448B2000 */  mtc1        $t3, $f4
