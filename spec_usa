@@ -46,3 +46,13 @@ beginseg
     name "placeholder_505090"
     include "build/baserom/usa/placeholder_505090.o"
 endseg
+
+beginseg
+    name "assets_84F5F0"
+    include "build/baserom/usa/assets_84F5F0.o"
+endseg
+
+beginseg
+    name "placeholder_860C80"
+    include "build/baserom/usa/placeholder_860C80.o"
+endseg

@@ -6,3 +6,5 @@ file_DCF60 DCF60
 placeholder_100000 100000
 assets_4B4990 4B4990
 placeholder_505090 505090
+assets_84F5F0 84F5F0
+placeholder_860C80 860C80
