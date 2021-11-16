@@ -27,7 +27,7 @@ cpp -P "${SPEC}" > build/"${SPEC}"
 mips-linux-gnu-ld -T build/ldscript_usa.txt --no-check-sections --accept-unknown-input-arch --emit-relocs -Map build/hyp_usa.map -o "${ELF}"
 
 # Generate ROM
-../mm/tools/buildtools/elf2rom -cic 6105 "${ELF}" "${TARGET_ROM}"
+../mm/tools/buildtools/elf2rom -cic 6102 "${ELF}" "${TARGET_ROM}"
 
 # Check matching
 md5sum "${TARGET_ROM}"
