@@ -1,46 +1,73 @@
 #!/usr/bin/env python3
 
 import argparse
+import sys
+
+# TODO: Use file CSVs
 
 # (file, romOffsetStart, romOffsetEnd, VRAM)
-romOffsets = {
-    ("makerom"   ,     0x0,   0x1050, 0x80000400-0x1000),
-    ("boot"      ,  0x1050,  0xB3C70, 0x80000450),
-    ("file_B3C70", 0xB3C70,  0xDCF60, 0x8010AAF0),
+versionRomOffsets = { 
+    "us": [
+        ("makerom"   ,     0x0,   0x1050, 0x80000400-0x1000),
+        ("boot"      ,  0x1050,  0xB3C70, 0x80000450),
+        ("file_B3C70", 0xB3C70,  0xDCF60, 0x8010AAF0),
+    ],
+    "jp": [
+        ("makerom"   ,     0x0,   0x1050, 0x80000400-0x1000),
+        ("boot"      ,  0x1050,  0xAD7F0, 0x80000450),
+    ]
 }
 
-def vramdis(offset: int):
+def printAddress(fileName, offsetInFile, romAddress, vramAddress):
+    if csv:
+        print(f"{romAddress:06X},{vramAddress:08X},{fileName},{offsetInFile:06X}");
+    else:
+        print(f"ROM: {romAddress:06X} VRAM: {vramAddress:08X} located 0x{offsetInFile:X} into file {fileName}");
+
+
+def vramdis(romAddress: int):
     for fileName, romOffsetStart, romOffsetEnd, fileVram in romOffsets:
-        if romOffsetStart <= offset < romOffsetEnd:
-            offsetInFile = offset - romOffsetStart
-            vram = offsetInFile + fileVram
-            print(f"{fileName} {offsetInFile:06X} {vram:08X}")
+        if romOffsetStart <= romAddress < romOffsetEnd:
+            offsetInFile = romAddress - romOffsetStart
+            vramAddress = offsetInFile + fileVram
+            printAddress(fileName, offsetInFile, romAddress, vramAddress)
+            # print(f"{fileName} {offsetInFile:06X} {vram:08X}")
             return
 
-    print("Unknown vram")
+    print("Unknown ROM address", file=sys.stderr)
+    exit(1)
 
-def romdis(vram: int):
+def romdis(vramAddress: int):
     reversedOffsets = sorted(romOffsets, key=lambda x: x[3], reverse=True)
     for fileName, romOffsetStart, romOffsetEnd, fileVram in reversedOffsets:
-        if vram > fileVram:
-            offsetInFile = vram - fileVram
-            offset = offsetInFile + romOffsetStart
-            print(f"{fileName} {offsetInFile:06X} {offset:06X}")
+        if vramAddress > fileVram:
+            offsetInFile = vramAddress - fileVram
+            romAddress = offsetInFile + romOffsetStart
+            printAddress(fileName, offsetInFile, romAddress, vramAddress)
+            # print(f"{fileName} {offsetInFile:06X} {romOffset:06X}")
             return
 
-    print("Unknown vram")
+    print("Unknown VRAM address", file=sys.stderr)
+    exit(1)
+
 
 def main():
     parser = argparse.ArgumentParser(description="ROM - VRAM convertor tool")
-    parser.add_argument("number", help="ROM offset. In hex")
-    parser.add_argument("-v", "--vram", help="Treat the input as VRAM instead of a ROM offset", action="store_true")
-    # TODO: Add region/format
+    parser.add_argument("address", help="ROM or VRAM address (in hex)")
+    parser.add_argument("-v", "--version", help="Version (default: us)", default="us", choices=["us","jp"])
+    parser.add_argument("-c", help="Print csv format", action="store_true")
     args = parser.parse_args()
 
-    if args.vram:
-        romdis(int(args.number, 16))
+    global romOffsets
+    romOffsets = versionRomOffsets[args.version]
+    global csv
+    csv = args.c
+
+    address = int(args.address, 16);
+    if address & 0x80000000:
+        romdis(address)
     else:
-        vramdis(int(args.number, 16))
+        vramdis(address)
 
 
 if __name__ == "__main__":
