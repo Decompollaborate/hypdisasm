@@ -1,0 +1,19 @@
+/*
+ * JP ROM spec file
+ */
+
+beginseg
+    name "makerom"
+    include "build/baserom/jp/makerom.o"
+endseg
+
+beginseg
+    name "boot"
+    address 0x80000450
+    include "build/baserom/jp/boot.o"
+endseg
+
+beginseg
+    name "file_B6970"
+    include "build/baserom/jp/file_B6970.o"
+endseg

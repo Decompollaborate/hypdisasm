@@ -1,0 +1,34 @@
+/*
+ * USA ROM spec file
+ */
+
+beginseg
+    name "makerom"
+    include "build/baserom/usa/makerom.o"
+endseg
+
+beginseg
+    name "boot"
+    address 0x80000450
+    include "build/baserom/usa/boot.o"
+endseg
+
+beginseg
+    name "assets_A9800"
+    include "build/baserom/usa/assets_A9800.o"
+endseg
+
+beginseg
+    name "file_B3C70"
+    include "build/baserom/usa/file_B3C70.o"
+endseg
+
+beginseg
+    name "file_DCF60"
+    include "build/baserom/usa/file_DCF60.o"
+endseg
+
+beginseg
+    name "placeholder_100000"
+    include "build/baserom/usa/placeholder_100000.o"
+endseg
