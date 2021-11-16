@@ -17,6 +17,7 @@ endseg
 
 beginseg
     name "assets_A9800"
+    // address 0x80100680
     include "build/baserom/usa/assets_A9800.o"
 endseg
 
@@ -33,4 +34,15 @@ endseg
 beginseg
     name "placeholder_100000"
     include "build/baserom/usa/placeholder_100000.o"
+endseg
+
+beginseg
+    name "assets_4B4990"
+    // address 0x800ABDDC
+    include "build/baserom/usa/assets_4B4990.o"
+endseg
+
+beginseg
+    name "placeholder_505090"
+    include "build/baserom/usa/placeholder_505090.o"
 endseg
