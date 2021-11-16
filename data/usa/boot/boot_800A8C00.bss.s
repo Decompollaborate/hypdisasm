@@ -363,7 +363,7 @@ glabel D_800AE4F8
 glabel D_800AE4FC
 /* 0A8984 800AE4FC */  .space  0x04
 
-glabel D_800AE500
+glabel D_800AE500_RomRamTableIndex
 /* 0A8988 800AE500 */  .space  0x04
 
 glabel D_800AE504

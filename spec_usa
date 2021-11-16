@@ -17,20 +17,176 @@ endseg
 
 beginseg
     name "assets_A9800"
+    // address 0x80100680
     include "build/baserom/usa/assets_A9800.o"
 endseg
 
 beginseg
     name "file_B3C70"
+    // address 0x8010AAF0
     include "build/baserom/usa/file_B3C70.o"
 endseg
 
 beginseg
     name "file_DCF60"
+    // address 0x80134270
     include "build/baserom/usa/file_DCF60.o"
 endseg
 
 beginseg
-    name "placeholder_100000"
-    include "build/baserom/usa/placeholder_100000.o"
+    name "file_107190"
+    // address 0x80134270
+    include "build/baserom/usa/file_107190.o"
+endseg
+
+beginseg
+    name "file_10F7F0"
+    // address 0x80134270
+    include "build/baserom/usa/file_10F7F0.o"
+endseg
+
+beginseg
+    name "file_1426B0"
+    // address 0x80134270
+    include "build/baserom/usa/file_1426B0.o"
+endseg
+
+beginseg
+    name "file_182B40"
+    // address 0x80134270
+    include "build/baserom/usa/file_182B40.o"
+endseg
+
+beginseg
+    name "file_19C470"
+    // address 0x80134270
+    include "build/baserom/usa/file_19C470.o"
+endseg
+
+beginseg
+    name "file_1C5E50"
+    // address 0x80134270
+    include "build/baserom/usa/file_1C5E50.o"
+endseg
+
+beginseg
+    name "file_1FE3D0"
+    // address 0x80134270
+    include "build/baserom/usa/file_1FE3D0.o"
+endseg
+
+beginseg
+    name "file_2535D0"
+    // address 0x80134270
+    include "build/baserom/usa/file_2535D0.o"
+endseg
+
+beginseg
+    name "file_29CA40"
+    // address 0x80134270
+    include "build/baserom/usa/file_29CA40.o"
+endseg
+
+beginseg
+    name "file_2BD950"
+    // address 0x80134270
+    include "build/baserom/usa/file_2BD950.o"
+endseg
+
+beginseg
+    name "file_2DA640"
+    // address 0x80134270
+    include "build/baserom/usa/file_2DA640.o"
+endseg
+
+beginseg
+    name "file_31AA90"
+    // address 0x80134270
+    include "build/baserom/usa/file_31AA90.o"
+endseg
+
+beginseg
+    name "file_3728F0"
+    // address 0x80134270
+    include "build/baserom/usa/file_3728F0.o"
+endseg
+
+beginseg
+    name "file_3C8950"
+    // address 0x80134270
+    include "build/baserom/usa/file_3C8950.o"
+endseg
+
+beginseg
+    name "file_3E3D00"
+    // address 0x80134270
+    include "build/baserom/usa/file_3E3D00.o"
+endseg
+
+beginseg
+    name "file_3F6EF0"
+    // address 0x80134270
+    include "build/baserom/usa/file_3F6EF0.o"
+endseg
+
+beginseg
+    name "file_417E50"
+    // address 0x80134270
+    include "build/baserom/usa/file_417E50.o"
+endseg
+
+beginseg
+    name "file_430E20"
+    // address 0x80134270
+    include "build/baserom/usa/file_430E20.o"
+endseg
+
+beginseg
+    name "file_44E2E0"
+    // address 0x80134270
+    include "build/baserom/usa/file_44E2E0.o"
+endseg
+
+beginseg
+    name "file_456EF0"
+    // address 0x80134270
+    include "build/baserom/usa/file_456EF0.o"
+endseg
+
+beginseg
+    name "file_47EBD0"
+    // address 0x80134270
+    include "build/baserom/usa/file_47EBD0.o"
+endseg
+
+beginseg
+    name "file_4A49D0"
+    // address 0x80134270
+    include "build/baserom/usa/file_4A49D0.o"
+endseg
+
+beginseg
+    name "assets_4B4990"
+    // address 0x800ABDDC
+    include "build/baserom/usa/assets_4B4990.o"
+endseg
+
+beginseg
+    name "placeholder_505090"
+    include "build/baserom/usa/placeholder_505090.o"
+endseg
+
+beginseg
+    name "assets_84F5F0"
+    include "build/baserom/usa/assets_84F5F0.o"
+endseg
+
+beginseg
+    name "placeholder_860C80"
+    include "build/baserom/usa/placeholder_860C80.o"
+endseg
+
+beginseg
+    name "padding_F20000"
+    include "build/baserom/usa/padding_F20000.o"
 endseg

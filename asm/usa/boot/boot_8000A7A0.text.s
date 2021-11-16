@@ -20,9 +20,9 @@ glabel func_8000A7A8 # 1
 /* 00A364 8000A7B4 AC2066F0 */  sw          $zero, %lo(D_800B66F0)($at)
 /* 00A368 8000A7B8 3C01800B */  lui         $at, %hi(D_800AE504)
 /* 00A36C 8000A7BC 240E0012 */  addiu       $t6, $zero, 0x12
-/* 00A370 8000A7C0 3C02800B */  lui         $v0, %hi(D_800AE500)
+/* 00A370 8000A7C0 3C02800B */  lui         $v0, %hi(D_800AE500_RomRamTableIndex)
 /* 00A374 8000A7C4 AC2EE504 */  sw          $t6, %lo(D_800AE504)($at)
-/* 00A378 8000A7C8 2442E500 */  addiu       $v0, $v0, %lo(D_800AE500)
+/* 00A378 8000A7C8 2442E500 */  addiu       $v0, $v0, %lo(D_800AE500_RomRamTableIndex)
 /* 00A37C 8000A7CC 240F0016 */  addiu       $t7, $zero, 0x16
 /* 00A380 8000A7D0 AC4F0000 */  sw          $t7, 0x0($v0)
 /* 00A384 8000A7D4 3C01800B */  lui         $at, %hi(D_800AE4F8)

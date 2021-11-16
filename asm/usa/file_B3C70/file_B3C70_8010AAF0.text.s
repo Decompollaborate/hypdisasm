@@ -4092,8 +4092,8 @@ glabel func_8010E570 # 51
 /* 003AA4 8010E594 27BD0018 */   addiu      $sp, $sp, 0x18
 
 glabel func_8010E598 # 52
-/* 003AA8 8010E598 3C03800B */  lui         $v1, %hi(D_800AE500)
-/* 003AAC 8010E59C 2463E500 */  addiu       $v1, $v1, %lo(D_800AE500)
+/* 003AA8 8010E598 3C03800B */  lui         $v1, %hi(D_800AE500_RomRamTableIndex)
+/* 003AAC 8010E59C 2463E500 */  addiu       $v1, $v1, %lo(D_800AE500_RomRamTableIndex)
 /* 003AB0 8010E5A0 AC640000 */  sw          $a0, 0x0($v1)
 /* 003AB4 8010E5A4 04810005 */  bgez        $a0, .L8010E5BC
 /* 003AB8 8010E5A8 00801025 */   move       $v0, $a0
@@ -4129,8 +4129,8 @@ glabel func_8010E5E4 # 53
 /* 003B18 8010E608 00000000 */   nop
 
 glabel func_8010E60C # 54
-/* 003B1C 8010E60C 3C0E800B */  lui         $t6, %hi(D_800AE500)
-/* 003B20 8010E610 8DCEE500 */  lw          $t6, %lo(D_800AE500)($t6)
+/* 003B1C 8010E60C 3C0E800B */  lui         $t6, %hi(D_800AE500_RomRamTableIndex)
+/* 003B20 8010E610 8DCEE500 */  lw          $t6, %lo(D_800AE500_RomRamTableIndex)($t6)
 /* 003B24 8010E614 3C02800B */  lui         $v0, %hi(D_800AE4F8)
 /* 003B28 8010E618 2442E4F8 */  addiu       $v0, $v0, %lo(D_800AE4F8)
 /* 003B2C 8010E61C 3C0F800B */  lui         $t7, %hi(D_800AE4FC)
@@ -4148,14 +4148,14 @@ glabel func_8010E60C # 54
 /* 003B5C 8010E64C AC283DE4 */   sw         $t0, %lo(D_80133DE4)($at)
 
 glabel func_8010E650 # 55
-/* 003B60 8010E650 3C0E800B */  lui         $t6, %hi(D_800AE500)
-/* 003B64 8010E654 8DCEE500 */  lw          $t6, %lo(D_800AE500)($t6)
-/* 003B68 8010E658 3C188012 */  lui         $t8, %hi(D_801235A4)
+/* 003B60 8010E650 3C0E800B */  lui         $t6, %hi(D_800AE500_RomRamTableIndex)
+/* 003B64 8010E654 8DCEE500 */  lw          $t6, %lo(D_800AE500_RomRamTableIndex)($t6)
+/* 003B68 8010E658 3C188012 */  lui         $t8, %hi(D_801235A4_RomRamTable)
 /* 003B6C 8010E65C 27BDFFD0 */  addiu       $sp, $sp, -0x30
 /* 003B70 8010E660 000E78C0 */  sll         $t7, $t6, 3
 /* 003B74 8010E664 01EE7821 */  addu        $t7, $t7, $t6
 /* 003B78 8010E668 000F7880 */  sll         $t7, $t7, 2
-/* 003B7C 8010E66C 271835A4 */  addiu       $t8, $t8, %lo(D_801235A4)
+/* 003B7C 8010E66C 271835A4 */  addiu       $t8, $t8, %lo(D_801235A4_RomRamTable)
 /* 003B80 8010E670 AFBF002C */  sw          $ra, 0x2c($sp)
 /* 003B84 8010E674 01F81021 */  addu        $v0, $t7, $t8
 /* 003B88 8010E678 8C590010 */  lw          $t9, 0x10($v0)
