@@ -55,3 +55,5 @@ build/baserom/%.o: baserom/%.bin
 build/asm/%.o: asm/%.s
 	$(AS) $(ASFLAGS) $< -o $@
 
+build/data/%.o: data/%.s
+	iconv --from UTF-8 --to EUC-JP $< | $(AS) $(ASFLAGS) -o $@

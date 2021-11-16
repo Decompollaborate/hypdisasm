@@ -4,7 +4,9 @@
 
 beginseg
     name "makerom"
-    include "build/baserom/usa/makerom.o"
+    include "build/asm/usa/makerom/rom_header.o"
+    include "build/asm/usa/makerom/ipl3.o"
+    include "build/asm/usa/makerom/entry.o"
 endseg
 
 beginseg
