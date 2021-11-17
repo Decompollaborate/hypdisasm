@@ -14,6 +14,7 @@
 8009FBF4,udigs,char,0x10
 800A78E4,_faultstring_cause,char,6
 800A7B74,_faultstring_FiT,char,4
+800A7E60,__libm_qnan_f,f32,4
 800A7F10,_xprint_hlL,u8,4
 800A7F14,_xprint_fchar,u8,6
 800A7F1C,_xprint_fbit,u32,0x18
@@ -23,4 +24,3 @@
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40
 801235A4,D_801235A4_RomRamTable,UNK_TYPE24,0x33C
-800A7E60,__libm_qnan_f,f32,4
