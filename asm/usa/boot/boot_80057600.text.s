@@ -10,10 +10,12 @@
 .balign 16
 
 glabel func_80057600 # 0
-/* 0571B0 80057600 3C1A8005 */  lui         $k0, %hi(jtbl_80057610)
-/* 0571B4 80057604 275A7610 */  addiu       $k0, $k0, %lo(jtbl_80057610)
+/* 0571B0 80057600 3C1A8005 */  lui         $k0, %hi(func_80057610)
+/* 0571B4 80057604 275A7610 */  addiu       $k0, $k0, %lo(func_80057610)
 /* 0571B8 80057608 03400008 */  jr          $k0
 /* 0571BC 8005760C 00000000 */   nop
+
+glabel func_80057610 # 1
 /* 0571C0 80057610 3C1A8010 */  lui         $k0, %hi(D_801003D0)
 /* 0571C4 80057614 275A03D0 */  addiu       $k0, $k0, %lo(D_801003D0)
 /* 0571C8 80057618 FF410020 */  sd          $at, 0x20($k0)
@@ -532,17 +534,17 @@ glabel L80057AE0
 /* 057934 80057D84 03E00008 */  jr          $ra
 /* 057938 80057D88 ACA40008 */   sw         $a0, 0x8($a1)
 
-glabel __osPopThread # 1
+glabel __osPopThread # 2
 /* 05793C 80057D8C 8C820000 */  lw          $v0, 0x0($a0)
 /* 057940 80057D90 8C590000 */  lw          $t9, 0x0($v0)
 /* 057944 80057D94 03E00008 */  jr          $ra
 /* 057948 80057D98 AC990000 */   sw         $t9, 0x0($a0)
 
-glabel func_80057D9C # 2
+glabel func_80057D9C # 3
 /* 05794C 80057D9C 03E00008 */  jr          $ra
 /* 057950 80057DA0 00000000 */   nop
 
-glabel __osDispatchThread # 3
+glabel __osDispatchThread # 4
 fakefunc_80057DA4:
 /* 057954 80057DA4 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 057958 80057DA8 0C015F63 */  jal         __osPopThread
