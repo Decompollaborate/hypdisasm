@@ -44,7 +44,7 @@ glabel func_80004970 # 0
 /* 004598 800049E8 AFA5001C */   sw         $a1, 0x1c($sp)
 /* 00459C 800049EC 8FA5001C */  lw          $a1, 0x1c($sp)
 /* 0045A0 800049F0 00402025 */  move        $a0, $v0
-/* 0045A4 800049F4 0C014C64 */  jal         func_80053190
+/* 0045A4 800049F4 0C014C64 */  jal         osSendMesg
 /* 0045A8 800049F8 24060001 */   addiu      $a2, $zero, 0x1
 /* 0045AC 800049FC 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0045B0 80004A00 27BD0020 */  addiu       $sp, $sp, 0x20

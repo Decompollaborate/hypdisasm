@@ -62001,7 +62001,7 @@ glabel __osPiDevMgr
 /* 09EA08 8009EE58 */ .word 0x00000000
 /* 09EA0C 8009EE5C */ .word 0x00000000
 
-glabel D_8009EE60
+glabel __osCurrentHandle
 /* 09EA10 8009EE60 */ .word D_800FDDE0
 /* 09EA14 8009EE64 */ .word 0x800FDE58
 /* 09EA18 8009EE68 */ .word 0x00000000
