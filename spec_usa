@@ -116,12 +116,7 @@ beginseg
     include "build/asm/usa/boot/boot_80051960.text.o"
     include "build/asm/usa/boot/boot_80051C40.text.o"
     include "build/asm/usa/boot/boot_80052140.text.o"
-
-    // Building this file as-is doesn't match because it is mips3. It probably needs special flags
-    // It will be incbin'd for now
-    //include "build/asm/usa/boot/ll.text.o"
-    include "build/asm/usa/workaround_ll.o"
-
+    include "build/asm/usa/boot/ll.text.o"
     include "build/asm/usa/boot/bcopy.text.o"
     include "build/asm/usa/boot/boot_80052920.text.o"
     include "build/asm/usa/boot/boot_80052FB0.text.o"
