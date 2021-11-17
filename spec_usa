@@ -240,6 +240,8 @@ beginseg
 
     // rodata
     include "build/data/usa/boot/boot_8009FC30.rodata.o"
+    include "build/data/usa/boot/__libm_qnan_f.rodata.o"
+    include "build/data/usa/boot/boot_800A7E70.rodata.o"
     include "build/data/usa/boot/xprintf.rodata.o"
     include "build/data/usa/boot/boot_800A8010.rodata.o"
 

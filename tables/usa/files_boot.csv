@@ -225,6 +225,8 @@ offset,vram,.data
 
 offset,vram,.rodata
 9F7E0,8009FC30,boot_8009FC30
+A7A10,800A7E60,__libm_qnan_f
+A7A20,800A7E70,boot_800A7E70
 A7AC0,800A7F10,xprintf
 A7BC0,800A8010,boot_800A8010
 
