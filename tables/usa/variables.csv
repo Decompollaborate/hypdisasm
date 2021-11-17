@@ -23,3 +23,4 @@
 800FDC50,__osContLastPoll,u8,1
 80100390,__osPfsPifRam,OSPifRam,0x40
 801235A4,D_801235A4_RomRamTable,UNK_TYPE24,0x33C
+800A7E60,__libm_qnan_f,f32,4

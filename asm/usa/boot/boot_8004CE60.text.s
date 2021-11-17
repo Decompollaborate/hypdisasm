@@ -171,9 +171,9 @@ glabel func_8004D008 # 7
 /* 04CC04 8004D054 27BD0008 */   addiu      $sp, $sp, 0x8
 
 glabel func_8004D058 # 8
-/* 04CC08 8004D058 3C01800A */  lui         $at, %hi(D_800A7E60)
+/* 04CC08 8004D058 3C01800A */  lui         $at, %hi(__libm_qnan_f)
 /* 04CC0C 8004D05C 03E00008 */  jr          $ra
-/* 04CC10 8004D060 C4207E60 */   lwc1       $f0, %lo(D_800A7E60)($at)
+/* 04CC10 8004D060 C4207E60 */   lwc1       $f0, %lo(__libm_qnan_f)($at)
 
 glabel func_8004D064 # 9
 /* 04CC14 8004D064 3C01800A */  lui         $at, %hi(D_800A7C30)
