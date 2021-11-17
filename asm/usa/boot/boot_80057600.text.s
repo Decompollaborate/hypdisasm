@@ -513,6 +513,8 @@ glabel L80057AE0
 .L80057D3C:
 /* 0578EC 80057D3C 08015F69 */  j           __osDispatchThread
 /* 0578F0 80057D40 00000000 */   nop
+
+glabel __osEnqueueThread # 2
 /* 0578F4 80057D44 8C980000 */  lw          $t8, 0x0($a0)
 /* 0578F8 80057D48 8CAF0004 */  lw          $t7, 0x4($a1)
 /* 0578FC 80057D4C 0080C825 */  move        $t9, $a0
@@ -534,17 +536,17 @@ glabel L80057AE0
 /* 057934 80057D84 03E00008 */  jr          $ra
 /* 057938 80057D88 ACA40008 */   sw         $a0, 0x8($a1)
 
-glabel __osPopThread # 2
+glabel __osPopThread # 3
 /* 05793C 80057D8C 8C820000 */  lw          $v0, 0x0($a0)
 /* 057940 80057D90 8C590000 */  lw          $t9, 0x0($v0)
 /* 057944 80057D94 03E00008 */  jr          $ra
 /* 057948 80057D98 AC990000 */   sw         $t9, 0x0($a0)
 
-glabel func_80057D9C # 3
+glabel func_80057D9C # 4
 /* 05794C 80057D9C 03E00008 */  jr          $ra
 /* 057950 80057DA0 00000000 */   nop
 
-glabel __osDispatchThread # 4
+glabel __osDispatchThread # 5
 fakefunc_80057DA4:
 /* 057954 80057DA4 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 057958 80057DA8 0C015F63 */  jal         __osPopThread
