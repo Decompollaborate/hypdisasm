@@ -88,7 +88,7 @@ glabel func_8005AD10 # 0
 /* 05A9D0 8005AE20 26100001 */   addiu      $s0, $s0, 0x1
 /* 05A9D4 8005AE24 90590002 */  lbu         $t9, 0x2($v0)
 /* 05A9D8 8005AE28 24090001 */  addiu       $t1, $zero, 0x1
-/* 05A9DC 8005AE2C 02095004 */  sllv        $t2, $s0, $t1
+/* 05A9DC 8005AE2C 02095004 */  sllv        $t2, $t1, $s0
 /* 05A9E0 8005AE30 33280001 */  andi        $t0, $t9, 0x1
 /* 05A9E4 8005AE34 51000005 */  beql        $t0, $zero, .L8005AE4C
 /* 05A9E8 8005AE38 26100001 */   addiu      $s0, $s0, 0x1
@@ -199,7 +199,7 @@ glabel func_8005AF50 # 2
 /* 05AB68 8005AFB8 01AE7825 */  or          $t7, $t5, $t6
 /* 05AB6C 8005AFBC A4AF0000 */  sh          $t7, 0x0($a1)
 /* 05AB70 8005AFC0 93B80012 */  lbu         $t8, 0x12($sp)
-/* 05AB74 8005AFC4 00D94804 */  sllv        $t1, $a2, $t9
+/* 05AB74 8005AFC4 00D94804 */  sllv        $t1, $t9, $a2
 /* 05AB78 8005AFC8 00491025 */  or          $v0, $v0, $t1
 /* 05AB7C 8005AFCC 304A00FF */  andi        $t2, $v0, 0xff
 /* 05AB80 8005AFD0 01401025 */  move        $v0, $t2

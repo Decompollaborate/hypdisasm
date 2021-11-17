@@ -687,7 +687,7 @@ glabel func_8005C050 # 3
 glabel func_8005C13C # 4
 /* 05BCEC 8005C13C 10C00007 */  beq         $a2, $zero, .L8005C15C
 /* 05BCF0 8005C140 240E0001 */   addiu      $t6, $zero, 0x1
-/* 05BCF4 8005C144 00CE7804 */  sllv        $t7, $a2, $t6
+/* 05BCF4 8005C144 00CE7804 */  sllv        $t7, $t6, $a2
 /* 05BCF8 8005C148 448F2000 */  mtc1        $t7, $f4
 /* 05BCFC 8005C14C 00000000 */  nop
 /* 05BD00 8005C150 468021A1 */  cvt.d.w     $f6, $f4
