@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005D570 # 0
+glabel osDestroyThread # 0
 /* 05D120 8005D570 27BDFFC8 */  addiu       $sp, $sp, -0x38
 /* 05D124 8005D574 AFBF0024 */  sw          $ra, 0x24($sp)
 /* 05D128 8005D578 AFA40038 */  sw          $a0, 0x38($sp)

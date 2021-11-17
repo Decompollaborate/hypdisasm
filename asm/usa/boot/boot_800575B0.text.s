@@ -13,7 +13,7 @@ glabel func_800575B0 # 0
 /* 057160 800575B0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 057164 800575B4 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 057168 800575B8 AFA40018 */  sw          $a0, 0x18($sp)
-/* 05716C 800575BC 0C017550 */  jal         func_8005D540
+/* 05716C 800575BC 0C017550 */  jal         __osSiDeviceBusy
 /* 057170 800575C0 AFA5001C */   sw         $a1, 0x1c($sp)
 /* 057174 800575C4 10400003 */  beq         $v0, $zero, .L800575D4
 /* 057178 800575C8 8FAE001C */   lw         $t6, 0x1c($sp)

@@ -9,11 +9,11 @@
 
 .balign 16
 
-glabel func_80057560 # 0
+glabel __osSiRawReadIo # 0
 /* 057110 80057560 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 057114 80057564 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 057118 80057568 AFA40018 */  sw          $a0, 0x18($sp)
-/* 05711C 8005756C 0C017550 */  jal         func_8005D540
+/* 05711C 8005756C 0C017550 */  jal         __osSiDeviceBusy
 /* 057120 80057570 AFA5001C */   sw         $a1, 0x1c($sp)
 /* 057124 80057574 10400003 */  beq         $v0, $zero, .L80057584
 /* 057128 80057578 8FAE0018 */   lw         $t6, 0x18($sp)

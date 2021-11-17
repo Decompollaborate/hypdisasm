@@ -620,13 +620,13 @@ glabel func_80049A1C # 10
 /* 0495F0 80049A40 03E00008 */  jr          $ra
 /* 0495F4 80049A44 00000000 */   nop
 
-glabel func_80049A48 # 11
+glabel memset # 11
 /* 0495F8 80049A48 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 0495FC 80049A4C AFA5001C */  sw          $a1, 0x1c($sp)
 /* 049600 80049A50 00C02825 */  move        $a1, $a2
 /* 049604 80049A54 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 049608 80049A58 93A6001F */  lbu         $a2, 0x1f($sp)
-/* 04960C 80049A5C 0C0126BC */  jal         func_80049AF0
+/* 04960C 80049A5C 0C0126BC */  jal         memset_internal 
 /* 049610 80049A60 AFA40018 */   sw         $a0, 0x18($sp)
 /* 049614 80049A64 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 049618 80049A68 8FA20018 */  lw          $v0, 0x18($sp)
@@ -673,7 +673,7 @@ glabel strlen # 13
 /* 049698 80049AE8 03E00008 */  jr          $ra
 /* 04969C 80049AEC 00000000 */   nop
 
-glabel func_80049AF0 # 14
+glabel memset_internal  # 14
 /* 0496A0 80049AF0 AFA60008 */  sw          $a2, 0x8($sp)
 /* 0496A4 80049AF4 30CE00FF */  andi        $t6, $a2, 0xff
 /* 0496A8 80049AF8 10800007 */  beq         $a0, $zero, .L80049B18

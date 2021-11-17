@@ -41672,8 +41672,6 @@ glabel D_80089490
 /* 08B1A4 8008B5F4 */ .word 0x00000002
 /* 08B1A8 8008B5F8 */ .word 0x00000031
 /* 08B1AC 8008B5FC */ .word 0x00000000
-
-glabel guMtxIdentF
 /* 08B1B0 8008B600 */ .word 0x00000000
 /* 08B1B4 8008B604 */ .word 0x00000000
 /* 08B1B8 8008B608 */ .word 0x00000000
@@ -60844,7 +60842,7 @@ glabel D_8009DC74
 glabel D_8009DC78
 /* 09D828 8009DC78 */ .word 0x02E6D354
 
-glabel D_8009DC7C
+glabel __osShutdown
 /* 09D82C 8009DC7C */ .word 0x00000000
 
 glabel __OSGlobalIntMask
@@ -61993,7 +61991,7 @@ glabel D_8009EE30
 /* 09E9E8 8009EE38 */ .word 0x00000000
 /* 09E9EC 8009EE3C */ .word 0x00000000
 
-glabel D_8009EE40
+glabel __osPiDevMgr
 /* 09E9F0 8009EE40 */ .word 0x00000000
 /* 09E9F4 8009EE44 */ .word 0x00000000
 /* 09E9F8 8009EE48 */ .word 0x00000000
@@ -62667,7 +62665,7 @@ glabel D_8009F818
 /* 09F408 8009F858 */ .word 0x00000000
 /* 09F40C 8009F85C */ .word 0x00000000
 
-glabel D_8009F860
+glabel __osIntTable
 /* 09F410 8009F860 */ .word 0x00000000
 /* 09F414 8009F864 */ .word 0x00000000
 /* 09F418 8009F868 */ .word 0x00000000
@@ -62679,7 +62677,7 @@ glabel D_8009F860
 /* 09F430 8009F880 */ .word 0x00000000
 /* 09F434 8009F884 */ .word 0x00000000
 
-glabel D_8009F888
+glabel __osPiIntTable
 /* 09F438 8009F888 */ .word 0x00000000
 /* 09F43C 8009F88C */ .word 0x00000000
 
@@ -62696,7 +62694,7 @@ glabel __osActiveQueue
 glabel __osRunningThread
 /* 09F450 8009F8A0 */ .word 0x00000000
 
-glabel D_8009F8A4
+glabel __osFaultedThread
 /* 09F454 8009F8A4 */ .word 0x00000000
 /* 09F458 8009F8A8 */ .word 0x00000000
 /* 09F45C 8009F8AC */ .word 0x00000000

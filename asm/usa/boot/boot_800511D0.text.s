@@ -21,7 +21,7 @@ glabel func_800511D0 # 0
 /* 050DA0 800511F0 AFA5007C */  sw          $a1, 0x7c($sp)
 /* 050DA4 800511F4 AFA60080 */  sw          $a2, 0x80($sp)
 /* 050DA8 800511F8 AFA70084 */  sw          $a3, 0x84($sp)
-/* 050DAC 800511FC 0C016060 */  jal         func_80058180
+/* 050DAC 800511FC 0C016060 */  jal         guMtxIdentF
 /* 050DB0 80051200 AFA40078 */   sw         $a0, 0x78($sp)
 /* 050DB4 80051204 C7A40088 */  lwc1        $f4, 0x88($sp)
 /* 050DB8 80051208 C7A6007C */  lwc1        $f6, 0x7c($sp)

@@ -58,7 +58,7 @@ glabel guOrthoF # 1
 /* 053658 80053AA8 AFA5001C */  sw          $a1, 0x1c($sp)
 /* 05365C 80053AAC AFA60020 */  sw          $a2, 0x20($sp)
 /* 053660 80053AB0 AFA70024 */  sw          $a3, 0x24($sp)
-/* 053664 80053AB4 0C016060 */  jal         func_80058180
+/* 053664 80053AB4 0C016060 */  jal         guMtxIdentF
 /* 053668 80053AB8 AFA40018 */   sw         $a0, 0x18($sp)
 /* 05366C 80053ABC C7A40020 */  lwc1        $f4, 0x20($sp)
 /* 053670 80053AC0 C7A6001C */  lwc1        $f6, 0x1c($sp)

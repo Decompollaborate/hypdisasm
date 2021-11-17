@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80058180 # 0
+glabel guMtxIdentF # 0
 /* 057D30 80058180 3C083F80 */  lui         $t0, 0x3f80
 /* 057D34 80058184 AC880000 */  sw          $t0, 0x0($a0)
 /* 057D38 80058188 AC800004 */  sw          $zero, 0x4($a0)

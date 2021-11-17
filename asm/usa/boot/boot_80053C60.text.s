@@ -19,7 +19,7 @@ glabel func_80053C60 # 0
 /* 053828 80053C78 AFA70054 */  sw          $a3, 0x54($sp)
 /* 05382C 80053C7C 27A60058 */  addiu       $a2, $sp, 0x58
 /* 053830 80053C80 27A50054 */  addiu       $a1, $sp, 0x54
-/* 053834 80053C84 0C0167EC */  jal         func_80059FB0
+/* 053834 80053C84 0C0167EC */  jal         guNormalize
 /* 053838 80053C88 27A40050 */   addiu      $a0, $sp, 0x50
 /* 05383C 80053C8C 3C01800A */  lui         $at, %hi(D_8009EE30)
 /* 053840 80053C90 C7AC004C */  lwc1        $f12, 0x4c($sp)
@@ -48,7 +48,7 @@ glabel func_80053C60 # 0
 /* 05389C 80053CEC 460C2202 */  mul.s       $f8, $f4, $f12
 /* 0538A0 80053CF0 E7AA0038 */  swc1        $f10, 0x38($sp)
 /* 0538A4 80053CF4 46024182 */  mul.s       $f6, $f8, $f2
-/* 0538A8 80053CF8 0C016060 */  jal         func_80058180
+/* 0538A8 80053CF8 0C016060 */  jal         guMtxIdentF
 /* 0538AC 80053CFC E7A60034 */   swc1       $f6, 0x34($sp)
 /* 0538B0 80053D00 C7AE0044 */  lwc1        $f14, 0x44($sp)
 /* 0538B4 80053D04 C7AA0050 */  lwc1        $f10, 0x50($sp)
@@ -132,8 +132,8 @@ glabel func_80053DE4 # 1
 glabel func_80053E30 # 2
 /* 0539E0 80053E30 27BDFFD0 */  addiu       $sp, $sp, -0x30
 /* 0539E4 80053E34 AFB00020 */  sw          $s0, 0x20($sp)
-/* 0539E8 80053E38 3C10800A */  lui         $s0, %hi(D_8009EE40)
-/* 0539EC 80053E3C 2610EE40 */  addiu       $s0, $s0, %lo(D_8009EE40)
+/* 0539E8 80053E38 3C10800A */  lui         $s0, %hi(__osPiDevMgr)
+/* 0539EC 80053E3C 2610EE40 */  addiu       $s0, $s0, %lo(__osPiDevMgr)
 /* 0539F0 80053E40 8E0E0000 */  lw          $t6, 0x0($s0)
 /* 0539F4 80053E44 AFBF0024 */  sw          $ra, 0x24($sp)
 /* 0539F8 80053E48 AFA40030 */  sw          $a0, 0x30($sp)

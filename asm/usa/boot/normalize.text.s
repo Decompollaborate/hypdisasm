@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80059FB0 # 0
+glabel guNormalize # 0
 /* 059B60 80059FB0 C4840000 */  lwc1        $f4, 0x0($a0)
 /* 059B64 80059FB4 C4A60000 */  lwc1        $f6, 0x0($a1)
 /* 059B68 80059FB8 C4C80000 */  lwc1        $f8, 0x0($a2)

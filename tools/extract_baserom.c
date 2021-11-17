@@ -8,7 +8,7 @@
 typedef enum {
     REGION_INVALID = -1,
     REGION_JP,
-    REGION_USA,
+    REGION_US,
 } Region;
 
 Region GetRegion(const char *regionParameter) {
@@ -16,7 +16,7 @@ Region GetRegion(const char *regionParameter) {
         return REGION_JP;
     }
     if (strcmp(regionParameter, "usa") == 0) {
-        return REGION_USA;
+        return REGION_US;
     }
     return REGION_INVALID;
 }
@@ -27,7 +27,7 @@ FILE *OpenFilelist(Region region) {
         return fopen("tables/jp/filelist.txt", "r");
         break;
 
-    case REGION_USA:
+    case REGION_US:
         return fopen("tables/usa/filelist.txt", "r");
         break;
 
@@ -41,9 +41,9 @@ FILE *OpenFilelist(Region region) {
 size_t GetFileSize(FILE* file) {
     size_t size;
 
-    fseek(file, 0L, SEEK_END);
+    fseek(file, 0, SEEK_END);
     size = ftell(file);
-    fseek(file, 0L, SEEK_SET);
+    fseek(file, 0, SEEK_SET);
 
     return size;
 }
@@ -51,14 +51,14 @@ size_t GetFileSize(FILE* file) {
 // TODO: rename
 void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionName) {
     // Assuming nothing is larger than 200
-    char *filename_last = malloc(201*sizeof(char));
+    char *filename_last = malloc(201 * sizeof(char));
     uint32_t offset_last = 0;
     // Assuming nothing is larger than 200
-    char *filename = malloc(201*sizeof(char));
+    char *filename = malloc(201 * sizeof(char));
     uint32_t offset = 0;
 
     // Assuming nothing is larger than 300
-    char *outputFilepath = malloc(301*sizeof(char));
+    char *outputFilepath = malloc(301 * sizeof(char));
 
     fscanf(filelist, "%200s %X\n", filename_last, &offset_last);
 
@@ -140,5 +140,5 @@ int main(int argc, char *argv[]) {
     fclose(romfile);
     fclose(filelist);
 
-    return 0;
+    return EXIT_SUCCESS;
 }

@@ -16,7 +16,7 @@ glabel func_80050F40 # 0
 /* 050AFC 80050F4C AFA7003C */  sw          $a3, 0x3c($sp)
 /* 050B00 80050F50 AFA40030 */  sw          $a0, 0x30($sp)
 /* 050B04 80050F54 AFA50034 */  sw          $a1, 0x34($sp)
-/* 050B08 80050F58 0C016060 */  jal         func_80058180
+/* 050B08 80050F58 0C016060 */  jal         guMtxIdentF
 /* 050B0C 80050F5C E7AE0038 */   swc1       $f14, 0x38($sp)
 /* 050B10 80050F60 C7AE0038 */  lwc1        $f14, 0x38($sp)
 /* 050B14 80050F64 3C01800A */  lui         $at, %hi(D_800A7D10)

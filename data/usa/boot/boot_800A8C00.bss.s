@@ -1251,7 +1251,7 @@ glabel D_800FDB70
 glabel D_800FDB80
 /* 0A8E24 800FDB80 */  .space  0x10
 
-glabel D_800FDB90
+glabel __osEventStateTab
 /* 0A8E28 800FDB90 */  .space  0x80
 
 glabel D_800FDC10
@@ -1380,7 +1380,7 @@ glabel D_80100378
 glabel __osPfsPifRam
 /* 0A8ED0 80100390 */  .space  0x40
 
-glabel D_801003D0
+glabel __osThreadSave
 /* 0A8ED4 801003D0 */  .space  0x1B0
 
 glabel D_80100580
