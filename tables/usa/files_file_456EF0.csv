@@ -1,2 +1,5 @@
 offset,vram,.text
 0,80134270,file_456EF0_80134270
+
+offset,vram,.data
+130,801343A0,file_456EF0_801343A0

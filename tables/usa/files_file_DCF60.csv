@@ -1,6 +1,8 @@
 offset,vram,.text
 0,80134270,file_DCF60_80134270
+
 offset,vram,.data
 230,801344A0,file_DCF60_801344A0
+
 offset,vram,.rodata
 215D0,80155840,file_DCF60_80155840
