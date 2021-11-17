@@ -264,7 +264,30 @@ endseg
 beginseg
     name "file_B3C70"
     // address 0x8010AAF0
+
+    #ifdef NON_EQUIVALENT
+
+    // text
+    include "build/asm/usa/file_B3C70/file_B3C70_8010AAF0.text.o"
+    include "build/asm/usa/file_B3C70/file_B3C70_80112F60.text.o"
+    include "build/asm/usa/file_B3C70/file_B3C70_80115070.text.o"
+    include "build/asm/usa/file_B3C70/file_B3C70_80117210.text.o"
+    include "build/asm/usa/file_B3C70/file_B3C70_80119570.text.o"
+    include "build/asm/usa/file_B3C70/file_B3C70_8011BD50.text.o"
+    include "build/asm/usa/file_B3C70/file_B3C70_801217C0.text.o"
+
+    // data
+    include "build/data/usa/file_B3C70/file_B3C70_80123430.data.o"
+
+    // rodata
+    include "build/data/usa/file_B3C70/file_B3C70_8012BD60.rodata.o"
+
+    // bss
+
+    #else
+
     include "build/baserom/usa/file_B3C70.o"
+    #endif
 endseg
 
 beginseg
