@@ -544,7 +544,7 @@ glabel __osPopThread # 4
 /* 057944 80057D94 03E00008 */  jr          $ra
 /* 057948 80057D98 AC990000 */   sw         $t9, 0x0($a0)
 
-glabel __osNop # 4
+glabel __osNop # 5
 /* 05794C 80057D9C 03E00008 */  jr          $ra
 /* 057950 80057DA0 00000000 */   nop
 
@@ -647,7 +647,7 @@ glabel __osDispatchThread # 6
 /* 057ACC 80057F1C 42000018 */  eret
 
 glabel __osCleanupThread # 7
-/* 057AD0 80057F20 0C01755C */  jal         func_8005D570
+/* 057AD0 80057F20 0C01755C */  jal         osDestroyThread
 /* 057AD4 80057F24 00002025 */   move       $a0, $zero
 /* 057AD8 80057F28 00000000 */  nop
 /* 057ADC 80057F2C 00000000 */  nop
