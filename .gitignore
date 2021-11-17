@@ -58,6 +58,7 @@ dkms.conf
 *.n64
 *.v64
 
+.vscode/
 build/
 *.bin
 context/
