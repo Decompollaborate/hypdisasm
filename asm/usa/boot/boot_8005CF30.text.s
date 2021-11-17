@@ -147,7 +147,7 @@ glabel func_8005D128 # 1
 /* 05CCDC 8005D12C 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 05CCE0 8005D130 2DC10009 */  sltiu       $at, $t6, 0x9
 /* 05CCE4 8005D134 AFBF0014 */  sw          $ra, 0x14($sp)
-/* 05CCE8 8005D138 1020002B */  beq         $at, $zero, jmplabel_8005D1E8
+/* 05CCE8 8005D138 1020002B */  beq         $at, $zero, L8005D1E8
 /* 05CCEC 8005D13C 00803825 */   move       $a3, $a0
 /* 05CCF0 8005D140 000E7080 */  sll         $t6, $t6, 2
 /* 05CCF4 8005D144 3C01800B */  lui         $at, %hi(jtbl_800A80AC)
@@ -155,10 +155,10 @@ glabel func_8005D128 # 1
 /* 05CCFC 8005D14C 8C2E80AC */  lw          $t6, %lo(jtbl_800A80AC)($at)
 /* 05CD00 8005D150 01C00008 */  jr          $t6
 /* 05CD04 8005D154 00000000 */   nop
-glabel jmplabel_8005D158
+glabel L8005D158
 /* 05CD08 8005D158 10000029 */  b           .L8005D200
 /* 05CD0C 8005D15C ACE60000 */   sw         $a2, 0x0($a3)
-glabel jmplabel_8005D160
+glabel L8005D160
 /* 05CD10 8005D160 8CE40000 */  lw          $a0, 0x0($a3)
 /* 05CD14 8005D164 44802000 */  mtc1        $zero, $f4
 /* 05CD18 8005D168 240F0001 */  addiu       $t7, $zero, 0x1
@@ -174,7 +174,7 @@ glabel jmplabel_8005D160
 /* 05CD40 8005D190 00000000 */   nop
 /* 05CD44 8005D194 1000001B */  b           .L8005D204
 /* 05CD48 8005D198 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8005D19C
+glabel L8005D19C
 /* 05CD4C 8005D19C 8CE40000 */  lw          $a0, 0x0($a3)
 /* 05CD50 8005D1A0 24180001 */  addiu       $t8, $zero, 0x1
 /* 05CD54 8005D1A4 ACF80030 */  sw          $t8, 0x30($a3)
@@ -187,16 +187,16 @@ glabel jmplabel_8005D19C
 /* 05CD70 8005D1C0 00000000 */   nop
 /* 05CD74 8005D1C4 1000000F */  b           .L8005D204
 /* 05CD78 8005D1C8 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8005D1CC
+glabel L8005D1CC
 /* 05CD7C 8005D1CC AFA6001C */  sw          $a2, 0x1c($sp)
 /* 05CD80 8005D1D0 C7A6001C */  lwc1        $f6, 0x1c($sp)
 /* 05CD84 8005D1D4 1000000A */  b           .L8005D200
 /* 05CD88 8005D1D8 E4E60018 */   swc1       $f6, 0x18($a3)
-glabel jmplabel_8005D1DC
+glabel L8005D1DC
 /* 05CD8C 8005D1DC 24080001 */  addiu       $t0, $zero, 0x1
 /* 05CD90 8005D1E0 10000007 */  b           .L8005D200
 /* 05CD94 8005D1E4 ACE8001C */   sw         $t0, 0x1c($a3)
-glabel jmplabel_8005D1E8
+glabel L8005D1E8
 /* 05CD98 8005D1E8 8CE40000 */  lw          $a0, 0x0($a3)
 /* 05CD9C 8005D1EC 50800005 */  beql        $a0, $zero, .L8005D204
 /* 05CDA0 8005D1F0 8FBF0014 */   lw         $ra, 0x14($sp)

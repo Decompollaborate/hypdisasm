@@ -2399,7 +2399,7 @@ glabel func_8011B6F8 # 45
 /* 010C24 8011B714 8C2E2A88 */  lw          $t6, %lo(jtbl_80132A88)($at)
 /* 010C28 8011B718 01C00008 */  jr          $t6
 /* 010C2C 8011B71C 00000000 */   nop
-glabel jmplabel_8011B720
+glabel L8011B720
 /* 010C30 8011B720 3C02800B */  lui         $v0, %hi(D_800AE510)
 /* 010C34 8011B724 2442E510 */  addiu       $v0, $v0, %lo(D_800AE510)
 /* 010C38 8011B728 24040001 */  addiu       $a0, $zero, 0x1
@@ -2407,7 +2407,7 @@ glabel jmplabel_8011B720
 /* 010C40 8011B730 AC440000 */   sw         $a0, 0x0($v0)
 /* 010C44 8011B734 1000001D */  b           .L8011B7AC
 /* 010C48 8011B738 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8011B73C
+glabel L8011B73C
 /* 010C4C 8011B73C 3C02800B */  lui         $v0, %hi(D_800AE510)
 /* 010C50 8011B740 2442E510 */  addiu       $v0, $v0, %lo(D_800AE510)
 /* 010C54 8011B744 24040002 */  addiu       $a0, $zero, 0x2
@@ -2415,7 +2415,7 @@ glabel jmplabel_8011B73C
 /* 010C5C 8011B74C AC440000 */   sw         $a0, 0x0($v0)
 /* 010C60 8011B750 10000016 */  b           .L8011B7AC
 /* 010C64 8011B754 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8011B758
+glabel L8011B758
 /* 010C68 8011B758 3C02800B */  lui         $v0, %hi(D_800AE510)
 /* 010C6C 8011B75C 2442E510 */  addiu       $v0, $v0, %lo(D_800AE510)
 /* 010C70 8011B760 24040001 */  addiu       $a0, $zero, 0x1
@@ -2423,7 +2423,7 @@ glabel jmplabel_8011B758
 /* 010C78 8011B768 AC440000 */   sw         $a0, 0x0($v0)
 /* 010C7C 8011B76C 1000000F */  b           .L8011B7AC
 /* 010C80 8011B770 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8011B774
+glabel L8011B774
 /* 010C84 8011B774 3C02800B */  lui         $v0, %hi(D_800AE510)
 /* 010C88 8011B778 2442E510 */  addiu       $v0, $v0, %lo(D_800AE510)
 /* 010C8C 8011B77C 24040002 */  addiu       $a0, $zero, 0x2
@@ -2431,12 +2431,12 @@ glabel jmplabel_8011B774
 /* 010C94 8011B784 AC440000 */   sw         $a0, 0x0($v0)
 /* 010C98 8011B788 10000008 */  b           .L8011B7AC
 /* 010C9C 8011B78C 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8011B790
+glabel L8011B790
 /* 010CA0 8011B790 0C00CB43 */  jal         func_80032D0C
 /* 010CA4 8011B794 00000000 */   nop
 /* 010CA8 8011B798 10000004 */  b           .L8011B7AC
 /* 010CAC 8011B79C 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8011B7A0
+glabel L8011B7A0
 /* 010CB0 8011B7A0 0C00CB35 */  jal         func_80032CD4
 /* 010CB4 8011B7A4 00000000 */   nop
 .L8011B7A8:

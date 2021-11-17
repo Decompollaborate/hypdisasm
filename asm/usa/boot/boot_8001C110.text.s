@@ -186,7 +186,7 @@ glabel func_8001C35C # 4
 /* 01BF3C 8001C38C 8C2E39DC */  lw          $t6, %lo(jtbl_800A39DC)($at)
 /* 01BF40 8001C390 01C00008 */  jr          $t6
 /* 01BF44 8001C394 00000000 */   nop
-glabel jmplabel_8001C398
+glabel L8001C398
 /* 01BF48 8001C398 3C04800B */  lui         $a0, %hi(D_800B6A88)
 /* 01BF4C 8001C39C 3C05800A */  lui         $a1, %hi(D_800A391C)
 /* 01BF50 8001C3A0 24A5391C */  addiu       $a1, $a1, %lo(D_800A391C)
@@ -194,7 +194,7 @@ glabel jmplabel_8001C398
 /* 01BF58 8001C3A8 24846A88 */   addiu      $a0, $a0, %lo(D_800B6A88)
 /* 01BF5C 8001C3AC 10000020 */  b           .L8001C430
 /* 01BF60 8001C3B0 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8001C3B4
+glabel L8001C3B4
 /* 01BF64 8001C3B4 3C04800B */  lui         $a0, %hi(D_800B6A88)
 /* 01BF68 8001C3B8 3C05800A */  lui         $a1, %hi(D_800A3934)
 /* 01BF6C 8001C3BC 24A53934 */  addiu       $a1, $a1, %lo(D_800A3934)
@@ -202,7 +202,7 @@ glabel jmplabel_8001C3B4
 /* 01BF74 8001C3C4 24846A88 */   addiu      $a0, $a0, %lo(D_800B6A88)
 /* 01BF78 8001C3C8 10000019 */  b           .L8001C430
 /* 01BF7C 8001C3CC 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8001C3D0
+glabel L8001C3D0
 /* 01BF80 8001C3D0 3C04800B */  lui         $a0, %hi(D_800B6A88)
 /* 01BF84 8001C3D4 3C05800A */  lui         $a1, %hi(D_800A3944)
 /* 01BF88 8001C3D8 24A53944 */  addiu       $a1, $a1, %lo(D_800A3944)
@@ -210,7 +210,7 @@ glabel jmplabel_8001C3D0
 /* 01BF90 8001C3E0 24846A88 */   addiu      $a0, $a0, %lo(D_800B6A88)
 /* 01BF94 8001C3E4 10000012 */  b           .L8001C430
 /* 01BF98 8001C3E8 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8001C3EC
+glabel L8001C3EC
 /* 01BF9C 8001C3EC 3C04800B */  lui         $a0, %hi(D_800B6A88)
 /* 01BFA0 8001C3F0 3C05800A */  lui         $a1, %hi(D_800A3964)
 /* 01BFA4 8001C3F4 24A53964 */  addiu       $a1, $a1, %lo(D_800A3964)
@@ -218,7 +218,7 @@ glabel jmplabel_8001C3EC
 /* 01BFAC 8001C3FC 24846A88 */   addiu      $a0, $a0, %lo(D_800B6A88)
 /* 01BFB0 8001C400 1000000B */  b           .L8001C430
 /* 01BFB4 8001C404 8FBF0014 */   lw         $ra, 0x14($sp)
-glabel jmplabel_8001C408
+glabel L8001C408
 /* 01BFB8 8001C408 3C04800B */  lui         $a0, %hi(D_800B6A88)
 /* 01BFBC 8001C40C 3C05800A */  lui         $a1, %hi(D_800A3994)
 /* 01BFC0 8001C410 24A53994 */  addiu       $a1, $a1, %lo(D_800A3994)

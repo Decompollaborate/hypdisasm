@@ -71,14 +71,14 @@ glabel func_8004E070 # 0
 /* 04DCF8 8004E148 27A50086 */   addiu      $a1, $sp, 0x86
 /* 04DCFC 8004E14C 946C0008 */  lhu         $t4, 0x8($v1)
 /* 04DD00 8004E150 2D810011 */  sltiu       $at, $t4, 0x11
-/* 04DD04 8004E154 102000F8 */  beq         $at, $zero, jmplabel_8004E538
+/* 04DD04 8004E154 102000F8 */  beq         $at, $zero, L8004E538
 /* 04DD08 8004E158 000C6080 */   sll        $t4, $t4, 2
 /* 04DD0C 8004E15C 3C01800A */  lui         $at, %hi(jtbl_800A7C60)
 /* 04DD10 8004E160 002C0821 */  addu        $at, $at, $t4
 /* 04DD14 8004E164 8C2C7C60 */  lw          $t4, %lo(jtbl_800A7C60)($at)
 /* 04DD18 8004E168 01800008 */  jr          $t4
 /* 04DD1C 8004E16C 00000000 */   nop
-glabel jmplabel_8004E170
+glabel L8004E170
 /* 04DD20 8004E170 846D000A */  lh          $t5, 0xa($v1)
 /* 04DD24 8004E174 00608825 */  move        $s1, $v1
 /* 04DD28 8004E178 02002025 */  move        $a0, $s0
@@ -157,7 +157,7 @@ glabel jmplabel_8004E170
 /* 04DE38 8004E288 C624000C */  lwc1        $f4, 0xc($s1)
 /* 04DE3C 8004E28C 100000B6 */  b           .L8004E568
 /* 04DE40 8004E290 E6040044 */   swc1       $f4, 0x44($s0)
-glabel jmplabel_8004E294
+glabel L8004E294
 /* 04DE44 8004E294 02002025 */  move        $a0, $s0
 /* 04DE48 8004E298 02C02825 */  move        $a1, $s6
 /* 04DE4C 8004E29C 02E03025 */  move        $a2, $s7
@@ -273,7 +273,7 @@ glabel jmplabel_8004E294
 .L8004E434:
 /* 04DFE4 8004E434 1000004C */  b           .L8004E568
 /* 04DFE8 8004E438 AE120078 */   sw         $s2, 0x78($s0)
-glabel jmplabel_8004E43C
+glabel L8004E43C
 /* 04DFEC 8004E43C 8479000A */  lh          $t9, 0xa($v1)
 /* 04DFF0 8004E440 00601025 */  move        $v0, $v1
 /* 04DFF4 8004E444 02002025 */  move        $a0, $s0
@@ -285,7 +285,7 @@ glabel jmplabel_8004E43C
 /* 04E008 8004E458 8C46000C */   lw         $a2, 0xc($v0)
 /* 04E00C 8004E45C 10000042 */  b           .L8004E568
 /* 04E010 8004E460 AE120084 */   sw         $s2, 0x84($s0)
-glabel jmplabel_8004E464
+glabel L8004E464
 /* 04E014 8004E464 02002025 */  move        $a0, $s0
 /* 04E018 8004E468 02C02825 */  move        $a1, $s6
 /* 04E01C 8004E46C 02E03025 */  move        $a2, $s7
@@ -299,14 +299,14 @@ glabel jmplabel_8004E464
 /* 04E03C 8004E48C 00003025 */   move       $a2, $zero
 /* 04E040 8004E490 10000036 */  b           .L8004E56C
 /* 04E044 8004E494 87AB0076 */   lh         $t3, 0x76($sp)
-glabel jmplabel_8004E498
+glabel L8004E498
 /* 04E048 8004E498 8C68000C */  lw          $t0, 0xc($v1)
 /* 04E04C 8004E49C AD000088 */  sw          $zero, 0x88($t0)
 /* 04E050 8004E4A0 0C013790 */  jal         func_8004DE40
 /* 04E054 8004E4A4 8C64000C */   lw         $a0, 0xc($v1)
 /* 04E058 8004E4A8 10000030 */  b           .L8004E56C
 /* 04E05C 8004E4AC 87AB0076 */   lh         $t3, 0x76($sp)
-glabel jmplabel_8004E4B0
+glabel L8004E4B0
 /* 04E060 8004E4B0 02002025 */  move        $a0, $s0
 /* 04E064 8004E4B4 02C02825 */  move        $a1, $s6
 /* 04E068 8004E4B8 02E03025 */  move        $a2, $s7
@@ -318,7 +318,7 @@ glabel jmplabel_8004E4B0
 /* 04E080 8004E4D0 C526000C */  lwc1        $f6, 0xc($t1)
 /* 04E084 8004E4D4 10000024 */  b           .L8004E568
 /* 04E088 8004E4D8 E6060044 */   swc1       $f6, 0x44($s0)
-glabel jmplabel_8004E4DC
+glabel L8004E4DC
 /* 04E08C 8004E4DC 02002025 */  move        $a0, $s0
 /* 04E090 8004E4E0 02C02825 */  move        $a1, $s6
 /* 04E094 8004E4E4 02E03025 */  move        $a2, $s7
@@ -328,7 +328,7 @@ glabel jmplabel_8004E4DC
 /* 04E0A4 8004E4F4 00409825 */  move        $s3, $v0
 /* 04E0A8 8004E4F8 1000001B */  b           .L8004E568
 /* 04E0AC 8004E4FC AE120048 */   sw         $s2, 0x48($s0)
-glabel jmplabel_8004E500
+glabel L8004E500
 /* 04E0B0 8004E500 02002025 */  move        $a0, $s0
 /* 04E0B4 8004E504 02C02825 */  move        $a1, $s6
 /* 04E0B8 8004E508 02E03025 */  move        $a2, $s7
@@ -343,7 +343,7 @@ glabel jmplabel_8004E500
 /* 04E0DC 8004E52C 8D46000C */   lw         $a2, 0xc($t2)
 /* 04E0E0 8004E530 1000000E */  b           .L8004E56C
 /* 04E0E4 8004E534 87AB0076 */   lh         $t3, 0x76($sp)
-glabel jmplabel_8004E538
+glabel L8004E538
 /* 04E0E8 8004E538 02002025 */  move        $a0, $s0
 /* 04E0EC 8004E53C 02C02825 */  move        $a1, $s6
 /* 04E0F0 8004E540 02E03025 */  move        $a2, $s7

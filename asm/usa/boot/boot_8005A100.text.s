@@ -317,14 +317,14 @@ glabel func_8005A2E0 # 1
 .L8005A550:
 /* 05A100 8005A550 252AFFF6 */  addiu       $t2, $t1, -0xa
 /* 05A104 8005A554 2D410007 */  sltiu       $at, $t2, 0x7
-/* 05A108 8005A558 10200047 */  beq         $at, $zero, jmplabel_8005A678
+/* 05A108 8005A558 10200047 */  beq         $at, $zero, L8005A678
 /* 05A10C 8005A55C 000A5080 */   sll        $t2, $t2, 2
 /* 05A110 8005A560 3C01800B */  lui         $at, %hi(jtbl_800A8010)
 /* 05A114 8005A564 002A0821 */  addu        $at, $at, $t2
 /* 05A118 8005A568 8C2A8010 */  lw          $t2, %lo(jtbl_800A8010)($at)
 /* 05A11C 8005A56C 01400008 */  jr          $t2
 /* 05A120 8005A570 00000000 */   nop
-glabel jmplabel_8005A574
+glabel L8005A574
 /* 05A124 8005A574 8E840010 */  lw          $a0, 0x10($s4)
 /* 05A128 8005A578 27A5006C */  addiu       $a1, $sp, 0x6c
 /* 05A12C 8005A57C 0C014554 */  jal         osRecvMesg
@@ -338,7 +338,7 @@ glabel jmplabel_8005A574
 /* 05A14C 8005A59C 8D670010 */   lw         $a3, 0x10($t3)
 /* 05A150 8005A5A0 10000036 */  b           .L8005A67C
 /* 05A154 8005A5A4 00408025 */   move       $s0, $v0
-glabel jmplabel_8005A5A8
+glabel L8005A5A8
 /* 05A158 8005A5A8 8E840010 */  lw          $a0, 0x10($s4)
 /* 05A15C 8005A5AC 27A5006C */  addiu       $a1, $sp, 0x6c
 /* 05A160 8005A5B0 0C014554 */  jal         osRecvMesg
@@ -352,7 +352,7 @@ glabel jmplabel_8005A5A8
 /* 05A180 8005A5D0 8D870010 */   lw         $a3, 0x10($t4)
 /* 05A184 8005A5D4 10000029 */  b           .L8005A67C
 /* 05A188 8005A5D8 00408025 */   move       $s0, $v0
-glabel jmplabel_8005A5DC
+glabel L8005A5DC
 /* 05A18C 8005A5DC 8E840010 */  lw          $a0, 0x10($s4)
 /* 05A190 8005A5E0 27A5006C */  addiu       $a1, $sp, 0x6c
 /* 05A194 8005A5E4 0C014554 */  jal         osRecvMesg
@@ -369,7 +369,7 @@ glabel jmplabel_8005A5DC
 /* 05A1C0 8005A610 00000000 */   nop
 /* 05A1C4 8005A614 10000019 */  b           .L8005A67C
 /* 05A1C8 8005A618 00408025 */   move       $s0, $v0
-glabel jmplabel_8005A61C
+glabel L8005A61C
 /* 05A1CC 8005A61C 8E840010 */  lw          $a0, 0x10($s4)
 /* 05A1D0 8005A620 27A5006C */  addiu       $a1, $sp, 0x6c
 /* 05A1D4 8005A624 0C014554 */  jal         osRecvMesg
@@ -386,7 +386,7 @@ glabel jmplabel_8005A61C
 /* 05A200 8005A650 00000000 */   nop
 /* 05A204 8005A654 10000009 */  b           .L8005A67C
 /* 05A208 8005A658 00408025 */   move       $s0, $v0
-glabel jmplabel_8005A65C
+glabel L8005A65C
 /* 05A20C 8005A65C 8FA50074 */  lw          $a1, 0x74($sp)
 /* 05A210 8005A660 00003025 */  move        $a2, $zero
 /* 05A214 8005A664 2410FFFF */  addiu       $s0, $zero, -0x1
@@ -394,7 +394,7 @@ glabel jmplabel_8005A65C
 /* 05A21C 8005A66C 8CA40004 */   lw         $a0, 0x4($a1)
 /* 05A220 8005A670 10000002 */  b           .L8005A67C
 /* 05A224 8005A674 00000000 */   nop
-glabel jmplabel_8005A678
+glabel L8005A678
 /* 05A228 8005A678 2410FFFF */  addiu       $s0, $zero, -0x1
 .L8005A67C:
 /* 05A22C 8005A67C 1600FF2B */  bne         $s0, $zero, .L8005A32C
