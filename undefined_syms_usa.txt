@@ -189,14 +189,6 @@ D_E5FFFFFF = 0xE5FFFFFF;
 D_E6FFFFFF = 0xE6FFFFFF;
 D_FA00000A = 0xFA00000A;
 
-// mips3 bullshit
-__ll_mul = 0x800524B8;
-__ll_div = 0x8005245C;
-__ull_rem = 0x8005237C;
-__ull_div = 0x800523B8;
-__ll_rshift = 0x800525E4;
-
-
 // file_B3C70
 D_3FFFE4E4 = 0x3FFFE4E4;
 D_41102E30 = 0x41102E30;
