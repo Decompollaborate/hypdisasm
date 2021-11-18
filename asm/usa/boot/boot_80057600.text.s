@@ -445,6 +445,8 @@ glabel L80057AE0
 /* 0577E8 80057C38 AF490018 */  sw          $t1, 0x18($k0)
 /* 0577EC 80057C3C 1000FFB5 */  b           .L80057B14
 /* 0577F0 80057C40 AF5B0118 */   sw         $k1, 0x118($k0)
+
+glabel __osEnqueueAndYield # 2
 /* 0577F4 80057C44 3C05800A */  lui         $a1, %hi(__osRunningThread)
 /* 0577F8 80057C48 8CA5F8A0 */  lw          $a1, %lo(__osRunningThread)($a1)
 /* 0577FC 80057C4C 40086000 */  mfc0        $t0, Status
@@ -514,7 +516,7 @@ glabel L80057AE0
 /* 0578EC 80057D3C 08015F69 */  j           __osDispatchThread
 /* 0578F0 80057D40 00000000 */   nop
 
-glabel __osEnqueueThread # 2
+glabel __osEnqueueThread # 3
 /* 0578F4 80057D44 8C980000 */  lw          $t8, 0x0($a0)
 /* 0578F8 80057D48 8CAF0004 */  lw          $t7, 0x4($a1)
 /* 0578FC 80057D4C 0080C825 */  move        $t9, $a0
@@ -536,18 +538,17 @@ glabel __osEnqueueThread # 2
 /* 057934 80057D84 03E00008 */  jr          $ra
 /* 057938 80057D88 ACA40008 */   sw         $a0, 0x8($a1)
 
-glabel __osPopThread # 3
+glabel __osPopThread # 4
 /* 05793C 80057D8C 8C820000 */  lw          $v0, 0x0($a0)
 /* 057940 80057D90 8C590000 */  lw          $t9, 0x0($v0)
 /* 057944 80057D94 03E00008 */  jr          $ra
 /* 057948 80057D98 AC990000 */   sw         $t9, 0x0($a0)
 
-glabel func_80057D9C # 4
+glabel func_80057D9C # 5
 /* 05794C 80057D9C 03E00008 */  jr          $ra
 /* 057950 80057DA0 00000000 */   nop
 
-glabel __osDispatchThread # 5
-fakefunc_80057DA4:
+glabel __osDispatchThread # 6
 /* 057954 80057DA4 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 057958 80057DA8 0C015F63 */  jal         __osPopThread
 /* 05795C 80057DAC 2484F898 */   addiu      $a0, $a0, %lo(__osRunQueue)
@@ -644,6 +645,8 @@ fakefunc_80057DA4:
 /* 057AC4 80057F14 00000000 */  nop
 /* 057AC8 80057F18 00000000 */  nop
 /* 057ACC 80057F1C 42000018 */  eret
+
+glabel __osCleanupThread # 7
 /* 057AD0 80057F20 0C01755C */  jal         func_8005D570
 /* 057AD4 80057F24 00002025 */   move       $a0, $zero
 /* 057AD8 80057F28 00000000 */  nop
