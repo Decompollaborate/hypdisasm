@@ -444,6 +444,6 @@ beginseg
 endseg
 
 beginseg
-    name "padding_F20000"
-    include "build/baserom/usa/padding_F20000.o"
+    name "padding_F194A0"
+    include "build/baserom/usa/padding_F194A0.o"
 endseg
