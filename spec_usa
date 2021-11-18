@@ -287,7 +287,18 @@ endseg
 beginseg
     name "file_DCF60"
     // address 0x80134270
-    include "build/baserom/usa/file_DCF60.o"
+
+    // text
+    include "build/asm/usa/file_DCF60/file_DCF60_80134270.text.o"
+
+    // data
+    include "build/data/usa/file_DCF60/file_DCF60_801344A0.data.o"
+
+    // rodata
+    include "build/data/usa/file_DCF60/file_DCF60_80155840.rodata.o"
+
+    // bss
+    include "build/data/usa/file_DCF60/file_DCF60_8015E4A0.bss.o"
 endseg
 
 beginseg

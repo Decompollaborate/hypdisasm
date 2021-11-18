@@ -6,3 +6,7 @@ offset,vram,.data
 
 offset,vram,.rodata
 215D0,80155840,file_DCF60_80155840
+
+offset,vram,.bss
+2A230,8015E4A0,file_DCF60_8015E4A0
+2A240,8015E4B0,.end
