@@ -4,22 +4,13 @@ import argparse
 import sys
 import os
 
-def main():
-    parser = argparse.ArgumentParser(description="Parses the context files outputed by the disassembler and prints the undefined symbols to the screen in a linker script compatible format")
-    parser.add_argument("-v", "--version", help="Version (default: us)", default="us", choices=["us","jp"])
-    args = parser.parse_args()
-
-    version = args.version
-    # HACK until we change usa to us everywhere
-    if version == "us" and not os.path.exists(os.path.join("context", "us")):
-        version = "usa"
-
+def getSyms(version):
     undefinedSymbols = dict()
     definedSymbols = {0x80000400: "entrypoint"}
 
     contextFolder = os.path.join("context", version)
-    for files in os.listdir(contextFolder):
-        contPath = os.path.join(contextFolder, files)
+    for file in os.listdir(contextFolder):
+        contPath = os.path.join(contextFolder, file)
         with open(contPath) as f:
             for line in f:
                 line = line.strip()
@@ -36,6 +27,20 @@ def main():
                     undefinedSymbols[vram] = name
                 elif line.startswith("fake_function,"):
                     undefinedSymbols[vram] = name
+
+    return undefinedSymbols, definedSymbols
+
+def main():
+    parser = argparse.ArgumentParser(description="Parses the context files outputed by the disassembler and prints the undefined symbols to the screen in a linker script compatible format")
+    parser.add_argument("-v", "--version", help="Version (default: us)", default="us", choices=["us","jp"])
+    args = parser.parse_args()
+
+    version = args.version
+    # HACK until we change usa to us everywhere
+    if version == "us" and not os.path.exists(os.path.join("context", "us")):
+        version = "usa"
+
+    undefinedSymbols, definedSymbols = getSyms(version)
 
     for vram, name in sorted(undefinedSymbols.items()):
         if vram in definedSymbols and name in definedSymbols.values():
