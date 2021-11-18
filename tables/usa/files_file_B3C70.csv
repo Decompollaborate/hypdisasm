@@ -12,3 +12,7 @@ offset,vram,.data
 
 offset,vram,.rodata
 21270,8012BD60,file_B3C70_8012BD60
+
+offset,vram,.bss
+292F0,80133DE0,file_B3C70_80133DE0
+29780,80134270,.end
