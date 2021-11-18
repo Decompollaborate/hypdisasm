@@ -178,14 +178,16 @@ beginseg
     include "build/asm/usa/boot/getsr.text.o"
     include "build/asm/usa/boot/setfpccsr.text.o"
     include "build/asm/usa/boot/setwatchlo.text.o"
-    include "build/asm/usa/boot/boot_80057560.text.o"
+    include "build/asm/usa/boot/sirawread.text.o"
     include "build/asm/usa/boot/boot_800575B0.text.o"
-    include "build/asm/usa/boot/boot_80057600.text.o"
+    include "build/asm/usa/boot/exceptasm.text.o"
+    include "build/asm/usa/boot/unmaptlball.text.o"
     include "build/asm/usa/boot/maptlbrdb.text.o"
     include "build/asm/usa/boot/getcause.text.o"
-    include "build/asm/usa/boot/boot_80057FF0.text.o"
-    include "build/asm/usa/boot/boot_80058080.text.o"
-    include "build/asm/usa/boot/boot_80058180.text.o"
+    include "build/asm/usa/boot/interrupt.text.o"
+    include "build/asm/usa/boot/thread.text.o"
+    include "build/asm/usa/boot/probetlb.text.o"
+    include "build/asm/usa/boot/guMtxIdentF.text.o"
     include "build/asm/usa/boot/guMtxF2L.text.o"
     include "build/asm/usa/boot/guMtxL2F.text.o"
     include "build/asm/usa/boot/boot_800582B0.text.o"
@@ -194,12 +196,13 @@ beginseg
     include "build/asm/usa/boot/boot_80058810.text.o"
     include "build/asm/usa/boot/boot_80058890.text.o"
     include "build/asm/usa/boot/boot_80058AC0.text.o"
-    include "build/asm/usa/boot/boot_80058EF0.text.o"
+    include "build/asm/usa/boot/jammesg.text.o"
+    include "build/asm/usa/boot/pigetcmdq.text.o"
     include "build/asm/usa/boot/boot_80059070.text.o"
     include "build/asm/usa/boot/boot_80059180.text.o"
     include "build/asm/usa/boot/boot_800592A0.text.o"
     include "build/asm/usa/boot/xprintf.text.o"
-    include "build/asm/usa/boot/boot_80059FB0.text.o"
+    include "build/asm/usa/boot/normalize.text.o"
     include "build/asm/usa/boot/boot_8005A010.text.o"
     include "build/asm/usa/boot/boot_8005A030.text.o"
     include "build/asm/usa/boot/boot_8005A100.text.o"
@@ -220,7 +223,8 @@ beginseg
     include "build/asm/usa/boot/boot_8005CF30.text.o"
     include "build/asm/usa/boot/boot_8005D220.text.o"
     include "build/asm/usa/boot/boot_8005D330.text.o"
-    include "build/asm/usa/boot/boot_8005D570.text.o"
+    include "build/asm/usa/boot/si.text.o"
+    include "build/asm/usa/boot/destroythread.text.o"
     include "build/asm/usa/boot/boot_8005D680.text.o"
     include "build/asm/usa/boot/boot_8005D8D0.text.o"
     include "build/asm/usa/boot/boot_8005DB00.text.o"
@@ -250,9 +254,8 @@ beginseg
     include "build/data/usa/boot/xprintf.rodata.o"
     include "build/data/usa/boot/boot_800A8010.rodata.o"
 
-    //bss
+    // bss
     include "build/data/usa/boot/boot_800A8C00.bss.o"
-
 endseg
 
 beginseg

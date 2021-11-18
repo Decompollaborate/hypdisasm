@@ -35,21 +35,28 @@ def main():
 
             offset, vram, filename = line.split(",")
             if filename.startswith("."):
+                if filename == ".end":
+                    continue
+                print()
                 if filename == ".text":
                     section = "text"
                     fold = "asm"
+                    print("    // text")
                 elif filename == ".data":
                     section = "data"
                     fold = "data"
+                    print("    // data")
                 elif filename == ".rodata":
                     section = "rodata"
                     fold = "data"
+                    print("    // rodata")
                 elif filename == ".bss":
                     section = "bss"
                     fold = "data"
+                    print("    // bss")
                 continue
 
-            print(f'    include build/{fold}/{version}/{n}/{filename}.{section}.o')
+            print(f'    include "build/{fold}/{version}/{n}/{filename}.{section}.o"')
 
         print("endseg")
 
