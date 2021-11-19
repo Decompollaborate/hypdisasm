@@ -3,3 +3,8 @@ offset,vram,.text
 
 offset,vram,.data
 190,80134400,file_107190_80134400
+
+
+offset,vram,.bss
+8660,8013C8D0,file_107190_8013C8D0
+8670,8013C8D0,.end
