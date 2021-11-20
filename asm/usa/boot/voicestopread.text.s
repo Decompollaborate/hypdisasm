@@ -24,7 +24,7 @@ glabel osVoiceStopReadData # 0
 /* 054C1C 8005506C 8C840000 */  lw          $a0, 0x0($a0)
 /* 054C20 80055070 0C01558C */  jal         __osVoiceGetStatus
 /* 054C24 80055074 02A03025 */   move       $a2, $s5
-/* 054C28 80055078 10400003 */  beq         $v0, $zero, .L80055088
+/* 054C28 80055078 10400003 */  beqz        $v0, .L80055088
 /* 054C2C 8005507C 93AE003F */   lbu        $t6, 0x3f($sp)
 /* 054C30 80055080 1000002F */  b           .L80055140
 /* 054C34 80055084 8FBF002C */   lw         $ra, 0x2c($sp)
@@ -38,7 +38,7 @@ glabel osVoiceStopReadData # 0
 .L800550A0:
 /* 054C50 800550A0 24190700 */  addiu       $t9, $zero, 0x700
 /* 054C54 800550A4 00003025 */  move        $a2, $zero
-/* 054C58 800550A8 17000003 */  bne         $t8, $zero, .L800550B8
+/* 054C58 800550A8 17000003 */  bnez        $t8, .L800550B8
 /* 054C5C 800550AC 27A70038 */   addiu      $a3, $sp, 0x38
 /* 054C60 800550B0 10000022 */  b           .L8005513C
 /* 054C64 800550B4 24020005 */   addiu      $v0, $zero, 0x5
@@ -47,7 +47,7 @@ glabel osVoiceStopReadData # 0
 /* 054C6C 800550BC 8E050004 */  lw          $a1, 0x4($s0)
 /* 054C70 800550C0 0C0156D0 */  jal         __osVoiceContWrite4
 /* 054C74 800550C4 8E040000 */   lw         $a0, 0x0($s0)
-/* 054C78 800550C8 1440001B */  bne         $v0, $zero, .L80055138
+/* 054C78 800550C8 1440001B */  bnez        $v0, .L80055138
 /* 054C7C 800550CC 00401825 */   move       $v1, $v0
 /* 054C80 800550D0 00008825 */  move        $s1, $zero
 /* 054C84 800550D4 24140014 */  addiu       $s4, $zero, 0x14
@@ -58,7 +58,7 @@ glabel osVoiceStopReadData # 0
 /* 054C94 800550E4 0C01575C */  jal         __osVoiceCheckResult
 /* 054C98 800550E8 02A02825 */   move       $a1, $s5
 /* 054C9C 800550EC 3048FF00 */  andi        $t0, $v0, 0xff00
-/* 054CA0 800550F0 1100000A */  beq         $t0, $zero, .L8005511C
+/* 054CA0 800550F0 1100000A */  beqz        $t0, .L8005511C
 /* 054CA4 800550F4 00401825 */   move       $v1, $v0
 /* 054CA8 800550F8 30430007 */  andi        $v1, $v0, 0x7
 /* 054CAC 800550FC 50600003 */  beql        $v1, $zero, .L8005510C

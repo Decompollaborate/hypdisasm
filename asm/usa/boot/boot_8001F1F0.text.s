@@ -194,7 +194,7 @@ glabel func_8001F47C # 2
 /* 01F038 8001F488 904E0008 */  lbu         $t6, 0x8($v0)
 /* 01F03C 8001F48C 3C18FA00 */  lui         $t8, 0xfa00
 /* 01F040 8001F490 3C09FA00 */  lui         $t1, 0xfa00
-/* 01F044 8001F494 15C0000C */  bne         $t6, $zero, .L8001F4C8
+/* 01F044 8001F494 15C0000C */  bnez        $t6, .L8001F4C8
 /* 01F048 8001F498 3C020101 */   lui        $v0, 0x101
 /* 01F04C 8001F49C 3C04800B */  lui         $a0, %hi(D_800ABDD0)
 /* 01F050 8001F4A0 2484BDD0 */  addiu       $a0, $a0, %lo(D_800ABDD0)

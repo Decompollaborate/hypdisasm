@@ -19,7 +19,7 @@ glabel func_8004D260 # 0
 /* 04CE28 8004D278 0C013763 */  jal         func_8004DD8C
 /* 04CE2C 8004D27C AFA40018 */   sw         $a0, 0x18($sp)
 /* 04CE30 8004D280 8FA70018 */  lw          $a3, 0x18($sp)
-/* 04CE34 8004D284 10400010 */  beq         $v0, $zero, .L8004D2C8
+/* 04CE34 8004D284 10400010 */  beqz        $v0, .L8004D2C8
 /* 04CE38 8004D288 00403025 */   move       $a2, $v0
 /* 04CE3C 8004D28C 3C0F800A */  lui         $t7, %hi(D_8009D9C4)
 /* 04CE40 8004D290 8DEFD9C4 */  lw          $t7, %lo(D_8009D9C4)($t7)

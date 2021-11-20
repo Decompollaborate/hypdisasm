@@ -20,7 +20,7 @@ glabel func_8004D1C0 # 0
 /* 04CD8C 8004D1DC 8FBF0014 */   lw         $ra, 0x14($sp)
 /* 04CD90 8004D1E0 0C013763 */  jal         func_8004DD8C
 /* 04CD94 8004D1E4 00000000 */   nop
-/* 04CD98 8004D1E8 10400016 */  beq         $v0, $zero, .L8004D244
+/* 04CD98 8004D1E8 10400016 */  beqz        $v0, .L8004D244
 /* 04CD9C 8004D1EC 8FA80020 */   lw         $t0, 0x20($sp)
 /* 04CDA0 8004D1F0 3C18800A */  lui         $t8, %hi(D_8009D9C4)
 /* 04CDA4 8004D1F4 8F18D9C4 */  lw          $t8, %lo(D_8009D9C4)($t8)

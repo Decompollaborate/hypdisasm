@@ -53,7 +53,7 @@ glabel __osVoiceContRead2 # 0
 /* 055558 800559A8 1A200010 */  blez        $s1, .L800559EC
 /* 05555C 800559AC 00001025 */   move       $v0, $zero
 /* 055560 800559B0 32240003 */  andi        $a0, $s1, 0x3
-/* 055564 800559B4 10800006 */  beq         $a0, $zero, .L800559D0
+/* 055564 800559B4 10800006 */  beqz        $a0, .L800559D0
 /* 055568 800559B8 00801825 */   move       $v1, $a0
 .L800559BC:
 /* 05556C 800559BC 24420001 */  addiu       $v0, $v0, 0x1
@@ -126,7 +126,7 @@ glabel __osVoiceContRead2 # 0
 /* 055668 80055AB8 02C02025 */  move        $a0, $s6
 /* 05566C 80055ABC 0C01558C */  jal         __osVoiceGetStatus
 /* 055670 80055AC0 02202825 */   move       $a1, $s1
-/* 055674 80055AC4 1440000D */  bne         $v0, $zero, .L80055AFC
+/* 055674 80055AC4 1440000D */  bnez        $v0, .L80055AFC
 /* 055678 80055AC8 00409825 */   move       $s3, $v0
 /* 05567C 80055ACC 10000006 */  b           .L80055AE8
 /* 055680 80055AD0 24130004 */   addiu      $s3, $zero, 0x4
@@ -141,7 +141,7 @@ glabel __osVoiceContRead2 # 0
 .L80055AEC:
 /* 05569C 80055AEC 16610003 */  bne         $s3, $at, .L80055AFC
 /* 0556A0 80055AF0 2AA20000 */   slti       $v0, $s5, 0x0
-/* 0556A4 80055AF4 1040FFA2 */  beq         $v0, $zero, .L80055980
+/* 0556A4 80055AF4 1040FFA2 */  beqz        $v0, .L80055980
 /* 0556A8 80055AF8 26B5FFFF */   addiu      $s5, $s5, -0x1
 .L80055AFC:
 /* 0556AC 80055AFC 0C01610D */  jal         __osSiRelAccess

@@ -32,7 +32,7 @@ glabel __osEPiRawReadIo # 0
 /* 05E674 8005EAC4 90680004 */  lbu         $t0, 0x4($v1)
 /* 05E678 8005EAC8 5328003D */  beql        $t9, $t0, .L8005EBC0
 /* 05E67C 8005EACC 8C8A000C */   lw         $t2, 0xc($a0)
-/* 05E680 8005EAD0 14400019 */  bne         $v0, $zero, .L8005EB38
+/* 05E680 8005EAD0 14400019 */  bnez        $v0, .L8005EB38
 /* 05E684 8005EAD4 00602825 */   move       $a1, $v1
 /* 05E688 8005EAD8 90820005 */  lbu         $v0, 0x5($a0)
 /* 05E68C 8005EADC 90690005 */  lbu         $t1, 0x5($v1)

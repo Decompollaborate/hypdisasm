@@ -221,7 +221,7 @@ glabel func_8004DBD8 # 1
 /* 04D7C0 8004DC10 00808025 */  move        $s0, $a0
 /* 04D7C4 8004DC14 00E09025 */  move        $s2, $a3
 /* 04D7C8 8004DC18 0080A825 */  move        $s5, $a0
-/* 04D7CC 8004DC1C 15E00004 */  bne         $t7, $zero, .L8004DC30
+/* 04D7CC 8004DC1C 15E00004 */  bnez        $t7, .L8004DC30
 /* 04D7D0 8004DC20 00C0A025 */   move       $s4, $a2
 /* 04D7D4 8004DC24 ACA00000 */  sw          $zero, 0x0($a1)
 /* 04D7D8 8004DC28 1000004E */  b           .L8004DD64
@@ -239,7 +239,7 @@ glabel func_8004DBD8 # 1
 /* 04D804 8004DC54 8E08002C */  lw          $t0, 0x2c($s0)
 /* 04D808 8004DC58 00684823 */  subu        $t1, $v1, $t0
 /* 04D80C 8004DC5C 0132082A */  slt         $at, $t1, $s2
-/* 04D810 8004DC60 1020001F */  beq         $at, $zero, .L8004DCE0
+/* 04D810 8004DC60 1020001F */  beqz        $at, .L8004DCE0
 /* 04D814 8004DC64 00715024 */   and        $t2, $v1, $s1
 .L8004DC68:
 /* 04D818 8004DC68 AE0A0028 */  sw          $t2, 0x28($s0)
@@ -284,7 +284,7 @@ glabel func_8004DBD8 # 1
 /* 04D8A4 8004DCF4 02408825 */  move        $s1, $s2
 /* 04D8A8 8004DCF8 8E020050 */  lw          $v0, 0x50($s0)
 /* 04D8AC 8004DCFC 0052082A */  slt         $at, $v0, $s2
-/* 04D8B0 8004DD00 10200003 */  beq         $at, $zero, .L8004DD10
+/* 04D8B0 8004DD00 10200003 */  beqz        $at, .L8004DD10
 /* 04D8B4 8004DD04 00000000 */   nop
 /* 04D8B8 8004DD08 10000001 */  b           .L8004DD10
 /* 04D8BC 8004DD0C 00408825 */   move       $s1, $v0
@@ -328,7 +328,7 @@ glabel func_8004DD8C # 2
 /* 04D940 8004DD90 8C42D9C4 */  lw          $v0, %lo(D_8009D9C4)($v0)
 /* 04D944 8004DD94 00001825 */  move        $v1, $zero
 /* 04D948 8004DD98 8C440038 */  lw          $a0, 0x38($v0)
-/* 04D94C 8004DD9C 10800005 */  beq         $a0, $zero, .L8004DDB4
+/* 04D94C 8004DD9C 10800005 */  beqz        $a0, .L8004DDB4
 /* 04D950 8004DDA0 00000000 */   nop
 /* 04D954 8004DDA4 8C8E0000 */  lw          $t6, 0x0($a0)
 /* 04D958 8004DDA8 00801825 */  move        $v1, $a0
@@ -368,7 +368,7 @@ glabel func_8004DDDC # 4
 /* 04D9C8 8004DE18 24A50010 */   addiu      $a1, $a1, 0x10
 /* 04D9CC 8004DE1C 8E2F0000 */  lw          $t7, 0x0($s1)
 /* 04D9D0 8004DE20 8DF00020 */  lw          $s0, 0x20($t7)
-/* 04D9D4 8004DE24 1600FFF7 */  bne         $s0, $zero, .L8004DE04
+/* 04D9D4 8004DE24 1600FFF7 */  bnez        $s0, .L8004DE04
 /* 04D9D8 8004DE28 00000000 */   nop
 /* 04D9DC 8004DE2C 8FBF001C */  lw          $ra, 0x1c($sp)
 .L8004DE30:

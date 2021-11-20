@@ -20,7 +20,7 @@ glabel __osResetGlobalIntMask # 0
 /* 05E48C 8005E8DC 8DCEDC80 */  lw          $t6, %lo(__OSGlobalIntMask)($t6)
 /* 05E490 8005E8E0 2401FBFE */  addiu       $at, $zero, -0x402
 /* 05E494 8005E8E4 01E1C024 */  and         $t8, $t7, $at
-/* 05E498 8005E8E8 0300C827 */  nor         $t9, $t8, $zero
+/* 05E498 8005E8E8 0300C827 */  not         $t9, $t8
 /* 05E49C 8005E8EC 00408025 */  move        $s0, $v0
 /* 05E4A0 8005E8F0 3C01800A */  lui         $at, %hi(__OSGlobalIntMask)
 /* 05E4A4 8005E8F4 01D94024 */  and         $t0, $t6, $t9

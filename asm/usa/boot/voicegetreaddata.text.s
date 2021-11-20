@@ -34,13 +34,13 @@ glabel osVoiceGetReadData # 0
 /* 054870 80054CC0 8E450004 */  lw          $a1, 0x4($s2)
 /* 054874 80054CC4 0C01558C */  jal         __osVoiceGetStatus
 /* 054878 80054CC8 27A6005F */   addiu      $a2, $sp, 0x5f
-/* 05487C 80054CCC 10400003 */  beq         $v0, $zero, .L80054CDC
+/* 05487C 80054CCC 10400003 */  beqz        $v0, .L80054CDC
 /* 054880 80054CD0 93AE005F */   lbu        $t6, 0x5f($sp)
 /* 054884 80054CD4 100000D3 */  b           .L80055024
 /* 054888 80054CD8 8FBF0024 */   lw         $ra, 0x24($sp)
 .L80054CDC:
 /* 05488C 80054CDC 31CF0001 */  andi        $t7, $t6, 0x1
-/* 054890 80054CE0 11E00003 */  beq         $t7, $zero, .L80054CF0
+/* 054890 80054CE0 11E00003 */  beqz        $t7, .L80054CF0
 /* 054894 80054CE4 27A70038 */   addiu      $a3, $sp, 0x38
 /* 054898 80054CE8 100000CD */  b           .L80055020
 /* 05489C 80054CEC 2402000C */   addiu      $v0, $zero, 0xc
@@ -49,7 +49,7 @@ glabel osVoiceGetReadData # 0
 /* 0548A4 80054CF4 8E450004 */  lw          $a1, 0x4($s2)
 /* 0548A8 80054CF8 0C015644 */  jal         __osVoiceContRead2
 /* 0548AC 80054CFC 00003025 */   move       $a2, $zero
-/* 0548B0 80054D00 10400003 */  beq         $v0, $zero, .L80054D10
+/* 0548B0 80054D00 10400003 */  beqz        $v0, .L80054D10
 /* 0548B4 80054D04 93B80038 */   lbu        $t8, 0x38($sp)
 /* 0548B8 80054D08 100000C6 */  b           .L80055024
 /* 0548BC 80054D0C 8FBF0024 */   lw         $ra, 0x24($sp)
@@ -57,7 +57,7 @@ glabel osVoiceGetReadData # 0
 /* 0548C0 80054D10 33190007 */  andi        $t9, $t8, 0x7
 /* 0548C4 80054D14 A259000C */  sb          $t9, 0xc($s2)
 /* 0548C8 80054D18 3C018010 */  lui         $at, %hi(D_80100300)
-/* 0548CC 80054D1C 13200006 */  beq         $t9, $zero, .L80054D38
+/* 0548CC 80054D1C 13200006 */  beqz        $t9, .L80054D38
 /* 0548D0 80054D20 A0390300 */   sb         $t9, %lo(D_80100300)($at)
 /* 0548D4 80054D24 24010007 */  addiu       $at, $zero, 0x7
 /* 0548D8 80054D28 53210004 */  beql        $t9, $at, .L80054D3C
@@ -73,13 +73,13 @@ glabel osVoiceGetReadData # 0
 /* 0548F8 80054D48 8E450004 */  lw          $a1, 0x4($s2)
 /* 0548FC 80054D4C 0C01558C */  jal         __osVoiceGetStatus
 /* 054900 80054D50 27A6005F */   addiu      $a2, $sp, 0x5f
-/* 054904 80054D54 10400003 */  beq         $v0, $zero, .L80054D64
+/* 054904 80054D54 10400003 */  beqz        $v0, .L80054D64
 /* 054908 80054D58 93AA005F */   lbu        $t2, 0x5f($sp)
 /* 05490C 80054D5C 100000B1 */  b           .L80055024
 /* 054910 80054D60 8FBF0024 */   lw         $ra, 0x24($sp)
 .L80054D64:
 /* 054914 80054D64 314B0002 */  andi        $t3, $t2, 0x2
-/* 054918 80054D68 11600003 */  beq         $t3, $zero, .L80054D78
+/* 054918 80054D68 11600003 */  beqz        $t3, .L80054D78
 /* 05491C 80054D6C 240C0600 */   addiu      $t4, $zero, 0x600
 /* 054920 80054D70 100000AB */  b           .L80055020
 /* 054924 80054D74 2402000F */   addiu      $v0, $zero, 0xf
@@ -103,13 +103,13 @@ glabel osVoiceGetReadData # 0
 /* 054960 80054DB0 8E450004 */  lw          $a1, 0x4($s2)
 /* 054964 80054DB4 0C01558C */  jal         __osVoiceGetStatus
 /* 054968 80054DB8 27A6005F */   addiu      $a2, $sp, 0x5f
-/* 05496C 80054DBC 10400003 */  beq         $v0, $zero, .L80054DCC
+/* 05496C 80054DBC 10400003 */  beqz        $v0, .L80054DCC
 /* 054970 80054DC0 93AE005F */   lbu        $t6, 0x5f($sp)
 /* 054974 80054DC4 10000097 */  b           .L80055024
 /* 054978 80054DC8 8FBF0024 */   lw         $ra, 0x24($sp)
 .L80054DCC:
 /* 05497C 80054DCC 31CF0001 */  andi        $t7, $t6, 0x1
-/* 054980 80054DD0 11E00003 */  beq         $t7, $zero, .L80054DE0
+/* 054980 80054DD0 11E00003 */  beqz        $t7, .L80054DE0
 /* 054984 80054DD4 00003025 */   move       $a2, $zero
 /* 054988 80054DD8 10000091 */  b           .L80055020
 /* 05498C 80054DDC 2402000F */   addiu      $v0, $zero, 0xf
@@ -118,7 +118,7 @@ glabel osVoiceGetReadData # 0
 /* 054994 80054DE4 8E450004 */  lw          $a1, 0x4($s2)
 /* 054998 80054DE8 0C016AB8 */  jal         __osVoiceContRead36
 /* 05499C 80054DEC 02003825 */   move       $a3, $s0
-/* 0549A0 80054DF0 10400003 */  beq         $v0, $zero, .L80054E00
+/* 0549A0 80054DF0 10400003 */  beqz        $v0, .L80054E00
 /* 0549A4 80054DF4 00404025 */   move       $t0, $v0
 /* 0549A8 80054DF8 1000008A */  b           .L80055024
 /* 0549AC 80054DFC 8FBF0024 */   lw         $ra, 0x24($sp)
@@ -219,10 +219,10 @@ glabel osVoiceGetReadData # 0
 .L80054F74:
 /* 054B24 80054F74 90630300 */  lbu         $v1, %lo(D_80100300)($v1)
 /* 054B28 80054F78 314B0007 */  andi        $t3, $t2, 0x7
-/* 054B2C 80054F7C 10600026 */  beq         $v1, $zero, .L80055018
+/* 054B2C 80054F7C 10600026 */  beqz        $v1, .L80055018
 /* 054B30 80054F80 A24B000C */   sb         $t3, 0xc($s2)
 /* 054B34 80054F84 316C00FF */  andi        $t4, $t3, 0xff
-/* 054B38 80054F88 11800023 */  beq         $t4, $zero, .L80055018
+/* 054B38 80054F88 11800023 */  beqz        $t4, .L80055018
 /* 054B3C 80054F8C 240D0004 */   addiu      $t5, $zero, 0x4
 .L80054F90:
 /* 054B40 80054F90 27B00038 */  addiu       $s0, $sp, 0x38
@@ -231,13 +231,13 @@ glabel osVoiceGetReadData # 0
 /* 054B4C 80054F9C 8E450004 */  lw          $a1, 0x4($s2)
 /* 054B50 80054FA0 0C01558C */  jal         __osVoiceGetStatus
 /* 054B54 80054FA4 27A6005F */   addiu      $a2, $sp, 0x5f
-/* 054B58 80054FA8 10400003 */  beq         $v0, $zero, .L80054FB8
+/* 054B58 80054FA8 10400003 */  beqz        $v0, .L80054FB8
 /* 054B5C 80054FAC 93AE005F */   lbu        $t6, 0x5f($sp)
 /* 054B60 80054FB0 1000001C */  b           .L80055024
 /* 054B64 80054FB4 8FBF0024 */   lw         $ra, 0x24($sp)
 .L80054FB8:
 /* 054B68 80054FB8 31CF0001 */  andi        $t7, $t6, 0x1
-/* 054B6C 80054FBC 11E00003 */  beq         $t7, $zero, .L80054FCC
+/* 054B6C 80054FBC 11E00003 */  beqz        $t7, .L80054FCC
 /* 054B70 80054FC0 00003025 */   move       $a2, $zero
 /* 054B74 80054FC4 10000016 */  b           .L80055020
 /* 054B78 80054FC8 2402000F */   addiu      $v0, $zero, 0xf
@@ -246,7 +246,7 @@ glabel osVoiceGetReadData # 0
 /* 054B80 80054FD0 8E450004 */  lw          $a1, 0x4($s2)
 /* 054B84 80054FD4 0C015644 */  jal         __osVoiceContRead2
 /* 054B88 80054FD8 02003825 */   move       $a3, $s0
-/* 054B8C 80054FDC 10400003 */  beq         $v0, $zero, .L80054FEC
+/* 054B8C 80054FDC 10400003 */  beqz        $v0, .L80054FEC
 /* 054B90 80054FE0 00404025 */   move       $t0, $v0
 /* 054B94 80054FE4 1000000F */  b           .L80055024
 /* 054B98 80054FE8 8FBF0024 */   lw         $ra, 0x24($sp)

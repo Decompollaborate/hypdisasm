@@ -53,7 +53,7 @@ glabel __osVoiceContWrite20 # 0
 /* 055A68 80055EB8 1A200010 */  blez        $s1, .L80055EFC
 /* 055A6C 80055EBC 00001025 */   move       $v0, $zero
 /* 055A70 80055EC0 32240003 */  andi        $a0, $s1, 0x3
-/* 055A74 80055EC4 10800006 */  beq         $a0, $zero, .L80055EE0
+/* 055A74 80055EC4 10800006 */  beqz        $a0, .L80055EE0
 /* 055A78 80055EC8 00801825 */   move       $v1, $a0
 .L80055ECC:
 /* 055A7C 80055ECC 24420001 */  addiu       $v0, $v0, 0x1
@@ -129,7 +129,7 @@ glabel __osVoiceContWrite20 # 0
 /* 055B84 80055FD4 24010004 */   addiu      $at, $zero, 0x4
 /* 055B88 80055FD8 0C01558C */  jal         __osVoiceGetStatus
 /* 055B8C 80055FDC 27A6006B */   addiu      $a2, $sp, 0x6b
-/* 055B90 80055FE0 14400009 */  bne         $v0, $zero, .L80056008
+/* 055B90 80055FE0 14400009 */  bnez        $v0, .L80056008
 /* 055B94 80055FE4 00401825 */   move       $v1, $v0
 /* 055B98 80055FE8 10000002 */  b           .L80055FF4
 /* 055B9C 80055FEC 24030004 */   addiu      $v1, $zero, 0x4
@@ -139,7 +139,7 @@ glabel __osVoiceContWrite20 # 0
 .L80055FF8:
 /* 055BA8 80055FF8 14610003 */  bne         $v1, $at, .L80056008
 /* 055BAC 80055FFC 2A820000 */   slti       $v0, $s4, 0x0
-/* 055BB0 80056000 1040FFA3 */  beq         $v0, $zero, .L80055E90
+/* 055BB0 80056000 1040FFA3 */  beqz        $v0, .L80055E90
 /* 055BB4 80056004 2694FFFF */   addiu      $s4, $s4, -0x1
 .L80056008:
 /* 055BB8 80056008 0C01610D */  jal         __osSiRelAccess

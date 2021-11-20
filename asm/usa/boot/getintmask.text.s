@@ -21,7 +21,7 @@ glabel osGetIntMask # 0
 /* 054D30 80055180 00481025 */  or          $v0, $v0, $t0
 /* 054D34 80055184 3C09A430 */  lui         $t1, %hi(D_A430000C)
 /* 054D38 80055188 8D29000C */  lw          $t1, %lo(D_A430000C)($t1)
-/* 054D3C 8005518C 11200008 */  beq         $t1, $zero, .L800551B0
+/* 054D3C 8005518C 11200008 */  beqz        $t1, .L800551B0
 /* 054D40 80055190 3C08800A */   lui        $t0, %hi(__OSGlobalIntMask)
 /* 054D44 80055194 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 054D48 80055198 8D080000 */  lw          $t0, 0x0($t0)

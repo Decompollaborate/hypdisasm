@@ -18,7 +18,7 @@ glabel osSetThreadPri # 0
 /* 050904 80050D54 AFB00018 */   sw         $s0, 0x18($sp)
 /* 050908 80050D58 8FAE0028 */  lw          $t6, 0x28($sp)
 /* 05090C 80050D5C 00408025 */  move        $s0, $v0
-/* 050910 80050D60 15C00004 */  bne         $t6, $zero, .L80050D74
+/* 050910 80050D60 15C00004 */  bnez        $t6, .L80050D74
 /* 050914 80050D64 00000000 */   nop
 /* 050918 80050D68 3C0F800A */  lui         $t7, %hi(__osRunningThread)
 /* 05091C 80050D6C 8DEFF8A0 */  lw          $t7, %lo(__osRunningThread)($t7)
@@ -54,7 +54,7 @@ glabel osSetThreadPri # 0
 /* 05098C 80050DDC 8DF90004 */  lw          $t9, 0x4($t7)
 /* 050990 80050DE0 8DAE0004 */  lw          $t6, 0x4($t5)
 /* 050994 80050DE4 01D9082A */  slt         $at, $t6, $t9
-/* 050998 80050DE8 10200006 */  beq         $at, $zero, .L80050E04
+/* 050998 80050DE8 10200006 */  beqz        $at, .L80050E04
 /* 05099C 80050DEC 00000000 */   nop
 /* 0509A0 80050DF0 24080002 */  addiu       $t0, $zero, 0x2
 /* 0509A4 80050DF4 3C04800A */  lui         $a0, %hi(__osRunQueue)

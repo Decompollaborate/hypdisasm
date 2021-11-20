@@ -52,7 +52,7 @@ glabel func_8005D220 # 0
 /* 05CE68 8005D2B8 26100001 */  addiu       $s0, $s0, 0x1
 /* 05CE6C 8005D2BC 26310004 */  addiu       $s1, $s1, 0x4
 /* 05CE70 8005D2C0 0208082A */  slt         $at, $s0, $t0
-/* 05CE74 8005D2C4 1420FFF3 */  bne         $at, $zero, .L8005D294
+/* 05CE74 8005D2C4 1420FFF3 */  bnez        $at, .L8005D294
 /* 05CE78 8005D2C8 00409025 */   move       $s2, $v0
 .L8005D2CC:
 /* 05CE7C 8005D2CC 8FBF003C */  lw          $ra, 0x3c($sp)

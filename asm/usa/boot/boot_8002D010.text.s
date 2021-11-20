@@ -25,10 +25,10 @@ glabel func_8002D010 # 0
 /* 02CBF0 8002D040 8FA60018 */  lw          $a2, 0x18($sp)
 /* 02CBF4 8002D044 8FAA001C */  lw          $t2, 0x1c($sp)
 /* 02CBF8 8002D048 00404825 */  move        $t1, $v0
-/* 02CBFC 8002D04C 11000028 */  beq         $t0, $zero, .L8002D0F0
+/* 02CBFC 8002D04C 11000028 */  beqz        $t0, .L8002D0F0
 /* 02CC00 8002D050 00002825 */   move       $a1, $zero
 /* 02CC04 8002D054 31030003 */  andi        $v1, $t0, 0x3
-/* 02CC08 8002D058 1060000E */  beq         $v1, $zero, .L8002D094
+/* 02CC08 8002D058 1060000E */  beqz        $v1, .L8002D094
 /* 02CC0C 8002D05C 8FAF0028 */   lw         $t7, 0x28($sp)
 /* 02CC10 8002D060 000070C0 */  sll         $t6, $zero, 3
 /* 02CC14 8002D064 01CFC021 */  addu        $t8, $t6, $t7

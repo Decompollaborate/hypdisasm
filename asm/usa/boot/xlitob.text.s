@@ -65,17 +65,17 @@ glabel _Litob # 0
 /* 05D778 8005DBC8 8FAA0060 */   lw         $t2, 0x60($sp)
 .L8005DBCC:
 /* 05D77C 8005DBCC 8FAF0064 */  lw          $t7, 0x64($sp)
-/* 05D780 8005DBD0 01C0C027 */  nor         $t8, $t6, $zero
+/* 05D780 8005DBD0 01C0C027 */  not         $t8, $t6
 /* 05D784 8005DBD4 2DE10001 */  sltiu       $at, $t7, 0x1
 /* 05D788 8005DBD8 0301C021 */  addu        $t8, $t8, $at
-/* 05D78C 8005DBDC 000FC823 */  subu        $t9, $zero, $t7
+/* 05D78C 8005DBDC 000FC823 */  negu        $t9, $t7
 /* 05D790 8005DBE0 AFB90064 */  sw          $t9, 0x64($sp)
 /* 05D794 8005DBE4 AFB80060 */  sw          $t8, 0x60($sp)
 /* 05D798 8005DBE8 8FAA0060 */  lw          $t2, 0x60($sp)
 .L8005DBEC:
 /* 05D79C 8005DBEC 8FAB0064 */  lw          $t3, 0x64($sp)
 /* 05D7A0 8005DBF0 24080017 */  addiu       $t0, $zero, 0x17
-/* 05D7A4 8005DBF4 15400006 */  bne         $t2, $zero, .L8005DC10
+/* 05D7A4 8005DBF4 15400006 */  bnez        $t2, .L8005DC10
 /* 05D7A8 8005DBF8 8FA40060 */   lw         $a0, 0x60($sp)
 /* 05D7AC 8005DBFC 55600005 */  bnel        $t3, $zero, .L8005DC14
 /* 05D7B0 8005DC00 24100017 */   addiu      $s0, $zero, 0x17
@@ -166,7 +166,7 @@ glabel _Litob # 0
 /* 05D8E4 8005DD34 8E250014 */  lw          $a1, 0x14($s1)
 /* 05D8E8 8005DD38 8E240024 */  lw          $a0, 0x24($s1)
 /* 05D8EC 8005DD3C 00A4082A */  slt         $at, $a1, $a0
-/* 05D8F0 8005DD40 10200002 */  beq         $at, $zero, .L8005DD4C
+/* 05D8F0 8005DD40 10200002 */  beqz        $at, .L8005DD4C
 /* 05D8F4 8005DD44 00856823 */   subu       $t5, $a0, $a1
 /* 05D8F8 8005DD48 AE2D0010 */  sw          $t5, 0x10($s1)
 .L8005DD4C:

@@ -42,7 +42,7 @@ glabel func_8004F6A0 # 0
 /* 04F2C4 8004F714 2673DC48 */  addiu       $s3, $s3, %lo(D_8009DC48)
 /* 04F2C8 8004F718 25F8FFFF */  addiu       $t8, $t7, -0x1
 /* 04F2CC 8004F71C 2F010006 */  sltiu       $at, $t8, 0x6
-/* 04F2D0 8004F720 10200017 */  beq         $at, $zero, .L8004F780
+/* 04F2D0 8004F720 10200017 */  beqz        $at, .L8004F780
 /* 04F2D4 8004F724 0018C080 */   sll        $t8, $t8, 2
 /* 04F2D8 8004F728 3C01800A */  lui         $at, %hi(jtbl_800A7CE0)
 /* 04F2DC 8004F72C 00380821 */  addu        $at, $at, $t8
@@ -96,7 +96,7 @@ glabel L8004F778
 /* 04F380 8004F7D0 8EAB001C */  lw          $t3, 0x1c($s5)
 /* 04F384 8004F7D4 AEA20014 */  sw          $v0, 0x14($s5)
 /* 04F388 8004F7D8 AEA20018 */  sw          $v0, 0x18($s5)
-/* 04F38C 8004F7DC 1160000C */  beq         $t3, $zero, .L8004F810
+/* 04F38C 8004F7DC 1160000C */  beqz        $t3, .L8004F810
 /* 04F390 8004F7E0 00001825 */   move       $v1, $zero
 /* 04F394 8004F7E4 8EAC0014 */  lw          $t4, 0x14($s5)
 .L8004F7E8:
@@ -163,7 +163,7 @@ glabel L8004F778
 /* 04F480 8004F8D0 8D620000 */  lw          $v0, 0x0($t3)
 /* 04F484 8004F8D4 01208825 */  move        $s1, $t1
 /* 04F488 8004F8D8 0220C825 */  move        $t9, $s1
-/* 04F48C 8004F8DC 10400040 */  beq         $v0, $zero, .L8004F9E0
+/* 04F48C 8004F8DC 10400040 */  beqz        $v0, .L8004F9E0
 /* 04F490 8004F8E0 27310002 */   addiu      $s1, $t9, 0x2
 /* 04F494 8004F8E4 44822000 */  mtc1        $v0, $f4
 /* 04F498 8004F8E8 8FAC006C */  lw          $t4, 0x6c($sp)
@@ -239,7 +239,7 @@ glabel L8004F778
 /* 04F5A4 8004F9F4 8E4A0000 */  lw          $t2, 0x0($s2)
 /* 04F5A8 8004F9F8 00002025 */  move        $a0, $zero
 /* 04F5AC 8004F9FC 00002825 */  move        $a1, $zero
-/* 04F5B0 8004FA00 11400019 */  beq         $t2, $zero, .L8004FA68
+/* 04F5B0 8004FA00 11400019 */  beqz        $t2, .L8004FA68
 /* 04F5B4 8004FA04 02C03025 */   move       $a2, $s6
 /* 04F5B8 8004FA08 240B0030 */  addiu       $t3, $zero, 0x30
 /* 04F5BC 8004FA0C AFAB0010 */  sw          $t3, 0x10($sp)
@@ -275,7 +275,7 @@ glabel L8004F778
 /* 04F62C 8004FA7C 26940001 */  addiu       $s4, $s4, 0x1
 /* 04F630 8004FA80 3288FFFF */  andi        $t0, $s4, 0xffff
 /* 04F634 8004FA84 0109082A */  slt         $at, $t0, $t1
-/* 04F638 8004FA88 1420FF6D */  bne         $at, $zero, .L8004F840
+/* 04F638 8004FA88 1420FF6D */  bnez        $at, .L8004F840
 /* 04F63C 8004FA8C 0100A025 */   move       $s4, $t0
 .L8004FA90:
 /* 04F640 8004FA90 8FBF0064 */  lw          $ra, 0x64($sp)

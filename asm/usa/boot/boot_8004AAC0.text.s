@@ -29,7 +29,7 @@ glabel func_8004AAC0 # 0
 glabel func_8004AAFC # 1
 /* 04A6AC 8004AAFC 34018800 */  ori         $at, $zero, 0x8800
 /* 04A6B0 8004AB00 0081082A */  slt         $at, $a0, $at
-/* 04A6B4 8004AB04 14200010 */  bne         $at, $zero, .L8004AB48
+/* 04A6B4 8004AB04 14200010 */  bnez        $at, .L8004AB48
 /* 04A6B8 8004AB08 240600BC */   addiu      $a2, $zero, 0xbc
 /* 04A6BC 8004AB0C 00042A02 */  srl         $a1, $a0, 8
 /* 04A6C0 8004AB10 20A5FF78 */  addi        $a1, $a1, -0x88

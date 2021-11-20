@@ -47,7 +47,7 @@ glabel __osDevMgrMain # 0
 /* 059F10 8005A360 8C820014 */  lw          $v0, 0x14($a0)
 /* 059F14 8005A364 24010001 */  addiu       $at, $zero, 0x1
 /* 059F18 8005A368 24900014 */  addiu       $s0, $a0, 0x14
-/* 059F1C 8005A36C 10400003 */  beq         $v0, $zero, .L8005A37C
+/* 059F1C 8005A36C 10400003 */  beqz        $v0, .L8005A37C
 /* 059F20 8005A370 27A5006C */   addiu      $a1, $sp, 0x6c
 /* 059F24 8005A374 54410076 */  bnel        $v0, $at, .L8005A550
 /* 059F28 8005A378 95090000 */   lhu        $t1, 0x0($t0)
@@ -75,7 +75,7 @@ glabel __osDevMgrMain # 0
 /* 059F78 8005A3C8 8FAC0074 */   lw         $t4, 0x74($sp)
 /* 059F7C 8005A3CC 8D8D0014 */  lw          $t5, 0x14($t4)
 /* 059F80 8005A3D0 8DAE0014 */  lw          $t6, 0x14($t5)
-/* 059F84 8005A3D4 15C00003 */  bne         $t6, $zero, .L8005A3E4
+/* 059F84 8005A3D4 15C00003 */  bnez        $t6, .L8005A3E4
 /* 059F88 8005A3D8 00000000 */   nop
 /* 059F8C 8005A3DC 10000001 */  b           .L8005A3E4
 /* 059F90 8005A3E0 02E09025 */   move       $s2, $s7
@@ -179,7 +179,7 @@ glabel __osDevMgrMain # 0
 .L8005A550:
 /* 05A100 8005A550 252AFFF6 */  addiu       $t2, $t1, -0xa
 /* 05A104 8005A554 2D410007 */  sltiu       $at, $t2, 0x7
-/* 05A108 8005A558 10200047 */  beq         $at, $zero, L8005A678
+/* 05A108 8005A558 10200047 */  beqz        $at, L8005A678
 /* 05A10C 8005A55C 000A5080 */   sll        $t2, $t2, 2
 /* 05A110 8005A560 3C01800B */  lui         $at, %hi(jtbl_800A8010)
 /* 05A114 8005A564 002A0821 */  addu        $at, $at, $t2
@@ -259,7 +259,7 @@ glabel L8005A65C
 glabel L8005A678
 /* 05A228 8005A678 2410FFFF */  addiu       $s0, $zero, -0x1
 .L8005A67C:
-/* 05A22C 8005A67C 1600FF2B */  bne         $s0, $zero, .L8005A32C
+/* 05A22C 8005A67C 1600FF2B */  bnez        $s0, .L8005A32C
 /* 05A230 8005A680 02C02825 */   move       $a1, $s6
 /* 05A234 8005A684 8E84000C */  lw          $a0, 0xc($s4)
 /* 05A238 8005A688 0C014554 */  jal         osRecvMesg

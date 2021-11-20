@@ -68,7 +68,7 @@ glabel func_8005D330 # 0
 /* 05CFB8 8005D408 26100001 */  addiu       $s0, $s0, 0x1
 /* 05CFBC 8005D40C 26310004 */  addiu       $s1, $s1, 0x4
 /* 05CFC0 8005D410 020B082A */  slt         $at, $s0, $t3
-/* 05CFC4 8005D414 1420FFE8 */  bne         $at, $zero, .L8005D3B8
+/* 05CFC4 8005D414 1420FFE8 */  bnez        $at, .L8005D3B8
 /* 05CFC8 8005D418 24530018 */   addiu      $s3, $v0, 0x18
 .L8005D41C:
 /* 05CFCC 8005D41C 8FBF0044 */  lw          $ra, 0x44($sp)

@@ -19,7 +19,7 @@ glabel osDestroyThread # 0
 /* 05D138 8005D588 AFB00018 */   sw         $s0, 0x18($sp)
 /* 05D13C 8005D58C 8FAE0038 */  lw          $t6, 0x38($sp)
 /* 05D140 8005D590 00408025 */  move        $s0, $v0
-/* 05D144 8005D594 15C00005 */  bne         $t6, $zero, .L8005D5AC
+/* 05D144 8005D594 15C00005 */  bnez        $t6, .L8005D5AC
 /* 05D148 8005D598 00000000 */   nop
 /* 05D14C 8005D59C 3C0F800A */  lui         $t7, %hi(__osRunningThread)
 /* 05D150 8005D5A0 8DEFF8A0 */  lw          $t7, %lo(__osRunningThread)($t7)

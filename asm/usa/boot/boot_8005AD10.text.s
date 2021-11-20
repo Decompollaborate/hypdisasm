@@ -69,12 +69,12 @@ glabel func_8005AD10 # 0
 /* 05A998 8005ADE8 26100001 */  addiu       $s0, $s0, 0x1
 .L8005ADEC:
 /* 05A99C 8005ADEC 0203082A */  slt         $at, $s0, $v1
-/* 05A9A0 8005ADF0 1420FFF7 */  bne         $at, $zero, .L8005ADD0
+/* 05A9A0 8005ADF0 1420FFF7 */  bnez        $at, .L8005ADD0
 /* 05A9A4 8005ADF4 24420004 */   addiu      $v0, $v0, 0x4
 .L8005ADF8:
 /* 05A9A8 8005ADF8 02031026 */  xor         $v0, $s0, $v1
 .L8005ADFC:
-/* 05A9AC 8005ADFC 14400002 */  bne         $v0, $zero, .L8005AE08
+/* 05A9AC 8005ADFC 14400002 */  bnez        $v0, .L8005AE08
 /* 05A9B0 8005AE00 00008025 */   move       $s0, $zero
 /* 05A9B4 8005AE04 00008825 */  move        $s1, $zero
 .L8005AE08:
@@ -98,7 +98,7 @@ glabel func_8005AD10 # 0
 /* 05A9F8 8005AE48 26100001 */  addiu       $s0, $s0, 0x1
 .L8005AE4C:
 /* 05A9FC 8005AE4C 0203082A */  slt         $at, $s0, $v1
-/* 05AA00 8005AE50 1420FFF1 */  bne         $at, $zero, .L8005AE18
+/* 05AA00 8005AE50 1420FFF1 */  bnez        $at, .L8005AE18
 /* 05AA04 8005AE54 24420004 */   addiu      $v0, $v0, 0x4
 .L8005AE58:
 /* 05AA08 8005AE58 0C01610D */  jal         __osSiRelAccess
@@ -190,7 +190,7 @@ glabel func_8005AF50 # 2
 /* 05AB44 8005AF94 332900C0 */  andi        $t1, $t9, 0xc0
 /* 05AB48 8005AF98 00095103 */  sra         $t2, $t1, 4
 /* 05AB4C 8005AF9C 314B00FF */  andi        $t3, $t2, 0xff
-/* 05AB50 8005AFA0 1560000D */  bne         $t3, $zero, .L8005AFD8
+/* 05AB50 8005AFA0 1560000D */  bnez        $t3, .L8005AFD8
 /* 05AB54 8005AFA4 A0AA0003 */   sb         $t2, 0x3($a1)
 /* 05AB58 8005AFA8 93AC0011 */  lbu         $t4, 0x11($sp)
 /* 05AB5C 8005AFAC 93AE0010 */  lbu         $t6, 0x10($sp)
@@ -209,7 +209,7 @@ glabel func_8005AF50 # 2
 /* 05AB8C 8005AFDC 24C60001 */  addiu       $a2, $a2, 0x1
 /* 05AB90 8005AFE0 24630008 */  addiu       $v1, $v1, 0x8
 /* 05AB94 8005AFE4 00CB082A */  slt         $at, $a2, $t3
-/* 05AB98 8005AFE8 1420FFE3 */  bne         $at, $zero, .L8005AF78
+/* 05AB98 8005AFE8 1420FFE3 */  bnez        $at, .L8005AF78
 /* 05AB9C 8005AFEC 24A50004 */   addiu      $a1, $a1, 0x4
 .L8005AFF0:
 /* 05ABA0 8005AFF0 A0820000 */  sb          $v0, 0x0($a0)

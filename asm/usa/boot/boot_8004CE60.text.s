@@ -35,7 +35,7 @@ glabel func_8004CE98 # 1
 /* 04CA58 8004CEA8 01C27824 */  and         $t7, $t6, $v0
 /* 04CA5C 8004CEAC 144F0007 */  bne         $v0, $t7, .L8004CECC
 /* 04CA60 8004CEB0 000EC300 */   sll        $t8, $t6, 12
-/* 04CA64 8004CEB4 17000003 */  bne         $t8, $zero, .L8004CEC4
+/* 04CA64 8004CEB4 17000003 */  bnez        $t8, .L8004CEC4
 /* 04CA68 8004CEB8 8FB90004 */   lw         $t9, 0x4($sp)
 /* 04CA6C 8004CEBC 53200004 */  beql        $t9, $zero, .L8004CED0
 /* 04CA70 8004CEC0 00001025 */   move       $v0, $zero
@@ -74,7 +74,7 @@ glabel func_8004CF10 # 3
 /* 04CAD0 8004CF20 01C27824 */  and         $t7, $t6, $v0
 /* 04CAD4 8004CF24 144F0007 */  bne         $v0, $t7, .L8004CF44
 /* 04CAD8 8004CF28 000EC300 */   sll        $t8, $t6, 12
-/* 04CADC 8004CF2C 17000005 */  bne         $t8, $zero, .L8004CF44
+/* 04CADC 8004CF2C 17000005 */  bnez        $t8, .L8004CF44
 /* 04CAE0 8004CF30 8FB90004 */   lw         $t9, 0x4($sp)
 /* 04CAE4 8004CF34 57200004 */  bnel        $t9, $zero, .L8004CF48
 /* 04CAE8 8004CF38 00001025 */   move       $v0, $zero
@@ -93,9 +93,9 @@ glabel func_8004CF50 # 4
 /* 04CB0C 8004CF5C 3C017F80 */  lui         $at, 0x7f80
 /* 04CB10 8004CF60 00001025 */  move        $v0, $zero
 /* 04CB14 8004CF64 01C17824 */  and         $t7, $t6, $at
-/* 04CB18 8004CF68 15E00005 */  bne         $t7, $zero, .L8004CF80
+/* 04CB18 8004CF68 15E00005 */  bnez        $t7, .L8004CF80
 /* 04CB1C 8004CF6C 000EC240 */   sll        $t8, $t6, 9
-/* 04CB20 8004CF70 13000003 */  beq         $t8, $zero, .L8004CF80
+/* 04CB20 8004CF70 13000003 */  beqz        $t8, .L8004CF80
 /* 04CB24 8004CF74 00000000 */   nop
 /* 04CB28 8004CF78 10000001 */  b           .L8004CF80
 /* 04CB2C 8004CF7C 24020001 */   addiu      $v0, $zero, 0x1
@@ -110,11 +110,11 @@ glabel func_8004CF88 # 5
 /* 04CB44 8004CF94 3C017FF0 */  lui         $at, 0x7ff0
 /* 04CB48 8004CF98 00001025 */  move        $v0, $zero
 /* 04CB4C 8004CF9C 01C17824 */  and         $t7, $t6, $at
-/* 04CB50 8004CFA0 15E00007 */  bne         $t7, $zero, .L8004CFC0
+/* 04CB50 8004CFA0 15E00007 */  bnez        $t7, .L8004CFC0
 /* 04CB54 8004CFA4 000EC300 */   sll        $t8, $t6, 12
-/* 04CB58 8004CFA8 17000003 */  bne         $t8, $zero, .L8004CFB8
+/* 04CB58 8004CFA8 17000003 */  bnez        $t8, .L8004CFB8
 /* 04CB5C 8004CFAC 8FB90004 */   lw         $t9, 0x4($sp)
-/* 04CB60 8004CFB0 13200003 */  beq         $t9, $zero, .L8004CFC0
+/* 04CB60 8004CFB0 13200003 */  beqz        $t9, .L8004CFC0
 /* 04CB64 8004CFB4 00000000 */   nop
 .L8004CFB8:
 /* 04CB68 8004CFB8 10000001 */  b           .L8004CFC0
@@ -129,9 +129,9 @@ glabel func_8004CFC8 # 6
 /* 04CB80 8004CFD0 8FAE0004 */  lw          $t6, 0x4($sp)
 /* 04CB84 8004CFD4 3C027F80 */  lui         $v0, 0x7f80
 /* 04CB88 8004CFD8 000E7840 */  sll         $t7, $t6, 1
-/* 04CB8C 8004CFDC 11E00005 */  beq         $t7, $zero, .L8004CFF4
+/* 04CB8C 8004CFDC 11E00005 */  beqz        $t7, .L8004CFF4
 /* 04CB90 8004CFE0 01C2C024 */   and        $t8, $t6, $v0
-/* 04CB94 8004CFE4 13000005 */  beq         $t8, $zero, .L8004CFFC
+/* 04CB94 8004CFE4 13000005 */  beqz        $t8, .L8004CFFC
 /* 04CB98 8004CFE8 01C2C824 */   and        $t9, $t6, $v0
 /* 04CB9C 8004CFEC 50590004 */  beql        $v0, $t9, .L8004D000
 /* 04CBA0 8004CFF0 00001025 */   move       $v0, $zero
@@ -153,11 +153,11 @@ glabel func_8004D008 # 7
 /* 04CBCC 8004D01C 000E7840 */  sll         $t7, $t6, 1
 /* 04CBD0 8004D020 55E00003 */  bnel        $t7, $zero, .L8004D030
 /* 04CBD4 8004D024 3C027FF0 */   lui        $v0, 0x7ff0
-/* 04CBD8 8004D028 13000006 */  beq         $t8, $zero, .L8004D044
+/* 04CBD8 8004D028 13000006 */  beqz        $t8, .L8004D044
 /* 04CBDC 8004D02C 3C027FF0 */   lui        $v0, 0x7ff0
 .L8004D030:
 /* 04CBE0 8004D030 03224024 */  and         $t0, $t9, $v0
-/* 04CBE4 8004D034 11000005 */  beq         $t0, $zero, .L8004D04C
+/* 04CBE4 8004D034 11000005 */  beqz        $t0, .L8004D04C
 /* 04CBE8 8004D038 03224824 */   and        $t1, $t9, $v0
 /* 04CBEC 8004D03C 50490004 */  beql        $v0, $t1, .L8004D050
 /* 04CBF0 8004D040 00001025 */   move       $v0, $zero

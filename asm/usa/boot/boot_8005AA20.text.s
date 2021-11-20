@@ -17,7 +17,7 @@ glabel func_8005AA20 # 0
 /* 05A5E0 8005AA30 AFA60020 */  sw          $a2, 0x20($sp)
 /* 05A5E4 8005AA34 0C016AAC */  jal         func_8005AAB0
 /* 05A5E8 8005AA38 AFA70024 */   sw         $a3, 0x24($sp)
-/* 05A5EC 8005AA3C 10400003 */  beq         $v0, $zero, .L8005AA4C
+/* 05A5EC 8005AA3C 10400003 */  beqz        $v0, .L8005AA4C
 /* 05A5F0 8005AA40 8FAE001C */   lw         $t6, 0x1c($sp)
 /* 05A5F4 8005AA44 10000013 */  b           .L8005AA94
 /* 05A5F8 8005AA48 2402FFFF */   addiu      $v0, $zero, -0x1
@@ -31,7 +31,7 @@ glabel func_8005AA20 # 0
 /* 05A614 8005AA64 8FB90018 */  lw          $t9, 0x18($sp)
 /* 05A618 8005AA68 8FAB0024 */  lw          $t3, 0x24($sp)
 /* 05A61C 8005AA6C 00001025 */  move        $v0, $zero
-/* 05A620 8005AA70 17200006 */  bne         $t9, $zero, .L8005AA8C
+/* 05A620 8005AA70 17200006 */  bnez        $t9, .L8005AA8C
 /* 05A624 8005AA74 256CFFFF */   addiu      $t4, $t3, -0x1
 /* 05A628 8005AA78 8FA80024 */  lw          $t0, 0x24($sp)
 /* 05A62C 8005AA7C 3C0AA404 */  lui         $t2, %hi(D_A404000C)

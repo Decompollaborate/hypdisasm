@@ -10,7 +10,7 @@
 .balign 16
 
 glabel osGetThreadId # 0
-/* 053B50 80053FA0 14800003 */  bne         $a0, $zero, .L80053FB0
+/* 053B50 80053FA0 14800003 */  bnez        $a0, .L80053FB0
 /* 053B54 80053FA4 00000000 */   nop
 /* 053B58 80053FA8 3C04800A */  lui         $a0, %hi(__osRunningThread)
 /* 053B5C 80053FAC 8C84F8A0 */  lw          $a0, %lo(__osRunningThread)($a0)

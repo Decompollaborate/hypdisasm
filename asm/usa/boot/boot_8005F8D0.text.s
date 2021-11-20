@@ -13,7 +13,7 @@ glabel func_8005F8D0 # 0
 /* 05F480 8005F8D0 00A6001A */  div         $zero, $a1, $a2
 /* 05F484 8005F8D4 00001012 */  mflo        $v0
 /* 05F488 8005F8D8 27BDFFF8 */  addiu       $sp, $sp, -0x8
-/* 05F48C 8005F8DC 14C00002 */  bne         $a2, $zero, .L8005F8E8
+/* 05F48C 8005F8DC 14C00002 */  bnez        $a2, .L8005F8E8
 /* 05F490 8005F8E0 00000000 */   nop
 /* 05F494 8005F8E4 0007000D */  break       7
 .L8005F8E8:

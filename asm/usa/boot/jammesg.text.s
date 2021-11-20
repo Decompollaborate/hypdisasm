@@ -23,7 +23,7 @@ glabel osJamMesg # 0
 /* 058AC8 80058F18 8DCF0008 */  lw          $t7, 0x8($t6)
 /* 058ACC 80058F1C 8DD80010 */  lw          $t8, 0x10($t6)
 /* 058AD0 80058F20 01F8082A */  slt         $at, $t7, $t8
-/* 058AD4 80058F24 14200018 */  bne         $at, $zero, .L80058F88
+/* 058AD4 80058F24 14200018 */  bnez        $at, .L80058F88
 /* 058AD8 80058F28 00000000 */   nop
 .L80058F2C:
 /* 058ADC 80058F2C 8FB90030 */  lw          $t9, 0x30($sp)
@@ -49,7 +49,7 @@ glabel osJamMesg # 0
 /* 058B24 80058F74 8D4B0008 */  lw          $t3, 0x8($t2)
 /* 058B28 80058F78 8D4C0010 */  lw          $t4, 0x10($t2)
 /* 058B2C 80058F7C 016C082A */  slt         $at, $t3, $t4
-/* 058B30 80058F80 1020FFEA */  beq         $at, $zero, .L80058F2C
+/* 058B30 80058F80 1020FFEA */  beqz        $at, .L80058F2C
 /* 058B34 80058F84 00000000 */   nop
 .L80058F88:
 /* 058B38 80058F88 8FAD0028 */  lw          $t5, 0x28($sp)
@@ -62,7 +62,7 @@ glabel osJamMesg # 0
 /* 058B54 80058FA4 ADA8000C */  sw          $t0, 0xc($t5)
 /* 058B58 80058FA8 8FAA0028 */  lw          $t2, 0x28($sp)
 /* 058B5C 80058FAC 8FA9002C */  lw          $t1, 0x2c($sp)
-/* 058B60 80058FB0 15E00002 */  bne         $t7, $zero, .L80058FBC
+/* 058B60 80058FB0 15E00002 */  bnez        $t7, .L80058FBC
 /* 058B64 80058FB4 00000000 */   nop
 /* 058B68 80058FB8 0007000D */  break       7
 .L80058FBC:
@@ -85,7 +85,7 @@ glabel osJamMesg # 0
 /* 058BA8 80058FF8 8FAD0028 */  lw          $t5, 0x28($sp)
 /* 058BAC 80058FFC 8DAA0000 */  lw          $t2, 0x0($t5)
 /* 058BB0 80059000 8D4C0000 */  lw          $t4, 0x0($t2)
-/* 058BB4 80059004 11800006 */  beq         $t4, $zero, .L80059020
+/* 058BB4 80059004 11800006 */  beqz        $t4, .L80059020
 /* 058BB8 80059008 00000000 */   nop
 /* 058BBC 8005900C 0C015F63 */  jal         __osPopThread
 /* 058BC0 80059010 01A02025 */   move       $a0, $t5

@@ -15,7 +15,7 @@ glabel func_8005ECD0 # 0
 /* 05E888 8005ECD8 18C00018 */  blez        $a2, .L8005ED3C
 /* 05E88C 8005ECDC 00003825 */   move       $a3, $zero
 /* 05E890 8005ECE0 30C50003 */  andi        $a1, $a2, 0x3
-/* 05E894 8005ECE4 10A00009 */  beq         $a1, $zero, .L8005ED0C
+/* 05E894 8005ECE4 10A00009 */  beqz        $a1, .L8005ED0C
 /* 05E898 8005ECE8 00A02025 */   move       $a0, $a1
 .L8005ECEC:
 /* 05E89C 8005ECEC 904E0000 */  lbu         $t6, 0x0($v0)

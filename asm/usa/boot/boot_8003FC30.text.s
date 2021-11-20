@@ -250,12 +250,12 @@ glabel func_8003FF8C # 5
 /* 03FB60 8003FFB0 8FA3001C */  lw          $v1, 0x1c($sp)
 /* 03FB64 8003FFB4 8FA50024 */  lw          $a1, 0x24($sp)
 /* 03FB68 8003FFB8 8FA60018 */  lw          $a2, 0x18($sp)
-/* 03FB6C 8003FFBC 1060000F */  beq         $v1, $zero, .L8003FFFC
+/* 03FB6C 8003FFBC 1060000F */  beqz        $v1, .L8003FFFC
 /* 03FB70 8003FFC0 00402025 */   move       $a0, $v0
 .L8003FFC4:
 /* 03FB74 8003FFC4 5465000A */  bnel        $v1, $a1, .L8003FFF0
 /* 03FB78 8003FFC8 00603025 */   move       $a2, $v1
-/* 03FB7C 8003FFCC 10C00004 */  beq         $a2, $zero, .L8003FFE0
+/* 03FB7C 8003FFCC 10C00004 */  beqz        $a2, .L8003FFE0
 /* 03FB80 8003FFD0 8FB90020 */   lw         $t9, 0x20($sp)
 /* 03FB84 8003FFD4 8CAF0000 */  lw          $t7, 0x0($a1)
 /* 03FB88 8003FFD8 10000008 */  b           .L8003FFFC
@@ -267,7 +267,7 @@ glabel func_8003FF8C # 5
 /* 03FB9C 8003FFEC 00603025 */  move        $a2, $v1
 .L8003FFF0:
 /* 03FBA0 8003FFF0 8C630000 */  lw          $v1, 0x0($v1)
-/* 03FBA4 8003FFF4 1460FFF3 */  bne         $v1, $zero, .L8003FFC4
+/* 03FBA4 8003FFF4 1460FFF3 */  bnez        $v1, .L8003FFC4
 /* 03FBA8 8003FFF8 00000000 */   nop
 .L8003FFFC:
 /* 03FBAC 8003FFFC 0C014E80 */  jal         osSetIntMask
@@ -342,7 +342,7 @@ glabel func_80040064 # 7
 /* 03FCA4 800400F4 24060001 */   addiu      $a2, $zero, 0x1
 /* 03FCA8 800400F8 0C015204 */  jal         func_80054810
 /* 03FCAC 800400FC 26640010 */   addiu      $a0, $s3, 0x10
-/* 03FCB0 80040100 10400003 */  beq         $v0, $zero, .L80040110
+/* 03FCB0 80040100 10400003 */  beqz        $v0, .L80040110
 /* 03FCB4 80040104 03C08825 */   move       $s1, $fp
 /* 03FCB8 80040108 10000001 */  b           .L80040110
 /* 03FCBC 8004010C 02E08825 */   move       $s1, $s7
@@ -364,7 +364,7 @@ glabel func_80040064 # 7
 /* 03FCF4 80040144 8E580674 */  lw          $t8, 0x674($s2)
 /* 03FCF8 80040148 AE400670 */  sw          $zero, 0x670($s2)
 /* 03FCFC 8004014C 2644011C */  addiu       $a0, $s2, 0x11c
-/* 03FD00 80040150 13000003 */  beq         $t8, $zero, .L80040160
+/* 03FD00 80040150 13000003 */  beqz        $t8, .L80040160
 /* 03FD04 80040154 02802825 */   move       $a1, $s4
 /* 03FD08 80040158 0C014C64 */  jal         osSendMesg
 /* 03FD0C 8004015C 24060001 */   addiu      $a2, $zero, 0x1
@@ -439,7 +439,7 @@ glabel func_80040200 # 8
 /* 03FE04 80040254 8E0E0670 */  lw          $t6, 0x670($s0)
 /* 03FE08 80040258 8FAF0040 */  lw          $t7, 0x40($sp)
 /* 03FE0C 8004025C 2604011C */  addiu       $a0, $s0, 0x11c
-/* 03FE10 80040260 11C00005 */  beq         $t6, $zero, .L80040278
+/* 03FE10 80040260 11C00005 */  beqz        $t6, .L80040278
 /* 03FE14 80040264 02602825 */   move       $a1, $s3
 /* 03FE18 80040268 AE0F0674 */  sw          $t7, 0x674($s0)
 /* 03FE1C 8004026C 0C014554 */  jal         osRecvMesg

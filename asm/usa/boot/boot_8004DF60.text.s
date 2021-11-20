@@ -47,7 +47,7 @@ glabel func_8004DF60 # 0
 /* 04DB8C 8004DFDC 00602825 */  move        $a1, $v1
 .L8004DFE0:
 /* 04DB90 8004DFE0 8C630000 */  lw          $v1, 0x0($v1)
-/* 04DB94 8004DFE4 1460FFF2 */  bne         $v1, $zero, .L8004DFB0
+/* 04DB94 8004DFE4 1460FFF2 */  bnez        $v1, .L8004DFB0
 /* 04DB98 8004DFE8 00000000 */   nop
 .L8004DFEC:
 /* 04DB9C 8004DFEC 00E02025 */  move        $a0, $a3
