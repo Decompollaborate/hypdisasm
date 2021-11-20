@@ -2,10 +2,12 @@
 
 from __future__ import annotations
 
+import ast
+from sortedcontainers import SortedDict
+
 from mips.GlobalConfig import GlobalConfig
 
 from .Utils import *
-import ast
 
 class ContextFile:
     def __init__(self, name: str, vram: int):
@@ -41,7 +43,8 @@ class Context:
         self.funcAddresses: Dict[int, ContextSymbol] = dict()
 
         self.labels: Dict[int, str] = dict()
-        self.symbols: Dict[int, ContextSymbol] = dict()
+        # self.symbols: SortedDict[int, ContextSymbol]
+        self.symbols = SortedDict()
 
         # Where the jump table is
         self.jumpTables: Dict[int, str] = dict()
@@ -84,17 +87,17 @@ class Context:
             return self.symbols[vramAddress].name
 
         if GlobalConfig.PRODUCE_SYMBOLS_PLUS_OFFSET and tryPlusOffset:
-            # merges the dictionaries
-            vramSymbols = sorted({**self.funcAddresses, **self.jumpTables, **self.symbols}.items(), reverse=True)
-            for vram, symbol in vramSymbols:
-                symbolSize = 4
-                if isinstance(symbol, ContextSymbol):
-                    symbolSize = symbol.size
+            rangeObj = self.symbols.irange(maximum=vramAddress, reverse=True)
+            for vram in rangeObj:
+                contextSym: ContextSymbol = self.symbols[vram]
+
+                symbolName = contextSym.name
+                symbolSize = contextSym.size
                 if vramAddress > vram and vramAddress < vram + symbolSize:
-                    symbolName = symbol
-                    if isinstance(symbol, ContextSymbol):
-                        symbolName = symbol.name
                     return f"{symbolName} + {toHex(vramAddress - vram, 1)}"
+
+                # Only one iteration
+                break
 
         return None
 
@@ -103,16 +106,19 @@ class Context:
             return self.symbols[vramAddress]
 
         if GlobalConfig.PRODUCE_SYMBOLS_PLUS_OFFSET and tryPlusOffset:
-            vramSymbols = sorted({**self.funcAddresses, **self.jumpTables, **self.symbols}.items(), reverse=True)
-            for vram, symbol in vramSymbols:
+            rangeObj = self.symbols.irange(maximum=vramAddress, reverse=True)
+            for vram in rangeObj:
+                contextSym: ContextSymbol = self.symbols[vram]
+
+                symbolSize = contextSym.size
                 if vramAddress > vram:
-                    if not isinstance(symbol, ContextSymbol):
-                        break
                     if checkUpperLimit:
-                        symbolSize = symbol.size
                         if vramAddress >= vram + symbolSize:
-                            continue
-                    return symbol
+                            break
+                    return contextSym
+
+                # Only one iteration
+                break
         return None
 
     def getGenericLabel(self, vramAddress: int) -> str|None:
@@ -146,6 +152,7 @@ class Context:
             del self.fakeFunctions[vramAddress]
 
         if vramAddress in self.symbols:
+            # ??
             self.symbols[vramAddress].isDefined = True
 
     def addBranchLabel(self, vramAddress: int, name: str):
@@ -153,6 +160,7 @@ class Context:
             self.labels[vramAddress] = name
 
         if vramAddress in self.symbols:
+            # ??
             self.symbols[vramAddress].isDefined = True
 
     def addJumpTable(self, vramAddress: int, name: str):
@@ -160,6 +168,7 @@ class Context:
             self.jumpTables[vramAddress] = name
 
         if vramAddress in self.symbols:
+            # ??
             self.symbols[vramAddress].isDefined = True
 
     def addFakeFunction(self, vramAddress: int, name: str):
@@ -167,6 +176,7 @@ class Context:
             self.fakeFunctions[vramAddress] = name
 
         if vramAddress in self.symbols:
+            # ??
             self.symbols[vramAddress].isDefined = True
 
 
