@@ -141,7 +141,7 @@ glabel __osException # 1
 /* 05739C 800577EC 112A00B6 */  beq         $t1, $t2, .L80057AC8
 /* 0573A0 800577F0 00000000 */   nop
 /* 0573A4 800577F4 240A002C */  addiu       $t2, $zero, 0x2c
-/* 0573A8 800577F8 112A0105 */  beq         $t1, $t2, .L80057C10
+/* 0573A8 800577F8 112A0105 */  beq         $t1, $t2, handle_CpU
 /* 0573AC 800577FC 00000000 */   nop
 /* 0573B0 80057800 240A0000 */  addiu       $t2, $zero, 0x0
 /* 0573B4 80057804 152A00C9 */  bne         $t1, $t2, .L80057B2C
@@ -383,6 +383,8 @@ glabel L80057AE0
 /* 057700 80057B50 24040060 */   addiu      $a0, $zero, 0x60
 /* 057704 80057B54 08015F69 */  j           __osDispatchThread
 /* 057708 80057B58 00000000 */   nop
+
+glabel send_mesg # 2
 /* 05770C 80057B5C 3C0A8010 */  lui         $t2, %hi(__osEventStateTab)
 /* 057710 80057B60 254ADB90 */  addiu       $t2, $t2, %lo(__osEventStateTab)
 /* 057714 80057B64 01445021 */  addu        $t2, $t2, $a0
@@ -431,7 +433,8 @@ glabel L80057AE0
 .L80057C08:
 /* 0577B8 80057C08 02400008 */  jr          $s2
 /* 0577BC 80057C0C 00000000 */   nop
-.L80057C10:
+
+glabel handle_CpU # 3
 /* 0577C0 80057C10 3C013000 */  lui         $at, 0x3000
 /* 0577C4 80057C14 01014824 */  and         $t1, $t0, $at
 /* 0577C8 80057C18 00094F02 */  srl         $t1, $t1, 28
@@ -446,7 +449,7 @@ glabel L80057AE0
 /* 0577EC 80057C3C 1000FFB5 */  b           .L80057B14
 /* 0577F0 80057C40 AF5B0118 */   sw         $k1, 0x118($k0)
 
-glabel __osEnqueueAndYield # 2
+glabel __osEnqueueAndYield # 4
 /* 0577F4 80057C44 3C05800A */  lui         $a1, %hi(__osRunningThread)
 /* 0577F8 80057C48 8CA5F8A0 */  lw          $a1, %lo(__osRunningThread)($a1)
 /* 0577FC 80057C4C 40086000 */  mfc0        $t0, Status
@@ -516,7 +519,7 @@ glabel __osEnqueueAndYield # 2
 /* 0578EC 80057D3C 08015F69 */  j           __osDispatchThread
 /* 0578F0 80057D40 00000000 */   nop
 
-glabel __osEnqueueThread # 3
+glabel __osEnqueueThread # 5
 /* 0578F4 80057D44 8C980000 */  lw          $t8, 0x0($a0)
 /* 0578F8 80057D48 8CAF0004 */  lw          $t7, 0x4($a1)
 /* 0578FC 80057D4C 0080C825 */  move        $t9, $a0
@@ -538,17 +541,17 @@ glabel __osEnqueueThread # 3
 /* 057934 80057D84 03E00008 */  jr          $ra
 /* 057938 80057D88 ACA40008 */   sw         $a0, 0x8($a1)
 
-glabel __osPopThread # 4
+glabel __osPopThread # 6
 /* 05793C 80057D8C 8C820000 */  lw          $v0, 0x0($a0)
 /* 057940 80057D90 8C590000 */  lw          $t9, 0x0($v0)
 /* 057944 80057D94 03E00008 */  jr          $ra
 /* 057948 80057D98 AC990000 */   sw         $t9, 0x0($a0)
 
-glabel __osNop # 5
+glabel __osNop # 7
 /* 05794C 80057D9C 03E00008 */  jr          $ra
 /* 057950 80057DA0 00000000 */   nop
 
-glabel __osDispatchThread # 6
+glabel __osDispatchThread # 8
 /* 057954 80057DA4 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 057958 80057DA8 0C015F63 */  jal         __osPopThread
 /* 05795C 80057DAC 2484F898 */   addiu      $a0, $a0, %lo(__osRunQueue)
@@ -646,7 +649,7 @@ glabel __osDispatchThread # 6
 /* 057AC8 80057F18 00000000 */  nop
 /* 057ACC 80057F1C 42000018 */  eret
 
-glabel __osCleanupThread # 7
+glabel __osCleanupThread # 9
 /* 057AD0 80057F20 0C01755C */  jal         osDestroyThread
 /* 057AD4 80057F24 00002025 */   move       $a0, $zero
 /* 057AD8 80057F28 00000000 */  nop
