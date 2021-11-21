@@ -23,6 +23,17 @@
 8009FBF4,udigs,char,0x10
 8009FC10,__osPfsInodeCacheChannel,s32,4
 8009FC14,__osPfsInodeCacheBank,u8,1
+8009FC30,_string_MeltSize,char,0xF
+8009FC40,_string_ZippedBlock,char,0x18
+8009FC58,_string_setFilterColor,char,0x1C
+8009FC74,_string_SunsetStart,char,0x14
+8009FCF0,_string_Error_NoMpak,char,0x18
+8009FD08,_string_Error_UnknownMessage,char,0x21
+8009FD50,_string_ChannelNum,char,0x11
+8009FD64,_string_ValidController,char,0x3B
+8009FF30,_string_LoadCrc_RealCrc,char,0x1B
+8009FFF0,_string_NoValidControllers,char,0x15
+800A01C0,_string_SendFunc,char,0x20
 800A78E4,_faultstring_cause,char,6
 800A7B74,_faultstring_FiT,char,4
 800A7E60,__libm_qnan_f,f32,4

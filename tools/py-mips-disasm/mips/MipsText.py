@@ -8,7 +8,7 @@ from .MipsFileBase import FileBase
 from .MipsSection import Section
 from .Instructions import InstructionBase, wordToInstruction, InstructionId, InstructionCoprocessor0, InstructionCoprocessor2
 from .MipsFunction import Function
-from .MipsContext import Context
+from .MipsContext import Context, ContextSymbol
 
 
 class Text(Section):
@@ -95,14 +95,20 @@ class Text(Section):
                         # Whatever we are reading is not a valid instruction
                         break
                     # make sure to not branch outside of the current function
-                    j = len(funcsStartsList) - 1
-                    while j >= 0:
-                        if index + branch < funcsStartsList[j]:
-                            del funcsStartsList[j]
-                            del unimplementedInstructionsFuncList[j-1]
-                        else:
-                            break
-                        j -= 1
+                    if not isLikelyHandwritten:
+                        j = len(funcsStartsList) - 1
+                        while j >= 0:
+                            if index + branch < funcsStartsList[j]:
+                                if GlobalConfig.TRUST_USER_FUNCTIONS:
+                                    vram = self.getVramOffset(funcsStartsList[j]*4)
+                                    if self.context.getFunction(vram) is not None:
+                                        j -= 1
+                                        continue
+                                del funcsStartsList[j]
+                                del unimplementedInstructionsFuncList[j-1]
+                            else:
+                                break
+                            j -= 1
 
             elif instr.isIType():
                 isLui = instr.uniqueId == InstructionId.LUI
@@ -161,18 +167,32 @@ class Text(Section):
                 if funcSymbol is not None:
                     funcName = funcSymbol.name
                 else:
-                    funcName = "func_" + toHex(self.getVramOffset(start*4), 6)[2:]
+                    funcName = "func_" + toHex(vram, 6)[2:]
+                    if self.newStuffSuffix:
+                        if vram >= self.vRamStart:
+                            funcName += f"_{self.newStuffSuffix}"
 
-                if not hasUnimplementedIntrs:
+                if GlobalConfig.DISASSEMBLE_UNKNOWN_INSTRUCTIONS or not hasUnimplementedIntrs:
                     self.context.addFunction(self.filename, vram, funcName)
                     funcSymbol = self.context.getFunction(vram)
                     if funcSymbol is not None:
                         funcSymbol.isDefined = True
+                else:
+                    if vram in self.context.symbols:
+                        self.context.symbols[vram].isDefined = True
+                    else:
+                        contextSym = ContextSymbol(vram, "D_" + toHex(vram, 6)[2:])
+                        contextSym.isDefined = True
+                        if self.newStuffSuffix:
+                            if vram >= self.vRamStart:
+                                contextSym.name += f"_{self.newStuffSuffix}"
+                        self.context.symbols[vram] = contextSym
 
             func = Function(funcName, instructions[start:end], self.context, self.offset + start*4, vram=vram)
             func.index = i
             func.pointersOffsets += self.pointersOffsets
             func.hasUnimplementedIntrs = hasUnimplementedIntrs
+            func.parent = self
             func.analyze()
             self.functions.append(func)
             i += 1

@@ -29,12 +29,23 @@ class Function:
 
         self.hasUnimplementedIntrs: bool = False
 
+        self.parent: Any = None
+
     @property
     def nInstr(self) -> int:
         return len(self.instructions)
 
     def analyze(self):
-        if self.hasUnimplementedIntrs:
+        if not GlobalConfig.DISASSEMBLE_UNKNOWN_INSTRUCTIONS and self.hasUnimplementedIntrs:
+            if self.vram > -1 and self.context is not None:
+                offset = 0
+                for instr in self.instructions:
+                    currentVram = self.vram + offset
+                    contextSym = self.context.getSymbol(currentVram, False)
+                    if contextSym is not None:
+                        contextSym.isDefined = True
+
+                    offset += 4
             return
 
         trackedRegisters: Dict[int, int] = dict()
@@ -44,11 +55,9 @@ class Function:
         for instr in self.instructions:
             isLui = False
 
-            if not instr.isImplemented():
+            if not GlobalConfig.DISASSEMBLE_UNKNOWN_INSTRUCTIONS and not instr.isImplemented():
                 # Abort analysis
                 self.hasUnimplementedIntrs = True
-                if self.vram in self.context.funcAddresses:
-                    del self.context.funcAddresses[self.vram]
                 return
 
             if instr.isBranch():
@@ -94,13 +103,16 @@ class Function:
                         self.referencedVRams.add(address)
                         if self.context.getGenericSymbol(address) is None:
                             if GlobalConfig.ADD_NEW_SYMBOLS:
-                                contextVar = ContextSymbol(address, "D_" + toHex(address, 8)[2:])
+                                contextSym = ContextSymbol(address, "D_" + toHex(address, 8)[2:])
                                 if instr.isFloatInstruction():
                                     if instr.isDoubleFloatInstruction():
-                                        contextVar.type = "f64"
+                                        contextSym.type = "f64"
                                     else:
-                                        contextVar.type = "f32"
-                                self.context.symbols[address] = contextVar
+                                        contextSym.type = "f32"
+                                if self.parent.newStuffSuffix:
+                                    if address >= self.vram:
+                                        contextSym.name += f"_{self.parent.newStuffSuffix}"
+                                self.context.symbols[address] = contextSym
                         self.pointersPerInstruction[instructionOffset] = address
                         self.pointersPerInstruction[trackedRegisters[rs]*4] = address
                         registersValues[instr.rt] = address
@@ -206,8 +218,9 @@ class Function:
     def disassemble(self) -> str:
         output = ""
 
-        if self.hasUnimplementedIntrs:
-            return self.disassembleAsData()
+        if not GlobalConfig.DISASSEMBLE_UNKNOWN_INSTRUCTIONS:
+            if self.hasUnimplementedIntrs:
+                return self.disassembleAsData()
 
         output += f"glabel {self.name}"
         if GlobalConfig.FUNCTION_ASM_COUNT:
@@ -266,16 +279,20 @@ class Function:
 
             label = ""
             if not GlobalConfig.IGNORE_BRANCHES:
-                labelAux = self.context.getGenericLabel(self.vram + instructionOffset)
+                currentVram = self.vram + instructionOffset
+                labelAux = self.context.getGenericLabel(currentVram)
                 if self.vram >= 0 and labelAux is not None:
-                    if self.vram + instructionOffset in self.context.jumpTablesLabels:
+                    if self.context.getFunction(currentVram) is not None:
+                        # Skip over functions to avoid duplication
+                        pass
+                    elif currentVram in self.context.jumpTablesLabels:
                         label = "glabel " + labelAux + "\n"
                     else:
                         label = labelAux + ":\n"
                 elif auxOffset in self.localLabels:
                     label = self.localLabels[auxOffset] + ":\n"
-                elif self.vram + instructionOffset in self.context.fakeFunctions:
-                    label = self.context.fakeFunctions[self.vram + instructionOffset] + ":\n"
+                elif currentVram in self.context.fakeFunctions:
+                    label = self.context.fakeFunctions[currentVram] + ":\n"
 
             output += label + line + "\n"
 
