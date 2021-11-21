@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005ED50 # 0
+glabel __osSumcalc # 0
 /* 05E900 8005ED50 00001825 */  move        $v1, $zero
 /* 05E904 8005ED54 00801025 */  move        $v0, $a0
 /* 05E908 8005ED58 18A00016 */  blez        $a1, .L8005EDB4
@@ -44,7 +44,7 @@ glabel func_8005ED50 # 0
 /* 05E96C 8005EDBC 03E00008 */  jr          $ra
 /* 05E970 8005EDC0 01201025 */   move       $v0, $t1
 
-glabel func_8005EDC4 # 1
+glabel __osIdCheckSum # 1
 /* 05E974 8005EDC4 A4C00000 */  sh          $zero, 0x0($a2)
 /* 05E978 8005EDC8 A4A00000 */  sh          $zero, 0x0($a1)
 /* 05E97C 8005EDCC 94820000 */  lhu         $v0, 0x0($a0)
@@ -110,7 +110,7 @@ glabel func_8005EDC4 # 1
 /* 05EA68 8005EEB8 03E00008 */  jr          $ra
 /* 05EA6C 8005EEBC 00001025 */   move       $v0, $zero
 
-glabel func_8005EEC0 # 2
+glabel __osRepairPackId # 2
 /* 05EA70 8005EEC0 27BDFF60 */  addiu       $sp, $sp, -0xa0
 /* 05EA74 8005EEC4 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 05EA78 8005EEC8 AFB60038 */  sw          $s6, 0x38($sp)
@@ -125,7 +125,7 @@ glabel func_8005EEC0 # 2
 /* 05EA9C 8005EEEC 00C0A025 */  move        $s4, $a2
 /* 05EAA0 8005EEF0 00A0B025 */  move        $s6, $a1
 /* 05EAA4 8005EEF4 00009825 */  move        $s3, $zero
-/* 05EAA8 8005EEF8 0C014CB8 */  jal         func_800532E0
+/* 05EAA8 8005EEF8 0C014CB8 */  jal         osGetCount
 /* 05EAAC 8005EEFC ACCE0000 */   sw         $t6, 0x0($a2)
 /* 05EAB0 8005EF00 AE820004 */  sw          $v0, 0x4($s4)
 /* 05EAB4 8005EF04 8ED9000C */  lw          $t9, 0xc($s6)
@@ -140,7 +140,7 @@ glabel func_8005EEC0 # 2
 /* 05EAD8 8005EF28 924F0065 */  lbu         $t7, 0x65($s2)
 /* 05EADC 8005EF2C 51E00008 */  beql        $t7, $zero, .L8005EF50
 /* 05EAE0 8005EF30 27B1007C */   addiu      $s1, $sp, 0x7c
-/* 05EAE4 8005EF34 0C016204 */  jal         func_80058810
+/* 05EAE4 8005EF34 0C016204 */  jal         __osPfsSelectBank
 /* 05EAE8 8005EF38 00002825 */   move       $a1, $zero
 /* 05EAEC 8005EF3C 50400004 */  beql        $v0, $zero, .L8005EF50
 /* 05EAF0 8005EF40 27B1007C */   addiu      $s1, $sp, 0x7c
@@ -152,7 +152,7 @@ glabel func_8005EEC0 # 2
 /* 05EB04 8005EF54 27B0009C */  addiu       $s0, $sp, 0x9c
 /* 05EB08 8005EF58 02402025 */  move        $a0, $s2
 .L8005EF5C:
-/* 05EB0C 8005EF5C 0C016204 */  jal         func_80058810
+/* 05EB0C 8005EF5C 0C016204 */  jal         __osPfsSelectBank
 /* 05EB10 8005EF60 326500FF */   andi       $a1, $s3, 0xff
 /* 05EB14 8005EF64 10400003 */  beqz        $v0, .L8005EF74
 /* 05EB18 8005EF68 00003025 */   move       $a2, $zero
@@ -161,7 +161,7 @@ glabel func_8005EEC0 # 2
 .L8005EF74:
 /* 05EB24 8005EF74 8E440004 */  lw          $a0, 0x4($s2)
 /* 05EB28 8005EF78 8E450008 */  lw          $a1, 0x8($s2)
-/* 05EB2C 8005EF7C 0C016224 */  jal         func_80058890
+/* 05EB2C 8005EF7C 0C016224 */  jal         __osContRamRead
 /* 05EB30 8005EF80 02A03825 */   move       $a3, $s5
 /* 05EB34 8005EF84 10400003 */  beqz        $v0, .L8005EF94
 /* 05EB38 8005EF88 366B0080 */   ori        $t3, $s3, 0x80
@@ -181,7 +181,7 @@ glabel func_8005EEC0 # 2
 /* 05EB68 8005EFB8 8E450008 */  lw          $a1, 0x8($s2)
 /* 05EB6C 8005EFBC AFA00010 */  sw          $zero, 0x10($sp)
 /* 05EB70 8005EFC0 00003025 */  move        $a2, $zero
-/* 05EB74 8005EFC4 0C0175A0 */  jal         func_8005D680
+/* 05EB74 8005EFC4 0C0175A0 */  jal         __osContRamWrite
 /* 05EB78 8005EFC8 02A03825 */   move       $a3, $s5
 /* 05EB7C 8005EFCC 10400003 */  beqz        $v0, .L8005EFDC
 /* 05EB80 8005EFD0 00003025 */   move       $a2, $zero
@@ -190,7 +190,7 @@ glabel func_8005EEC0 # 2
 .L8005EFDC:
 /* 05EB8C 8005EFDC 8E440004 */  lw          $a0, 0x4($s2)
 /* 05EB90 8005EFE0 8E450008 */  lw          $a1, 0x8($s2)
-/* 05EB94 8005EFE4 0C016224 */  jal         func_80058890
+/* 05EB94 8005EFE4 0C016224 */  jal         __osContRamRead
 /* 05EB98 8005EFE8 27A7005C */   addiu      $a3, $sp, 0x5c
 /* 05EB9C 8005EFEC 10400003 */  beqz        $v0, .L8005EFFC
 /* 05EBA0 8005EFF0 27A3005C */   addiu      $v1, $sp, 0x5c
@@ -213,7 +213,7 @@ glabel func_8005EEC0 # 2
 /* 05EBD8 8005F028 02402025 */   move       $a0, $s2
 /* 05EBDC 8005F02C 5A600013 */  blezl       $s3, .L8005F07C
 /* 05EBE0 8005F030 26730001 */   addiu      $s3, $s3, 0x1
-/* 05EBE4 8005F034 0C016204 */  jal         func_80058810
+/* 05EBE4 8005F034 0C016204 */  jal         __osPfsSelectBank
 /* 05EBE8 8005F038 00002825 */   move       $a1, $zero
 /* 05EBEC 8005F03C 10400003 */  beqz        $v0, .L8005F04C
 /* 05EBF0 8005F040 00003025 */   move       $a2, $zero
@@ -222,7 +222,7 @@ glabel func_8005EEC0 # 2
 .L8005F04C:
 /* 05EBFC 8005F04C 8E440004 */  lw          $a0, 0x4($s2)
 /* 05EC00 8005F050 8E450008 */  lw          $a1, 0x8($s2)
-/* 05EC04 8005F054 0C016224 */  jal         func_80058890
+/* 05EC04 8005F054 0C016224 */  jal         __osContRamRead
 /* 05EC08 8005F058 02A03825 */   move       $a3, $s5
 /* 05EC0C 8005F05C 10400003 */  beqz        $v0, .L8005F06C
 /* 05EC10 8005F060 93A8007C */   lbu        $t0, 0x7c($sp)
@@ -243,7 +243,7 @@ glabel func_8005EEC0 # 2
 /* 05EC3C 8005F08C 02402025 */  move        $a0, $s2
 /* 05EC40 8005F090 11200007 */  beqz        $t1, .L8005F0B0
 /* 05EC44 8005F094 00000000 */   nop
-/* 05EC48 8005F098 0C016204 */  jal         func_80058810
+/* 05EC48 8005F098 0C016204 */  jal         __osPfsSelectBank
 /* 05EC4C 8005F09C 00002825 */   move       $a1, $zero
 /* 05EC50 8005F0A0 10400003 */  beqz        $v0, .L8005F0B0
 /* 05EC54 8005F0A4 00000000 */   nop
@@ -265,7 +265,7 @@ glabel func_8005EEC0 # 2
 /* 05EC88 8005F0D8 A68B0018 */  sh          $t3, 0x18($s4)
 /* 05EC8C 8005F0DC 92CC001B */  lbu         $t4, 0x1b($s6)
 /* 05EC90 8005F0E0 2686001E */  addiu       $a2, $s4, 0x1e
-/* 05EC94 8005F0E4 0C017B71 */  jal         func_8005EDC4
+/* 05EC94 8005F0E4 0C017B71 */  jal         __osIdCheckSum
 /* 05EC98 8005F0E8 A28C001B */   sb         $t4, 0x1b($s4)
 /* 05EC9C 8005F0EC 240D0001 */  addiu       $t5, $zero, 0x1
 /* 05ECA0 8005F0F0 240E0003 */  addiu       $t6, $zero, 0x3
@@ -283,7 +283,7 @@ glabel func_8005EEC0 # 2
 /* 05ECCC 8005F11C 96060000 */  lhu         $a2, 0x0($s0)
 /* 05ECD0 8005F120 24080001 */  addiu       $t0, $zero, 0x1
 /* 05ECD4 8005F124 AFA80010 */  sw          $t0, 0x10($sp)
-/* 05ECD8 8005F128 0C0175A0 */  jal         func_8005D680
+/* 05ECD8 8005F128 0C0175A0 */  jal         __osContRamWrite
 /* 05ECDC 8005F12C 02803825 */   move       $a3, $s4
 /* 05ECE0 8005F130 10400003 */  beqz        $v0, .L8005F140
 /* 05ECE4 8005F134 26100002 */   addiu      $s0, $s0, 0x2
@@ -296,7 +296,7 @@ glabel func_8005EEC0 # 2
 /* 05ECFC 8005F14C 8E440004 */  lw          $a0, 0x4($s2)
 /* 05ED00 8005F150 8E450008 */  lw          $a1, 0x8($s2)
 /* 05ED04 8005F154 24060001 */  addiu       $a2, $zero, 0x1
-/* 05ED08 8005F158 0C016224 */  jal         func_80058890
+/* 05ED08 8005F158 0C016224 */  jal         __osContRamRead
 /* 05ED0C 8005F15C 02A03825 */   move       $a3, $s5
 /* 05ED10 8005F160 10400003 */  beqz        $v0, .L8005F170
 /* 05ED14 8005F164 02801825 */   move       $v1, $s4
@@ -351,7 +351,7 @@ glabel func_8005EEC0 # 2
 /* 05EDB8 8005F208 03E00008 */  jr          $ra
 /* 05EDBC 8005F20C 27BD00A0 */   addiu      $sp, $sp, 0xa0
 
-glabel func_8005F210 # 3
+glabel __osCheckPackId # 3
 /* 05EDC0 8005F210 27BDFFA0 */  addiu       $sp, $sp, -0x60
 /* 05EDC4 8005F214 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 05EDC8 8005F218 AFB60038 */  sw          $s6, 0x38($sp)
@@ -366,7 +366,7 @@ glabel func_8005F210 # 3
 /* 05EDEC 8005F23C 00809825 */  move        $s3, $a0
 /* 05EDF0 8005F240 51C00008 */  beql        $t6, $zero, .L8005F264
 /* 05EDF4 8005F244 240F0001 */   addiu      $t7, $zero, 0x1
-/* 05EDF8 8005F248 0C016204 */  jal         func_80058810
+/* 05EDF8 8005F248 0C016204 */  jal         __osPfsSelectBank
 /* 05EDFC 8005F24C 00002825 */   move       $a1, $zero
 /* 05EE00 8005F250 50400004 */  beql        $v0, $zero, .L8005F264
 /* 05EE04 8005F254 240F0001 */   addiu      $t7, $zero, 0x1
@@ -390,7 +390,7 @@ glabel func_8005F210 # 3
 /* 05EE44 8005F294 8E640004 */  lw          $a0, 0x4($s3)
 /* 05EE48 8005F298 8E650008 */  lw          $a1, 0x8($s3)
 /* 05EE4C 8005F29C 96060000 */  lhu         $a2, 0x0($s0)
-/* 05EE50 8005F2A0 0C016224 */  jal         func_80058890
+/* 05EE50 8005F2A0 0C016224 */  jal         __osContRamRead
 /* 05EE54 8005F2A4 02403825 */   move       $a3, $s2
 /* 05EE58 8005F2A8 10400003 */  beqz        $v0, .L8005F2B8
 /* 05EE5C 8005F2AC 02402025 */   move       $a0, $s2
@@ -398,7 +398,7 @@ glabel func_8005F210 # 3
 /* 05EE64 8005F2B4 8FBF003C */   lw         $ra, 0x3c($sp)
 .L8005F2B8:
 /* 05EE68 8005F2B8 02802825 */  move        $a1, $s4
-/* 05EE6C 8005F2BC 0C017B71 */  jal         func_8005EDC4
+/* 05EE6C 8005F2BC 0C017B71 */  jal         __osIdCheckSum
 /* 05EE70 8005F2C0 02C03025 */   move       $a2, $s6
 /* 05EE74 8005F2C4 97A90052 */  lhu         $t1, 0x52($sp)
 /* 05EE78 8005F2C8 964A001C */  lhu         $t2, 0x1c($s2)
@@ -428,7 +428,7 @@ glabel func_8005F210 # 3
 /* 05EEC8 8005F318 8E650008 */  lw          $a1, 0x8($s3)
 /* 05EECC 8005F31C 240F0001 */  addiu       $t7, $zero, 0x1
 /* 05EED0 8005F320 AFAF0010 */  sw          $t7, 0x10($sp)
-/* 05EED4 8005F324 0C0175A0 */  jal         func_8005D680
+/* 05EED4 8005F324 0C0175A0 */  jal         __osContRamWrite
 /* 05EED8 8005F328 02403825 */   move       $a3, $s2
 /* 05EEDC 8005F32C 50400004 */  beql        $v0, $zero, .L8005F340
 /* 05EEE0 8005F330 26100001 */   addiu      $s0, $s0, 0x1
@@ -453,7 +453,7 @@ glabel func_8005F210 # 3
 /* 05EF1C 8005F36C 03E00008 */  jr          $ra
 /* 05EF20 8005F370 27BD0060 */   addiu      $sp, $sp, 0x60
 
-glabel func_8005F374 # 4
+glabel __osGetId # 4
 /* 05EF24 8005F374 27BDFF90 */  addiu       $sp, $sp, -0x70
 /* 05EF28 8005F378 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 05EF2C 8005F37C AFB10018 */  sw          $s1, 0x18($sp)
@@ -462,7 +462,7 @@ glabel func_8005F374 # 4
 /* 05EF38 8005F388 00808025 */  move        $s0, $a0
 /* 05EF3C 8005F38C 51C00008 */  beql        $t6, $zero, .L8005F3B0
 /* 05EF40 8005F390 8E040004 */   lw         $a0, 0x4($s0)
-/* 05EF44 8005F394 0C016204 */  jal         func_80058810
+/* 05EF44 8005F394 0C016204 */  jal         __osPfsSelectBank
 /* 05EF48 8005F398 00002825 */   move       $a1, $zero
 /* 05EF4C 8005F39C 50400004 */  beql        $v0, $zero, .L8005F3B0
 /* 05EF50 8005F3A0 8E040004 */   lw         $a0, 0x4($s0)
@@ -472,7 +472,7 @@ glabel func_8005F374 # 4
 .L8005F3B0:
 /* 05EF60 8005F3B0 8E050008 */  lw          $a1, 0x8($s0)
 /* 05EF64 8005F3B4 24060001 */  addiu       $a2, $zero, 0x1
-/* 05EF68 8005F3B8 0C016224 */  jal         func_80058890
+/* 05EF68 8005F3B8 0C016224 */  jal         __osContRamRead
 /* 05EF6C 8005F3BC 27A7004C */   addiu      $a3, $sp, 0x4c
 /* 05EF70 8005F3C0 10400003 */  beqz        $v0, .L8005F3D0
 /* 05EF74 8005F3C4 27A4004C */   addiu      $a0, $sp, 0x4c
@@ -480,7 +480,7 @@ glabel func_8005F374 # 4
 /* 05EF7C 8005F3CC 8FBF001C */   lw         $ra, 0x1c($sp)
 .L8005F3D0:
 /* 05EF80 8005F3D0 27A5006E */  addiu       $a1, $sp, 0x6e
-/* 05EF84 8005F3D4 0C017B71 */  jal         func_8005EDC4
+/* 05EF84 8005F3D4 0C017B71 */  jal         __osIdCheckSum
 /* 05EF88 8005F3D8 27A6006C */   addiu      $a2, $sp, 0x6c
 /* 05EF8C 8005F3DC 97AF006E */  lhu         $t7, 0x6e($sp)
 /* 05EF90 8005F3E0 97B80068 */  lhu         $t8, 0x68($sp)
@@ -492,14 +492,14 @@ glabel func_8005F374 # 4
 /* 05EFA8 8005F3F8 53290015 */  beql        $t9, $t1, .L8005F450
 /* 05EFAC 8005F3FC 962A0018 */   lhu        $t2, 0x18($s1)
 .L8005F400:
-/* 05EFB0 8005F400 0C017C84 */  jal         func_8005F210
+/* 05EFB0 8005F400 0C017C84 */  jal         __osCheckPackId
 /* 05EFB4 8005F404 02002025 */   move       $a0, $s0
 /* 05EFB8 8005F408 2401000A */  addiu       $at, $zero, 0xa
 /* 05EFBC 8005F40C 1441000B */  bne         $v0, $at, .L8005F43C
 /* 05EFC0 8005F410 00401825 */   move       $v1, $v0
 /* 05EFC4 8005F414 02002025 */  move        $a0, $s0
 /* 05EFC8 8005F418 27A5004C */  addiu       $a1, $sp, 0x4c
-/* 05EFCC 8005F41C 0C017BB0 */  jal         func_8005EEC0
+/* 05EFCC 8005F41C 0C017BB0 */  jal         __osRepairPackId
 /* 05EFD0 8005F420 27A60028 */   addiu      $a2, $sp, 0x28
 /* 05EFD4 8005F424 10400003 */  beqz        $v0, .L8005F434
 /* 05EFD8 8005F428 00000000 */   nop
@@ -521,7 +521,7 @@ glabel func_8005F374 # 4
 /* 05F008 8005F458 314B0001 */  andi        $t3, $t2, 0x1
 /* 05F00C 8005F45C 5560000D */  bnel        $t3, $zero, .L8005F494
 /* 05F010 8005F460 02202025 */   move       $a0, $s1
-/* 05F014 8005F464 0C017BB0 */  jal         func_8005EEC0
+/* 05F014 8005F464 0C017BB0 */  jal         __osRepairPackId
 /* 05F018 8005F468 27A60028 */   addiu      $a2, $sp, 0x28
 /* 05F01C 8005F46C 10400003 */  beqz        $v0, .L8005F47C
 /* 05F020 8005F470 97AC0040 */   lhu        $t4, 0x40($sp)
@@ -559,7 +559,7 @@ glabel func_8005F374 # 4
 /* 05F094 8005F4E4 8E050008 */  lw          $a1, 0x8($s0)
 /* 05F098 8005F4E8 24060007 */  addiu       $a2, $zero, 0x7
 /* 05F09C 8005F4EC 2607002C */  addiu       $a3, $s0, 0x2c
-/* 05F0A0 8005F4F0 0C016224 */  jal         func_80058890
+/* 05F0A0 8005F4F0 0C016224 */  jal         __osContRamRead
 /* 05F0A4 8005F4F4 A20F0064 */   sb         $t7, 0x64($s0)
 /* 05F0A8 8005F4F8 50400004 */  beql        $v0, $zero, .L8005F50C
 /* 05F0AC 8005F4FC 00001025 */   move       $v0, $zero
@@ -574,7 +574,7 @@ glabel func_8005F374 # 4
 /* 05F0C8 8005F518 03E00008 */  jr          $ra
 /* 05F0CC 8005F51C 27BD0070 */   addiu      $sp, $sp, 0x70
 
-glabel func_8005F520 # 5
+glabel __osCheckId # 5
 /* 05F0D0 8005F520 27BDFFB8 */  addiu       $sp, $sp, -0x48
 /* 05F0D4 8005F524 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 05F0D8 8005F528 AFB00018 */  sw          $s0, 0x18($sp)
@@ -582,13 +582,13 @@ glabel func_8005F520 # 5
 /* 05F0E0 8005F530 00808025 */  move        $s0, $a0
 /* 05F0E4 8005F534 51C0000F */  beql        $t6, $zero, .L8005F574
 /* 05F0E8 8005F538 8E040004 */   lw         $a0, 0x4($s0)
-/* 05F0EC 8005F53C 0C016204 */  jal         func_80058810
+/* 05F0EC 8005F53C 0C016204 */  jal         __osPfsSelectBank
 /* 05F0F0 8005F540 00002825 */   move       $a1, $zero
 /* 05F0F4 8005F544 24010002 */  addiu       $at, $zero, 0x2
 /* 05F0F8 8005F548 14410005 */  bne         $v0, $at, .L8005F560
 /* 05F0FC 8005F54C 00401825 */   move       $v1, $v0
 /* 05F100 8005F550 02002025 */  move        $a0, $s0
-/* 05F104 8005F554 0C016204 */  jal         func_80058810
+/* 05F104 8005F554 0C016204 */  jal         __osPfsSelectBank
 /* 05F108 8005F558 00002825 */   move       $a1, $zero
 /* 05F10C 8005F55C 00401825 */  move        $v1, $v0
 .L8005F560:
@@ -600,7 +600,7 @@ glabel func_8005F520 # 5
 .L8005F574:
 /* 05F124 8005F574 8E050008 */  lw          $a1, 0x8($s0)
 /* 05F128 8005F578 24060001 */  addiu       $a2, $zero, 0x1
-/* 05F12C 8005F57C 0C016224 */  jal         func_80058890
+/* 05F12C 8005F57C 0C016224 */  jal         __osContRamRead
 /* 05F130 8005F580 27A70028 */   addiu      $a3, $sp, 0x28
 /* 05F134 8005F584 1040000D */  beqz        $v0, .L8005F5BC
 /* 05F138 8005F588 24010002 */   addiu      $at, $zero, 0x2
@@ -611,7 +611,7 @@ glabel func_8005F520 # 5
 .L8005F59C:
 /* 05F14C 8005F59C 8E040004 */  lw          $a0, 0x4($s0)
 /* 05F150 8005F5A0 8E050008 */  lw          $a1, 0x8($s0)
-/* 05F154 8005F5A4 0C016224 */  jal         func_80058890
+/* 05F154 8005F5A4 0C016224 */  jal         __osContRamRead
 /* 05F158 8005F5A8 27A70028 */   addiu      $a3, $sp, 0x28
 /* 05F15C 8005F5AC 50400004 */  beql        $v0, $zero, .L8005F5C0
 /* 05F160 8005F5B0 2604000C */   addiu      $a0, $s0, 0xc
@@ -636,7 +636,7 @@ glabel func_8005F520 # 5
 /* 05F19C 8005F5EC 03E00008 */  jr          $ra
 /* 05F1A0 8005F5F0 00000000 */   nop
 
-glabel func_8005F5F4 # 6
+glabel __osPfsRWInode # 6
 /* 05F1A4 8005F5F4 27BDFFA8 */  addiu       $sp, $sp, -0x58
 /* 05F1A8 8005F5F8 AFB40030 */  sw          $s4, 0x30($sp)
 /* 05F1AC 8005F5FC 30D400FF */  andi        $s4, $a2, 0xff
@@ -650,16 +650,16 @@ glabel func_8005F5F4 # 6
 /* 05F1CC 8005F61C AFA60060 */  sw          $a2, 0x60($sp)
 /* 05F1D0 8005F620 16800011 */  bnez        $s4, .L8005F668
 /* 05F1D4 8005F624 AFA70064 */   sw         $a3, 0x64($sp)
-/* 05F1D8 8005F628 3C0F800A */  lui         $t7, %hi(D_8009FC14)
-/* 05F1DC 8005F62C 91EFFC14 */  lbu         $t7, %lo(D_8009FC14)($t7)
+/* 05F1D8 8005F628 3C0F800A */  lui         $t7, %hi(__osPfsInodeCacheBank)
+/* 05F1DC 8005F62C 91EFFC14 */  lbu         $t7, %lo(__osPfsInodeCacheBank)($t7)
 /* 05F1E0 8005F630 93B80067 */  lbu         $t8, 0x67($sp)
-/* 05F1E4 8005F634 3C19800A */  lui         $t9, %hi(D_8009FC10)
+/* 05F1E4 8005F634 3C19800A */  lui         $t9, %hi(__osPfsInodeCacheChannel)
 /* 05F1E8 8005F638 55F8000C */  bnel        $t7, $t8, .L8005F66C
 /* 05F1EC 8005F63C 92490065 */   lbu        $t1, 0x65($s2)
-/* 05F1F0 8005F640 8F39FC10 */  lw          $t9, %lo(D_8009FC10)($t9)
+/* 05F1F0 8005F640 8F39FC10 */  lw          $t9, %lo(__osPfsInodeCacheChannel)($t9)
 /* 05F1F4 8005F644 8C880008 */  lw          $t0, 0x8($a0)
-/* 05F1F8 8005F648 3C048010 */  lui         $a0, %hi(D_80100580)
-/* 05F1FC 8005F64C 24840580 */  addiu       $a0, $a0, %lo(D_80100580)
+/* 05F1F8 8005F648 3C048010 */  lui         $a0, %hi(__osPfsInodeCache)
+/* 05F1FC 8005F64C 24840580 */  addiu       $a0, $a0, %lo(__osPfsInodeCache)
 /* 05F200 8005F650 57280006 */  bnel        $t9, $t0, .L8005F66C
 /* 05F204 8005F654 92490065 */   lbu        $t1, 0x65($s2)
 /* 05F208 8005F658 0C014984 */  jal         bcopy
@@ -672,7 +672,7 @@ glabel func_8005F5F4 # 6
 /* 05F21C 8005F66C 02402025 */  move        $a0, $s2
 /* 05F220 8005F670 51200008 */  beql        $t1, $zero, .L8005F694
 /* 05F224 8005F674 93A30067 */   lbu        $v1, 0x67($sp)
-/* 05F228 8005F678 0C016204 */  jal         func_80058810
+/* 05F228 8005F678 0C016204 */  jal         __osPfsSelectBank
 /* 05F22C 8005F67C 00002825 */   move       $a1, $zero
 /* 05F230 8005F680 50400004 */  beql        $v0, $zero, .L8005F694
 /* 05F234 8005F684 93A30067 */   lbu        $v1, 0x67($sp)
@@ -698,7 +698,7 @@ glabel func_8005F5F4 # 6
 /* 05F278 8005F6C8 000D7040 */  sll         $t6, $t5, 1
 /* 05F27C 8005F6CC 25E50100 */  addiu       $a1, $t7, 0x100
 /* 05F280 8005F6D0 AFA3003C */  sw          $v1, 0x3c($sp)
-/* 05F284 8005F6D4 0C017B54 */  jal         func_8005ED50
+/* 05F284 8005F6D4 0C017B54 */  jal         __osSumcalc
 /* 05F288 8005F6D8 018E2021 */   addu       $a0, $t4, $t6
 /* 05F28C 8005F6DC 8FB8005C */  lw          $t8, 0x5c($sp)
 /* 05F290 8005F6E0 8FA3003C */  lw          $v1, 0x3c($sp)
@@ -718,7 +718,7 @@ glabel func_8005F5F4 # 6
 /* 05F2C0 8005F710 01103021 */  addu        $a2, $t0, $s0
 /* 05F2C4 8005F714 30C9FFFF */  andi        $t1, $a2, 0xffff
 /* 05F2C8 8005F718 01203025 */  move        $a2, $t1
-/* 05F2CC 8005F71C 0C0175A0 */  jal         func_8005D680
+/* 05F2CC 8005F71C 0C0175A0 */  jal         __osContRamWrite
 /* 05F2D0 8005F720 02203825 */   move       $a3, $s1
 /* 05F2D4 8005F724 8E4A0058 */  lw          $t2, 0x58($s2)
 /* 05F2D8 8005F728 8E440004 */  lw          $a0, 0x4($s2)
@@ -728,7 +728,7 @@ glabel func_8005F5F4 # 6
 /* 05F2E8 8005F738 30CCFFFF */  andi        $t4, $a2, 0xffff
 /* 05F2EC 8005F73C 01803025 */  move        $a2, $t4
 /* 05F2F0 8005F740 AFA00010 */  sw          $zero, 0x10($sp)
-/* 05F2F4 8005F744 0C0175A0 */  jal         func_8005D680
+/* 05F2F4 8005F744 0C0175A0 */  jal         __osContRamWrite
 /* 05F2F8 8005F748 02203825 */   move       $a3, $s1
 /* 05F2FC 8005F74C 1000000A */  b           .L8005F778
 /* 05F300 8005F750 00401825 */   move       $v1, $v0
@@ -739,7 +739,7 @@ glabel func_8005F5F4 # 6
 /* 05F310 8005F760 01D36821 */  addu        $t5, $t6, $s3
 /* 05F314 8005F764 01B03021 */  addu        $a2, $t5, $s0
 /* 05F318 8005F768 30CFFFFF */  andi        $t7, $a2, 0xffff
-/* 05F31C 8005F76C 0C016224 */  jal         func_80058890
+/* 05F31C 8005F76C 0C016224 */  jal         __osContRamRead
 /* 05F320 8005F770 01E03025 */   move       $a2, $t7
 /* 05F324 8005F774 00401825 */  move        $v1, $v0
 .L8005F778:
@@ -760,7 +760,7 @@ glabel func_8005F5F4 # 6
 /* 05F35C 8005F7AC 25250100 */  addiu       $a1, $t1, 0x100
 /* 05F360 8005F7B0 0308A021 */  addu        $s4, $t8, $t0
 /* 05F364 8005F7B4 02802025 */  move        $a0, $s4
-/* 05F368 8005F7B8 0C017B54 */  jal         func_8005ED50
+/* 05F368 8005F7B8 0C017B54 */  jal         __osSumcalc
 /* 05F36C 8005F7BC AFA5003C */   sw         $a1, 0x3c($sp)
 /* 05F370 8005F7C0 8FAB005C */  lw          $t3, 0x5c($sp)
 /* 05F374 8005F7C4 304A00FF */  andi        $t2, $v0, 0xff
@@ -777,14 +777,14 @@ glabel func_8005F5F4 # 6
 /* 05F39C 8005F7EC 01B03021 */  addu        $a2, $t5, $s0
 /* 05F3A0 8005F7F0 30CFFFFF */  andi        $t7, $a2, 0xffff
 /* 05F3A4 8005F7F4 01E03025 */  move        $a2, $t7
-/* 05F3A8 8005F7F8 0C016224 */  jal         func_80058890
+/* 05F3A8 8005F7F8 0C016224 */  jal         __osContRamRead
 /* 05F3AC 8005F7FC 02203825 */   move       $a3, $s1
 /* 05F3B0 8005F800 26100001 */  addiu       $s0, $s0, 0x1
 /* 05F3B4 8005F804 2A010008 */  slti        $at, $s0, 0x8
 /* 05F3B8 8005F808 1420FFF4 */  bnez        $at, .L8005F7DC
 /* 05F3BC 8005F80C 26310020 */   addiu      $s1, $s1, 0x20
 /* 05F3C0 8005F810 02802025 */  move        $a0, $s4
-/* 05F3C4 8005F814 0C017B54 */  jal         func_8005ED50
+/* 05F3C4 8005F814 0C017B54 */  jal         __osSumcalc
 /* 05F3C8 8005F818 8FA5003C */   lw         $a1, 0x3c($sp)
 /* 05F3CC 8005F81C 8FA8005C */  lw          $t0, 0x5c($sp)
 /* 05F3D0 8005F820 305800FF */  andi        $t8, $v0, 0xff
@@ -804,7 +804,7 @@ glabel func_8005F5F4 # 6
 /* 05F404 8005F854 30CCFFFF */  andi        $t4, $a2, 0xffff
 /* 05F408 8005F858 01803025 */  move        $a2, $t4
 /* 05F40C 8005F85C AFA00010 */  sw          $zero, 0x10($sp)
-/* 05F410 8005F860 0C0175A0 */  jal         func_8005D680
+/* 05F410 8005F860 0C0175A0 */  jal         __osContRamWrite
 /* 05F414 8005F864 02203825 */   move       $a3, $s1
 /* 05F418 8005F868 26100001 */  addiu       $s0, $s0, 0x1
 /* 05F41C 8005F86C 24010008 */  addiu       $at, $zero, 0x8
@@ -813,17 +813,17 @@ glabel func_8005F5F4 # 6
 .L8005F878:
 /* 05F428 8005F878 93AB0067 */  lbu         $t3, 0x67($sp)
 .L8005F87C:
-/* 05F42C 8005F87C 3C01800A */  lui         $at, %hi(D_8009FC14)
-/* 05F430 8005F880 3C058010 */  lui         $a1, %hi(D_80100580)
-/* 05F434 8005F884 24A50580 */  addiu       $a1, $a1, %lo(D_80100580)
+/* 05F42C 8005F87C 3C01800A */  lui         $at, %hi(__osPfsInodeCacheBank)
+/* 05F430 8005F880 3C058010 */  lui         $a1, %hi(__osPfsInodeCache)
+/* 05F434 8005F884 24A50580 */  addiu       $a1, $a1, %lo(__osPfsInodeCache)
 /* 05F438 8005F888 8FA4005C */  lw          $a0, 0x5c($sp)
 /* 05F43C 8005F88C 24060100 */  addiu       $a2, $zero, 0x100
 /* 05F440 8005F890 0C014984 */  jal         bcopy
-/* 05F444 8005F894 A02BFC14 */   sb         $t3, %lo(D_8009FC14)($at)
+/* 05F444 8005F894 A02BFC14 */   sb         $t3, %lo(__osPfsInodeCacheBank)($at)
 /* 05F448 8005F898 8E4E0008 */  lw          $t6, 0x8($s2)
-/* 05F44C 8005F89C 3C01800A */  lui         $at, %hi(D_8009FC10)
+/* 05F44C 8005F89C 3C01800A */  lui         $at, %hi(__osPfsInodeCacheChannel)
 /* 05F450 8005F8A0 00001025 */  move        $v0, $zero
-/* 05F454 8005F8A4 AC2EFC10 */  sw          $t6, %lo(D_8009FC10)($at)
+/* 05F454 8005F8A4 AC2EFC10 */  sw          $t6, %lo(__osPfsInodeCacheChannel)($at)
 .L8005F8A8:
 /* 05F458 8005F8A8 8FBF0034 */  lw          $ra, 0x34($sp)
 .L8005F8AC:

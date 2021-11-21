@@ -32,18 +32,18 @@ glabel func_8004C8A0 # 0
 /* 04C49C 8004C8EC 10000069 */  b           .L8004CA94
 /* 04C4A0 8004C8F0 8FBF0024 */   lw         $ra, 0x24($sp)
 .L8004C8F4:
-/* 04C4A4 8004C8F4 0C015608 */  jal         func_80055820
+/* 04C4A4 8004C8F4 0C015608 */  jal         __osContChannelReset
 /* 04C4A8 8004C8F8 02402825 */   move       $a1, $s2
 /* 04C4AC 8004C8FC 10400003 */  beqz        $v0, .L8004C90C
 /* 04C4B0 8004C900 00000000 */   nop
 /* 04C4B4 8004C904 10000062 */  b           .L8004CA90
 /* 04C4B8 8004C908 24020004 */   addiu      $v0, $zero, 0x4
 .L8004C90C:
-/* 04C4BC 8004C90C 0C014CB8 */  jal         func_800532E0
+/* 04C4BC 8004C90C 0C014CB8 */  jal         osGetCount
 /* 04C4C0 8004C910 00000000 */   nop
 /* 04C4C4 8004C914 240E0000 */  addiu       $t6, $zero, 0x0
 /* 04C4C8 8004C918 AFAE0040 */  sw          $t6, 0x40($sp)
-/* 04C4CC 8004C91C 0C014CB8 */  jal         func_800532E0
+/* 04C4CC 8004C91C 0C014CB8 */  jal         osGetCount
 /* 04C4D0 8004C920 AFA20044 */   sw         $v0, 0x44($sp)
 /* 04C4D4 8004C924 8FA80040 */  lw          $t0, 0x40($sp)
 /* 04C4D8 8004C928 8FA90044 */  lw          $t1, 0x44($sp)
@@ -58,7 +58,7 @@ glabel func_8004C8A0 # 0
 /* 04C4FC 8004C94C 50200011 */  beql        $at, $zero, .L8004C994
 /* 04C500 8004C950 02602025 */   move       $a0, $s3
 .L8004C954:
-/* 04C504 8004C954 0C014CB8 */  jal         func_800532E0
+/* 04C504 8004C954 0C014CB8 */  jal         osGetCount
 /* 04C508 8004C958 00000000 */   nop
 /* 04C50C 8004C95C 8FAE0040 */  lw          $t6, 0x40($sp)
 /* 04C510 8004C960 8FAF0044 */  lw          $t7, 0x44($sp)

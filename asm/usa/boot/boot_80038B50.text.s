@@ -2237,7 +2237,7 @@ glabel func_8003AA88 # 45
 /* 03A6A4 8003AAF4 014C6825 */  or          $t5, $t2, $t4
 /* 03A6A8 8003AAF8 03084825 */  or          $t1, $t8, $t0
 /* 03A6AC 8003AAFC AC8D0008 */  sw          $t5, 0x8($a0)
-/* 03A6B0 8003AB00 0C014CB8 */  jal         func_800532E0
+/* 03A6B0 8003AB00 0C014CB8 */  jal         osGetCount
 /* 03A6B4 8003AB04 AC890004 */   sw         $t1, 0x4($a0)
 /* 03A6B8 8003AB08 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 03A6BC 8003AB0C 3C04800F */  lui         $a0, %hi(D_800F2970)

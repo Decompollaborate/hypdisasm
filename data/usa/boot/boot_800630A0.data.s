@@ -62699,7 +62699,7 @@ glabel __osFaultedThread
 /* 09F458 8009F8A8 */ .word 0x00000000
 /* 09F45C 8009F8AC */ .word 0x00000000
 
-glabel D_8009F8B0
+glabel __osSiAccessQueueEnabled
 /* 09F460 8009F8B0 */ .word 0x00000000
 /* 09F464 8009F8B4 */ .word 0x00000000
 /* 09F468 8009F8B8 */ .word 0x00000000
@@ -62711,7 +62711,7 @@ glabel __osPfsLastChannel
 /* 09F478 8009F8C8 */ .word 0x00000000
 /* 09F47C 8009F8CC */ .word 0x00000000
 
-glabel D_8009F8D0
+glabel __osTimerList
 /* 09F480 8009F8D0 */ .word 0x80100330
 /* 09F484 8009F8D4 */ .word 0x00000000
 /* 09F488 8009F8D8 */ .word 0x00000000

@@ -200,7 +200,7 @@ glabel _Ldtob # 0
 /* 05DBFC 8005E04C 02602025 */   move       $a0, $s3
 .L8005E050:
 /* 05DC00 8005E050 02202825 */  move        $a1, $s1
-/* 05DC04 8005E054 0C017E34 */  jal         func_8005F8D0
+/* 05DC04 8005E054 0C017E34 */  jal         ldiv
 /* 05DC08 8005E058 2406000A */   addiu      $a2, $zero, 0xa
 /* 05DC0C 8005E05C 8FA80068 */  lw          $t0, 0x68($sp)
 /* 05DC10 8005E060 2652FFFF */  addiu       $s2, $s2, -0x1

@@ -9,74 +9,74 @@
 
 .balign 16
 
-glabel func_80058AC0 # 0
-/* 058670 80058AC0 3C018010 */  lui         $at, %hi(D_80100350)
+glabel __osTimerServicesInit # 0
+/* 058670 80058AC0 3C018010 */  lui         $at, %hi(__osCurrentTime)
 /* 058674 80058AC4 240E0000 */  addiu       $t6, $zero, 0x0
 /* 058678 80058AC8 240F0000 */  addiu       $t7, $zero, 0x0
-/* 05867C 80058ACC AC2F0354 */  sw          $t7, %lo(D_80100354)($at)
-/* 058680 80058AD0 AC2E0350 */  sw          $t6, %lo(D_80100350)($at)
-/* 058684 80058AD4 3C018010 */  lui         $at, %hi(D_80100358)
-/* 058688 80058AD8 3C18800A */  lui         $t8, %hi(D_8009F8D0)
-/* 05868C 80058ADC 8F18F8D0 */  lw          $t8, %lo(D_8009F8D0)($t8)
-/* 058690 80058AE0 AC200358 */  sw          $zero, %lo(D_80100358)($at)
-/* 058694 80058AE4 3C018010 */  lui         $at, %hi(D_8010035C)
-/* 058698 80058AE8 AC20035C */  sw          $zero, %lo(D_8010035C)($at)
-/* 05869C 80058AEC 3C19800A */  lui         $t9, %hi(D_8009F8D0)
+/* 05867C 80058ACC AC2F0354 */  sw          $t7, %lo(__osCurrentTime + 0x4)($at)
+/* 058680 80058AD0 AC2E0350 */  sw          $t6, %lo(__osCurrentTime)($at)
+/* 058684 80058AD4 3C018010 */  lui         $at, %hi(__osBaseCounter)
+/* 058688 80058AD8 3C18800A */  lui         $t8, %hi(__osTimerList)
+/* 05868C 80058ADC 8F18F8D0 */  lw          $t8, %lo(__osTimerList)($t8)
+/* 058690 80058AE0 AC200358 */  sw          $zero, %lo(__osBaseCounter)($at)
+/* 058694 80058AE4 3C018010 */  lui         $at, %hi(__osViIntrCount)
+/* 058698 80058AE8 AC20035C */  sw          $zero, %lo(__osViIntrCount)($at)
+/* 05869C 80058AEC 3C19800A */  lui         $t9, %hi(__osTimerList)
 /* 0586A0 80058AF0 AF180004 */  sw          $t8, 0x4($t8)
-/* 0586A4 80058AF4 8F39F8D0 */  lw          $t9, %lo(D_8009F8D0)($t9)
-/* 0586A8 80058AF8 3C09800A */  lui         $t1, %hi(D_8009F8D0)
+/* 0586A4 80058AF4 8F39F8D0 */  lw          $t9, %lo(__osTimerList)($t9)
+/* 0586A8 80058AF8 3C09800A */  lui         $t1, %hi(__osTimerList)
 /* 0586AC 80058AFC 240A0000 */  addiu       $t2, $zero, 0x0
 /* 0586B0 80058B00 8F280004 */  lw          $t0, 0x4($t9)
 /* 0586B4 80058B04 240B0000 */  addiu       $t3, $zero, 0x0
-/* 0586B8 80058B08 3C0C800A */  lui         $t4, %hi(D_8009F8D0)
+/* 0586B8 80058B08 3C0C800A */  lui         $t4, %hi(__osTimerList)
 /* 0586BC 80058B0C AF280000 */  sw          $t0, 0x0($t9)
-/* 0586C0 80058B10 8D29F8D0 */  lw          $t1, %lo(D_8009F8D0)($t1)
-/* 0586C4 80058B14 3C0D800A */  lui         $t5, %hi(D_8009F8D0)
-/* 0586C8 80058B18 3C18800A */  lui         $t8, %hi(D_8009F8D0)
+/* 0586C0 80058B10 8D29F8D0 */  lw          $t1, %lo(__osTimerList)($t1)
+/* 0586C4 80058B14 3C0D800A */  lui         $t5, %hi(__osTimerList)
+/* 0586C8 80058B18 3C18800A */  lui         $t8, %hi(__osTimerList)
 /* 0586CC 80058B1C AD2A0010 */  sw          $t2, 0x10($t1)
 /* 0586D0 80058B20 AD2B0014 */  sw          $t3, 0x14($t1)
-/* 0586D4 80058B24 8D8CF8D0 */  lw          $t4, %lo(D_8009F8D0)($t4)
+/* 0586D4 80058B24 8D8CF8D0 */  lw          $t4, %lo(__osTimerList)($t4)
 /* 0586D8 80058B28 8D8E0010 */  lw          $t6, 0x10($t4)
 /* 0586DC 80058B2C 8D8F0014 */  lw          $t7, 0x14($t4)
 /* 0586E0 80058B30 AD8E0008 */  sw          $t6, 0x8($t4)
 /* 0586E4 80058B34 AD8F000C */  sw          $t7, 0xc($t4)
-/* 0586E8 80058B38 8DADF8D0 */  lw          $t5, %lo(D_8009F8D0)($t5)
+/* 0586E8 80058B38 8DADF8D0 */  lw          $t5, %lo(__osTimerList)($t5)
 /* 0586EC 80058B3C ADA00018 */  sw          $zero, 0x18($t5)
-/* 0586F0 80058B40 8F18F8D0 */  lw          $t8, %lo(D_8009F8D0)($t8)
+/* 0586F0 80058B40 8F18F8D0 */  lw          $t8, %lo(__osTimerList)($t8)
 /* 0586F4 80058B44 03E00008 */  jr          $ra
 /* 0586F8 80058B48 AF00001C */   sw         $zero, 0x1c($t8)
 
-glabel func_80058B4C # 1
-/* 0586FC 80058B4C 3C0E800A */  lui         $t6, %hi(D_8009F8D0)
-/* 058700 80058B50 8DCEF8D0 */  lw          $t6, %lo(D_8009F8D0)($t6)
+glabel __osTimerInterrupt # 1
+/* 0586FC 80058B4C 3C0E800A */  lui         $t6, %hi(__osTimerList)
+/* 058700 80058B50 8DCEF8D0 */  lw          $t6, %lo(__osTimerList)($t6)
 /* 058704 80058B54 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 058708 80058B58 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 05870C 80058B5C 8DCF0000 */  lw          $t7, 0x0($t6)
 /* 058710 80058B60 11EE0054 */  beq         $t7, $t6, .L80058CB4
 /* 058714 80058B64 00000000 */   nop
 .L80058B68:
-/* 058718 80058B68 3C18800A */  lui         $t8, %hi(D_8009F8D0)
-/* 05871C 80058B6C 8F18F8D0 */  lw          $t8, %lo(D_8009F8D0)($t8)
+/* 058718 80058B68 3C18800A */  lui         $t8, %hi(__osTimerList)
+/* 05871C 80058B6C 8F18F8D0 */  lw          $t8, %lo(__osTimerList)($t8)
 /* 058720 80058B70 8F190000 */  lw          $t9, 0x0($t8)
 /* 058724 80058B74 17380006 */  bne         $t9, $t8, .L80058B90
 /* 058728 80058B78 AFB90024 */   sw         $t9, 0x24($sp)
-/* 05872C 80058B7C 0C0176C0 */  jal         func_8005DB00
+/* 05872C 80058B7C 0C0176C0 */  jal         __osSetCompare
 /* 058730 80058B80 00002025 */   move       $a0, $zero
-/* 058734 80058B84 3C018010 */  lui         $at, %hi(D_80100360)
+/* 058734 80058B84 3C018010 */  lui         $at, %hi(__osTimerCounter)
 /* 058738 80058B88 1000004A */  b           .L80058CB4
-/* 05873C 80058B8C AC200360 */   sw         $zero, %lo(D_80100360)($at)
+/* 05873C 80058B8C AC200360 */   sw         $zero, %lo(__osTimerCounter)($at)
 .L80058B90:
-/* 058740 80058B90 0C014CB8 */  jal         func_800532E0
+/* 058740 80058B90 0C014CB8 */  jal         osGetCount
 /* 058744 80058B94 00000000 */   nop
 /* 058748 80058B98 AFA20020 */  sw          $v0, 0x20($sp)
-/* 05874C 80058B9C 3C098010 */  lui         $t1, %hi(D_80100360)
-/* 058750 80058BA0 8D290360 */  lw          $t1, %lo(D_80100360)($t1)
+/* 05874C 80058B9C 3C098010 */  lui         $t1, %hi(__osTimerCounter)
+/* 058750 80058BA0 8D290360 */  lw          $t1, %lo(__osTimerCounter)($t1)
 /* 058754 80058BA4 8FA80020 */  lw          $t0, 0x20($sp)
 /* 058758 80058BA8 8FAF0024 */  lw          $t7, 0x24($sp)
-/* 05875C 80058BAC 3C018010 */  lui         $at, %hi(D_80100360)
+/* 05875C 80058BAC 3C018010 */  lui         $at, %hi(__osTimerCounter)
 /* 058760 80058BB0 01095023 */  subu        $t2, $t0, $t1
 /* 058764 80058BB4 AFAA001C */  sw          $t2, 0x1c($sp)
-/* 058768 80058BB8 AC280360 */  sw          $t0, %lo(D_80100360)($at)
+/* 058768 80058BB8 AC280360 */  sw          $t0, %lo(__osTimerCounter)($at)
 /* 05876C 80058BBC 8DEE0010 */  lw          $t6, 0x10($t7)
 /* 058770 80058BC0 8FAB001C */  lw          $t3, 0x1c($sp)
 /* 058774 80058BC4 240C0000 */  addiu       $t4, $zero, 0x0
@@ -103,7 +103,7 @@ glabel func_80058B4C # 1
 /* 0587C4 80058C14 AF280010 */  sw          $t0, 0x10($t9)
 /* 0587C8 80058C18 8FAE0024 */  lw          $t6, 0x24($sp)
 /* 0587CC 80058C1C 8DC40010 */  lw          $a0, 0x10($t6)
-/* 0587D0 80058C20 0C016331 */  jal         func_80058CC4
+/* 0587D0 80058C20 0C016331 */  jal         __osSetTimerIntr
 /* 0587D4 80058C24 8DC50014 */   lw         $a1, 0x14($t6)
 /* 0587D8 80058C28 10000022 */  b           .L80058CB4
 /* 0587DC 80058C2C 00000000 */   nop
@@ -139,7 +139,7 @@ glabel func_80058B4C # 1
 .L80058C9C:
 /* 05884C 80058C9C ADF80010 */  sw          $t8, 0x10($t7)
 /* 058850 80058CA0 ADF90014 */  sw          $t9, 0x14($t7)
-/* 058854 80058CA4 0C016359 */  jal         func_80058D64
+/* 058854 80058CA4 0C016359 */  jal         __osInsertTimer
 /* 058858 80058CA8 8FA40024 */   lw         $a0, 0x24($sp)
 /* 05885C 80058CAC 1000FFAE */  b           .L80058B68
 /* 058860 80058CB0 00000000 */   nop
@@ -149,7 +149,7 @@ glabel func_80058B4C # 1
 /* 05886C 80058CBC 03E00008 */  jr          $ra
 /* 058870 80058CC0 00000000 */   nop
 
-glabel func_80058CC4 # 2
+glabel __osSetTimerIntr # 2
 /* 058874 80058CC4 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 058878 80058CC8 AFA40028 */  sw          $a0, 0x28($sp)
 /* 05887C 80058CCC 8FAE0028 */  lw          $t6, 0x28($sp)
@@ -167,12 +167,12 @@ glabel func_80058CC4 # 2
 .L80058CFC:
 /* 0588AC 80058CFC 0C015FFC */  jal         __osDisableInt
 /* 0588B0 80058D00 00000000 */   nop
-/* 0588B4 80058D04 0C014CB8 */  jal         func_800532E0
+/* 0588B4 80058D04 0C014CB8 */  jal         osGetCount
 /* 0588B8 80058D08 AFA2001C */   sw         $v0, 0x1c($sp)
-/* 0588BC 80058D0C 3C018010 */  lui         $at, %hi(D_80100360)
-/* 0588C0 80058D10 AC220360 */  sw          $v0, %lo(D_80100360)($at)
-/* 0588C4 80058D14 3C088010 */  lui         $t0, %hi(D_80100360)
-/* 0588C8 80058D18 8D080360 */  lw          $t0, %lo(D_80100360)($t0)
+/* 0588BC 80058D0C 3C018010 */  lui         $at, %hi(__osTimerCounter)
+/* 0588C0 80058D10 AC220360 */  sw          $v0, %lo(__osTimerCounter)($at)
+/* 0588C4 80058D14 3C088010 */  lui         $t0, %hi(__osTimerCounter)
+/* 0588C8 80058D18 8D080360 */  lw          $t0, %lo(__osTimerCounter)($t0)
 /* 0588CC 80058D1C 8FAD002C */  lw          $t5, 0x2c($sp)
 /* 0588D0 80058D20 8FAC0028 */  lw          $t4, 0x28($sp)
 /* 0588D4 80058D24 01005825 */  move        $t3, $t0
@@ -183,7 +183,7 @@ glabel func_80058CC4 # 2
 /* 0588E8 80058D38 01CC7021 */  addu        $t6, $t6, $t4
 /* 0588EC 80058D3C AFAE0020 */  sw          $t6, 0x20($sp)
 /* 0588F0 80058D40 AFAF0024 */  sw          $t7, 0x24($sp)
-/* 0588F4 80058D44 0C0176C0 */  jal         func_8005DB00
+/* 0588F4 80058D44 0C0176C0 */  jal         __osSetCompare
 /* 0588F8 80058D48 01E02025 */   move       $a0, $t7
 /* 0588FC 80058D4C 0C016018 */  jal         __osRestoreInt
 /* 058900 80058D50 8FA4001C */   lw         $a0, 0x1c($sp)
@@ -192,13 +192,13 @@ glabel func_80058CC4 # 2
 /* 05890C 80058D5C 03E00008 */  jr          $ra
 /* 058910 80058D60 00000000 */   nop
 
-glabel func_80058D64 # 3
+glabel __osInsertTimer # 3
 /* 058914 80058D64 27BDFFC8 */  addiu       $sp, $sp, -0x38
 /* 058918 80058D68 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 05891C 80058D6C 0C015FFC */  jal         __osDisableInt
 /* 058920 80058D70 AFA40038 */   sw         $a0, 0x38($sp)
-/* 058924 80058D74 3C0E800A */  lui         $t6, %hi(D_8009F8D0)
-/* 058928 80058D78 8DCEF8D0 */  lw          $t6, %lo(D_8009F8D0)($t6)
+/* 058924 80058D74 3C0E800A */  lui         $t6, %hi(__osTimerList)
+/* 058928 80058D78 8DCEF8D0 */  lw          $t6, %lo(__osTimerList)($t6)
 /* 05892C 80058D7C AFA20024 */  sw          $v0, 0x24($sp)
 /* 058930 80058D80 8FB80038 */  lw          $t8, 0x38($sp)
 /* 058934 80058D84 8DCF0000 */  lw          $t7, 0x0($t6)
@@ -225,7 +225,7 @@ glabel func_80058D64 # 3
 /* 058984 80058DD4 8F2C0000 */  lw          $t4, 0x0($t9)
 /* 058988 80058DD8 8F0F0014 */  lw          $t7, 0x14($t8)
 /* 05898C 80058DDC 8F0E0010 */  lw          $t6, 0x10($t8)
-/* 058990 80058DE0 3C18800A */  lui         $t8, %hi(D_8009F8D0)
+/* 058990 80058DE0 3C18800A */  lui         $t8, %hi(__osTimerList)
 /* 058994 80058DE4 01AF082B */  sltu        $at, $t5, $t7
 /* 058998 80058DE8 018E4023 */  subu        $t0, $t4, $t6
 /* 05899C 80058DEC 01014023 */  subu        $t0, $t0, $at
@@ -233,7 +233,7 @@ glabel func_80058D64 # 3
 /* 0589A4 80058DF4 AF290004 */  sw          $t1, 0x4($t9)
 /* 0589A8 80058DF8 AF280000 */  sw          $t0, 0x0($t9)
 /* 0589AC 80058DFC 8FAA0034 */  lw          $t2, 0x34($sp)
-/* 0589B0 80058E00 8F18F8D0 */  lw          $t8, %lo(D_8009F8D0)($t8)
+/* 0589B0 80058E00 8F18F8D0 */  lw          $t8, %lo(__osTimerList)($t8)
 /* 0589B4 80058E04 8D4B0000 */  lw          $t3, 0x0($t2)
 /* 0589B8 80058E08 1178000D */  beq         $t3, $t8, .L80058E40
 /* 0589BC 80058E0C AFAB0034 */   sw         $t3, 0x34($sp)
@@ -253,10 +253,10 @@ glabel func_80058D64 # 3
 /* 0589F0 80058E40 8FB90038 */  lw          $t9, 0x38($sp)
 /* 0589F4 80058E44 8FA80028 */  lw          $t0, 0x28($sp)
 /* 0589F8 80058E48 8FA9002C */  lw          $t1, 0x2c($sp)
-/* 0589FC 80058E4C 3C18800A */  lui         $t8, %hi(D_8009F8D0)
+/* 0589FC 80058E4C 3C18800A */  lui         $t8, %hi(__osTimerList)
 /* 058A00 80058E50 AF280010 */  sw          $t0, 0x10($t9)
 /* 058A04 80058E54 AF290014 */  sw          $t1, 0x14($t9)
-/* 058A08 80058E58 8F18F8D0 */  lw          $t8, %lo(D_8009F8D0)($t8)
+/* 058A08 80058E58 8F18F8D0 */  lw          $t8, %lo(__osTimerList)($t8)
 /* 058A0C 80058E5C 8FAA0034 */  lw          $t2, 0x34($sp)
 /* 058A10 80058E60 1158000D */  beq         $t2, $t8, .L80058E98
 /* 058A14 80058E64 00000000 */   nop

@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80055820 # 0
+glabel __osContChannelReset # 0
 /* 0553D0 80055820 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 0553D4 80055824 3C028010 */  lui         $v0, %hi(__osPfsPifRam)
 /* 0553D8 80055828 AFBF0014 */  sw          $ra, 0x14($sp)

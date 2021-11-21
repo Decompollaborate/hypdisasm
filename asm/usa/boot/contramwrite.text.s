@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005D680 # 0
+glabel __osContRamWrite # 0
 /* 05D230 8005D680 27BDFF98 */  addiu       $sp, $sp, -0x68
 /* 05D234 8005D684 8FAF0078 */  lw          $t7, 0x78($sp)
 /* 05D238 8005D688 AFB5002C */  sw          $s5, 0x2c($sp)
@@ -138,7 +138,7 @@ glabel func_8005D680 # 0
 /* 05D404 8005D854 02A02025 */  move        $a0, $s5
 /* 05D408 8005D858 51720009 */  beql        $t3, $s2, .L8005D880
 /* 05D40C 8005D85C 24010004 */   addiu      $at, $zero, 0x4
-/* 05D410 8005D860 0C017634 */  jal         func_8005D8D0
+/* 05D410 8005D860 0C017634 */  jal         __osPfsGetStatus
 /* 05D414 8005D864 02202825 */   move       $a1, $s1
 /* 05D418 8005D868 14400009 */  bnez        $v0, .L8005D890
 /* 05D41C 8005D86C 00401825 */   move       $v1, $v0

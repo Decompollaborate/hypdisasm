@@ -9,16 +9,16 @@
 
 .balign 16
 
-glabel func_8005D8D0 # 0
+glabel __osPfsGetStatus # 0
 /* 05D480 8005D8D0 27BDFFD0 */  addiu       $sp, $sp, -0x30
 /* 05D484 8005D8D4 AFA40030 */  sw          $a0, 0x30($sp)
 /* 05D488 8005D8D8 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 05D48C 8005D8DC AFA50034 */  sw          $a1, 0x34($sp)
 /* 05D490 8005D8E0 240E00FA */  addiu       $t6, $zero, 0xfa
-/* 05D494 8005D8E4 3C01800A */  lui         $at, %hi(D_8009FC14)
+/* 05D494 8005D8E4 3C01800A */  lui         $at, %hi(__osPfsInodeCacheBank)
 /* 05D498 8005D8E8 00A02025 */  move        $a0, $a1
-/* 05D49C 8005D8EC A02EFC14 */  sb          $t6, %lo(D_8009FC14)($at)
-/* 05D4A0 8005D8F0 0C017668 */  jal         func_8005D9A0
+/* 05D49C 8005D8EC A02EFC14 */  sb          $t6, %lo(__osPfsInodeCacheBank)($at)
+/* 05D4A0 8005D8F0 0C017668 */  jal         __osPfsRequestOneChannel
 /* 05D4A4 8005D8F4 00002825 */   move       $a1, $zero
 /* 05D4A8 8005D8F8 3C058010 */  lui         $a1, %hi(__osPfsPifRam)
 /* 05D4AC 8005D8FC 24A50390 */  addiu       $a1, $a1, %lo(__osPfsPifRam)
@@ -38,7 +38,7 @@ glabel func_8005D8D0 # 0
 /* 05D4E4 8005D934 0C014554 */  jal         osRecvMesg
 /* 05D4E8 8005D938 24060001 */   addiu      $a2, $zero, 0x1
 /* 05D4EC 8005D93C 8FA40034 */  lw          $a0, 0x34($sp)
-/* 05D4F0 8005D940 0C017699 */  jal         func_8005DA64
+/* 05D4F0 8005D940 0C017699 */  jal         __osPfsGetOneChannelData
 /* 05D4F4 8005D944 27A50024 */   addiu      $a1, $sp, 0x24
 /* 05D4F8 8005D948 93A20026 */  lbu         $v0, 0x26($sp)
 /* 05D4FC 8005D94C 93B80027 */  lbu         $t8, 0x27($sp)
@@ -67,7 +67,7 @@ glabel func_8005D8D0 # 0
 /* 05D548 8005D998 03E00008 */  jr          $ra
 /* 05D54C 8005D99C 27BD0030 */   addiu      $sp, $sp, 0x30
 
-glabel func_8005D9A0 # 1
+glabel __osPfsRequestOneChannel # 1
 /* 05D550 8005D9A0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 05D554 8005D9A4 3C068010 */  lui         $a2, %hi(__osPfsPifRam)
 /* 05D558 8005D9A8 240700FE */  addiu       $a3, $zero, 0xfe
@@ -121,7 +121,7 @@ glabel func_8005D9A0 # 1
 /* 05D60C 8005DA5C 03E00008 */  jr          $ra
 /* 05D610 8005DA60 A04DFFFF */   sb         $t5, -0x1($v0)
 
-glabel func_8005DA64 # 2
+glabel __osPfsGetOneChannelData # 2
 /* 05D614 8005DA64 3C028010 */  lui         $v0, %hi(__osPfsPifRam)
 /* 05D618 8005DA68 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 05D61C 8005DA6C 24420390 */  addiu       $v0, $v0, %lo(__osPfsPifRam)

@@ -130,7 +130,7 @@ glabel _Litob # 0
 /* 05D860 8005DCB0 8FA60040 */  lw          $a2, 0x40($sp)
 /* 05D864 8005DCB4 8FA70044 */  lw          $a3, 0x44($sp)
 /* 05D868 8005DCB8 AFAE0010 */  sw          $t6, 0x10($sp)
-/* 05D86C 8005DCBC 0C017E55 */  jal         func_8005F954
+/* 05D86C 8005DCBC 0C017E55 */  jal         lldiv
 /* 05D870 8005DCC0 AFAF0014 */   sw         $t7, 0x14($sp)
 /* 05D874 8005DCC4 8FB80050 */  lw          $t8, 0x50($sp)
 /* 05D878 8005DCC8 8FB90054 */  lw          $t9, 0x54($sp)

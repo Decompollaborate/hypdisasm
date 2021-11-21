@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_800575B0 # 0
+glabel __osSiRawWriteIo # 0
 /* 057160 800575B0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 057164 800575B4 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 057168 800575B8 AFA40018 */  sw          $a0, 0x18($sp)

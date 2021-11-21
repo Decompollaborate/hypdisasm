@@ -1254,134 +1254,128 @@ glabel D_800FDB80
 glabel __osEventStateTab
 /* 0A8E28 800FDB90 */  .space  0x80
 
-glabel D_800FDC10
-/* 0A8E2C 800FDC10 */  .space  0x3C
-
-glabel D_800FDC4C
-/* 0A8E30 800FDC4C */  .space  0x04
+glabel __osContPifRam
+/* 0A8E2C 800FDC10 */  .space  0x40
 
 glabel __osContLastPoll
-/* 0A8E34 800FDC50 */  .space  0x01
+/* 0A8E30 800FDC50 */  .space  0x01
 
-glabel D_800FDC51
-/* 0A8E38 800FDC51 */  .space  0x27
+glabel __osMaxControllers
+/* 0A8E34 800FDC51 */  .space  0x27
 
 glabel D_800FDC78
-/* 0A8E3C 800FDC78 */  .space  0x18
+/* 0A8E38 800FDC78 */  .space  0x18
 
 glabel D_800FDC90
-/* 0A8E40 800FDC90 */  .space  0x10
+/* 0A8E3C 800FDC90 */  .space  0x10
 
-glabel D_800FDCA0
-/* 0A8E44 800FDCA0 */  .space  0x100
+glabel osPifBuffers
+/* 0A8E40 800FDCA0 */  .space  0x100
 
 glabel D_800FDDA0
-/* 0A8E48 800FDDA0 */  .space  0x04
+/* 0A8E44 800FDDA0 */  .space  0x04
 
 glabel D_800FDDA4
-/* 0A8E4C 800FDDA4 */  .space  0x3C
+/* 0A8E48 800FDDA4 */  .space  0x3C
 
 glabel D_800FDDE0
-/* 0A8E50 800FDDE0 */  .space  0x04
+/* 0A8E4C 800FDDE0 */  .space  0x04
 
 glabel D_800FDDE4
-/* 0A8E54 800FDDE4 */  .space  0x04
+/* 0A8E50 800FDDE4 */  .space  0x04
 
 glabel D_800FDDE8
-/* 0A8E58 800FDDE8 */  .space  0x74
+/* 0A8E54 800FDDE8 */  .space  0x74
 
 glabel D_800FDE5C
-/* 0A8E5C 800FDE5C */  .space  0x04
+/* 0A8E58 800FDE5C */  .space  0x04
 
 glabel D_800FDE60
-/* 0A8E60 800FDE60 */  .space  0x70
+/* 0A8E5C 800FDE60 */  .space  0x70
 
 glabel D_800FDED0
-/* 0A8E64 800FDED0 */  .space  0x11B0
+/* 0A8E60 800FDED0 */  .space  0x11B0
 
 glabel D_800FF080
-/* 0A8E68 800FF080 */  .space  0x18
+/* 0A8E64 800FF080 */  .space  0x18
 
 glabel D_800FF098
-/* 0A8E6C 800FF098 */  .space  0x08
+/* 0A8E68 800FF098 */  .space  0x08
 
 glabel D_800FF0A0
-/* 0A8E70 800FF0A0 */  .space  0x11B0
+/* 0A8E6C 800FF0A0 */  .space  0x11B0
 
 glabel D_80100250
-/* 0A8E74 80100250 */  .space  0x18
+/* 0A8E70 80100250 */  .space  0x18
 
 glabel D_80100268
-/* 0A8E78 80100268 */  .space  0x18
+/* 0A8E74 80100268 */  .space  0x18
 
 glabel D_80100280
-/* 0A8E7C 80100280 */  .space  0x18
+/* 0A8E78 80100280 */  .space  0x18
 
 glabel D_80100298
-/* 0A8E80 80100298 */  .space  0x18
+/* 0A8E7C 80100298 */  .space  0x18
 
 glabel D_801002B0
-/* 0A8E84 801002B0 */  .space  0x10
+/* 0A8E80 801002B0 */  .space  0x10
 
 glabel D_801002C0
-/* 0A8E88 801002C0 */  .space  0x10
+/* 0A8E84 801002C0 */  .space  0x10
 
 glabel D_801002D0
-/* 0A8E8C 801002D0 */  .space  0x08
+/* 0A8E88 801002D0 */  .space  0x08
 
 glabel D_801002D8
-/* 0A8E90 801002D8 */  .space  0x08
+/* 0A8E8C 801002D8 */  .space  0x08
 
 glabel D_801002E0
-/* 0A8E94 801002E0 */  .space  0x08
+/* 0A8E90 801002E0 */  .space  0x08
 
 glabel D_801002E8
-/* 0A8E98 801002E8 */  .space  0x04
+/* 0A8E94 801002E8 */  .space  0x04
 
 glabel D_801002EC
-/* 0A8E9C 801002EC */  .space  0x04
+/* 0A8E98 801002EC */  .space  0x04
 
 glabel D_801002F0
-/* 0A8EA0 801002F0 */  .space  0x08
+/* 0A8E9C 801002F0 */  .space  0x08
 
 glabel D_801002F8
-/* 0A8EA4 801002F8 */  .space  0x08
+/* 0A8EA0 801002F8 */  .space  0x08
 
 glabel D_80100300
-/* 0A8EA8 80100300 */  .space  0x10
+/* 0A8EA4 80100300 */  .space  0x10
 
-glabel D_80100310
-/* 0A8EAC 80100310 */  .space  0x08
+glabel siAccessBuf
+/* 0A8EA8 80100310 */  .space  0x08
 
-glabel D_80100318
-/* 0A8EB0 80100318 */  .space  0x38
+glabel __osSiAccessQueue
+/* 0A8EAC 80100318 */  .space  0x38
 
-glabel D_80100350
-/* 0A8EB4 80100350 */  .space  0x04
+glabel __osCurrentTime
+/* 0A8EB0 80100350 */  .space  0x08
 
-glabel D_80100354
-/* 0A8EB8 80100354 */  .space  0x04
+glabel __osBaseCounter
+/* 0A8EB4 80100358 */  .space  0x04
 
-glabel D_80100358
-/* 0A8EBC 80100358 */  .space  0x04
+glabel __osViIntrCount
+/* 0A8EB8 8010035C */  .space  0x04
 
-glabel D_8010035C
-/* 0A8EC0 8010035C */  .space  0x04
-
-glabel D_80100360
-/* 0A8EC4 80100360 */  .space  0x10
+glabel __osTimerCounter
+/* 0A8EBC 80100360 */  .space  0x10
 
 glabel D_80100370
-/* 0A8EC8 80100370 */  .space  0x08
+/* 0A8EC0 80100370 */  .space  0x08
 
 glabel D_80100378
-/* 0A8ECC 80100378 */  .space  0x18
+/* 0A8EC4 80100378 */  .space  0x18
 
 glabel __osPfsPifRam
-/* 0A8ED0 80100390 */  .space  0x40
+/* 0A8EC8 80100390 */  .space  0x40
 
 glabel __osThreadSave
-/* 0A8ED4 801003D0 */  .space  0x1B0
+/* 0A8ECC 801003D0 */  .space  0x1B0
 
-glabel D_80100580
-/* 0A8ED8 80100580 */  .space  0x100
+glabel __osPfsInodeCache
+/* 0A8ED0 80100580 */  .space  0x100

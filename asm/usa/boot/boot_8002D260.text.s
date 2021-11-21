@@ -77,7 +77,7 @@ glabel func_8002D348 # 2
 /* 02CF00 8002D350 0C002C3F */  jal         func_8000B0FC
 /* 02CF04 8002D354 AFA40020 */   sw         $a0, 0x20($sp)
 /* 02CF08 8002D358 00402025 */  move        $a0, $v0
-/* 02CF0C 8002D35C 0C0148C6 */  jal         func_80052318
+/* 02CF0C 8002D35C 0C0148C6 */  jal         __ull_to_f
 /* 02CF10 8002D360 00602825 */   move       $a1, $v1
 /* 02CF14 8002D364 3C0E800F */  lui         $t6, %hi(D_800F1BDC)
 /* 02CF18 8002D368 8DCE1BDC */  lw          $t6, %lo(D_800F1BDC)($t6)
