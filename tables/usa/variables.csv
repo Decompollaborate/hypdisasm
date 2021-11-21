@@ -1,17 +1,18 @@
+
 8009DC7C,__osShutdown,s32,4
 8009DC80,__OSGlobalIntMask,u32,4
-8009EE70,sintable,s16,0x800
 8009EE40,__osPiDevMgr,OSDevMgr,0x1C
 8009EE60,__osCurrentHandle,OSPiHandle*,4
+8009EE70,sintable,s16,0x800
 8009F68C,__additional_scanline,u32,4
 8009F860,__osIntTable,__osHwInt[],0x28
 8009F888,__osPiIntTable,__osHwInt[],0x28
 8009F890,__osThreadTail,OSThread*,4
 8009F898,__osRunQueue,OSThread*,4
-8009F8B0,__osSiAccessQueueEnabled,u32,4
 8009F89C,__osActiveQueue,UNK_TYPE,4
 8009F8A0,__osRunningThread,OSThread*,4
 8009F8A4,__osFaultedThread,OSThread*,4
+8009F8B0,__osSiAccessQueueEnabled,u32,4
 8009F8C0,__osPfsLastChannel,s32,4
 8009F8D0,__osTimerList,OSTimer*,4
 8009F950,__osViCurr,__OSViContext*,4
@@ -22,8 +23,6 @@
 8009FBF4,udigs,char,0x10
 8009FC10,__osPfsInodeCacheChannel,s32,4
 8009FC14,__osPfsInodeCacheBank,u8,1
-800FDC10,__osContPifRam,OSPifRam,0x40
-800FDC51,__osMaxControllers,u8,1
 800A78E4,_faultstring_cause,char,6
 800A7B74,_faultstring_FiT,char,4
 800A7E60,__libm_qnan_f,f32,4
@@ -35,7 +34,10 @@
 800AE500,D_800AE500_RomRamTableIndex,UNK_TYPE4,4
 800B6538,D_800B6538,UNK_TYPE,4
 800FDB90,__osEventStateTab,__OSEventState[],0x80
+800FDC10,__osContPifRam,OSPifRam,0x40
 800FDC50,__osContLastPoll,u8,1
+800FDC51,__osMaxControllers,u8,1
+800FDCA0,osPifBuffers,OSPifRam[4],0x100
 80100310,siAccessBuf,OSMesg,4
 80100318,__osSiAccessQueue,OSMesgQueue,0x18
 80100350,__osCurrentTime,OSTime,8
@@ -47,5 +49,3 @@
 80100580,__osPfsInodeCache,__OSInode,0x100
 801235A4,D_801235A4_RomRamTable,UNK_TYPE24,0x33C
 8015E4A0,D_8015E4A0,UNK_TYPE,4
-
-800FDCA0,osPifBuffers,OSPifRam[4],0x100

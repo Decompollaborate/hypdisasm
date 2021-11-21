@@ -29,7 +29,6 @@
 80051550,osRecvMesg
 80051690,osYieldThread
 800516E0,osCreateMesgQueue
-
 80051900,osContSetCh
 80051960,osContInit
 80051ABC,__osContGetInitData
