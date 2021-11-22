@@ -16,7 +16,7 @@ rm -f ver/us/build/"${ELF}" "${TARGET_ROM}"
 ./tools/extract_baserom.elf us ver/us/"${BASE_ROM}"
 
 # Create build directories
-mkdir -p build/baserom/us
+mkdir -p ver/us/build/
 find ver/us/asm/ -type d | sed 's/asm\//build\/asm\//' | xargs mkdir -p
 
 # Binary copy the baserom
