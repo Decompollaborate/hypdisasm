@@ -11,10 +11,6 @@ def main():
     args = parser.parse_args()
 
     version = args.version
-    # HACK until we change usa to us everywhere
-    if version == "us" and not os.path.exists(os.path.join("tables", "us")):
-        version = "usa"
-
 
     with open(args.path) as f:
         head, tail = os.path.split(args.path)

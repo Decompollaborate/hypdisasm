@@ -15,7 +15,7 @@ Region GetRegion(const char *regionParameter) {
     if (strcmp(regionParameter, "jp") == 0) {
         return REGION_JP;
     }
-    if (strcmp(regionParameter, "usa") == 0) {
+    if (strcmp(regionParameter, "us") == 0) {
         return REGION_US;
     }
     return REGION_INVALID;
@@ -28,7 +28,7 @@ FILE *OpenFilelist(Region region) {
         break;
 
     case REGION_US:
-        return fopen("tables/usa/filelist.txt", "r");
+        return fopen("tables/us/filelist.txt", "r");
         break;
 
     case REGION_INVALID:
@@ -103,7 +103,7 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
 int main(int argc, char *argv[]) {
     if (argc < 3) {
         fprintf(stderr, "Usage: %s region rompath\n", argv[0]);
-        fprintf(stderr, " region must be 'usa' or 'jp'\n");
+        fprintf(stderr, " region must be 'us' or 'jp'\n");
         fprintf(stderr, " rompath is a path to a .z64 ROM\n");
         exit(EXIT_FAILURE);
     }
@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
     Region region = GetRegion(argv[1]);
     if (region == REGION_INVALID) {
         fprintf(stderr, "Invalid region: '%s'\n", argv[1]);
-        fprintf(stderr, "region must be 'usa' or 'jp'\n");
+        fprintf(stderr, "region must be 'us' or 'jp'\n");
         exit(EXIT_FAILURE);
     }
 

@@ -9,4 +9,4 @@
 
 .balign 16
 
-.incbin "baserom/usa/makerom.bin", 0x40, 0xFC0
+.incbin "baserom/us/makerom.bin", 0x40, 0xFC0

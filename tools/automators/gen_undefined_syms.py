@@ -36,9 +36,6 @@ def main():
     args = parser.parse_args()
 
     version = args.version
-    # HACK until we change usa to us everywhere
-    if version == "us" and not os.path.exists(os.path.join("context", "us")):
-        version = "usa"
 
     undefinedSymbols, definedSymbols = getSyms(version)
 

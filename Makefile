@@ -32,7 +32,7 @@ MIPS_VERSION := -mips2
 
 
 # create asm directories
-$(shell mkdir -p asm data baserom/usa baserom/jp)
+$(shell mkdir -p asm data baserom/ baserom/jp)
 
 
 
