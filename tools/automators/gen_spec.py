@@ -5,8 +5,8 @@ import sys
 import os
 
 def main():
-    parser = argparse.ArgumentParser(description="")
-    parser.add_argument("path", help="")
+    parser = argparse.ArgumentParser(description="Generates a spec seg based on a csv file")
+    parser.add_argument("path", help="Path to a csv file with the splits of a file")
     parser.add_argument("-v", "--version", help="Version (default: us)", default="us", choices=["us","jp"])
     args = parser.parse_args()
 
