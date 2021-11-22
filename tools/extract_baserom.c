@@ -24,11 +24,11 @@ Region GetRegion(const char *regionParameter) {
 FILE *OpenFilelist(Region region) {
     switch (region) {
     case REGION_JP:
-        return fopen("tables/jp/filelist.txt", "r");
+        return fopen("ver/jp/tables/filelist.txt", "r");
         break;
 
     case REGION_US:
-        return fopen("tables/us/filelist.txt", "r");
+        return fopen("ver/us/tables/filelist.txt", "r");
         break;
 
     case REGION_INVALID:
@@ -67,7 +67,7 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
             break;
         }
 
-        snprintf(outputFilepath, 300, "baserom/%s/%s.bin", regionName, filename_last);
+        snprintf(outputFilepath, 300, "ver/%s/baserom/%s.bin", regionName, filename_last);
         printf("Writing '%s'. From offset %06X to %06X\n", outputFilepath, offset_last, offset);
 
         FILE* outputFile = fopen(outputFilepath, "wb");
@@ -83,7 +83,7 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
     }
 
     if (romsize - offset_last > 0){
-        snprintf(outputFilepath, 300, "baserom/%s/%s.bin", regionName, filename_last);
+        snprintf(outputFilepath, 300, "ver/%s/baserom/%s.bin", regionName, filename_last);
         printf("Writing '%s'. From offset %06X to %06zX\n", outputFilepath, offset_last, romsize);
 
         FILE* outputFile = fopen(outputFilepath, "wb");

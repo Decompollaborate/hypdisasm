@@ -1,7 +1,7 @@
 MAKEFLAGS += --no-builtin-rules
 
 # Build options can either be changed by modifying the makefile, or by building with 'make SETTING=value'
-
+VERSION  ?= us
 
 MAKE = make
 CPPFLAGS += -P
@@ -32,12 +32,13 @@ MIPS_VERSION := -mips2
 
 
 # create asm directories
-$(shell mkdir -p asm data baserom/ baserom/jp)
+$(shell mkdir -p ver/$(VERSION)/baserom/ ver/$(VERSION)/asm/text ver/$(VERSION)/asm/data)
 
 
 
 # create build directories
-# $(shell mkdir -p build/baserom $(foreach dir,$(SRC_DIRS) $(ASM_DIRS) $(ASSET_BIN_DIRS),build/$(dir)))
+$(shell mkdir -p ver/$(VERSION)/build/baserom)
+# $(shell mkdir -p ver/$(VERSION)/build/baserom $(foreach dir,$(SRC_DIRS) $(ASM_DIRS) $(ASSET_BIN_DIRS),build/$(dir)))
 
 
 .PHONY: setup
@@ -49,11 +50,11 @@ setup:
 
 
 
-build/baserom/%.o: baserom/%.bin
+ver/$(VERSION)/build/baserom/%.o: ver/$(VERSION)/baserom/%.bin
 	$(OBJCOPY) -I binary -O elf32-big $< $@
 
-build/asm/%.o: asm/%.s
+ver/$(VERSION)/build/asm/text/%.o: ver/$(VERSION)/asm/text/%.s
 	$(AS) $(ASFLAGS) $< -o $@
 
-build/data/%.o: data/%.s
+ver/$(VERSION)/build/asm/data/%.o: ver/$(VERSION)/asm/data/%.s
 	iconv --from UTF-8 --to EUC-JP $< | $(AS) $(ASFLAGS) -o $@
