@@ -9,8 +9,8 @@
 
 .balign 16
 
-glabel func_800532E0 # 0
-/* 052E90 800532E0 40024800 */  mfc0        $v0, Count
-/* 052E94 800532E4 03E00008 */  jr          $ra
-/* 052E98 800532E8 00000000 */   nop
-/* 052E9C 800532EC 00000000 */  nop
+glabel __osSetCompare # 0
+/* 05D6B0 8005DB00 40845800 */  mtc0        $a0, Compare
+/* 05D6B4 8005DB04 03E00008 */  jr          $ra
+/* 05D6B8 8005DB08 00000000 */   nop
+/* 05D6BC 8005DB0C 00000000 */  nop

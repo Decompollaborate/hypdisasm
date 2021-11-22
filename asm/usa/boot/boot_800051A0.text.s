@@ -36,7 +36,7 @@ glabel func_800051A8 # 1
 glabel func_800051EC # 2
 /* 004D9C 800051EC 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 004DA0 800051F0 AFBF0014 */  sw          $ra, 0x14($sp)
-/* 004DA4 800051F4 0C014CB8 */  jal         func_800532E0
+/* 004DA4 800051F4 0C014CB8 */  jal         osGetCount
 /* 004DA8 800051F8 AFA40018 */   sw         $a0, 0x18($sp)
 /* 004DAC 800051FC 8FAF0018 */  lw          $t7, 0x18($sp)
 /* 004DB0 80005200 344E00FF */  ori         $t6, $v0, 0xff

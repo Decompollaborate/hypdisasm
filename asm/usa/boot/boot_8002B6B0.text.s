@@ -526,7 +526,7 @@ glabel func_8002BDB4 # 7
 /* 02B9C4 8002BE14 00582023 */  subu        $a0, $v0, $t8
 /* 02B9C8 8002BE18 006F082B */  sltu        $at, $v1, $t7
 /* 02B9CC 8002BE1C 00812023 */  subu        $a0, $a0, $at
-/* 02B9D0 8002BE20 0C0148C6 */  jal         func_80052318
+/* 02B9D0 8002BE20 0C0148C6 */  jal         __ull_to_f
 /* 02B9D4 8002BE24 006F2823 */   subu       $a1, $v1, $t7
 /* 02B9D8 8002BE28 3C01437F */  lui         $at, 0x437f
 /* 02B9DC 8002BE2C 44817000 */  mtc1        $at, $f14

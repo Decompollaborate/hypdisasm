@@ -378,7 +378,7 @@ glabel func_8000ACB8 # 4
 /* 00A8BC 8000AD0C 24080000 */  addiu       $t0, $zero, 0x0
 /* 00A8C0 8000AD10 24090000 */  addiu       $t1, $zero, 0x0
 /* 00A8C4 8000AD14 AC29383C */  sw          $t1, %lo(D_8006383C)($at)
-/* 00A8C8 8000AD18 0C01482C */  jal         func_800520B0
+/* 00A8C8 8000AD18 0C01482C */  jal         osGetTime
 /* 00A8CC 8000AD1C AC283838 */   sw         $t0, %lo(D_80063838)($at)
 /* 00A8D0 8000AD20 00402025 */  move        $a0, $v0
 /* 00A8D4 8000AD24 00602825 */  move        $a1, $v1
@@ -411,7 +411,7 @@ glabel func_8000ACB8 # 4
 /* 00A940 8000AD90 AC2D66EC */  sw          $t5, %lo(D_800B66EC)($at)
 /* 00A944 8000AD94 0C014388 */  jal         bzero
 /* 00A948 8000AD98 AC2C66E8 */   sw         $t4, %lo(D_800B66E8)($at)
-/* 00A94C 8000AD9C 0C01482C */  jal         func_800520B0
+/* 00A94C 8000AD9C 0C01482C */  jal         osGetTime
 /* 00A950 8000ADA0 00000000 */   nop
 /* 00A954 8000ADA4 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 00A958 8000ADA8 3C01800B */  lui         $at, %hi(D_800B6764)
@@ -477,7 +477,7 @@ glabel func_8000ADBC # 5
 /* 00AA38 8000AE88 0C0148EE */  jal         __ull_div
 /* 00AA3C 8000AE8C 24070BB8 */   addiu      $a3, $zero, 0xbb8
 /* 00AA40 8000AE90 00402025 */  move        $a0, $v0
-/* 00AA44 8000AE94 0C0148C6 */  jal         func_80052318
+/* 00AA44 8000AE94 0C0148C6 */  jal         __ull_to_f
 /* 00AA48 8000AE98 00602825 */   move       $a1, $v1
 /* 00AA4C 8000AE9C 3C01800A */  lui         $at, %hi(D_800A0BFC)
 /* 00AA50 8000AEA0 C42C0BFC */  lwc1        $f12, %lo(D_800A0BFC)($at)
@@ -512,7 +512,7 @@ glabel func_8000ADBC # 5
 glabel func_8000AF08 # 6
 /* 00AAB8 8000AF08 27BDFFC0 */  addiu       $sp, $sp, -0x40
 /* 00AABC 8000AF0C AFBF0014 */  sw          $ra, 0x14($sp)
-/* 00AAC0 8000AF10 0C01482C */  jal         func_800520B0
+/* 00AAC0 8000AF10 0C01482C */  jal         osGetTime
 /* 00AAC4 8000AF14 00000000 */   nop
 /* 00AAC8 8000AF18 3C07800B */  lui         $a3, %hi(D_800B6760)
 /* 00AACC 8000AF1C 24E76760 */  addiu       $a3, $a3, %lo(D_800B6760)

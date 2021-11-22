@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80058890 # 0
+glabel __osContRamRead # 0
 /* 058440 80058890 27BDFFA0 */  addiu       $sp, $sp, -0x60
 /* 058444 80058894 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 058448 80058898 AFB60030 */  sw          $s6, 0x30($sp)
@@ -123,7 +123,7 @@ glabel func_80058890 # 0
 /* 0585DC 80058A2C 11620008 */  beq         $t3, $v0, .L80058A50
 /* 0585E0 80058A30 00000000 */   nop
 /* 0585E4 80058A34 02C02025 */  move        $a0, $s6
-/* 0585E8 80058A38 0C017634 */  jal         func_8005D8D0
+/* 0585E8 80058A38 0C017634 */  jal         __osPfsGetStatus
 /* 0585EC 80058A3C 02202825 */   move       $a1, $s1
 /* 0585F0 80058A40 1440000D */  bnez        $v0, .L80058A78
 /* 0585F4 80058A44 00409825 */   move       $s3, $v0

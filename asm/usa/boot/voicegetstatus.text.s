@@ -12,8 +12,8 @@
 glabel __osVoiceGetStatus # 0
 /* 0551E0 80055630 27BDFF98 */  addiu       $sp, $sp, -0x68
 /* 0551E4 80055634 AFB30024 */  sw          $s3, 0x24($sp)
-/* 0551E8 80055638 3C138010 */  lui         $s3, %hi(D_800FDC10)
-/* 0551EC 8005563C 2673DC10 */  addiu       $s3, $s3, %lo(D_800FDC10)
+/* 0551E8 80055638 3C138010 */  lui         $s3, %hi(__osContPifRam)
+/* 0551EC 8005563C 2673DC10 */  addiu       $s3, $s3, %lo(__osContPifRam)
 /* 0551F0 80055640 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 0551F4 80055644 AFBE0038 */  sw          $fp, 0x38($sp)
 /* 0551F8 80055648 AFB20020 */  sw          $s2, 0x20($sp)

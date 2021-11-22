@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005AD10 # 0
+glabel osPfsIsPlug # 0
 /* 05A8C0 8005AD10 27BDFF90 */  addiu       $sp, $sp, -0x70
 /* 05A8C4 8005AD14 AFBF003C */  sw          $ra, 0x3c($sp)
 /* 05A8C8 8005AD18 AFB5002C */  sw          $s5, 0x2c($sp)
@@ -26,16 +26,16 @@ glabel func_8005AD10 # 0
 /* 05A8F4 8005AD44 0000A825 */  move        $s5, $zero
 /* 05A8F8 8005AD48 0C0160FC */  jal         __osSiGetAccess
 /* 05A8FC 8005AD4C 24110003 */   addiu      $s1, $zero, 0x3
-/* 05A900 8005AD50 3C1E8010 */  lui         $fp, %hi(D_800FDC51)
+/* 05A900 8005AD50 3C1E8010 */  lui         $fp, %hi(__osMaxControllers)
 /* 05A904 8005AD54 3C138010 */  lui         $s3, %hi(__osPfsPifRam)
 /* 05A908 8005AD58 26730390 */  addiu       $s3, $s3, %lo(__osPfsPifRam)
-/* 05A90C 8005AD5C 27DEDC51 */  addiu       $fp, $fp, %lo(D_800FDC51)
+/* 05A90C 8005AD5C 27DEDC51 */  addiu       $fp, $fp, %lo(__osMaxControllers)
 /* 05A910 8005AD60 00008025 */  move        $s0, $zero
 /* 05A914 8005AD64 27B70054 */  addiu       $s7, $sp, 0x54
 /* 05A918 8005AD68 27B60067 */  addiu       $s6, $sp, 0x67
 /* 05A91C 8005AD6C 27B40068 */  addiu       $s4, $sp, 0x68
 .L8005AD70:
-/* 05A920 8005AD70 0C016BA7 */  jal         func_8005AE9C
+/* 05A920 8005AD70 0C016BA7 */  jal         __osPfsRequestData
 /* 05A924 8005AD74 00002025 */   move       $a0, $zero
 /* 05A928 8005AD78 24040001 */  addiu       $a0, $zero, 0x1
 /* 05A92C 8005AD7C 0C016118 */  jal         __osSiRawStartDma
@@ -53,7 +53,7 @@ glabel func_8005AD10 # 0
 /* 05A95C 8005ADAC 0C014554 */  jal         osRecvMesg
 /* 05A960 8005ADB0 24060001 */   addiu      $a2, $zero, 0x1
 /* 05A964 8005ADB4 02C02025 */  move        $a0, $s6
-/* 05A968 8005ADB8 0C016BD4 */  jal         func_8005AF50
+/* 05A968 8005ADB8 0C016BD4 */  jal         __osPfsGetInitData
 /* 05A96C 8005ADBC 02E02825 */   move       $a1, $s7
 /* 05A970 8005ADC0 93C30000 */  lbu         $v1, 0x0($fp)
 /* 05A974 8005ADC4 27A20054 */  addiu       $v0, $sp, 0x54
@@ -119,7 +119,7 @@ glabel func_8005AD10 # 0
 /* 05AA44 8005AE94 03E00008 */  jr          $ra
 /* 05AA48 8005AE98 27BD0070 */   addiu      $sp, $sp, 0x70
 
-glabel func_8005AE9C # 1
+glabel __osPfsRequestData # 1
 /* 05AA4C 8005AE9C 27BDFFF0 */  addiu       $sp, $sp, -0x10
 /* 05AA50 8005AEA0 3C058010 */  lui         $a1, %hi(__osPfsPifRam)
 /* 05AA54 8005AEA4 3C018010 */  lui         $at, %hi(__osContLastPoll)
@@ -128,8 +128,8 @@ glabel func_8005AE9C # 1
 /* 05AA60 8005AEB0 A024DC50 */  sb          $a0, %lo(__osContLastPoll)($at)
 /* 05AA64 8005AEB4 240F0001 */  addiu       $t7, $zero, 0x1
 /* 05AA68 8005AEB8 AC4F003C */  sw          $t7, 0x3c($v0)
-/* 05AA6C 8005AEBC 3C068010 */  lui         $a2, %hi(D_800FDC51)
-/* 05AA70 8005AEC0 24C6DC51 */  addiu       $a2, $a2, %lo(D_800FDC51)
+/* 05AA6C 8005AEBC 3C068010 */  lui         $a2, %hi(__osMaxControllers)
+/* 05AA70 8005AEC0 24C6DC51 */  addiu       $a2, $a2, %lo(__osMaxControllers)
 /* 05AA74 8005AEC4 90CD0000 */  lbu         $t5, 0x0($a2)
 /* 05AA78 8005AEC8 241800FF */  addiu       $t8, $zero, 0xff
 /* 05AA7C 8005AECC 24190001 */  addiu       $t9, $zero, 0x1
@@ -168,9 +168,9 @@ glabel func_8005AE9C # 1
 /* 05AAF8 8005AF48 03E00008 */  jr          $ra
 /* 05AAFC 8005AF4C 27BD0010 */   addiu      $sp, $sp, 0x10
 
-glabel func_8005AF50 # 2
-/* 05AB00 8005AF50 3C078010 */  lui         $a3, %hi(D_800FDC51)
-/* 05AB04 8005AF54 24E7DC51 */  addiu       $a3, $a3, %lo(D_800FDC51)
+glabel __osPfsGetInitData # 2
+/* 05AB00 8005AF50 3C078010 */  lui         $a3, %hi(__osMaxControllers)
+/* 05AB04 8005AF54 24E7DC51 */  addiu       $a3, $a3, %lo(__osMaxControllers)
 /* 05AB08 8005AF58 90EE0000 */  lbu         $t6, 0x0($a3)
 /* 05AB0C 8005AF5C 3C038010 */  lui         $v1, %hi(__osPfsPifRam)
 /* 05AB10 8005AF60 27BDFFE8 */  addiu       $sp, $sp, -0x18

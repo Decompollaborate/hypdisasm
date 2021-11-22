@@ -714,13 +714,13 @@ glabel func_80040DD4 # 15
 /* 040994 80040DE4 AFA50034 */  sw          $a1, 0x34($sp)
 /* 040998 80040DE8 25EF8AC0 */  addiu       $t7, $t7, %lo(D_800F8AC0)
 /* 04099C 80040DEC ADE50000 */  sw          $a1, 0x0($t7)
-/* 0409A0 80040DF0 0C014710 */  jal         func_80051C40
+/* 0409A0 80040DF0 0C014710 */  jal         osContStartQuery
 /* 0409A4 80040DF4 8FA40030 */   lw         $a0, 0x30($sp)
 /* 0409A8 80040DF8 8FA40030 */  lw          $a0, 0x30($sp)
 /* 0409AC 80040DFC 00002825 */  move        $a1, $zero
 /* 0409B0 80040E00 0C014554 */  jal         osRecvMesg
 /* 0409B4 80040E04 24060001 */   addiu      $a2, $zero, 0x1
-/* 0409B8 80040E08 0C01472F */  jal         func_80051CBC
+/* 0409B8 80040E08 0C01472F */  jal         osContGetQuery
 /* 0409BC 80040E0C 27A40020 */   addiu      $a0, $sp, 0x20
 /* 0409C0 80040E10 8FB80034 */  lw          $t8, 0x34($sp)
 /* 0409C4 80040E14 27A80020 */  addiu       $t0, $sp, 0x20

@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005F8D0 # 0
+glabel ldiv # 0
 /* 05F480 8005F8D0 00A6001A */  div         $zero, $a1, $a2
 /* 05F484 8005F8D4 00001012 */  mflo        $v0
 /* 05F488 8005F8D8 27BDFFF8 */  addiu       $sp, $sp, -0x8
@@ -47,7 +47,7 @@ glabel func_8005F8D0 # 0
 /* 05F4FC 8005F94C 03E00008 */  jr          $ra
 /* 05F500 8005F950 AC880004 */   sw         $t0, 0x4($a0)
 
-glabel func_8005F954 # 1
+glabel lldiv # 1
 /* 05F504 8005F954 27BDFFD0 */  addiu       $sp, $sp, -0x30
 /* 05F508 8005F958 AFA40030 */  sw          $a0, 0x30($sp)
 /* 05F50C 8005F95C AFBF0014 */  sw          $ra, 0x14($sp)

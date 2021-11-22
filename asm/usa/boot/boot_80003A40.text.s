@@ -19,14 +19,14 @@ glabel func_80003A40 # 0
 /* 003608 80003A58 0C000A1C */  jal         func_80002870
 /* 00360C 80003A5C 00000000 */   nop
 /* 003610 80003A60 AFA2001C */  sw          $v0, 0x1c($sp)
-/* 003614 80003A64 0C014BEC */  jal         func_80052FB0
+/* 003614 80003A64 0C014BEC */  jal         osContStartReadData
 /* 003618 80003A68 00402025 */   move       $a0, $v0
 /* 00361C 80003A6C 8FA4001C */  lw          $a0, 0x1c($sp)
 /* 003620 80003A70 00002825 */  move        $a1, $zero
 /* 003624 80003A74 0C014554 */  jal         osRecvMesg
 /* 003628 80003A78 24060001 */   addiu      $a2, $zero, 0x1
 /* 00362C 80003A7C 3C04800B */  lui         $a0, %hi(D_800AD400)
-/* 003630 80003A80 0C014C0D */  jal         func_80053034
+/* 003630 80003A80 0C014C0D */  jal         osContGetReadData
 /* 003634 80003A84 2484D400 */   addiu      $a0, $a0, %lo(D_800AD400)
 /* 003638 80003A88 8FBF0014 */  lw          $ra, 0x14($sp)
 .L80003A8C:
