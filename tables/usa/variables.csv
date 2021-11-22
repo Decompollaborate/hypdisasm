@@ -34,3 +34,14 @@
 801003D0,__osThreadSave,OSThread,0x1B0
 801235A4,D_801235A4_RomRamTable,UNK_TYPE24,0x33C
 8015E4A0,D_8015E4A0,UNK_TYPE,4
+8009FCF0,_string_Error_NoMpak,char,0x18
+8009FD08,_string_Error_UnknownMessage,char,0x21
+8009FC30,_string_MeltSize,char,0xF
+8009FC40,_string_ZippedBlock,char,0x18
+8009FC58,_string_setFilterColor,char,0x1C
+8009FC74,_string_SunsetStart,char,0x14
+8009FD50,_string_ChannelNum,char,0x11
+8009FD64,_string_ValidController,char,0x3B
+8009FDA0,D_8009FDA0,s32,0x4
+8009FF30,_string_LoadCrc_RealCrc,char,0x1B
+8009FF4C,D_8009FF4C,s32,0x4
