@@ -36,27 +36,25 @@ def main():
                 print()
                 if filename == ".text":
                     section = "text"
-                    fold = "asm"
+                    fold = "asm/text"
                     print("    // text")
                 elif filename == ".data":
                     section = "data"
-                    fold = "data"
+                    fold = "asm/data"
                     print("    // data")
                 elif filename == ".rodata":
                     section = "rodata"
-                    fold = "data"
+                    fold = "asm/data"
                     print("    // rodata")
                 elif filename == ".bss":
                     section = "bss"
-                    fold = "data"
+                    fold = "asm/data"
                     print("    // bss")
                 continue
 
-            print(f'    include "build/{fold}/{version}/{n}/{filename}.{section}.o"')
+            print(f'    include "ver/{version}/build/{fold}/{n}/{filename}.{section}.o"')
 
         print("endseg")
-
-
 
 
 if __name__ == "__main__":

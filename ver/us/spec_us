@@ -279,7 +279,6 @@ beginseg
     include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
 endseg
 
-
 beginseg
     name "assets_A9800"
     // address 0x80100680

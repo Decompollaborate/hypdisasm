@@ -8,7 +8,7 @@ def getSyms(version):
     undefinedSymbols = dict()
     definedSymbols = {0x80000400: "entrypoint"}
 
-    contextFolder = os.path.join("context", version)
+    contextFolder = os.path.join("ver", version, "context")
     for file in os.listdir(contextFolder):
         contPath = os.path.join(contextFolder, file)
         with open(contPath) as f:
