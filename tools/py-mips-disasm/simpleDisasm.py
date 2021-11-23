@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 
 from mips.Utils import *
-from mips.GlobalConfig import GlobalConfig
+from mips.GlobalConfig import GlobalConfig, printVerbose
 from mips.MipsText import Text
 from mips.MipsData import Data
 from mips.MipsRodata import Rodata
@@ -13,33 +13,34 @@ from mips.MipsBss import Bss
 from mips.MipsContext import Context
 
 
-def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, newStuffSuffix: str=""):
+def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, isHandwritten: bool=False, newStuffSuffix: str=""):
     head, tail = os.path.split(outputPath)
 
     if offsetEnd >= 0:
-        print(f"Parsing until offset {toHex(offsetEnd, 2)}")
+        printVerbose(f"Parsing until offset {toHex(offsetEnd, 2)}")
         array_of_bytes = array_of_bytes[:offsetEnd]
     if offsetStart >= 0:
-        print(f"Parsing since offset {toHex(offsetStart, 2)}")
+        printVerbose(f"Parsing since offset {toHex(offsetStart, 2)}")
         array_of_bytes = array_of_bytes[offsetStart:]
 
     f = Text(array_of_bytes, tail, "ver", context)
+    f.isHandwritten = isHandwritten
     f.newStuffSuffix = newStuffSuffix
 
     if vram >= 0:
-        print(f"Using VRAM {toHex(vram, 2)}")
+        printVerbose(f"Using VRAM {toHex(vram, 2)}")
         f.setVRamStart(vram)
 
-    print("Analyzing")
+    printVerbose("Analyzing")
     f.analyze()
     f.setCommentOffset(offsetStart)
 
-    print()
-    print(f"Found {f.nFuncs} functions.")
+    printVerbose()
+    printVerbose(f"Found {f.nFuncs} functions.")
 
     nBoundaries = len(f.fileBoundaries)
     if nBoundaries > 0:
-        print(f"Found {nBoundaries} file boundaries.")
+        printVerbose(f"Found {nBoundaries} file boundaries.")
 
         for i in range(len(f.fileBoundaries)-1):
             start = f.fileBoundaries[i]
@@ -50,7 +51,7 @@ def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: in
                 funcOffset = func.vram - vram
                 if start <= funcOffset < end:
                     functionsInBoundary += 1
-            print("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
+            printVerbose("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
 
 
         start = f.fileBoundaries[-1]
@@ -61,83 +62,86 @@ def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: in
             funcOffset = func.vram - vram
             if start <= funcOffset < end:
                 functionsInBoundary += 1
-        print("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
+        printVerbose("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
 
-        print()
+        printVerbose()
 
     return f
 
 
-def simpleDisasmData(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, newStuffSuffix: str=""):
+def simpleDisasmData(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, isHandwritten: bool=False, newStuffSuffix: str=""):
     head, tail = os.path.split(outputPath)
 
     if offsetEnd >= 0:
-        print(f"Parsing until offset {toHex(offsetEnd, 2)}")
+        printVerbose(f"Parsing until offset {toHex(offsetEnd, 2)}")
         array_of_bytes = array_of_bytes[:offsetEnd]
     if offsetStart >= 0:
-        print(f"Parsing since offset {toHex(offsetStart, 2)}")
+        printVerbose(f"Parsing since offset {toHex(offsetStart, 2)}")
         array_of_bytes = array_of_bytes[offsetStart:]
 
     f = Data(array_of_bytes, tail, "ver", context)
+    f.isHandwritten = isHandwritten
     f.newStuffSuffix = newStuffSuffix
 
     if vram >= 0:
-        print(f"Using VRAM {toHex(vram, 2)}")
+        printVerbose(f"Using VRAM {toHex(vram, 2)}")
         f.setVRamStart(vram)
 
-    print("Analyzing")
+    printVerbose("Analyzing")
     f.analyze()
     f.setCommentOffset(offsetStart)
 
-    print()
+    printVerbose()
 
     return f
 
 
-def simpleDisasmRodata(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, newStuffSuffix: str=""):
+def simpleDisasmRodata(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, isHandwritten: bool=False, newStuffSuffix: str=""):
     head, tail = os.path.split(outputPath)
 
     if offsetEnd >= 0:
-        print(f"Parsing until offset {toHex(offsetEnd, 2)}")
+        printVerbose(f"Parsing until offset {toHex(offsetEnd, 2)}")
         array_of_bytes = array_of_bytes[:offsetEnd]
     if offsetStart >= 0:
-        print(f"Parsing since offset {toHex(offsetStart, 2)}")
+        printVerbose(f"Parsing since offset {toHex(offsetStart, 2)}")
         array_of_bytes = array_of_bytes[offsetStart:]
 
     f = Rodata(array_of_bytes, tail, "ver", context)
+    f.isHandwritten = isHandwritten
     f.newStuffSuffix = newStuffSuffix
 
     if vram >= 0:
-        print(f"Using VRAM {toHex(vram, 2)}")
+        printVerbose(f"Using VRAM {toHex(vram, 2)}")
         f.setVRamStart(vram)
 
-    print("Analyzing")
+    printVerbose("Analyzing")
     f.analyze()
     f.setCommentOffset(offsetStart)
 
-    print()
+    printVerbose()
 
     return f
 
 
-def simpleDisasmBss(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, newStuffSuffix: str=""):
+def simpleDisasmBss(array_of_bytes: bytearray, outputPath: str, offsetStart: int, offsetEnd: int, vram: int, context: Context, isHandwritten: bool=False, newStuffSuffix: str=""):
     head, tail = os.path.split(outputPath)
 
     if vram < 0:
         return
 
     f = Bss(vram, vram + offsetEnd - offsetStart, tail, "ver", context)
+    f.isHandwritten = isHandwritten
     f.newStuffSuffix = newStuffSuffix
 
     if vram >= 0:
-        print(f"Using VRAM {toHex(vram, 2)}")
+        printVerbose(f"Using VRAM {toHex(vram, 2)}")
         f.setVRamStart(vram)
 
-    print("Analyzing")
+    printVerbose("Analyzing")
     f.analyze()
     f.setCommentOffset(offsetStart)
 
-    print()
+    printVerbose()
 
     return f
 
@@ -168,9 +172,9 @@ def disassemblerMain():
     parser.add_argument("--functions", help="Path to a functions csv", action="append")
     parser.add_argument("--variables", help="Path to a variables csv", action="append")
     parser.add_argument("--file-splits", help="Path to a file splits csv")
-    parser.add_argument("--disable-stderr-progress", help="When stdout is redericted a progress status is printed to stderr. Pass this flag to disable this behaviour",  action="store_true")
     parser.add_argument("--add-filename", help="Adds the filename of the file to the generated function/variable name")
-    parser.add_argument("--disasm-unknown", help="",  action="store_true")
+    parser.add_argument("--disasm-unknown", help="Force disassembly of functions with unknown instructions",  action="store_true")
+    parser.add_argument("-v", "--verbose", help="Enable verbose mode",  action="store_true")
     args = parser.parse_args()
 
     GlobalConfig.REMOVE_POINTERS = False
@@ -183,6 +187,7 @@ def disassemblerMain():
     GlobalConfig.PRODUCE_SYMBOLS_PLUS_OFFSET = True
     GlobalConfig.TRUST_USER_FUNCTIONS = True
     GlobalConfig.DISASSEMBLE_UNKNOWN_INSTRUCTIONS = args.disasm_unknown
+    GlobalConfig.VERBOSE = args.verbose
 
     newStuffSuffix = args.add_filename
     if newStuffSuffix is None:
@@ -203,11 +208,10 @@ def disassemblerMain():
     lenLastLine = 80
 
     if args.file_splits is None:
-        f =  simpleDisasmFile(array_of_bytes, args.output, int(args.start, 16), int(args.end, 16), int(args.vram, 16), context, newStuffSuffix)
+        f =  simpleDisasmFile(array_of_bytes, args.output, int(args.start, 16), int(args.end, 16), int(args.vram, 16), context, False, newStuffSuffix)
         processedFiles.append((args.output, f))
     else:
         splits = readCsv(args.file_splits)
-
         splits = [x for x in splits if len(x) > 0]
 
         splitsCount = len(splits)
@@ -217,11 +221,11 @@ def disassemblerMain():
         for i, row in enumerate(splits):
             offset, vram, fileName = row
 
-            if isStdoutRedirected() and not args.disable_stderr_progress:
-                eprint(lenLastLine*" " + "\r", end="")
-                progressStr = f" Analyzing: {i/splitsCount:%}. File: {fileName}\r"
-                lenLastLine = max(len(progressStr), lenLastLine)
-                eprint(progressStr, end="")
+            isHandwritten = False
+            offset = offset.upper()
+            if offset[-1] == "H":
+                isHandwritten = True
+                offset = offset[:-1]
 
             if fileName == ".text":
                 modeCallback = simpleDisasmFile
@@ -247,11 +251,14 @@ def disassemblerMain():
             nextOffset = 0xFFFFFF
             if i + 1 < len(splits):
                 if splits[i+1][2] == ".end":
-                    nextOffset = int(splits[i+1][0], 16)
+                    nextOffsetStr = splits[i+1][0]
                 elif splits[i+1][2].startswith("."):
-                    nextOffset = int(splits[i+2][0], 16)
+                    nextOffsetStr = splits[i+2][0]
                 else:
-                    nextOffset = int(splits[i+1][0], 16)
+                    nextOffsetStr = splits[i+1][0]
+                if nextOffsetStr.upper()[-1] == "H":
+                    nextOffsetStr = nextOffsetStr[:-1]
+                nextOffset = int(nextOffsetStr, 16)
 
             if fileName == "":
                 fileName = f"{input_name}_{vram:08X}"
@@ -259,20 +266,25 @@ def disassemblerMain():
             if modeCallback is None:
                 eprint("Error! Section not set!")
                 exit(1)
-            f = modeCallback(array_of_bytes, f"{outputPath}/{fileName}", offset, nextOffset, vram, context, newStuffSuffix)
+            f = modeCallback(array_of_bytes, f"{outputPath}/{fileName}", offset, nextOffset, vram, context, isHandwritten, newStuffSuffix)
             processedFiles.append((f"{outputPath}/{fileName}", f))
-            print()
+
+            print(lenLastLine*" " + "\r", end="")
+            progressStr = f" Analyzing: {i/splitsCount:%}. File: {fileName}\r"
+            lenLastLine = max(len(progressStr), lenLastLine)
+            print(progressStr, end="", flush=True)
+
+            printVerbose()
 
     processedFilesCount = len(processedFiles)
 
-    print("Writing files...")
+    printVerbose("Writing files...")
     for i, (path, f) in enumerate(processedFiles):
-        if isStdoutRedirected() and not args.disable_stderr_progress:
-            eprint(lenLastLine*" " + "\r", end="")
-            progressStr = f" Writing: {i/processedFilesCount:%}. File: {path}\r"
-            lenLastLine = max(len(progressStr), lenLastLine)
-            eprint(progressStr, end="")
-        print(f"Writing {path}")
+        printVerbose(f"Writing {path}")
+        print(lenLastLine*" " + "\r", end="")
+        progressStr = f" Writing: {i/processedFilesCount:%}. File: {path}\r"
+        lenLastLine = max(len(progressStr), lenLastLine)
+        print(progressStr, end="")
 
         writeSection((path, f))
 
@@ -288,13 +300,12 @@ def disassemblerMain():
         name = os.path.join(head, name)
         context.saveContextToFile(f"{name}_{extension}")
 
-    if isStdoutRedirected() and not args.disable_stderr_progress:
-        eprint(lenLastLine*" " + "\r", end="")
-        eprint(f"Done: {args.binary}")
+    print(lenLastLine*" " + "\r", end="")
+    print(f"Done: {args.binary}")
 
-    print()
-    print("Disassembling complete!")
-    print("Goodbye.")
+    printVerbose()
+    printVerbose("Disassembling complete!")
+    printVerbose("Goodbye.")
 
 
 if __name__ == "__main__":
