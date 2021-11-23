@@ -9,13 +9,13 @@
 
 .balign 16
 
-glabel func_8005AA20 # 0
+glabel __osSpRawStartDma # 0
 /* 05A5D0 8005AA20 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 05A5D4 8005AA24 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 05A5D8 8005AA28 AFA40018 */  sw          $a0, 0x18($sp)
 /* 05A5DC 8005AA2C AFA5001C */  sw          $a1, 0x1c($sp)
 /* 05A5E0 8005AA30 AFA60020 */  sw          $a2, 0x20($sp)
-/* 05A5E4 8005AA34 0C016AAC */  jal         func_8005AAB0
+/* 05A5E4 8005AA34 0C016AAC */  jal         __osSpDeviceBusy
 /* 05A5E8 8005AA38 AFA70024 */   sw         $a3, 0x24($sp)
 /* 05A5EC 8005AA3C 10400003 */  beqz        $v0, .L8005AA4C
 /* 05A5F0 8005AA40 8FAE001C */   lw         $t6, 0x1c($sp)

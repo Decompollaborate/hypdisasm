@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_800543D0 # 0
+glabel osWritebackDCacheAll # 0
 /* 053F80 800543D0 3C088000 */  lui         $t0, %hi(D_80000010)
 /* 053F84 800543D4 240A2000 */  addiu       $t2, $zero, 0x2000
 /* 053F88 800543D8 010A4821 */  addu        $t1, $t0, $t2

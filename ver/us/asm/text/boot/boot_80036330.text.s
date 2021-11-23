@@ -812,7 +812,7 @@ glabel func_80036AF4 # 8
 /* 036AC8 80036F18 44070000 */  mfc1        $a3, $f0
 /* 036ACC 80036F1C AC620000 */  sw          $v0, 0x0($v1)
 /* 036AD0 80036F20 00402025 */  move        $a0, $v0
-/* 036AD4 80036F24 0C014F79 */  jal         func_80053DE4
+/* 036AD4 80036F24 0C014F79 */  jal         guRotate
 /* 036AD8 80036F28 E7B00010 */   swc1       $f16, 0x10($sp)
 /* 036ADC 80036F2C 44809000 */  mtc1        $zero, $f18
 /* 036AE0 80036F30 00002025 */  move        $a0, $zero

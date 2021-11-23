@@ -9,11 +9,11 @@
 
 .balign 16
 
-glabel func_80054400 # 0
+glabel osCreateViManager # 0
 /* 053FB0 80054400 27BDFFD0 */  addiu       $sp, $sp, -0x30
 /* 053FB4 80054404 AFB00020 */  sw          $s0, 0x20($sp)
-/* 053FB8 80054408 3C10800A */  lui         $s0, %hi(D_8009F670)
-/* 053FBC 8005440C 2610F670 */  addiu       $s0, $s0, %lo(D_8009F670)
+/* 053FB8 80054408 3C10800A */  lui         $s0, %hi(__osViDevMgr)
+/* 053FBC 8005440C 2610F670 */  addiu       $s0, $s0, %lo(__osViDevMgr)
 /* 053FC0 80054410 8E0E0000 */  lw          $t6, 0x0($s0)
 /* 053FC4 80054414 AFBF0024 */  sw          $ra, 0x24($sp)
 /* 053FC8 80054418 AFA40030 */  sw          $a0, 0x30($sp)
@@ -22,38 +22,38 @@ glabel func_80054400 # 0
 /* 053FD4 80054424 0C0162B0 */  jal         __osTimerServicesInit
 /* 053FD8 80054428 00000000 */   nop
 /* 053FDC 8005442C 3C01800A */  lui         $at, %hi(__additional_scanline)
-/* 053FE0 80054430 3C048010 */  lui         $a0, %hi(D_80100250)
-/* 053FE4 80054434 3C058010 */  lui         $a1, %hi(D_80100268)
+/* 053FE0 80054430 3C048010 */  lui         $a0, %hi(viEventQueue)
+/* 053FE4 80054434 3C058010 */  lui         $a1, %hi(viEventBuf)
 /* 053FE8 80054438 AC20F68C */  sw          $zero, %lo(__additional_scanline)($at)
-/* 053FEC 8005443C 24A50268 */  addiu       $a1, $a1, %lo(D_80100268)
-/* 053FF0 80054440 24840250 */  addiu       $a0, $a0, %lo(D_80100250)
+/* 053FEC 8005443C 24A50268 */  addiu       $a1, $a1, %lo(viEventBuf)
+/* 053FF0 80054440 24840250 */  addiu       $a0, $a0, %lo(viEventQueue)
 /* 053FF4 80054444 0C0145B8 */  jal         osCreateMesgQueue
 /* 053FF8 80054448 24060005 */   addiu      $a2, $zero, 0x5
-/* 053FFC 8005444C 3C068010 */  lui         $a2, %hi(D_80100280)
-/* 054000 80054450 3C078010 */  lui         $a3, %hi(D_80100298)
-/* 054004 80054454 24E70298 */  addiu       $a3, $a3, %lo(D_80100298)
-/* 054008 80054458 24C60280 */  addiu       $a2, $a2, %lo(D_80100280)
+/* 053FFC 8005444C 3C068010 */  lui         $a2, %hi(viRetraceMsg)
+/* 054000 80054450 3C078010 */  lui         $a3, %hi(viCounterMsg)
+/* 054004 80054454 24E70298 */  addiu       $a3, $a3, %lo(viCounterMsg)
+/* 054008 80054458 24C60280 */  addiu       $a2, $a2, %lo(viRetraceMsg)
 /* 05400C 8005445C 240F000D */  addiu       $t7, $zero, 0xd
 /* 054010 80054460 2418000E */  addiu       $t8, $zero, 0xe
-/* 054014 80054464 3C058010 */  lui         $a1, %hi(D_80100250)
+/* 054014 80054464 3C058010 */  lui         $a1, %hi(viEventQueue)
 /* 054018 80054468 A4CF0000 */  sh          $t7, 0x0($a2)
 /* 05401C 8005446C A0C00002 */  sb          $zero, 0x2($a2)
 /* 054020 80054470 ACC00004 */  sw          $zero, 0x4($a2)
 /* 054024 80054474 A4F80000 */  sh          $t8, 0x0($a3)
 /* 054028 80054478 A0E00002 */  sb          $zero, 0x2($a3)
 /* 05402C 8005447C ACE00004 */  sw          $zero, 0x4($a3)
-/* 054030 80054480 24A50250 */  addiu       $a1, $a1, %lo(D_80100250)
-/* 054034 80054484 0C0145C4 */  jal         func_80051710
+/* 054030 80054480 24A50250 */  addiu       $a1, $a1, %lo(viEventQueue)
+/* 054034 80054484 0C0145C4 */  jal         osSetEventMesg
 /* 054038 80054488 24040007 */   addiu      $a0, $zero, 0x7
-/* 05403C 8005448C 3C078010 */  lui         $a3, %hi(D_80100298)
-/* 054040 80054490 3C058010 */  lui         $a1, %hi(D_80100250)
-/* 054044 80054494 24E60298 */  addiu       $a2, $a3, %lo(D_80100298)
-/* 054048 80054498 24A50250 */  addiu       $a1, $a1, %lo(D_80100250)
-/* 05404C 8005449C 0C0145C4 */  jal         func_80051710
+/* 05403C 8005448C 3C078010 */  lui         $a3, %hi(viCounterMsg)
+/* 054040 80054490 3C058010 */  lui         $a1, %hi(viEventQueue)
+/* 054044 80054494 24E60298 */  addiu       $a2, $a3, %lo(viCounterMsg)
+/* 054048 80054498 24A50250 */  addiu       $a1, $a1, %lo(viEventQueue)
+/* 05404C 8005449C 0C0145C4 */  jal         osSetEventMesg
 /* 054050 800544A0 24040003 */   addiu      $a0, $zero, 0x3
 /* 054054 800544A4 2419FFFF */  addiu       $t9, $zero, -0x1
 /* 054058 800544A8 AFB90028 */  sw          $t9, 0x28($sp)
-/* 05405C 800544AC 0C016804 */  jal         func_8005A010
+/* 05405C 800544AC 0C016804 */  jal         osGetThreadPri
 /* 054060 800544B0 00002025 */   move       $a0, $zero
 /* 054064 800544B4 8FA80030 */  lw          $t0, 0x30($sp)
 /* 054068 800544B8 00002025 */  move        $a0, $zero
@@ -66,14 +66,14 @@ glabel func_80054400 # 0
 /* 054080 800544D0 0C015FFC */  jal         __osDisableInt
 /* 054084 800544D4 00000000 */   nop
 /* 054088 800544D8 8FAB0030 */  lw          $t3, 0x30($sp)
-/* 05408C 800544DC 3C038010 */  lui         $v1, %hi(D_80100250)
-/* 054090 800544E0 3C048010 */  lui         $a0, %hi(D_800FF0A0)
-/* 054094 800544E4 3C0A8010 */  lui         $t2, %hi(D_80100250)
-/* 054098 800544E8 2484F0A0 */  addiu       $a0, $a0, %lo(D_800FF0A0)
-/* 05409C 800544EC 24630250 */  addiu       $v1, $v1, %lo(D_80100250)
+/* 05408C 800544DC 3C038010 */  lui         $v1, %hi(viEventQueue)
+/* 054090 800544E0 3C048010 */  lui         $a0, %hi(viThread)
+/* 054094 800544E4 3C0A8010 */  lui         $t2, %hi(viEventQueue)
+/* 054098 800544E8 2484F0A0 */  addiu       $a0, $a0, %lo(viThread)
+/* 05409C 800544EC 24630250 */  addiu       $v1, $v1, %lo(viEventQueue)
 /* 0540A0 800544F0 24090001 */  addiu       $t1, $zero, 0x1
-/* 0540A4 800544F4 254A0250 */  addiu       $t2, $t2, %lo(D_80100250)
-/* 0540A8 800544F8 3C068005 */  lui         $a2, %hi(func_80054580)
+/* 0540A4 800544F4 254A0250 */  addiu       $t2, $t2, %lo(viEventQueue)
+/* 0540A8 800544F8 3C068005 */  lui         $a2, %hi(viMgrMain)
 /* 0540AC 800544FC AFA2002C */  sw          $v0, 0x2c($sp)
 /* 0540B0 80054500 AE090000 */  sw          $t1, 0x0($s0)
 /* 0540B4 80054504 AE040004 */  sw          $a0, 0x4($s0)
@@ -82,17 +82,17 @@ glabel func_80054400 # 0
 /* 0540C0 80054510 AE000010 */  sw          $zero, 0x10($s0)
 /* 0540C4 80054514 AE000014 */  sw          $zero, 0x14($s0)
 /* 0540C8 80054518 AE000018 */  sw          $zero, 0x18($s0)
-/* 0540CC 8005451C 24C64580 */  addiu       $a2, $a2, %lo(func_80054580)
+/* 0540CC 8005451C 24C64580 */  addiu       $a2, $a2, %lo(viMgrMain)
 /* 0540D0 80054520 AFAA0010 */  sw          $t2, 0x10($sp)
 /* 0540D4 80054524 00002825 */  move        $a1, $zero
 /* 0540D8 80054528 02003825 */  move        $a3, $s0
 /* 0540DC 8005452C 0C0142A8 */  jal         osCreateThread
 /* 0540E0 80054530 AFAB0014 */   sw         $t3, 0x14($sp)
-/* 0540E4 80054534 0C016460 */  jal         func_80059180
+/* 0540E4 80054534 0C016460 */  jal         __osViInit
 /* 0540E8 80054538 00000000 */   nop
-/* 0540EC 8005453C 3C048010 */  lui         $a0, %hi(D_800FF0A0)
+/* 0540EC 8005453C 3C048010 */  lui         $a0, %hi(viThread)
 /* 0540F0 80054540 0C0142FC */  jal         osStartThread
-/* 0540F4 80054544 2484F0A0 */   addiu      $a0, $a0, %lo(D_800FF0A0)
+/* 0540F4 80054544 2484F0A0 */   addiu      $a0, $a0, %lo(viThread)
 /* 0540F8 80054548 0C016018 */  jal         __osRestoreInt
 /* 0540FC 8005454C 8FA4002C */   lw         $a0, 0x2c($sp)
 /* 054100 80054550 8FAC0028 */  lw          $t4, 0x28($sp)
@@ -109,7 +109,7 @@ glabel func_80054400 # 0
 /* 054128 80054578 03E00008 */  jr          $ra
 /* 05412C 8005457C 00000000 */   nop
 
-glabel func_80054580 # 1
+glabel viMgrMain # 1
 /* 054130 80054580 27BDFFB0 */  addiu       $sp, $sp, -0x50
 /* 054134 80054584 AFBF0034 */  sw          $ra, 0x34($sp)
 /* 054138 80054588 AFB70030 */  sw          $s7, 0x30($sp)
@@ -124,13 +124,13 @@ glabel func_80054580 # 1
 /* 05415C 800545AC 0C0169BC */  jal         __osViGetCurrentContext
 /* 054160 800545B0 AFA00044 */   sw         $zero, 0x44($sp)
 /* 054164 800545B4 94430002 */  lhu         $v1, 0x2($v0)
-/* 054168 800545B8 3C018010 */  lui         $at, %hi(D_801002B0)
+/* 054168 800545B8 3C018010 */  lui         $at, %hi(viCounterMsg + 0x18)
 /* 05416C 800545BC 2416000E */  addiu       $s6, $zero, 0xe
 /* 054170 800545C0 14600004 */  bnez        $v1, .L800545D4
-/* 054174 800545C4 A42302B0 */   sh         $v1, %lo(D_801002B0)($at)
+/* 054174 800545C4 A42302B0 */   sh         $v1, %lo(viCounterMsg + 0x18)($at)
 /* 054178 800545C8 24030001 */  addiu       $v1, $zero, 0x1
-/* 05417C 800545CC 3C018010 */  lui         $at, %hi(D_801002B0)
-/* 054180 800545D0 A42302B0 */  sh          $v1, %lo(D_801002B0)($at)
+/* 05417C 800545CC 3C018010 */  lui         $at, %hi(viCounterMsg + 0x18)
+/* 054180 800545D0 A42302B0 */  sh          $v1, %lo(viCounterMsg + 0x18)($at)
 .L800545D4:
 /* 054184 800545D4 3C138010 */  lui         $s3, %hi(__osViIntrCount)
 /* 054188 800545D8 3C128010 */  lui         $s2, %hi(__osBaseCounter)
@@ -157,13 +157,13 @@ glabel func_80054580 # 1
 .L80054624:
 /* 0541D4 80054624 0C0169C0 */  jal         __osViSwapContext
 /* 0541D8 80054628 00000000 */   nop
-/* 0541DC 8005462C 3C038010 */  lui         $v1, %hi(D_801002B0)
-/* 0541E0 80054630 946302B0 */  lhu         $v1, %lo(D_801002B0)($v1)
-/* 0541E4 80054634 3C018010 */  lui         $at, %hi(D_801002B0)
+/* 0541DC 8005462C 3C038010 */  lui         $v1, %hi(viCounterMsg + 0x18)
+/* 0541E0 80054630 946302B0 */  lhu         $v1, %lo(viCounterMsg + 0x18)($v1)
+/* 0541E4 80054634 3C018010 */  lui         $at, %hi(viCounterMsg + 0x18)
 /* 0541E8 80054638 2463FFFF */  addiu       $v1, $v1, -0x1
 /* 0541EC 8005463C 306FFFFF */  andi        $t7, $v1, 0xffff
 /* 0541F0 80054640 15E0000E */  bnez        $t7, .L8005467C
-/* 0541F4 80054644 A42F02B0 */   sh         $t7, %lo(D_801002B0)($at)
+/* 0541F4 80054644 A42F02B0 */   sh         $t7, %lo(viCounterMsg + 0x18)($at)
 /* 0541F8 80054648 0C0169BC */  jal         __osViGetCurrentContext
 /* 0541FC 8005464C 00000000 */   nop
 /* 054200 80054650 8C580010 */  lw          $t8, 0x10($v0)
@@ -176,8 +176,8 @@ glabel func_80054580 # 1
 /* 05421C 8005466C 8C450014 */   lw         $a1, 0x14($v0)
 /* 054220 80054670 96030002 */  lhu         $v1, 0x2($s0)
 .L80054674:
-/* 054224 80054674 3C018010 */  lui         $at, %hi(D_801002B0)
-/* 054228 80054678 A42302B0 */  sh          $v1, %lo(D_801002B0)($at)
+/* 054224 80054674 3C018010 */  lui         $at, %hi(viCounterMsg + 0x18)
+/* 054228 80054678 A42302B0 */  sh          $v1, %lo(viCounterMsg + 0x18)($at)
 .L8005467C:
 /* 05422C 8005467C 8E790000 */  lw          $t9, 0x0($s3)
 /* 054230 80054680 8E500000 */  lw          $s0, 0x0($s2)

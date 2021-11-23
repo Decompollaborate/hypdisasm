@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005A030 # 0
+glabel __osPiRawStartDma # 0
 /* 059BE0 8005A030 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 059BE4 8005A034 3C03A460 */  lui         $v1, 0xa460
 /* 059BE8 8005A038 34630010 */  ori         $v1, $v1, 0x10

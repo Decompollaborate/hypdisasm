@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005A010 # 0
+glabel osGetThreadPri # 0
 /* 059BC0 8005A010 14800003 */  bnez        $a0, .L8005A020
 /* 059BC4 8005A014 00000000 */   nop
 /* 059BC8 8005A018 3C04800A */  lui         $a0, %hi(__osRunningThread)

@@ -21,7 +21,7 @@ glabel func_80037AE8 # 1
 /* 0376A8 80037AF8 24C62638 */  addiu       $a2, $a2, %lo(D_800F2638)
 /* 0376AC 80037AFC 24A52620 */  addiu       $a1, $a1, %lo(D_800F2620)
 /* 0376B0 80037B00 24040096 */  addiu       $a0, $zero, 0x96
-/* 0376B4 80037B04 0C014F8C */  jal         func_80053E30
+/* 0376B4 80037B04 0C014F8C */  jal         osCreatePiManager
 /* 0376B8 80037B08 240700C8 */   addiu      $a3, $zero, 0xc8
 /* 0376BC 80037B0C 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0376C0 80037B10 27BD0018 */  addiu       $sp, $sp, 0x18

@@ -298,7 +298,7 @@ glabel Fault_ThreadEntry # 4
 /* 042290 800426E0 AFB00018 */  sw          $s0, 0x18($sp)
 /* 042294 800426E4 2404000C */  addiu       $a0, $zero, 0xc
 /* 042298 800426E8 02402825 */  move        $a1, $s2
-/* 04229C 800426EC 0C0145C4 */  jal         func_80051710
+/* 04229C 800426EC 0C0145C4 */  jal         osSetEventMesg
 /* 0422A0 800426F0 24060001 */   addiu      $a2, $zero, 0x1
 /* 0422A4 800426F4 3C16800A */  lui         $s6, %hi(D_8009D9B0)
 /* 0422A8 800426F8 3C15800A */  lui         $s5, %hi(D_800A7BBC)

@@ -60,11 +60,11 @@ glabel func_8003FC30 # 0
 /* 03F89C 8003FCEC 26050134 */  addiu       $a1, $s0, 0x134
 /* 03F8A0 8003FCF0 0C0145B8 */  jal         osCreateMesgQueue
 /* 03F8A4 8003FCF4 24060008 */   addiu      $a2, $zero, 0x8
-/* 03F8A8 8003FCF8 0C015100 */  jal         func_80054400
+/* 03F8A8 8003FCF8 0C015100 */  jal         osCreateViManager
 /* 03F8AC 8003FCFC 240400FE */   addiu      $a0, $zero, 0xfe
 /* 03F8B0 8003FD00 93A90047 */  lbu         $t1, 0x47($sp)
-/* 03F8B4 8003FD04 3C0B800A */  lui         $t3, %hi(D_8009DCB0)
-/* 03F8B8 8003FD08 256BDCB0 */  addiu       $t3, $t3, %lo(D_8009DCB0)
+/* 03F8B4 8003FD04 3C0B800A */  lui         $t3, %hi(osViModeTable)
+/* 03F8B8 8003FD08 256BDCB0 */  addiu       $t3, $t3, %lo(osViModeTable)
 /* 03F8BC 8003FD0C 00095080 */  sll         $t2, $t1, 2
 /* 03F8C0 8003FD10 01495021 */  addu        $t2, $t2, $t1
 /* 03F8C4 8003FD14 000A5100 */  sll         $t2, $t2, 4
@@ -74,19 +74,19 @@ glabel func_8003FC30 # 0
 /* 03F8D4 8003FD24 24040001 */   addiu      $a0, $zero, 0x1
 /* 03F8D8 8003FD28 8FA40034 */  lw          $a0, 0x34($sp)
 /* 03F8DC 8003FD2C 2405029A */  addiu       $a1, $zero, 0x29a
-/* 03F8E0 8003FD30 0C0151C4 */  jal         func_80054710
+/* 03F8E0 8003FD30 0C0151C4 */  jal         osViSetEvent
 /* 03F8E4 8003FD34 93A6004B */   lbu        $a2, 0x4b($sp)
 /* 03F8E8 8003FD38 24040004 */  addiu       $a0, $zero, 0x4
 /* 03F8EC 8003FD3C 8FA50030 */  lw          $a1, 0x30($sp)
-/* 03F8F0 8003FD40 0C0145C4 */  jal         func_80051710
+/* 03F8F0 8003FD40 0C0145C4 */  jal         osSetEventMesg
 /* 03F8F4 8003FD44 2406029B */   addiu      $a2, $zero, 0x29b
 /* 03F8F8 8003FD48 24040009 */  addiu       $a0, $zero, 0x9
 /* 03F8FC 8003FD4C 8FA5002C */  lw          $a1, 0x2c($sp)
-/* 03F900 8003FD50 0C0145C4 */  jal         func_80051710
+/* 03F900 8003FD50 0C0145C4 */  jal         osSetEventMesg
 /* 03F904 8003FD54 2406029C */   addiu      $a2, $zero, 0x29c
 /* 03F908 8003FD58 2404000E */  addiu       $a0, $zero, 0xe
 /* 03F90C 8003FD5C 8FA50034 */  lw          $a1, 0x34($sp)
-/* 03F910 8003FD60 0C0145C4 */  jal         func_80051710
+/* 03F910 8003FD60 0C0145C4 */  jal         osSetEventMesg
 /* 03F914 8003FD64 2406029D */   addiu      $a2, $zero, 0x29d
 /* 03F918 8003FD68 8FAD0040 */  lw          $t5, 0x40($sp)
 /* 03F91C 8003FD6C 8FA5003C */  lw          $a1, 0x3c($sp)
@@ -334,13 +334,13 @@ glabel func_80040064 # 7
 /* 03FC84 800400D4 8E53066C */  lw          $s3, 0x66c($s2)
 /* 03FC88 800400D8 5260000E */  beql        $s3, $zero, .L80040114
 /* 03FC8C 800400DC 8FAF0058 */   lw         $t7, 0x58($sp)
-/* 03FC90 800400E0 0C0151FC */  jal         func_800547F0
+/* 03FC90 800400E0 0C0151FC */  jal         osSpTaskYield
 /* 03FC94 800400E4 265000AC */   addiu      $s0, $s2, 0xac
 /* 03FC98 800400E8 02002025 */  move        $a0, $s0
 /* 03FC9C 800400EC 02802825 */  move        $a1, $s4
 /* 03FCA0 800400F0 0C014554 */  jal         osRecvMesg
 /* 03FCA4 800400F4 24060001 */   addiu      $a2, $zero, 0x1
-/* 03FCA8 800400F8 0C015204 */  jal         func_80054810
+/* 03FCA8 800400F8 0C015204 */  jal         osSpTaskYielded
 /* 03FCAC 800400FC 26640010 */   addiu      $a0, $s3, 0x10
 /* 03FCB0 80040100 10400003 */  beqz        $v0, .L80040110
 /* 03FCB4 80040104 03C08825 */   move       $s1, $fp
@@ -352,10 +352,10 @@ glabel func_80040064 # 7
 /* 03FCC4 80040114 265000AC */  addiu       $s0, $s2, 0xac
 /* 03FCC8 80040118 AE4F0670 */  sw          $t7, 0x670($s2)
 /* 03FCCC 8004011C 8FA40058 */  lw          $a0, 0x58($sp)
-/* 03FCD0 80040120 0C01525F */  jal         func_8005497C
+/* 03FCD0 80040120 0C01525F */  jal         osSpTaskLoad
 /* 03FCD4 80040124 24840010 */   addiu      $a0, $a0, 0x10
 /* 03FCD8 80040128 8FA40058 */  lw          $a0, 0x58($sp)
-/* 03FCDC 8004012C 0C0152B9 */  jal         func_80054AE4
+/* 03FCDC 8004012C 0C0152B9 */  jal         osSpTaskStartGo
 /* 03FCE0 80040130 24840010 */   addiu      $a0, $a0, 0x10
 /* 03FCE4 80040134 02002025 */  move        $a0, $s0
 /* 03FCE8 80040138 02802825 */  move        $a1, $s4
@@ -372,9 +372,9 @@ glabel func_80040064 # 7
 /* 03FD10 80040160 16370008 */  bne         $s1, $s7, .L80040184
 /* 03FD14 80040164 00000000 */   nop
 /* 03FD18 80040168 26700010 */  addiu       $s0, $s3, 0x10
-/* 03FD1C 8004016C 0C01525F */  jal         func_8005497C
+/* 03FD1C 8004016C 0C01525F */  jal         osSpTaskLoad
 /* 03FD20 80040170 02002025 */   move       $a0, $s0
-/* 03FD24 80040174 0C0152B9 */  jal         func_80054AE4
+/* 03FD24 80040174 0C0152B9 */  jal         osSpTaskStartGo
 /* 03FD28 80040178 02002025 */   move       $a0, $s0
 /* 03FD2C 8004017C 10000007 */  b           .L8004019C
 /* 03FD30 80040180 8FB90058 */   lw         $t9, 0x58($sp)
@@ -451,10 +451,10 @@ glabel func_80040200 # 8
 /* 03FE30 80040280 261200E4 */  addiu       $s2, $s0, 0xe4
 /* 03FE34 80040284 AE18066C */  sw          $t8, 0x66c($s0)
 /* 03FE38 80040288 8FA40040 */  lw          $a0, 0x40($sp)
-/* 03FE3C 8004028C 0C01525F */  jal         func_8005497C
+/* 03FE3C 8004028C 0C01525F */  jal         osSpTaskLoad
 /* 03FE40 80040290 24840010 */   addiu      $a0, $a0, 0x10
 /* 03FE44 80040294 8FA40040 */  lw          $a0, 0x40($sp)
-/* 03FE48 80040298 0C0152B9 */  jal         func_80054AE4
+/* 03FE48 80040298 0C0152B9 */  jal         osSpTaskStartGo
 /* 03FE4C 8004029C 24840010 */   addiu      $a0, $a0, 0x10
 /* 03FE50 800402A0 02202025 */  move        $a0, $s1
 /* 03FE54 800402A4 02602825 */  move        $a1, $s3
@@ -521,7 +521,7 @@ glabel func_80040374 # 9
 /* 03FF3C 8004038C AFB00018 */  sw          $s0, 0x18($sp)
 /* 03FF40 80040390 AFA00044 */  sw          $zero, 0x44($sp)
 /* 03FF44 80040394 00808825 */  move        $s1, $a0
-/* 03FF48 80040398 0C0152CC */  jal         func_80054B30
+/* 03FF48 80040398 0C0152CC */  jal         osViGetCurrentFramebuffer
 /* 03FF4C 8004039C 8CB3000C */   lw         $s3, 0xc($a1)
 /* 03FF50 800403A0 50530005 */  beql        $v0, $s3, .L800403B8
 /* 03FF54 800403A4 27B2003C */   addiu      $s2, $sp, 0x3c
@@ -543,7 +543,7 @@ glabel func_80040374 # 9
 /* 03FF90 800403E0 02202025 */  move        $a0, $s1
 /* 03FF94 800403E4 0C00FFE3 */  jal         func_8003FF8C
 /* 03FF98 800403E8 02402825 */   move       $a1, $s2
-/* 03FF9C 800403EC 0C0152CC */  jal         func_80054B30
+/* 03FF9C 800403EC 0C0152CC */  jal         osViGetCurrentFramebuffer
 /* 03FFA0 800403F0 00000000 */   nop
 /* 03FFA4 800403F4 5053FFF0 */  beql        $v0, $s3, .L800403B8
 /* 03FFA8 800403F8 27B2003C */   addiu      $s2, $sp, 0x3c
