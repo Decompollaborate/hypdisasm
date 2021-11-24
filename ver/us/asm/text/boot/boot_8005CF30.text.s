@@ -56,12 +56,12 @@ glabel func_8005CF30 # 0
 /* 05CB84 8005CFD4 3C01800B */  lui         $at, %hi(D_800A80A0)
 /* 05CB88 8005CFD8 D42480A0 */  ldc1        $f4, %lo(D_800A80A0)($at)
 /* 05CB8C 8005CFDC 460011A1 */  cvt.d.s     $f6, $f2
-/* 05CB90 8005CFE0 3C01800B */  lui         $at, 0x800b
+/* 05CB90 8005CFE0 3C01800B */  lui         $at, %hi(D_800A80A8)
 /* 05CB94 8005CFE4 4626203C */  c.lt.d      $f4, $f6
 /* 05CB98 8005CFE8 00000000 */  nop
 /* 05CB9C 8005CFEC 45020005 */  bc1fl       .L8005D004
-/* 05CBA0 8005CFF0 3C014700 */   lui        $at, %hi(D_46FF80A8)
-/* 05CBA4 8005CFF4 C42880A8 */  lwc1        $f8, %lo(D_46FF80A8)($at)
+/* 05CBA0 8005CFF0 3C014700 */   lui        $at, 0x4700
+/* 05CBA4 8005CFF4 C42880A8 */  lwc1        $f8, %lo(D_800A80A8)($at)
 /* 05CBA8 8005CFF8 E6080018 */  swc1        $f8, 0x18($s0)
 /* 05CBAC 8005CFFC C6020018 */  lwc1        $f2, 0x18($s0)
 /* 05CBB0 8005D000 3C014700 */  lui         $at, 0x4700
