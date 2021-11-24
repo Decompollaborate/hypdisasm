@@ -161,7 +161,7 @@ glabel _Litob # 0
 /* 05D8D0 8005DD20 01903023 */  subu        $a2, $t4, $s0
 /* 05D8D4 8005DD24 AE260014 */  sw          $a2, 0x14($s1)
 /* 05D8D8 8005DD28 8E240008 */  lw          $a0, 0x8($s1)
-/* 05D8DC 8005DD2C 0C01267C */  jal         func_800499F0
+/* 05D8DC 8005DD2C 0C01267C */  jal         memcpy
 /* 05D8E0 8005DD30 02502821 */   addu       $a1, $s2, $s0
 /* 05D8E4 8005DD34 8E250014 */  lw          $a1, 0x14($s1)
 /* 05D8E8 8005DD38 8E240024 */  lw          $a0, 0x24($s1)

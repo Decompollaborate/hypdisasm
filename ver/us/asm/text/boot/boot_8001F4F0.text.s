@@ -97,7 +97,7 @@ glabel func_8001F614 # 2
 /* 01F1DC 8001F62C 3C05800A */  lui         $a1, %hi(D_800A4860)
 /* 01F1E0 8001F630 55C00004 */  bnel        $t6, $zero, .L8001F644
 /* 01F1E4 8001F634 8FBF0014 */   lw         $ra, 0x14($sp)
-/* 01F1E8 8001F638 0C014E38 */  jal         func_800538E0
+/* 01F1E8 8001F638 0C014E38 */  jal         sprintf
 /* 01F1EC 8001F63C 24A54860 */   addiu      $a1, $a1, %lo(D_800A4860)
 /* 01F1F0 8001F640 8FBF0014 */  lw          $ra, 0x14($sp)
 .L8001F644:

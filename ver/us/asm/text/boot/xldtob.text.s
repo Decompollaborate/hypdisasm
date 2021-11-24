@@ -59,7 +59,7 @@ glabel _Ldtob # 0
 /* 05DA04 8005DE54 24190003 */  addiu       $t9, $zero, 0x3
 /* 05DA08 8005DE58 24060003 */  addiu       $a2, $zero, 0x3
 /* 05DA0C 8005DE5C AC590014 */  sw          $t9, 0x14($v0)
-/* 05DA10 8005DE60 0C01267C */  jal         func_800499F0
+/* 05DA10 8005DE60 0C01267C */  jal         memcpy
 /* 05DA14 8005DE64 8C440008 */   lw         $a0, 0x8($v0)
 /* 05DA18 8005DE68 100000EB */  b           .L8005E218
 /* 05DA1C 8005DE6C 8FBF0044 */   lw         $ra, 0x44($sp)
@@ -505,7 +505,7 @@ glabel _Genld # 2
 /* 05E01C 8005E46C AE07001C */  sw          $a3, 0x1c($s0)
 /* 05E020 8005E470 A7A7002E */  sh          $a3, 0x2e($sp)
 /* 05E024 8005E474 00E03025 */  move        $a2, $a3
-/* 05E028 8005E478 0C01267C */  jal         func_800499F0
+/* 05E028 8005E478 0C01267C */  jal         memcpy
 /* 05E02C 8005E47C 030D2021 */   addu       $a0, $t8, $t5
 /* 05E030 8005E480 87A7002E */  lh          $a3, 0x2e($sp)
 /* 05E034 8005E484 8E0E0024 */  lw          $t6, 0x24($s0)
@@ -521,7 +521,7 @@ glabel _Genld # 2
 /* 05E058 8005E4A8 A7A7002E */  sh          $a3, 0x2e($sp)
 /* 05E05C 8005E4AC 02202825 */  move        $a1, $s1
 /* 05E060 8005E4B0 00E03025 */  move        $a2, $a3
-/* 05E064 8005E4B4 0C01267C */  jal         func_800499F0
+/* 05E064 8005E4B4 0C01267C */  jal         memcpy
 /* 05E068 8005E4B8 012A2021 */   addu       $a0, $t1, $t2
 /* 05E06C 8005E4BC 87A7002E */  lh          $a3, 0x2e($sp)
 /* 05E070 8005E4C0 87A80032 */  lh          $t0, 0x32($sp)
@@ -555,7 +555,7 @@ glabel _Genld # 2
 /* 05E0D4 8005E524 A7A80032 */  sh          $t0, 0x32($sp)
 /* 05E0D8 8005E528 A7A7002E */  sh          $a3, 0x2e($sp)
 /* 05E0DC 8005E52C 01003025 */  move        $a2, $t0
-/* 05E0E0 8005E530 0C01267C */  jal         func_800499F0
+/* 05E0E0 8005E530 0C01267C */  jal         memcpy
 /* 05E0E4 8005E534 01F82021 */   addu       $a0, $t7, $t8
 /* 05E0E8 8005E538 87A7002E */  lh          $a3, 0x2e($sp)
 /* 05E0EC 8005E53C 87A80032 */  lh          $t0, 0x32($sp)
@@ -593,7 +593,7 @@ glabel _Genld # 2
 /* 05E160 8005E5B0 8E0B0014 */  lw          $t3, 0x14($s0)
 /* 05E164 8005E5B4 A7A7002E */  sh          $a3, 0x2e($sp)
 /* 05E168 8005E5B8 00E03025 */  move        $a2, $a3
-/* 05E16C 8005E5BC 0C01267C */  jal         func_800499F0
+/* 05E16C 8005E5BC 0C01267C */  jal         memcpy
 /* 05E170 8005E5C0 014B2021 */   addu       $a0, $t2, $t3
 /* 05E174 8005E5C4 87A7002E */  lh          $a3, 0x2e($sp)
 /* 05E178 8005E5C8 8E0F0014 */  lw          $t7, 0x14($s0)
@@ -675,7 +675,7 @@ glabel _Genld # 2
 /* 05E280 8005E6D0 A7A80032 */  sh          $t0, 0x32($sp)
 /* 05E284 8005E6D4 A7A7002E */  sh          $a3, 0x2e($sp)
 /* 05E288 8005E6D8 00E03025 */  move        $a2, $a3
-/* 05E28C 8005E6DC 0C01267C */  jal         func_800499F0
+/* 05E28C 8005E6DC 0C01267C */  jal         memcpy
 /* 05E290 8005E6E0 01F82021 */   addu       $a0, $t7, $t8
 /* 05E294 8005E6E4 87A7002E */  lh          $a3, 0x2e($sp)
 /* 05E298 8005E6E8 8E0A0014 */  lw          $t2, 0x14($s0)

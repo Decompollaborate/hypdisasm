@@ -9,15 +9,15 @@
 
 .balign 16
 
-glabel func_800538E0 # 0
+glabel sprintf # 0
 /* 053490 800538E0 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 053494 800538E4 AFA40020 */  sw          $a0, 0x20($sp)
 /* 053498 800538E8 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 05349C 800538EC AFA50024 */  sw          $a1, 0x24($sp)
 /* 0534A0 800538F0 AFA60028 */  sw          $a2, 0x28($sp)
 /* 0534A4 800538F4 AFA7002C */  sw          $a3, 0x2c($sp)
-/* 0534A8 800538F8 3C048005 */  lui         $a0, %hi(func_80053938)
-/* 0534AC 800538FC 24843938 */  addiu       $a0, $a0, %lo(func_80053938)
+/* 0534A8 800538F8 3C048005 */  lui         $a0, %hi(proutSprintf)
+/* 0534AC 800538FC 24843938 */  addiu       $a0, $a0, %lo(proutSprintf)
 /* 0534B0 80053900 27A70028 */  addiu       $a3, $sp, 0x28
 /* 0534B4 80053904 8FA60024 */  lw          $a2, 0x24($sp)
 /* 0534B8 80053908 0C0164B4 */  jal         _Printf
@@ -34,10 +34,10 @@ glabel func_800538E0 # 0
 /* 0534E0 80053930 03E00008 */  jr          $ra
 /* 0534E4 80053934 00000000 */   nop
 
-glabel func_80053938 # 1
+glabel proutSprintf # 1
 /* 0534E8 80053938 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 0534EC 8005393C AFBF0014 */  sw          $ra, 0x14($sp)
-/* 0534F0 80053940 0C01267C */  jal         func_800499F0
+/* 0534F0 80053940 0C01267C */  jal         memcpy
 /* 0534F4 80053944 AFA60020 */   sw         $a2, 0x20($sp)
 /* 0534F8 80053948 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0534FC 8005394C 8FAE0020 */  lw          $t6, 0x20($sp)

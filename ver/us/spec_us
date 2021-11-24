@@ -138,7 +138,7 @@ beginseg
     include "ver/us/build/asm/text/boot/boot_800537E0.text.o"
     include "ver/us/build/asm/text/boot/boot_80053850.text.o"
     include "ver/us/build/asm/text/boot/invalicache.text.o"
-    include "ver/us/build/asm/text/boot/boot_800538E0.text.o"
+    include "ver/us/build/asm/text/boot/sprintf.text.o"
     include "ver/us/build/asm/text/boot/boot_80053960.text.o"
     include "ver/us/build/asm/text/boot/boot_800539A0.text.o"
     include "ver/us/build/asm/text/boot/setintmask.text.o"
@@ -221,7 +221,7 @@ beginseg
     include "ver/us/build/asm/text/boot/sp.text.o"
     include "ver/us/build/asm/text/boot/voicecontread36.text.o"
     include "ver/us/build/asm/text/boot/pfsisplug.text.o"
-    include "ver/us/build/asm/text/boot/boot_8005B000.text.o"
+    include "ver/us/build/asm/text/boot/ai.text.o"
     include "ver/us/build/asm/text/boot/voicecrc.text.o"
     include "ver/us/build/asm/text/boot/boot_8005B0D0.text.o"
     include "ver/us/build/asm/text/boot/boot_8005B750.text.o"
@@ -288,7 +288,6 @@ beginseg
     // bss
     include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
 endseg
-
 
 beginseg
     name "assets_A9800"
