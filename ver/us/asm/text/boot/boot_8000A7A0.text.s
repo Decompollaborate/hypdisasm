@@ -74,8 +74,8 @@ glabel func_8000A7A8 # 1
 /* 00A42C 8000A87C 0C007DA0 */  jal         func_8001F680
 /* 00A430 8000A880 24077D00 */   addiu      $a3, $zero, 0x7d00
 /* 00A434 8000A884 8FA20074 */  lw          $v0, 0x74($sp)
-/* 00A438 8000A888 3C0B800A */  lui         $t3, %hi(D_8009DCB0)
-/* 00A43C 8000A88C 256BDCB0 */  addiu       $t3, $t3, %lo(D_8009DCB0)
+/* 00A438 8000A888 3C0B800A */  lui         $t3, %hi(osViModeTable)
+/* 00A43C 8000A88C 256BDCB0 */  addiu       $t3, $t3, %lo(osViModeTable)
 /* 00A440 8000A890 00025080 */  sll         $t2, $v0, 2
 /* 00A444 8000A894 01425021 */  addu        $t2, $t2, $v0
 /* 00A448 8000A898 000A5100 */  sll         $t2, $t2, 4

@@ -12,7 +12,7 @@
 glabel func_800537E0 # 0
 /* 053390 800537E0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 053394 800537E4 AFBF0014 */  sw          $ra, 0x14($sp)
-/* 053398 800537E8 0C0164A8 */  jal         func_800592A0
+/* 053398 800537E8 0C0164A8 */  jal         __osSpSetPc
 /* 05339C 800537EC 00002025 */   move       $a0, $zero
 /* 0533A0 800537F0 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0533A4 800537F4 27BD0018 */  addiu       $sp, $sp, 0x18

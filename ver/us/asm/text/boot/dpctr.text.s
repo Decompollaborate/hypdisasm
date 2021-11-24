@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80054390 # 0
+glabel osDpGetCounters # 0
 /* 053F40 80054390 3C0EA410 */  lui         $t6, %hi(D_A4100010)
 /* 053F44 80054394 8DCF0010 */  lw          $t7, %lo(D_A4100010)($t6)
 /* 053F48 80054398 3C18A410 */  lui         $t8, %hi(D_A4100014)

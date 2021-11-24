@@ -176,7 +176,7 @@ glabel func_8003C5EC # 1
 /* 03C324 8003C774 8F392998 */  lw          $t9, %lo(D_800F2998)($t9)
 /* 03C328 8003C778 AE19000C */  sw          $t9, 0xc($s0)
 /* 03C32C 8003C77C AFA70044 */  sw          $a3, 0x44($sp)
-/* 03C330 8003C780 0C0150F4 */  jal         func_800543D0
+/* 03C330 8003C780 0C0150F4 */  jal         osWritebackDCacheAll
 /* 03C334 8003C784 AFA20024 */   sw         $v0, 0x24($sp)
 /* 03C338 8003C788 3C04800F */  lui         $a0, %hi(D_800F2990)
 /* 03C33C 8003C78C 8C842990 */  lw          $a0, %lo(D_800F2990)($a0)

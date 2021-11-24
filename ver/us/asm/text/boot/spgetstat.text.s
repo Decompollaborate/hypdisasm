@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005AA10 # 0
+glabel __osSpGetStatus # 0
 /* 05A5C0 8005AA10 3C0EA404 */  lui         $t6, %hi(D_A4040010)
 /* 05A5C4 8005AA14 03E00008 */  jr          $ra
 /* 05A5C8 8005AA18 8DC20010 */   lw         $v0, %lo(D_A4040010)($t6)

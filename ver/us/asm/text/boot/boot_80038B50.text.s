@@ -2210,7 +2210,7 @@ glabel func_8003AA88 # 45
 /* 03A638 8003AA88 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 03A63C 8003AA8C AFBF0014 */  sw          $ra, 0x14($sp)
 /* 03A640 8003AA90 3C04800F */  lui         $a0, %hi(D_800F2970)
-/* 03A644 8003AA94 0C0150E4 */  jal         func_80054390
+/* 03A644 8003AA94 0C0150E4 */  jal         osDpGetCounters
 /* 03A648 8003AA98 24842970 */   addiu      $a0, $a0, %lo(D_800F2970)
 /* 03A64C 8003AA9C 3C04800F */  lui         $a0, %hi(D_800F2970)
 /* 03A650 8003AAA0 24842970 */  addiu       $a0, $a0, %lo(D_800F2970)

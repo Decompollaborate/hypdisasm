@@ -1302,80 +1302,56 @@ glabel D_800FF080
 glabel D_800FF098
 /* 0A8E68 800FF098 */  .space  0x08
 
-glabel D_800FF0A0
+glabel viThread
 /* 0A8E6C 800FF0A0 */  .space  0x11B0
 
-glabel D_80100250
+glabel viEventQueue
 /* 0A8E70 80100250 */  .space  0x18
 
-glabel D_80100268
+glabel viEventBuf
 /* 0A8E74 80100268 */  .space  0x18
 
-glabel D_80100280
+glabel viRetraceMsg
 /* 0A8E78 80100280 */  .space  0x18
 
-glabel D_80100298
-/* 0A8E7C 80100298 */  .space  0x18
+glabel viCounterMsg
+/* 0A8E7C 80100298 */  .space  0x28
 
-glabel D_801002B0
-/* 0A8E80 801002B0 */  .space  0x10
-
-glabel D_801002C0
-/* 0A8E84 801002C0 */  .space  0x10
-
-glabel D_801002D0
-/* 0A8E88 801002D0 */  .space  0x08
-
-glabel D_801002D8
-/* 0A8E8C 801002D8 */  .space  0x08
-
-glabel D_801002E0
-/* 0A8E90 801002E0 */  .space  0x08
-
-glabel D_801002E8
-/* 0A8E94 801002E8 */  .space  0x04
-
-glabel D_801002EC
-/* 0A8E98 801002EC */  .space  0x04
-
-glabel D_801002F0
-/* 0A8E9C 801002F0 */  .space  0x08
-
-glabel D_801002F8
-/* 0A8EA0 801002F8 */  .space  0x08
+glabel tmpTask
+/* 0A8E80 801002C0 */  .space  0x40
 
 glabel D_80100300
-/* 0A8EA4 80100300 */  .space  0x10
+/* 0A8E84 80100300 */  .space  0x10
 
 glabel siAccessBuf
-/* 0A8EA8 80100310 */  .space  0x08
+/* 0A8E88 80100310 */  .space  0x08
 
 glabel __osSiAccessQueue
-/* 0A8EAC 80100318 */  .space  0x38
+/* 0A8E8C 80100318 */  .space  0x38
 
 glabel __osCurrentTime
-/* 0A8EB0 80100350 */  .space  0x08
+/* 0A8E90 80100350 */  .space  0x08
 
 glabel __osBaseCounter
-/* 0A8EB4 80100358 */  .space  0x04
+/* 0A8E94 80100358 */  .space  0x04
 
 glabel __osViIntrCount
-/* 0A8EB8 8010035C */  .space  0x04
+/* 0A8E98 8010035C */  .space  0x04
 
 glabel __osTimerCounter
-/* 0A8EBC 80100360 */  .space  0x10
+/* 0A8E9C 80100360 */  .space  0x10
 
 glabel D_80100370
-/* 0A8EC0 80100370 */  .space  0x08
+/* 0A8EA0 80100370 */  .space  0x08
 
-glabel D_80100378
-/* 0A8EC4 80100378 */  .space  0x18
+glabel __osPiAccessQueue
+/* 0A8EA4 80100378 */  .space  0x18
 
 glabel __osPfsPifRam
-/* 0A8EC8 80100390 */  .space  0x40
+/* 0A8EA8 80100390 */  .space  0x40
 
 glabel __osThreadSave
-/* 0A8ECC 801003D0 */  .space  0x1B0
+/* 0A8EAC 801003D0 */  .space  0x1B0
 
 glabel __osPfsInodeCache
-/* 0A8ED0 80100580 */  .space  0x100
+/* 0A8EB0 80100580 */  .space  0x100

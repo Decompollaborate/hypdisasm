@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80051710 # 0
+glabel osSetEventMesg # 0
 /* 0512C0 80051710 27BDFFD8 */  addiu       $sp, $sp, -0x28
 /* 0512C4 80051714 AFBF001C */  sw          $ra, 0x1c($sp)
 /* 0512C8 80051718 AFA40028 */  sw          $a0, 0x28($sp)

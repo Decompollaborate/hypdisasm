@@ -2564,7 +2564,7 @@ glabel func_80002998 # 42
 /* 0025AC 800029FC 3C05800B */  lui         $a1, %hi(D_800AD038)
 /* 0025B0 80002A00 24A5D038 */  addiu       $a1, $a1, %lo(D_800AD038)
 /* 0025B4 80002A04 24040005 */  addiu       $a0, $zero, 0x5
-/* 0025B8 80002A08 0C0145C4 */  jal         func_80051710
+/* 0025B8 80002A08 0C0145C4 */  jal         osSetEventMesg
 /* 0025BC 80002A0C 24060001 */   addiu      $a2, $zero, 0x1
 /* 0025C0 80002A10 3C04800B */  lui         $a0, %hi(D_800AD038)
 /* 0025C4 80002A14 3C05800B */  lui         $a1, %hi(D_800ACE88)
