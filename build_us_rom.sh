@@ -27,13 +27,15 @@ find ver/us/asm -type f -name "*.s" | sed 's/\.s/\.o/ ; s/asm\//build\/asm\//' |
 
 # undefined syms
 cpp -P ver/us/"${UNDEFINED_SYMS}" > ver/us/build/"${UNDEFINED_SYMS}"
+cpp -P ver/us/libultra_syms.txt > ver/us/build/libultra_syms.txt
+cpp -P ver/us/hardware_regs.txt > ver/us/build/hardware_regs.txt
 
 # spec
 cpp -P ver/us/"${SPEC}" > ver/us/build/"${SPEC}"
 ../mm/tools/buildtools/mkldscript ver/us/build/"${SPEC}" ver/us/build/ldscript_us.txt
 
 # Link into an elf
-mips-linux-gnu-ld -T ver/us/build/"${UNDEFINED_SYMS}" -T ver/us/build/ldscript_us.txt --no-check-sections --accept-unknown-input-arch --emit-relocs -Map ver/us/build/hyp_us.map -o ver/us/build/"${ELF}"
+mips-linux-gnu-ld -T ver/us/build/"${UNDEFINED_SYMS}" -T ver/us/build/libultra_syms.txt -T ver/us/build/hardware_regs.txt -T ver/us/build/ldscript_us.txt --no-check-sections --accept-unknown-input-arch --emit-relocs -Map ver/us/build/hyp_us.map -o ver/us/build/"${ELF}"
 
 # Generate ROM
 ../mm/tools/buildtools/elf2rom -cic 6102 ver/us/build/"${ELF}" "${TARGET_ROM}"

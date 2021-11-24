@@ -33,8 +33,8 @@ glabel __osPiRawStartDma # 0
 /* 059C28 8005A078 8FA70024 */  lw          $a3, 0x24($sp)
 /* 059C2C 8005A07C 3C18A460 */  lui         $t8, %hi(D_A4600000)
 /* 059C30 8005A080 AF020000 */  sw          $v0, %lo(D_A4600000)($t8)
-/* 059C34 8005A084 3C198000 */  lui         $t9, %hi(D_80000308)
-/* 059C38 8005A088 8F390308 */  lw          $t9, %lo(D_80000308)($t9)
+/* 059C34 8005A084 3C198000 */  lui         $t9, %hi(osRomBase)
+/* 059C38 8005A088 8F390308 */  lw          $t9, %lo(osRomBase)($t9)
 /* 059C3C 8005A08C 8FA8001C */  lw          $t0, 0x1c($sp)
 /* 059C40 8005A090 3C011FFF */  lui         $at, 0x1fff
 /* 059C44 8005A094 3421FFFF */  ori         $at, $at, 0xffff

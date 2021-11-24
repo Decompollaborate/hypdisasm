@@ -41,8 +41,8 @@ glabel func_8000A7A8 # 1
 /* 00A3B8 8000A808 2404006E */  addiu       $a0, $zero, 0x6e
 /* 00A3BC 8000A80C 0C0109F2 */  jal         Fault_Start
 /* 00A3C0 8000A810 2405006E */   addiu      $a1, $zero, 0x6e
-/* 00A3C4 8000A814 3C028000 */  lui         $v0, %hi(D_80000300)
-/* 00A3C8 8000A818 8C420300 */  lw          $v0, %lo(D_80000300)($v0)
+/* 00A3C4 8000A814 3C028000 */  lui         $v0, %hi(osTvType)
+/* 00A3C8 8000A818 8C420300 */  lw          $v0, %lo(osTvType)($v0)
 /* 00A3CC 8000A81C 8FA40078 */  lw          $a0, 0x78($sp)
 /* 00A3D0 8000A820 24050064 */  addiu       $a1, $zero, 0x64
 /* 00A3D4 8000A824 10400008 */  beqz        $v0, .L8000A848
@@ -113,8 +113,8 @@ glabel func_8000A7A8 # 1
 /* 00A4C4 8000A914 8FA4006C */   lw         $a0, 0x6c($sp)
 /* 00A4C8 8000A918 0C014D70 */  jal         osViBlack
 /* 00A4CC 8000A91C 24040001 */   addiu      $a0, $zero, 0x1
-/* 00A4D0 8000A920 3C098000 */  lui         $t1, %hi(D_80000300)
-/* 00A4D4 8000A924 8D290300 */  lw          $t1, %lo(D_80000300)($t1)
+/* 00A4D0 8000A920 3C098000 */  lui         $t1, %hi(osTvType)
+/* 00A4D4 8000A924 8D290300 */  lw          $t1, %lo(osTvType)($t1)
 /* 00A4D8 8000A928 24010001 */  addiu       $at, $zero, 0x1
 /* 00A4DC 8000A92C 11210003 */  beq         $t1, $at, .L8000A93C
 /* 00A4E0 8000A930 00000000 */   nop
