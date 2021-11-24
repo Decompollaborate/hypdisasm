@@ -828,12 +828,12 @@ glabel func_8000D2E4 # 13
 /* 00CF38 8000D388 E5E00000 */   swc1       $f0, 0x0($t7)
 .L8000D38C:
 /* 00CF3C 8000D38C C4240D14 */  lwc1        $f4, %lo(D_43870D14)($at)
-/* 00CF40 8000D390 3C01800A */  lui         $at, 0x800a
+/* 00CF40 8000D390 3C01800A */  lui         $at, %hi(D_800A0D18)
 /* 00CF44 8000D394 4604703C */  c.lt.s      $f14, $f4
 /* 00CF48 8000D398 00000000 */  nop
 /* 00CF4C 8000D39C 45020012 */  bc1fl       .L8000D3E8
-/* 00CF50 8000D3A0 3C01BF80 */   lui        $at, %hi(D_BF800D18)
-/* 00CF54 8000D3A4 C4260D18 */  lwc1        $f6, %lo(D_BF800D18)($at)
+/* 00CF50 8000D3A0 3C01BF80 */   lui        $at, 0xbf80
+/* 00CF54 8000D3A4 C4260D18 */  lwc1        $f6, %lo(D_800A0D18)($at)
 /* 00CF58 8000D3A8 460E303C */  c.lt.s      $f6, $f14
 /* 00CF5C 8000D3AC 00000000 */  nop
 /* 00CF60 8000D3B0 4502000D */  bc1fl       .L8000D3E8
