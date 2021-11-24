@@ -328,133 +328,309 @@ endseg
 beginseg
     name "file_107190"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_107190.o"
+
+    // text
+    include "ver/us/build/asm/text/file_107190/file_107190_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_107190/file_107190_80134400.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_107190/file_107190_8013C8D0.bss.o"
 endseg
 
 beginseg
     name "file_10F7F0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_10F7F0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_10F7F0/file_10F7F0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_10F7F0/file_10F7F0_80134520.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_10F7F0/file_10F7F0_80167130.bss.o"
 endseg
 
 beginseg
     name "file_1426B0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_1426B0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_1426B0/file_1426B0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_1426B0/file_1426B0_801346B0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_1426B0/file_1426B0_80174700.bss.o"
 endseg
 
 beginseg
     name "file_182B40"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_182B40.o"
+
+    // text
+    include "ver/us/build/asm/text/file_182B40/file_182B40_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_182B40/file_182B40_80134430.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_182B40/file_182B40_8014DBA0.bss.o"
 endseg
 
 beginseg
     name "file_19C470"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_19C470.o"
+
+    // text
+    include "ver/us/build/asm/text/file_19C470/file_19C470_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_19C470/file_19C470_80134780.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_19C470/file_19C470_8015DC50.bss.o"
 endseg
 
 beginseg
     name "file_1C5E50"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_1C5E50.o"
+
+    // text
+    include "ver/us/build/asm/text/file_1C5E50/file_1C5E50_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_1C5E50/file_1C5E50_80134B40.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_1C5E50/file_1C5E50_8016C7F0.bss.o"
 endseg
 
 beginseg
     name "file_1FE3D0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_1FE3D0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_1FE3D0/file_1FE3D0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_1FE3D0/file_1FE3D0_80134C90.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_1FE3D0/file_1FE3D0_80189470.bss.o"
 endseg
 
 beginseg
     name "file_2535D0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_2535D0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_2535D0/file_2535D0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_2535D0/file_2535D0_80134B70.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_2535D0/file_2535D0_8017D6E0.bss.o"
 endseg
 
 beginseg
     name "file_29CA40"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_29CA40.o"
+
+    // text
+    include "ver/us/build/asm/text/file_29CA40/file_29CA40_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_29CA40/file_29CA40_80134820.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_29CA40/file_29CA40_80155180.bss.o"
 endseg
 
 beginseg
     name "file_2BD950"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_2BD950.o"
+
+    // text
+    include "ver/us/build/asm/text/file_2BD950/file_2BD950_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_2BD950/file_2BD950_801349D0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_2BD950/file_2BD950_80150F60.bss.o"
 endseg
 
 beginseg
     name "file_2DA640"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_2DA640.o"
+
+    // text
+    include "ver/us/build/asm/text/file_2DA640/file_2DA640_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_2DA640/file_2DA640_80134570.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_2DA640/file_2DA640_801746C0.bss.o"
 endseg
 
 beginseg
     name "file_31AA90"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_31AA90.o"
+
+    // text
+    include "ver/us/build/asm/text/file_31AA90/file_31AA90_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_31AA90/file_31AA90_80134A20.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_31AA90/file_31AA90_8018C0D0.bss.o"
 endseg
 
 beginseg
     name "file_3728F0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_3728F0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_3728F0/file_3728F0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_3728F0/file_3728F0_801347A0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_3728F0/file_3728F0_8018A2D0.bss.o"
 endseg
 
 beginseg
     name "file_3C8950"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_3C8950.o"
+
+    // text
+    include "ver/us/build/asm/text/file_3C8950/file_3C8950_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_3C8950/file_3C8950_80134880.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_3C8950/file_3C8950_8014F620.bss.o"
 endseg
 
 beginseg
     name "file_3E3D00"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_3E3D00.o"
+
+    // text
+    include "ver/us/build/asm/text/file_3E3D00/file_3E3D00_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_3E3D00/file_3E3D00_80134560.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_3E3D00/file_3E3D00_80147460.bss.o"
 endseg
 
 beginseg
     name "file_3F6EF0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_3F6EF0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_3F6EF0/file_3F6EF0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_3F6EF0/file_3F6EF0_801348B0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_3F6EF0/file_3F6EF0_801551D0.bss.o"
 endseg
 
 beginseg
     name "file_417E50"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_417E50.o"
+
+    // text
+    include "ver/us/build/asm/text/file_417E50/file_417E50_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_417E50/file_417E50_801348C0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_417E50/file_417E50_8014D240.bss.o"
 endseg
 
 beginseg
     name "file_430E20"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_430E20.o"
+
+    // text
+    include "ver/us/build/asm/text/file_430E20/file_430E20_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_430E20/file_430E20_801348B0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_430E20/file_430E20_80151730.bss.o"
 endseg
 
 beginseg
     name "file_44E2E0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_44E2E0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_44E2E0/file_44E2E0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_44E2E0/file_44E2E0_801343F0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_44E2E0/file_44E2E0_8013CE80.bss.o"
 endseg
 
 beginseg
     name "file_456EF0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_456EF0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_456EF0/file_456EF0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_456EF0/file_456EF0_801343A0.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_456EF0/file_456EF0_8015BF50.bss.o"
 endseg
 
 beginseg
     name "file_47EBD0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_47EBD0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_47EBD0/file_47EBD0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_47EBD0/file_47EBD0_80134460.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_47EBD0/file_47EBD0_8015A070.bss.o"
 endseg
 
 beginseg
     name "file_4A49D0"
     after "file_B3C70"
-    include "ver/us/build/baserom/file_4A49D0.o"
+
+    // text
+    include "ver/us/build/asm/text/file_4A49D0/file_4A49D0_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_4A49D0/file_4A49D0_80134860.data.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_4A49D0/file_4A49D0_80144230.bss.o"
 endseg
 
 beginseg
