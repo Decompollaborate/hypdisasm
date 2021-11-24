@@ -12,6 +12,7 @@
 80038F68,Math_FCotF
 800426B4,Fault_ThreadEntry
 800427C8,Fault_Start
+800499F0,memcpy
 80049A48,memset
 80049A78,strcpy
 80049AAC,strlen
@@ -69,6 +70,8 @@
 800535C0,osViBlack
 80053790,osViSetYScale
 80053860,osInvalICache
+800538E0,sprintf
+80053938,proutSprintf
 80053A00,osSetIntMask
 80053AA0,guOrthoF
 80053BF4,guOrtho
@@ -170,6 +173,7 @@
 8005AD10,osPfsIsPlug
 8005AE9C,__osPfsRequestData
 8005AF50,__osPfsGetInitData
+8005B000,__osAiDeviceBusy
 8005B030,__osVoiceContDataCrc
 8005D540,__osSiDeviceBusy
 8005D570,osDestroyThread
