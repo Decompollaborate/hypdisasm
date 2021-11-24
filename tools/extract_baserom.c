@@ -15,7 +15,7 @@ Region GetRegion(const char *regionParameter) {
     if (strcmp(regionParameter, "jp") == 0) {
         return REGION_JP;
     }
-    if (strcmp(regionParameter, "usa") == 0) {
+    if (strcmp(regionParameter, "us") == 0) {
         return REGION_US;
     }
     return REGION_INVALID;
@@ -24,11 +24,11 @@ Region GetRegion(const char *regionParameter) {
 FILE *OpenFilelist(Region region) {
     switch (region) {
     case REGION_JP:
-        return fopen("tables/jp/filelist.txt", "r");
+        return fopen("ver/jp/tables/filelist.txt", "r");
         break;
 
     case REGION_US:
-        return fopen("tables/usa/filelist.txt", "r");
+        return fopen("ver/us/tables/filelist.txt", "r");
         break;
 
     case REGION_INVALID:
@@ -67,7 +67,7 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
             break;
         }
 
-        snprintf(outputFilepath, 300, "baserom/%s/%s.bin", regionName, filename_last);
+        snprintf(outputFilepath, 300, "ver/%s/baserom/%s.bin", regionName, filename_last);
         printf("Writing '%s'. From offset %06X to %06X\n", outputFilepath, offset_last, offset);
 
         FILE* outputFile = fopen(outputFilepath, "wb");
@@ -83,7 +83,7 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
     }
 
     if (romsize - offset_last > 0){
-        snprintf(outputFilepath, 300, "baserom/%s/%s.bin", regionName, filename_last);
+        snprintf(outputFilepath, 300, "ver/%s/baserom/%s.bin", regionName, filename_last);
         printf("Writing '%s'. From offset %06X to %06zX\n", outputFilepath, offset_last, romsize);
 
         FILE* outputFile = fopen(outputFilepath, "wb");
@@ -103,7 +103,7 @@ void do_stuff(FILE *filelist, uint8_t *rom, size_t romsize, const char *regionNa
 int main(int argc, char *argv[]) {
     if (argc < 3) {
         fprintf(stderr, "Usage: %s region rompath\n", argv[0]);
-        fprintf(stderr, " region must be 'usa' or 'jp'\n");
+        fprintf(stderr, " region must be 'us' or 'jp'\n");
         fprintf(stderr, " rompath is a path to a .z64 ROM\n");
         exit(EXIT_FAILURE);
     }
@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
     Region region = GetRegion(argv[1]);
     if (region == REGION_INVALID) {
         fprintf(stderr, "Invalid region: '%s'\n", argv[1]);
-        fprintf(stderr, "region must be 'usa' or 'jp'\n");
+        fprintf(stderr, "region must be 'us' or 'jp'\n");
         exit(EXIT_FAILURE);
     }
 

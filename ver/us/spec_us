@@ -1,0 +1,484 @@
+/*
+ * US ROM spec file
+ */
+
+beginseg
+    name "makerom"
+    address 0x7FFFF400
+    include "ver/us/build/asm/text/makerom/rom_header.o"
+    include "ver/us/build/asm/text/makerom/ipl3.o"
+    include "ver/us/build/asm/text/makerom/entry.o"
+endseg
+
+beginseg
+    name "boot"
+
+    // text
+    include "ver/us/build/asm/text/boot/boot_main.text.o"
+    include "ver/us/build/asm/text/boot/boot_80000510.text.o"
+    include "ver/us/build/asm/text/boot/boot_800033D0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80003A40.text.o"
+    include "ver/us/build/asm/text/boot/boot_80003B50.text.o"
+    include "ver/us/build/asm/text/boot/boot_80004670.text.o"
+    include "ver/us/build/asm/text/boot/boot_80004970.text.o"
+    include "ver/us/build/asm/text/boot/boot_80004AD0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800051A0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800057D0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80007600.text.o"
+    include "ver/us/build/asm/text/boot/boot_8000A7A0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8000C140.text.o"
+    include "ver/us/build/asm/text/boot/boot_8000C7F0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8000F7B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80011CB0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800121B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80013130.text.o"
+    include "ver/us/build/asm/text/boot/boot_800135C0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80013660.text.o"
+    include "ver/us/build/asm/text/boot/boot_80014B60.text.o"
+    include "ver/us/build/asm/text/boot/boot_800171D0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80017300.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001BE70.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001C110.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001C860.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001D6C0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001E830.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001F110.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001F1F0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001F4F0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8001F680.text.o"
+    include "ver/us/build/asm/text/boot/boot_80020340.text.o"
+    include "ver/us/build/asm/text/boot/boot_800206B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800215A0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80023130.text.o"
+    include "ver/us/build/asm/text/boot/boot_80025030.text.o"
+    include "ver/us/build/asm/text/boot/boot_80027380.text.o"
+    include "ver/us/build/asm/text/boot/boot_80027430.text.o"
+    include "ver/us/build/asm/text/boot/boot_8002B6B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8002D010.text.o"
+    include "ver/us/build/asm/text/boot/boot_8002D260.text.o"
+    include "ver/us/build/asm/text/boot/boot_8002EB60.text.o"
+    include "ver/us/build/asm/text/boot/boot_80032FA0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80033BD0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800341C0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80036330.text.o"
+    include "ver/us/build/asm/text/boot/boot_80037AE0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80037F00.text.o"
+    include "ver/us/build/asm/text/boot/boot_80038B50.text.o"
+    include "ver/us/build/asm/text/boot/boot_8003C500.text.o"
+    include "ver/us/build/asm/text/boot/boot_8003F700.text.o"
+    include "ver/us/build/asm/text/boot/boot_8003FB90.text.o"
+    include "ver/us/build/asm/text/boot/boot_8003FC30.text.o"
+    include "ver/us/build/asm/text/boot/boot_80040440.text.o"
+    include "ver/us/build/asm/text/boot/boot_80040F20.text.o"
+    include "ver/us/build/asm/text/boot/boot_80041670.text.o"
+    include "ver/us/build/asm/text/boot/fault.text.o"
+    include "ver/us/build/asm/text/boot/boot_80042840.text.o"
+    include "ver/us/build/asm/text/boot/boot_80048F50.text.o"
+    include "ver/us/build/asm/text/boot/boot_80048F60.text.o"
+    include "ver/us/build/asm/text/boot/boot_80049160.text.o"
+    include "ver/us/build/asm/text/boot/boot_80049C90.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004AAC0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004C8A0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004CE60.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D0B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D120.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D1C0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D260.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D2E0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D680.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D700.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D860.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004D8F0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004DF60.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004E070.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004EAE0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004EB10.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004EB70.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004F6A0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004FC00.text.o"
+    include "ver/us/build/asm/text/boot/boot_8004FC50.text.o"
+    include "ver/us/build/asm/text/boot/boot_800503B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80050580.text.o"
+    include "ver/us/build/asm/text/boot/initialize.text.o"
+    include "ver/us/build/asm/text/boot/createthread.text.o"
+    include "ver/us/build/asm/text/boot/startthread.text.o"
+    include "ver/us/build/asm/text/boot/setthreadpri.text.o"
+    include "ver/us/build/asm/text/boot/bzero.text.o"
+    include "ver/us/build/asm/text/boot/boot_80050EC0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80050F40.text.o"
+    include "ver/us/build/asm/text/boot/boot_800511D0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800514F0.text.o"
+    include "ver/us/build/asm/text/boot/recvmesg.text.o"
+    include "ver/us/build/asm/text/boot/yieldthread.text.o"
+    include "ver/us/build/asm/text/boot/createmesgqueue.text.o"
+    include "ver/us/build/asm/text/boot/boot_80051710.text.o"
+    include "ver/us/build/asm/text/boot/boot_800517D0.text.o"
+    include "ver/us/build/asm/text/boot/contsetch.text.o"
+    include "ver/us/build/asm/text/boot/controller.text.o"
+    include "ver/us/build/asm/text/boot/contquery.text.o"
+    include "ver/us/build/asm/text/boot/motor.text.o"
+    include "ver/us/build/asm/text/boot/gettime.text.o"
+    include "ver/us/build/asm/text/boot/llcvt.text.o"
+    include "ver/us/build/asm/text/boot/ll.text.o"
+    include "ver/us/build/asm/text/boot/bcopy.text.o"
+    include "ver/us/build/asm/text/boot/boot_80052920.text.o"
+    include "ver/us/build/asm/text/boot/contreaddata.text.o"
+    include "ver/us/build/asm/text/boot/sendmesg.text.o"
+    include "ver/us/build/asm/text/boot/getcount.text.o"
+    include "ver/us/build/asm/text/boot/boot_800532F0.text.o"
+    include "ver/us/build/asm/text/boot/invaldcache.text.o"
+    include "ver/us/build/asm/text/boot/boot_800533F0.text.o"
+    include "ver/us/build/asm/text/boot/boot_800534B0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80053550.text.o"
+    include "ver/us/build/asm/text/boot/visetmode.text.o"
+    include "ver/us/build/asm/text/boot/viblack.text.o"
+    include "ver/us/build/asm/text/boot/boot_80053630.text.o"
+    include "ver/us/build/asm/text/boot/visetyscale.text.o"
+    include "ver/us/build/asm/text/boot/boot_800537E0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80053850.text.o"
+    include "ver/us/build/asm/text/boot/invalicache.text.o"
+    include "ver/us/build/asm/text/boot/boot_800538E0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80053960.text.o"
+    include "ver/us/build/asm/text/boot/boot_800539A0.text.o"
+    include "ver/us/build/asm/text/boot/setintmask.text.o"
+    include "ver/us/build/asm/text/boot/ortho.text.o"
+    include "ver/us/build/asm/text/boot/boot_80053C60.text.o"
+    include "ver/us/build/asm/text/boot/getthreadid.text.o"
+    include "ver/us/build/asm/text/boot/sinf.text.o"
+    include "ver/us/build/asm/text/boot/cosf.text.o"
+    include "ver/us/build/asm/text/boot/coss.text.o"
+    include "ver/us/build/asm/text/boot/sins.text.o"
+    include "ver/us/build/asm/text/boot/boot_80054390.text.o"
+    include "ver/us/build/asm/text/boot/boot_800543D0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80054400.text.o"
+    include "ver/us/build/asm/text/boot/boot_80054710.text.o"
+    include "ver/us/build/asm/text/boot/writebackdcache.text.o"
+    include "ver/us/build/asm/text/boot/boot_800547F0.text.o"
+    include "ver/us/build/asm/text/boot/boot_80054B30.text.o"
+    include "ver/us/build/asm/text/boot/vigetnextframebuf.text.o"
+    include "ver/us/build/asm/text/boot/voicestartreaddata.text.o"
+    include "ver/us/build/asm/text/boot/voicegetreaddata.text.o"
+    include "ver/us/build/asm/text/boot/voicestopread.text.o"
+    include "ver/us/build/asm/text/boot/getintmask.text.o"
+    include "ver/us/build/asm/text/boot/voicesetadconverter.text.o"
+    include "ver/us/build/asm/text/boot/boot_800553B0.text.o"
+    include "ver/us/build/asm/text/boot/aisetnextbuf.text.o"
+    include "ver/us/build/asm/text/boot/stopthread.text.o"
+    include "ver/us/build/asm/text/boot/bcmp.text.o"
+    include "ver/us/build/asm/text/boot/voicegetstatus.text.o"
+    include "ver/us/build/asm/text/boot/contchannelreset.text.o"
+    include "ver/us/build/asm/text/boot/voicecontread2.text.o"
+    include "ver/us/build/asm/text/boot/voicecontwrite4.text.o"
+    include "ver/us/build/asm/text/boot/voicecheckresult.text.o"
+    include "ver/us/build/asm/text/boot/voicecontwrite20.text.o"
+    include "ver/us/build/asm/text/boot/boot_80056050.text.o"
+    include "ver/us/build/asm/text/boot/boot_800568C0.text.o"
+    include "ver/us/build/asm/text/boot/setsr.text.o"
+    include "ver/us/build/asm/text/boot/getsr.text.o"
+    include "ver/us/build/asm/text/boot/setfpccsr.text.o"
+    include "ver/us/build/asm/text/boot/setwatchlo.text.o"
+    include "ver/us/build/asm/text/boot/sirawread.text.o"
+    include "ver/us/build/asm/text/boot/sirawwrite.text.o"
+    include "ver/us/build/asm/text/boot/exceptasm.text.o"
+    include "ver/us/build/asm/text/boot/unmaptlball.text.o"
+    include "ver/us/build/asm/text/boot/maptlbrdb.text.o"
+    include "ver/us/build/asm/text/boot/getcause.text.o"
+    include "ver/us/build/asm/text/boot/interrupt.text.o"
+    include "ver/us/build/asm/text/boot/thread.text.o"
+    include "ver/us/build/asm/text/boot/probetlb.text.o"
+    include "ver/us/build/asm/text/boot/guMtxIdentF.text.o"
+    include "ver/us/build/asm/text/boot/guMtxF2L.text.o"
+    include "ver/us/build/asm/text/boot/guMtxL2F.text.o"
+    include "ver/us/build/asm/text/boot/boot_800582B0.text.o"
+    include "ver/us/build/asm/text/boot/siacs.text.o"
+    include "ver/us/build/asm/text/boot/sirawdma.text.o"
+    include "ver/us/build/asm/text/boot/settimer.text.o"
+    include "ver/us/build/asm/text/boot/crc.text.o"
+    include "ver/us/build/asm/text/boot/pfsselectbank.text.o"
+    include "ver/us/build/asm/text/boot/contramread.text.o"
+    include "ver/us/build/asm/text/boot/timerintr.text.o"
+    include "ver/us/build/asm/text/boot/jammesg.text.o"
+    include "ver/us/build/asm/text/boot/pigetcmdq.text.o"
+    include "ver/us/build/asm/text/boot/boot_80059070.text.o"
+    include "ver/us/build/asm/text/boot/boot_80059180.text.o"
+    include "ver/us/build/asm/text/boot/boot_800592A0.text.o"
+    include "ver/us/build/asm/text/boot/xprintf.text.o"
+    include "ver/us/build/asm/text/boot/normalize.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005A010.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005A030.text.o"
+    include "ver/us/build/asm/text/boot/epirawdma.text.o"
+    include "ver/us/build/asm/text/boot/devmgr.text.o"
+    include "ver/us/build/asm/text/boot/vigetcurrcontext.text.o"
+    include "ver/us/build/asm/text/boot/viswapcontext.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005AA00.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005AA10.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005AA20.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005AAB0.text.o"
+    include "ver/us/build/asm/text/boot/voicecontread36.text.o"
+    include "ver/us/build/asm/text/boot/pfsisplug.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005B000.text.o"
+    include "ver/us/build/asm/text/boot/voicecrc.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005B0D0.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005B750.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005B760.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005B780.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005C400.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005CF30.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005D220.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005D330.text.o"
+    include "ver/us/build/asm/text/boot/si.text.o"
+    include "ver/us/build/asm/text/boot/destroythread.text.o"
+    include "ver/us/build/asm/text/boot/contramwrite.text.o"
+    include "ver/us/build/asm/text/boot/pfsgetstatus.text.o"
+    include "ver/us/build/asm/text/boot/setcompare.text.o"
+    include "ver/us/build/asm/text/boot/xlitob.text.o"
+    include "ver/us/build/asm/text/boot/xldtob.text.o"
+    include "ver/us/build/asm/text/boot/resetglobalintmask.text.o"
+    include "ver/us/build/asm/text/boot/epirawwrite.text.o"
+    include "ver/us/build/asm/text/boot/epirawread.text.o"
+    include "ver/us/build/asm/text/boot/setglobalintmask.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005EC30.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005ECD0.text.o"
+    include "ver/us/build/asm/text/boot/contpfs.text.o"
+    include "ver/us/build/asm/text/boot/ldiv.text.o"
+    include "ver/us/build/asm/text/boot/boot_8005FA60.text.o"
+
+    // data
+    include "ver/us/build/asm/data/boot/boot_800630A0.data.o"
+    include "ver/us/build/asm/data/boot/xprintf.data.o"
+    include "ver/us/build/asm/data/boot/boot_8009F9B0.data.o"
+    include "ver/us/build/asm/data/boot/xlitob.data.o"
+    include "ver/us/build/asm/data/boot/boot_8009FC10.data.o"
+
+    // rodata
+    include "ver/us/build/asm/data/boot/boot_8009FC30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_8009FF30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_8009FFF0.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0010.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0210.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0220.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0230.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0460.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0530.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0560.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0C80.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0CD0.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A0D30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A26A0.rodata.o"
+    include "ver/us/build/asm/data/boot/llcvt.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800532F0.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_80053A00.rodata.o"
+    include "ver/us/build/asm/data/boot/sinf.rodata.o"
+    include "ver/us/build/asm/data/boot/cosf.rodata.o"
+    include "ver/us/build/asm/data/boot/__libm_qnan_f.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A7E70.rodata.o"
+    include "ver/us/build/asm/data/boot/xprintf.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A8010.rodata.o"
+
+    // bss
+    include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
+endseg
+
+beginseg
+    name "assets_A9800"
+    // address 0x80100680
+    include "ver/us/build/baserom/assets_A9800.o"
+endseg
+
+beginseg
+    name "file_B3C70"
+    // address 0x8010AAF0
+
+    // text
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_8010AAF0.text.o"
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_80112F60.text.o"
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_80115070.text.o"
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_80117210.text.o"
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_80119570.text.o"
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_8011BD50.text.o"
+    include "ver/us/build/asm/text/file_B3C70/file_B3C70_801217C0.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80123430.data.o"
+
+    // rodata
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_8012BD60.rodata.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80133DE0.bss.o"
+endseg
+
+beginseg
+    name "file_DCF60"
+    after "file_B3C70"
+
+    // text
+    include "ver/us/build/asm/text/file_DCF60/file_DCF60_80134270.text.o"
+
+    // data
+    include "ver/us/build/asm/data/file_DCF60/file_DCF60_801344A0.data.o"
+
+    // rodata
+    include "ver/us/build/asm/data/file_DCF60/file_DCF60_80155840.rodata.o"
+
+    // bss
+    include "ver/us/build/asm/data/file_DCF60/file_DCF60_8015E4A0.bss.o"
+endseg
+
+beginseg
+    name "file_107190"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_107190.o"
+endseg
+
+beginseg
+    name "file_10F7F0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_10F7F0.o"
+endseg
+
+beginseg
+    name "file_1426B0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_1426B0.o"
+endseg
+
+beginseg
+    name "file_182B40"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_182B40.o"
+endseg
+
+beginseg
+    name "file_19C470"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_19C470.o"
+endseg
+
+beginseg
+    name "file_1C5E50"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_1C5E50.o"
+endseg
+
+beginseg
+    name "file_1FE3D0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_1FE3D0.o"
+endseg
+
+beginseg
+    name "file_2535D0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_2535D0.o"
+endseg
+
+beginseg
+    name "file_29CA40"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_29CA40.o"
+endseg
+
+beginseg
+    name "file_2BD950"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_2BD950.o"
+endseg
+
+beginseg
+    name "file_2DA640"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_2DA640.o"
+endseg
+
+beginseg
+    name "file_31AA90"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_31AA90.o"
+endseg
+
+beginseg
+    name "file_3728F0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_3728F0.o"
+endseg
+
+beginseg
+    name "file_3C8950"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_3C8950.o"
+endseg
+
+beginseg
+    name "file_3E3D00"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_3E3D00.o"
+endseg
+
+beginseg
+    name "file_3F6EF0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_3F6EF0.o"
+endseg
+
+beginseg
+    name "file_417E50"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_417E50.o"
+endseg
+
+beginseg
+    name "file_430E20"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_430E20.o"
+endseg
+
+beginseg
+    name "file_44E2E0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_44E2E0.o"
+endseg
+
+beginseg
+    name "file_456EF0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_456EF0.o"
+endseg
+
+beginseg
+    name "file_47EBD0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_47EBD0.o"
+endseg
+
+beginseg
+    name "file_4A49D0"
+    after "file_B3C70"
+    include "ver/us/build/baserom/file_4A49D0.o"
+endseg
+
+beginseg
+    name "assets_4B4990"
+    // address 0x800ABDDC
+    include "ver/us/build/baserom/assets_4B4990.o"
+endseg
+
+beginseg
+    name "placeholder_505090"
+    include "ver/us/build/baserom/placeholder_505090.o"
+endseg
+
+beginseg
+    name "assets_84F5F0"
+    include "ver/us/build/baserom/assets_84F5F0.o"
+endseg
+
+beginseg
+    name "placeholder_860C80"
+    include "ver/us/build/baserom/placeholder_860C80.o"
+endseg
+
+beginseg
+    name "padding_F194A0"
+    include "ver/us/build/baserom/padding_F194A0.o"
+endseg

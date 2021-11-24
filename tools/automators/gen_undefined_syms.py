@@ -8,7 +8,7 @@ def getSyms(version):
     undefinedSymbols = dict()
     definedSymbols = {0x80000400: "entrypoint"}
 
-    contextFolder = os.path.join("context", version)
+    contextFolder = os.path.join("ver", version, "context")
     for file in os.listdir(contextFolder):
         contPath = os.path.join(contextFolder, file)
         with open(contPath) as f:
@@ -36,9 +36,6 @@ def main():
     args = parser.parse_args()
 
     version = args.version
-    # HACK until we change usa to us everywhere
-    if version == "us" and not os.path.exists(os.path.join("context", "us")):
-        version = "usa"
 
     undefinedSymbols, definedSymbols = getSyms(version)
 
