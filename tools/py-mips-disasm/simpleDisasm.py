@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 
 from mips.Utils import *
-from mips.GlobalConfig import GlobalConfig, printVerbose
+from mips.GlobalConfig import GlobalConfig, printQuietless, printVerbose
 from mips.MipsText import Text
 from mips.MipsData import Data
 from mips.MipsRodata import Rodata
@@ -52,7 +52,6 @@ def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: in
                 if start <= funcOffset < end:
                     functionsInBoundary += 1
             printVerbose("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
-
 
         start = f.fileBoundaries[-1]
         end = f.size + f.offset
@@ -152,7 +151,8 @@ def writeSection(x):
     head, tail = os.path.split(path)
 
     # Create directories
-    os.makedirs(head, exist_ok=True)
+    if head != "":
+        os.makedirs(head, exist_ok=True)
 
     f.saveToFile(path)
 
@@ -171,10 +171,12 @@ def disassemblerMain():
     parser.add_argument("--save-context", help="Saves the context to a file. The provided filename will be suffixed with the corresponding version.", metavar="FILENAME")
     parser.add_argument("--functions", help="Path to a functions csv", action="append")
     parser.add_argument("--variables", help="Path to a variables csv", action="append")
+    parser.add_argument("--constants", help="Path to a constants csv", action="append")
     parser.add_argument("--file-splits", help="Path to a file splits csv")
     parser.add_argument("--add-filename", help="Adds the filename of the file to the generated function/variable name")
     parser.add_argument("--disasm-unknown", help="Force disassembly of functions with unknown instructions",  action="store_true")
     parser.add_argument("-v", "--verbose", help="Enable verbose mode",  action="store_true")
+    parser.add_argument("-q", "--quiet", help="Silence most output",  action="store_true")
     args = parser.parse_args()
 
     GlobalConfig.REMOVE_POINTERS = False
@@ -188,6 +190,7 @@ def disassemblerMain():
     GlobalConfig.TRUST_USER_FUNCTIONS = True
     GlobalConfig.DISASSEMBLE_UNKNOWN_INSTRUCTIONS = args.disasm_unknown
     GlobalConfig.VERBOSE = args.verbose
+    GlobalConfig.QUIET = args.quiet
 
     newStuffSuffix = args.add_filename
     if newStuffSuffix is None:
@@ -200,6 +203,9 @@ def disassemblerMain():
     if args.variables is not None:
         for varsPath in args.variables:
             context.readVariablesCsv(varsPath)
+    if args.constants is not None:
+        for constantsPath in args.constants:
+            context.readConstantsCsv(constantsPath)
 
     array_of_bytes = readFileAsBytearray(args.binary)
     input_name = os.path.splitext(os.path.split(args.binary)[1])[0]
@@ -269,10 +275,10 @@ def disassemblerMain():
             f = modeCallback(array_of_bytes, f"{outputPath}/{fileName}", offset, nextOffset, vram, context, isHandwritten, newStuffSuffix)
             processedFiles.append((f"{outputPath}/{fileName}", f))
 
-            print(lenLastLine*" " + "\r", end="")
+            printQuietless(lenLastLine*" " + "\r", end="")
             progressStr = f" Analyzing: {i/splitsCount:%}. File: {fileName}\r"
             lenLastLine = max(len(progressStr), lenLastLine)
-            print(progressStr, end="", flush=True)
+            printQuietless(progressStr, end="", flush=True)
 
             printVerbose()
 
@@ -281,16 +287,17 @@ def disassemblerMain():
     printVerbose("Writing files...")
     for i, (path, f) in enumerate(processedFiles):
         printVerbose(f"Writing {path}")
-        print(lenLastLine*" " + "\r", end="")
+        printQuietless(lenLastLine*" " + "\r", end="")
         progressStr = f" Writing: {i/processedFilesCount:%}. File: {path}\r"
         lenLastLine = max(len(progressStr), lenLastLine)
-        print(progressStr, end="")
+        printQuietless(progressStr, end="")
 
         writeSection((path, f))
 
     if args.save_context is not None:
         head, tail = os.path.split(args.save_context)
-        os.makedirs(head, exist_ok=True)
+        if head != "":
+            os.makedirs(head, exist_ok=True)
         name = tail
         extension = ""
         if "." in tail:
@@ -300,8 +307,8 @@ def disassemblerMain():
         name = os.path.join(head, name)
         context.saveContextToFile(f"{name}_{extension}")
 
-    print(lenLastLine*" " + "\r", end="")
-    print(f"Done: {args.binary}")
+    printQuietless(lenLastLine*" " + "\r", end="")
+    printQuietless(f"Done: {args.binary}")
 
     printVerbose()
     printVerbose("Disassembling complete!")
