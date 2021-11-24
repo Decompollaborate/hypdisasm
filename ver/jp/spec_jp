@@ -4,12 +4,14 @@
 
 beginseg
     name "makerom"
-    include "ver/jp/build/baserom/makerom.o"
+    address 0x7FFFF400
+    include "ver/jp/build/asm/text/makerom/rom_header.o"
+    include "ver/jp/build/asm/text/makerom/ipl3.o"
+    include "ver/jp/build/asm/text/makerom/entry.text.o"
 endseg
 
 beginseg
     name "boot"
-    address 0x80000450
     include "ver/jp/build/baserom/boot.o"
 endseg
 

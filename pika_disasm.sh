@@ -17,6 +17,9 @@ DATA_DIR="ver/${VERSION}/asm/data"
 TABLES_DIR="ver/${VERSION}/tables"
 CONTEXT_DIR="ver/${VERSION}/context"
 
+echo ".incbin \"ver/${VERSION}/baserom/makerom.bin\", 0x40, 0xFC0" > ver/${VERSION}/asm/text/makerom/ipl3.s
+./tools/py-mips-disasm/simpleDisasm.py "${BASEROM_DIR}/makerom.bin"     "${ASM_DIR}/makerom"                                             --functions ${FUNCTIONS} --variables ${VARIABLES} --file-splits "${TABLES_DIR}/files_makerom.csv"     --variables "${TABLES_DIR}/variables_makerom.csv"
+
 ./tools/py-mips-disasm/simpleDisasm.py "${BASEROM_DIR}/boot.bin"        "${ASM_DIR}/boot"        --data-output "${DATA_DIR}/boot"        --functions ${FUNCTIONS} --variables ${VARIABLES} --file-splits "${TABLES_DIR}/files_boot.csv"        --save-context "${CONTEXT_DIR}/boot.txt"
 ./tools/py-mips-disasm/simpleDisasm.py "${BASEROM_DIR}/file_B3C70.bin"  "${ASM_DIR}/file_B3C70"  --data-output "${DATA_DIR}/file_B3C70"  --functions ${FUNCTIONS} --variables ${VARIABLES} --file-splits "${TABLES_DIR}/files_file_B3C70.csv"  --save-context "${CONTEXT_DIR}/B3C70.txt"
 ./tools/py-mips-disasm/simpleDisasm.py "${BASEROM_DIR}/file_DCF60.bin"  "${ASM_DIR}/file_DCF60"  --data-output "${DATA_DIR}/file_DCF60"  --functions ${FUNCTIONS} --variables ${VARIABLES} --file-splits "${TABLES_DIR}/files_file_DCF60.csv"  --save-context "${CONTEXT_DIR}/DCF60.txt"

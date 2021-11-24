@@ -7,7 +7,7 @@ beginseg
     address 0x7FFFF400
     include "ver/us/build/asm/text/makerom/rom_header.o"
     include "ver/us/build/asm/text/makerom/ipl3.o"
-    include "ver/us/build/asm/text/makerom/entry.o"
+    include "ver/us/build/asm/text/makerom/entry.text.o"
 endseg
 
 beginseg
