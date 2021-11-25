@@ -1097,7 +1097,7 @@ glabel func_8002E200 # 14
 /* 02DDE0 8002E230 240700FE */  addiu       $a3, $zero, 0xfe
 /* 02DDE4 8002E234 0C00059E */  jal         func_80001678
 /* 02DDE8 8002E238 E7A40010 */   swc1       $f4, 0x10($sp)
-/* 02DDEC 8002E23C 3C01800A */  lui         $at, %hi(D_800A5A84)
+/* 02DDEC 8002E23C 3C01800A */  lui         $at, %hi(D_800A5A80)
 /* 02DDF0 8002E240 8C265A80 */  lw          $a2, %lo(D_800A5A80)($at)
 /* 02DDF4 8002E244 8C275A84 */  lw          $a3, %lo(D_800A5A84)($at)
 /* 02DDF8 8002E248 3C013FF0 */  lui         $at, 0x3ff0
@@ -1523,7 +1523,7 @@ glabel L8002E7BC
 /* 02E3E8 8002E838 0C044A09 */  jal         func_80112824
 /* 02E3EC 8002E83C 00000000 */   nop
 /* 02E3F0 8002E840 10400008 */  beqz        $v0, .L8002E864
-/* 02E3F4 8002E844 3C01800A */   lui        $at, 0x800a
+/* 02E3F4 8002E844 3C01800A */   lui        $at, %hi(D_800A5AE8)
 /* 02E3F8 8002E848 24010001 */  addiu       $at, $zero, 0x1
 /* 02E3FC 8002E84C 1041000D */  beq         $v0, $at, .L8002E884
 /* 02E400 8002E850 24010002 */   addiu      $at, $zero, 0x2
@@ -1532,7 +1532,7 @@ glabel L8002E7BC
 /* 02E40C 8002E85C 10000019 */  b           .L8002E8C4
 /* 02E410 8002E860 00000000 */   nop
 .L8002E864:
-/* 02E414 8002E864 D4205AE8 */  ldc1        $f0, 0x5ae8($at)
+/* 02E414 8002E864 D4205AE8 */  ldc1        $f0, %lo(D_800A5AE8)($at)
 /* 02E418 8002E868 24040009 */  addiu       $a0, $zero, 0x9
 /* 02E41C 8002E86C 44070000 */  mfc1        $a3, $f0
 /* 02E420 8002E870 44060800 */  mfc1        $a2, $f1

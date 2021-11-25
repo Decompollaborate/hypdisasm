@@ -779,7 +779,7 @@ glabel func_80040E64 # 16
 /* 040A84 80040ED4 24638ACC */   addiu      $v1, $v1, %lo(D_800F8ACC)
 .L80040ED8:
 /* 040A88 80040ED8 10400007 */  beqz        $v0, .L80040EF8
-/* 040A8C 80040EDC 3C01800A */   lui        $at, 0x800a
+/* 040A8C 80040EDC 3C01800A */   lui        $at, %hi(D_8009D53C)
 /* 040A90 80040EE0 24010008 */  addiu       $at, $zero, 0x8
 /* 040A94 80040EE4 14410005 */  bne         $v0, $at, .L80040EFC
 /* 040A98 80040EE8 24180001 */   addiu      $t8, $zero, 0x1

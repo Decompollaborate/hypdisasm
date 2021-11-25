@@ -349,7 +349,7 @@ glabel func_80004F64 # 4
 /* 004B58 80004FA8 24060000 */  addiu       $a2, $zero, 0x0
 /* 004B5C 80004FAC 0C0148EE */  jal         __ull_div
 /* 004B60 80004FB0 24070040 */   addiu      $a3, $zero, 0x40
-/* 004B64 80004FB4 3C01800B */  lui         $at, %hi(D_800AD9BC)
+/* 004B64 80004FB4 3C01800B */  lui         $at, %hi(D_800AD9B8)
 /* 004B68 80004FB8 AC22D9B8 */  sw          $v0, %lo(D_800AD9B8)($at)
 /* 004B6C 80004FBC AC23D9BC */  sw          $v1, %lo(D_800AD9BC)($at)
 /* 004B70 80004FC0 3C01800A */  lui         $at, %hi(D_800A0200)
@@ -369,7 +369,7 @@ glabel func_80004F64 # 4
 /* 004BA8 80004FF8 0C0148EE */  jal         __ull_div
 /* 004BAC 80004FFC 24070040 */   addiu      $a3, $zero, 0x40
 /* 004BB0 80005000 8FBF0014 */  lw          $ra, 0x14($sp)
-/* 004BB4 80005004 3C01800B */  lui         $at, %hi(D_800AD9C4)
+/* 004BB4 80005004 3C01800B */  lui         $at, %hi(D_800AD9C0)
 /* 004BB8 80005008 AC22D9C0 */  sw          $v0, %lo(D_800AD9C0)($at)
 /* 004BBC 8000500C AC23D9C4 */  sw          $v1, %lo(D_800AD9C4)($at)
 /* 004BC0 80005010 03E00008 */  jr          $ra

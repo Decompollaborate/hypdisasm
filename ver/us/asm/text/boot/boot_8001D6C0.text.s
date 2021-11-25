@@ -709,7 +709,7 @@ glabel func_8001E04C # 19
 /* 01DC54 8001E0A4 8C6C0004 */  lw          $t4, 0x4($v1)
 /* 01DC58 8001E0A8 8C6A000C */  lw          $t2, 0xc($v1)
 /* 01DC5C 8001E0AC 8C6B0008 */  lw          $t3, 0x8($v1)
-/* 01DC60 8001E0B0 3C04800F */  lui         $a0, 0x800f
+/* 01DC60 8001E0B0 3C04800F */  lui         $a0, %hi(D_800F2960)
 /* 01DC64 8001E0B4 1580000F */  bnez        $t4, .L8001E0F4
 /* 01DC68 8001E0B8 014B2823 */   subu       $a1, $t2, $t3
 /* 01DC6C 8001E0BC 3C04800F */  lui         $a0, %hi(D_800F2960)
@@ -727,7 +727,7 @@ glabel func_8001E04C # 19
 /* 01DC9C 8001E0EC 10000015 */  b           .L8001E144
 /* 01DCA0 8001E0F0 ACE20000 */   sw         $v0, 0x0($a3)
 .L8001E0F4:
-/* 01DCA4 8001E0F4 24842960 */  addiu       $a0, $a0, 0x2960
+/* 01DCA4 8001E0F4 24842960 */  addiu       $a0, $a0, %lo(D_800F2960)
 /* 01DCA8 8001E0F8 2406010D */  addiu       $a2, $zero, 0x10d
 /* 01DCAC 8001E0FC AFA3001C */  sw          $v1, 0x1c($sp)
 /* 01DCB0 8001E100 AFA50028 */  sw          $a1, 0x28($sp)
