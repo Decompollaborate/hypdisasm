@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_800517D0 # 0
+glabel osContReset # 0
 /* 051380 800517D0 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 051384 800517D4 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 051388 800517D8 AFA40020 */  sw          $a0, 0x20($sp)
@@ -20,7 +20,7 @@ glabel func_800517D0 # 0
 /* 05139C 800517EC 240100FF */  addiu       $at, $zero, 0xff
 /* 0513A0 800517F0 11C10020 */  beq         $t6, $at, .L80051874
 /* 0513A4 800517F4 00000000 */   nop
-/* 0513A8 800517F8 0C014630 */  jal         func_800518C0
+/* 0513A8 800517F8 0C014630 */  jal         __osPackResetData
 /* 0513AC 800517FC 00000000 */   nop
 /* 0513B0 80051800 3C058010 */  lui         $a1, %hi(__osContPifRam)
 /* 0513B4 80051804 24A5DC10 */  addiu       $a1, $a1, %lo(__osContPifRam)
@@ -72,7 +72,7 @@ glabel func_800517D0 # 0
 /* 051468 800518B8 03E00008 */  jr          $ra
 /* 05146C 800518BC 00000000 */   nop
 
-glabel func_800518C0 # 1
+glabel __osPackResetData # 1
 /* 051470 800518C0 3C038010 */  lui         $v1, %hi(__osContPifRam)
 /* 051474 800518C4 2463DC10 */  addiu       $v1, $v1, %lo(__osContPifRam)
 /* 051478 800518C8 240E0001 */  addiu       $t6, $zero, 0x1
