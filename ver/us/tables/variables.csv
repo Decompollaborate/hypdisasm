@@ -74,6 +74,7 @@
 800FDC50,__osContLastPoll,u8,1
 800FDC51,__osMaxControllers,u8,1
 800FDCA0,osPifBuffers,OSPifRam[4],0x100
+800FDDA0,__osEepPifRam,OSPifRam,0x40
 800FF0A0,viThread,OSThread,0x1B0
 80100250,viEventQueue,OSMesgQueue,0x18
 80100268,viEventBuf,OsMesg[6],0x18
