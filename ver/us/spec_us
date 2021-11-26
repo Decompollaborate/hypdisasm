@@ -282,11 +282,12 @@ beginseg
     include "ver/us/build/asm/data/boot/boot_800A26A0.rodata.o"
     include "ver/us/build/asm/data/boot/llcvt.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800532F0.rodata.o"
-    include "ver/us/build/asm/data/boot/boot_80053A00.rodata.o"
+    include "ver/us/build/asm/data/boot/setintmask.rodata.o"
     include "ver/us/build/asm/data/boot/sinf.rodata.o"
     include "ver/us/build/asm/data/boot/cosf.rodata.o"
     include "ver/us/build/asm/data/boot/__libm_qnan_f.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A7E70.rodata.o"
+    include "ver/us/build/asm/data/boot/exceptasm.rodata.o"
     include "ver/us/build/asm/data/boot/xprintf.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A8010.rodata.o"
 
