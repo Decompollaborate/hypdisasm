@@ -2569,7 +2569,7 @@ glabel func_80002998 # 42
 /* 0025C0 80002A10 3C04800B */  lui         $a0, %hi(D_800AD038)
 /* 0025C4 80002A14 3C05800B */  lui         $a1, %hi(D_800ACE88)
 /* 0025C8 80002A18 24A5CE88 */  addiu       $a1, $a1, %lo(D_800ACE88)
-/* 0025CC 80002A1C 0C0145F4 */  jal         func_800517D0
+/* 0025CC 80002A1C 0C0145F4 */  jal         osContReset
 /* 0025D0 80002A20 2484D038 */   addiu      $a0, $a0, %lo(D_800AD038)
 /* 0025D4 80002A24 0C014640 */  jal         osContSetCh
 /* 0025D8 80002A28 93A4001B */   lbu        $a0, 0x1b($sp)

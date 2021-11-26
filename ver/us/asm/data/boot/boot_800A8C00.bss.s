@@ -1323,11 +1323,8 @@ glabel D_800FDC90
 glabel osPifBuffers
 /* 0FD850 800FDCA0 */  .space  0x100
 
-glabel D_800FDDA0
-/* 0FD950 800FDDA0 */  .space  0x04
-
-glabel D_800FDDA4
-/* 0FD954 800FDDA4 */  .space  0x3C
+glabel __osEepPifRam
+/* 0FD950 800FDDA0 */  .space  0x40
 
 glabel D_800FDDE0
 /* 0FD990 800FDDE0 */  .space  0x04

@@ -829,7 +829,7 @@ glabel func_8003D030 # 11
 /* 03CC78 8003D0C8 AB38000C */  swl         $t8, 0xc($t9)
 /* 03CC7C 8003D0CC BB38000F */  swr         $t8, 0xf($t9)
 /* 03CC80 8003D0D0 8FA7000C */  lw          $a3, 0xc($sp)
-/* 03CC84 8003D0D4 0C014E38 */  jal         func_800538E0
+/* 03CC84 8003D0D4 0C014E38 */  jal         sprintf
 /* 03CC88 8003D0D8 8FA60008 */   lw         $a2, 0x8($sp)
 /* 03CC8C 8003D0DC 3C06800F */  lui         $a2, %hi(D_800F2A18)
 /* 03CC90 8003D0E0 24C62A18 */  addiu       $a2, $a2, %lo(D_800F2A18)

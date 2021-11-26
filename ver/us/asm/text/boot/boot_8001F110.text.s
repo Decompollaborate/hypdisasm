@@ -51,7 +51,7 @@ glabel func_8001F194 # 1
 /* 01ED50 8001F1A0 3C04800B */  lui         $a0, %hi(D_800B6C60)
 /* 01ED54 8001F1A4 3C05800A */  lui         $a1, %hi(D_800A47D8)
 /* 01ED58 8001F1A8 24A547D8 */  addiu       $a1, $a1, %lo(D_800A47D8)
-/* 01ED5C 8001F1AC 0C014E38 */  jal         func_800538E0
+/* 01ED5C 8001F1AC 0C014E38 */  jal         sprintf
 /* 01ED60 8001F1B0 24846C60 */   addiu      $a0, $a0, %lo(D_800B6C60)
 /* 01ED64 8001F1B4 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 01ED68 8001F1B8 3C02800B */  lui         $v0, %hi(D_800B6C60)

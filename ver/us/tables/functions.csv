@@ -13,6 +13,7 @@
 800426B4,Fault_ThreadEntry
 800427C8,Fault_Start
 80048F70,func_80048F70
+800499F0,memcpy
 80049A48,memset
 80049A78,strcpy
 80049AAC,strlen
@@ -31,6 +32,8 @@
 80051690,osYieldThread
 800516E0,osCreateMesgQueue
 80051710,osSetEventMesg
+800517D0,osContReset
+800518C0,__osPackResetData
 80051900,osContSetCh
 80051960,osContInit
 80051ABC,__osContGetInitData
@@ -60,6 +63,11 @@
 80052548,__ll_mod
 800525E4,__ll_rshift
 80052610,bcopy
+80052920,osEepromProbe
+80052990,osEepromRead
+80052B54,__osPackEepReadData
+80052BE0,osEepromWrite
+80052BE0,__osPackEepWriteData
 80052FB0,osContStartReadData
 80053034,osContGetReadData
 800530C0,__osPackReadData
@@ -70,6 +78,8 @@
 800535C0,osViBlack
 80053790,osViSetYScale
 80053860,osInvalICache
+800538E0,sprintf
+80053938,proutSprintf
 80053A00,osSetIntMask
 80053AA0,guOrthoF
 80053BF4,guOrtho
@@ -171,6 +181,7 @@
 8005AD10,osPfsIsPlug
 8005AE9C,__osPfsRequestData
 8005AF50,__osPfsGetInitData
+8005B000,__osAiDeviceBusy
 8005B030,__osVoiceContDataCrc
 8005D540,__osSiDeviceBusy
 8005D570,osDestroyThread

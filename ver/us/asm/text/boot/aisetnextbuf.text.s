@@ -13,7 +13,7 @@ glabel osAiSetNextBuffer # 0
 /* 054F70 800553C0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 054F74 800553C4 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 054F78 800553C8 AFA5001C */  sw          $a1, 0x1c($sp)
-/* 054F7C 800553CC 0C016C00 */  jal         func_8005B000
+/* 054F7C 800553CC 0C016C00 */  jal         __osAiDeviceBusy
 /* 054F80 800553D0 AFA40018 */   sw         $a0, 0x18($sp)
 /* 054F84 800553D4 10400003 */  beqz        $v0, .L800553E4
 /* 054F88 800553D8 8FA40018 */   lw         $a0, 0x18($sp)
