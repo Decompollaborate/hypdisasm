@@ -12,7 +12,6 @@ endseg
 
 beginseg
     name "boot"
-    address 0x80000450
 
     // text
     include "ver/us/build/asm/text/boot/boot_main.text.o"
@@ -262,9 +261,12 @@ beginseg
 
     // rodata
     include "ver/us/build/asm/data/boot/boot_8009FC30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_8009FCF0.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_8009FD50.rodata.o"
     include "ver/us/build/asm/data/boot/boot_8009FF30.rodata.o"
     include "ver/us/build/asm/data/boot/boot_8009FFF0.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0010.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A01C0.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0210.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0220.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0230.rodata.o"
@@ -288,7 +290,6 @@ beginseg
     // bss
     include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
 endseg
-
 
 beginseg
     name "assets_A9800"
