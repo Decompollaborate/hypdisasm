@@ -290,6 +290,9 @@ beginseg
     include "ver/us/build/asm/data/boot/exceptasm.rodata.o"
     include "ver/us/build/asm/data/boot/xprintf.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A8010.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A8030.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A8040.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A80A0.rodata.o"
 
     // bss
     include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
