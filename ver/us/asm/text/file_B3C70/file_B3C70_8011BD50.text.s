@@ -4761,11 +4761,11 @@ glabel func_8011FFA8 # 216
 /* 0154D8 8011FFC8 000F7880 */  sll         $t7, $t7, 2
 /* 0154DC 8011FFCC 01E27821 */  addu        $t7, $t7, $v0
 /* 0154E0 8011FFD0 000F7880 */  sll         $t7, $t7, 2
-/* 0154E4 8011FFD4 3C058012 */  lui         $a1, %hi(D_80125A7E)
+/* 0154E4 8011FFD4 3C058012 */  lui         $a1, %hi(D_80125A7C + 0x2)
 /* 0154E8 8011FFD8 00AF2821 */  addu        $a1, $a1, $t7
 /* 0154EC 8011FFDC 8FA4001C */  lw          $a0, 0x1c($sp)
 /* 0154F0 8011FFE0 0C045807 */  jal         func_8011601C
-/* 0154F4 8011FFE4 84A55A7E */   lh         $a1, %lo(D_80125A7E)($a1)
+/* 0154F4 8011FFE4 84A55A7E */   lh         $a1, %lo(D_80125A7C + 0x2)($a1)
 /* 0154F8 8011FFE8 8FBF0014 */  lw          $ra, 0x14($sp)
 /* 0154FC 8011FFEC 27BD0020 */  addiu       $sp, $sp, 0x20
 /* 015500 8011FFF0 00001025 */  move        $v0, $zero
