@@ -278,6 +278,7 @@ beginseg
     include "ver/us/build/asm/data/boot/boot_800A0C80.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0CD0.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0D30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A2670.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A26A0.rodata.o"
     include "ver/us/build/asm/data/boot/llcvt.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800532F0.rodata.o"
