@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:Decompollaborate/py-mips-disasm.git
 	branch = master
-	commit = 48b505f02af25b979df528e6ed05d6d315cb6183
+	commit = 509d7bd2d17868d3cba6f093c224e6662772ca90
 	parent = ca6e24eedb8cded349197c588539194b1176996f
 	method = merge
 	cmdver = 0.4.3
