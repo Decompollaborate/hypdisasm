@@ -12,7 +12,6 @@ endseg
 
 beginseg
     name "boot"
-    address 0x80000450
 
     // text
     include "ver/us/build/asm/text/boot/boot_main.text.o"
@@ -264,9 +263,12 @@ beginseg
 
     // rodata
     include "ver/us/build/asm/data/boot/boot_8009FC30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_8009FCF0.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_8009FD50.rodata.o"
     include "ver/us/build/asm/data/boot/boot_8009FF30.rodata.o"
     include "ver/us/build/asm/data/boot/boot_8009FFF0.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0010.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A01C0.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0210.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0220.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0230.rodata.o"
@@ -276,16 +278,21 @@ beginseg
     include "ver/us/build/asm/data/boot/boot_800A0C80.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0CD0.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A0D30.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A2670.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A26A0.rodata.o"
     include "ver/us/build/asm/data/boot/llcvt.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800532F0.rodata.o"
-    include "ver/us/build/asm/data/boot/boot_80053A00.rodata.o"
+    include "ver/us/build/asm/data/boot/setintmask.rodata.o"
     include "ver/us/build/asm/data/boot/sinf.rodata.o"
     include "ver/us/build/asm/data/boot/cosf.rodata.o"
     include "ver/us/build/asm/data/boot/__libm_qnan_f.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A7E70.rodata.o"
+    include "ver/us/build/asm/data/boot/exceptasm.rodata.o"
     include "ver/us/build/asm/data/boot/xprintf.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A8010.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A8030.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A8040.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A80A0.rodata.o"
 
     // bss
     include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
