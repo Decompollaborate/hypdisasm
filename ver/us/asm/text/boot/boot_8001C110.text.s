@@ -10,7 +10,7 @@
 .balign 16
 
 glabel func_8001C110 # 0
-/* 01BCC0 8001C110 3C01800B */  lui         $at, %hi(D_800B6994)
+/* 01BCC0 8001C110 3C01800B */  lui         $at, %hi(D_800B6990)
 /* 01BCC4 8001C114 3C03800B */  lui         $v1, %hi(D_800B6998)
 /* 01BCC8 8001C118 3C02800B */  lui         $v0, %hi(D_800B69B8)
 /* 01BCCC 8001C11C 244269B8 */  addiu       $v0, $v0, %lo(D_800B69B8)

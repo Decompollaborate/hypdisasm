@@ -69,13 +69,19 @@ glabel D_800A0E30
 /* 0A0BD8 800A1028  */  .asciz  "request to slot: ID: %d\n"
                         .balign 4
 
-glabel _string_ActNone
+glabel D_800A1044
 /* 0A0BF4 800A1044  */  .asciz  "ACT_NONE"
                         .balign 4
+
+glabel D_800A1050
 /* 0A0C00 800A1050  */  .asciz  "ACT_INTER"
                         .balign 4
+
+glabel D_800A105C
 /* 0A0C0C 800A105C  */  .asciz  "ACT_END"
                         .balign 4
+
+glabel D_800A1064
 /* 0A0C14 800A1064  */  .asciz  "変。"
                         .balign 4
 /* 0A0C1C 800A106C  */  .asciz  "actSetNext:%s\n"

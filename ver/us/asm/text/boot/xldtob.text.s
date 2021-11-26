@@ -48,12 +48,12 @@ glabel _Ldtob # 0
 /* 05D9E0 8005DE30 1840000F */  blez        $v0, .L8005DE70
 /* 05D9E4 8005DE34 24010002 */   addiu      $at, $zero, 0x2
 /* 05D9E8 8005DE38 14410004 */  bne         $v0, $at, .L8005DE4C
-/* 05D9EC 8005DE3C 3C05800B */   lui        $a1, 0x800b
+/* 05D9EC 8005DE3C 3C05800B */   lui        $a1, %hi(D_800A811C)
 /* 05D9F0 8005DE40 3C05800B */  lui         $a1, %hi(D_800A8118)
 /* 05D9F4 8005DE44 10000002 */  b           .L8005DE50
 /* 05D9F8 8005DE48 24A58118 */   addiu      $a1, $a1, %lo(D_800A8118)
 .L8005DE4C:
-/* 05D9FC 8005DE4C 24A5811C */  addiu       $a1, $a1, -0x7ee4
+/* 05D9FC 8005DE4C 24A5811C */  addiu       $a1, $a1, %lo(D_800A811C)
 .L8005DE50:
 /* 05DA00 8005DE50 8FA200C0 */  lw          $v0, 0xc0($sp)
 /* 05DA04 8005DE54 24190003 */  addiu       $t9, $zero, 0x3

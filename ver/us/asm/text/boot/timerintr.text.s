@@ -10,7 +10,7 @@
 .balign 16
 
 glabel __osTimerServicesInit # 0
-/* 058670 80058AC0 3C018010 */  lui         $at, %hi(__osCurrentTime)
+/* 058670 80058AC0 3C018010 */  lui         $at, %hi(__osCurrentTime + 0x4)
 /* 058674 80058AC4 240E0000 */  addiu       $t6, $zero, 0x0
 /* 058678 80058AC8 240F0000 */  addiu       $t7, $zero, 0x0
 /* 05867C 80058ACC AC2F0354 */  sw          $t7, %lo(__osCurrentTime + 0x4)($at)

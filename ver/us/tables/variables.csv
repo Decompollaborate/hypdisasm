@@ -48,7 +48,10 @@
 800A0C80,_string_LoadMat_OutOfRange,char,0x3C
 800A0D30,_string_RequestCurMotion,char,0x16
 800A0E30,D_800A0E30,char,0x5
-800A1044,_string_ActNone,char,0x9
+800A1044,D_800A1044,char,0x9
+800A1050,D_800A1050,char,0xA
+800A105C,D_800A105C,char,0x8
+800A1064,D_800A1064,char,0x5
 800A10D0,_string_800A10D0,char,0xB
 800A4C80,_string_ActorType_ActorPikachu,char,0x1C
 800A4C9C,_string_ActorType_ActorPokemon,char,0x1C

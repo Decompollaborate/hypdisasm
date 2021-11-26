@@ -138,7 +138,7 @@ glabel __osViSwapContext # 0
 /* 05A480 8005A8D0 306B0080 */  andi        $t3, $v1, 0x80
 .L8005A8D4:
 /* 05A484 8005A8D4 51600010 */  beql        $t3, $zero, .L8005A918
-/* 05A488 8005A8D8 3C0FA440 */   lui        $t7, 0xa440
+/* 05A488 8005A8D8 3C0FA440 */   lui        $t7, %hi(D_A4400004)
 /* 05A48C 8005A8DC 960D0028 */  lhu         $t5, 0x28($s0)
 /* 05A490 8005A8E0 3C0103FF */  lui         $at, 0x3ff
 /* 05A494 8005A8E4 8E040004 */  lw          $a0, 0x4($s0)
@@ -153,7 +153,7 @@ glabel __osViSwapContext # 0
 /* 05A4B8 8005A908 8FA60024 */  lw          $a2, 0x24($sp)
 /* 05A4BC 8005A90C 8FA70038 */  lw          $a3, 0x38($sp)
 /* 05A4C0 8005A910 00402025 */  move        $a0, $v0
-/* 05A4C4 8005A914 3C0FA440 */  lui         $t7, %hi(D_A4400020)
+/* 05A4C4 8005A914 3C0FA440 */  lui         $t7, %hi(D_A4400004)
 .L8005A918:
 /* 05A4C8 8005A918 ADE40004 */  sw          $a0, %lo(D_A4400004)($t7)
 /* 05A4CC 8005A91C 8CB80008 */  lw          $t8, 0x8($a1)
@@ -165,8 +165,8 @@ glabel __osViSwapContext # 0
 /* 05A4E4 8005A934 3C0CA440 */  lui         $t4, %hi(D_A440001C)
 /* 05A4E8 8005A938 AD280014 */  sw          $t0, %lo(D_A4400014)($t1)
 /* 05A4EC 8005A93C 8CAA0010 */  lw          $t2, 0x10($a1)
-/* 05A4F0 8005A940 3C18A440 */  lui         $t8, %hi(D_A4400034)
-/* 05A4F4 8005A944 3C08A440 */  lui         $t0, %hi(D_A4400000)
+/* 05A4F0 8005A940 3C18A440 */  lui         $t8, %hi(D_A4400024)
+/* 05A4F4 8005A944 3C08A440 */  lui         $t0, %hi(D_A4400028)
 /* 05A4F8 8005A948 AD6A0018 */  sw          $t2, %lo(D_A4400018)($t3)
 /* 05A4FC 8005A94C 8CAD0014 */  lw          $t5, 0x14($a1)
 /* 05A500 8005A950 3C0AA440 */  lui         $t2, %hi(D_A440002C)
