@@ -507,12 +507,12 @@ glabel func_8005BD68 # 2
 /* 05BA50 8005BEA0 0C017059 */  jal         func_8005C164
 /* 05BA54 8005BEA4 468033A1 */   cvt.d.w    $f14, $f6
 /* 05BA58 8005BEA8 860B0018 */  lh          $t3, 0x18($s0)
-/* 05BA5C 8005BEAC 3C0F800A */  lui         $t7, %hi(D_8009FAAE)
+/* 05BA5C 8005BEAC 3C0F800A */  lui         $t7, %hi(D_8009F9B0 + 0xFE)
 /* 05BA60 8005BEB0 A6020026 */  sh          $v0, 0x26($s0)
 /* 05BA64 8005BEB4 000B6040 */  sll         $t4, $t3, 1
 /* 05BA68 8005BEB8 000C7023 */  negu        $t6, $t4
 /* 05BA6C 8005BEBC 01EE7821 */  addu        $t7, $t7, $t6
-/* 05BA70 8005BEC0 85EFFAAE */  lh          $t7, %lo(D_8009FAAE)($t7)
+/* 05BA70 8005BEC0 85EFFAAE */  lh          $t7, %lo(D_8009F9B0 + 0xFE)($t7)
 /* 05BA74 8005BEC4 860D001A */  lh          $t5, 0x1a($s0)
 /* 05BA78 8005BEC8 8608001E */  lh          $t0, 0x1e($s0)
 /* 05BA7C 8005BECC 8E0A0034 */  lw          $t2, 0x34($s0)

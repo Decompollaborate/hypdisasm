@@ -16,6 +16,8 @@ glabel func_80048F60 # 0
 glabel func_80048F68 # 1
 /* 048B18 80048F68 46206005 */  abs.d       $f0, $f12
 /* 048B1C 80048F6C 00000000 */  nop
+
+glabel func_80048F70 # 2
 /* 048B20 80048F70 23BDFFD0 */  addi        $sp, $sp, -0x30
 /* 048B24 80048F74 F7B40000 */  sdc1        $f20, 0x0($sp)
 /* 048B28 80048F78 F7B60008 */  sdc1        $f22, 0x8($sp)

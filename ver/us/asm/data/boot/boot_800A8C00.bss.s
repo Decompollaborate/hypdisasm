@@ -34,7 +34,10 @@ glabel D_800ABD04
 /* 0AB8B4 800ABD04 */  .space  0x10
 
 glabel D_800ABD14
-/* 0AB8C4 800ABD14 */  .space  0x68
+/* 0AB8C4 800ABD14 */  .space  0x64
+
+glabel D_800ABD78
+/* 0AB928 800ABD78 */  .space  0x04
 
 glabel D_800ABD7C
 /* 0AB92C 800ABD7C */  .space  0x04
@@ -52,7 +55,10 @@ glabel D_800ABD8C
 /* 0AB93C 800ABD8C */  .space  0x04
 
 glabel D_800ABD90
-/* 0AB940 800ABD90 */  .space  0x28
+/* 0AB940 800ABD90 */  .space  0x04
+
+glabel D_800ABD94
+/* 0AB944 800ABD94 */  .space  0x24
 
 glabel D_800ABDB8
 /* 0AB968 800ABDB8 */  .space  0x08
@@ -100,7 +106,10 @@ glabel D_800AC4B8
 /* 0AC068 800AC4B8 */  .space  0x08
 
 glabel D_800AC4C0
-/* 0AC070 800AC4C0 */  .space  0x9B0
+/* 0AC070 800AC4C0 */  .space  0x3E0
+
+glabel D_800AC8A0
+/* 0AC450 800AC8A0 */  .space  0x5D0
 
 glabel D_800ACE70
 /* 0ACA20 800ACE70 */  .space  0x10
@@ -241,7 +250,13 @@ glabel D_800AD548
 /* 0AD0F8 800AD548 */  .space  0x04
 
 glabel D_800AD54C
-/* 0AD0FC 800AD54C */  .space  0x0C
+/* 0AD0FC 800AD54C */  .space  0x04
+
+glabel D_800AD550
+/* 0AD100 800AD550 */  .space  0x04
+
+glabel D_800AD554
+/* 0AD104 800AD554 */  .space  0x04
 
 glabel D_800AD558
 /* 0AD108 800AD558 */  .space  0x48
@@ -586,16 +601,52 @@ glabel D_800EF6B8
 /* 0EF268 800EF6B8 */  .space  0x04
 
 glabel D_800EF6BC
-/* 0EF26C 800EF6BC */  .space  0x34
+/* 0EF26C 800EF6BC */  .space  0x04
+
+glabel D_800EF6C0
+/* 0EF270 800EF6C0 */  .space  0x04
+
+glabel D_800EF6C4
+/* 0EF274 800EF6C4 */  .space  0x04
+
+glabel D_800EF6C8
+/* 0EF278 800EF6C8 */  .space  0x04
+
+glabel D_800EF6CC
+/* 0EF27C 800EF6CC */  .space  0x04
+
+glabel D_800EF6D0
+/* 0EF280 800EF6D0 */  .space  0x20
 
 glabel D_800EF6F0
-/* 0EF2A0 800EF6F0 */  .space  0x34
+/* 0EF2A0 800EF6F0 */  .space  0x24
+
+glabel D_800EF714
+/* 0EF2C4 800EF714 */  .space  0x04
+
+glabel D_800EF718
+/* 0EF2C8 800EF718 */  .space  0x0C
 
 glabel D_800EF724
 /* 0EF2D4 800EF724 */  .space  0x04
 
 glabel D_800EF728
-/* 0EF2D8 800EF728 */  .space  0x58
+/* 0EF2D8 800EF728 */  .space  0x04
+
+glabel D_800EF72C
+/* 0EF2DC 800EF72C */  .space  0x04
+
+glabel D_800EF730
+/* 0EF2E0 800EF730 */  .space  0x04
+
+glabel D_800EF734
+/* 0EF2E4 800EF734 */  .space  0x44
+
+glabel D_800EF778
+/* 0EF328 800EF778 */  .space  0x04
+
+glabel D_800EF77C
+/* 0EF32C 800EF77C */  .space  0x04
 
 glabel D_800EF780
 /* 0EF330 800EF780 */  .space  0x10
