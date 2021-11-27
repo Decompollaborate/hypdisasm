@@ -18,7 +18,8 @@ DATA_DIR="ver/${VERSION}/asm/data"
 TABLES_DIR="ver/${VERSION}/tables"
 CONTEXT_DIR="ver/${VERSION}/context"
 
-echo ".incbin \"ver/${VERSION}/baserom/makerom.bin\", 0x40, 0xFC0" > ver/${VERSION}/asm/text/makerom/ipl3.s
+./tools/64scripts/n64reader/n64reader.elf "${BASEROM_DIR}/makerom.bin" -e entrypoint -a -u > "${ASM_DIR}/makerom/rom_header.s"
+echo ".incbin \"${BASEROM_DIR}/makerom.bin\", 0x40, 0xFC0" > ${ASM_DIR}/makerom/ipl3.s
 ./tools/py-mips-disasm/simpleDisasm.py "${BASEROM_DIR}/makerom.bin"     "${ASM_DIR}/makerom"                                             --variables "${TABLES_DIR}/variables_hardware_regs.csv" --variables "${TABLES_DIR}/variables_libultra.csv" --variables ${VARIABLES} --functions ${FUNCTIONS} --file-splits "${TABLES_DIR}/files_makerom.csv"     --variables "${TABLES_DIR}/variables_makerom.csv" --constants "${TABLES_DIR}/constants_makerom.csv"
 
 ./tools/py-mips-disasm/simpleDisasm.py "${BASEROM_DIR}/boot.bin"        "${ASM_DIR}/boot"        --data-output "${DATA_DIR}/boot"        --variables "${TABLES_DIR}/variables_hardware_regs.csv" --variables "${TABLES_DIR}/variables_libultra.csv" --variables ${VARIABLES} --functions ${FUNCTIONS} --file-splits "${TABLES_DIR}/files_boot.csv"        --save-context "${CONTEXT_DIR}/boot.txt"

@@ -26,9 +26,11 @@ ifneq ($(LLD),0)
 endif
 
 all: $(PROGRAMS)
+	make -C 64scripts
 
 clean:
 	$(RM) -r $(PROGRAMS)
+	make -C 64scripts clean
 
 .PHONY: all clean
 
