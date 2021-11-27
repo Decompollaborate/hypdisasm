@@ -1,6 +1,9 @@
 offset,vram,.text
 0,80000450,boot_main
 C0,80000510,boot_80000510
+54830h,80054C80,exceptasm
+55140h,80055590,unmaptlball
+551A0,800555F0,boot_800555F0
 
 offset,vram,.data
 60CB0,80061100,boot_80061100

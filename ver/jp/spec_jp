@@ -16,6 +16,9 @@ beginseg
     // text
     include "ver/jp/build/asm/text/boot/boot_main.text.o"
     include "ver/jp/build/asm/text/boot/boot_80000510.text.o"
+    include "ver/jp/build/asm/text/boot/exceptasm.text.o"
+    include "ver/jp/build/asm/text/boot/unmaptlball.text.o"
+    include "ver/jp/build/asm/text/boot/boot_800555F0.text.o"
 
     // data
     include "ver/jp/build/asm/data/boot/boot_80061100.data.o"
