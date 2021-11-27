@@ -1,0 +1,17 @@
+# libultra OS symbols
+
+80000000,D_80000000,@hardwarereg,4    # __osExceptionPreamble
+80000004,D_80000004,@hardwarereg,4    # __osExceptionPreamble
+80000008,D_80000008,@hardwarereg,4    # __osExceptionPreamble
+8000000C,D_8000000C,@hardwarereg,4    # __osExceptionPreamble
+80000010,D_80000010,@hardwarereg,4    # 
+80000020,D_80000020,@hardwarereg,4    # 
+
+80000300,osTvType,@hardwarereg,4
+80000304,osRomType,@hardwarereg,4
+80000308,osRomBase,@hardwarereg,4
+8000030C,osResetType,@hardwarereg,4
+80000310,osCicId,@hardwarereg,4
+80000314,osVersion,@hardwarereg,4
+80000318,osMemSize,@hardwarereg,4
+8000031C,osAppNmiBuffer,@hardwarereg,4

@@ -1,6 +1,13 @@
 offset,vram,.text
 0,80000450,boot_main
+C0,80000510,boot_80000510
+
 offset,vram,.data
-B3C70,800B40C0,boot_800B40C0
+60CB0,80061100,boot_80061100
+
 offset,vram,.rodata
-DCF60,800DD3B0,boot_800DD3B0
+A4C90,800A50E0,boot_800A50E0
+
+offset,vram,.bss
+AD3F0,800AD840,boot_800AD840
+1059E0,80105E30,.end

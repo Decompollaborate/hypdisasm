@@ -11,9 +11,9 @@
 
 glabel entrypoint # 0
 /* 001000 80000400 3C08800B */  lui         $t0, %hi(_bootSegmentBssStart)
-/* 001004 80000404 3C090005 */  lui         $t1, %hi(_bootSegmentBssSize)
+/* 001004 80000404 3C090005 */  lui         $t1, 0x5
 /* 001008 80000408 2508D840 */  addiu       $t0, $t0, %lo(_bootSegmentBssStart)
-/* 00100C 8000040C 352985F0 */  ori         $t1, $t1, %lo(_bootSegmentBssSize)
+/* 00100C 8000040C 352985F0 */  ori         $t1, $t1, 0x85f0
 .L80000410:
 /* 001010 80000410 2129FFF8 */  addi        $t1, $t1, -0x8
 /* 001014 80000414 AD000000 */  sw          $zero, 0x0($t0)

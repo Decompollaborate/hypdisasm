@@ -1,3 +1,4 @@
 makerom 0
 boot 1050
+assets_AE440 AE440
 file_B6970 B6970
