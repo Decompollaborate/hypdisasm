@@ -306,7 +306,6 @@ endseg
 
 beginseg
     name "file_B3C70"
-    // address 0x8010AAF0
 
     // text
     include "ver/us/build/asm/text/file_B3C70/file_B3C70_8010AAF0.text.o"
@@ -322,6 +321,15 @@ beginseg
 
     // rodata
     include "ver/us/build/asm/data/file_B3C70/file_B3C70_8012BD60.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_8012C220.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_8012C250.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_8012C910.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80130CF0.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80130E60.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80130F40.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80132D70.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80132E60.rodata.o"
+    include "ver/us/build/asm/data/file_B3C70/file_B3C70_80133BD0.rodata.o"
 
     // bss
     include "ver/us/build/asm/data/file_B3C70/file_B3C70_80133DE0.bss.o"
