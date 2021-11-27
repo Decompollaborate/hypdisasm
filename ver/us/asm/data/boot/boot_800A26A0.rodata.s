@@ -129,462 +129,920 @@ glabel D_800A2868
 glabel D_800A2870
 /* 0A2420 800A2870  */  .asciz  "c_kama"
                         .balign 4
+
+glabel D_800A2878
 /* 0A2428 800A2878  */  .asciz  "c_kamamaru"
                         .balign 4
+
+glabel D_800A2884
 /* 0A2434 800A2884  */  .asciz  "c_maru"
                         .balign 4
+
+glabel D_800A288C
 /* 0A243C 800A288C  */  .asciz  "c_marukama"
                         .balign 4
+
+glabel D_800A2898
 /* 0A2448 800A2898  */  .asciz  "c_sleep_ast"
                         .balign 4
+
+glabel D_800A28A4
 /* 0A2454 800A28A4  */  .asciz  "c_sleep_blp"
                         .balign 4
+
+glabel D_800A28B0
 /* 0A2460 800A28B0  */  .asciz  "c_sleep_ced"
                         .balign 4
+
+glabel D_800A28BC
 /* 0A246C 800A28BC  */  .asciz  "c_taberu"
                         .balign 4
+
+glabel D_800A28C8
 /* 0A2478 800A28C8  */  .asciz  "doku_kama"
                         .balign 4
+
+glabel D_800A28D4
 /* 0A2484 800A28D4  */  .asciz  "doku_oyogu"
                         .balign 4
+
+glabel D_800A28E0
 /* 0A2490 800A28E0  */  .asciz  "ff_kama"
                         .balign 4
+
+glabel D_800A28E8
 /* 0A2498 800A28E8  */  .asciz  "ff_taberu"
                         .balign 4
+
+glabel D_800A28F4
 /* 0A24A4 800A28F4  */  .asciz  "ff_walk_ast"
                         .balign 4
+
+glabel D_800A2900
 /* 0A24B0 800A2900  */  .asciz  "ff_walk_blp"
                         .balign 4
+
+glabel D_800A290C
 /* 0A24BC 800A290C  */  .asciz  "ff_walk_ced"
                         .balign 4
+
+glabel D_800A2918
 /* 0A24C8 800A2918  */  .asciz  "ffus_kama"
                         .balign 4
+
+glabel D_800A2924
 /* 0A24D4 800A2924  */  .asciz  "ffus_kuchiake"
                         .balign 4
+
+glabel D_800A2934
 /* 0A24E4 800A2934  */  .asciz  "ffus_sleep_ast"
                         .balign 4
+
+glabel D_800A2944
 /* 0A24F4 800A2944  */  .asciz  "ffus_sleep_blp"
                         .balign 4
+
+glabel D_800A2954
 /* 0A2504 800A2954  */  .asciz  "ffus_sleep_ced"
                         .balign 4
+
+glabel D_800A2964
 /* 0A2514 800A2964  */  .asciz  "gho_kama"
                         .balign 4
+
+glabel D_800A2970
 /* 0A2520 800A2970  */  .asciz  "gho_odokashi"
                         .balign 4
+
+glabel D_800A2980
 /* 0A2530 800A2980  */  .asciz  "gho_why"
                         .balign 4
+
+glabel D_800A2988
 /* 0A2538 800A2988  */  .asciz  "gho_yarare"
                         .balign 4
+
+glabel D_800A2994
 /* 0A2544 800A2994  */  .asciz  "kingler_kama"
                         .balign 4
+
+glabel D_800A29A4
 /* 0A2554 800A29A4  */  .asciz  "kingler_oyogu"
                         .balign 4
+
+glabel D_800A29B4
 /* 0A2564 800A29B4  */  .asciz  "koi_kama"
                         .balign 4
+
+glabel D_800A29C0
 /* 0A2570 800A29C0  */  .asciz  "koi_oyogu"
                         .balign 4
+
+glabel D_800A29CC
 /* 0A257C 800A29CC  */  .asciz  "p_agura_n_m"
                         .balign 4
+
+glabel D_800A29D8
 /* 0A2588 800A29D8  */  .asciz  "p_akire_a_m"
                         .balign 4
+
+glabel D_800A29E4
 /* 0A2594 800A29E4  */  .asciz  "p_ang_i_l"
                         .balign 4
+
+glabel D_800A29F0
 /* 0A25A0 800A29F0  */  .asciz  "p_ang_i_m"
                         .balign 4
+
+glabel D_800A29FC
 /* 0A25AC 800A29FC  */  .asciz  "p_army_n_m"
                         .balign 4
+
+glabel D_800A2A08
 /* 0A25B8 800A2A08  */  .asciz  "p_ashitonton_i_s_ast"
                         .balign 4
+
+glabel D_800A2A20
 /* 0A25D0 800A2A20  */  .asciz  "p_ashitonton_i_s_blp"
                         .balign 4
+
+glabel D_800A2A38
 /* 0A25E8 800A2A38  */  .asciz  "p_ashitonton_i_s_ced"
                         .balign 4
+
+glabel D_800A2A50
 /* 0A2600 800A2A50  */  .asciz  "p_asibumi_n_m"
                         .balign 4
+
+glabel D_800A2A60
 /* 0A2610 800A2A60  */  .asciz  "p_asir_n_m"
                         .balign 4
+
+glabel D_800A2A6C
 /* 0A261C 800A2A6C  */  .asciz  "p_awateru_n_m"
                         .balign 4
+
+glabel D_800A2A7C
 /* 0A262C 800A2A7C  */  .asciz  "p_back_n_m"
                         .balign 4
+
+glabel D_800A2A88
 /* 0A2638 800A2A88  */  .asciz  "p_ballet_n_m"
                         .balign 4
+
+glabel D_800A2A98
 /* 0A2648 800A2A98  */  .asciz  "p_bikkuri_o_m"
                         .balign 4
+
+glabel D_800A2AA8
 /* 0A2658 800A2AA8  */  .asciz  "p_boo_f_m"
                         .balign 4
+
+glabel D_800A2AB4
 /* 0A2664 800A2AB4  */  .asciz  "p_bye_k_s"
                         .balign 4
+
+glabel D_800A2AC0
 /* 0A2670 800A2AC0  */  .asciz  "p_cye_f_m"
                         .balign 4
+
+glabel D_800A2ACC
 /* 0A267C 800A2ACC  */  .asciz  "p_cyuui_i_s"
                         .balign 4
+
+glabel D_800A2AD8
 /* 0A2688 800A2AD8  */  .asciz  "p_dengeki_n_m"
                         .balign 4
+
+glabel D_800A2AE8
 /* 0A2698 800A2AE8  */  .asciz  "p_dengekidame_n_m"
                         .balign 4
+
+glabel D_800A2AFC
 /* 0A26AC 800A2AFC  */  .asciz  "p_dengekif_n_m"
                         .balign 4
+
+glabel D_800A2B0C
 /* 0A26BC 800A2B0C  */  .asciz  "p_dengekifdame_n_m"
                         .balign 4
+
+glabel D_800A2B20
 /* 0A26D0 800A2B20  */  .asciz  "p_denki_n_m"
                         .balign 4
+
+glabel D_800A2B2C
 /* 0A26DC 800A2B2C  */  .asciz  "p_denkidame_n_m"
                         .balign 4
+
+glabel D_800A2B3C
 /* 0A26EC 800A2B3C  */  .asciz  "p_eat_n_m"
                         .balign 4
+
+glabel D_800A2B48
 /* 0A26F8 800A2B48  */  .asciz  "p_ekaku_n_m_ast"
                         .balign 4
+
+glabel D_800A2B58
 /* 0A2708 800A2B58  */  .asciz  "p_ekaku_n_m_blp"
                         .balign 4
+
+glabel D_800A2B68
 /* 0A2718 800A2B68  */  .asciz  "p_ekaku_n_m_ced"
                         .balign 4
+
+glabel D_800A2B78
 /* 0A2728 800A2B78  */  .asciz  "p_ekakustop_n_m"
                         .balign 4
+
+glabel D_800A2B88
 /* 0A2738 800A2B88  */  .asciz  "p_emiseru_n_m"
                         .balign 4
+
+glabel D_800A2B98
 /* 0A2748 800A2B98  */  .asciz  "p_furafura_n_m"
                         .balign 4
+
+glabel D_800A2BA8
 /* 0A2758 800A2BA8  */  .asciz  "p_furimukil_n_m"
                         .balign 4
+
+glabel D_800A2BB8
 /* 0A2768 800A2BB8  */  .asciz  "p_furimukir_n_m"
                         .balign 4
+
+glabel D_800A2BC8
 /* 0A2778 800A2BC8  */  .asciz  "p_furue_b_m"
                         .balign 4
+
+glabel D_800A2BD4
 /* 0A2784 800A2BD4  */  .asciz  "p_gakkuri_a_m"
                         .balign 4
+
+glabel D_800A2BE4
 /* 0A2794 800A2BE4  */  .asciz  "p_gakkuri_a_s"
                         .balign 4
+
+glabel D_800A2BF4
 /* 0A27A4 800A2BF4  */  .asciz  "p_glad_y_m"
                         .balign 4
+
+glabel D_800A2C00
 /* 0A27B0 800A2C00  */  .asciz  "p_glad_y_s"
                         .balign 4
+
+glabel D_800A2C0C
 /* 0A27BC 800A2C0C  */  .asciz  "p_goso_n_m"
                         .balign 4
+
+glabel D_800A2C18
 /* 0A27C8 800A2C18  */  .asciz  "p_gosodasi_n_m_ast"
                         .balign 4
+
+glabel D_800A2C2C
 /* 0A27DC 800A2C2C  */  .asciz  "p_gosodasi_n_m_bed"
                         .balign 4
+
+glabel D_800A2C40
 /* 0A27F0 800A2C40  */  .asciz  "p_harmonica_n_m"
                         .balign 4
+
+glabel D_800A2C50
 /* 0A2800 800A2C50  */  .asciz  "p_hazure_n_m"
                         .balign 4
+
+glabel D_800A2C60
 /* 0A2810 800A2C60  */  .asciz  "p_headfuri_y_s"
                         .balign 4
+
+glabel D_800A2C70
 /* 0A2820 800A2C70  */  .asciz  "p_hello_n_m"
                         .balign 4
+
+glabel D_800A2C7C
 /* 0A282C 800A2C7C  */  .asciz  "p_hipfuri_n_m"
                         .balign 4
+
+glabel D_800A2C8C
 /* 0A283C 800A2C8C  */  .asciz  "p_hirou_n_m"
                         .balign 4
+
+glabel D_800A2C98
 /* 0A2848 800A2C98  */  .asciz  "p_ikaku_i_m_ast"
                         .balign 4
+
+glabel D_800A2CA8
 /* 0A2858 800A2CA8  */  .asciz  "p_ikaku_i_m_blp"
                         .balign 4
+
+glabel D_800A2CB8
 /* 0A2868 800A2CB8  */  .asciz  "p_ikaku_i_m_ced"
                         .balign 4
+
+glabel D_800A2CC8
 /* 0A2878 800A2CC8  */  .asciz  "p_ikou_n_m"
                         .balign 4
+
+glabel D_800A2CD4
 /* 0A2884 800A2CD4  */  .asciz  "p_iranai2_n_m"
                         .balign 4
+
+glabel D_800A2CE4
 /* 0A2894 800A2CE4  */  .asciz  "p_iranai_n_m"
                         .balign 4
+
+glabel D_800A2CF4
 /* 0A28A4 800A2CF4  */  .asciz  "p_iyaan_h_m"
                         .balign 4
+
+glabel D_800A2D00
 /* 0A28B0 800A2D00  */  .asciz  "p_jump50_n_m"
                         .balign 4
+
+glabel D_800A2D10
 /* 0A28C0 800A2D10  */  .asciz  "p_jump_n_m"
                         .balign 4
+
+glabel D_800A2D1C
 /* 0A28CC 800A2D1C  */  .asciz  "p_jump_n_m_ast"
                         .balign 4
+
+glabel D_800A2D2C
 /* 0A28DC 800A2D2C  */  .asciz  "p_jump_n_m_blp"
                         .balign 4
+
+glabel D_800A2D3C
 /* 0A28EC 800A2D3C  */  .asciz  "p_jump_n_m_ced"
                         .balign 4
+
+glabel D_800A2D4C
 /* 0A28FC 800A2D4C  */  .asciz  "p_jumpshock_n_m_ast"
                         .balign 4
+
+glabel D_800A2D60
 /* 0A2910 800A2D60  */  .asciz  "p_jumpshock_n_m_b"
                         .balign 4
+
+glabel D_800A2D74
 /* 0A2924 800A2D74  */  .asciz  "p_jumpshock_n_m_c"
                         .balign 4
+
+glabel D_800A2D88
 /* 0A2938 800A2D88  */  .asciz  "p_jumpshock_n_m_d"
                         .balign 4
+
+glabel D_800A2D9C
 /* 0A294C 800A2D9C  */  .asciz  "p_jumpshock_n_m_eed"
                         .balign 4
+
+glabel D_800A2DB0
 /* 0A2960 800A2DB0  */  .asciz  "p_jyouro_n_m"
                         .balign 4
+
+glabel D_800A2DC0
 /* 0A2970 800A2DC0  */  .asciz  "p_kakage_n_m_ast"
                         .balign 4
+
+glabel D_800A2DD4
 /* 0A2984 800A2DD4  */  .asciz  "p_kakage_n_m_blp"
                         .balign 4
+
+glabel D_800A2DE8
 /* 0A2998 800A2DE8  */  .asciz  "p_kakage_n_m_ced"
                         .balign 4
+
+glabel D_800A2DFC
 /* 0A29AC 800A2DFC  */  .asciz  "p_kakageue_n_m_ast"
                         .balign 4
+
+glabel D_800A2E10
 /* 0A29C0 800A2E10  */  .asciz  "p_kakageue_n_m_blp"
                         .balign 4
+
+glabel D_800A2E24
 /* 0A29D4 800A2E24  */  .asciz  "p_kakageue_n_m_ced"
                         .balign 4
+
+glabel D_800A2E38
 /* 0A29E8 800A2E38  */  .asciz  "p_kama_n_l"
                         .balign 4
+
+glabel D_800A2E44
 /* 0A29F4 800A2E44  */  .asciz  "p_kama_n_m"
                         .balign 4
+
+glabel D_800A2E50
 /* 0A2A00 800A2E50  */  .asciz  "p_kamaen_n_m"
                         .balign 4
+
+glabel D_800A2E60
 /* 0A2A10 800A2E60  */  .asciz  "p_kamasuwa_n_m_ast"
                         .balign 4
+
+glabel D_800A2E74
 /* 0A2A24 800A2E74  */  .asciz  "p_kamasuwa_n_m_blp"
                         .balign 4
+
+glabel D_800A2E88
 /* 0A2A38 800A2E88  */  .asciz  "p_kamasuwa_n_m_ced"
                         .balign 4
+
+glabel D_800A2E9C
 /* 0A2A4C 800A2E9C  */  .asciz  "p_kamatachi_n_m"
                         .balign 4
+
+glabel D_800A2EAC
 /* 0A2A5C 800A2EAC  */  .asciz  "p_kasige_n_m"
                         .balign 4
+
+glabel D_800A2EBC
 /* 0A2A6C 800A2EBC  */  .asciz  "p_kazoeru_n_m"
                         .balign 4
+
+glabel D_800A2ECC
 /* 0A2A7C 800A2ECC  */  .asciz  "p_kiku_n_m"
                         .balign 4
+
+glabel D_800A2ED8
 /* 0A2A88 800A2ED8  */  .asciz  "p_kobaka_a_l"
                         .balign 4
+
+glabel D_800A2EE8
 /* 0A2A98 800A2EE8  */  .asciz  "p_korekore_n_m"
                         .balign 4
+
+glabel D_800A2EF8
 /* 0A2AA8 800A2EF8  */  .asciz  "p_kure_n_m"
                         .balign 4
+
+glabel D_800A2F04
 /* 0A2AB4 800A2F04  */  .asciz  "p_kurekure_n_m"
                         .balign 4
+
+glabel D_800A2F14
 /* 0A2AC4 800A2F14  */  .asciz  "p_kusabue_n_m"
                         .balign 4
+
+glabel D_800A2F24
 /* 0A2AD4 800A2F24  */  .asciz  "p_kusyami_n_m"
                         .balign 4
+
+glabel D_800A2F34
 /* 0A2AE4 800A2F34  */  .asciz  "p_kyoro_n_m"
                         .balign 4
+
+glabel D_800A2F40
 /* 0A2AF0 800A2F40  */  .asciz  "p_left_n_m"
                         .balign 4
+
+glabel D_800A2F4C
 /* 0A2AFC 800A2F4C  */  .asciz  "p_maedasi_n_m_ast"
                         .balign 4
+
+glabel D_800A2F60
 /* 0A2B10 800A2F60  */  .asciz  "p_maedasi_n_m_blp"
                         .balign 4
+
+glabel D_800A2F74
 /* 0A2B24 800A2F74  */  .asciz  "p_maedasi_n_m_ced"
                         .balign 4
+
+glabel D_800A2F88
 /* 0A2B38 800A2F88  */  .asciz  "p_memai_n_m"
                         .balign 4
+
+glabel D_800A2F94
 /* 0A2B44 800A2F94  */  .asciz  "p_miageru_n_m_ast"
                         .balign 4
+
+glabel D_800A2FA8
 /* 0A2B58 800A2FA8  */  .asciz  "p_miageru_n_m_blp"
                         .balign 4
+
+glabel D_800A2FBC
 /* 0A2B6C 800A2FBC  */  .asciz  "p_miageru_n_m_ced"
                         .balign 4
+
+glabel D_800A2FD0
 /* 0A2B80 800A2FD0  */  .asciz  "p_mojimoji_h_s"
                         .balign 4
+
+glabel D_800A2FE0
 /* 0A2B90 800A2FE0  */  .asciz  "p_mukatuki_i_s"
                         .balign 4
+
+glabel D_800A2FF0
 /* 0A2BA0 800A2FF0  */  .asciz  "p_mushin_n_m"
                         .balign 4
+
+glabel D_800A3000
 /* 0A2BB0 800A3000  */  .asciz  "p_musi_i_s"
                         .balign 4
+
+glabel D_800A300C
 /* 0A2BBC 800A300C  */  .asciz  "p_nageru_n_m"
                         .balign 4
+
+glabel D_800A301C
 /* 0A2BCC 800A301C  */  .asciz  "p_naname_n_m"
                         .balign 4
+
+glabel D_800A302C
 /* 0A2BDC 800A302C  */  .asciz  "p_nanda2_n_m_blp"
                         .balign 4
+
+glabel D_800A3040
 /* 0A2BF0 800A3040  */  .asciz  "p_nayamu_n_m"
                         .balign 4
+
+glabel D_800A3050
 /* 0A2C00 800A3050  */  .asciz  "p_nayamukeepte_n_m"
                         .balign 4
+
+glabel D_800A3064
 /* 0A2C14 800A3064  */  .asciz  "p_nioi_n_m"
                         .balign 4
+
+glabel D_800A3070
 /* 0A2C20 800A3070  */  .asciz  "p_no_n_m"
                         .balign 4
+
+glabel D_800A307C
 /* 0A2C2C 800A307C  */  .asciz  "p_noridasu_n_m"
                         .balign 4
+
+glabel D_800A308C
 /* 0A2C3C 800A308C  */  .asciz  "p_noseru_n_m"
                         .balign 4
+
+glabel D_800A309C
 /* 0A2C4C 800A309C  */  .asciz  "p_nukenai_n_m"
                         .balign 4
+
+glabel D_800A30AC
 /* 0A2C5C 800A30AC  */  .asciz  "p_nukeru_n_m"
                         .balign 4
+
+glabel D_800A30BC
 /* 0A2C6C 800A30BC  */  .asciz  "p_nuku_n_m_ast"
                         .balign 4
+
+glabel D_800A30CC
 /* 0A2C7C 800A30CC  */  .asciz  "p_nuku_n_m_blp"
                         .balign 4
+
+glabel D_800A30DC
 /* 0A2C8C 800A30DC  */  .asciz  "p_ochiru_o_m_ast"
                         .balign 4
+
+glabel D_800A30F0
 /* 0A2CA0 800A30F0  */  .asciz  "p_ochiru_o_m_blp"
                         .balign 4
+
+glabel D_800A3104
 /* 0A2CB4 800A3104  */  .asciz  "p_okorare_h_s"
                         .balign 4
+
+glabel D_800A3114
 /* 0A2CC4 800A3114  */  .asciz  "p_oku_n_m"
                         .balign 4
+
+glabel D_800A3120
 /* 0A2CD0 800A3120  */  .asciz  "p_osu_n_m_ast"
                         .balign 4
+
+glabel D_800A3130
 /* 0A2CE0 800A3130  */  .asciz  "p_osu_n_m_blp"
                         .balign 4
+
+glabel D_800A3140
 /* 0A2CF0 800A3140  */  .asciz  "p_osu_n_m_ced"
                         .balign 4
+
+glabel D_800A3150
 /* 0A2D00 800A3150  */  .asciz  "p_peace_n_m"
                         .balign 4
+
+glabel D_800A315C
 /* 0A2D0C 800A315C  */  .asciz  "p_rappa_n_m"
                         .balign 4
+
+glabel D_800A3168
 /* 0A2D18 800A3168  */  .asciz  "p_really_o_s"
                         .balign 4
+
+glabel D_800A3178
 /* 0A2D28 800A3178  */  .asciz  "p_right_n_m"
                         .balign 4
+
+glabel D_800A3184
 /* 0A2D34 800A3184  */  .asciz  "p_run_n_m_ast"
                         .balign 4
+
+glabel D_800A3194
 /* 0A2D44 800A3194  */  .asciz  "p_run_n_m_blp"
                         .balign 4
+
+glabel D_800A31A4
 /* 0A2D54 800A31A4  */  .asciz  "p_run_n_m_ced"
                         .balign 4
+
+glabel D_800A31B4
 /* 0A2D64 800A31B4  */  .asciz  "p_runjump_n_m"
                         .balign 4
+
+glabel D_800A31C4
 /* 0A2D74 800A31C4  */  .asciz  "p_runwalk_n_m"
                         .balign 4
+
+glabel D_800A31D4
 /* 0A2D84 800A31D4  */  .asciz  "p_seki_n_m"
                         .balign 4
+
+glabel D_800A31E0
 /* 0A2D90 800A31E0  */  .asciz  "p_sleep_n_m_ast"
                         .balign 4
+
+glabel D_800A31F0
 /* 0A2DA0 800A31F0  */  .asciz  "p_sleep_n_m_blp"
                         .balign 4
+
+glabel D_800A3200
 /* 0A2DB0 800A3200  */  .asciz  "p_sleep_n_m_ced"
                         .balign 4
+
+glabel D_800A3210
 /* 0A2DC0 800A3210  */  .asciz  "p_sleepsuwa_n_m"
                         .balign 4
+
+glabel D_800A3220
 /* 0A2DD0 800A3220  */  .asciz  "p_suikama_n_m"
                         .balign 4
+
+glabel D_800A3230
 /* 0A2DE0 800A3230  */  .asciz  "p_suikashibumi_n_m"
                         .balign 4
+
+glabel D_800A3244
 /* 0A2DF4 800A3244  */  .asciz  "p_suikawalk_n_m"
                         .balign 4
+
+glabel D_800A3254
 /* 0A2E04 800A3254  */  .asciz  "p_suikawari_n_m_ast"
                         .balign 4
+
+glabel D_800A3268
 /* 0A2E18 800A3268  */  .asciz  "p_suikawari_n_m_blp"
                         .balign 4
+
+glabel D_800A327C
 /* 0A2E2C 800A327C  */  .asciz  "p_suikawari_n_m_ced"
                         .balign 4
+
+glabel D_800A3290
 /* 0A2E40 800A3290  */  .asciz  "p_suikayameru_n_m"
                         .balign 4
+
+glabel D_800A32A4
 /* 0A2E54 800A32A4  */  .asciz  "p_suteki_y_m"
                         .balign 4
+
+glabel D_800A32B4
 /* 0A2E64 800A32B4  */  .asciz  "p_suwamimikaki_n_m"
                         .balign 4
+
+glabel D_800A32C8
 /* 0A2E78 800A32C8  */  .asciz  "p_tachikama_n_m"
                         .balign 4
+
+glabel D_800A32D8
 /* 0A2E88 800A32D8  */  .asciz  "p_tereru_h_m"
                         .balign 4
+
+glabel D_800A32E8
 /* 0A2E98 800A32E8  */  .asciz  "p_tokui_n_m"
                         .balign 4
+
+glabel D_800A32F4
 /* 0A2EA4 800A32F4  */  .asciz  "p_torou_n_m"
                         .balign 4
+
+glabel D_800A3300
 /* 0A2EB0 800A3300  */  .asciz  "p_tumazuku_n_m_ast"
                         .balign 4
+
+glabel D_800A3314
 /* 0A2EC4 800A3314  */  .asciz  "p_tumazuku_n_m_blp"
                         .balign 4
+
+glabel D_800A3328
 /* 0A2ED8 800A3328  */  .asciz  "p_tumazuku_n_m_ced"
                         .balign 4
+
+glabel D_800A333C
 /* 0A2EEC 800A333C  */  .asciz  "p_tutuku_n_m"
                         .balign 4
+
+glabel D_800A334C
 /* 0A2EFC 800A334C  */  .asciz  "p_tv_n_m"
                         .balign 4
+
+glabel D_800A3358
 /* 0A2F08 800A3358  */  .asciz  "p_unadare_k_m_ast"
                         .balign 4
+
+glabel D_800A336C
 /* 0A2F1C 800A336C  */  .asciz  "p_unadare_k_m_blp"
                         .balign 4
+
+glabel D_800A3380
 /* 0A2F30 800A3380  */  .asciz  "p_unadare_k_m_ced"
                         .balign 4
+
+glabel D_800A3394
 /* 0A2F44 800A3394  */  .asciz  "p_unun_n_m"
                         .balign 4
+
+glabel D_800A33A0
 /* 0A2F50 800A33A0  */  .asciz  "p_voiceloud_n_m"
                         .balign 4
+
+glabel D_800A33B0
 /* 0A2F60 800A33B0  */  .asciz  "p_voicelow_n_m"
                         .balign 4
+
+glabel D_800A33C0
 /* 0A2F70 800A33C0  */  .asciz  "p_walk_n_m_ast"
                         .balign 4
+
+glabel D_800A33D0
 /* 0A2F80 800A33D0  */  .asciz  "p_walk_n_m_blp"
                         .balign 4
+
+glabel D_800A33E0
 /* 0A2F90 800A33E0  */  .asciz  "p_walk_n_m_ced"
                         .balign 4
+
+glabel D_800A33F0
 /* 0A2FA0 800A33F0  */  .asciz  "p_walkrun_n_m"
                         .balign 4
+
+glabel D_800A3400
 /* 0A2FB0 800A3400  */  .asciz  "p_warai_y_m"
                         .balign 4
+
+glabel D_800A340C
 /* 0A2FBC 800A340C  */  .asciz  "p_warai_y_s"
                         .balign 4
+
+glabel D_800A3418
 /* 0A2FC8 800A3418  */  .asciz  "p_watasu2_n_l_blp"
                         .balign 4
+
+glabel D_800A342C
 /* 0A2FDC 800A342C  */  .asciz  "p_watasu_n_m_ast"
                         .balign 4
+
+glabel D_800A3440
 /* 0A2FF0 800A3440  */  .asciz  "p_watasu_n_m_blp"
                         .balign 4
+
+glabel D_800A3454
 /* 0A3004 800A3454  */  .asciz  "p_watasu_n_m_ced"
                         .balign 4
+
+glabel D_800A3468
 /* 0A3018 800A3468  */  .asciz  "p_whatl_n_m"
                         .balign 4
+
+glabel D_800A3474
 /* 0A3024 800A3474  */  .asciz  "p_whatrl_n_m"
                         .balign 4
+
+glabel D_800A3484
 /* 0A3034 800A3484  */  .asciz  "p_yes_n_m"
                         .balign 4
+
+glabel D_800A3490
 /* 0A3040 800A3490  */  .asciz  "p_yosiyosi_n_m"
                         .balign 4
+
+glabel D_800A34A0
 /* 0A3050 800A34A0  */  .asciz  "p_yotsunbai_n_m_ast"
                         .balign 4
+
+glabel D_800A34B4
 /* 0A3064 800A34B4  */  .asciz  "p_yotsunbai_n_m_bed"
                         .balign 4
+
+glabel D_800A34C8
 /* 0A3078 800A34C8  */  .asciz  "starmie_oyogu"
                         .balign 4
+
+glabel D_800A34D8
 /* 0A3088 800A34D8  */  .asciz  "tbf_kama"
                         .balign 4
+
+glabel D_800A34E4
 /* 0A3094 800A34E4  */  .asciz  "th_taberu"
                         .balign 4
+
+glabel D_800A34F0
 /* 0A30A0 800A34F0  */  .asciz  "tk_run_ast"
                         .balign 4
+
+glabel D_800A34FC
 /* 0A30AC 800A34FC  */  .asciz  "tk_run_blp"
                         .balign 4
+
+glabel D_800A3508
 /* 0A30B8 800A3508  */  .asciz  "tk_run_ced"
                         .balign 4
+
+glabel D_800A3514
 /* 0A30C4 800A3514  */  .asciz  "tkc_kama"
                         .balign 4
+
+glabel D_800A3520
 /* 0A30D0 800A3520  */  .asciz  "tn_freeze"
                         .balign 4
+
+glabel D_800A352C
 /* 0A30DC 800A352C  */  .asciz  "tn_hairu"
                         .balign 4
+
+glabel D_800A3538
 /* 0A30E8 800A3538  */  .asciz  "tn_hakoaku"
                         .balign 4
+
+glabel D_800A3544
 /* 0A30F4 800A3544  */  .asciz  "tn_run_ast"
                         .balign 4
+
+glabel D_800A3550
 /* 0A3100 800A3550  */  .asciz  "tn_run_blp"
                         .balign 4
+
+glabel D_800A355C
 /* 0A310C 800A355C  */  .asciz  "tn_run_ced"
                         .balign 4
+
+glabel D_800A3568
 /* 0A3118 800A3568  */  .asciz  "tn_tobiagari"
                         .balign 4
+
+glabel D_800A3578
 /* 0A3128 800A3578  */  .asciz  "tny_deru"
                         .balign 4
+
+glabel D_800A3584
 /* 0A3134 800A3584  */  .asciz  "tny_uku"
                         .balign 4
+
+glabel D_800A358C
 /* 0A313C 800A358C  */  .asciz  "tny_unun"
                         .balign 4
+
+glabel D_800A3598
 /* 0A3148 800A3598  */  .asciz  "tny_walk_ast"
                         .balign 4
+
+glabel D_800A35A8
 /* 0A3158 800A35A8  */  .asciz  "tny_walk_blp"
                         .balign 4
+
+glabel D_800A35B8
 /* 0A3168 800A35B8  */  .asciz  "tny_walk_ced"
                         .balign 4
+
+glabel D_800A35C8
 /* 0A3178 800A35C8  */  .asciz  "tz_hello"
                         .balign 4
+
+glabel D_800A35D4
 /* 0A3184 800A35D4  */  .asciz  "tz_kama"
                         .balign 4
+
+glabel D_800A35DC
 /* 0A318C 800A35DC  */  .asciz  "tz_mazui"
                         .balign 4
+
+glabel D_800A35E8
 /* 0A3198 800A35E8  */  .asciz  "tz_mimiuchi"
                         .balign 4
+
+glabel D_800A35F4
 /* 0A31A4 800A35F4  */  .asciz  "tz_run_ast"
                         .balign 4
+
+glabel D_800A3600
 /* 0A31B0 800A3600  */  .asciz  "tz_run_blp"
                         .balign 4
+
+glabel D_800A360C
 /* 0A31BC 800A360C  */  .asciz  "tz_run_ced"
                         .balign 4
+
+glabel D_800A3618
 /* 0A31C8 800A3618  */  .asciz  "tz_taberu"
                         .balign 4
 
@@ -752,10 +1210,16 @@ glabel D_800A3790
                         .balign 4
 /* 0A33A8 800A37F8  */  .asciz  "FALSE"
                         .balign 4
+
+glabel D_800A3800
 /* 0A33B0 800A3800  */  .asciz  "Sliding Door\nThis leads to\n^6PIKACHU^^'s Discovery Days\nwhere you can play."
                         .balign 4
+
+glabel D_800A384C
 /* 0A33FC 800A384C  */  .asciz  "Front Gate\nThis leads to\n^6PIKACHU^^'s Play Days\nwhere you can play."
                         .balign 4
+
+glabel D_800A3894
 /* 0A3444 800A3894  */  .asciz  "Side Gate\nThis leads to\n^6PIKACHU^^'s Daring Days\nwhere you can play."
                         .balign 4
 
@@ -847,765 +1311,476 @@ glabel D_800A3A74
 /* 0A3624 800A3A74 3F4CCCCD */  .float  0.800000011920929
 /* 0A3628 800A3A78 00000000 */  .float  0.0
 /* 0A362C 800A3A7C 00000000 */  .float  0.0
-/* 0A3630 800A3A80 42554C42 */  .float  53.32447052001953
-/* 0A3634 800A3A84 41534155 */  .float  13.203450202941895
-/* 0A3638 800A3A88 52000000 */  .float  137438953472.0
-/* 0A363C 800A3A8C 42554C42 */  .float  53.32447052001953
-/* 0A3640 800A3A90 41534155 */  .float  13.203450202941895
-/* 0A3644 800A3A94 52000000 */  .float  137438953472.0
-/* 0A3648 800A3A98 5E645365 */  .float  4.11315122859724e+18
-/* 0A364C 800A3A9C 65642050 */  .float  6.733097615701005e+22
-/* 0A3650 800A3AA0 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3654 800A3AA4 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A3658 800A3AA8 5E0A4861 */  .float  2.491080207046279e+18
-/* 0A365C 800A3AAC 73206120 */  .float  1.2706564733861192e+31
-/* 0A3660 800A3AB0 706C616E */  .float  2.926249903306127e+29
-/* 0A3664 800A3AB4 74206275 */  .float  5.082790791026272e+31
-/* 0A3668 800A3AB8 6C620A6F */  .float  1.0930660259453083e+27
-/* 0A366C 800A3ABC 6E206974 */  .float  1.241127164424669e+28
-/* 0A3670 800A3AC0 73206261 */  .float  1.2706952799049288e+31
-/* 0A3674 800A3AC4 636B2E0A */  .float  4.3383023213972564e+21
-/* 0A3678 800A3AC8 5E365049 */  .float  3.284270094347141e+18
-/* 0A367C 800A3ACC 4B414348 */  .float  12665672.0
-/* 0A3680 800A3AD0 555E5E27 */  .float  15280997662720.0
-/* 0A3684 800A3AD4 73206672 */  .float  1.2708211290827507e+31
-/* 0A3688 800A3AD8 69656E64 */  .float  1.733533235495457e+25
-/* 0A368C 800A3ADC 2E000000 */  .float  2.9103830456733704e-11
-/* 0A3690 800A3AE0 56454E55 */  .float  54235056046080.0
-/* 0A3694 800A3AE4 53415552 */  .float  830360125440.0
-/* 0A3698 800A3AE8 00000000 */  .float  0.0
-/* 0A369C 800A3AEC 56454E55 */  .float  54235056046080.0
-/* 0A36A0 800A3AF0 53415552 */  .float  830360125440.0
-/* 0A36A4 800A3AF4 00000000 */  .float  0.0
-/* 0A36A8 800A3AF8 5E645365 */  .float  4.11315122859724e+18
-/* 0A36AC 800A3AFC 65642050 */  .float  6.733097615701005e+22
-/* 0A36B0 800A3B00 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A36B4 800A3B04 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A36B8 800A3B08 5E0A5573 */  .float  2.491999948522914e+18
-/* 0A36BC 800A3B0C 65732073 */  .float  7.17583523606873e+22
-/* 0A36C0 800A3B10 6F6C6172 */  .float  7.31562664721191e+28
-/* 0A36C4 800A3B14 20656E65 */  .float  1.943358097851623e-19
-/* 0A36C8 800A3B18 7267790A */  .float  4.58479132906041e+30
-/* 0A36CC 800A3B1C 666F7220 */  .float  2.8268770601831433e+23
-/* 0A36D0 800A3B20 6E6F7572 */  .float  1.8527225004493858e+28
-/* 0A36D4 800A3B24 6973686D */  .float  1.8391381935979835e+25
-/* 0A36D8 800A3B28 656E742E */  .float  7.037914749280323e+22
-/* 0A36DC 800A3B2C 0A4C696B */  .float  9.842069632653429e-33
-/* 0A36E0 800A3B30 65732074 */  .float  7.175835686428693e+22
-/* 0A36E4 800A3B34 6F207375 */  .float  4.965718055754939e+28
-/* 0A36E8 800A3B38 6E206974 */  .float  1.241127164424669e+28
-/* 0A36EC 800A3B3C 73656C66 */  .float  1.817679690726084e+31
-/* 0A36F0 800A3B40 2E000000 */  .float  2.9103830456733704e-11
-/* 0A36F4 800A3B44 53515549 */  .float  899079012352.0
-/* 0A36F8 800A3B48 52544C45 */  .float  227953164288.0
-/* 0A36FC 800A3B4C 00000000 */  .float  0.0
-/* 0A3700 800A3B50 53515549 */  .float  899079012352.0
-/* 0A3704 800A3B54 52544C45 */  .float  227953164288.0
-/* 0A3708 800A3B58 00000000 */  .float  0.0
-/* 0A370C 800A3B5C 5E645469 */  .float  4.113222696853045e+18
-/* 0A3710 800A3B60 6E792054 */  .float  1.9275212437631788e+28
-/* 0A3714 800A3B64 7572746C */  .float  3.0734793845727623e+32
-/* 0A3718 800A3B68 6520506F */  .float  4.731639844862364e+22
-/* 0A371C 800A3B6C 6BA1AD6D */  .float  3.9091207410919156e+26
-/* 0A3720 800A3B70 6F6E5E5E */  .float  7.377151526697329e+28
-/* 0A3724 800A3B74 0A4C696B */  .float  9.842069632653429e-33
-/* 0A3728 800A3B78 65732077 */  .float  7.175837037508581e+22
-/* 0A372C 800A3B7C 61746572 */  .float  2.8176971619564415e+20
-/* 0A3730 800A3B80 2E0A5E36 */  .float  3.146124333275324e-11
-/* 0A3734 800A3B84 50494B41 */  .float  13508609024.0
-/* 0A3738 800A3B88 4348555E */  .float  200.33346557617188
-/* 0A373C 800A3B8C 5E277320 */  .float  3.016505752756945e+18
-/* 0A3740 800A3B90 66726965 */  .float  2.8618921869979787e+23
-/* 0A3744 800A3B94 6E642E00 */  .float  1.7654548206742237e+28
-/* 0A3748 800A3B98 43484152 */  .float  200.25515747070312
-/* 0A374C 800A3B9C 4D414E44 */  .float  202695744.0
-/* 0A3750 800A3BA0 45520000 */  .float  3360.0
-/* 0A3754 800A3BA4 43484152 */  .float  200.25515747070312
-/* 0A3758 800A3BA8 4D414E44 */  .float  202695744.0
-/* 0A375C 800A3BAC 45520000 */  .float  3360.0
-/* 0A3760 800A3BB0 5E644C69 */  .float  4.112659746899624e+18
-/* 0A3764 800A3BB4 7A617264 */  .float  2.92646727670351e+35
-/* 0A3768 800A3BB8 20506F6B */  .float  1.7655150416345463e-19
-/* 0A376C 800A3BBC A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3770 800A3BC0 6E5E5E0A */  .float  1.7204839607761802e+28
-/* 0A3774 800A3BC4 55736573 */  .float  16726065414144.0
-/* 0A3778 800A3BC8 20746865 */  .float  2.0702145165927553e-19
-/* 0A377C 800A3BCC 20666C61 */  .float  1.9517617358872789e-19
-/* 0A3780 800A3BD0 6D652061 */  .float  4.431950684054033e+27
-/* 0A3784 800A3BD4 74207468 */  .float  5.085012796682724e+31
-/* 0A3788 800A3BD8 65207469 */  .float  4.735787660119172e+22
-/* 0A378C 800A3BDC 70206F66 */  .float  1.9860909607509475e+29
-/* 0A3790 800A3BE0 0A697473 */  .float  1.1240443589863376e-32
-/* 0A3794 800A3BE4 20746169 */  .float  2.0699834230091233e-19
-/* 0A3798 800A3BE8 6C20746F */  .float  7.759118929557829e+26
-/* 0A379C 800A3BEC 2073686F */  .float  2.0617454795899194e-19
-/* 0A37A0 800A3BF0 77206974 */  .float  3.2535403939094043e+33
-/* 0A37A4 800A3BF4 73207669 */  .float  1.2713152170652272e+31
-/* 0A37A8 800A3BF8 74616C69 */  .float  7.143955153592496e+31
-/* 0A37AC 800A3BFC 74792E0A */  .float  7.896824346304719e+31
-/* 0A37B0 800A3C00 5E365049 */  .float  3.284270094347141e+18
-/* 0A37B4 800A3C04 4B414348 */  .float  12665672.0
-/* 0A37B8 800A3C08 555E5E27 */  .float  15280997662720.0
-/* 0A37BC 800A3C0C 73206672 */  .float  1.2708211290827507e+31
-/* 0A37C0 800A3C10 69656E64 */  .float  1.733533235495457e+25
-/* 0A37C4 800A3C14 2E000000 */  .float  2.9103830456733704e-11
-/* 0A37C8 800A3C18 4F444449 */  .float  3292809472.0
-/* 0A37CC 800A3C1C 53480000 */  .float  858993459200.0
-/* 0A37D0 800A3C20 4D617920 */  .float  236425728.0
-/* 0A37D4 800A3C24 67726F77 */  .float  1.1448688523003264e+24
-/* 0A37D8 800A3C28 20776865 */  .float  2.0956255050103843e-19
-/* 0A37DC 800A3C2C 6E0A7370 */  .float  1.0712121682411846e+28
-/* 0A37E0 800A3C30 72696E6B */  .float  4.6235836429916593e+30
-/* 0A37E4 800A3C34 6C656420 */  .float  1.1092673585433896e+27
-/* 0A37E8 800A3C38 77697468 */  .float  4.7350240909435153e+33
-/* 0A37EC 800A3C3C 20776174 */  .float  2.09539583314343e-19
-/* 0A37F0 800A3C40 65722E00 */  .float  7.14788274426153e+22
-/* 0A37F4 800A3C44 4F444449 */  .float  3292809472.0
-/* 0A37F8 800A3C48 53480000 */  .float  858993459200.0
-/* 0A37FC 800A3C4C 5E645765 */  .float  4.1134327035739505e+18
-/* 0A3800 800A3C50 65642050 */  .float  6.733097615701005e+22
-/* 0A3804 800A3C54 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3808 800A3C58 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A380C 800A3C5C 5E0A4C69 */  .float  2.4913638810462454e+18
-/* 0A3810 800A3C60 6B657320 */  .float  2.7738767513309045e+26
-/* 0A3814 800A3C64 73756E6E */  .float  1.9445076148915268e+31
-/* 0A3818 800A3C68 7920706C */  .float  5.206548024267081e+34
-/* 0A381C 800A3C6C 61636573 */  .float  2.621700682095138e+20
-/* 0A3820 800A3C70 2E000000 */  .float  2.9103830456733704e-11
-/* 0A3824 800A3C74 474C4F4F */  .float  52303.30859375
-/* 0A3828 800A3C78 4D000000 */  .float  134217728.0
-/* 0A382C 800A3C7C 4D617920 */  .float  236425728.0
-/* 0A3830 800A3C80 67726F77 */  .float  1.1448688523003264e+24
-/* 0A3834 800A3C84 20776865 */  .float  2.0956255050103843e-19
-/* 0A3838 800A3C88 6E0A7370 */  .float  1.0712121682411846e+28
-/* 0A383C 800A3C8C 72696E6B */  .float  4.6235836429916593e+30
-/* 0A3840 800A3C90 6C656420 */  .float  1.1092673585433896e+27
-/* 0A3844 800A3C94 77697468 */  .float  4.7350240909435153e+33
-/* 0A3848 800A3C98 20776174 */  .float  2.09539583314343e-19
-/* 0A384C 800A3C9C 65722E00 */  .float  7.14788274426153e+22
-/* 0A3850 800A3CA0 474C4F4F */  .float  52303.30859375
-/* 0A3854 800A3CA4 4D000000 */  .float  134217728.0
-/* 0A3858 800A3CA8 5E645765 */  .float  4.1134327035739505e+18
-/* 0A385C 800A3CAC 65642050 */  .float  6.733097615701005e+22
-/* 0A3860 800A3CB0 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3864 800A3CB4 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A3868 800A3CB8 5E0A416E */  .float  2.490591199249826e+18
-/* 0A386C 800A3CBC 2065766F */  .float  1.943624088117347e-19
-/* 0A3870 800A3CC0 6C757469 */  .float  1.186946228902899e+27
-/* 0A3874 800A3CC4 6F6E206F */  .float  7.369664214638739e+28
-/* 0A3878 800A3CC8 66205E34 */  .float  1.8932909454924048e+23
-/* 0A387C 800A3CCC 4F444449 */  .float  3292809472.0
-/* 0A3880 800A3CD0 53485E5E */  .float  860576677888.0
-/* 0A3884 800A3CD4 2E0A5374 */  .float  3.145168847584756e-11
-/* 0A3888 800A3CD8 756E7320 */  .float  3.022709142424095e+32
-/* 0A388C 800A3CDC 6F70706F */  .float  7.441232623159925e+28
-/* 0A3890 800A3CE0 6E656E74 */  .float  1.775139922093941e+28
-/* 0A3894 800A3CE4 73207769 */  .float  1.2713461655662094e+31
-/* 0A3898 800A3CE8 74680A69 */  .float  7.35366219624744e+31
-/* 0A389C 800A3CEC 74732074 */  .float  7.704994898670237e+31
-/* 0A38A0 800A3CF0 65727269 */  .float  7.155769898288944e+22
-/* 0A38A4 800A3CF4 626C6520 */  .float  1.0901796063981349e+21
-/* 0A38A8 800A3CF8 736D656C */  .float  1.8808463065861122e+31
-/* 0A38AC 800A3CFC 6C2E0000 */  .float  8.414123704517819e+26
-/* 0A38B0 800A3D00 56494C45 */  .float  55332353081344.0
-/* 0A38B4 800A3D04 504C554D */  .float  13712569344.0
-/* 0A38B8 800A3D08 45000000 */  .float  2048.0
-/* 0A38BC 800A3D0C 56494C45 */  .float  55332353081344.0
-/* 0A38C0 800A3D10 504C554D */  .float  13712569344.0
-/* 0A38C4 800A3D14 45000000 */  .float  2048.0
-/* 0A38C8 800A3D18 5E64466C */  .float  4.112238359068279e+18
-/* 0A38CC 800A3D1C 6F776572 */  .float  7.656543728343236e+28
-/* 0A38D0 800A3D20 20506F6B */  .float  1.7655150416345463e-19
-/* 0A38D4 800A3D24 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A38D8 800A3D28 6E5E5E0A */  .float  1.7204839607761802e+28
-/* 0A38DC 800A3D2C 416E2065 */  .float  14.882908821105957
-/* 0A38E0 800A3D30 766F6C75 */  .float  1.2140221866426097e+33
-/* 0A38E4 800A3D34 74696F6E */  .float  7.397859073501567e+31
-/* 0A38E8 800A3D38 206F6620 */  .float  2.027787776740057e-19
-/* 0A38EC 800A3D3C 5E34474C */  .float  3.247608803264299e+18
-/* 0A38F0 800A3D40 4F4F4D5E */  .float  3477954048.0
-/* 0A38F4 800A3D44 5E2E0A49 */  .float  3.135229094178849e+18
-/* 0A38F8 800A3D48 73207361 */  .float  1.2712214044216251e+31
-/* 0A38FC 800A3D4C 69642074 */  .float  1.723677140136874e+25
-/* 0A3900 800A3D50 6F206861 */  .float  4.964378792620397e+28
-/* 0A3904 800A3D54 76652074 */  .float  1.161810750174457e+33
-/* 0A3908 800A3D58 68652077 */  .float  4.328083180964792e+24
-/* 0A390C 800A3D5C 6F726C64 */  .float  7.502640860193217e+28
-/* 0A3910 800A3D60 27730A6C */  .float  3.3728674082747316e-15
-/* 0A3914 800A3D64 61726765 */  .float  2.794726516872666e+20
-/* 0A3918 800A3D68 73742070 */  .float  1.9341710573486578e+31
-/* 0A391C 800A3D6C 6574616C */  .float  7.212840863846871e+22
-/* 0A3920 800A3D70 732E0000 */  .float  1.3785700277481995e+31
-/* 0A3924 800A3D74 43415445 */  .float  193.3291778564453
-/* 0A3928 800A3D78 52504945 */  .float  223645614080.0
-/* 0A392C 800A3D7C 00000000 */  .float  0.0
-/* 0A3930 800A3D80 43415445 */  .float  193.3291778564453
-/* 0A3934 800A3D84 52504945 */  .float  223645614080.0
-/* 0A3938 800A3D88 00000000 */  .float  0.0
-/* 0A393C 800A3D8C 5E64576F */  .float  4.11343545235302e+18
-/* 0A3940 800A3D90 726D2050 */  .float  4.696768687565125e+30
-/* 0A3944 800A3D94 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3948 800A3D98 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A394C 800A3D9C 5E0A4973 */  .float  2.491155523592782e+18
-/* 0A3950 800A3DA0 20736169 */  .float  2.0615130935365803e-19
-/* 0A3954 800A3DA4 6420746F */  .float  1.1839475905697371e+22
-/* 0A3958 800A3DA8 20626563 */  .float  1.9176490659195334e-19
-/* 0A395C 800A3DAC 6F6D6520 */  .float  7.347019995116731e+28
-/* 0A3960 800A3DB0 61207075 */  .float  1.849739021811282e+20
-/* 0A3964 800A3DB4 70612077 */  .float  2.7869349919056708e+29
-/* 0A3968 800A3DB8 68656E0A */  .float  4.333807148004789e+24
-/* 0A396C 800A3DBC 69742073 */  .float  1.8445696068061864e+25
-/* 0A3970 800A3DC0 68656473 */  .float  4.3330995424313363e+24
-/* 0A3974 800A3DC4 20697473 */  .float  1.9774397485463977e-19
-/* 0A3978 800A3DC8 20736B69 */  .float  2.0618439657816015e-19
-/* 0A397C 800A3DCC 6E20616E */  .float  1.2408846709057736e+28
-/* 0A3980 800A3DD0 64206576 */  .float  1.1835160331354443e+22
-/* 0A3984 800A3DD4 6F6C7665 */  .float  7.318159252356673e+28
-/* 0A3988 800A3DD8 732E0000 */  .float  1.3785700277481995e+31
-/* 0A398C 800A3DDC 4D455441 */  .float  206914576.0
-/* 0A3990 800A3DE0 504F4400 */  .float  13909360640.0
-/* 0A3994 800A3DE4 4D455441 */  .float  206914576.0
-/* 0A3998 800A3DE8 504F4400 */  .float  13909360640.0
-/* 0A399C 800A3DEC 5E64436F */  .float  4.1120280774694666e+18
-/* 0A39A0 800A3DF0 636F6F6E */  .float  4.416801188802231e+21
-/* 0A39A4 800A3DF4 20506F6B */  .float  1.7655150416345463e-19
-/* 0A39A8 800A3DF8 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A39AC 800A3DFC 6E5E5E0A */  .float  1.7204839607761802e+28
-/* 0A39B0 800A3E00 49732065 */  .float  995846.3125
-/* 0A39B4 800A3E04 6E636173 */  .float  1.759272652652337e+28
-/* 0A39B8 800A3E08 65642069 */  .float  6.733108874700074e+22
-/* 0A39BC 800A3E0C 6E206120 */  .float  1.240875462291132e+28
-/* 0A39C0 800A3E10 68617264 */  .float  4.2585703729179074e+24
-/* 0A39C4 800A3E14 20736865 */  .float  2.0617441871202123e-19
-/* 0A39C8 800A3E18 6C6C0A69 */  .float  1.1414226160080357e+27
-/* 0A39CC 800A3E1C 6E207072 */  .float  1.2413384903247774e+28
-/* 0A39D0 800A3E20 65706172 */  .float  7.094784403934906e+22
-/* 0A39D4 800A3E24 6174696F */  .float  2.817876778175955e+20
-/* 0A39D8 800A3E28 6E20666F */  .float  1.2410359046923875e+28
-/* 0A39DC 800A3E2C 72206576 */  .float  3.176976660380241e+30
-/* 0A39E0 800A3E30 6F6C7574 */  .float  7.318045443324436e+28
-/* 0A39E4 800A3E34 696F6E2E */  .float  1.8090848734452464e+25
-/* 0A39E8 800A3E38 00000000 */  .float  0.0
-/* 0A39EC 800A3E3C 4449474C */  .float  805.114013671875
-/* 0A39F0 800A3E40 45545400 */  .float  3397.25
-/* 0A39F4 800A3E44 4449474C */  .float  805.114013671875
-/* 0A39F8 800A3E48 45545400 */  .float  3397.25
-/* 0A39FC 800A3E4C 5E644D6F */  .float  4.1127317649112433e+18
-/* 0A3A00 800A3E50 6C652050 */  .float  1.1079864166349112e+27
-/* 0A3A04 800A3E54 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3A08 800A3E58 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A3A0C 800A3E5C 5E0A5573 */  .float  2.491999948522914e+18
-/* 0A3A10 800A3E60 75616C6C */  .float  2.857582641721392e+32
-/* 0A3A14 800A3E64 7920666F */  .float  5.2052818591949e+34
-/* 0A3A18 800A3E68 756E6420 */  .float  3.021966378400524e+32
-/* 0A3A1C 800A3E6C 756E6465 */  .float  3.0219797249415725e+32
-/* 0A3A20 800A3E70 7267726F */  .float  4.584280255670168e+30
-/* 0A3A24 800A3E74 756E642E */  .float  3.02196908639436e+32
-/* 0A3A28 800A3E78 0A4B6E6F */  .float  9.794864718260283e-33
-/* 0A3A2C 800A3E7C 776E2074 */  .float  4.8297846871306933e+33
-/* 0A3A30 800A3E80 6F207375 */  .float  4.965718055754939e+28
-/* 0A3A34 800A3E84 72666163 */  .float  4.5631542769724025e+30
-/* 0A3A38 800A3E88 65207768 */  .float  4.736133086210591e+22
-/* 0A3A3C 800A3E8C 656E0A70 */  .float  7.025723505089031e+22
-/* 0A3A40 800A3E90 6C617969 */  .float  1.0903266106633861e+27
-/* 0A3A44 800A3E94 6E672074 */  .float  1.7882567672367598e+28
-/* 0A3A48 800A3E98 7269636B */  .float  4.6227325592146506e+30
-/* 0A3A4C 800A3E9C 732E0000 */  .float  1.3785700277481995e+31
-/* 0A3A50 800A3EA0 4C415052 */  .float  50676040.0
-/* 0A3A54 800A3EA4 41530000 */  .float  13.1875
-/* 0A3A58 800A3EA8 4C415052 */  .float  50676040.0
-/* 0A3A5C 800A3EAC 41530000 */  .float  13.1875
-/* 0A3A60 800A3EB0 5E645472 */  .float  4.113225170754208e+18
-/* 0A3A64 800A3EB4 616E7370 */  .float  2.7491520237841416e+20
-/* 0A3A68 800A3EB8 6F727420 */  .float  7.5035758887568255e+28
-/* 0A3A6C 800A3EBC 506F6BA1 */  .float  16067232768.0
-/* 0A3A70 800A3EC0 AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A3A74 800A3EC4 5E5E0A41 */  .float  3.9999180236107284e+18
-/* 0A3A78 800A3EC8 20766572 */  .float  2.0870575940749542e-19
-/* 0A3A7C 800A3ECC 7920696E */  .float  5.205661659198953e+34
-/* 0A3A80 800A3ED0 74656C6C */  .float  7.270721664326303e+31
-/* 0A3A84 800A3ED4 6967656E */  .float  1.748380328047483e+25
-/* 0A3A88 800A3ED8 7420506F */  .float  5.0805595975335915e+31
-/* 0A3A8C 800A3EDC 6BA1AD6D */  .float  3.9091207410919156e+26
-/* 0A3A90 800A3EE0 6F6E2E0A */  .float  7.371309014884723e+28
-/* 0A3A94 800A3EE4 456E6A6F */  .float  3814.652099609375
-/* 0A3A98 800A3EE8 79732063 */  .float  7.8899063582460555e+34
-/* 0A3A9C 800A3EEC 61727279 */  .float  2.7952254312688858e+20
-/* 0A3AA0 800A3EF0 696E6720 */  .float  1.801320869448923e+25
-/* 0A3AA4 800A3EF4 70656F70 */  .float  2.840271476804453e+29
-/* 0A3AA8 800A3EF8 6C652061 */  .float  1.1079876710135082e+27
-/* 0A3AAC 800A3EFC 63726F73 */  .float  4.472142828398243e+21
-/* 0A3AB0 800A3F00 730A7468 */  .float  1.0969512416392995e+31
-/* 0A3AB4 800A3F04 65207365 */  .float  4.73567056652886e+22
-/* 0A3AB8 800A3F08 6173206F */  .float  2.803059935401906e+20
-/* 0A3ABC 800A3F0C 6E206974 */  .float  1.241127164424669e+28
-/* 0A3AC0 800A3F10 73206261 */  .float  1.2706952799049288e+31
-/* 0A3AC4 800A3F14 636B2E00 */  .float  4.3382995066474893e+21
-/* 0A3AC8 800A3F18 504F4C49 */  .float  13911532544.0
-/* 0A3ACC 800A3F1C 57414700 */  .float  212510686838784.0
-/* 0A3AD0 800A3F20 504F4C49 */  .float  13911532544.0
-/* 0A3AD4 800A3F24 57414700 */  .float  212510686838784.0
-/* 0A3AD8 800A3F28 5E645461 */  .float  4.1132204978297897e+18
-/* 0A3ADC 800A3F2C 64706F6C */  .float  1.7740989479703949e+22
-/* 0A3AE0 800A3F30 6520506F */  .float  4.731639844862364e+22
-/* 0A3AE4 800A3F34 6BA1AD6D */  .float  3.9091207410919156e+26
-/* 0A3AE8 800A3F38 6F6E5E5E */  .float  7.377151526697329e+28
-/* 0A3AEC 800A3F3C 0A43616E */  .float  9.407232966449156e-33
-/* 0A3AF0 800A3F40 27742077 */  .float  3.387940147812885e-15
-/* 0A3AF4 800A3F44 616C6B20 */  .float  2.7257192319729795e+20
-/* 0A3AF8 800A3F48 77656C6C */  .float  4.653261865168834e+33
-/* 0A3AFC 800A3F4C 2073696E */  .float  2.0617784375674508e-19
-/* 0A3B00 800A3F50 63652069 */  .float  4.2266397907612556e+21
-/* 0A3B04 800A3F54 74206A75 */  .float  5.083781143057701e+31
-/* 0A3B08 800A3F58 73740A67 */  .float  1.9334891022938132e+31
-/* 0A3B0C 800A3F5C 6F742069 */  .float  7.555352387111657e+28
-/* 0A3B10 800A3F60 7473206C */  .float  7.704991030107614e+31
-/* 0A3B14 800A3F64 6567732E */  .float  6.831195923504315e+22
-/* 0A3B18 800A3F68 0A4E6F74 */  .float  9.939501216605303e-33
-/* 0A3B1C 800A3F6C 653A2052 */  .float  5.493477314667649e+22
-/* 0A3B20 800A3F70 756E7320 */  .float  3.022709142424095e+32
-/* 0A3B24 800A3F74 61776179 */  .float  2.852105894562575e+20
-/* 0A3B28 800A3F78 20776865 */  .float  2.0956255050103843e-19
-/* 0A3B2C 800A3F7C 6E207374 */  .float  1.2414293958795727e+28
-/* 0A3B30 800A3F80 6172746C */  .float  2.7953132162772474e+20
-/* 0A3B34 800A3F84 65642E00 */  .float  6.734675677010436e+22
-/* 0A3B38 800A3F88 504F4C49 */  .float  13911532544.0
-/* 0A3B3C 800A3F8C 57484952 */  .float  220217233899520.0
-/* 0A3B40 800A3F90 4C000000 */  .float  33554432.0
-/* 0A3B44 800A3F94 504F4C49 */  .float  13911532544.0
-/* 0A3B48 800A3F98 57484952 */  .float  220217233899520.0
-/* 0A3B4C 800A3F9C 4C000000 */  .float  33554432.0
-/* 0A3B50 800A3FA0 5E645461 */  .float  4.1132204978297897e+18
-/* 0A3B54 800A3FA4 64706F6C */  .float  1.7740989479703949e+22
-/* 0A3B58 800A3FA8 6520506F */  .float  4.731639844862364e+22
-/* 0A3B5C 800A3FAC 6BA1AD6D */  .float  3.9091207410919156e+26
-/* 0A3B60 800A3FB0 6F6E5E5E */  .float  7.377151526697329e+28
-/* 0A3B64 800A3FB4 0A4C6976 */  .float  9.84207771417709e-33
-/* 0A3B68 800A3FB8 65732062 */  .float  7.175827579949364e+22
-/* 0A3B6C 800A3FBC 6F746820 */  .float  7.564022179737557e+28
-/* 0A3B70 800A3FC0 6F6E206C */  .float  7.3696627979287944e+28
-/* 0A3B74 800A3FC4 616E6420 */  .float  2.7484624100912005e+20
-/* 0A3B78 800A3FC8 616E6420 */  .float  2.7484624100912005e+20
-/* 0A3B7C 800A3FCC 696E0A74 */  .float  1.7985856784713937e+25
-/* 0A3B80 800A3FD0 68652077 */  .float  4.328083180964792e+24
-/* 0A3B84 800A3FD4 61746572 */  .float  2.8176971619564415e+20
-/* 0A3B88 800A3FD8 2E0A4576 */  .float  3.1439260916865663e-11
-/* 0A3B8C 800A3FDC 6F6C7574 */  .float  7.318045443324436e+28
-/* 0A3B90 800A3FE0 696F6E20 */  .float  1.80908325935514e+25
-/* 0A3B94 800A3FE4 6F66205E */  .float  7.122068178758642e+28
-/* 0A3B98 800A3FE8 34504F4C */  .float  1.9400357587073813e-07
-/* 0A3B9C 800A3FEC 49574147 */  .float  881684.4375
-/* 0A3BA0 800A3FF0 5E5E2E00 */  .float  4.002433431337173e+18
-/* 0A3BA4 800A3FF4 42555454 */  .float  53.33235168457031
-/* 0A3BA8 800A3FF8 45524652 */  .float  3364.39501953125
-/* 0A3BAC 800A3FFC 45450000 */  .float  3152.0
-/* 0A3BB0 800A4000 42555454 */  .float  53.33235168457031
-/* 0A3BB4 800A4004 45524652 */  .float  3364.39501953125
-/* 0A3BB8 800A4008 45450000 */  .float  3152.0
-/* 0A3BBC 800A400C 5E644275 */  .float  4.1119593579927306e+18
-/* 0A3BC0 800A4010 74746572 */  .float  7.745226982806356e+31
-/* 0A3BC4 800A4014 666C7920 */  .float  2.791782129582911e+23
-/* 0A3BC8 800A4018 506F6BA1 */  .float  16067232768.0
-/* 0A3BCC 800A401C AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A3BD0 800A4020 5E5E0A46 */  .float  3.999919398000263e+18
-/* 0A3BD4 800A4024 6C757474 */  .float  1.1869470405596383e+27
-/* 0A3BD8 800A4028 65727320 */  .float  7.155852314162125e+22
-/* 0A3BDC 800A402C 61626F75 */  .float  2.6106221788555274e+20
-/* 0A3BE0 800A4030 74206173 */  .float  5.082666029881688e+31
-/* 0A3BE4 800A4034 20697420 */  .float  1.9774290210478286e-19
-/* 0A3BE8 800A4038 666C6965 */  .float  2.791056689754934e+23
-/* 0A3BEC 800A403C 730A6F76 */  .float  1.0967981916305362e+31
-/* 0A3BF0 800A4040 6572206D */  .float  7.146317743391019e+22
-/* 0A3BF4 800A4044 616E7920 */  .float  2.7494081660129483e+20
-/* 0A3BF8 800A4048 61726561 */  .float  2.794635741192677e+20
-/* 0A3BFC 800A404C 732E0A49 */  .float  1.378888337916504e+31
-/* 0A3C00 800A4050 7320616E */  .float  1.2706659030075122e+31
-/* 0A3C04 800A4054 20657863 */  .float  1.9436887116027027e-19
-/* 0A3C08 800A4058 656C6C65 */  .float  6.977987600838717e+22
-/* 0A3C0C 800A405C 6E742063 */  .float  1.8888373884229417e+28
-/* 0A3C10 800A4060 61726574 */  .float  2.7946390837080254e+20
-/* 0A3C14 800A4064 616B6572 */  .float  2.7139342265418252e+20
-/* 0A3C18 800A4068 2E000000 */  .float  2.9103830456733704e-11
-/* 0A3C1C 800A406C 41425241 */  .float  12.145081520080566
-/* 0A3C20 800A4070 00000000 */  .float  0.0
-/* 0A3C24 800A4074 41425241 */  .float  12.145081520080566
-/* 0A3C28 800A4078 00000000 */  .float  0.0
-/* 0A3C2C 800A407C 5E645073 */  .float  4.112943970655404e+18
-/* 0A3C30 800A4080 6920506F */  .float  1.2112998002847651e+25
-/* 0A3C34 800A4084 6BA1AD6D */  .float  3.9091207410919156e+26
-/* 0A3C38 800A4088 6F6E5E5E */  .float  7.377151526697329e+28
-/* 0A3C3C 800A408C 00000000 */  .float  0.0
-/* 0A3C40 800A4090 54726561 */  .float  4164331765760.0
-/* 0A3C44 800A4094 73757265 */  .float  1.9446303208622177e+31
-/* 0A3C48 800A4098 20636865 */  .float  1.9262189155595242e-19
-/* 0A3C4C 800A409C 73740000 */  .float  1.9331671653480498e+31
-/* 0A3C50 800A40A0 54726561 */  .float  4164331765760.0
-/* 0A3C54 800A40A4 73757265 */  .float  1.9446303208622177e+31
-/* 0A3C58 800A40A8 20636865 */  .float  1.9262189155595242e-19
-/* 0A3C5C 800A40AC 73740000 */  .float  1.9331671653480498e+31
-/* 0A3C60 800A40B0 41206D79 */  .float  10.026726722717285
-/* 0A3C64 800A40B4 73746572 */  .float  1.936306745701589e+31
-/* 0A3C68 800A40B8 696F7573 */  .float  1.8092994321372537e+25
-/* 0A3C6C 800A40BC 20776F6F */  .float  2.0958584080516062e-19
-/* 0A3C70 800A40C0 64656E20 */  .float  1.6928958941691657e+22
-/* 0A3C74 800A40C4 63686573 */  .float  4.2869548117207684e+21
-/* 0A3C78 800A40C8 740A6275 */  .float  4.385582960900746e+31
-/* 0A3C7C 800A40CC 72696564 */  .float  4.622885186099377e+30
-/* 0A3C80 800A40D0 20627920 */  .float  1.9183021508625382e-19
-/* 0A3C84 800A40D4 70697261 */  .float  2.8899313160543323e+29
-/* 0A3C88 800A40D8 7465732E */  .float  7.271558240993476e+31
-/* 0A3C8C 800A40DC 00000000 */  .float  0.0
-/* 0A3C90 800A40E0 4841554E */  .float  197973.21875
-/* 0A3C94 800A40E4 54455200 */  .float  3389937156096.0
-/* 0A3C98 800A40E8 4841554E */  .float  197973.21875
-/* 0A3C9C 800A40EC 54455200 */  .float  3389937156096.0
-/* 0A3CA0 800A40F0 5E644761 */  .float  4.11230570415548e+18
-/* 0A3CA4 800A40F4 7320506F */  .float  1.2701398993833979e+31
-/* 0A3CA8 800A40F8 6BA1AD6D */  .float  3.9091207410919156e+26
-/* 0A3CAC 800A40FC 6F6E5E5E */  .float  7.377151526697329e+28
-/* 0A3CB0 800A4100 0A456E6A */  .float  9.505971553182351e-33
-/* 0A3CB4 800A4104 6F797320 */  .float  7.720094503049806e+28
-/* 0A3CB8 800A4108 71756965 */  .float  1.2152198652208616e+30
-/* 0A3CBC 800A410C 746C7920 */  .float  7.494133090072398e+31
-/* 0A3CC0 800A4110 666F726D */  .float  2.8268909312699956e+23
-/* 0A3CC4 800A4114 696E6720 */  .float  1.801320869448923e+25
-/* 0A3CC8 800A4118 62656869 */  .float  1.0579569843829966e+21
-/* 0A3CCC 800A411C 6E640A70 */  .float  1.7643800100627226e+28
-/* 0A3CD0 800A4120 656F706C */  .float  7.066996293514105e+22
-/* 0A3CD4 800A4124 6520616E */  .float  4.733599361060233e+22
-/* 0A3CD8 800A4128 64207468 */  .float  1.1839468024398023e+22
-/* 0A3CDC 800A412C 656E2073 */  .float  7.028261283479054e+22
-/* 0A3CE0 800A4130 74617274 */  .float  7.144703236889674e+31
-/* 0A3CE4 800A4134 6C696E67 */  .float  1.1288043051918554e+27
-/* 0A3CE8 800A4138 2E0A0000 */  .float  3.1377567211166024e-11
-/* 0A3CEC 800A413C 534C4F57 */  .float  877504430080.0
-/* 0A3CF0 800A4140 504F4B45 */  .float  13911266304.0
-/* 0A3CF4 800A4144 00000000 */  .float  0.0
-/* 0A3CF8 800A4148 534C4F57 */  .float  877504430080.0
-/* 0A3CFC 800A414C 504F4B45 */  .float  13911266304.0
-/* 0A3D00 800A4150 00000000 */  .float  0.0
-/* 0A3D04 800A4154 5E64446F */  .float  4.1120984462136443e+18
-/* 0A3D08 800A4158 70657920 */  .float  2.8407399355595537e+29
-/* 0A3D0C 800A415C 506F6BA1 */  .float  16067232768.0
-/* 0A3D10 800A4160 AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A3D14 800A4164 5E5E0A41 */  .float  3.9999180236107284e+18
-/* 0A3D18 800A4168 6C776179 */  .float  1.1962599161987387e+27
-/* 0A3D1C 800A416C 73207374 */  .float  1.2712237013806824e+31
-/* 0A3D20 800A4170 6172696E */  .float  2.7948181721619576e+20
-/* 0A3D24 800A4174 6720626C */  .float  7.573942003985229e+23
-/* 0A3D28 800A4178 616E6B6C */  .float  2.7487910321265102e+20
-/* 0A3D2C 800A417C 792E0A54 */  .float  5.647932079042173e+34
-/* 0A3D30 800A4180 616C656E */  .float  2.725462737900452e+20
-/* 0A3D34 800A4184 74656420 */  .float  7.269694560949958e+31
-/* 0A3D38 800A4188 61742075 */  .float  2.814590205979137e+20
-/* 0A3D3C 800A418C 73696E67 */  .float  1.849432973626336e+31
-/* 0A3D40 800A4190 20697473 */  .float  1.9774397485463977e-19
-/* 0A3D44 800A4194 20746169 */  .float  2.0699834230091233e-19
-/* 0A3D48 800A4198 6C0A746F */  .float  6.695264208296955e+26
-/* 0A3D4C 800A419C 20666973 */  .float  1.9516648006592453e-19
-/* 0A3D50 800A41A0 68207769 */  .float  3.0311254634051546e+24
-/* 0A3D54 800A41A4 74682E00 */  .float  7.358068005504443e+31
-/* 0A3D58 800A41A8 4D41474E */  .float  202667232.0
-/* 0A3D5C 800A41AC 454D4954 */  .float  3284.5830078125
-/* 0A3D60 800A41B0 45000000 */  .float  2048.0
-/* 0A3D64 800A41B4 4D41474E */  .float  202667232.0
-/* 0A3D68 800A41B8 454D4954 */  .float  3284.5830078125
-/* 0A3D6C 800A41BC 45000000 */  .float  2048.0
-/* 0A3D70 800A41C0 5E644D61 */  .float  4.112727916620546e+18
-/* 0A3D74 800A41C4 676E6574 */  .float  1.1257947027553286e+24
-/* 0A3D78 800A41C8 20506F6B */  .float  1.7655150416345463e-19
-/* 0A3D7C 800A41CC A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3D80 800A41D0 6E5E5E0A */  .float  1.7204839607761802e+28
-/* 0A3D84 800A41D4 42656C69 */  .float  57.35586929321289
-/* 0A3D88 800A41D8 65766564 */  .float  7.272328010604882e+22
-/* 0A3D8C 800A41DC 20746F20 */  .float  2.070437209123291e-19
-/* 0A3D90 800A41E0 75736520 */  .float  3.0853984260135068e+32
-/* 0A3D94 800A41E4 69747320 */  .float  1.8470097651706868e+25
-/* 0A3D98 800A41E8 6D61676E */  .float  4.359947876846004e+27
-/* 0A3D9C 800A41EC 65746963 */  .float  7.213759147810892e+22
-/* 0A3DA0 800A41F0 0A706F77 */  .float  1.1576543873386361e-32
-/* 0A3DA4 800A41F4 65727320 */  .float  7.155852314162125e+22
-/* 0A3DA8 800A41F8 746F2066 */  .float  7.578223068662824e+31
-/* 0A3DAC 800A41FC 6C6F6174 */  .float  1.1575739210361891e+27
-/* 0A3DB0 800A4200 20696E20 */  .float  1.9772304977008159e-19
-/* 0A3DB4 800A4204 6D696461 */  .float  4.5144598712427314e+27
-/* 0A3DB8 800A4208 69722E0A */  .float  1.8298591354524563e+25
-/* 0A3DBC 800A420C 5E365049 */  .float  3.284270094347141e+18
-/* 0A3DC0 800A4210 4B414348 */  .float  12665672.0
-/* 0A3DC4 800A4214 555E5E27 */  .float  15280997662720.0
-/* 0A3DC8 800A4218 73206672 */  .float  1.2708211290827507e+31
-/* 0A3DCC 800A421C 69656E64 */  .float  1.733533235495457e+25
-/* 0A3DD0 800A4220 2E000000 */  .float  2.9103830456733704e-11
-/* 0A3DD4 800A4224 46697368 */  .float  14940.8515625
-/* 0A3DD8 800A4228 696E6720 */  .float  1.801320869448923e+25
-/* 0A3DDC 800A422C 726F6400 */  .float  4.741619835472828e+30
-/* 0A3DE0 800A4230 46697368 */  .float  14940.8515625
-/* 0A3DE4 800A4234 696E6720 */  .float  1.801320869448923e+25
-/* 0A3DE8 800A4238 726F6400 */  .float  4.741619835472828e+30
-/* 0A3DEC 800A423C 5E365049 */  .float  3.284270094347141e+18
-/* 0A3DF0 800A4240 4B414348 */  .float  12665672.0
-/* 0A3DF4 800A4244 555E5E27 */  .float  15280997662720.0
-/* 0A3DF8 800A4248 73206669 */  .float  1.270820041049513e+31
-/* 0A3DFC 800A424C 7368696E */  .float  1.8413562611180725e+31
-/* 0A3E00 800A4250 6720726F */  .float  7.576895644764843e+23
-/* 0A3E04 800A4254 642E0000 */  .float  1.2838933875301848e+22
-/* 0A3E08 800A4258 54656C65 */  .float  3941464276992.0
-/* 0A3E0C 800A425C 73636F70 */  .float  1.801928112651997e+31
-/* 0A3E10 800A4260 65000000 */  .float  3.777893186295716e+22
-/* 0A3E14 800A4264 54656C65 */  .float  3941464276992.0
-/* 0A3E18 800A4268 73636F70 */  .float  1.801928112651997e+31
-/* 0A3E1C 800A426C 65000000 */  .float  3.777893186295716e+22
-/* 0A3E20 800A4270 416E2069 */  .float  14.882912635803223
-/* 0A3E24 800A4274 74656D20 */  .float  7.270808706985315e+31
-/* 0A3E28 800A4278 75736564 */  .float  3.0854115791264242e+32
-/* 0A3E2C 800A427C 20746F20 */  .float  2.070437209123291e-19
-/* 0A3E30 800A4280 76696577 */  .float  1.1834600776952372e+33
-/* 0A3E34 800A4284 20746865 */  .float  2.0702145165927553e-19
-/* 0A3E38 800A4288 0A6E6967 */  .float  1.1479107146646702e-32
-/* 0A3E3C 800A428C 68742073 */  .float  4.611424017015466e+24
-/* 0A3E40 800A4290 6B792E00 */  .float  3.0123975794225467e+26
-/* 0A3E44 800A4294 544F4745 */  .float  3561015738368.0
-/* 0A3E48 800A4298 50490000 */  .float  13488881664.0
-/* 0A3E4C 800A429C 544F4745 */  .float  3561015738368.0
-/* 0A3E50 800A42A0 50490000 */  .float  13488881664.0
-/* 0A3E54 800A42A4 416E2075 */  .float  14.88292407989502
-/* 0A3E58 800A42A8 6E6B6E6F */  .float  1.8215620832713325e+28
-/* 0A3E5C 800A42AC 776E2050 */  .float  4.82977354567034e+33
-/* 0A3E60 800A42B0 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3E64 800A42B4 6D6F6E20 */  .float  4.6312531439491583e+27
-/* 0A3E68 800A42B8 2D206E6F */  .float  9.119468201423953e-12
-/* 0A3E6C 800A42BC 740A6C69 */  .float  4.386815098096097e+31
-/* 0A3E70 800A42C0 73746564 */  .float  1.9363050532054416e+31
-/* 0A3E74 800A42C4 20696E20 */  .float  1.9772304977008159e-19
-/* 0A3E78 800A42C8 74686520 */  .float  7.364892149971004e+31
-/* 0A3E7C 800A42CC 506F6BA1 */  .float  16067232768.0
-/* 0A3E80 800A42D0 AD646578 */  .float  -1.2982830088770214e-11
-/* 0A3E84 800A42D4 2E000000 */  .float  2.9103830456733704e-11
-/* 0A3E88 800A42D8 544F4745 */  .float  3561015738368.0
-/* 0A3E8C 800A42DC 50492045 */  .float  13497340928.0
-/* 0A3E90 800A42E0 67670000 */  .float  1.090866657542888e+24
-/* 0A3E94 800A42E4 544F4745 */  .float  3561015738368.0
-/* 0A3E98 800A42E8 50492045 */  .float  13497340928.0
-/* 0A3E9C 800A42EC 67670000 */  .float  1.090866657542888e+24
-/* 0A3EA0 800A42F0 3F3F3F3F */  .float  0.7470588088035583
-/* 0A3EA4 800A42F4 3F3F0000 */  .float  0.74609375
-/* 0A3EA8 800A42F8 5345414B */  .float  847203991552.0
-/* 0A3EAC 800A42FC 494E4700 */  .float  844912.0
-/* 0A3EB0 800A4300 5345414B */  .float  847203991552.0
-/* 0A3EB4 800A4304 494E4700 */  .float  844912.0
-/* 0A3EB8 800A4308 5E645E64 */  .float  4.113925009905287e+18
-/* 0A3EBC 800A430C 476F6C64 */  .float  61292.390625
-/* 0A3EC0 800A4310 66697368 */  .float  2.7561006501672097e+23
-/* 0A3EC4 800A4314 20506F6B */  .float  1.7655150416345463e-19
-/* 0A3EC8 800A4318 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3ECC 800A431C 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A3ED0 800A4320 4B524142 */  .float  13779266.0
-/* 0A3ED4 800A4324 42590000 */  .float  54.25
-/* 0A3ED8 800A4328 4B524142 */  .float  13779266.0
-/* 0A3EDC 800A432C 42590000 */  .float  54.25
-/* 0A3EE0 800A4330 5E645269 */  .float  4.11308195936469e+18
-/* 0A3EE4 800A4334 76657220 */  .float  1.1634284283207932e+33
-/* 0A3EE8 800A4338 43726162 */  .float  242.38040161132812
-/* 0A3EEC 800A433C 20506F6B */  .float  1.7655150416345463e-19
-/* 0A3EF0 800A4340 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3EF4 800A4344 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A3EF8 800A4348 54454E54 */  .float  3389690740736.0
-/* 0A3EFC 800A434C 41435255 */  .float  12.207600593566895
-/* 0A3F00 800A4350 454C0000 */  .float  3264.0
-/* 0A3F04 800A4354 54454E54 */  .float  3389690740736.0
-/* 0A3F08 800A4358 41435255 */  .float  12.207600593566895
-/* 0A3F0C 800A435C 454C0000 */  .float  3264.0
-/* 0A3F10 800A4360 5E644A65 */  .float  4.112517909899641e+18
-/* 0A3F14 800A4364 6C6C7966 */  .float  1.1435191253655009e+27
-/* 0A3F18 800A4368 69736820 */  .float  1.839129316102398e+25
-/* 0A3F1C 800A436C 506F6BA1 */  .float  16067232768.0
-/* 0A3F20 800A4370 AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A3F24 800A4374 5E5E0000 */  .float  3.9991964691050004e+18
-/* 0A3F28 800A4378 53544152 */  .float  911628959744.0
-/* 0A3F2C 800A437C 45595500 */  .float  3477.3125
-/* 0A3F30 800A4380 53544152 */  .float  911628959744.0
-/* 0A3F34 800A4384 59550000 */  .float  3747135627460608.0
-/* 0A3F38 800A4388 5E645374 */  .float  4.113155351765844e+18
-/* 0A3F3C 800A438C 61727368 */  .float  2.795267476593532e+20
-/* 0A3F40 800A4390 61706564 */  .float  2.7715778388661214e+20
-/* 0A3F44 800A4394 20506F6B */  .float  1.7655150416345463e-19
-/* 0A3F48 800A4398 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3F4C 800A439C 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A3F50 800A43A0 4B494E47 */  .float  13192775.0
-/* 0A3F54 800A43A4 4C455200 */  .float  51726336.0
-/* 0A3F58 800A43A8 4B494E47 */  .float  13192775.0
-/* 0A3F5C 800A43AC 4C455200 */  .float  51726336.0
-/* 0A3F60 800A43B0 5E645069 */  .float  4.1129412218763346e+18
-/* 0A3F64 800A43B4 6E636572 */  .float  1.7593934271751364e+28
-/* 0A3F68 800A43B8 20506F6B */  .float  1.7655150416345463e-19
-/* 0A3F6C 800A43BC A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3F70 800A43C0 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A3F74 800A43C4 4D414749 */  .float  202667152.0
-/* 0A3F78 800A43C8 4B415250 */  .float  12669520.0
-/* 0A3F7C 800A43CC 00000000 */  .float  0.0
-/* 0A3F80 800A43D0 4D414749 */  .float  202667152.0
-/* 0A3F84 800A43D4 4B415250 */  .float  12669520.0
-/* 0A3F88 800A43D8 00000000 */  .float  0.0
-/* 0A3F8C 800A43DC 5E644669 */  .float  4.112237534434558e+18
-/* 0A3F90 800A43E0 73682050 */  .float  1.8390933937689179e+31
-/* 0A3F94 800A43E4 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A3F98 800A43E8 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A3F9C 800A43EC 5E000000 */  .float  2.305843009213694e+18
-/* 0A3FA0 800A43F0 54454E54 */  .float  3389690740736.0
-/* 0A3FA4 800A43F4 41434F4F */  .float  12.206862449645996
-/* 0A3FA8 800A43F8 4C000000 */  .float  33554432.0
-/* 0A3FAC 800A43FC 54454E54 */  .float  3389690740736.0
-/* 0A3FB0 800A4400 41434F4F */  .float  12.206862449645996
-/* 0A3FB4 800A4404 4C000000 */  .float  33554432.0
-/* 0A3FB8 800A4408 5E644A65 */  .float  4.112517909899641e+18
-/* 0A3FBC 800A440C 6C6C7966 */  .float  1.1435191253655009e+27
-/* 0A3FC0 800A4410 69736820 */  .float  1.839129316102398e+25
-/* 0A3FC4 800A4414 506F6BA1 */  .float  16067232768.0
-/* 0A3FC8 800A4418 AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A3FCC 800A441C 5E5E0000 */  .float  3.9991964691050004e+18
-/* 0A3FD0 800A4420 44524154 */  .float  841.020751953125
-/* 0A3FD4 800A4424 494E4900 */  .float  844944.0
-/* 0A3FD8 800A4428 44524154 */  .float  841.020751953125
-/* 0A3FDC 800A442C 494E4900 */  .float  844944.0
-/* 0A3FE0 800A4430 5E644472 */  .float  4.112099270847365e+18
-/* 0A3FE4 800A4434 61676F6E */  .float  2.6682670226328466e+20
-/* 0A3FE8 800A4438 20506F6B */  .float  1.7655150416345463e-19
-/* 0A3FEC 800A443C A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A3FF0 800A4440 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A3FF4 800A4444 53454144 */  .float  847203532800.0
-/* 0A3FF8 800A4448 52410000 */  .float  207232172032.0
-/* 0A3FFC 800A444C 53454144 */  .float  847203532800.0
-/* 0A4000 800A4450 52410000 */  .float  207232172032.0
-/* 0A4004 800A4454 5E644472 */  .float  4.112099270847365e+18
-/* 0A4008 800A4458 61676F6E */  .float  2.6682670226328466e+20
-/* 0A400C 800A445C 20506F6B */  .float  1.7655150416345463e-19
-/* 0A4010 800A4460 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A4014 800A4464 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A4018 800A4468 53544152 */  .float  911628959744.0
-/* 0A401C 800A446C 4D494500 */  .float  211046400.0
-/* 0A4020 800A4470 53544152 */  .float  911628959744.0
-/* 0A4024 800A4474 4D494500 */  .float  211046400.0
-/* 0A4028 800A4478 5E644D79 */  .float  4.1127345136903127e+18
-/* 0A402C 800A447C 73746572 */  .float  1.936306745701589e+31
-/* 0A4030 800A4480 696F7573 */  .float  1.8092994321372537e+25
-/* 0A4034 800A4484 20506F6B */  .float  1.7655150416345463e-19
-/* 0A4038 800A4488 A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A403C 800A448C 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A4040 800A4490 484F5253 */  .float  212297.296875
-/* 0A4044 800A4494 45410000 */  .float  3088.0
-/* 0A4048 800A4498 484F5253 */  .float  212297.296875
-/* 0A404C 800A449C 45410000 */  .float  3088.0
-/* 0A4050 800A44A0 5E644472 */  .float  4.112099270847365e+18
-/* 0A4054 800A44A4 61676F6E */  .float  2.6682670226328466e+20
-/* 0A4058 800A44A8 20506F6B */  .float  1.7655150416345463e-19
-/* 0A405C 800A44AC A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A4060 800A44B0 6E5E5E00 */  .float  1.7204827801845595e+28
-/* 0A4064 800A44B4 474F4C44 */  .float  53068.265625
-/* 0A4068 800A44B8 45454E00 */  .float  3156.875
-/* 0A406C 800A44BC 474F4C44 */  .float  53068.265625
-/* 0A4070 800A44C0 45454E00 */  .float  3156.875
-/* 0A4074 800A44C4 5E64476F */  .float  4.1123095524461773e+18
-/* 0A4078 800A44C8 6C646669 */  .float  1.1044748206460636e+27
-/* 0A407C 800A44CC 73682050 */  .float  1.8390933937689179e+31
-/* 0A4080 800A44D0 6F6BA1AD */  .float  7.292443133437558e+28
-/* 0A4084 800A44D4 6D6F6E5E */  .float  4.6312714431192794e+27
-/* 0A4088 800A44D8 5E000000 */  .float  2.305843009213694e+18
-/* 0A408C 800A44DC 50494B41 */  .float  13508609024.0
-/* 0A4090 800A44E0 43485500 */  .float  200.33203125
-/* 0A4094 800A44E4 50494B41 */  .float  13508609024.0
-/* 0A4098 800A44E8 43485500 */  .float  200.33203125
-/* 0A409C 800A44EC 5E644D6F */  .float  4.1127317649112433e+18
-/* 0A40A0 800A44F0 75736520 */  .float  3.0853984260135068e+32
-/* 0A40A4 800A44F4 506F6BA1 */  .float  16067232768.0
-/* 0A40A8 800A44F8 AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A40AC 800A44FC 5E5E0000 */  .float  3.9991964691050004e+18
-/* 0A40B0 800A4500 50494B41 */  .float  13508609024.0
-/* 0A40B4 800A4504 43485500 */  .float  200.33203125
-/* 0A40B8 800A4508 50494B41 */  .float  13508609024.0
-/* 0A40BC 800A450C 43485500 */  .float  200.33203125
-/* 0A40C0 800A4510 5E644D6F */  .float  4.1127317649112433e+18
-/* 0A40C4 800A4514 75736520 */  .float  3.0853984260135068e+32
-/* 0A40C8 800A4518 506F6BA1 */  .float  16067232768.0
-/* 0A40CC 800A451C AD6D6F6E */  .float  -1.3496632630949357e-11
-/* 0A40D0 800A4520 5E5E0000 */  .float  3.9991964691050004e+18
-/* 0A40D4 800A4524 4552524F */  .float  3365.144287109375
-/* 0A40D8 800A4528 523A2049 */  .float  199851393024.0
-/* 0A40DC 800A452C 6E76616C */  .float  1.9062772059033414e+28
-/* 0A40E0 800A4530 6964205F */  .float  1.7236747190017143e+25
-/* 0A40E4 800A4534 7365676D */  .float  1.817525794469247e+31
-/* 0A40E8 800A4538 656E7444 */  .float  7.037924657199503e+22
-/* 0A40EC 800A453C 6174610A */  .float  2.8174987220978604e+20
-/* 0A40F0 800A4540 5F736567 */  .float  1.7538537573561926e+19
-/* 0A40F4 800A4544 6D656E74 */  .float  4.4378498052348527e+27
-/* 0A40F8 800A4548 44617461 */  .float  901.8184204101562
-/* 0A40FC 800A454C 5B25645D */  .float  4.655372175199437e+16
-/* 0A4100 800A4550 2E736567 */  .float  5.5341866506131154e-11
-/* 0A4104 800A4554 6D656E74 */  .float  4.4378498052348527e+27
-/* 0A4108 800A4558 49647820 */  .float  935810.0
-/* 0A410C 800A455C 213D2025 */  .float  6.407823374530447e-19
-/* 0A4110 800A4560 640A0000 */  .float  1.0182602728687672e+22
-/* 0A4114 800A4564 6D6F6465 */  .float  4.6305179305173565e+27
-/* 0A4118 800A4568 6C735265 */  .float  1.1766322853564066e+27
-/* 0A411C 800A456C 71756573 */  .float  1.2151435517784984e+30
-/* 0A4120 800A4570 744C6F61 */  .float  6.478806101921839e+31
-/* 0A4124 800A4574 64282564 */  .float  1.2406989131441116e+22
-/* 0A4128 800A4578 290A0000 */  .float  3.064215547965432e-14
-/* 0A412C 800A457C 74797065 */  .float  7.905038755463837e+31
-/* 0A4130 800A4580 28256429 */  .float  9.181058724958089e-15
-/* 0A4134 800A4584 3A25730A */  .float  0.0006311392644420266
-/* 0A4138 800A4588 00000000 */  .float  0.0
-/* 0A413C 800A458C 7365676D */  .float  1.817525794469247e+31
-/* 0A4140 800A4590 656E7449 */  .float  7.0379269089993165e+22
-/* 0A4144 800A4594 64783A25 */  .float  1.8315929141233228e+22
-/* 0A4148 800A4598 640A0000 */  .float  1.0182602728687672e+22
-/* 0A414C 800A459C 7A697054 */  .float  3.0302086326996876e+35
-/* 0A4150 800A45A0 79706520 */  .float  7.801264404497049e+34
-/* 0A4154 800A45A4 3A205A49 */  .float  0.000611696916166693
-/* 0A4158 800A45A8 50545950 */  .float  14250491904.0
-/* 0A415C 800A45AC 455F5241 */  .float  3573.140869140625
-/* 0A4160 800A45B0 57202073 */  .float  176061228777472.0
-/* 0A4164 800A45B4 697A653A */  .float  1.8919342739348963e+25
-/* 0A4168 800A45B8 25640A00 */  .float  1.9779235757924618e-16
-/* 0A416C 800A45BC 7A697054 */  .float  3.0302086326996876e+35
-/* 0A4170 800A45C0 79706520 */  .float  7.801264404497049e+34
-/* 0A4174 800A45C4 3A205A49 */  .float  0.000611696916166693
-/* 0A4178 800A45C8 50545950 */  .float  14250491904.0
-/* 0A417C 800A45CC 455F5A49 */  .float  3573.642822265625
-/* 0A4180 800A45D0 50202062 */  .float  10745907200.0
-/* 0A4184 800A45D4 75666665 */  .float  2.920666712126457e+32
-/* 0A4188 800A45D8 7253697A */  .float  4.1874464263727524e+30
-/* 0A418C 800A45DC 653A2564 */  .float  5.494061881899282e+22
-/* 0A4190 800A45E0 20000000 */  .float  1.0842021724855044e-19
-/* 0A4194 800A45E4 73697A65 */  .float  1.8498041138529576e+31
-/* 0A4198 800A45E8 3A25640A */  .float  0.0006309157470241189
-/* 0A419C 800A45EC 00000000 */  .float  0.0
-/* 0A41A0 800A45F0 726F6D20 */  .float  4.742325848151483e+30
-/* 0A41A4 800A45F4 73746172 */  .float  1.9361829516976605e+31
-/* 0A41A8 800A45F8 743A2570 */  .float  5.899209829083341e+31
-/* 0A41AC 800A45FC 20656E64 */  .float  1.9433579686046522e-19
-/* 0A41B0 800A4600 3A257020 */  .float  0.0006310958415269852
-/* 0A41B4 800A4604 73697A65 */  .float  1.8498041138529576e+31
-/* 0A41B8 800A4608 3A256420 */  .float  0.000630917027592659
-/* 0A41BC 800A460C 5F627566 */  .float  1.6318060975032893e+19
-/* 0A41C0 800A4610 6665723A */  .float  2.7088225818550146e+23
-/* 0A41C4 800A4614 25700A00 */  .float  2.0820069843510702e-16
-/* 0A41C8 800A4618 4552524F */  .float  3365.144287109375
-/* 0A41CC 800A461C 523A2048 */  .float  199851376640.0
-/* 0A41D0 800A4620 61726128 */  .float  2.7944455696615368e+20
-/* 0A41D4 800A4624 25732920 */  .float  2.109082392510054e-16
-/* 0A41D8 800A4628 6973206E */  .float  1.8370132439728427e+25
-/* 0A41DC 800A462C 6F74206C */  .float  7.5553538038216015e+28
-/* 0A41E0 800A4630 6F616465 */  .float  6.975549675077887e+28
-/* 0A41E4 800A4634 642E2045 */  .float  1.2848234934432275e+22
-/* 0A41E8 800A4638 78656375 */  .float  1.8610206388285175e+34
-/* 0A41EC 800A463C 7465206D */  .float  7.261313803598062e+31
-/* 0A41F0 800A4640 6F64656C */  .float  7.06851937626279e+28
-/* 0A41F4 800A4644 73526571 */  .float  1.6669308722605083e+31
-/* 0A41F8 800A4648 75657374 */  .float  2.90863683636657e+32
-/* 0A41FC 800A464C 4C6F6164 */  .float  62752144.0
-/* 0A4200 800A4650 28292066 */  .float  9.3884098493471e-15
-/* 0A4204 800A4654 69727374 */  .float  1.8319078769661426e+25
-/* 0A4208 800A4658 2E0A0000 */  .float  3.1377567211166024e-11
+
+glabel D_800A3A80
+/* 0A3630 800A3A80  */  .asciz  "BULBASAUR"
+                        .balign 4
+
+glabel D_800A3A8C
+/* 0A363C 800A3A8C  */  .asciz  "BULBASAUR"
+                        .balign 4
+
+glabel D_800A3A98
+/* 0A3648 800A3A98  */  .asciz  "^dSeed Pok´mon^^\nHas a plant bulb\non its back.\n^6PIKACHU^^'s friend."
+                        .balign 4
+
+glabel D_800A3AE0
+/* 0A3690 800A3AE0  */  .asciz  "VENUSAUR"
+                        .balign 4
+
+glabel D_800A3AEC
+/* 0A369C 800A3AEC  */  .asciz  "VENUSAUR"
+                        .balign 4
+
+glabel D_800A3AF8
+/* 0A36A8 800A3AF8  */  .asciz  "^dSeed Pok´mon^^\nUses solar energy\nfor nourishment.\nLikes to sun itself."
+                        .balign 4
+
+glabel D_800A3B44
+/* 0A36F4 800A3B44  */  .asciz  "SQUIRTLE"
+                        .balign 4
+
+glabel D_800A3B50
+/* 0A3700 800A3B50  */  .asciz  "SQUIRTLE"
+                        .balign 4
+
+glabel D_800A3B5C
+/* 0A370C 800A3B5C  */  .asciz  "^dTiny Turtle Pok´mon^^\nLikes water.\n^6PIKACHU^^'s friend."
+                        .balign 4
+
+glabel D_800A3B98
+/* 0A3748 800A3B98  */  .asciz  "CHARMANDER"
+                        .balign 4
+
+glabel D_800A3BA4
+/* 0A3754 800A3BA4  */  .asciz  "CHARMANDER"
+                        .balign 4
+
+glabel D_800A3BB0
+/* 0A3760 800A3BB0  */  .asciz  "^dLizard Pok´mon^^\nUses the flame at the tip of\nits tail to show its vitality.\n^6PIKACHU^^'s friend."
+                        .balign 4
+
+glabel D_800A3C18
+/* 0A37C8 800A3C18  */  .asciz  "ODDISH"
+                        .balign 4
+
+glabel D_800A3C20
+/* 0A37D0 800A3C20  */  .asciz  "May grow when\nsprinkled with water."
+                        .balign 4
+
+glabel D_800A3C44
+/* 0A37F4 800A3C44  */  .asciz  "ODDISH"
+                        .balign 4
+
+glabel D_800A3C4C
+/* 0A37FC 800A3C4C  */  .asciz  "^dWeed Pok´mon^^\nLikes sunny places."
+                        .balign 4
+
+glabel D_800A3C74
+/* 0A3824 800A3C74  */  .asciz  "GLOOM"
+                        .balign 4
+
+glabel D_800A3C7C
+/* 0A382C 800A3C7C  */  .asciz  "May grow when\nsprinkled with water."
+                        .balign 4
+
+glabel D_800A3CA0
+/* 0A3850 800A3CA0  */  .asciz  "GLOOM"
+                        .balign 4
+
+glabel D_800A3CA8
+/* 0A3858 800A3CA8  */  .asciz  "^dWeed Pok´mon^^\nAn evolution of ^4ODDISH^^.\nStuns opponents with\nits terrible smell."
+                        .balign 4
+
+glabel D_800A3D00
+/* 0A38B0 800A3D00  */  .asciz  "VILEPLUME"
+                        .balign 4
+
+glabel D_800A3D0C
+/* 0A38BC 800A3D0C  */  .asciz  "VILEPLUME"
+                        .balign 4
+
+glabel D_800A3D18
+/* 0A38C8 800A3D18  */  .asciz  "^dFlower Pok´mon^^\nAn evolution of ^4GLOOM^^.\nIs said to have the world's\nlargest petals."
+                        .balign 4
+
+glabel D_800A3D74
+/* 0A3924 800A3D74  */  .asciz  "CATERPIE"
+                        .balign 4
+
+glabel D_800A3D80
+/* 0A3930 800A3D80  */  .asciz  "CATERPIE"
+                        .balign 4
+
+glabel D_800A3D8C
+/* 0A393C 800A3D8C  */  .asciz  "^dWorm Pok´mon^^\nIs said to become a pupa when\nit sheds its skin and evolves."
+                        .balign 4
+
+glabel D_800A3DDC
+/* 0A398C 800A3DDC  */  .asciz  "METAPOD"
+                        .balign 4
+
+glabel D_800A3DE4
+/* 0A3994 800A3DE4  */  .asciz  "METAPOD"
+                        .balign 4
+
+glabel D_800A3DEC
+/* 0A399C 800A3DEC  */  .asciz  "^dCocoon Pok´mon^^\nIs encased in a hard shell\nin preparation for evolution."
+                        .balign 4
+
+glabel D_800A3E3C
+/* 0A39EC 800A3E3C  */  .asciz  "DIGLETT"
+                        .balign 4
+
+glabel D_800A3E44
+/* 0A39F4 800A3E44  */  .asciz  "DIGLETT"
+                        .balign 4
+
+glabel D_800A3E4C
+/* 0A39FC 800A3E4C  */  .asciz  "^dMole Pok´mon^^\nUsually found underground.\nKnown to surface when\nplaying tricks."
+                        .balign 4
+
+glabel D_800A3EA0
+/* 0A3A50 800A3EA0  */  .asciz  "LAPRAS"
+                        .balign 4
+
+glabel D_800A3EA8
+/* 0A3A58 800A3EA8  */  .asciz  "LAPRAS"
+                        .balign 4
+
+glabel D_800A3EB0
+/* 0A3A60 800A3EB0  */  .asciz  "^dTransport Pok´mon^^\nA very intelligent Pok´mon.\nEnjoys carrying people across\nthe seas on its back."
+                        .balign 4
+
+glabel D_800A3F18
+/* 0A3AC8 800A3F18  */  .asciz  "POLIWAG"
+                        .balign 4
+
+glabel D_800A3F20
+/* 0A3AD0 800A3F20  */  .asciz  "POLIWAG"
+                        .balign 4
+
+glabel D_800A3F28
+/* 0A3AD8 800A3F28  */  .asciz  "^dTadpole Pok´mon^^\nCan't walk well since it just\ngot its legs.\nNote: Runs away when startled."
+                        .balign 4
+
+glabel D_800A3F88
+/* 0A3B38 800A3F88  */  .asciz  "POLIWHIRL"
+                        .balign 4
+
+glabel D_800A3F94
+/* 0A3B44 800A3F94  */  .asciz  "POLIWHIRL"
+                        .balign 4
+
+glabel D_800A3FA0
+/* 0A3B50 800A3FA0  */  .asciz  "^dTadpole Pok´mon^^\nLives both on land and in\nthe water.\nEvolution of ^4POLIWAG^^."
+                        .balign 4
+
+glabel D_800A3FF4
+/* 0A3BA4 800A3FF4  */  .asciz  "BUTTERFREE"
+                        .balign 4
+
+glabel D_800A4000
+/* 0A3BB0 800A4000  */  .asciz  "BUTTERFREE"
+                        .balign 4
+
+glabel D_800A400C
+/* 0A3BBC 800A400C  */  .asciz  "^dButterfly Pok´mon^^\nFlutters about as it flies\nover many areas.\nIs an excellent caretaker."
+                        .balign 4
+
+glabel D_800A406C
+/* 0A3C1C 800A406C  */  .asciz  "ABRA"
+                        .balign 4
+
+glabel D_800A4074
+/* 0A3C24 800A4074  */  .asciz  "ABRA"
+                        .balign 4
+
+glabel D_800A407C
+/* 0A3C2C 800A407C  */  .asciz  "^dPsi Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4090
+/* 0A3C40 800A4090  */  .asciz  "Treasure chest"
+                        .balign 4
+
+glabel D_800A40A0
+/* 0A3C50 800A40A0  */  .asciz  "Treasure chest"
+                        .balign 4
+
+glabel D_800A40B0
+/* 0A3C60 800A40B0  */  .asciz  "A mysterious wooden chest\nburied by pirates."
+                        .balign 4
+
+glabel D_800A40E0
+/* 0A3C90 800A40E0  */  .asciz  "HAUNTER"
+                        .balign 4
+
+glabel D_800A40E8
+/* 0A3C98 800A40E8  */  .asciz  "HAUNTER"
+                        .balign 4
+
+glabel D_800A40F0
+/* 0A3CA0 800A40F0  */  .asciz  "^dGas Pok´mon^^\nEnjoys quietly forming behind\npeople and then startling.\n"
+                        .balign 4
+
+glabel D_800A413C
+/* 0A3CEC 800A413C  */  .asciz  "SLOWPOKE"
+                        .balign 4
+
+glabel D_800A4148
+/* 0A3CF8 800A4148  */  .asciz  "SLOWPOKE"
+                        .balign 4
+
+glabel D_800A4154
+/* 0A3D04 800A4154  */  .asciz  "^dDopey Pok´mon^^\nAlways staring blankly.\nTalented at using its tail\nto fish with."
+                        .balign 4
+
+glabel D_800A41A8
+/* 0A3D58 800A41A8  */  .asciz  "MAGNEMITE"
+                        .balign 4
+
+glabel D_800A41B4
+/* 0A3D64 800A41B4  */  .asciz  "MAGNEMITE"
+                        .balign 4
+
+glabel D_800A41C0
+/* 0A3D70 800A41C0  */  .asciz  "^dMagnet Pok´mon^^\nBelieved to use its magnetic\npowers to float in midair.\n^6PIKACHU^^'s friend."
+                        .balign 4
+
+glabel D_800A4224
+/* 0A3DD4 800A4224  */  .asciz  "Fishing rod"
+                        .balign 4
+
+glabel D_800A4230
+/* 0A3DE0 800A4230  */  .asciz  "Fishing rod"
+                        .balign 4
+
+glabel D_800A423C
+/* 0A3DEC 800A423C  */  .asciz  "^6PIKACHU^^'s fishing rod."
+                        .balign 4
+
+glabel D_800A4258
+/* 0A3E08 800A4258  */  .asciz  "Telescope"
+                        .balign 4
+
+glabel D_800A4264
+/* 0A3E14 800A4264  */  .asciz  "Telescope"
+                        .balign 4
+
+glabel D_800A4270
+/* 0A3E20 800A4270  */  .asciz  "An item used to view the\nnight sky."
+                        .balign 4
+
+glabel D_800A4294
+/* 0A3E44 800A4294  */  .asciz  "TOGEPI"
+                        .balign 4
+
+glabel D_800A429C
+/* 0A3E4C 800A429C  */  .asciz  "TOGEPI"
+                        .balign 4
+
+glabel D_800A42A4
+/* 0A3E54 800A42A4  */  .asciz  "An unknown Pok´mon - not\nlisted in the Pok´dex."
+                        .balign 4
+
+glabel D_800A42D8
+/* 0A3E88 800A42D8  */  .asciz  "TOGEPI Egg"
+                        .balign 4
+
+glabel D_800A42E4
+/* 0A3E94 800A42E4  */  .asciz  "TOGEPI Egg"
+                        .balign 4
+
+glabel D_800A42F0
+/* 0A3EA0 800A42F0  */  .asciz  "??????"
+                        .balign 4
+
+glabel D_800A42F8
+/* 0A3EA8 800A42F8  */  .asciz  "SEAKING"
+                        .balign 4
+
+glabel D_800A4300
+/* 0A3EB0 800A4300  */  .asciz  "SEAKING"
+                        .balign 4
+
+glabel D_800A4308
+/* 0A3EB8 800A4308  */  .asciz  "^d^dGoldfish Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4320
+/* 0A3ED0 800A4320  */  .asciz  "KRABBY"
+                        .balign 4
+
+glabel D_800A4328
+/* 0A3ED8 800A4328  */  .asciz  "KRABBY"
+                        .balign 4
+
+glabel D_800A4330
+/* 0A3EE0 800A4330  */  .asciz  "^dRiver Crab Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4348
+/* 0A3EF8 800A4348  */  .asciz  "TENTACRUEL"
+                        .balign 4
+
+glabel D_800A4354
+/* 0A3F04 800A4354  */  .asciz  "TENTACRUEL"
+                        .balign 4
+
+glabel D_800A4360
+/* 0A3F10 800A4360  */  .asciz  "^dJellyfish Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4378
+/* 0A3F28 800A4378  */  .asciz  "STAREYU"
+                        .balign 4
+
+glabel D_800A4380
+/* 0A3F30 800A4380  */  .asciz  "STARYU"
+                        .balign 4
+
+glabel D_800A4388
+/* 0A3F38 800A4388  */  .asciz  "^dStarshaped Pok´mon^^"
+                        .balign 4
+
+glabel D_800A43A0
+/* 0A3F50 800A43A0  */  .asciz  "KINGLER"
+                        .balign 4
+
+glabel D_800A43A8
+/* 0A3F58 800A43A8  */  .asciz  "KINGLER"
+                        .balign 4
+
+glabel D_800A43B0
+/* 0A3F60 800A43B0  */  .asciz  "^dPincer Pok´mon^^"
+                        .balign 4
+
+glabel D_800A43C4
+/* 0A3F74 800A43C4  */  .asciz  "MAGIKARP"
+                        .balign 4
+
+glabel D_800A43D0
+/* 0A3F80 800A43D0  */  .asciz  "MAGIKARP"
+                        .balign 4
+
+glabel D_800A43DC
+/* 0A3F8C 800A43DC  */  .asciz  "^dFish Pok´mon^^"
+                        .balign 4
+
+glabel D_800A43F0
+/* 0A3FA0 800A43F0  */  .asciz  "TENTACOOL"
+                        .balign 4
+
+glabel D_800A43FC
+/* 0A3FAC 800A43FC  */  .asciz  "TENTACOOL"
+                        .balign 4
+
+glabel D_800A4408
+/* 0A3FB8 800A4408  */  .asciz  "^dJellyfish Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4420
+/* 0A3FD0 800A4420  */  .asciz  "DRATINI"
+                        .balign 4
+
+glabel D_800A4428
+/* 0A3FD8 800A4428  */  .asciz  "DRATINI"
+                        .balign 4
+
+glabel D_800A4430
+/* 0A3FE0 800A4430  */  .asciz  "^dDragon Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4444
+/* 0A3FF4 800A4444  */  .asciz  "SEADRA"
+                        .balign 4
+
+glabel D_800A444C
+/* 0A3FFC 800A444C  */  .asciz  "SEADRA"
+                        .balign 4
+
+glabel D_800A4454
+/* 0A4004 800A4454  */  .asciz  "^dDragon Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4468
+/* 0A4018 800A4468  */  .asciz  "STARMIE"
+                        .balign 4
+
+glabel D_800A4470
+/* 0A4020 800A4470  */  .asciz  "STARMIE"
+                        .balign 4
+
+glabel D_800A4478
+/* 0A4028 800A4478  */  .asciz  "^dMysterious Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4490
+/* 0A4040 800A4490  */  .asciz  "HORSEA"
+                        .balign 4
+
+glabel D_800A4498
+/* 0A4048 800A4498  */  .asciz  "HORSEA"
+                        .balign 4
+
+glabel D_800A44A0
+/* 0A4050 800A44A0  */  .asciz  "^dDragon Pok´mon^^"
+                        .balign 4
+
+glabel D_800A44B4
+/* 0A4064 800A44B4  */  .asciz  "GOLDEEN"
+                        .balign 4
+
+glabel D_800A44BC
+/* 0A406C 800A44BC  */  .asciz  "GOLDEEN"
+                        .balign 4
+
+glabel D_800A44C4
+/* 0A4074 800A44C4  */  .asciz  "^dGoldfish Pok´mon^^"
+                        .balign 4
+
+glabel D_800A44DC
+/* 0A408C 800A44DC  */  .asciz  "PIKACHU"
+                        .balign 4
+
+glabel D_800A44E4
+/* 0A4094 800A44E4  */  .asciz  "PIKACHU"
+                        .balign 4
+
+glabel D_800A44EC
+/* 0A409C 800A44EC  */  .asciz  "^dMouse Pok´mon^^"
+                        .balign 4
+
+glabel D_800A4500
+/* 0A40B0 800A4500  */  .asciz  "PIKACHU"
+                        .balign 4
+
+glabel D_800A4508
+/* 0A40B8 800A4508  */  .asciz  "PIKACHU"
+                        .balign 4
+
+glabel D_800A4510
+/* 0A40C0 800A4510  */  .asciz  "^dMouse Pok´mon^^"
+                        .balign 4
+/* 0A40D4 800A4524  */  .asciz  "ERROR: Invalid _segmentData\n_segmentData[%d].segmentIdx != %d\n"
+                        .balign 4
+/* 0A4114 800A4564  */  .asciz  "modelsRequestLoad(%d)\n"
+                        .balign 4
+/* 0A412C 800A457C  */  .asciz  "type(%d):%s\n"
+                        .balign 4
+/* 0A413C 800A458C  */  .asciz  "segmentIdx:%d\n"
+                        .balign 4
+/* 0A414C 800A459C  */  .asciz  "zipType : ZIPTYPE_RAW  size:%d\n"
+                        .balign 4
+/* 0A416C 800A45BC  */  .asciz  "zipType : ZIPTYPE_ZIP  bufferSize:%d "
+                        .balign 4
+/* 0A4194 800A45E4  */  .asciz  "size:%d\n"
+                        .balign 4
+/* 0A41A0 800A45F0  */  .asciz  "rom start:%p end:%p size:%d _buffer:%p\n"
+                        .balign 4
+/* 0A41C8 800A4618  */  .asciz  "ERROR: Hara(%s) is not loaded. Execute modelsRequestLoad() first.\n"
+                        .balign 4
 
 glabel D_800A465C
 /* 0A420C 800A465C 7072655F */  .word  0x7072655F
@@ -1746,9 +1921,7 @@ glabel D_800A4804
 /* 0A43BC 800A480C 00000000 */  .float  0.0
 
 glabel _string_carpet_object
-/* 0A43C0 800A4810  */  .ascii  "carpet object was made, (%3.2f, %3.2f, %3.2f), xside"
-                        .balign 4
-/* 0A43F4 800A4844  */  .asciz  " = %f, zside = %f\n"
+/* 0A43C0 800A4810  */  .asciz  "carpet object was made, (%3.2f, %3.2f, %3.2f), xside = %f, zside = %f\n"
                         .balign 4
 /* 0A4408 800A4858  */  .asciz  ""
                         .balign 4
@@ -2132,525 +2305,92 @@ glabel D_800A4D60
 /* 0A4914 800A4D64 00000000 */  .float  0.0
 /* 0A4918 800A4D68 00000000 */  .float  0.0
 /* 0A491C 800A4D6C 00000000 */  .float  0.0
-/* 0A4920 800A4D70 596F7520 */  .float  4212581233328128.0
-/* 0A4924 800A4D74 74616C6B */  .float  7.143956120733152e+31
-/* 0A4928 800A4D78 65642074 */  .float  6.733113828659664e+22
-/* 0A492C 800A4D7C 6F205E36 */  .float  4.963149560624906e+28
-/* 0A4930 800A4D80 50494B41 */  .float  13508609024.0
-/* 0A4934 800A4D84 4348555E */  .float  200.33346557617188
-/* 0A4938 800A4D88 5E210A0A */  .float  2.9010245962474455e+18
-/* 0A493C 800A4D8C 5E365049 */  .float  3.284270094347141e+18
-/* 0A4940 800A4D90 4B414348 */  .float  12665672.0
-/* 0A4944 800A4D94 555E5E20 */  .float  15280990322688.0
-/* 0A4948 800A4D98 77616E74 */  .float  4.572293158959334e+33
-/* 0A494C 800A4D9C 7320746F */  .float  1.2712540454187547e+31
-/* 0A4950 800A4DA0 20646F20 */  .float  1.934911937562603e-19
-/* 0A4954 800A4DA4 6D6F7265 */  .float  4.6315757406095193e+27
-/* 0A4958 800A4DA8 0A66756E */  .float  1.1096183249710618e-32
-/* 0A495C 800A4DAC 20746869 */  .float  2.0702150335806381e-19
-/* 0A4960 800A4DB0 6E677320 */  .float  1.7907553713428461e+28
-/* 0A4964 800A4DB4 746F6765 */  .float  7.5870119593714225e+31
-/* 0A4968 800A4DB8 74686572 */  .float  7.364931802737887e+31
-/* 0A496C 800A4DBC 2E0A0000 */  .float  3.1377567211166024e-11
-/* 0A4970 800A4DC0 596F7520 */  .float  4212581233328128.0
-/* 0A4974 800A4DC4 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4978 800A4DC8 5E365049 */  .float  3.284270094347141e+18
-/* 0A497C 800A4DCC 4B414348 */  .float  12665672.0
-/* 0A4980 800A4DD0 555E5E20 */  .float  15280990322688.0
-/* 0A4984 800A4DD4 6172650A */  .float  2.7946204359908183e+20
-/* 0A4988 800A4DD8 73746172 */  .float  1.9361829516976605e+31
-/* 0A498C 800A4DDC 74696E67 */  .float  7.397731894505344e+31
-/* 0A4990 800A4DE0 20746F20 */  .float  2.070437209123291e-19
-/* 0A4994 800A4DE4 6265636F */  .float  1.0578673346029143e+21
-/* 0A4998 800A4DE8 6D652066 */  .float  4.431952159793559e+27
-/* 0A499C 800A4DEC 7269656E */  .float  4.622888208413926e+30
-/* 0A49A0 800A4DF0 6473210A */  .float  1.793975810105776e+22
-/* 0A49A4 800A4DF4 5E365049 */  .float  3.284270094347141e+18
-/* 0A49A8 800A4DF8 4B414348 */  .float  12665672.0
-/* 0A49AC 800A4DFC 555E5E20 */  .float  15280990322688.0
-/* 0A49B0 800A4E00 69732066 */  .float  1.837012321635639e+25
-/* 0A49B4 800A4E04 7269656E */  .float  4.622888208413926e+30
-/* 0A49B8 800A4E08 64732077 */  .float  1.7939592593771453e+22
-/* 0A49BC 800A4E0C 6974680A */  .float  1.8466825660476794e+25
-/* 0A49C0 800A4E10 61206C6F */  .float  1.8495578222950246e+20
-/* 0A49C4 800A4E14 74206F66 */  .float  5.084392859522426e+31
-/* 0A49C8 800A4E18 20506F6B */  .float  1.7655150416345463e-19
-/* 0A49CC 800A4E1C A1AD6D6F */  .float  -1.1751902821075358e-18
-/* 0A49D0 800A4E20 6E2E0A00 */  .float  1.3465620241777547e+28
-/* 0A49D4 800A4E24 596F7520 */  .float  4212581233328128.0
-/* 0A49D8 800A4E28 616E6420 */  .float  2.7484624100912005e+20
-/* 0A49DC 800A4E2C 5E365049 */  .float  3.284270094347141e+18
-/* 0A49E0 800A4E30 4B414348 */  .float  12665672.0
-/* 0A49E4 800A4E34 555E5E20 */  .float  15280990322688.0
-/* 0A49E8 800A4E38 61726520 */  .float  2.794624306271748e+20
-/* 0A49EC 800A4E3C 66726965 */  .float  2.8618921869979787e+23
-/* 0A49F0 800A4E40 6E647321 */  .float  1.7675441136654073e+28
-/* 0A49F4 800A4E44 0A0A5E36 */  .float  6.662177416106671e-33
-/* 0A49F8 800A4E48 50494B41 */  .float  13508609024.0
-/* 0A49FC 800A4E4C 4348555E */  .float  200.33346557617188
-/* 0A4A00 800A4E50 5E207265 */  .float  2.8903535610219725e+18
-/* 0A4A04 800A4E54 616C6C79 */  .float  2.7257799250148327e+20
-/* 0A4A08 800A4E58 20656E6A */  .float  1.9433587440864765e-19
-/* 0A4A0C 800A4E5C 6F79730A */  .float  7.720084113843543e+28
-/* 0A4A10 800A4E60 6669656C */  .float  2.7554557347005702e+23
-/* 0A4A14 800A4E64 64207472 */  .float  1.1839479283397092e+22
-/* 0A4A18 800A4E68 6970732E */  .float  1.8167882337704275e+25
-/* 0A4A1C 800A4E6C 00000000 */  .float  0.0
-/* 0A4A20 800A4E70 596F7520 */  .float  4212581233328128.0
-/* 0A4A24 800A4E74 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4A28 800A4E78 5E365049 */  .float  3.284270094347141e+18
-/* 0A4A2C 800A4E7C 4B414348 */  .float  12665672.0
-/* 0A4A30 800A4E80 555E5E20 */  .float  15280990322688.0
-/* 0A4A34 800A4E84 68617665 */  .float  4.258865809053463e+24
-/* 0A4A38 800A4E88 0A736F6D */  .float  1.1720981272375711e-32
-/* 0A4A3C 800A4E8C 65746869 */  .float  7.2136465578202075e+22
-/* 0A4A40 800A4E90 6E672069 */  .float  1.788255468585977e+28
-/* 0A4A44 800A4E94 6E20636F */  .float  1.2409452352559164e+28
-/* 0A4A48 800A4E98 6D6D6F6E */  .float  4.59266609712182e+27
-/* 0A4A4C 800A4E9C 210A5E36 */  .float  4.688090582602209e-19
-/* 0A4A50 800A4EA0 50494B41 */  .float  13508609024.0
-/* 0A4A54 800A4EA4 4348555E */  .float  200.33346557617188
-/* 0A4A58 800A4EA8 5E206C6F */  .float  2.889934097335976e+18
-/* 0A4A5C 800A4EAC 76657320 */  .float  1.1634482353614218e+33
-/* 0A4A60 800A4EB0 68617669 */  .float  4.2588669619749675e+24
-/* 0A4A64 800A4EB4 6E670A70 */  .float  1.7875913857993235e+28
-/* 0A4A68 800A4EB8 69636E69 */  .float  1.7184222392110264e+25
-/* 0A4A6C 800A4EBC 63732E00 */  .float  4.4858734592371657e+21
-/* 0A4A70 800A4EC0 596F7520 */  .float  4212581233328128.0
-/* 0A4A74 800A4EC4 68616420 */  .float  4.2575177555842014e+24
-/* 0A4A78 800A4EC8 67726561 */  .float  1.1446827995925205e+24
-/* 0A4A7C 800A4ECC 74206675 */  .float  5.083285967041986e+31
-/* 0A4A80 800A4ED0 6E206669 */  .float  1.2410351963374151e+28
-/* 0A4A84 800A4ED4 7368696E */  .float  1.8413562611180725e+31
-/* 0A4A88 800A4ED8 670A7769 */  .float  6.538893032281565e+23
-/* 0A4A8C 800A4EDC 7468205E */  .float  7.356380345060261e+31
-/* 0A4A90 800A4EE0 3650494B */  .float  3.103707740592654e-06
-/* 0A4A94 800A4EE4 41434855 */  .float  12.205159187316895
-/* 0A4A98 800A4EE8 5E5E210A */  .float  4.001521386441933e+18
-/* 0A4A9C 800A4EEC 0A5E3650 */  .float  1.0699126237257805e-32
-/* 0A4AA0 800A4EF0 494B4143 */  .float  832532.1875
-/* 0A4AA4 800A4EF4 48555E5E */  .float  218489.46875
-/* 0A4AA8 800A4EF8 206B6E6F */  .float  1.994181367156588e-19
-/* 0A4AAC 800A4EFC 7773206C */  .float  4.931194259268873e+33
-/* 0A4AB0 800A4F00 6F747320 */  .float  7.565351998139133e+28
-/* 0A4AB4 800A4F04 6F662077 */  .float  7.1220799846748495e+28
-/* 0A4AB8 800A4F08 6179730A */  .float  2.8759554452611295e+20
-/* 0A4ABC 800A4F0C 746F2068 */  .float  7.57822403580348e+31
-/* 0A4AC0 800A4F10 61766520 */  .float  2.840741166456022e+20
-/* 0A4AC4 800A4F14 66756E2E */  .float  2.8975306120012422e+23
-/* 0A4AC8 800A4F18 00000000 */  .float  0.0
-/* 0A4ACC 800A4F1C 596F7520 */  .float  4212581233328128.0
-/* 0A4AD0 800A4F20 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4AD4 800A4F24 5E365049 */  .float  3.284270094347141e+18
-/* 0A4AD8 800A4F28 4B414348 */  .float  12665672.0
-/* 0A4ADC 800A4F2C 555E5E20 */  .float  15280990322688.0
-/* 0A4AE0 800A4F30 63617567 */  .float  4.158977147009688e+21
-/* 0A4AE4 800A4F34 68740A61 */  .float  4.609795515390209e+24
-/* 0A4AE8 800A4F38 20726561 */  .float  2.05317407898628e-19
-/* 0A4AEC 800A4F3C 6C6C7920 */  .float  1.1435139602771603e+27
-/* 0A4AF0 800A4F40 62696720 */  .float  1.0763805771398717e+21
-/* 0A4AF4 800A4F44 6F6E6521 */  .float  7.377968968335514e+28
-/* 0A4AF8 800A4F48 0A0A5E36 */  .float  6.662177416106671e-33
-/* 0A4AFC 800A4F4C 50494B41 */  .float  13508609024.0
-/* 0A4B00 800A4F50 4348555E */  .float  200.33346557617188
-/* 0A4B04 800A4F54 5E206C6F */  .float  2.889934097335976e+18
-/* 0A4B08 800A4F58 76657320 */  .float  1.1634482353614218e+33
-/* 0A4B0C 800A4F5C 746F2066 */  .float  7.578223068662824e+31
-/* 0A4B10 800A4F60 6973682E */  .float  1.8391309301925045e+25
-/* 0A4B14 800A4F64 0A000000 */  .float  6.162975822039155e-33
-/* 0A4B18 800A4F68 596F7520 */  .float  4212581233328128.0
-/* 0A4B1C 800A4F6C 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4B20 800A4F70 5E365049 */  .float  3.284270094347141e+18
-/* 0A4B24 800A4F74 4B414348 */  .float  12665672.0
-/* 0A4B28 800A4F78 555E5E20 */  .float  15280990322688.0
-/* 0A4B2C 800A4F7C 63617567 */  .float  4.158977147009688e+21
-/* 0A4B30 800A4F80 68740A61 */  .float  4.609795515390209e+24
-/* 0A4B34 800A4F84 2077686F */  .float  2.0956267974800914e-19
-/* 0A4B38 800A4F88 6C65206C */  .float  1.1079884826702475e+27
-/* 0A4B3C 800A4F8C 6F74206F */  .float  7.555355220531546e+28
-/* 0A4B40 800A4F90 66206669 */  .float  1.893669428005089e+23
-/* 0A4B44 800A4F94 7368210A */  .float  1.8391158797891627e+31
-/* 0A4B48 800A4F98 0A5E3650 */  .float  1.0699126237257805e-32
-/* 0A4B4C 800A4F9C 494B4143 */  .float  832532.1875
-/* 0A4B50 800A4FA0 48555E5E */  .float  218489.46875
-/* 0A4B54 800A4FA4 20636175 */  .float  1.9259893729395408e-19
-/* 0A4B58 800A4FA8 67687420 */  .float  1.0977311521813172e+24
-/* 0A4B5C 800A4FAC 61206269 */  .float  1.849106406801125e+20
-/* 0A4B60 800A4FB0 67206F6E */  .float  7.576341521866692e+23
-/* 0A4B64 800A4FB4 652C0A73 */  .float  5.07774868198519e+22
-/* 0A4B68 800A4FB8 6F206974 */  .float  4.964508657698676e+28
-/* 0A4B6C 800A4FBC 27732069 */  .float  3.3740593953897552e-15
-/* 0A4B70 800A4FC0 6E206120 */  .float  1.240875462291132e+28
-/* 0A4B74 800A4FC4 676F6F64 */  .float  1.1307003837574308e+24
-/* 0A4B78 800A4FC8 206D6F6F */  .float  2.0111551133261762e-19
-/* 0A4B7C 800A4FCC 642E0A00 */  .float  1.2841816179063365e+22
-/* 0A4B80 800A4FD0 596F7527 */  .float  4212583112376320.0
-/* 0A4B84 800A4FD4 72652067 */  .float  4.538319313860059e+30
-/* 0A4B88 800A4FD8 65747469 */  .float  7.215030063625736e+22
-/* 0A4B8C 800A4FDC 6E672061 */  .float  1.7882545241126804e+28
-/* 0A4B90 800A4FE0 6C6F6E67 */  .float  1.1578185248626065e+27
-/* 0A4B94 800A4FE4 20657665 */  .float  1.94362279564764e-19
-/* 0A4B98 800A4FE8 6E0A6265 */  .float  1.0706970761170656e+28
-/* 0A4B9C 800A4FEC 74746572 */  .float  7.745226982806356e+31
-/* 0A4BA0 800A4FF0 20776974 */  .float  2.095660530939447e-19
-/* 0A4BA4 800A4FF4 68205E36 */  .float  3.0292660892486e+24
-/* 0A4BA8 800A4FF8 50494B41 */  .float  13508609024.0
-/* 0A4BAC 800A4FFC 4348555E */  .float  200.33346557617188
-/* 0A4BB0 800A5000 5E210A0A */  .float  2.9010245962474455e+18
-/* 0A4BB4 800A5004 5E365049 */  .float  3.284270094347141e+18
-/* 0A4BB8 800A5008 4B414348 */  .float  12665672.0
-/* 0A4BBC 800A500C 555E5E20 */  .float  15280990322688.0
-/* 0A4BC0 800A5010 656E6A6F */  .float  7.036791101173294e+22
-/* 0A4BC4 800A5014 79732073 */  .float  7.889914281062307e+34
-/* 0A4BC8 800A5018 7072696E */  .float  3.0009131619255263e+29
-/* 0A4BCC 800A501C 6B6C696E */  .float  2.858043710516019e+26
-/* 0A4BD0 800A5020 670A7761 */  .float  6.538887267674042e+23
-/* 0A4BD4 800A5024 74657220 */  .float  7.271427677004958e+31
-/* 0A4BD8 800A5028 6F6E205E */  .float  7.369656186615718e+28
-/* 0A4BDC 800A502C 344F4444 */  .float  1.9303212184240692e-07
-/* 0A4BE0 800A5030 4953485E */  .float  865413.875
-/* 0A4BE4 800A5034 5E2E0A00 */  .float  3.135209028091642e+18
-/* 0A4BE8 800A5038 596F7520 */  .float  4212581233328128.0
-/* 0A4BEC 800A503C 77656E74 */  .float  4.653422797373941e+33
-/* 0A4BF0 800A5040 206F6E20 */  .float  2.028052474536074e-19
-/* 0A4BF4 800A5044 61207069 */  .float  1.8497369107489568e+20
-/* 0A4BF8 800A5048 636E6963 */  .float  4.39791900293955e+21
-/* 0A4BFC 800A504C 0A776974 */  .float  1.191245093502543e-32
-/* 0A4C00 800A5050 68205E36 */  .float  3.0292660892486e+24
-/* 0A4C04 800A5054 50494B41 */  .float  13508609024.0
-/* 0A4C08 800A5058 4348555E */  .float  200.33346557617188
-/* 0A4C0C 800A505C 5E210A0A */  .float  2.9010245962474455e+18
-/* 0A4C10 800A5060 5E365049 */  .float  3.284270094347141e+18
-/* 0A4C14 800A5064 4B414348 */  .float  12665672.0
-/* 0A4C18 800A5068 555E5E20 */  .float  15280990322688.0
-/* 0A4C1C 800A506C 66696C6C */  .float  2.75577855272186e+23
-/* 0A4C20 800A5070 65642069 */  .float  6.733108874700074e+22
-/* 0A4C24 800A5074 74732074 */  .float  7.704994898670237e+31
-/* 0A4C28 800A5078 756D6D79 */  .float  3.0097527459160557e+32
-/* 0A4C2C 800A507C 0A776974 */  .float  1.191245093502543e-32
-/* 0A4C30 800A5080 68206120 */  .float  3.029481109109209e+24
-/* 0A4C34 800A5084 76657279 */  .float  1.1634353143622618e+33
-/* 0A4C38 800A5088 20746173 */  .float  2.0699847154788304e-19
-/* 0A4C3C 800A508C 7479206D */  .float  7.895139103712176e+31
-/* 0A4C40 800A5090 65616C21 */  .float  6.653294280663963e+22
-/* 0A4C44 800A5094 0A000000 */  .float  6.162975822039155e-33
-/* 0A4C48 800A5098 596F7520 */  .float  4212581233328128.0
-/* 0A4C4C 800A509C 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4C50 800A50A0 5E365049 */  .float  3.284270094347141e+18
-/* 0A4C54 800A50A4 4B414348 */  .float  12665672.0
-/* 0A4C58 800A50A8 555E5E20 */  .float  15280990322688.0
-/* 0A4C5C 800A50AC 68656C70 */  .float  4.3336889735505665e+24
-/* 0A4C60 800A50B0 65640A74 */  .float  6.730577401349529e+22
-/* 0A4C64 800A50B4 6865206C */  .float  4.328080010430654e+24
-/* 0A4C68 800A50B8 6F737420 */  .float  7.53452438973896e+28
-/* 0A4C6C 800A50BC 5E34504F */  .float  3.248242946595619e+18
-/* 0A4C70 800A50C0 4C495741 */  .float  52780292.0
-/* 0A4C74 800A50C4 475E5E0A */  .float  56926.0390625
-/* 0A4C78 800A50C8 746F6765 */  .float  7.5870119593714225e+31
-/* 0A4C7C 800A50CC 74686572 */  .float  7.364931802737887e+31
-/* 0A4C80 800A50D0 210A5E36 */  .float  4.688090582602209e-19
-/* 0A4C84 800A50D4 50494B41 */  .float  13508609024.0
-/* 0A4C88 800A50D8 4348555E */  .float  200.33346557617188
-/* 0A4C8C 800A50DC 5E206973 */  .float  2.8897240906150707e+18
-/* 0A4C90 800A50E0 20686170 */  .float  1.9683403740674022e-19
-/* 0A4C94 800A50E4 70792062 */  .float  3.0840366345463165e+29
-/* 0A4C98 800A50E8 65636175 */  .float  6.711093478281636e+22
-/* 0A4C9C 800A50EC 73650A5E */  .float  1.814645770489179e+31
-/* 0A4CA0 800A50F0 34535155 */  .float  1.968049474498912e-07
-/* 0A4CA4 800A50F4 4952544C */  .float  861508.75
-/* 0A4CA8 800A50F8 455E5E20 */  .float  3557.8828125
-/* 0A4CAC 800A50FC 7468616E */  .float  7.364434692440862e+31
-/* 0A4CB0 800A5100 6B656420 */  .float  2.773168396358474e+26
-/* 0A4CB4 800A5104 69742E0A */  .float  1.8449707081976391e+25
-/* 0A4CB8 800A5108 00000000 */  .float  0.0
-/* 0A4CBC 800A510C 596F7520 */  .float  4212581233328128.0
-/* 0A4CC0 800A5110 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4CC4 800A5114 5E365049 */  .float  3.284270094347141e+18
-/* 0A4CC8 800A5118 4B414348 */  .float  12665672.0
-/* 0A4CCC 800A511C 555E5E20 */  .float  15280990322688.0
-/* 0A4CD0 800A5120 74726176 */  .float  7.681351211060542e+31
-/* 0A4CD4 800A5124 656C6564 */  .float  6.9771801054255295e+22
-/* 0A4CD8 800A5128 0A766572 */  .float  1.1863548900663285e-32
-/* 0A4CDC 800A512C 79206661 */  .float  5.20527492673068e+34
-/* 0A4CE0 800A5130 7220746F */  .float  3.178135113546887e+30
-/* 0A4CE4 800A5134 67657468 */  .float  1.083569240879479e+24
-/* 0A4CE8 800A5138 6572210A */  .float  7.146388449905168e+22
-/* 0A4CEC 800A513C 0A5E3650 */  .float  1.0699126237257805e-32
-/* 0A4CF0 800A5140 494B4143 */  .float  832532.1875
-/* 0A4CF4 800A5144 48555E5E */  .float  218489.46875
-/* 0A4CF8 800A5148 2063616E */  .float  1.9259884682107458e-19
-/* 0A4CFC 800A514C 27742077 */  .float  3.387940147812885e-15
-/* 0A4D00 800A5150 61697420 */  .float  2.6915369108012374e+20
-/* 0A4D04 800A5154 746F0A6F */  .float  7.575503952709347e+31
-/* 0A4D08 800A5158 70656E20 */  .float  2.8402080081989233e+29
-/* 0A4D0C 800A515C 6D6F7265 */  .float  4.6315757406095193e+27
-/* 0A4D10 800A5160 205E3474 */  .float  1.8821486712272596e-19
-/* 0A4D14 800A5164 72656173 */  .float  4.543352072047115e+30
-/* 0A4D18 800A5168 75726520 */  .float  3.0727219200112245e+32
-/* 0A4D1C 800A516C 63686573 */  .float  4.2869548117207684e+21
-/* 0A4D20 800A5170 745E5E73 */  .float  7.047153078223658e+31
-/* 0A4D24 800A5174 2E0A0000 */  .float  3.1377567211166024e-11
-/* 0A4D28 800A5178 596F7520 */  .float  4212581233328128.0
-/* 0A4D2C 800A517C 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4D30 800A5180 5E365049 */  .float  3.284270094347141e+18
-/* 0A4D34 800A5184 4B414348 */  .float  12665672.0
-/* 0A4D38 800A5188 555E5E20 */  .float  15280990322688.0
-/* 0A4D3C 800A518C 68616420 */  .float  4.2575177555842014e+24
-/* 0A4D40 800A5190 66756E20 */  .float  2.897528089985451e+23
-/* 0A4D44 800A5194 61740A74 */  .float  2.8135992381392552e+20
-/* 0A4D48 800A5198 68652070 */  .float  4.328081163352159e+24
-/* 0A4D4C 800A519C 69A1B161 */  .float  2.4434338144949797e+25
-/* 0A4D50 800A51A0 74612070 */  .float  7.134550194286222e+31
-/* 0A4D54 800A51A4 61727479 */  .float  2.7953155032614332e+20
-/* 0A4D58 800A51A8 210A0A5E */  .float  4.67699395468481e-19
-/* 0A4D5C 800A51AC 3650494B */  .float  3.103707740592654e-06
-/* 0A4D60 800A51B0 41434855 */  .float  12.205159187316895
-/* 0A4D64 800A51B4 5E5E2066 */  .float  4.001476306465194e+18
-/* 0A4D68 800A51B8 65656C73 */  .float  6.7713903722526484e+22
-/* 0A4D6C 800A51BC 20736963 */  .float  2.061777015850773e-19
-/* 0A4D70 800A51C0 6B206672 */  .float  1.9391191544841777e+26
-/* 0A4D74 800A51C4 6F6D0A65 */  .float  7.33605135448697e+28
-/* 0A4D78 800A51C8 6174696E */  .float  2.8178766022540945e+20
-/* 0A4D7C 800A51CC 6720746F */  .float  7.577264579646318e+23
-/* 0A4D80 800A51D0 6F206D61 */  .float  4.964983255530204e+28
-/* 0A4D84 800A51D4 6E792074 */  .float  1.927525021656365e+28
-/* 0A4D88 800A51D8 72656174 */  .float  4.54335237427857e+30
-/* 0A4D8C 800A51DC 732E0A00 */  .float  1.3788795127580208e+31
-/* 0A4D90 800A51E0 5E365049 */  .float  3.284270094347141e+18
-/* 0A4D94 800A51E4 4B414348 */  .float  12665672.0
-/* 0A4D98 800A51E8 555E5E20 */  .float  15280990322688.0
-/* 0A4D9C 800A51EC 756E6465 */  .float  3.0219797249415725e+32
-/* 0A4DA0 800A51F0 72737461 */  .float  4.822115254477503e+30
-/* 0A4DA4 800A51F4 6E647320 */  .float  1.7675439956062452e+28
-/* 0A4DA8 800A51F8 796F7572 */  .float  7.7708813945248605e+34
-/* 0A4DAC 800A51FC 0A666565 */  .float  1.109316737201679e-32
-/* 0A4DB0 800A5200 6C696E67 */  .float  1.1288043051918554e+27
-/* 0A4DB4 800A5204 73210A5E */  .float  1.2758942653921816e+31
-/* 0A4DB8 800A5208 3650494B */  .float  3.103707740592654e-06
-/* 0A4DBC 800A520C 41434855 */  .float  12.205159187316895
-/* 0A4DC0 800A5210 5E5E2077 */  .float  4.001480979389612e+18
-/* 0A4DC4 800A5214 616E7473 */  .float  2.7491975875459967e+20
-/* 0A4DC8 800A5218 20746F20 */  .float  2.070437209123291e-19
-/* 0A4DCC 800A521C 74616C6B */  .float  7.143956120733152e+31
-/* 0A4DD0 800A5220 0A776974 */  .float  1.191245093502543e-32
-/* 0A4DD4 800A5224 6820796F */  .float  3.031274766740001e+24
-/* 0A4DD8 800A5228 7520736F */  .float  2.033956955068436e+32
-/* 0A4DDC 800A522C 6D65206D */  .float  4.431954225828895e+27
-/* 0A4DE0 800A5230 6F72652E */  .float  7.50176911134048e+28
-/* 0A4DE4 800A5234 0A000000 */  .float  6.162975822039155e-33
-/* 0A4DE8 800A5238 596F7520 */  .float  4212581233328128.0
-/* 0A4DEC 800A523C 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4DF0 800A5240 5E365049 */  .float  3.284270094347141e+18
-/* 0A4DF4 800A5244 4B414348 */  .float  12665672.0
-/* 0A4DF8 800A5248 555E5E20 */  .float  15280990322688.0
-/* 0A4DFC 800A524C 776F726B */  .float  4.856561020695426e+33
-/* 0A4E00 800A5250 65640A68 */  .float  6.730571997029976e+22
-/* 0A4E04 800A5254 61726420 */  .float  2.7945792702754744e+20
-/* 0A4E08 800A5258 746F6765 */  .float  7.5870119593714225e+31
-/* 0A4E0C 800A525C 74686572 */  .float  7.364931802737887e+31
-/* 0A4E10 800A5260 210A5E36 */  .float  4.688090582602209e-19
-/* 0A4E14 800A5264 50494B41 */  .float  13508609024.0
-/* 0A4E18 800A5268 4348555E */  .float  200.33346557617188
-/* 0A4E1C 800A526C 5E206861 */  .float  2.889648774068568e+18
-/* 0A4E20 800A5270 73206265 */  .float  1.2706957634752567e+31
-/* 0A4E24 800A5274 636F6D65 */  .float  4.416654540339365e+21
-/* 0A4E28 800A5278 20717569 */  .float  2.0452341790815367e-19
-/* 0A4E2C 800A527C 74650A67 */  .float  7.258587434089667e+31
-/* 0A4E30 800A5280 6F6F6420 */  .float  7.408796104499039e+28
-/* 0A4E34 800A5284 61742063 */  .float  2.814587039385649e+20
-/* 0A4E38 800A5288 6172696E */  .float  2.7948181721619576e+20
-/* 0A4E3C 800A528C 6720666F */  .float  7.574682035475998e+23
-/* 0A4E40 800A5290 720A5E34 */  .float  2.740660220508576e+30
-/* 0A4E44 800A5294 43415445 */  .float  193.3291778564453
-/* 0A4E48 800A5298 52504945 */  .float  223645614080.0
-/* 0A4E4C 800A529C 5E5E2E0A */  .float  4.0024361801162424e+18
-/* 0A4E50 800A52A0 00000000 */  .float  0.0
-/* 0A4E54 800A52A4 596F7520 */  .float  4212581233328128.0
-/* 0A4E58 800A52A8 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4E5C 800A52AC 5E365049 */  .float  3.284270094347141e+18
-/* 0A4E60 800A52B0 4B414348 */  .float  12665672.0
-/* 0A4E64 800A52B4 555E5E20 */  .float  15280990322688.0
-/* 0A4E68 800A52B8 68617665 */  .float  4.258865809053463e+24
-/* 0A4E6C 800A52BC 0A626563 */  .float  1.0900572908210128e-32
-/* 0A4E70 800A52C0 6F6D6520 */  .float  7.347019995116731e+28
-/* 0A4E74 800A52C4 676F6F64 */  .float  1.1307003837574308e+24
-/* 0A4E78 800A52C8 20667269 */  .float  1.9519612932100573e-19
-/* 0A4E7C 800A52CC 656E6473 */  .float  7.0361011497103805e+22
-/* 0A4E80 800A52D0 210A5E36 */  .float  4.688090582602209e-19
-/* 0A4E84 800A52D4 50494B41 */  .float  13508609024.0
-/* 0A4E88 800A52D8 4348555E */  .float  200.33346557617188
-/* 0A4E8C 800A52DC 5E206973 */  .float  2.8897240906150707e+18
-/* 0A4E90 800A52E0 20766572 */  .float  2.0870575940749542e-19
-/* 0A4E94 800A52E4 79206861 */  .float  5.2055284568507255e+34
-/* 0A4E98 800A52E8 70707920 */  .float  2.9769133398809455e+29
-/* 0A4E9C 800A52EC 74686174 */  .float  7.364437593862829e+31
-/* 0A4EA0 800A52F0 0A697420 */  .float  1.1240382611093927e-32
-/* 0A4EA4 800A52F4 666F756E */  .float  2.8270294619945335e+23
-/* 0A4EA8 800A52F8 64207468 */  .float  1.1839468024398023e+22
-/* 0A4EAC 800A52FC 65206C65 */  .float  4.734863521475636e+22
-/* 0A4EB0 800A5300 67656E64 */  .float  1.0834582721846606e+24
-/* 0A4EB4 800A5304 6172790A */  .float  2.7955211559162924e+20
-/* 0A4EB8 800A5308 5E344F44 */  .float  3.248169554194465e+18
-/* 0A4EBC 800A530C 44495348 */  .float  805.30126953125
-/* 0A4EC0 800A5310 5E5E2E0A */  .float  4.0024361801162424e+18
-/* 0A4EC4 800A5314 00000000 */  .float  0.0
-/* 0A4EC8 800A5318 596F7572 */  .float  4212603245035520.0
-/* 0A4ECC 800A531C 20667269 */  .float  1.9519612932100573e-19
-/* 0A4ED0 800A5320 656E6473 */  .float  7.0361011497103805e+22
-/* 0A4ED4 800A5324 68697020 */  .float  4.409518926751568e+24
-/* 0A4ED8 800A5328 77697468 */  .float  4.7350240909435153e+33
-/* 0A4EDC 800A532C 0A5E3650 */  .float  1.0699126237257805e-32
-/* 0A4EE0 800A5330 494B4143 */  .float  832532.1875
-/* 0A4EE4 800A5334 48555E5E */  .float  218489.46875
-/* 0A4EE8 800A5338 20686173 */  .float  1.9683407618083143e-19
-/* 0A4EEC 800A533C 2067726F */  .float  1.9604323981644246e-19
-/* 0A4EF0 800A5340 776E210A */  .float  4.8298311098821665e+33
-/* 0A4EF4 800A5344 5E365049 */  .float  3.284270094347141e+18
-/* 0A4EF8 800A5348 4B414348 */  .float  12665672.0
-/* 0A4EFC 800A534C 555E5E20 */  .float  15280990322688.0
-/* 0A4F00 800A5350 69732072 */  .float  1.8370137051414445e+25
-/* 0A4F04 800A5354 656C6965 */  .float  6.977641724387335e+22
-/* 0A4F08 800A5358 76656420 */  .float  1.1631511297519933e+33
-/* 0A4F0C 800A535C 74686174 */  .float  7.364437593862829e+31
-/* 0A4F10 800A5360 2069740A */  .float  1.977426177614473e-19
-/* 0A4F14 800A5364 636F756C */  .float  4.417232971416505e+21
-/* 0A4F18 800A5368 64206865 */  .float  1.1836005882184482e+22
-/* 0A4F1C 800A536C 6C702061 */  .float  1.1611804070765519e+27
-/* 0A4F20 800A5370 6C6C206F */  .float  1.141838626980386e+27
-/* 0A4F24 800A5374 66207468 */  .float  1.8943148839036837e+23
-/* 0A4F28 800A5378 65206C6F */  .float  4.734868025075263e+22
-/* 0A4F2C 800A537C 73740A5E */  .float  1.9334880142605756e+31
-/* 0A4F30 800A5380 34504F4C */  .float  1.9400357587073813e-07
-/* 0A4F34 800A5384 49574147 */  .float  881684.4375
-/* 0A4F38 800A5388 5E5E2E0A */  .float  4.0024361801162424e+18
-/* 0A4F3C 800A538C 00000000 */  .float  0.0
-/* 0A4F40 800A5390 596F7520 */  .float  4212581233328128.0
-/* 0A4F44 800A5394 68616420 */  .float  4.2575177555842014e+24
-/* 0A4F48 800A5398 61206772 */  .float  1.8493331700792374e+20
-/* 0A4F4C 800A539C 65617420 */  .float  6.654216167507686e+22
-/* 0A4F50 800A53A0 61647665 */  .float  2.633993046171813e+20
-/* 0A4F54 800A53A4 6E747572 */  .float  1.8914081266770539e+28
-/* 0A4F58 800A53A8 650A7769 */  .float  4.086808145175978e+22
-/* 0A4F5C 800A53AC 7468205E */  .float  7.356380345060261e+31
-/* 0A4F60 800A53B0 3650494B */  .float  3.103707740592654e-06
-/* 0A4F64 800A53B4 41434855 */  .float  12.205159187316895
-/* 0A4F68 800A53B8 5E5E210A */  .float  4.001521386441933e+18
-/* 0A4F6C 800A53BC 5E365049 */  .float  3.284270094347141e+18
-/* 0A4F70 800A53C0 4B414348 */  .float  12665672.0
-/* 0A4F74 800A53C4 555E5E27 */  .float  15280997662720.0
-/* 0A4F78 800A53C8 73206561 */  .float  1.2707881254078752e+31
-/* 0A4F7C 800A53CC 72732061 */  .float  4.815616069271255e+30
-/* 0A4F80 800A53D0 72652073 */  .float  4.538322940637518e+30
-/* 0A4F84 800A53D4 74696C6C */  .float  7.397486724349126e+31
-/* 0A4F88 800A53D8 0A72696E */  .float  1.167170528387321e-32
-/* 0A4F8C 800A53DC 67696E67 */  .float  1.1023479542889213e+24
-/* 0A4F90 800A53E0 2066726F */  .float  1.9519620686918816e-19
-/* 0A4F94 800A53E4 6D207468 */  .float  3.1036455057877954e+27
-/* 0A4F98 800A53E8 65206361 */  .float  4.7338240906816385e+22
-/* 0A4F9C 800A53EC 6E6E6F6E */  .float  1.8448035640942616e+28
-/* 0A4FA0 800A53F0 27730A62 */  .float  3.3728652906923635e-15
-/* 0A4FA4 800A53F4 6C617374 */  .float  1.0902140855245365e+27
-/* 0A4FA8 800A53F8 2E0A0000 */  .float  3.1377567211166024e-11
-/* 0A4FAC 800A53FC 596F7520 */  .float  4212581233328128.0
-/* 0A4FB0 800A5400 616E6420 */  .float  2.7484624100912005e+20
-/* 0A4FB4 800A5404 5E365049 */  .float  3.284270094347141e+18
-/* 0A4FB8 800A5408 4B414348 */  .float  12665672.0
-/* 0A4FBC 800A540C 555E5E20 */  .float  15280990322688.0
-/* 0A4FC0 800A5410 61726520 */  .float  2.794624306271748e+20
-/* 0A4FC4 800A5414 70616C73 */  .float  2.790609370818662e+29
-/* 0A4FC8 800A5418 210A0A5E */  .float  4.67699395468481e-19
-/* 0A4FCC 800A541C 3650494B */  .float  3.103707740592654e-06
-/* 0A4FD0 800A5420 41434855 */  .float  12.205159187316895
-/* 0A4FD4 800A5424 5E5E2069 */  .float  4.001477131098915e+18
-/* 0A4FD8 800A5428 73207665 */  .float  1.2713147334948994e+31
-/* 0A4FDC 800A542C 72792070 */  .float  4.934462846514475e+30
-/* 0A4FE0 800A5430 6C656173 */  .float  1.1092168144646277e+27
-/* 0A4FE4 800A5434 65640A74 */  .float  6.730577401349529e+22
-/* 0A4FE8 800A5438 68617420 */  .float  4.258698347204919e+24
-/* 0A4FEC 800A543C 69742068 */  .float  1.8445683385925313e+25
-/* 0A4FF0 800A5440 61642074 */  .float  2.6301225893201812e+20
-/* 0A4FF4 800A5444 68652063 */  .float  4.328077416357269e+24
-/* 0A4FF8 800A5448 68616E63 */  .float  4.258274936782352e+24
-/* 0A4FFC 800A544C 6520746F */  .float  4.7357903622789485e+22
-/* 0A5000 800A5450 0A656174 */  .float  1.1044277827282122e-32
-/* 0A5004 800A5454 20736F6D */  .float  2.0619768316674928e-19
-/* 0A5008 800A5458 65746869 */  .float  7.2136465578202075e+22
-/* 0A500C 800A545C 6E672073 */  .float  1.7882566491775977e+28
-/* 0A5010 800A5460 70656369 */  .float  2.8396898701484228e+29
-/* 0A5014 800A5464 616C2E0A */  .float  2.7229681659193537e+20
-/* 0A5018 800A5468 00000000 */  .float  0.0
-/* 0A501C 800A546C 596F7520 */  .float  4212581233328128.0
-/* 0A5020 800A5470 73747265 */  .float  1.9367075046107913e+31
-/* 0A5024 800A5474 6E677468 */  .float  1.7907940947480057e+28
-/* 0A5028 800A5478 656E6564 */  .float  7.0362096864614e+22
-/* 0A502C 800A547C 20796F75 */  .float  2.1127998424785165e-19
-/* 0A5030 800A5480 720A6672 */  .float  2.741297928878423e+30
-/* 0A5034 800A5484 69656E64 */  .float  1.733533235495457e+25
-/* 0A5038 800A5488 73686970 */  .float  1.8413565029032364e+31
-/* 0A503C 800A548C 20776974 */  .float  2.095660530939447e-19
-/* 0A5040 800A5490 68205E36 */  .float  3.0292660892486e+24
-/* 0A5044 800A5494 50494B41 */  .float  13508609024.0
-/* 0A5048 800A5498 4348555E */  .float  200.33346557617188
-/* 0A504C 800A549C 5E210A0A */  .float  2.9010245962474455e+18
-/* 0A5050 800A54A0 4974206C */  .float  999942.75
-/* 0A5054 800A54A4 6F6F6B73 */  .float  7.409681548214577e+28
-/* 0A5058 800A54A8 206C696B */  .float  2.0024857435187376e-19
-/* 0A505C 800A54AC 65205E36 */  .float  4.733228264450937e+22
-/* 0A5060 800A54B0 50494B41 */  .float  13508609024.0
-/* 0A5064 800A54B4 4348555E */  .float  200.33346557617188
-/* 0A5068 800A54B8 5E277320 */  .float  3.016505752756945e+18
-/* 0A506C 800A54BC 6D6F6F64 */  .float  4.6313487718704364e+27
-/* 0A5070 800A54C0 0A686173 */  .float  1.1188721838427195e-32
-/* 0A5074 800A54C4 20696D70 */  .float  1.9772077502339707e-19
-/* 0A5078 800A54C8 726F7665 */  .float  4.743043043393969e+30
-/* 0A507C 800A54CC 642E0A00 */  .float  1.2841816179063365e+22
-/* 0A5080 800A54D0 596F7520 */  .float  4212581233328128.0
-/* 0A5084 800A54D4 67617A65 */  .float  1.0647902392396606e+24
-/* 0A5088 800A54D8 64206174 */  .float  1.1834005158050023e+22
-/* 0A508C 800A54DC 20746865 */  .float  2.0702145165927553e-19
-/* 0A5090 800A54E0 20737461 */  .float  2.0621407168263549e-19
-/* 0A5094 800A54E4 72730A77 */  .float  4.8139205508092454e+30
-/* 0A5098 800A54E8 69746820 */  .float  1.8466851024749895e+25
-/* 0A509C 800A54EC 5E365049 */  .float  3.284270094347141e+18
-/* 0A50A0 800A54F0 4B414348 */  .float  12665672.0
-/* 0A50A4 800A54F4 555E5E21 */  .float  15280991371264.0
-/* 0A50A8 800A54F8 0A0A5E36 */  .float  6.662177416106671e-33
-/* 0A50AC 800A54FC 50494B41 */  .float  13508609024.0
-/* 0A50B0 800A5500 4348555E */  .float  200.33346557617188
-/* 0A50B4 800A5504 5E206861 */  .float  2.889648774068568e+18
-/* 0A50B8 800A5508 64206E6F */  .float  1.183774652344046e+22
-/* 0A50BC 800A550C 20696465 */  .float  1.9769085434967738e-19
-/* 0A50C0 800A5510 61207468 */  .float  1.849916878812191e+20
-/* 0A50C4 800A5514 6572650A */  .float  7.154228316136495e+22
-/* 0A50C8 800A5518 77657265 */  .float  4.6537350677488506e+33
-/* 0A50CC 800A551C 20736F20 */  .float  2.061966879650748e-19
-/* 0A50D0 800A5520 6D616E79 */  .float  4.3604800285190423e+27
-/* 0A50D4 800A5524 20737461 */  .float  2.0621407168263549e-19
-/* 0A50D8 800A5528 72732069 */  .float  4.815618487122894e+30
-/* 0A50DC 800A552C 6E207468 */  .float  1.2414582023151182e+28
-/* 0A50E0 800A5530 6520736B */  .float  4.735673268688637e+22
-/* 0A50E4 800A5534 792E0A00 */  .float  5.647890484256853e+34
-/* 0A50E8 800A5538 6B656570 */  .float  2.7732303774185617e+26
-/* 0A50EC 800A553C 696E6720 */  .float  1.801320869448923e+25
-/* 0A50F0 800A5540 6974656D */  .float  1.8466054355990212e+25
-/* 0A50F4 800A5544 20666F75 */  .float  1.9518635825001995e-19
-/* 0A50F8 800A5548 6E642C20 */  .float  1.7653981522764293e+28
-/* 0A50FC 800A554C 25730A00 */  .float  2.1080278364907223e-16
-/* 0A5100 800A5550 53747261 */  .float  1049890979840.0
-/* 0A5104 800A5554 6E676520 */  .float  1.790332247305981e+28
-/* 0A5108 800A5558 61726561 */  .float  2.794635741192677e+20
-/* 0A510C 800A555C 2E206375 */  .float  3.646812365976082e-11
-/* 0A5110 800A5560 72417265 */  .float  3.831609689470108e+30
-/* 0A5114 800A5564 614E756D */  .float  2.3803066865369167e+20
-/* 0A5118 800A5568 203D2025 */  .float  1.6019558436326118e-19
-/* 0A511C 800A556C 640A0000 */  .float  1.0182602728687672e+22
-/* 0A5120 800A5570 7469746C */  .float  7.398477076380554e+31
-/* 0A5124 800A5574 6520696D */  .float  4.7345212479039554e+22
-/* 0A5128 800A5578 61676520 */  .float  2.667802940764995e+20
-/* 0A512C 800A557C 6368616E */  .float  4.286665173969733e+21
-/* 0A5130 800A5580 6765642C */  .float  1.0832697695186574e+24
-/* 0A5134 800A5584 20746F20 */  .float  2.070437209123291e-19
-/* 0A5138 800A5588 25640A00 */  .float  1.9779235757924618e-16
+
+glabel D_800A4D70
+/* 0A4920 800A4D70  */  .asciz  "You talked to ^6PIKACHU^^!\n\n^6PIKACHU^^ wants to do more\nfun things together.\n"
+                        .balign 4
+
+glabel D_800A4DC0
+/* 0A4970 800A4DC0  */  .asciz  "You and ^6PIKACHU^^ are\nstarting to become friends!\n^6PIKACHU^^ is friends with\na lot of Pok´mon.\n"
+                        .balign 4
+
+glabel D_800A4E24
+/* 0A49D4 800A4E24  */  .asciz  "You and ^6PIKACHU^^ are friends!\n\n^6PIKACHU^^ really enjoys\nfield trips."
+                        .balign 4
+
+glabel D_800A4E70
+/* 0A4A20 800A4E70  */  .asciz  "You and ^6PIKACHU^^ have\nsomething in common!\n^6PIKACHU^^ loves having\npicnics."
+                        .balign 4
+
+glabel D_800A4EC0
+/* 0A4A70 800A4EC0  */  .asciz  "You had great fun fishing\nwith ^6PIKACHU^^!\n\n^6PIKACHU^^ knows lots of ways\nto have fun."
+                        .balign 4
+
+glabel D_800A4F1C
+/* 0A4ACC 800A4F1C  */  .asciz  "You and ^6PIKACHU^^ caught\na really big one!\n\n^6PIKACHU^^ loves to fish.\n"
+                        .balign 4
+
+glabel D_800A4F68
+/* 0A4B18 800A4F68  */  .asciz  "You and ^6PIKACHU^^ caught\na whole lot of fish!\n\n^6PIKACHU^^ caught a big one,\nso it's in a good mood.\n"
+                        .balign 4
+
+glabel D_800A4FD0
+/* 0A4B80 800A4FD0  */  .asciz  "You're getting along even\nbetter with ^6PIKACHU^^!\n\n^6PIKACHU^^ enjoys sprinkling\nwater on ^4ODDISH^^.\n"
+                        .balign 4
+
+glabel D_800A5038
+/* 0A4BE8 800A5038  */  .asciz  "You went on a picnic\nwith ^6PIKACHU^^!\n\n^6PIKACHU^^ filled its tummy\nwith a very tasty meal!\n"
+                        .balign 4
+
+glabel D_800A5098
+/* 0A4C48 800A5098  */  .asciz  "You and ^6PIKACHU^^ helped\nthe lost ^4POLIWAG^^\ntogether!\n^6PIKACHU^^ is happy because\n^4SQUIRTLE^^ thanked it.\n"
+                        .balign 4
+
+glabel D_800A510C
+/* 0A4CBC 800A510C  */  .asciz  "You and ^6PIKACHU^^ traveled\nvery far together!\n\n^6PIKACHU^^ can't wait to\nopen more ^4treasure chest^^s.\n"
+                        .balign 4
+
+glabel D_800A5178
+/* 0A4D28 800A5178  */  .asciz  "You and ^6PIKACHU^^ had fun at\nthe pi￣ata party!\n\n^6PIKACHU^^ feels sick from\neating too many treats.\n"
+                        .balign 4
+
+glabel D_800A51E0
+/* 0A4D90 800A51E0  */  .asciz  "^6PIKACHU^^ understands your\nfeelings!\n^6PIKACHU^^ wants to talk\nwith you some more.\n"
+                        .balign 4
+
+glabel D_800A5238
+/* 0A4DE8 800A5238  */  .asciz  "You and ^6PIKACHU^^ worked\nhard together!\n^6PIKACHU^^ has become quite\ngood at caring for\n^4CATERPIE^^.\n"
+                        .balign 4
+
+glabel D_800A52A4
+/* 0A4E54 800A52A4  */  .asciz  "You and ^6PIKACHU^^ have\nbecome good friends!\n^6PIKACHU^^ is very happy that\nit found the legendary\n^4ODDISH^^.\n"
+                        .balign 4
+
+glabel D_800A5318
+/* 0A4EC8 800A5318  */  .asciz  "Your friendship with\n^6PIKACHU^^ has grown!\n^6PIKACHU^^ is relieved that it\ncould help all of the lost\n^4POLIWAG^^.\n"
+                        .balign 4
+
+glabel D_800A5390
+/* 0A4F40 800A5390  */  .asciz  "You had a great adventure\nwith ^6PIKACHU^^!\n^6PIKACHU^^'s ears are still\nringing from the cannon's\nblast.\n"
+                        .balign 4
+
+glabel D_800A53FC
+/* 0A4FAC 800A53FC  */  .asciz  "You and ^6PIKACHU^^ are pals!\n\n^6PIKACHU^^ is very pleased\nthat it had the chance to\neat something special.\n"
+                        .balign 4
+
+glabel D_800A546C
+/* 0A501C 800A546C  */  .asciz  "You strengthened your\nfriendship with ^6PIKACHU^^!\n\nIt looks like ^6PIKACHU^^'s mood\nhas improved.\n"
+                        .balign 4
+
+glabel D_800A54D0
+/* 0A5080 800A54D0  */  .asciz  "You gazed at the stars\nwith ^6PIKACHU^^!\n\n^6PIKACHU^^ had no idea there\nwere so many stars in the sky.\n"
+                        .balign 4
+/* 0A50E8 800A5538  */  .asciz  "keeping item found, %s\n"
+                        .balign 4
+/* 0A5100 800A5550  */  .asciz  "Strange area. curAreaNum = %d\n"
+                        .balign 4
+/* 0A5120 800A5570  */  .asciz  "title image changed, to %d\n"
+                        .balign 4
 
 glabel D_800A558C
 /* 0A513C 800A558C 25730000 */  .word  0x25730000
@@ -3088,79 +2828,78 @@ glabel D_800A5B00
 
 glabel D_800A5B08
 /* 0A56B8 800A5B08 3FB999999999999A */  .double  0.1
-/* 0A56C0 800A5B10 0A0000000A507265 */  .double  1.6259746061709608e-260
-/* 0A56C8 800A5B18 7373204049404A20 */  .double  1.3372732669945774e+248
-/* 0A56D0 800A5B20 746F2074616B6520 */  .double  7.131493937424547e+252
-/* 0A56D8 800A5B28 6974206F75742E00 */  .double  9.6287459264703e+199
-/* 0A56E0 800A5B30 0A28596F75206361 */  .double  9.897858641804896e-260
-/* 0A56E8 800A5B38 6E27742074616B65 */  .double  4.238934456196729e+222
-/* 0A56F0 800A5B40 206974206F75742E */  .double  1.5187341619277743e-152
-/* 0A56F8 800A5B48 290000000A507265 */  .double  3.326531252823532e-111
-/* 0A5700 800A5B50 7373204049404A20 */  .double  1.3372732669945774e+248
-/* 0A5708 800A5B58 746F2074616B6520 */  .double  7.131493937424547e+252
-/* 0A5710 800A5B60 6974206F75742E00 */  .double  9.6287459264703e+199
-/* 0A5718 800A5B68 0A50726573732040 */  .double  5.348435305531191e-259
-/* 0A5720 800A5B70 49404A20746F2074 */  .double  7.265385522772648e+44
-/* 0A5728 800A5B78 616B65206974206F */  .double  1.9257478054524771e+161
-/* 0A5730 800A5B80 75742E000A507265 */  .double  6.059973924868723e+257
-/* 0A5738 800A5B88 7373204049404A20 */  .double  1.3372732669945774e+248
-/* 0A5740 800A5B90 746F206F70656E20 */  .double  7.131476662148006e+252
-/* 0A5748 800A5B98 746865206D656E75 */  .double  5.589174457483281e+252
-/* 0A5750 800A5BA0 2E0000000A3F3F3F */  .double  4.021529520286819e-87
-/* 0A5758 800A5BA8 0000000050726573 */  .double  6.66827732e-315
-/* 0A5760 800A5BB0 73204049404A2074 */  .double  3.550828545019514e+246
-/* 0A5768 800A5BB8 6F2073746F726520 */  .double  1.9485830699098944e+227
-/* 0A5770 800A5BC0 6F722072656D6F76 */  .double  6.87062998462608e+228
-/* 0A5778 800A5BC8 6520616E20697465 */  .double  1.3275683462144318e+179
-/* 0A5780 800A5BD0 6D2E000050726573 */  .double  8.273479717032415e+217
-/* 0A5788 800A5BD8 7320404B404C2074 */  .double  3.5508352131356924e+246
-/* 0A5790 800A5BE0 6F20726561642061 */  .double  1.948093173694906e+227
-/* 0A5798 800A5BE8 2064657363726970 */  .double  1.2169799594274427e-152
-/* 0A57A0 800A5BF0 74696F6E2E000000 */  .double  5.827507165437114e+252
-/* 0A57A8 800A5BF8 5072657373204055 */  .double  3.4082322975381985e+79
-/* 0A57B0 800A5C00 405620746F20636C */  .double  88.5071065727513
-/* 0A57B8 800A5C08 6F73652074686520 */  .double  7.351349974329315e+228
-/* 0A57C0 800A5C10 746F6F6C20626F78 */  .double  7.202167375669651e+252
-/* 0A57C8 800A5C18 2E00000054696C74 */  .double  4.021530631375994e-87
-/* 0A57D0 800A5C20 20406B406C207570 */  .double  2.4491627331104406e-153
-/* 0A57D8 800A5C28 20746F206F70656E */  .double  2.4384703337405086e-152
-/* 0A57E0 800A5C30 2074686520436F6C */  .double  2.4353323875017423e-152
-/* 0A57E8 800A5C38 6C656374696F6E2E */  .double  1.4400818011320639e+214
-/* 0A57F0 800A5C40 0000000054696C74 */  .double  6.9969339e-315
-/* 0A57F8 800A5C48 20406B406C20646F */  .double  2.449162733108134e-153
-/* 0A5800 800A5C50 776E20746F206F70 */  .double  1.9428480641293452e+267
-/* 0A5808 800A5C58 656E207468652049 */  .double  3.9066102205064133e+180
-/* 0A5810 800A5C60 74656D2053746F72 */  .double  4.9090001351614356e+252
-/* 0A5818 800A5C68 6167652E00000000 */  .double  1.644580268194071e+161
-/* 0A5820 800A5C70 54696C7420406B40 */  .double  4.3443664218946363e+98
-/* 0A5828 800A5C78 6C206C656674206F */  .double  6.911154637927446e+212
-/* 0A5830 800A5C80 7220726967687420 */  .double  5.483415275694042e+241
-/* 0A5838 800A5C88 746F2063686F6F73 */  .double  7.131434601913563e+252
-/* 0A5840 800A5C90 6520616E20697465 */  .double  1.3275683462144318e+179
-/* 0A5848 800A5C98 6D2E0000436F6C6C */  .double  8.273479503148511e+217
-/* 0A5850 800A5CA0 656374696F6E0000 */  .double  2.5227412766259065e+180
-/* 0A5858 800A5CA8 4974656D2053746F */  .double  7.277606057541323e+45
-/* 0A5860 800A5CB0 7261676500000000 */  .double  9.283948449546554e+242
-/* 0A5868 800A5CB8 7075744974656D42 */  .double  5.329296769078661e+233
-/* 0A5870 800A5CC0 6F78496E746F436F */  .double  9.205508075461057e+228
-/* 0A5878 800A5CC8 6E74656E74282570 */  .double  1.1796316261784751e+224
-/* 0A5880 800A5CD0 2C20257028257329 */  .double  3.779574116263062e-96
-/* 0A5888 800A5CD8 290A000070757449 */  .double  5.405614471757944e-111
-/* 0A5890 800A5CE0 74656D496E746F42 */  .double  4.909143838233913e+252
-/* 0A5898 800A5CE8 6F78282573290A00 */  .double  9.156226156486087e+228
-/* 0A58A0 800A5CF0 6974656D626F7820 */  .double  9.7576763060573e+199
-/* 0A58A8 800A5CF8 66756C6C2E0A0000 */  .double  3.641231499465616e+185
-/* 0A58B0 800A5D00 707574426F6E7573 */  .double  5.329270163279586e+233
-/* 0A58B8 800A5D08 4974656D496E746F */  .double  7.27760693175796e+45
-/* 0A58C0 800A5D10 426F78282573290A */  .double  1081279064985.2825
-/* 0A58C8 800A5D18 0000000070757450 */  .double  9.32176223e-315
-/* 0A58D0 800A5D20 7572636861736549 */  .double  5.522022313348081e+257
-/* 0A58D8 800A5D28 74656D496E746F42 */  .double  4.909143838233913e+252
-/* 0A58E0 800A5D30 6F78282573290A00 */  .double  9.156226156486087e+228
-/* 0A58E8 800A5D38 6B656570696E6720 */  .double  2.1981868060683246e+209
-/* 0A58F0 800A5D40 737570706C792069 */  .double  1.499012771866596e+248
-/* 0A58F8 800A5D48 74656D2C2025730A */  .double  4.90904138600664e+252
-/* 0A5900 800A5D50 00000000 */  .word  0x00000000
+
+glabel D_800A5B10
+/* 0A56C0 800A5B10  */  .asciz  "\n"
+                        .balign 4
+
+glabel D_800A5B14
+/* 0A56C4 800A5B14  */  .asciz  "\nPress @I@J to take it out."
+                        .balign 4
+
+glabel D_800A5B30
+/* 0A56E0 800A5B30  */  .asciz  "\n(You can't take it out.)"
+                        .balign 4
+
+glabel D_800A5B4C
+/* 0A56FC 800A5B4C  */  .asciz  "\nPress @I@J to take it out."
+                        .balign 4
+
+glabel D_800A5B68
+/* 0A5718 800A5B68  */  .asciz  "\nPress @I@J to take it out."
+                        .balign 4
+
+glabel D_800A5B84
+/* 0A5734 800A5B84  */  .asciz  "\nPress @I@J to open the menu."
+                        .balign 4
+
+glabel D_800A5BA4
+/* 0A5754 800A5BA4  */  .asciz  "\n???"
+                        .balign 4
+
+glabel D_800A5BAC
+/* 0A575C 800A5BAC  */  .asciz  "Press @I@J to store or remove an item."
+                        .balign 4
+
+glabel D_800A5BD4
+/* 0A5784 800A5BD4  */  .asciz  "Press @K@L to read a description."
+                        .balign 4
+
+glabel D_800A5BF8
+/* 0A57A8 800A5BF8  */  .asciz  "Press @U@V to close the tool box."
+                        .balign 4
+
+glabel D_800A5C1C
+/* 0A57CC 800A5C1C  */  .asciz  "Tilt @k@l up to open the Collection."
+                        .balign 4
+
+glabel D_800A5C44
+/* 0A57F4 800A5C44  */  .asciz  "Tilt @k@l down to open the Item Storage."
+                        .balign 4
+
+glabel D_800A5C70
+/* 0A5820 800A5C70  */  .asciz  "Tilt @k@l left or right to choose an item."
+                        .balign 4
+
+glabel D_800A5C9C
+/* 0A584C 800A5C9C  */  .asciz  "Collection"
+                        .balign 4
+
+glabel D_800A5CA8
+/* 0A5858 800A5CA8  */  .asciz  "Item Storage"
+                        .balign 4
+/* 0A5868 800A5CB8  */  .asciz  "putItemBoxIntoContent(%p, %p(%s))\n"
+                        .balign 4
+/* 0A588C 800A5CDC  */  .asciz  "putItemIntoBox(%s)\n"
+                        .balign 4
+/* 0A58A0 800A5CF0  */  .asciz  "itembox full.\n"
+                        .balign 4
+/* 0A58B0 800A5D00  */  .asciz  "putBonusItemIntoBox(%s)\n"
+                        .balign 4
+/* 0A58CC 800A5D1C  */  .asciz  "putPurchaseItemIntoBox(%s)\n"
+                        .balign 4
+/* 0A58E8 800A5D38  */  .asciz  "keeping supply item, %s\n"
+                        .balign 4
 
 glabel D_800A5D54
 /* 0A5904 800A5D54 20000000 */  .word  0x20000000
@@ -3502,210 +3241,162 @@ glabel D_800A61C8
 glabel D_800A61E8
 /* 0A5D98 800A61E8 3F19999A */  .float  0.6000000238418579
 /* 0A5D9C 800A61EC 00000000 */  .float  0.0
-/* 0A5DA0 800A61F0 20000000 */  .float  1.0842021724855044e-19
-/* 0A5DA4 800A61F4 5E635361 */  .float  4.09513573057613e+18
-/* 0A5DA8 800A61F8 76656420 */  .float  1.1631511297519933e+33
-/* 0A5DAC 800A61FC 64617461 */  .float  1.6635613602263159e+22
-/* 0A5DB0 800A6200 20686173 */  .float  1.9683407618083143e-19
-/* 0A5DB4 800A6204 20626565 */  .float  1.9176493244134749e-19
-/* 0A5DB8 800A6208 6E206C6F */  .float  1.2412172435653297e+28
-/* 0A5DBC 800A620C 73742E5E */  .float  1.9346021602959324e+31
-/* 0A5DC0 800A6210 5E000000 */  .float  2.305843009213694e+18
-/* 0A5DC4 800A6214 20000000 */  .float  1.0842021724855044e-19
-/* 0A5DC8 800A6218 20000000 */  .float  1.0842021724855044e-19
-/* 0A5DCC 800A621C 50726573 */  .float  16266939392.0
-/* 0A5DD0 800A6220 73204055 */  .float  1.2696415801605527e+31
-/* 0A5DD4 800A6224 40562074 */  .float  3.345730781555176
-/* 0A5DD8 800A6228 6F207265 */  .float  4.965589607386605e+28
-/* 0A5DDC 800A622C 7475726E */  .float  7.7785256355818215e+31
-/* 0A5DE0 800A6230 20746F20 */  .float  2.070437209123291e-19
-/* 0A5DE4 800A6234 74686500 */  .float  7.364876675720513e+31
-/* 0A5DE8 800A6238 5469746C */  .float  4010722459648.0
-/* 0A5DEC 800A623C 65205363 */  .float  4.731980316994193e+22
-/* 0A5DF0 800A6240 7265656E */  .float  4.5436600458996617e+30
-/* 0A5DF4 800A6244 2E000000 */  .float  2.9103830456733704e-11
-/* 0A5DF8 800A6248 20000000 */  .float  1.0842021724855044e-19
-/* 0A5DFC 800A624C 5E634E6F */  .float  4.094787735145939e+18
-/* 0A5E00 800A6250 20636F6E */  .float  1.9264516893537755e-19
-/* 0A5E04 800A6254 74726F6C */  .float  7.683079491412263e+31
-/* 0A5E08 800A6258 6C657220 */  .float  1.1095318110664303e+27
-/* 0A5E0C 800A625C 69732063 */  .float  1.8370119757591876e+25
-/* 0A5E10 800A6260 6F6E6E65 */  .float  7.3790891136652505e+28
-/* 0A5E14 800A6264 63746564 */  .float  4.5083115184806324e+21
-/* 0A5E18 800A6268 2E5E5E00 */  .float  5.056044471984933e-11
-/* 0A5E1C 800A626C 20000000 */  .float  1.0842021724855044e-19
-/* 0A5E20 800A6270 506C6561 */  .float  15864267776.0
-/* 0A5E24 800A6274 73652074 */  .float  1.8153292971475892e+31
-/* 0A5E28 800A6278 75726E20 */  .float  3.0731675784253673e+32
-/* 0A5E2C 800A627C 796F7572 */  .float  7.7708813945248605e+34
-/* 0A5E30 800A6280 204E3634 */  .float  1.7466813023094502e-19
-/* 0A5E34 800A6284 20436F6E */  .float  1.6554011462323994e-19
-/* 0A5E38 800A6288 74726F6C */  .float  7.683079491412263e+31
-/* 0A5E3C 800A628C 00000000 */  .float  0.0
-/* 0A5E40 800A6290 4465636B */  .float  917.5534057617188
-/* 0A5E44 800A6294 204F4646 */  .float  1.7556833538195e-19
-/* 0A5E48 800A6298 20616E64 */  .float  1.9094766507144802e-19
-/* 0A5E4C 800A629C 20696E73 */  .float  1.977241225199385e-19
-/* 0A5E50 800A62A0 65727420 */  .float  7.155967606312585e+22
-/* 0A5E54 800A62A4 6120636F */  .float  1.8491524983285613e+20
-/* 0A5E58 800A62A8 6E74726F */  .float  1.8913171030630966e+28
-/* 0A5E5C 800A62AC 6C6C6572 */  .float  1.1431422214905869e+27
-/* 0A5E60 800A62B0 00000000 */  .float  0.0
-/* 0A5E64 800A62B4 696E2074 */  .float  1.7992350038627883e+25
-/* 0A5E68 800A62B8 68652050 */  .float  4.328071939980122e+24
-/* 0A5E6C 800A62BC 6C617965 */  .float  1.090326315515481e+27
-/* 0A5E70 800A62C0 72204F6E */  .float  3.1752720749745845e+30
-/* 0A5E74 800A62C4 6520636F */  .float  4.733830395721117e+22
-/* 0A5E78 800A62C8 6E74726F */  .float  1.8913171030630966e+28
-/* 0A5E7C 800A62CC 6C6C6572 */  .float  1.1431422214905869e+27
-/* 0A5E80 800A62D0 20736F63 */  .float  2.0619755391977857e-19
-/* 0A5E84 800A62D4 6B65742E */  .float  2.7739265575399035e+26
-/* 0A5E88 800A62D8 00000000 */  .float  0.0
-/* 0A5E8C 800A62DC 54686520 */  .float  3992516034560.0
-/* 0A5E90 800A62E0 6D696372 */  .float  4.5143893308933935e+27
-/* 0A5E94 800A62E4 6F70686F */  .float  7.440265482504234e+28
-/* 0A5E98 800A62E8 6E652069 */  .float  1.7727812180949098e+28
-/* 0A5E9C 800A62EC 73206E6F */  .float  1.271068354412862e+31
-/* 0A5EA0 800A62F0 7420636F */  .float  5.082911683608234e+31
-/* 0A5EA4 800A62F4 6E6E6563 */  .float  1.8445000339885752e+28
-/* 0A5EA8 800A62F8 7465642E */  .float  7.269701330934548e+31
-/* 0A5EAC 800A62FC 00000000 */  .float  0.0
-/* 0A5EB0 800A6300 20000000 */  .float  1.0842021724855044e-19
-/* 0A5EB4 800A6304 506C6561 */  .float  15864267776.0
-/* 0A5EB8 800A6308 73652074 */  .float  1.8153292971475892e+31
-/* 0A5EBC 800A630C 75726E20 */  .float  3.0731675784253673e+32
-/* 0A5EC0 800A6310 74686520 */  .float  7.364892149971004e+31
-/* 0A5EC4 800A6314 706F7765 */  .float  2.9644502591540153e+29
-/* 0A5EC8 800A6318 72204F46 */  .float  3.1752599857163883e+30
-/* 0A5ECC 800A631C 4620616E */  .float  10264.357421875
-/* 0A5ED0 800A6320 64000000 */  .float  9.44473296573929e+21
-/* 0A5ED4 800A6324 636F6E66 */  .float  4.4167268794083794e+21
-/* 0A5ED8 800A6328 69726D20 */  .float  1.8317211036823963e+25
-/* 0A5EDC 800A632C 74686174 */  .float  7.364437593862829e+31
-/* 0A5EE0 800A6330 20746865 */  .float  2.0702145165927553e-19
-/* 0A5EE4 800A6334 20565255 */  .float  1.8153746455258871e-19
-/* 0A5EE8 800A6338 20697300 */  .float  1.9773917979202637e-19
-/* 0A5EEC 800A633C 696E7365 */  .float  1.80168300209352e+25
-/* 0A5EF0 800A6340 72746564 */  .float  4.840762633013604e+30
-/* 0A5EF4 800A6344 20696E20 */  .float  1.9772304977008159e-19
-/* 0A5EF8 800A6348 74686520 */  .float  7.364892149971004e+31
-/* 0A5EFC 800A634C 506C6179 */  .float  15863243776.0
-/* 0A5F00 800A6350 65722046 */  .float  7.146300179352472e+22
-/* 0A5F04 800A6354 6F757200 */  .float  7.596164494966561e+28
-/* 0A5F08 800A6358 636F6E74 */  .float  4.4167308200580533e+21
-/* 0A5F0C 800A635C 726F6C6C */  .float  4.7422714464896e+30
-/* 0A5F10 800A6360 65722073 */  .float  7.146320445550795e+22
-/* 0A5F14 800A6364 6F636B65 */  .float  7.038292925115887e+28
-/* 0A5F18 800A6368 742E0000 */  .float  5.514280110992798e+31
-/* 0A5F1C 800A636C 50726573 */  .float  16266939392.0
-/* 0A5F20 800A6370 73204055 */  .float  1.2696415801605527e+31
-/* 0A5F24 800A6374 40562074 */  .float  3.345730781555176
-/* 0A5F28 800A6378 6F20636F */  .float  4.963780941023666e+28
-/* 0A5F2C 800A637C 6E74696E */  .float  1.8910449766945212e+28
-/* 0A5F30 800A6380 75652E00 */  .float  2.9051976841949304e+32
-/* 0A5F34 800A6384 47616D65 */  .float  57709.39453125
-/* 0A5F38 800A6388 20646174 */  .float  1.934459573165113e-19
-/* 0A5F3C 800A638C 61206973 */  .float  1.8494234179936453e+20
-/* 0A5F40 800A6390 20616C72 */  .float  1.909412285723066e-19
-/* 0A5F44 800A6394 65616479 */  .float  6.652411575136998e+22
-/* 0A5F48 800A6398 20736176 */  .float  2.0615147737471995e-19
-/* 0A5F4C 800A639C 65642E00 */  .float  6.734675677010436e+22
-/* 0A5F50 800A63A0 49662079 */  .float  942599.5625
-/* 0A5F54 800A63A4 6F752073 */  .float  7.586305610460274e+28
-/* 0A5F58 800A63A8 74617274 */  .float  7.144703236889674e+31
-/* 0A5F5C 800A63AC 2061206E */  .float  1.906897139673022e-19
-/* 0A5F60 800A63B0 65772067 */  .float  7.293888993820919e+22
-/* 0A5F64 800A63B4 616D652C */  .float  2.736980342103731e+20
-/* 0A5F68 800A63B8 20796F75 */  .float  2.1127998424785165e-19
-/* 0A5F6C 800A63BC 72000000 */  .float  2.535301200456459e+30
-/* 0A5F70 800A63C0 70726576 */  .float  3.0007212449516625e+29
-/* 0A5F74 800A63C4 696F7573 */  .float  1.8092994321372537e+25
-/* 0A5F78 800A63C8 6C792073 */  .float  1.2047030647482519e+27
-/* 0A5F7C 800A63CC 61766564 */  .float  2.8407531291425322e+20
-/* 0A5F80 800A63D0 20646174 */  .float  1.934459573165113e-19
-/* 0A5F84 800A63D4 61207769 */  .float  1.8500521627228727e+20
-/* 0A5F88 800A63D8 6C6C2062 */  .float  1.1418376677496941e+27
-/* 0A5F8C 800A63DC 65206C6F */  .float  4.734868025075263e+22
-/* 0A5F90 800A63E0 73742E00 */  .float  1.934590796393228e+31
-/* 0A5F94 800A63E4 49732074 */  .float  995847.25
-/* 0A5F98 800A63E8 68697320 */  .float  4.4097402876804526e+24
-/* 0A5F9C 800A63EC 4F4B3F00 */  .float  3409903616.0
-/* 0A5FA0 800A63F0 40650000 */  .float  3.578125
-/* 0A5FA4 800A63F4 40660000 */  .float  3.59375
-/* 0A5FA8 800A63F8 40670000 */  .float  3.609375
-/* 0A5FAC 800A63FC 40680000 */  .float  3.625
-/* 0A5FB0 800A6400 4E657720 */  .float  962447360.0
-/* 0A5FB4 800A6404 47616D65 */  .float  57709.39453125
-/* 0A5FB8 800A6408 00000000 */  .float  0.0
-/* 0A5FBC 800A640C 436F6E74 */  .float  239.43145751953125
-/* 0A5FC0 800A6410 696E7565 */  .float  1.8017420316745559e+25
-/* 0A5FC4 800A6414 00000000 */  .float  0.0
-/* 0A5FC8 800A6418 4E657720 */  .float  962447360.0
-/* 0A5FCC 800A641C 47616D65 */  .float  57709.39453125
-/* 0A5FD0 800A6420 3A204669 */  .float  0.0006114007555879653
-/* 0A5FD4 800A6424 6C652031 */  .float  1.1079841292386461e+27
-/* 0A5FD8 800A6428 00000000 */  .float  0.0
-/* 0A5FDC 800A642C 4E657720 */  .float  962447360.0
-/* 0A5FE0 800A6430 47616D65 */  .float  57709.39453125
-/* 0A5FE4 800A6434 3A204669 */  .float  0.0006114007555879653
-/* 0A5FE8 800A6438 6C652032 */  .float  1.1079842030256224e+27
-/* 0A5FEC 800A643C 00000000 */  .float  0.0
-/* 0A5FF0 800A6440 436F6E74 */  .float  239.43145751953125
-/* 0A5FF4 800A6444 696E7565 */  .float  1.8017420316745559e+25
-/* 0A5FF8 800A6448 3A204669 */  .float  0.0006114007555879653
-/* 0A5FFC 800A644C 6C652031 */  .float  1.1079841292386461e+27
-/* 0A6000 800A6450 00000000 */  .float  0.0
-/* 0A6004 800A6454 436F6E74 */  .float  239.43145751953125
-/* 0A6008 800A6458 696E7565 */  .float  1.8017420316745559e+25
-/* 0A600C 800A645C 3A204669 */  .float  0.0006114007555879653
-/* 0A6010 800A6460 6C652032 */  .float  1.1079842030256224e+27
-/* 0A6014 800A6464 00000000 */  .float  0.0
-/* 0A6018 800A6468 49205175 */  .float  656663.3125
-/* 0A601C 800A646C 69740000 */  .float  1.8436118749123095e+25
-/* 0A6020 800A6470 42656769 */  .float  57.35098648071289
-/* 0A6024 800A6474 6E000000 */  .float  9.903520314283042e+27
-/* 0A6028 800A6478 4552524F */  .float  3365.144287109375
-/* 0A602C 800A647C 523A2049 */  .float  199851393024.0
-/* 0A6030 800A6480 6E76616C */  .float  1.9062772059033414e+28
-/* 0A6034 800A6484 69642074 */  .float  1.723677140136874e+25
-/* 0A6038 800A6488 69746C65 */  .float  1.846811116795443e+25
-/* 0A603C 800A648C 53746174 */  .float  1049607012352.0
-/* 0A6040 800A6490 3A25640A */  .float  0.0006309157470241189
-/* 0A6044 800A6494 00000000 */  .float  0.0
-/* 0A6048 800A6498 5F736574 */  .float  1.7538551867213087e+19
-/* 0A604C 800A649C 566F6C75 */  .float  65812274610176.0
-/* 0A6050 800A64A0 6D652825 */  .float  4.4325374380895295e+27
-/* 0A6054 800A64A4 66292076 */  .float  1.996696835528563e+23
-/* 0A6058 800A64A8 6F6C3A25 */  .float  7.310875474293495e+28
-/* 0A605C 800A64AC 640A0000 */  .float  1.0182602728687672e+22
-/* 0A6060 800A64B0 496E7661 */  .float  976742.0625
-/* 0A6064 800A64B4 6C696420 */  .float  1.1286101716572237e+27
-/* 0A6068 800A64B8 6C6F6164 */  .float  1.1575727404445684e+27
-/* 0A606C 800A64BC 53656C4E */  .float  985364561920.0
-/* 0A6070 800A64C0 756D3A25 */  .float  3.007211100272898e+32
-/* 0A6074 800A64C4 640A0000 */  .float  1.0182602728687672e+22
-/* 0A6078 800A64C8 496E7661 */  .float  976742.0625
-/* 0A607C 800A64CC 6C696420 */  .float  1.1286101716572237e+27
-/* 0A6080 800A64D0 6C6F6164 */  .float  1.1575727404445684e+27
-/* 0A6084 800A64D4 53656C4E */  .float  985364561920.0
-/* 0A6088 800A64D8 756D3A25 */  .float  3.007211100272898e+32
-/* 0A608C 800A64DC 640A0000 */  .float  1.0182602728687672e+22
-/* 0A6090 800A64E0 70644643 */  .float  2.825900937807762e+29
-/* 0A6094 800A64E4 423A2578 */  .float  46.536590576171875
-/* 0A6098 800A64E8 0A000000 */  .float  6.162975822039155e-33
-/* 0A609C 800A64EC 65657072 */  .float  6.7718510904945284e+22
-/* 0A60A0 800A64F0 6F6D4765 */  .float  7.343425801986619e+28
-/* 0A60A4 800A64F4 74537461 */  .float  6.701263926981422e+31
-/* 0A60A8 800A64F8 74653A25 */  .float  7.264497630636599e+31
-/* 0A60AC 800A64FC 640A0000 */  .float  1.0182602728687672e+22
-/* 0A60B0 800A6500 66696C65 */  .float  2.7557772917139645e+23
-/* 0A60B4 800A6504 53656C41 */  .float  985363709952.0
-/* 0A60B8 800A6508 7474723A */  .float  7.746809224919068e+31
-/* 0A60BC 800A650C 25780A00 */  .float  2.1513959233901425e-16
-/* 0A60C0 800A6510 65657072 */  .float  6.7718510904945284e+22
-/* 0A60C4 800A6514 6F6D5374 */  .float  7.344883596519881e+28
-/* 0A60C8 800A6518 6174653A */  .float  2.8176873103322566e+20
-/* 0A60CC 800A651C 25640A00 */  .float  1.9779235757924618e-16
+
+glabel D_800A61F0
+/* 0A5DA0 800A61F0  */  .asciz  " "
+                        .balign 4
+
+glabel D_800A61F4
+/* 0A5DA4 800A61F4  */  .asciz  "^cSaved data has been lost.^^"
+                        .balign 4
+
+glabel D_800A6214
+/* 0A5DC4 800A6214  */  .asciz  " "
+                        .balign 4
+
+glabel D_800A6218
+/* 0A5DC8 800A6218  */  .asciz  " "
+                        .balign 4
+
+glabel D_800A621C
+/* 0A5DCC 800A621C  */  .asciz  "Press @U@V to return to the"
+                        .balign 4
+
+glabel D_800A6238
+/* 0A5DE8 800A6238  */  .asciz  "Title Screen."
+                        .balign 4
+
+glabel D_800A6248
+/* 0A5DF8 800A6248  */  .asciz  " "
+                        .balign 4
+
+glabel D_800A624C
+/* 0A5DFC 800A624C  */  .asciz  "^cNo controller is connected.^^"
+                        .balign 4
+
+glabel D_800A626C
+/* 0A5E1C 800A626C  */  .asciz  " "
+                        .balign 4
+
+glabel D_800A6270
+/* 0A5E20 800A6270  */  .asciz  "Please turn your N64 Control"
+                        .balign 4
+
+glabel D_800A6290
+/* 0A5E40 800A6290  */  .asciz  "Deck OFF and insert a controller"
+                        .balign 4
+
+glabel D_800A62B4
+/* 0A5E64 800A62B4  */  .asciz  "in the Player One controller socket."
+                        .balign 4
+
+glabel D_800A62DC
+/* 0A5E8C 800A62DC  */  .asciz  "The microphone is not connected."
+                        .balign 4
+
+glabel D_800A6300
+/* 0A5EB0 800A6300  */  .asciz  " "
+                        .balign 4
+
+glabel D_800A6304
+/* 0A5EB4 800A6304  */  .asciz  "Please turn the power OFF and"
+                        .balign 4
+
+glabel D_800A6324
+/* 0A5ED4 800A6324  */  .asciz  "confirm that the VRU is"
+                        .balign 4
+
+glabel D_800A633C
+/* 0A5EEC 800A633C  */  .asciz  "inserted in the Player Four"
+                        .balign 4
+
+glabel D_800A6358
+/* 0A5F08 800A6358  */  .asciz  "controller socket."
+                        .balign 4
+
+glabel D_800A636C
+/* 0A5F1C 800A636C  */  .asciz  "Press @U@V to continue."
+                        .balign 4
+
+glabel D_800A6384
+/* 0A5F34 800A6384  */  .asciz  "Game data is already saved."
+                        .balign 4
+
+glabel D_800A63A0
+/* 0A5F50 800A63A0  */  .asciz  "If you start a new game, your"
+                        .balign 4
+
+glabel D_800A63C0
+/* 0A5F70 800A63C0  */  .asciz  "previously saved data will be lost."
+                        .balign 4
+
+glabel D_800A63E4
+/* 0A5F94 800A63E4  */  .asciz  "Is this OK?"
+                        .balign 4
+
+glabel D_800A63F0
+/* 0A5FA0 800A63F0  */  .asciz  "@e"
+                        .balign 4
+
+glabel D_800A63F4
+/* 0A5FA4 800A63F4  */  .asciz  "@f"
+                        .balign 4
+
+glabel D_800A63F8
+/* 0A5FA8 800A63F8  */  .asciz  "@g"
+                        .balign 4
+
+glabel D_800A63FC
+/* 0A5FAC 800A63FC  */  .asciz  "@h"
+                        .balign 4
+
+glabel D_800A6400
+/* 0A5FB0 800A6400  */  .asciz  "New Game"
+                        .balign 4
+
+glabel D_800A640C
+/* 0A5FBC 800A640C  */  .asciz  "Continue"
+                        .balign 4
+
+glabel D_800A6418
+/* 0A5FC8 800A6418  */  .asciz  "New Game: File 1"
+                        .balign 4
+
+glabel D_800A642C
+/* 0A5FDC 800A642C  */  .asciz  "New Game: File 2"
+                        .balign 4
+
+glabel D_800A6440
+/* 0A5FF0 800A6440  */  .asciz  "Continue: File 1"
+                        .balign 4
+
+glabel D_800A6454
+/* 0A6004 800A6454  */  .asciz  "Continue: File 2"
+                        .balign 4
+
+glabel D_800A6468
+/* 0A6018 800A6468  */  .asciz  "I Quit"
+                        .balign 4
+
+glabel D_800A6470
+/* 0A6020 800A6470  */  .asciz  "Begin"
+                        .balign 4
+/* 0A6028 800A6478  */  .asciz  "ERROR: Invalid titleStat:%d\n"
+                        .balign 4
+/* 0A6048 800A6498  */  .asciz  "_setVolume(%f) vol:%d\n"
+                        .balign 4
+/* 0A6060 800A64B0  */  .asciz  "Invalid loadSelNum:%d\n"
+                        .balign 4
+/* 0A6078 800A64C8  */  .asciz  "Invalid loadSelNum:%d\n"
+                        .balign 4
+/* 0A6090 800A64E0  */  .asciz  "pdFCB:%x\n"
+                        .balign 4
+/* 0A609C 800A64EC  */  .asciz  "eepromGetState:%d\n"
+                        .balign 4
+/* 0A60B0 800A6500  */  .asciz  "fileSelAttr:%x\n"
+                        .balign 4
+/* 0A60C0 800A6510  */  .asciz  "eepromState:%d\n"
+                        .balign 4
 
 glabel D_800A6520
 /* 0A60D0 800A6520 3B449BA6 */  .float  0.003000000026077032
@@ -3875,6 +3566,8 @@ glabel D_800A6660
                         .balign 4
 /* 0A64F0 800A6940  */  .asciz  "un"
                         .balign 4
+
+glabel D_800A6944
 /* 0A64F4 800A6944  */  .asciz  "_divide"
                         .balign 4
 /* 0A64FC 800A694C  */  .asciz  "_divide(%p,%d)\n"
@@ -3883,6 +3576,8 @@ glabel D_800A6660
                         .balign 4
 /* 0A652C 800A697C  */  .asciz  "hp:%p prev:%p next:%p size:%d\ndp:%p prev:%p next:%p size:%d\n\n"
                         .balign 4
+
+glabel D_800A69BC
 /* 0A656C 800A69BC  */  .asciz  "heapAllocLocal"
                         .balign 4
 /* 0A657C 800A69CC  */  .asciz  "heapAllocLocal(%p, %d, %d)\n"
@@ -3893,6 +3588,8 @@ glabel D_800A6660
                         .balign 4
 /* 0A65D8 800A6A28  */  .asciz  "heapAllocLocal: %p\n"
                         .balign 4
+
+glabel D_800A6A3C
 /* 0A65EC 800A6A3C  */  .asciz  "heapAllocLocal"
                         .balign 4
 /* 0A65FC 800A6A4C  */  .asciz  "heapAllocTail(%d,%d)\n"
@@ -3901,22 +3598,32 @@ glabel D_800A6660
                         .balign 4
 /* 0A6648 800A6A98  */  .asciz  "hp:%p owner:%d\n"
                         .balign 4
+
+glabel D_800A6AA8
 /* 0A6658 800A6AA8  */  .asciz  "heapPrevCombine"
                         .balign 4
 /* 0A6668 800A6AB8  */  .asciz  "%s: Error: Heap chain is broken at %p\n"
                         .balign 4
+
+glabel D_800A6AE0
 /* 0A6690 800A6AE0  */  .asciz  "heapNextCombine"
                         .balign 4
 /* 0A66A0 800A6AF0  */  .asciz  "%s: Error: Heap chain is broken at %p\n"
                         .balign 4
+
+glabel D_800A6B18
 /* 0A66C8 800A6B18  */  .asciz  "heapShrinkLocal"
                         .balign 4
 /* 0A66D8 800A6B28  */  .asciz  "%s: warning: tried to shrink NULL\n"
                         .balign 4
+
+glabel D_800A6B4C
 /* 0A66FC 800A6B4C  */  .asciz  "heapCheckSize"
                         .balign 4
 /* 0A670C 800A6B5C  */  .asciz  "%s: warning: tried to check NULL\n"
                         .balign 4
+
+glabel D_800A6B80
 /* 0A6730 800A6B80  */  .asciz  "heapFreeLocal"
                         .balign 4
 /* 0A6740 800A6B90  */  .asciz  "heapFreeLocal(%p, %p)\n"
@@ -3925,6 +3632,8 @@ glabel D_800A6660
                         .balign 4
 /* 0A677C 800A6BCC  */  .asciz  "free: hp:%p prev:%p next:%p size:%d owner:%d\n"
                         .balign 4
+
+glabel D_800A6BFC
 /* 0A67AC 800A6BFC  */  .asciz  "heapGetSize"
                         .balign 4
 /* 0A67B8 800A6C08  */  .asciz  "heapRegion:%p "
@@ -3933,10 +3642,14 @@ glabel D_800A6660
                         .balign 4
 /* 0A67D4 800A6C24  */  .asciz  "%s total 0x%x  max 0x%x\n"
                         .balign 4
+
+glabel D_800A6C40
 /* 0A67F0 800A6C40  */  .asciz  "setHeapEntryNext"
                         .balign 4
 /* 0A6804 800A6C54  */  .asciz  "%s: warning: tried to set entry to NULL\n"
                         .balign 4
+
+glabel D_800A6C80
 /* 0A6830 800A6C80  */  .asciz  "setHeapEntryMax"
                         .balign 4
 /* 0A6840 800A6C90  */  .asciz  "use:%d sz:%d (%d-%d)\n"
@@ -4316,170 +4029,333 @@ glabel D_800A742C
                         .balign 4
 /* 0A6FEC 800A743C  */  .asciz  "node %p  link: %p, %p  data: %p\n"
                         .balign 4
+
+glabel D_800A7460
 /* 0A7010 800A7460  */  .asciz  "BD"
                         .balign 4
+
+glabel D_800A7464
 /* 0A7014 800A7464  */  .asciz  "IP8"
                         .balign 4
+
+glabel D_800A7468
 /* 0A7018 800A7468  */  .asciz  "IP7"
                         .balign 4
+
+glabel D_800A746C
 /* 0A701C 800A746C  */  .asciz  "IP6"
                         .balign 4
+
+glabel D_800A7470
 /* 0A7020 800A7470  */  .asciz  "IP5"
                         .balign 4
+
+glabel D_800A7474
 /* 0A7024 800A7474  */  .asciz  "IP4"
                         .balign 4
+
+glabel D_800A7478
 /* 0A7028 800A7478  */  .asciz  "IP3"
                         .balign 4
+
+glabel D_800A747C
 /* 0A702C 800A747C  */  .asciz  "IP2"
                         .balign 4
+
+glabel D_800A7480
 /* 0A7030 800A7480  */  .asciz  "IP1"
                         .balign 4
+
+glabel D_800A7484
 /* 0A7034 800A7484  */  .asciz  "Interrupt"
                         .balign 4
+
+glabel D_800A7490
 /* 0A7040 800A7490  */  .asciz  "TLB modification exception"
                         .balign 4
+
+glabel D_800A74AC
 /* 0A705C 800A74AC  */  .asciz  "TLB exception on load or instruction fetch"
                         .balign 4
+
+glabel D_800A74D8
 /* 0A7088 800A74D8  */  .asciz  "TLB exception on store"
                         .balign 4
+
+glabel D_800A74F0
 /* 0A70A0 800A74F0  */  .asciz  "Address error on load or instruction fetch"
                         .balign 4
+
+glabel D_800A751C
 /* 0A70CC 800A751C  */  .asciz  "Address error on store"
                         .balign 4
+
+glabel D_800A7534
 /* 0A70E4 800A7534  */  .asciz  "Bus error exception on instruction fetch"
                         .balign 4
+
+glabel D_800A7560
 /* 0A7110 800A7560  */  .asciz  "Bus error exception on data reference"
                         .balign 4
+
+glabel D_800A7588
 /* 0A7138 800A7588  */  .asciz  "System call exception"
                         .balign 4
+
+glabel D_800A75A0
 /* 0A7150 800A75A0  */  .asciz  "Breakpoint exception"
                         .balign 4
+
+glabel D_800A75B8
 /* 0A7168 800A75B8  */  .asciz  "Reserved instruction exception"
                         .balign 4
+
+glabel D_800A75D8
 /* 0A7188 800A75D8  */  .asciz  "Coprocessor unusable exception"
                         .balign 4
+
+glabel D_800A75F8
 /* 0A71A8 800A75F8  */  .asciz  "Arithmetic overflow exception"
                         .balign 4
+
+glabel D_800A7618
 /* 0A71C8 800A7618  */  .asciz  "Trap exception"
                         .balign 4
+
+glabel D_800A7628
 /* 0A71D8 800A7628  */  .asciz  "Virtual coherency exception on intruction fetch"
                         .balign 4
+
+glabel D_800A7658
 /* 0A7208 800A7658  */  .asciz  "Floating point exception (see fpcsr)"
                         .balign 4
+
+glabel D_800A7680
 /* 0A7230 800A7680  */  .asciz  "Watchpoint exception"
                         .balign 4
+
+glabel D_800A7698
 /* 0A7248 800A7698  */  .asciz  "Virtual coherency exception on data reference"
                         .balign 4
-/* 0A7278 800A76C8  */  .asciz  ""
-                        .balign 4
+
+glabel D_800A76C8
+/* 0A7278 800A76C8 00000000 */  .word  0x00000000
+
+glabel D_800A76CC
 /* 0A727C 800A76CC  */  .asciz  "CU3"
                         .balign 4
+
+glabel D_800A76D0
 /* 0A7280 800A76D0  */  .asciz  "CU2"
                         .balign 4
+
+glabel D_800A76D4
 /* 0A7284 800A76D4  */  .asciz  "CU1"
                         .balign 4
+
+glabel D_800A76D8
 /* 0A7288 800A76D8  */  .asciz  "CU0"
                         .balign 4
+
+glabel D_800A76DC
 /* 0A728C 800A76DC  */  .asciz  "RP"
                         .balign 4
+
+glabel D_800A76E0
 /* 0A7290 800A76E0  */  .asciz  "FR"
                         .balign 4
+
+glabel D_800A76E4
 /* 0A7294 800A76E4  */  .asciz  "RE"
                         .balign 4
+
+glabel D_800A76E8
 /* 0A7298 800A76E8  */  .asciz  "BEV"
                         .balign 4
+
+glabel D_800A76EC
 /* 0A729C 800A76EC  */  .asciz  "TS"
                         .balign 4
+
+glabel D_800A76F0
 /* 0A72A0 800A76F0  */  .asciz  "SR"
                         .balign 4
+
+glabel D_800A76F4
 /* 0A72A4 800A76F4  */  .asciz  "CH"
                         .balign 4
+
+glabel D_800A76F8
 /* 0A72A8 800A76F8  */  .asciz  "CE"
                         .balign 4
+
+glabel D_800A76FC
 /* 0A72AC 800A76FC  */  .asciz  "DE"
                         .balign 4
+
+glabel D_800A7700
 /* 0A72B0 800A7700  */  .asciz  "IM8"
                         .balign 4
+
+glabel D_800A7704
 /* 0A72B4 800A7704  */  .asciz  "IM7"
                         .balign 4
+
+glabel D_800A7708
 /* 0A72B8 800A7708  */  .asciz  "IM6"
                         .balign 4
+
+glabel D_800A770C
 /* 0A72BC 800A770C  */  .asciz  "IM5"
                         .balign 4
+
+glabel D_800A7710
 /* 0A72C0 800A7710  */  .asciz  "IM4"
                         .balign 4
+
+glabel D_800A7714
 /* 0A72C4 800A7714  */  .asciz  "IM3"
                         .balign 4
+
+glabel D_800A7718
 /* 0A72C8 800A7718  */  .asciz  "IM2"
                         .balign 4
+
+glabel D_800A771C
 /* 0A72CC 800A771C  */  .asciz  "IM1"
                         .balign 4
+
+glabel D_800A7720
 /* 0A72D0 800A7720  */  .asciz  "KX"
                         .balign 4
+
+glabel D_800A7724
 /* 0A72D4 800A7724  */  .asciz  "SX"
                         .balign 4
+
+glabel D_800A7728
 /* 0A72D8 800A7728  */  .asciz  "UX"
                         .balign 4
+
+glabel D_800A772C
 /* 0A72DC 800A772C  */  .asciz  "USR"
                         .balign 4
+
+glabel D_800A7730
 /* 0A72E0 800A7730  */  .asciz  "SUP"
                         .balign 4
+
+glabel D_800A7734
 /* 0A72E4 800A7734  */  .asciz  "KER"
                         .balign 4
+
+glabel D_800A7738
 /* 0A72E8 800A7738  */  .asciz  "ERL"
                         .balign 4
+
+glabel D_800A773C
 /* 0A72EC 800A773C  */  .asciz  "EXL"
                         .balign 4
+
+glabel D_800A7740
 /* 0A72F0 800A7740  */  .asciz  "IE"
                         .balign 4
-/* 0A72F4 800A7744  */  .asciz  ""
-                        .balign 4
+
+glabel D_800A7744
+/* 0A72F4 800A7744 00000000 */  .word  0x00000000
+
+glabel D_800A7748
 /* 0A72F8 800A7748  */  .asciz  "FS"
                         .balign 4
+
+glabel D_800A774C
 /* 0A72FC 800A774C  */  .asciz  "C"
                         .balign 4
+
+glabel D_800A7750
 /* 0A7300 800A7750  */  .asciz  "Unimplemented operation"
                         .balign 4
+
+glabel D_800A7768
 /* 0A7318 800A7768  */  .asciz  "Invalid operation"
                         .balign 4
+
+glabel D_800A777C
 /* 0A732C 800A777C  */  .asciz  "Division by zero"
                         .balign 4
+
+glabel D_800A7790
 /* 0A7340 800A7790  */  .asciz  "Overflow"
                         .balign 4
+
+glabel D_800A779C
 /* 0A734C 800A779C  */  .asciz  "Underflow"
                         .balign 4
+
+glabel D_800A77A8
 /* 0A7358 800A77A8  */  .asciz  "Inexact operation"
                         .balign 4
+
+glabel D_800A77BC
 /* 0A736C 800A77BC  */  .asciz  "EV"
                         .balign 4
+
+glabel D_800A77C0
 /* 0A7370 800A77C0  */  .asciz  "EZ"
                         .balign 4
+
+glabel D_800A77C4
 /* 0A7374 800A77C4  */  .asciz  "EO"
                         .balign 4
+
+glabel D_800A77C8
 /* 0A7378 800A77C8  */  .asciz  "EU"
                         .balign 4
+
+glabel D_800A77CC
 /* 0A737C 800A77CC  */  .asciz  "EI"
                         .balign 4
+
+glabel D_800A77D0
 /* 0A7380 800A77D0  */  .asciz  "FV"
                         .balign 4
+
+glabel D_800A77D4
 /* 0A7384 800A77D4  */  .asciz  "FZ"
                         .balign 4
+
+glabel D_800A77D8
 /* 0A7388 800A77D8  */  .asciz  "FO"
                         .balign 4
+
+glabel D_800A77DC
 /* 0A738C 800A77DC  */  .asciz  "FU"
                         .balign 4
+
+glabel D_800A77E0
 /* 0A7390 800A77E0  */  .asciz  "FI"
                         .balign 4
+
+glabel D_800A77E4
 /* 0A7394 800A77E4  */  .asciz  "RN"
                         .balign 4
+
+glabel D_800A77E8
 /* 0A7398 800A77E8  */  .asciz  "RZ"
                         .balign 4
+
+glabel D_800A77EC
 /* 0A739C 800A77EC  */  .asciz  "RP"
                         .balign 4
+
+glabel D_800A77F0
 /* 0A73A0 800A77F0  */  .asciz  "RM"
                         .balign 4
-/* 0A73A4 800A77F4  */  .asciz  ""
-                        .balign 4
+
+glabel D_800A77F4
+/* 0A73A4 800A77F4 00000000 */  .word  0x00000000
+
+glabel D_800A77F8
 /* 0A73A8 800A77F8  */  .asciz  "%s\t\t0x%08x "
                         .balign 4
 /* 0A73B4 800A7804  */  .asciz  "<"
@@ -4719,8 +4595,14 @@ glabel D_800A7C30
 /* 0A77E0 800A7C30 7FFFFFFF */  .word  0x7FFFFFFF
 /* 0A77E4 800A7C34 FFFFFFFF */  .word  0xFFFFFFFF
 /* 0A77E8 800A7C38 0000000000000000 */  .double  0.0
-/* 0A77F0 800A7C40 6E6F6E6500000000 */  .double  9.089252189409386e+223
-/* 0A77F8 800A7C48 0000000000000000 */  .double  0.0
+
+glabel D_800A7C40
+/* 0A77F0 800A7C40  */  .asciz  "none"
+                        .balign 4
+/* 0A77F8 800A7C48  */  .asciz  ""
+                        .balign 4
+/* 0A77FC 800A7C4C  */  .asciz  ""
+                        .balign 4
 
 glabel D_800A7C50
 /* 0A7800 800A7C50 412E848000000000 */  .double  1000000.0

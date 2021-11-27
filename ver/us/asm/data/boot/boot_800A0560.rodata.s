@@ -12,30 +12,56 @@
 glabel _string_DataWillBeSaved
 /* 0A0110 800A0560  */  .asciz  "Data will be saved to the Game Pak."
                         .balign 4
+
+glabel D_800A0584
 /* 0A0134 800A0584  */  .asciz  "Do not turn the power OFF until"
                         .balign 4
+
+glabel D_800A05A4
 /* 0A0154 800A05A4  */  .asciz  "the save is complete."
                         .balign 4
+
+glabel D_800A05BC
 /* 0A016C 800A05BC  */  .asciz  " "
                         .balign 4
+
+glabel D_800A05C0
 /* 0A0170 800A05C0  */  .asciz  "Press @I@J to save."
                         .balign 4
+
+glabel D_800A05D4
 /* 0A0184 800A05D4  */  .asciz  "Your game was saved."
                         .balign 4
+
+glabel D_800A05EC
 /* 0A019C 800A05EC  */  .asciz  "You can now turn the power OFF."
                         .balign 4
+
+glabel D_800A060C
 /* 0A01BC 800A060C  */  .asciz  " "
                         .balign 4
+
+glabel D_800A0610
 /* 0A01C0 800A0610  */  .asciz  "Press @I@J to continue."
                         .balign 4
+
+glabel D_800A0628
 /* 0A01D8 800A0628  */  .asciz  "^cUnable to save data.^^"
                         .balign 4
+
+glabel D_800A0644
 /* 0A01F4 800A0644  */  .asciz  "Please turn the power OFF and"
                         .balign 4
+
+glabel D_800A0664
 /* 0A0214 800A0664  */  .asciz  "confirm that the Game Pak is"
                         .balign 4
+
+glabel D_800A0684
 /* 0A0234 800A0684  */  .asciz  "inserted correctly."
                         .balign 4
+
+glabel D_800A0698
 /* 0A0248 800A0698  */  .asciz  "Press @U@V to continue."
                         .balign 4
 /* 0A0260 800A06B0  */  .asciz  "\n---------------- OS info ----------------\n"
