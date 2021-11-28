@@ -31,7 +31,7 @@ CPP             := cpp
 ELF2ROM         ?= 
 MKLDSCRIPT      ?= 
 DISASSEMBLER    ?= tools/py-mips-disasm/simpleDisasm.py
-N64READER       := tools/64scripts/n64reader/n64reader.elf
+N64READER       ?= tools/64scripts/n64reader/n64reader.elf
 
 OPTFLAGS := 
 ASFLAGS := -march=vr4300 -32 -Iinclude
@@ -54,20 +54,17 @@ LDSCRIPT       := $(BASE_DIR)/build/ldscript_$(VERSION).txt
 ASM_DIRS       := $(shell find $(BASE_DIR)/asm/ -type d)
 
 S_FILES        := $(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s))
-#O_FILES        := $(foreach f,$(S_FILES:.s=.o),build/$f) \
-#                 $(foreach f,$(wildcard baserom/*),build/$f.o)
-
-# $(info $(S_FILES))
+BASEROM_FILES  := $(wildcard $(BASE_DIR)/baserom/*)
+O_FILES        := $(subst $(BASE_DIR)/,$(BASE_DIR)/build/,$(S_FILES:.s=.o)) \
+                  $(subst $(BASE_DIR)/,$(BASE_DIR)/build/,$(BASEROM_FILES:.bin=.o))
 
 DISASM_TARGETS := $(shell sed -r 's/(.+)/ver\/$(VERSION)\/asm\/text\/\1\/.disasm/' $(BASE_DIR)/tables/disasm_list.txt)
 
 # create asm directories
 $(shell mkdir -p $(BASE_DIR)/baserom/ $(BASE_DIR)/asm/text $(BASE_DIR)/asm/data)
 
-
 # create build directories
-$(shell mkdir -p $(BASE_DIR)/build/baserom)
-# $(shell mkdir -p $(BASE_DIR)/build/baserom $(foreach dir,$(SRC_DIRS) $(ASM_DIRS) $(ASSET_BIN_DIRS),build/$(dir)))
+$(shell mkdir -p $(BASE_DIR)/build/baserom $(foreach dir,$(ASM_DIRS),$(subst $(BASE_DIR)/,$(BASE_DIR)/build/,$(dir))))
 
 #### Main Targets ###
 
