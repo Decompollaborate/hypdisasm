@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Echo the executed commands
-# https://stackoverflow.com/questions/2853803/how-to-echo-shell-commands-as-they-are-executed
-set -x
 set -e
 
 if [[ $# -le 0 ]]
