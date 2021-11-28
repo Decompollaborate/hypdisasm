@@ -209,9 +209,13 @@ beginseg
 
     // data
     include "ver/jp/build/asm/data/boot/boot_80061100.data.o"
+    include "ver/jp/build/asm/data/boot/exceptasm.data.o"
+    include "ver/jp/build/asm/data/boot/boot_800A4D60.data.o"
 
     // rodata
     include "ver/jp/build/asm/data/boot/boot_800A50E0.rodata.o"
+    include "ver/jp/build/asm/data/boot/exceptasm.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800ACB40.rodata.o"
 
     // bss
     include "ver/jp/build/asm/data/boot/boot_800AD840.bss.o"

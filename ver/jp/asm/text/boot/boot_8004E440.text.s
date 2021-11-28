@@ -136,7 +136,7 @@ glabel func_8004E5A0 # 1
 /* 04E1B4 8004E604 ADAF003C */  sw          $t7, 0x3c($t5)
 /* 04E1B8 8004E608 8FB80038 */  lw          $t8, 0x38($sp)
 /* 04E1BC 8004E60C 8FB90028 */  lw          $t9, 0x28($sp)
-/* 04E1C0 8004E610 3C0C8005 */  lui         $t4, %hi(D_80055580)
+/* 04E1C0 8004E610 3C0C8005 */  lui         $t4, %hi(__osCleanupThread)
 /* 04E1C4 8004E614 03004825 */  move        $t1, $t8
 /* 04E1C8 8004E618 2D210010 */  sltiu       $at, $t1, 0x10
 /* 04E1CC 8004E61C 001847C3 */  sra         $t0, $t8, 31
@@ -145,7 +145,7 @@ glabel func_8004E5A0 # 1
 /* 04E1D8 8004E628 AF2B00F4 */  sw          $t3, 0xf4($t9)
 /* 04E1DC 8004E62C AF2A00F0 */  sw          $t2, 0xf0($t9)
 /* 04E1E0 8004E630 8FAD0028 */  lw          $t5, 0x28($sp)
-/* 04E1E4 8004E634 258C5580 */  addiu       $t4, $t4, %lo(D_80055580)
+/* 04E1E4 8004E634 258C5580 */  addiu       $t4, $t4, %lo(__osCleanupThread)
 /* 04E1E8 8004E638 01807825 */  move        $t7, $t4
 /* 04E1EC 8004E63C 000C77C3 */  sra         $t6, $t4, 31
 /* 04E1F0 8004E640 ADAE0100 */  sw          $t6, 0x100($t5)

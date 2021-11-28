@@ -57,30 +57,30 @@ glabel func_8004E1B0 # 0
 /* 04DE04 8004E254 1440FFF9 */  bnez        $v0, .L8004E23C
 /* 04DE08 8004E258 00000000 */   nop
 .L8004E25C:
-/* 04DE0C 8004E25C 3C088005 */  lui         $t0, %hi(func_80054C80)
-/* 04DE10 8004E260 25084C80 */  addiu       $t0, $t0, %lo(func_80054C80)
+/* 04DE0C 8004E25C 3C088005 */  lui         $t0, %hi(__osExceptionPreamble)
+/* 04DE10 8004E260 25084C80 */  addiu       $t0, $t0, %lo(__osExceptionPreamble)
 /* 04DE14 8004E264 8D010000 */  lw          $at, 0x0($t0)
 /* 04DE18 8004E268 3C198000 */  lui         $t9, %hi(D_80000000)
-/* 04DE1C 8004E26C 3C0D8005 */  lui         $t5, %hi(func_80054C80)
+/* 04DE1C 8004E26C 3C0D8005 */  lui         $t5, %hi(__osExceptionPreamble)
 /* 04DE20 8004E270 AF210000 */  sw          $at, %lo(D_80000000)($t9)
 /* 04DE24 8004E274 8D0B0004 */  lw          $t3, 0x4($t0)
-/* 04DE28 8004E278 25AD4C80 */  addiu       $t5, $t5, %lo(func_80054C80)
+/* 04DE28 8004E278 25AD4C80 */  addiu       $t5, $t5, %lo(__osExceptionPreamble)
 /* 04DE2C 8004E27C 3C0C8000 */  lui         $t4, 0x8000
 /* 04DE30 8004E280 AF2B0004 */  sw          $t3, %lo(D_80000004)($t9)
 /* 04DE34 8004E284 8D010008 */  lw          $at, 0x8($t0)
 /* 04DE38 8004E288 358C0080 */  ori         $t4, $t4, 0x80
-/* 04DE3C 8004E28C 3C098005 */  lui         $t1, %hi(func_80054C80)
+/* 04DE3C 8004E28C 3C098005 */  lui         $t1, %hi(__osExceptionPreamble)
 /* 04DE40 8004E290 AF210008 */  sw          $at, %lo(D_80000008)($t9)
 /* 04DE44 8004E294 8D0B000C */  lw          $t3, 0xc($t0)
-/* 04DE48 8004E298 25294C80 */  addiu       $t1, $t1, %lo(func_80054C80)
+/* 04DE48 8004E298 25294C80 */  addiu       $t1, $t1, %lo(__osExceptionPreamble)
 /* 04DE4C 8004E29C 3C0A8000 */  lui         $t2, 0x8000
 /* 04DE50 8004E2A0 AF2B000C */  sw          $t3, %lo(D_8000000C)($t9)
 /* 04DE54 8004E2A4 8DA10000 */  lw          $at, 0x0($t5)
 /* 04DE58 8004E2A8 354A0100 */  ori         $t2, $t2, 0x100
-/* 04DE5C 8004E2AC 3C0E8005 */  lui         $t6, %hi(func_80054C80)
+/* 04DE5C 8004E2AC 3C0E8005 */  lui         $t6, %hi(__osExceptionPreamble)
 /* 04DE60 8004E2B0 AD810000 */  sw          $at, 0x0($t4)
 /* 04DE64 8004E2B4 8DB80004 */  lw          $t8, 0x4($t5)
-/* 04DE68 8004E2B8 25CE4C80 */  addiu       $t6, $t6, %lo(func_80054C80)
+/* 04DE68 8004E2B8 25CE4C80 */  addiu       $t6, $t6, %lo(__osExceptionPreamble)
 /* 04DE6C 8004E2BC 3C0F8000 */  lui         $t7, 0x8000
 /* 04DE70 8004E2C0 AD980004 */  sw          $t8, 0x4($t4)
 /* 04DE74 8004E2C4 8DA10008 */  lw          $at, 0x8($t5)

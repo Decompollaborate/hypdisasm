@@ -3,5 +3,12 @@
 800458F0,func_800458F0
 80049220,func_80049220
 8004FD20,func_8004FD20
-800551C4,func_800551C4
-800552AC,func_800552AC
+80054C80,__osExceptionPreamble
+80054C90,__osException
+800551C4,send_mesg
+80055278,handle_CpU
+800552AC,__osEnqueueAndYield
+800553AC,__osEnqueueThread
+800553F4,__osPopThread
+80055404,__osDispatchThread
+80055580,__osCleanupThread

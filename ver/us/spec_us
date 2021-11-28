@@ -253,6 +253,8 @@ beginseg
     include "ver/us/build/asm/data/boot/boot_800630A0.data.o"
     include "ver/us/build/asm/data/boot/osViTable.data.o"
     include "ver/us/build/asm/data/boot/boot_8009EE30.data.o"
+    include "ver/us/build/asm/data/boot/exceptasm.data.o"
+    include "ver/us/build/asm/data/boot/boot_8009F890.data.o"
     include "ver/us/build/asm/data/boot/xprintf.data.o"
     include "ver/us/build/asm/data/boot/boot_8009F9B0.data.o"
     include "ver/us/build/asm/data/boot/osViModePalLan1.data.o"

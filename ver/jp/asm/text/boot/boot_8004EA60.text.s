@@ -31,12 +31,12 @@ glabel func_8004EA60 # 0
 /* 04E654 8004EAA4 24010001 */  addiu       $at, $zero, 0x1
 /* 04E658 8004EAA8 1721000A */  bne         $t9, $at, .L8004EAD4
 /* 04E65C 8004EAAC 00000000 */   nop
-/* 04E660 8004EAB0 3C09800A */  lui         $t1, %hi(D_800A4D70)
-/* 04E664 8004EAB4 8D294D70 */  lw          $t1, %lo(D_800A4D70)($t1)
+/* 04E660 8004EAB0 3C09800A */  lui         $t1, %hi(__osRunningThread)
+/* 04E664 8004EAB4 8D294D70 */  lw          $t1, %lo(__osRunningThread)($t1)
 /* 04E668 8004EAB8 24080008 */  addiu       $t0, $zero, 0x8
 /* 04E66C 8004EABC A5280010 */  sh          $t0, 0x10($t1)
 /* 04E670 8004EAC0 8FA40038 */  lw          $a0, 0x38($sp)
-/* 04E674 8004EAC4 0C0154AB */  jal         func_800552AC
+/* 04E674 8004EAC4 0C0154AB */  jal         __osEnqueueAndYield
 /* 04E678 8004EAC8 24840004 */   addiu      $a0, $a0, 0x4
 /* 04E67C 8004EACC 10000005 */  b           .L8004EAE4
 /* 04E680 8004EAD0 00000000 */   nop
@@ -85,7 +85,7 @@ glabel func_8004EA60 # 0
 /* 04E718 8004EB68 8F2D0000 */  lw          $t5, 0x0($t9)
 /* 04E71C 8004EB6C 11A00006 */  beqz        $t5, .L8004EB88
 /* 04E720 8004EB70 00000000 */   nop
-/* 04E724 8004EB74 0C0154FD */  jal         func_800553F4
+/* 04E724 8004EB74 0C0154FD */  jal         __osPopThread
 /* 04E728 8004EB78 03002025 */   move       $a0, $t8
 /* 04E72C 8004EB7C 00409025 */  move        $s2, $v0
 /* 04E730 8004EB80 0C0139BC */  jal         func_8004E6F0

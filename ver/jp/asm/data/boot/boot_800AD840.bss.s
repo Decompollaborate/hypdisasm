@@ -1170,14 +1170,8 @@ glabel D_801022A0
 glabel D_801022B0
 /* 101E60 801022B0 */  .space  0x10
 
-glabel D_801022C0
-/* 101E70 801022C0 */  .space  0x40
-
-glabel D_80102300
-/* 101EB0 80102300 */  .space  0x04
-
-glabel D_80102304
-/* 101EB4 80102304 */  .space  0x3C
+glabel __osEventStateTab
+/* 101E70 801022C0 */  .space  0x80
 
 glabel D_80102340
 /* 101EF0 80102340 */  .space  0x3C
@@ -1278,7 +1272,7 @@ glabel D_80104BE0
 glabel D_80104BE8
 /* 104798 80104BE8 */  .space  0x18
 
-glabel D_80104C00
+glabel __osThreadSave
 /* 1047B0 80104C00 */  .space  0x1B0
 
 glabel D_80104DB0

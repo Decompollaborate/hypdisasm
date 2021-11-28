@@ -38,11 +38,11 @@ glabel func_80052C50 # 0
 /* 05285C 80052CAC 10000010 */  b           .L80052CF0
 /* 052860 80052CB0 00000000 */   nop
 .L80052CB4:
-/* 052864 80052CB4 3C19800A */  lui         $t9, %hi(D_800A4D70)
-/* 052868 80052CB8 8F394D70 */  lw          $t9, %lo(D_800A4D70)($t9)
+/* 052864 80052CB4 3C19800A */  lui         $t9, %hi(__osRunningThread)
+/* 052868 80052CB8 8F394D70 */  lw          $t9, %lo(__osRunningThread)($t9)
 /* 05286C 80052CBC 24180001 */  addiu       $t8, $zero, 0x1
 /* 052870 80052CC0 00002025 */  move        $a0, $zero
-/* 052874 80052CC4 0C0154AB */  jal         func_800552AC
+/* 052874 80052CC4 0C0154AB */  jal         __osEnqueueAndYield
 /* 052878 80052CC8 A7380010 */   sh         $t8, 0x10($t9)
 /* 05287C 80052CCC 10000008 */  b           .L80052CF0
 /* 052880 80052CD0 00000000 */   nop

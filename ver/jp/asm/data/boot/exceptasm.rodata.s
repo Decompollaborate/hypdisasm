@@ -1,0 +1,34 @@
+.include "macro.inc"
+
+# assembler directives
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+.set gp=64     # allow use of 64-bit general purpose registers
+
+.section .rodata
+
+.balign 16
+
+glabel __osIntOffTable
+/* 0AC6A0 800ACAF0 00141818 */  .word  0x00141818
+/* 0AC6A4 800ACAF4 1C1C1C1C */  .word  0x1C1C1C1C
+/* 0AC6A8 800ACAF8 20202020 */  .word  0x20202020
+/* 0AC6AC 800ACAFC 20202020 */  .word  0x20202020
+/* 0AC6B0 800ACB00 00040808 */  .word  0x00040808
+/* 0AC6B4 800ACB04 0C0C0C0C */  .word  0x0C0C0C0C
+/* 0AC6B8 800ACB08 10101010 */  .word  0x10101010
+/* 0AC6BC 800ACB0C 10101010 */  .word  0x10101010
+
+glabel jtbl_800ACB10
+/* 0AC6C0 800ACB10 80055148 */  .word  L80055148
+/* 0AC6C4 800ACB14 80055110 */  .word  L80055110
+/* 0AC6C8 800ACB18 800550F0 */  .word  L800550F0
+/* 0AC6CC 800ACB1C 80054F54 */  .word  L80054F54
+/* 0AC6D0 800ACB20 80054F00 */  .word  L80054F00
+/* 0AC6D4 800ACB24 80055094 */  .word  L80055094
+/* 0AC6D8 800ACB28 80054EC8 */  .word  L80054EC8
+/* 0AC6DC 800ACB2C 80054ED4 */  .word  L80054ED4
+/* 0AC6E0 800ACB30 80054EE0 */  .word  L80054EE0
+/* 0AC6E4 800ACB34 00000000 */  .word  0x00000000
+/* 0AC6E8 800ACB38 00000000 */  .word  0x00000000
+/* 0AC6EC 800ACB3C 00000000 */  .word  0x00000000

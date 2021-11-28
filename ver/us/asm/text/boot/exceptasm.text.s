@@ -155,9 +155,9 @@ glabel __osException # 1
 /* 0573D0 80057820 00095202 */  srl         $t2, $t1, 8
 /* 0573D4 80057824 214A0010 */  addi        $t2, $t2, 0x10
 .L80057828:
-/* 0573D8 80057828 3C01800A */  lui         $at, %hi(D_800A7EC0)
+/* 0573D8 80057828 3C01800A */  lui         $at, %hi(__osIntOffTable)
 /* 0573DC 8005782C 002A0821 */  addu        $at, $at, $t2
-/* 0573E0 80057830 902A7EC0 */  lbu         $t2, %lo(D_800A7EC0)($at)
+/* 0573E0 80057830 902A7EC0 */  lbu         $t2, %lo(__osIntOffTable)($at)
 /* 0573E4 80057834 3C01800A */  lui         $at, %hi(jtbl_800A7EE0)
 /* 0573E8 80057838 002A0821 */  addu        $at, $at, $t2
 /* 0573EC 8005783C 8C2A7EE0 */  lw          $t2, %lo(jtbl_800A7EE0)($at)
@@ -181,8 +181,8 @@ glabel L80057860
 /* 057428 80057878 1000FFE5 */  b           .L80057810
 /* 05742C 8005787C 02018024 */   and        $s0, $s0, $at
 glabel L80057880
-/* 057430 80057880 3C09800A */  lui         $t1, %hi(__osIntTable)
-/* 057434 80057884 2529F860 */  addiu       $t1, $t1, %lo(__osIntTable)
+/* 057430 80057880 3C09800A */  lui         $t1, %hi(__osHwIntTable)
+/* 057434 80057884 2529F860 */  addiu       $t1, $t1, %lo(__osHwIntTable)
 /* 057438 80057888 8D2A0008 */  lw          $t2, 0x8($t1)
 /* 05743C 8005788C 2401F7FF */  addiu       $at, $zero, -0x801
 /* 057440 80057890 02018024 */  and         $s0, $s0, $at

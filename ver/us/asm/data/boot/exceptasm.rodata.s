@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel D_800A7EC0
+glabel __osIntOffTable
 /* 0A7A70 800A7EC0 00141818 */  .word  0x00141818
 /* 0A7A74 800A7EC4 1C1C1C1C */  .word  0x1C1C1C1C
 /* 0A7A78 800A7EC8 20202020 */  .word  0x20202020

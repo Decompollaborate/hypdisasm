@@ -16,15 +16,15 @@ glabel func_8005D280 # 0
 /* 05CE3C 8005D28C 0C015594 */  jal         func_80055650
 /* 05CE40 8005D290 AFB00018 */   sw         $s0, 0x18($sp)
 /* 05CE44 8005D294 8FAF0028 */  lw          $t7, 0x28($sp)
-/* 05CE48 8005D298 3C0E800A */  lui         $t6, %hi(D_800A3130)
-/* 05CE4C 8005D29C 8DCE3130 */  lw          $t6, %lo(D_800A3130)($t6)
+/* 05CE48 8005D298 3C0E800A */  lui         $t6, %hi(__OSGlobalIntMask)
+/* 05CE4C 8005D29C 8DCE3130 */  lw          $t6, %lo(__OSGlobalIntMask)($t6)
 /* 05CE50 8005D2A0 2401FBFE */  addiu       $at, $zero, -0x402
 /* 05CE54 8005D2A4 01E1C024 */  and         $t8, $t7, $at
 /* 05CE58 8005D2A8 0300C827 */  not         $t9, $t8
 /* 05CE5C 8005D2AC 00408025 */  move        $s0, $v0
-/* 05CE60 8005D2B0 3C01800A */  lui         $at, %hi(D_800A3130)
+/* 05CE60 8005D2B0 3C01800A */  lui         $at, %hi(__OSGlobalIntMask)
 /* 05CE64 8005D2B4 01D94024 */  and         $t0, $t6, $t9
-/* 05CE68 8005D2B8 AC283130 */  sw          $t0, %lo(D_800A3130)($at)
+/* 05CE68 8005D2B8 AC283130 */  sw          $t0, %lo(__OSGlobalIntMask)($at)
 /* 05CE6C 8005D2BC 0C01559C */  jal         func_80055670
 /* 05CE70 8005D2C0 02002025 */   move       $a0, $s0
 /* 05CE74 8005D2C4 8FBF001C */  lw          $ra, 0x1c($sp)

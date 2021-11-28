@@ -18,9 +18,9 @@ glabel func_8004EBE0 # 0
 /* 04E7A4 8004EBF4 0C015594 */  jal         func_80055650
 /* 04E7A8 8004EBF8 AFB00018 */   sw         $s0, 0x18($sp)
 /* 04E7AC 8004EBFC 8FAE0028 */  lw          $t6, 0x28($sp)
-/* 04E7B0 8004EC00 3C188010 */  lui         $t8, %hi(D_801022C0)
+/* 04E7B0 8004EC00 3C188010 */  lui         $t8, %hi(__osEventStateTab)
 /* 04E7B4 8004EC04 8FA8002C */  lw          $t0, 0x2c($sp)
-/* 04E7B8 8004EC08 271822C0 */  addiu       $t8, $t8, %lo(D_801022C0)
+/* 04E7B8 8004EC08 271822C0 */  addiu       $t8, $t8, %lo(__osEventStateTab)
 /* 04E7BC 8004EC0C 000E78C0 */  sll         $t7, $t6, 3
 /* 04E7C0 8004EC10 01F8C821 */  addu        $t9, $t7, $t8
 /* 04E7C4 8004EC14 AFB90020 */  sw          $t9, 0x20($sp)

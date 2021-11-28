@@ -9,7 +9,7 @@
 8009EE70,sintable,s16,0x800
 8009F670,__osViDevMgr,OSMgrArgs,0x1C
 8009F68C,__additional_scanline,u32,4
-8009F860,__osIntTable,__osHwInt[],0x28
+8009F860,__osHwIntTable,__osHwInt[],0x28
 8009F888,__osPiIntTable,__osHwInt[],0x28
 8009F890,__osThreadTail,OSThread*,4
 8009F898,__osRunQueue,OSThread*,4
@@ -156,7 +156,7 @@
 800A7B84,D_800A7B84,char,5
 800A7BBC,D_800A7BBC,char,3
 800A7E60,__libm_qnan_f,f32,4
-800A7EE0,__osIntTable,void*,4
+800A7EC0,__osIntOffTable,u8,0x20
 800A7F10,_xprint_hlL,u8,4
 800A7F14,_xprint_fchar,u8,6
 800A7F1C,_xprint_fbit,u32,0x18
