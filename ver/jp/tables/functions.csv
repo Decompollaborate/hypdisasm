@@ -12,3 +12,5 @@
 800553F4,__osPopThread
 80055404,__osDispatchThread
 80055580,__osCleanupThread
+80057C80,_Putfld
+800582F0,_Printf

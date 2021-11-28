@@ -113,8 +113,8 @@ $(BASE_DIR)/build/hardware_regs.txt: $(BASE_DIR)/hardware_regs.txt
 	$(CPP) $(CPPFLAGS) $< > $@
 
 $(LDSCRIPT): $(SPEC)
-	$(CPP) $(CPPFLAGS) $< > $(BASE_DIR)/build/spec_us
-	$(MKLDSCRIPT) $(BASE_DIR)/build/spec_us $@
+	$(CPP) $(CPPFLAGS) $< > $(BASE_DIR)/build/spec_$(VERSION)
+	$(MKLDSCRIPT) $(BASE_DIR)/build/spec_$(VERSION) $@
 
 
 $(BASE_DIR)/build/baserom/%.o: $(BASE_DIR)/baserom/%.bin

@@ -175,7 +175,7 @@ beginseg
     include "ver/jp/build/asm/text/boot/boot_800578C0.text.o"
     include "ver/jp/build/asm/text/boot/boot_80057A40.text.o"
     include "ver/jp/build/asm/text/boot/boot_80057C40.text.o"
-    include "ver/jp/build/asm/text/boot/boot_80057C80.text.o"
+    include "ver/jp/build/asm/text/boot/xprintf.text.o"
     include "ver/jp/build/asm/text/boot/boot_80058940.text.o"
     include "ver/jp/build/asm/text/boot/boot_800589D0.text.o"
     include "ver/jp/build/asm/text/boot/boot_800589F0.text.o"
@@ -211,11 +211,14 @@ beginseg
     include "ver/jp/build/asm/data/boot/boot_80061100.data.o"
     include "ver/jp/build/asm/data/boot/exceptasm.data.o"
     include "ver/jp/build/asm/data/boot/boot_800A4D60.data.o"
+    include "ver/jp/build/asm/data/boot/xprintf.data.o"
+    include "ver/jp/build/asm/data/boot/boot_800A4E70.data.o"
 
     // rodata
     include "ver/jp/build/asm/data/boot/boot_800A50E0.rodata.o"
     include "ver/jp/build/asm/data/boot/exceptasm.rodata.o"
-    include "ver/jp/build/asm/data/boot/boot_800ACB40.rodata.o"
+    include "ver/jp/build/asm/data/boot/xprintf.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800ACC40.rodata.o"
 
     // bss
     include "ver/jp/build/asm/data/boot/boot_800AD840.bss.o"

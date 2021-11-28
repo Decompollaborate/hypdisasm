@@ -3,7 +3,12 @@
 800A4D68,__osRunQueue,OSThread*,4
 800A4D70,__osRunningThread,OSThread*,4
 800A4D74,__osFaultedThread,OSThread*,4
+800A4E20,spaces,char,0x21
+800A4E44,zeros,char,0x21
 800A50E0,_string_800A50E0,char,1
 800ACAF0,__osIntOffTable,u8,0x20
+800ACB40,_xprint_hlL,u8,4
+800ACB44,_xprint_fchar,u8,6
+800ACB4C,_xprint_fbit,u32,0x18
 801022C0,__osEventStateTab,__OSEventState[],0x80
 80104C00,__osThreadSave,OSThread,0x1B0
