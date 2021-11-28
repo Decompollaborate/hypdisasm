@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_800503D0 # 0
+glabel osVirtualToPhysical # 0
 /* 04FF80 800503D0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 04FF84 800503D4 AFA40018 */  sw          $a0, 0x18($sp)
 /* 04FF88 800503D8 8FAE0018 */  lw          $t6, 0x18($sp)
@@ -37,7 +37,7 @@ glabel func_800503D0 # 0
 /* 04FFDC 8005042C 10000003 */  b           .L8005043C
 /* 04FFE0 80050430 01E11024 */   and        $v0, $t7, $at
 .L80050434:
-/* 04FFE4 80050434 0C015CE0 */  jal         func_80057380
+/* 04FFE4 80050434 0C015CE0 */  jal         __osProbeTLB
 /* 04FFE8 80050438 8FA40018 */   lw         $a0, 0x18($sp)
 .L8005043C:
 /* 04FFEC 8005043C 8FBF0014 */  lw          $ra, 0x14($sp)

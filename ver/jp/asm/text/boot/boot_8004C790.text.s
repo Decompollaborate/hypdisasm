@@ -103,7 +103,7 @@ glabel func_8004C7B4 # 1
 /* 04C498 8004C8E8 AFAA0030 */  sw          $t2, 0x30($sp)
 /* 04C49C 8004C8EC 8D040040 */  lw          $a0, 0x40($t0)
 /* 04C4A0 8004C8F0 AFA20024 */  sw          $v0, 0x24($sp)
-/* 04C4A4 8004C8F4 0C0140F4 */  jal         func_800503D0
+/* 04C4A4 8004C8F4 0C0140F4 */  jal         osVirtualToPhysical
 /* 04C4A8 8004C8F8 AFA3003C */   sw         $v1, 0x3c($sp)
 /* 04C4AC 8004C8FC 3C0100FF */  lui         $at, 0xff
 /* 04C4B0 8004C900 3421FFFF */  ori         $at, $at, 0xffff

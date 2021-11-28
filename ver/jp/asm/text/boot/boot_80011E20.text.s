@@ -1179,7 +1179,7 @@ glabel func_80012E9C # 27
 /* 012AA0 80012EF0 01284821 */  addu        $t1, $t1, $t0
 /* 012AA4 80012EF4 000949C0 */  sll         $t1, $t1, 7
 /* 012AA8 80012EF8 03292021 */  addu        $a0, $t9, $t1
-/* 012AAC 80012EFC 0C0140F4 */  jal         func_800503D0
+/* 012AAC 80012EFC 0C0140F4 */  jal         osVirtualToPhysical
 /* 012AB0 80012F00 24840050 */   addiu      $a0, $a0, 0x50
 /* 012AB4 80012F04 8FA30018 */  lw          $v1, 0x18($sp)
 /* 012AB8 80012F08 AC620004 */  sw          $v0, 0x4($v1)

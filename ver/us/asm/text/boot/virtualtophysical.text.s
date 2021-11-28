@@ -37,7 +37,7 @@ glabel osVirtualToPhysical # 0
 /* 050ACC 80050F1C 10000003 */  b           .L80050F2C
 /* 050AD0 80050F20 01E11024 */   and        $v0, $t7, $at
 .L80050F24:
-/* 050AD4 80050F24 0C016030 */  jal         func_800580C0
+/* 050AD4 80050F24 0C016030 */  jal         __osProbeTLB
 /* 050AD8 80050F28 8FA40018 */   lw         $a0, 0x18($sp)
 .L80050F2C:
 /* 050ADC 80050F2C 8FBF0014 */  lw          $ra, 0x14($sp)

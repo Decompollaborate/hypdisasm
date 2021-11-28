@@ -3,6 +3,7 @@
 800458F0,func_800458F0
 80049220,func_80049220
 8004FD20,func_8004FD20
+800503D0,osVirtualToPhysical
 80054C80,__osExceptionPreamble
 80054C90,__osException
 800551C4,send_mesg
@@ -12,5 +13,8 @@
 800553F4,__osPopThread
 80055404,__osDispatchThread
 80055580,__osCleanupThread
+80057380,__osProbeTLB
 80057C80,_Putfld
 800582F0,_Printf
+800594C0,__osSpRawStartDma
+80059550,__osSpDeviceBusy

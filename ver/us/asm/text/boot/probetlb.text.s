@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_800580C0 # 0
+glabel __osProbeTLB # 0
 /* 057C70 800580C0 40085000 */  mfc0        $t0, EntryHi
 /* 057C74 800580C4 310900FF */  andi        $t1, $t0, 0xff
 /* 057C78 800580C8 2401E000 */  addiu       $at, $zero, -0x2000

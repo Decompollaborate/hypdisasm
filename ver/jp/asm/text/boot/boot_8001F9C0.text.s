@@ -4007,7 +4007,7 @@ glabel func_800232B4 # 73
 /* 022EB0 80023300 00AB6021 */  addu        $t4, $a1, $t3
 /* 022EB4 80023304 8D840054 */  lw          $a0, 0x54($t4)
 /* 022EB8 80023308 AFA50020 */  sw          $a1, 0x20($sp)
-/* 022EBC 8002330C 0C0140F4 */  jal         func_800503D0
+/* 022EBC 8002330C 0C0140F4 */  jal         osVirtualToPhysical
 /* 022EC0 80023310 AFA3001C */   sw         $v1, 0x1c($sp)
 /* 022EC4 80023314 8FA8001C */  lw          $t0, 0x1c($sp)
 /* 022EC8 80023318 8FA50020 */  lw          $a1, 0x20($sp)

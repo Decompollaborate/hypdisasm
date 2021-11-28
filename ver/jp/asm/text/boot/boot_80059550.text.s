@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80059550 # 0
+glabel __osSpDeviceBusy # 0
 /* 059100 80059550 3C0EA404 */  lui         $t6, %hi(D_A4040010)
 /* 059104 80059554 8DC40010 */  lw          $a0, %lo(D_A4040010)($t6)
 /* 059108 80059558 27BDFFF8 */  addiu       $sp, $sp, -0x8

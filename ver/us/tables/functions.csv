@@ -140,7 +140,7 @@
 80057FF0,__osDisableInt
 80058060,__osRestoreInt
 80058080,__osDequeueThread
-80058080,__osProbeTLB
+800580C0,__osProbeTLB
 80058180,guMtxIdentF
 800581D0,guMtxF2L
 80058240,guMtxL2F

@@ -271,14 +271,14 @@ glabel func_8004A660 # 2
 /* 04A3A8 8004A7F8 01C17825 */  or          $t7, $t6, $at
 /* 04A3AC 8004A7FC AE4F0000 */  sw          $t7, 0x0($s2)
 /* 04A3B0 8004A800 8E040054 */  lw          $a0, 0x54($s0)
-/* 04A3B4 8004A804 0C0140F4 */  jal         func_800503D0
+/* 04A3B4 8004A804 0C0140F4 */  jal         osVirtualToPhysical
 /* 04A3B8 8004A808 26310008 */   addiu      $s1, $s1, 0x8
 /* 04A3BC 8004A80C 10000006 */  b           .L8004A828
 /* 04A3C0 8004A810 AE420004 */   sw         $v0, 0x4($s2)
 .L8004A814:
 /* 04A3C4 8004A814 AE580000 */  sw          $t8, 0x0($s2)
 /* 04A3C8 8004A818 8E040054 */  lw          $a0, 0x54($s0)
-/* 04A3CC 8004A81C 0C0140F4 */  jal         func_800503D0
+/* 04A3CC 8004A81C 0C0140F4 */  jal         osVirtualToPhysical
 /* 04A3D0 8004A820 26310008 */   addiu      $s1, $s1, 0x8
 /* 04A3D4 8004A824 AE420004 */  sw          $v0, 0x4($s2)
 .L8004A828:

@@ -104,7 +104,7 @@ beginseg
     include "ver/us/build/asm/text/boot/startthread.text.o"
     include "ver/us/build/asm/text/boot/setthreadpri.text.o"
     include "ver/us/build/asm/text/boot/bzero.text.o"
-    include "ver/us/build/asm/text/boot/boot_80050EC0.text.o"
+    include "ver/us/build/asm/text/boot/virtualtophysical.text.o"
     include "ver/us/build/asm/text/boot/boot_80050F40.text.o"
     include "ver/us/build/asm/text/boot/boot_800511D0.text.o"
     include "ver/us/build/asm/text/boot/boot_800514F0.text.o"

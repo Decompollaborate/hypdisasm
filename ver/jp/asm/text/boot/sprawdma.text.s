@@ -9,13 +9,13 @@
 
 .balign 16
 
-glabel func_800594C0 # 0
+glabel __osSpRawStartDma # 0
 /* 059070 800594C0 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 059074 800594C4 AFBF0014 */  sw          $ra, 0x14($sp)
 /* 059078 800594C8 AFA40018 */  sw          $a0, 0x18($sp)
 /* 05907C 800594CC AFA5001C */  sw          $a1, 0x1c($sp)
 /* 059080 800594D0 AFA60020 */  sw          $a2, 0x20($sp)
-/* 059084 800594D4 0C016554 */  jal         func_80059550
+/* 059084 800594D4 0C016554 */  jal         __osSpDeviceBusy
 /* 059088 800594D8 AFA70024 */   sw         $a3, 0x24($sp)
 /* 05908C 800594DC 10400003 */  beqz        $v0, .L800594EC
 /* 059090 800594E0 00000000 */   nop
@@ -25,7 +25,7 @@ glabel func_800594C0 # 0
 /* 05909C 800594EC 8FAE001C */  lw          $t6, 0x1c($sp)
 /* 0590A0 800594F0 3C0FA404 */  lui         $t7, %hi(D_A4040000)
 /* 0590A4 800594F4 ADEE0000 */  sw          $t6, %lo(D_A4040000)($t7)
-/* 0590A8 800594F8 0C0140F4 */  jal         func_800503D0
+/* 0590A8 800594F8 0C0140F4 */  jal         osVirtualToPhysical
 /* 0590AC 800594FC 8FA40020 */   lw         $a0, 0x20($sp)
 /* 0590B0 80059500 3C18A404 */  lui         $t8, %hi(D_A4040004)
 /* 0590B4 80059504 AF020004 */  sw          $v0, %lo(D_A4040004)($t8)

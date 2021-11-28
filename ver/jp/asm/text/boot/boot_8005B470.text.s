@@ -200,7 +200,7 @@ glabel func_8005B55C # 1
 /* 05B2D8 8005B728 AC4F0008 */  sw          $t7, 0x8($v0)
 /* 05B2DC 8005B72C 24450010 */  addiu       $a1, $v0, 0x10
 /* 05B2E0 8005B730 8D040014 */  lw          $a0, 0x14($t0)
-/* 05B2E4 8005B734 0C0140F4 */  jal         func_800503D0
+/* 05B2E4 8005B734 0C0140F4 */  jal         osVirtualToPhysical
 /* 05B2E8 8005B738 AFA50048 */   sw         $a1, 0x48($sp)
 /* 05B2EC 8005B73C 8FB80028 */  lw          $t8, 0x28($sp)
 /* 05B2F0 8005B740 8FA80050 */  lw          $t0, 0x50($sp)
