@@ -58,9 +58,13 @@ dkms.conf
 *.n64
 *.v64
 
+# Artifacts
+.disasm
+
 .vscode/
 build/
 *.bin
 context/
 *.c.m2c
 ctx.c
+ver/*/asm/**/*.c

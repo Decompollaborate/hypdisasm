@@ -31,6 +31,7 @@ CPP             := cpp
 ELF2ROM         ?= 
 MKLDSCRIPT      ?= 
 DISASSEMBLER    ?= tools/py-mips-disasm/simpleDisasm.py
+N64READER       := tools/64scripts/n64reader/n64reader.elf
 
 OPTFLAGS := 
 ASFLAGS := -march=vr4300 -32 -Iinclude
@@ -50,13 +51,15 @@ SPEC           := $(BASE_DIR)/spec_$(VERSION)
 LDSCRIPT       := $(BASE_DIR)/build/ldscript_$(VERSION).txt
 
 
-ASM_DIRS := $(shell find $(BASE_DIR)/asm/ -type d)
+ASM_DIRS       := $(shell find $(BASE_DIR)/asm/ -type d)
 
-S_FILES       := $(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s))
-#O_FILES       := $(foreach f,$(S_FILES:.s=.o),build/$f) \
+S_FILES        := $(foreach dir,$(ASM_DIRS),$(wildcard $(dir)/*.s))
+#O_FILES        := $(foreach f,$(S_FILES:.s=.o),build/$f) \
 #                 $(foreach f,$(wildcard baserom/*),build/$f.o)
 
 # $(info $(S_FILES))
+
+DISASM_TARGETS := $(shell sed -r 's/(.+)/ver\/$(VERSION)\/asm\/text\/\1\/.disasm/' $(BASE_DIR)/tables/disasm_list.txt)
 
 # create asm directories
 $(shell mkdir -p $(BASE_DIR)/baserom/ $(BASE_DIR)/asm/text $(BASE_DIR)/asm/data)
@@ -80,7 +83,7 @@ $(ROM): $(ELF)
 $(ELF): $(O_FILES) $(LDSCRIPT) $(BASE_DIR)/build/undefined_syms_$(VERSION).txt $(BASE_DIR)/build/libultra_syms.txt $(BASE_DIR)/build/hardware_regs.txt
 	$(LD) -T $(BASE_DIR)/build/undefined_syms_$(VERSION).txt -T $(BASE_DIR)/build/libultra_syms.txt -T $(BASE_DIR)/build/hardware_regs.txt -T $(LDSCRIPT) --no-check-sections --accept-unknown-input-arch --emit-relocs -Map $(BASE_DIR)/build/hyp_$(VERSION).map -o $@
 
-.PHONY: all setup clean
+.PHONY: all setup disasm asmclean clean
 .DEFAULT_GOAL := all
 
 #### Main commands ####
@@ -88,7 +91,10 @@ $(ELF): $(O_FILES) $(LDSCRIPT) $(BASE_DIR)/build/undefined_syms_$(VERSION).txt $
 ## Cleaning ##
 clean:
 	$(RM) -rf $(ROM) $(ELF) $(BASE_DIR)/build
+	$(RM) -rf $(BASE_DIR)/context
 
+asmclean:
+	$(RM) -rf $(BASE_DIR)/asm
 
 ## Extraction step
 setup:
@@ -96,6 +102,9 @@ setup:
 	$(MAKE) -C tools
 	./tools/extract_baserom.elf $(VERSION) $(BASE_ROM)
 
+## Assembly generation
+disasm: $(DISASM_TARGETS) $(BASE_DIR)/asm/text/makerom/rom_header.s $(BASE_DIR)/asm/text/makerom/ipl3.s
+	@echo "Disassembly done!"
 
 #### Various Recipes ####
 
@@ -119,3 +128,14 @@ $(BASE_DIR)/build/asm/text/%.o: $(BASE_DIR)/asm/text/%.s
 
 $(BASE_DIR)/build/asm/data/%.o: $(BASE_DIR)/asm/data/%.s
 	iconv --from UTF-8 --to EUC-JP $< | $(AS) $(ASFLAGS) -o $@
+
+$(BASE_DIR)/asm/text/%/.disasm: $(BASE_DIR)/baserom/%.bin $(BASE_DIR)/tables/variables.csv $(BASE_DIR)/tables/functions.csv $(BASE_DIR)/tables/files_%.csv
+	$(RM) -rf $(BASE_DIR)/asm/text/$* $(BASE_DIR)/asm/data/$* $(BASE_DIR)/context/$*.txt
+	./tools/py-mips-disasm/simpleDisasm.py $< $(BASE_DIR)/asm/text/$* -q --data-output $(BASE_DIR)/asm/data/$* --variables $(BASE_DIR)/tables/variables_hardware_regs.csv --variables $(BASE_DIR)/tables/variables_libultra.csv --variables $(BASE_DIR)/tables/variables.csv --functions $(BASE_DIR)/tables/functions.csv --file-splits $(BASE_DIR)/tables/files_$*.csv  --save-context $(BASE_DIR)/context/$*.txt --functions $(BASE_DIR)/tables/functions_$*.csv --variables $(BASE_DIR)/tables/variables_$*.csv --constants $(BASE_DIR)/tables/constants_$*.csv
+	@touch $@
+
+$(BASE_DIR)/asm/text/makerom/rom_header.s: $(BASE_DIR)/baserom/makerom.bin
+	$(N64READER) $(BASE_DIR)/baserom/makerom.bin -e entrypoint -a -u > $(BASE_DIR)/asm/text/makerom/rom_header.s
+
+$(BASE_DIR)/asm/text/makerom/ipl3.s: $(BASE_DIR)/baserom/makerom.bin
+	echo ".incbin \"$(BASE_DIR)/baserom/makerom.bin\", 0x40, 0xFC0" > $(BASE_DIR)/asm/text/makerom/ipl3.s
