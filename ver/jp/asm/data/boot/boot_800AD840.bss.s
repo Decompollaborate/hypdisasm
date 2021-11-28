@@ -273,7 +273,7 @@ glabel D_800B2C78
 glabel D_800B2C7C
 /* 0B282C 800B2C7C */  .space  0x04
 
-glabel D_800B2C80
+glabel D_800B2C80_RomRamTableIndex
 /* 0B2830 800B2C80 */  .space  0x04
 
 glabel D_800B2C84

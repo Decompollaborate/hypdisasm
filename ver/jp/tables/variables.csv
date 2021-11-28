@@ -10,6 +10,8 @@
 800ACB40,_xprint_hlL,u8,4
 800ACB44,_xprint_fchar,u8,6
 800ACB4C,_xprint_fbit,u32,0x18
+800B2C80,D_800B2C80_RomRamTableIndex,UNK_TYPE4,4
 801022C0,__osEventStateTab,__OSEventState[],0x80
-80104C00,__osThreadSave,OSThread,0x1B0
 80104A00,tmpTask,OSTask,0x40
+80104C00,__osThreadSave,OSThread,0x1B0
+80126694,D_80126694_RomRamTable,UNK_TYPE24,0x33C

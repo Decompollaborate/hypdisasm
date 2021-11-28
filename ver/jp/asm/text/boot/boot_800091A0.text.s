@@ -24,9 +24,9 @@ glabel func_800091B0 # 2
 /* 008D6C 800091BC AC20AE70 */  sw          $zero, %lo(D_800BAE70)($at)
 /* 008D70 800091C0 3C01800B */  lui         $at, %hi(D_800B2C84)
 /* 008D74 800091C4 240E0012 */  addiu       $t6, $zero, 0x12
-/* 008D78 800091C8 3C02800B */  lui         $v0, %hi(D_800B2C80)
+/* 008D78 800091C8 3C02800B */  lui         $v0, %hi(D_800B2C80_RomRamTableIndex)
 /* 008D7C 800091CC AC2E2C84 */  sw          $t6, %lo(D_800B2C84)($at)
-/* 008D80 800091D0 24422C80 */  addiu       $v0, $v0, %lo(D_800B2C80)
+/* 008D80 800091D0 24422C80 */  addiu       $v0, $v0, %lo(D_800B2C80_RomRamTableIndex)
 /* 008D84 800091D4 240F0016 */  addiu       $t7, $zero, 0x16
 /* 008D88 800091D8 AC4F0000 */  sw          $t7, 0x0($v0)
 /* 008D8C 800091DC 3C01800B */  lui         $at, %hi(D_800B2C78)
