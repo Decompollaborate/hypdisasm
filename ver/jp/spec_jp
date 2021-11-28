@@ -250,5 +250,173 @@ endseg
 
 beginseg
     name "file_E04F0"
+    after "file_B6970"
+
     include "ver/jp/build/baserom/file_E04F0.o"
+endseg
+
+beginseg
+    name "file_106240"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_106240.o"
+endseg
+
+beginseg
+    name "file_10E9B0"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_10E9B0.o"
+endseg
+
+beginseg
+    name "file_142F90"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_142F90.o"
+endseg
+
+beginseg
+    name "file_18F180"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_18F180.o"
+endseg
+
+beginseg
+    name "file_1AB4D0"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_1AB4D0.o"
+endseg
+
+beginseg
+    name "file_1D8A80"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_1D8A80.o"
+endseg
+
+beginseg
+    name "file_212780"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_212780.o"
+endseg
+
+beginseg
+    name "file_271450"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_271450.o"
+endseg
+
+beginseg
+    name "file_2BFDC0"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_2BFDC0.o"
+endseg
+
+beginseg
+    name "file_2E38B0"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_2E38B0.o"
+endseg
+
+beginseg
+    name "file_302700"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_302700.o"
+endseg
+
+beginseg
+    name "file_354650"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_354650.o"
+endseg
+
+beginseg
+    name "file_3BBC40"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_3BBC40.o"
+endseg
+
+beginseg
+    name "file_424670"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_424670.o"
+endseg
+
+beginseg
+    name "file_43D7F0"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_43D7F0.o"
+endseg
+
+beginseg
+    name "file_451B40"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_451B40.o"
+endseg
+
+beginseg
+    name "file_477610"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_477610.o"
+endseg
+
+beginseg
+    name "file_491F20"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_491F20.o"
+endseg
+
+beginseg
+    name "file_4B2C50"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_4B2C50.o"
+endseg
+
+beginseg
+    name "file_4BC020"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_4BC020.o"
+endseg
+
+beginseg
+    name "file_4EBA40"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_4EBA40.o"
+endseg
+
+beginseg
+    name "file_51A420"
+    after "file_B6970"
+
+    include "ver/jp/build/baserom/file_51A420.o"
+endseg
+
+beginseg
+    name "assets_52A410"
+
+    include "ver/jp/build/baserom/assets_52A410.o"
+endseg
+
+beginseg
+    name "padding_F93A80"
+
+    include "ver/jp/build/baserom/padding_F93A80.o"
 endseg
