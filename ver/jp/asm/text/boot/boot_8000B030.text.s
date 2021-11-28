@@ -3331,10 +3331,10 @@ glabel func_8000DE4C # 57
 /* 00DA6C 8000DEBC 24426104 */   addiu      $v0, $v0, %lo(D_800A6104)
 .L8000DEC0:
 /* 00DA70 8000DEC0 03E00008 */  jr          $ra
-/* 00DA74 8000DEC4 24426110 */   addiu      $v0, $v0, 0x6110
+/* 00DA74 8000DEC4 24426110 */   addiu      $v0, $v0, %lo(D_800A6110)
 .L8000DEC8:
 /* 00DA78 8000DEC8 03E00008 */  jr          $ra
-/* 00DA7C 8000DECC 2442611C */   addiu      $v0, $v0, 0x611c
+/* 00DA7C 8000DECC 2442611C */   addiu      $v0, $v0, %lo(D_800A611C)
 .L8000DED0:
 /* 00DA80 8000DED0 24426124 */  addiu       $v0, $v0, %lo(D_800A6124)
 /* 00DA84 8000DED4 03E00008 */  jr          $ra

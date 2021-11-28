@@ -132,7 +132,9 @@ $(BASE_DIR)/asm/text/%/.disasm: $(BASE_DIR)/baserom/%.bin $(BASE_DIR)/tables/var
 	@touch $@
 
 $(BASE_DIR)/asm/text/makerom/rom_header.s: $(BASE_DIR)/baserom/makerom.bin
+	mkdir -p $(BASE_DIR)/asm/text/makerom/
 	$(N64READER) $(BASE_DIR)/baserom/makerom.bin -e entrypoint -a -u > $(BASE_DIR)/asm/text/makerom/rom_header.s
 
 $(BASE_DIR)/asm/text/makerom/ipl3.s: $(BASE_DIR)/baserom/makerom.bin
+	mkdir -p $(BASE_DIR)/asm/text/makerom/
 	echo ".incbin \"$(BASE_DIR)/baserom/makerom.bin\", 0x40, 0xFC0" > $(BASE_DIR)/asm/text/makerom/ipl3.s
