@@ -102,7 +102,7 @@ glabel func_8004F200 # 0
 /* 04EEF8 8004F348 8FA40044 */  lw          $a0, 0x44($sp)
 .L8004F34C:
 /* 04EEFC 8004F34C 2605000C */  addiu       $a1, $s0, 0xc
-/* 04EF00 8004F350 0C013E84 */  jal         func_8004FA10
+/* 04EF00 8004F350 0C013E84 */  jal         bcopy
 /* 04EF04 8004F354 24060020 */   addiu      $a2, $zero, 0x20
 /* 04EF08 8004F358 8FAB0044 */  lw          $t3, 0x44($sp)
 /* 04EF0C 8004F35C 24190010 */  addiu       $t9, $zero, 0x10

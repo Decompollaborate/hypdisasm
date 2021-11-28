@@ -12,3 +12,4 @@
 800ACB4C,_xprint_fbit,u32,0x18
 801022C0,__osEventStateTab,__OSEventState[],0x80
 80104C00,__osThreadSave,OSThread,0x1B0
+80104A00,tmpTask,OSTask,0x40

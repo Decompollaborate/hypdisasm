@@ -1874,7 +1874,7 @@ glabel func_8003C6DC # 26
 /* 03C488 8003C8D8 26100001 */   addiu      $s0, $s0, 0x1
 /* 03C48C 8003C8DC 02802025 */  move        $a0, $s4
 /* 03C490 8003C8E0 02602825 */  move        $a1, $s3
-/* 03C494 8003C8E4 0C013E84 */  jal         func_8004FA10
+/* 03C494 8003C8E4 0C013E84 */  jal         bcopy
 /* 03C498 8003C8E8 02403025 */   move       $a2, $s2
 /* 03C49C 8003C8EC 1000001C */  b           .L8003C960
 /* 03C4A0 8003C8F0 26940008 */   addiu      $s4, $s4, 0x8
@@ -1905,7 +1905,7 @@ glabel func_8003C6DC # 26
 /* 03C4FC 8003C94C 00015883 */  sra         $t3, $at, 2
 .L8003C950:
 /* 03C500 8003C950 01732821 */  addu        $a1, $t3, $s3
-/* 03C504 8003C954 0C013E84 */  jal         func_8004FA10
+/* 03C504 8003C954 0C013E84 */  jal         bcopy
 /* 03C508 8003C958 02003025 */   move       $a2, $s0
 /* 03C50C 8003C95C 0290A021 */  addu        $s4, $s4, $s0
 .L8003C960:
@@ -2302,7 +2302,7 @@ glabel L8003CDFC
 /* 03CA74 8003CEC4 00409025 */  move        $s2, $v0
 /* 03CA78 8003CEC8 02802025 */  move        $a0, $s4
 /* 03CA7C 8003CECC 00402825 */  move        $a1, $v0
-/* 03CA80 8003CED0 0C013E84 */  jal         func_8004FA10
+/* 03CA80 8003CED0 0C013E84 */  jal         bcopy
 /* 03CA84 8003CED4 02E03025 */   move       $a2, $s7
 /* 03CA88 8003CED8 1AE0001E */  blez        $s7, .L8003CF54
 /* 03CA8C 8003CEDC 02E03025 */   move       $a2, $s7
@@ -2340,7 +2340,7 @@ glabel L8003CDFC
 /* 03CB00 8003CF50 A04EFFFC */   sb         $t6, -0x4($v0)
 .L8003CF54:
 /* 03CB04 8003CF54 02402025 */  move        $a0, $s2
-/* 03CB08 8003CF58 0C013E84 */  jal         func_8004FA10
+/* 03CB08 8003CF58 0C013E84 */  jal         bcopy
 /* 03CB0C 8003CF5C 02602825 */   move       $a1, $s3
 /* 03CB10 8003CF60 3C048010 */  lui         $a0, %hi(D_800FD0E0)
 /* 03CB14 8003CF64 2484D0E0 */  addiu       $a0, $a0, %lo(D_800FD0E0)
@@ -2350,7 +2350,7 @@ glabel L8003CDFC
 /* 03CB24 8003CF74 0297A021 */   addu       $s4, $s4, $s7
 .L8003CF78:
 /* 03CB28 8003CF78 02602825 */  move        $a1, $s3
-/* 03CB2C 8003CF7C 0C013E84 */  jal         func_8004FA10
+/* 03CB2C 8003CF7C 0C013E84 */  jal         bcopy
 /* 03CB30 8003CF80 02E03025 */   move       $a2, $s7
 /* 03CB34 8003CF84 10000004 */  b           .L8003CF98
 /* 03CB38 8003CF88 0297A021 */   addu       $s4, $s4, $s7

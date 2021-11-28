@@ -97,7 +97,7 @@ glabel func_8004D7A0 # 0
 /* 04D484 8004D8D4 26050006 */  addiu       $a1, $s0, 0x6
 /* 04D488 8004D8D8 00594025 */  or          $t0, $v0, $t9
 /* 04D48C 8004D8DC A2080005 */  sb          $t0, 0x5($s0)
-/* 04D490 8004D8E0 0C013E84 */  jal         func_8004FA10
+/* 04D490 8004D8E0 0C013E84 */  jal         bcopy
 /* 04D494 8004D8E4 24060004 */   addiu      $a2, $zero, 0x4
 /* 04D498 8004D8E8 24040001 */  addiu       $a0, $zero, 0x1
 /* 04D49C 8004D8EC 0C015108 */  jal         func_80054420

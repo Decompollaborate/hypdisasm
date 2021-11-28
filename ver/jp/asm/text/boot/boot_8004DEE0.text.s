@@ -131,7 +131,7 @@ glabel func_8004DEE0 # 0
 /* 04DC4C 8004E09C 10000006 */  b           .L8004E0B8
 /* 04DC50 8004E0A0 24130004 */   addiu      $s3, $zero, 0x4
 .L8004E0A4:
-/* 04DC54 8004E0A4 0C013E84 */  jal         func_8004FA10
+/* 04DC54 8004E0A4 0C013E84 */  jal         bcopy
 /* 04DC58 8004E0A8 24060024 */   addiu      $a2, $zero, 0x24
 /* 04DC5C 8004E0AC 10000003 */  b           .L8004E0BC
 /* 04DC60 8004E0B0 24010004 */   addiu      $at, $zero, 0x4

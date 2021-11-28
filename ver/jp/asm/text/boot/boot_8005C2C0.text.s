@@ -110,7 +110,7 @@ glabel func_8005C2C0 # 0
 /* 05BFD4 8005C424 24060020 */  addiu       $a2, $zero, 0x20
 /* 05BFD8 8005C428 00594025 */  or          $t0, $v0, $t9
 /* 05BFDC 8005C42C A2080005 */  sb          $t0, 0x5($s0)
-/* 05BFE0 8005C430 0C013E84 */  jal         func_8004FA10
+/* 05BFE0 8005C430 0C013E84 */  jal         bcopy
 /* 05BFE4 8005C434 8FA40074 */   lw         $a0, 0x74($sp)
 /* 05BFE8 8005C438 24040001 */  addiu       $a0, $zero, 0x1
 /* 05BFEC 8005C43C 0C015108 */  jal         func_80054420

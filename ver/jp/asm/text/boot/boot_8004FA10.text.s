@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8004FA10 # 0
+glabel bcopy # 0
 /* 04F5C0 8004FA10 10C0001A */  beqz        $a2, .L8004FA7C
 /* 04F5C4 8004FA14 00A03825 */   move       $a3, $a1
 /* 04F5C8 8004FA18 10850018 */  beq         $a0, $a1, .L8004FA7C

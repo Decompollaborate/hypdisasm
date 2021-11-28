@@ -1233,7 +1233,7 @@ glabel D_801049D8
 glabel D_801049F0
 /* 1045A0 801049F0 */  .space  0x10
 
-glabel D_80104A00
+glabel tmpTask
 /* 1045B0 80104A00 */  .space  0x40
 
 glabel D_80104A40

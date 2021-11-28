@@ -18,3 +18,11 @@
 800582F0,_Printf
 800594C0,__osSpRawStartDma
 80059550,__osSpDeviceBusy
+8005256C,func_8005256C
+800523DC,osSpTaskLoad
+800522C0,_VirtualToPhysicalTask
+80052220,osSpTaskYield
+800594A0,__osSpSetStatus
+800594B0,__osSpGetStatus
+80052240,osSpTaskYielded
+8004FA10,bcopy
