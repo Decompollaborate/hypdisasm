@@ -24,4 +24,4 @@ find ver/${VERSION}/baserom -type f -name "*.bin" | sed 's/\.bin/\.o/ ; s/basero
 find ver/${VERSION}/asm -type f -name "*.s" | sed 's/\.s/\.o/ ; s/asm\//build\/asm\//' | xargs make VERSION=${VERSION}
 
 # Build ROM
-make ELF2ROM=../mm/tools/buildtools/elf2rom MKLDSCRIPT=../mm/tools/buildtools/mkldscript
+make VERSION=${VERSION} ELF2ROM=../mm/tools/buildtools/elf2rom MKLDSCRIPT=../mm/tools/buildtools/mkldscript

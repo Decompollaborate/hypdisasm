@@ -43,7 +43,7 @@ MIPS_VERSION := -mips2
 BASE_DIR       := ver/$(VERSION)
 
 # ROM image
-BASE_ROM       := $(BASE_DIR)/baserom_us.z64
+BASE_ROM       := $(BASE_DIR)/baserom_$(VERSION).z64
 ROM            := hyp_$(VERSION).z64
 ELF            := $(BASE_DIR)/build/$(ROM:.z64=.elf)
 # description of ROM segments
@@ -94,11 +94,11 @@ clean:
 	$(RM) -rf $(BASE_DIR)/context
 
 asmclean:
-	$(RM) -rf $(BASE_DIR)/asm
+	$(RM) -rf $(BASE_DIR)/asm/text $(BASE_DIR)/asm/data $(BASE_DIR)/context
 
 ## Extraction step
 setup:
-	$(RM) -f $(ELF) $(ROM)
+	$(RM) -rf $(ELF) $(ROM)
 	$(MAKE) -C tools
 	./tools/extract_baserom.elf $(VERSION) $(BASE_ROM)
 
@@ -131,7 +131,7 @@ $(BASE_DIR)/build/asm/data/%.o: $(BASE_DIR)/asm/data/%.s
 
 $(BASE_DIR)/asm/text/%/.disasm: $(BASE_DIR)/baserom/%.bin $(BASE_DIR)/tables/variables.csv $(BASE_DIR)/tables/functions.csv $(BASE_DIR)/tables/files_%.csv
 	$(RM) -rf $(BASE_DIR)/asm/text/$* $(BASE_DIR)/asm/data/$* $(BASE_DIR)/context/$*.txt
-	./tools/py-mips-disasm/simpleDisasm.py $< $(BASE_DIR)/asm/text/$* -q --data-output $(BASE_DIR)/asm/data/$* --variables $(BASE_DIR)/tables/variables_hardware_regs.csv --variables $(BASE_DIR)/tables/variables_libultra.csv --variables $(BASE_DIR)/tables/variables.csv --functions $(BASE_DIR)/tables/functions.csv --file-splits $(BASE_DIR)/tables/files_$*.csv  --save-context $(BASE_DIR)/context/$*.txt --functions $(BASE_DIR)/tables/functions_$*.csv --variables $(BASE_DIR)/tables/variables_$*.csv --constants $(BASE_DIR)/tables/constants_$*.csv
+	$(DISASSEMBLER) $< $(BASE_DIR)/asm/text/$* -q --data-output $(BASE_DIR)/asm/data/$* --variables $(BASE_DIR)/tables/variables.csv --functions $(BASE_DIR)/tables/functions.csv --file-splits $(BASE_DIR)/tables/files_$*.csv  --save-context $(BASE_DIR)/context/$*.txt --functions $(BASE_DIR)/tables/functions_$*.csv --variables $(BASE_DIR)/tables/variables_$*.csv --constants $(BASE_DIR)/tables/constants_$*.csv
 	@touch $@
 
 $(BASE_DIR)/asm/text/makerom/rom_header.s: $(BASE_DIR)/baserom/makerom.bin
