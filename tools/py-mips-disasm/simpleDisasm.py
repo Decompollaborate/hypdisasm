@@ -51,7 +51,10 @@ def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: in
                 funcOffset = func.vram - vram
                 if start <= funcOffset < end:
                     functionsInBoundary += 1
-            printVerbose("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
+            fileVram = 0
+            if vram > -1:
+                fileVram = start + vram
+            printVerbose("\t", toHex(start+offsetStart, 6)[2:], toHex(end-start, 4)[2:], toHex(fileVram, 8)[2:], "\t functions:", functionsInBoundary)
 
         start = f.fileBoundaries[-1]
         end = f.size + f.offset
@@ -61,7 +64,10 @@ def simpleDisasmFile(array_of_bytes: bytearray, outputPath: str, offsetStart: in
             funcOffset = func.vram - vram
             if start <= funcOffset < end:
                 functionsInBoundary += 1
-        printVerbose("\t", toHex(start, 6)[2:], toHex(end-start, 3)[2:], "\t functions:", functionsInBoundary)
+        fileVram = 0
+        if vram > -1:
+            fileVram = start + vram
+        printVerbose("\t", toHex(start+offsetStart, 6)[2:], toHex(end-start, 4)[2:], toHex(fileVram, 8)[2:], "\t functions:", functionsInBoundary)
 
         printVerbose()
 
@@ -190,6 +196,9 @@ def disassemblerMain():
     parser.add_argument("--write-binary", help="Produce a binary of the processed file", action="store_true")
     parser.add_argument("--nuke-pointers", help="Use every technique available to remove pointers", action="store_true")
 
+    parser.add_argument("--non-libultra", help="Don't use built-in libultra symbols", action="store_true")
+    parser.add_argument("--non-hardware-regs", help="Don't use built-in hardware registers symbols", action="store_true")
+
     args = parser.parse_args()
 
     GlobalConfig.REMOVE_POINTERS = args.nuke_pointers
@@ -210,6 +219,12 @@ def disassemblerMain():
         newStuffSuffix = ""
 
     context = Context()
+    context.fillDefaultBannedSymbols()
+    if not args.non_libultra:
+        context.fillLibultraSymbols()
+    if not args.non_hardware_regs:
+        context.fillHardwareRegs()
+
     if args.functions is not None:
         for funcsPath in args.functions:
             context.readFunctionsCsv(funcsPath)
@@ -321,14 +336,7 @@ def disassemblerMain():
         head, tail = os.path.split(args.save_context)
         if head != "":
             os.makedirs(head, exist_ok=True)
-        name = tail
-        extension = ""
-        if "." in tail:
-            *aux, extension = tail.split(".")
-            name = ".".join(aux)
-            extension = "." + extension
-        name = os.path.join(head, name)
-        context.saveContextToFile(f"{name}_{extension}")
+        context.saveContextToFile(args.save_context)
 
     printQuietless(lenLastLine*" " + "\r", end="")
     printQuietless(f"Done: {args.binary}")
