@@ -234,5 +234,21 @@ endseg
 
 beginseg
     name "file_B6970"
-    include "ver/jp/build/baserom/file_B6970.o"
+
+    // text
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_8010E360.text.o"
+
+    // data
+    include "ver/jp/build/asm/data/file_B6970/file_B6970_80126520.data.o"
+
+    // rodata
+    include "ver/jp/build/asm/data/file_B6970/file_B6970_8012F600.rodata.o"
+
+    // bss
+    include "ver/jp/build/asm/data/file_B6970/file_B6970_80137EE0.bss.o"
+endseg
+
+beginseg
+    name "file_E04F0"
+    include "ver/jp/build/baserom/file_E04F0.o"
 endseg

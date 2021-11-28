@@ -26,3 +26,4 @@
 800594B0,__osSpGetStatus
 80052240,osSpTaskYielded
 8004FA10,bcopy
+8003528C,func_8003528C_RomToRam

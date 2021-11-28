@@ -1,0 +1,12 @@
+offset,vram,.text
+0,8010E360,file_B6970_8010E360
+
+offset,vram,.data
+181C0,80126520,file_B6970_80126520
+
+offset,vram,.rodata
+212A0,8012F600,file_B6970_8012F600
+
+offset,vram,.bss
+29B80,80137EE0,file_B6970_80137EE0
+2A010,80138370,.end
