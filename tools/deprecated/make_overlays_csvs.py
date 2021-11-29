@@ -3,22 +3,46 @@
 import os
 
 
-overlays = ["file_DCF60", "file_107190", "file_10F7F0", "file_1426B0", "file_182B40", "file_19C470", "file_1C5E50", "file_1FE3D0", "file_2535D0", "file_29CA40", "file_2BD950", "file_2DA640", "file_31AA90", "file_3728F0", "file_3C8950", "file_3E3D00", "file_3F6EF0", "file_417E50", "file_430E20", "file_44E2E0", "file_456EF0", "file_47EBD0", "file_4A49D0"]
+overlays = [
+    "file_E04F0",
+    "file_106240",
+    "file_10E9B0",
+    "file_142F90",
+    "file_18F180",
+    "file_1AB4D0",
+    "file_1D8A80",
+    "file_212780",
+    "file_271450",
+    "file_2BFDC0",
+    "file_2E38B0",
+    "file_302700",
+    "file_354650",
+    "file_3BBC40",
+    "file_424670",
+    "file_43D7F0",
+    "file_451B40",
+    "file_477610",
+    "file_491F20",
+    "file_4B2C50",
+    "file_4BC020",
+    "file_4EBA40",
+    "file_51A420",
+]
 
 
 for ovl in overlays:
-    folderPath = f"ver/us/asm/text/{ovl}"
+    folderPath = f"ver/jp/asm/text/{ovl}"
     for file in os.listdir(folderPath):
         contPath = os.path.join(folderPath, file)
         with open(contPath) as f:
             functions = []
             for line in f:
-                if "glabel " in line:
+                if "glabel func_" in line:
                     funcName = line.replace("glabel ", "").split(" # ")[0]
                     vram = funcName.split("func_")[1]
                     functions.append((vram, funcName))
 
-            with open(f"ver/us/tables/functions_{ovl}.csv", "w") as out:
+            with open(f"ver/jp/tables/functions_{ovl}.csv", "w") as out:
                 fileOffset = ovl.split("file_")[1]
                 for vram, funcName in functions:
                     out.write(f"{vram},{funcName}_{fileOffset}\n")

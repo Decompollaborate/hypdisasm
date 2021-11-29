@@ -1,0 +1,9 @@
+offset,vram,.text
+0,80138370,file_18F180_80138370
+
+offset,vram,.data
+1C0,80138530,file_18F180_80138530
+
+offset,vram,.bss
+1C350,801546C0,file_18F180_801546C0
+1C360,801546D0,.end

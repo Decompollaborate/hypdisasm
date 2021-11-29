@@ -1,0 +1,9 @@
+offset,vram,.text
+0,80138370,file_2BFDC0_80138370
+
+offset,vram,.data
+5A0,80138910,file_2BFDC0_80138910
+
+offset,vram,.bss
+23AF0,8015BE60,file_2BFDC0_8015BE60
+23B00,8015BE70,.end
