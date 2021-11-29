@@ -2098,9 +2098,9 @@ glabel func_800493C8 # 11
 /* 048FC4 80049414 27BD0008 */   addiu      $sp, $sp, 0x8
 
 glabel func_80049418 # 12
-/* 048FC8 80049418 3C01800B */  lui         $at, %hi(D_800ACA90)
+/* 048FC8 80049418 3C01800B */  lui         $at, %hi(__libm_qnan_f)
 /* 048FCC 8004941C 03E00008 */  jr          $ra
-/* 048FD0 80049420 C420CA90 */   lwc1       $f0, %lo(D_800ACA90)($at)
+/* 048FD0 80049420 C420CA90 */   lwc1       $f0, %lo(__libm_qnan_f)($at)
 
 glabel func_80049424 # 13
 /* 048FD4 80049424 3C01800B */  lui         $at, %hi(D_800AC860)

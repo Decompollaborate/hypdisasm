@@ -1,0 +1,35 @@
+.include "macro.inc"
+
+# assembler directives
+.set noat      # allow manual use of $at
+.set noreorder # don't insert nops after branches
+.set gp=64     # allow use of 64-bit general purpose registers
+
+.section .rodata
+
+.balign 16
+
+glabel jtbl_800ACAA0
+/* 0AC650 800ACAA0 800532F8 */  .word  L800532F8
+/* 0AC654 800ACAA4 80053304 */  .word  L80053304
+/* 0AC658 800ACAA8 8005331C */  .word  L8005331C
+/* 0AC65C 800ACAAC 80053328 */  .word  L80053328
+/* 0AC660 800ACAB0 80053310 */  .word  L80053310
+/* 0AC664 800ACAB4 80053334 */  .word  L80053334
+
+glabel D_800ACAB8
+/* 0AC668 800ACAB8 4105221B3D3FB61B */  .double  173123.404906676
+
+glabel jtbl_800ACAC0
+/* 0AC670 800ACAC0 80053D60 */  .word  L80053D60
+/* 0AC674 800ACAC4 80053D94 */  .word  L80053D94
+/* 0AC678 800ACAC8 80053DF4 */  .word  L80053DF4
+/* 0AC67C 800ACACC 80053DC8 */  .word  L80053DC8
+/* 0AC680 800ACAD0 80053E20 */  .word  L80053E20
+/* 0AC684 800ACAD4 80053E4C */  .word  L80053E4C
+/* 0AC688 800ACAD8 80053EB4 */  .word  L80053EB4
+/* 0AC68C 800ACADC 80053F2C */  .word  L80053F2C
+
+glabel D_800ACAE0
+/* 0AC690 800ACAE0 4105221B3D3FB61B */  .double  173123.404906676
+/* 0AC698 800ACAE8 0000000000000000 */  .double  0.0
