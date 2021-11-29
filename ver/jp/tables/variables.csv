@@ -1,3 +1,5 @@
+800A2A20,sCpuExceptions,UNK_TYPE,0x150
+800A2CE4,sFpuExceptions,UNK_TYPE,0x114
 800A312C,__osShutdown,s32,4
 800A3130,__OSGlobalIntMask,u32,4
 800A4D68,__osRunQueue,OSThread*,4

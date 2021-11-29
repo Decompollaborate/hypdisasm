@@ -81,8 +81,8 @@ glabel func_8003ECFC # 3
 /* 03E8B4 8003ED04 AFB00018 */  sw          $s0, 0x18($sp)
 /* 03E8B8 8003ED08 AFA40038 */  sw          $a0, 0x38($sp)
 /* 03E8BC 8003ED0C 3C05800B */  lui         $a1, %hi(D_800AC514)
-/* 03E8C0 8003ED10 3C06800A */  lui         $a2, %hi(D_800A2A20)
-/* 03E8C4 8003ED14 24C62A20 */  addiu       $a2, $a2, %lo(D_800A2A20)
+/* 03E8C0 8003ED10 3C06800A */  lui         $a2, %hi(sCpuExceptions)
+/* 03E8C4 8003ED14 24C62A20 */  addiu       $a2, $a2, %lo(sCpuExceptions)
 /* 03E8C8 8003ED18 24A5C514 */  addiu       $a1, $a1, %lo(D_800AC514)
 /* 03E8CC 8003ED1C 0C00FB08 */  jal         func_8003EC20
 /* 03E8D0 8003ED20 8C840120 */   lw         $a0, 0x120($a0)
@@ -95,8 +95,8 @@ glabel func_8003ECFC # 3
 /* 03E8EC 8003ED3C 0C00FB08 */  jal         func_8003EC20
 /* 03E8F0 8003ED40 8E0400F8 */   lw         $a0, 0xf8($s0)
 /* 03E8F4 8003ED44 3C05800B */  lui         $a1, %hi(D_800AC6E4)
-/* 03E8F8 8003ED48 3C06800A */  lui         $a2, %hi(D_800A2CE4)
-/* 03E8FC 8003ED4C 24C62CE4 */  addiu       $a2, $a2, %lo(D_800A2CE4)
+/* 03E8F8 8003ED48 3C06800A */  lui         $a2, %hi(sFpuExceptions)
+/* 03E8FC 8003ED4C 24C62CE4 */  addiu       $a2, $a2, %lo(sFpuExceptions)
 /* 03E900 8003ED50 24A5C6E4 */  addiu       $a1, $a1, %lo(D_800AC6E4)
 /* 03E904 8003ED54 0C00FB08 */  jal         func_8003EC20
 /* 03E908 8003ED58 8E04010C */   lw         $a0, 0x10c($s0)
@@ -283,7 +283,7 @@ glabel func_8003ECFC # 3
 /* 03EBDC 8003F02C 03E00008 */  jr          $ra
 /* 03EBE0 8003F030 00000000 */   nop
 
-glabel func_8003F034 # 4
+glabel Fault_ThreadEntry # 4
 /* 03EBE4 8003F034 27BDFFB0 */  addiu       $sp, $sp, -0x50
 /* 03EBE8 8003F038 AFB20020 */  sw          $s2, 0x20($sp)
 /* 03EBEC 8003F03C 3C128010 */  lui         $s2, %hi(D_800FD5F0)
@@ -357,7 +357,7 @@ glabel func_8003F034 # 4
 /* 03ECF0 8003F140 03E00008 */  jr          $ra
 /* 03ECF4 8003F144 27BD0050 */   addiu      $sp, $sp, 0x50
 
-glabel func_8003F148 # 5
+glabel Fault_Start # 5
 /* 03ECF8 8003F148 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 03ECFC 8003F14C AFA40020 */  sw          $a0, 0x20($sp)
 /* 03ED00 8003F150 AFA50024 */  sw          $a1, 0x24($sp)
@@ -372,8 +372,8 @@ glabel func_8003F148 # 5
 /* 03ED24 8003F174 3C0E8010 */  lui         $t6, %hi(D_800FD5F0)
 /* 03ED28 8003F178 25CED5F0 */  addiu       $t6, $t6, %lo(D_800FD5F0)
 /* 03ED2C 8003F17C 3C048010 */  lui         $a0, %hi(D_800FD240)
-/* 03ED30 8003F180 3C068004 */  lui         $a2, %hi(func_8003F034)
-/* 03ED34 8003F184 24C6F034 */  addiu       $a2, $a2, %lo(func_8003F034)
+/* 03ED30 8003F180 3C068004 */  lui         $a2, %hi(Fault_ThreadEntry)
+/* 03ED34 8003F184 24C6F034 */  addiu       $a2, $a2, %lo(Fault_ThreadEntry)
 /* 03ED38 8003F188 2484D240 */  addiu       $a0, $a0, %lo(D_800FD240)
 /* 03ED3C 8003F18C AFAE0010 */  sw          $t6, 0x10($sp)
 /* 03ED40 8003F190 8FA50020 */  lw          $a1, 0x20($sp)

@@ -8,13 +8,9 @@
 .section .rodata
 
 .balign 16
-/* 0ABC00 800AC050  */  .asciz  "\n"
+/* 0AC3A0 800AC7F0  */  .asciz  "ERROR: Can't alloc %d bytes from heap.\n"
                         .balign 4
-/* 0ABC04 800AC054  */  .asciz  "|    "
+/* 0AC3C8 800AC818  */  .asciz  ""
                         .balign 4
-/* 0ABC0C 800AC05C  */  .asciz  "root:%p\n"
-                        .balign 4
-/* 0ABC18 800AC068  */  .asciz  "\n\n"
-                        .balign 4
-/* 0ABC1C 800AC06C  */  .asciz  "node %p  link: %p, %p  data: %p\n"
+/* 0AC3CC 800AC81C  */  .asciz  ""
                         .balign 4

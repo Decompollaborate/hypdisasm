@@ -251,6 +251,8 @@ beginseg
 
     // data
     include "ver/us/build/asm/data/boot/boot_800630A0.data.o"
+    include "ver/us/build/asm/data/boot/fault.data.o"
+    include "ver/us/build/asm/data/boot/boot_8009D930.data.o"
     include "ver/us/build/asm/data/boot/osViTable.data.o"
     include "ver/us/build/asm/data/boot/boot_8009EE30.data.o"
     include "ver/us/build/asm/data/boot/exceptasm.data.o"
@@ -282,6 +284,8 @@ beginseg
     include "ver/us/build/asm/data/boot/boot_800A0D30.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A2670.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800A26A0.rodata.o"
+    include "ver/us/build/asm/data/boot/fault.rodata.o"
+    include "ver/us/build/asm/data/boot/boot_800A7BC0.rodata.o"
     include "ver/us/build/asm/data/boot/llcvt.rodata.o"
     include "ver/us/build/asm/data/boot/boot_800532F0.rodata.o"
     include "ver/us/build/asm/data/boot/setintmask.rodata.o"

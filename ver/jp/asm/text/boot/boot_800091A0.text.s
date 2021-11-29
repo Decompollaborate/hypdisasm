@@ -43,7 +43,7 @@ glabel func_800091B0 # 2
 /* 008DB8 80009208 24080001 */  addiu       $t0, $zero, 0x1
 /* 008DBC 8000920C AC285290 */  sw          $t0, %lo(D_800F5290)($at)
 /* 008DC0 80009210 2404006E */  addiu       $a0, $zero, 0x6e
-/* 008DC4 80009214 0C00FC52 */  jal         func_8003F148
+/* 008DC4 80009214 0C00FC52 */  jal         Fault_Start
 /* 008DC8 80009218 2405006E */   addiu      $a1, $zero, 0x6e
 /* 008DCC 8000921C 24090001 */  addiu       $t1, $zero, 0x1
 /* 008DD0 80009220 AFA90010 */  sw          $t1, 0x10($sp)

@@ -81,8 +81,8 @@ glabel func_8004237C # 3
 /* 041F34 80042384 AFB00018 */  sw          $s0, 0x18($sp)
 /* 041F38 80042388 AFA40038 */  sw          $a0, 0x38($sp)
 /* 041F3C 8004238C 3C05800A */  lui         $a1, %hi(_faultstring_cause)
-/* 041F40 80042390 3C06800A */  lui         $a2, %hi(D_8009D550)
-/* 041F44 80042394 24C6D550 */  addiu       $a2, $a2, %lo(D_8009D550)
+/* 041F40 80042390 3C06800A */  lui         $a2, %hi(sCpuExceptions)
+/* 041F44 80042394 24C6D550 */  addiu       $a2, $a2, %lo(sCpuExceptions)
 /* 041F48 80042398 24A578E4 */  addiu       $a1, $a1, %lo(_faultstring_cause)
 /* 041F4C 8004239C 0C0108A8 */  jal         func_800422A0
 /* 041F50 800423A0 8C840120 */   lw         $a0, 0x120($a0)
@@ -95,8 +95,8 @@ glabel func_8004237C # 3
 /* 041F6C 800423BC 0C0108A8 */  jal         func_800422A0
 /* 041F70 800423C0 8E0400F8 */   lw         $a0, 0xf8($s0)
 /* 041F74 800423C4 3C05800A */  lui         $a1, %hi(D_800A7AB4)
-/* 041F78 800423C8 3C06800A */  lui         $a2, %hi(D_8009D814)
-/* 041F7C 800423CC 24C6D814 */  addiu       $a2, $a2, %lo(D_8009D814)
+/* 041F78 800423C8 3C06800A */  lui         $a2, %hi(sFpuExceptions)
+/* 041F7C 800423CC 24C6D814 */  addiu       $a2, $a2, %lo(sFpuExceptions)
 /* 041F80 800423D0 24A57AB4 */  addiu       $a1, $a1, %lo(D_800A7AB4)
 /* 041F84 800423D4 0C0108A8 */  jal         func_800422A0
 /* 041F88 800423D8 8E04010C */   lw         $a0, 0x10c($s0)
