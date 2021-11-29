@@ -240,6 +240,12 @@ beginseg
 
     // text
     include "ver/jp/build/asm/text/file_B6970/file_B6970_8010E360.text.o"
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_80112180.text.o"
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_801162D0.text.o"
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_80116590.text.o"
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_8011A7C0.text.o"
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_8011CB20.text.o"
+    include "ver/jp/build/asm/text/file_B6970/file_B6970_80124B40.text.o"
 
     // data
     include "ver/jp/build/asm/data/file_B6970/file_B6970_80126520.data.o"
