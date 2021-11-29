@@ -42,8 +42,8 @@ glabel osSetIntMask # 0
 /* 053620 80053A70 3088FF01 */  andi        $t0, $a0, 0xff01
 /* 053624 80053A74 3169FF00 */  andi        $t1, $t3, 0xff00
 /* 053628 80053A78 01094024 */  and         $t0, $t0, $t1
-/* 05362C 80053A7C 3C01FFFF */  lui         $at, 0xffff
-/* 053630 80053A80 342100FF */  ori         $at, $at, 0xff
+/* 05362C 80053A7C 3C01FFFF */  lui         $at, (0xFFFF00FF >> 16)
+/* 053630 80053A80 342100FF */  ori         $at, $at, (0xFFFF00FF & 0xFFFF)
 /* 053634 80053A84 01816024 */  and         $t4, $t4, $at
 /* 053638 80053A88 01886025 */  or          $t4, $t4, $t0
 /* 05363C 80053A8C 408C6000 */  mtc0        $t4, Status

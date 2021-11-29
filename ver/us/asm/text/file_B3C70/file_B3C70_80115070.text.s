@@ -2234,8 +2234,8 @@ glabel func_80116E60 # 48
 /* 00C3CC 80116EBC 0C00591F */  jal         func_8001647C
 /* 00C3D0 80116EC0 02002025 */   move       $a0, $s0
 /* 00C3D4 80116EC4 8FB80028 */  lw          $t8, 0x28($sp)
-/* 00C3D8 80116EC8 3C053FD9 */  lui         $a1, 0x3fd9
-/* 00C3DC 80116ECC 34A5999A */  ori         $a1, $a1, 0x999a
+/* 00C3D8 80116EC8 3C053FD9 */  lui         $a1, (0x3FD9999A >> 16)
+/* 00C3DC 80116ECC 34A5999A */  ori         $a1, $a1, (0x3FD9999A & 0xFFFF)
 /* 00C3E0 80116ED0 44983000 */  mtc1        $t8, $f6
 /* 00C3E4 80116ED4 2404000A */  addiu       $a0, $zero, 0xa
 /* 00C3E8 80116ED8 3C064040 */  lui         $a2, 0x4040

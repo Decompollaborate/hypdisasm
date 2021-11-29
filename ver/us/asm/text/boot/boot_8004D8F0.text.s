@@ -432,8 +432,8 @@ glabel func_8004DEF0 # 8
 /* 04DAA4 8004DEF4 24E7D9C4 */  addiu       $a3, $a3, %lo(D_8009D9C4)
 /* 04DAA8 8004DEF8 AC800000 */  sw          $zero, 0x0($a0)
 /* 04DAAC 8004DEFC 8CE50000 */  lw          $a1, 0x0($a3)
-/* 04DAB0 8004DF00 3C027FFF */  lui         $v0, 0x7fff
-/* 04DAB4 8004DF04 3442FFFF */  ori         $v0, $v0, 0xffff
+/* 04DAB0 8004DF00 3C027FFF */  lui         $v0, (0x7FFFFFFF >> 16)
+/* 04DAB4 8004DF04 3442FFFF */  ori         $v0, $v0, (0x7FFFFFFF & 0xFFFF)
 /* 04DAB8 8004DF08 8CA30000 */  lw          $v1, 0x0($a1)
 /* 04DABC 8004DF0C 50600010 */  beql        $v1, $zero, .L8004DF50
 /* 04DAC0 8004DF10 8C880000 */   lw         $t0, 0x0($a0)

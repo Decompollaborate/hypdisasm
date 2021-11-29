@@ -102,8 +102,8 @@ glabel func_80050FB0 # 0
 /* 050CA8 800510F8 00000000 */   nop
 /* 050CAC 800510FC 3C0E800A */  lui         $t6, %hi(D_800A4E14)
 /* 050CB0 80051100 8DCE4E14 */  lw          $t6, %lo(D_800A4E14)($t6)
-/* 050CB4 80051104 3C01FFFE */  lui         $at, 0xfffe
-/* 050CB8 80051108 3421FFFF */  ori         $at, $at, 0xffff
+/* 050CB4 80051104 3C01FFFE */  lui         $at, (0xFFFEFFFF >> 16)
+/* 050CB8 80051108 3421FFFF */  ori         $at, $at, (0xFFFEFFFF & 0xFFFF)
 /* 050CBC 8005110C 8DCF000C */  lw          $t7, 0xc($t6)
 /* 050CC0 80051110 3C08800A */  lui         $t0, %hi(D_800A4E14)
 /* 050CC4 80051114 01E1C824 */  and         $t9, $t7, $at

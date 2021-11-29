@@ -38,8 +38,8 @@ glabel osCreatePiManager # 0
 /* 053A44 80053E94 00000000 */   nop
 .L80053E98:
 /* 053A48 80053E98 3C058010 */  lui         $a1, %hi(D_800FF080)
-/* 053A4C 80053E9C 3C062222 */  lui         $a2, 0x2222
-/* 053A50 80053EA0 34C62222 */  ori         $a2, $a2, 0x2222
+/* 053A4C 80053E9C 3C062222 */  lui         $a2, (0x22222222 >> 16)
+/* 053A50 80053EA0 34C62222 */  ori         $a2, $a2, (0x22222222 & 0xFFFF)
 /* 053A54 80053EA4 24A5F080 */  addiu       $a1, $a1, %lo(D_800FF080)
 /* 053A58 80053EA8 0C0145C4 */  jal         osSetEventMesg
 /* 053A5C 80053EAC 24040008 */   addiu      $a0, $zero, 0x8

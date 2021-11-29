@@ -140,8 +140,8 @@ glabel func_80049DA8 # 7
 .L80049E08:
 /* 0499B8 80049E08 AFA0004C */  sw          $zero, 0x4c($sp)
 /* 0499BC 80049E0C 8E220000 */  lw          $v0, 0x0($s1)
-/* 0499C0 80049E10 3C047FFF */  lui         $a0, 0x7fff
-/* 0499C4 80049E14 3484FFFF */  ori         $a0, $a0, 0xffff
+/* 0499C0 80049E10 3C047FFF */  lui         $a0, (0x7FFFFFFF >> 16)
+/* 0499C4 80049E14 3484FFFF */  ori         $a0, $a0, (0x7FFFFFFF & 0xFFFF)
 /* 0499C8 80049E18 1040000F */  beqz        $v0, .L80049E58
 /* 0499CC 80049E1C 2416FFF0 */   addiu      $s6, $zero, -0x10
 /* 0499D0 80049E20 8E23002C */  lw          $v1, 0x2c($s1)
@@ -179,8 +179,8 @@ glabel func_80049DA8 # 7
 .L80049E94:
 /* 049A44 80049E94 AE2D0028 */  sw          $t5, 0x28($s1)
 /* 049A48 80049E98 8FA4004C */  lw          $a0, 0x4c($sp)
-/* 049A4C 80049E9C 3C107FFF */  lui         $s0, 0x7fff
-/* 049A50 80049EA0 3610FFFF */  ori         $s0, $s0, 0xffff
+/* 049A4C 80049E9C 3C107FFF */  lui         $s0, (0x7FFFFFFF >> 16)
+/* 049A50 80049EA0 3610FFFF */  ori         $s0, $s0, (0x7FFFFFFF & 0xFFFF)
 /* 049A54 80049EA4 8C990008 */  lw          $t9, 0x8($a0)
 /* 049A58 80049EA8 0320F809 */  jalr        $t9
 /* 049A5C 80049EAC 00000000 */   nop

@@ -1760,13 +1760,13 @@ glabel func_8000C094 # 22
 /* 00BC90 8000C0E0 24A5BDD0 */  addiu       $a1, $a1, %lo(D_800ABDD0)
 /* 00BC94 8000C0E4 8CA20000 */  lw          $v0, 0x0($a1)
 /* 00BC98 8000C0E8 3C19E700 */  lui         $t9, 0xe700
-/* 00BC9C 8000C0EC 3C09E300 */  lui         $t1, 0xe300
+/* 00BC9C 8000C0EC 3C09E300 */  lui         $t1, (0xE3000A01 >> 16)
 /* 00BCA0 8000C0F0 24580008 */  addiu       $t8, $v0, 0x8
 /* 00BCA4 8000C0F4 ACB80000 */  sw          $t8, 0x0($a1)
 /* 00BCA8 8000C0F8 AC400004 */  sw          $zero, 0x4($v0)
 /* 00BCAC 8000C0FC AC590000 */  sw          $t9, 0x0($v0)
 /* 00BCB0 8000C100 8CA20000 */  lw          $v0, 0x0($a1)
-/* 00BCB4 8000C104 35290A01 */  ori         $t1, $t1, 0xa01
+/* 00BCB4 8000C104 35290A01 */  ori         $t1, $t1, (0xE3000A01 & 0xFFFF)
 /* 00BCB8 8000C108 3C04800B */  lui         $a0, %hi(D_800B6778)
 /* 00BCBC 8000C10C 24480008 */  addiu       $t0, $v0, 0x8
 /* 00BCC0 8000C110 ACA80000 */  sw          $t0, 0x0($a1)

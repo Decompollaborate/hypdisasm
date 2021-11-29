@@ -11,8 +11,8 @@
 
 glabel __osPiRawStartDma # 0
 /* 059BE0 8005A030 27BDFFE8 */  addiu       $sp, $sp, -0x18
-/* 059BE4 8005A034 3C03A460 */  lui         $v1, 0xa460
-/* 059BE8 8005A038 34630010 */  ori         $v1, $v1, 0x10
+/* 059BE4 8005A034 3C03A460 */  lui         $v1, (0xA4600010 >> 16)
+/* 059BE8 8005A038 34630010 */  ori         $v1, $v1, (0xA4600010 & 0xFFFF)
 /* 059BEC 8005A03C AFBF0014 */  sw          $ra, 0x14($sp)
 /* 059BF0 8005A040 AFA40018 */  sw          $a0, 0x18($sp)
 /* 059BF4 8005A044 AFA5001C */  sw          $a1, 0x1c($sp)
@@ -36,8 +36,8 @@ glabel __osPiRawStartDma # 0
 /* 059C34 8005A084 3C198000 */  lui         $t9, %hi(osRomBase)
 /* 059C38 8005A088 8F390308 */  lw          $t9, %lo(osRomBase)($t9)
 /* 059C3C 8005A08C 8FA8001C */  lw          $t0, 0x1c($sp)
-/* 059C40 8005A090 3C011FFF */  lui         $at, 0x1fff
-/* 059C44 8005A094 3421FFFF */  ori         $at, $at, 0xffff
+/* 059C40 8005A090 3C011FFF */  lui         $at, (0x1FFFFFFF >> 16)
+/* 059C44 8005A094 3421FFFF */  ori         $at, $at, (0x1FFFFFFF & 0xFFFF)
 /* 059C48 8005A098 03284825 */  or          $t1, $t9, $t0
 /* 059C4C 8005A09C 01215024 */  and         $t2, $t1, $at
 /* 059C50 8005A0A0 3C0BA460 */  lui         $t3, %hi(D_A4600004)

@@ -327,8 +327,8 @@ glabel func_8005FEB4 # 5
 /* 05FA64 8005FEB4 3C03800A */  lui         $v1, %hi(D_8009FC28)
 /* 05FA68 8005FEB8 2463FC28 */  addiu       $v1, $v1, %lo(D_8009FC28)
 /* 05FA6C 8005FEBC 8C6E0000 */  lw          $t6, 0x0($v1)
-/* 05FA70 8005FEC0 3C0141C6 */  lui         $at, 0x41c6
-/* 05FA74 8005FEC4 34214E6D */  ori         $at, $at, 0x4e6d
+/* 05FA70 8005FEC0 3C0141C6 */  lui         $at, (0x41C64E6D >> 16)
+/* 05FA74 8005FEC4 34214E6D */  ori         $at, $at, (0x41C64E6D & 0xFFFF)
 /* 05FA78 8005FEC8 01C10019 */  multu       $t6, $at
 /* 05FA7C 8005FECC 3C018000 */  lui         $at, 0x8000
 /* 05FA80 8005FED0 00007812 */  mflo        $t7

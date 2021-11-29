@@ -2883,8 +2883,8 @@ glabel func_8011E4EC # 139
 /* 013A58 8011E548 8FA4001C */   lw         $a0, 0x1c($sp)
 .L8011E54C:
 /* 013A5C 8011E54C 8C6B0000 */  lw          $t3, 0x0($v1)
-/* 013A60 8011E550 3C01BFFF */  lui         $at, 0xbfff
-/* 013A64 8011E554 3421FFFF */  ori         $at, $at, 0xffff
+/* 013A60 8011E550 3C01BFFF */  lui         $at, (0xBFFFFFFF >> 16)
+/* 013A64 8011E554 3421FFFF */  ori         $at, $at, (0xBFFFFFFF & 0xFFFF)
 /* 013A68 8011E558 01616024 */  and         $t4, $t3, $at
 /* 013A6C 8011E55C AC6C0000 */  sw          $t4, 0x0($v1)
 /* 013A70 8011E560 0C008737 */  jal         func_80021CDC

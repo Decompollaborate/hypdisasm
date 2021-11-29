@@ -497,26 +497,26 @@ glabel func_8001DD7C # 14
 /* 01D950 8001DDA0 2484BDD0 */  addiu       $a0, $a0, %lo(D_800ABDD0)
 /* 01D954 8001DDA4 8C820000 */  lw          $v0, 0x0($a0)
 /* 01D958 8001DDA8 3C18E700 */  lui         $t8, 0xe700
-/* 01D95C 8001DDAC 3C09E200 */  lui         $t1, 0xe200
+/* 01D95C 8001DDAC 3C09E200 */  lui         $t1, (0xE200001C >> 16)
 /* 01D960 8001DDB0 244F0008 */  addiu       $t7, $v0, 0x8
 /* 01D964 8001DDB4 AC8F0000 */  sw          $t7, 0x0($a0)
 /* 01D968 8001DDB8 AC400004 */  sw          $zero, 0x4($v0)
 /* 01D96C 8001DDBC AC580000 */  sw          $t8, 0x0($v0)
 /* 01D970 8001DDC0 8C820000 */  lw          $v0, 0x0($a0)
-/* 01D974 8001DDC4 3C0A0010 */  lui         $t2, 0x10
-/* 01D978 8001DDC8 354A49D8 */  ori         $t2, $t2, 0x49d8
+/* 01D974 8001DDC4 3C0A0010 */  lui         $t2, (0x1049D8 >> 16)
+/* 01D978 8001DDC8 354A49D8 */  ori         $t2, $t2, (0x1049D8 & 0xFFFF)
 /* 01D97C 8001DDCC 24590008 */  addiu       $t9, $v0, 0x8
 /* 01D980 8001DDD0 AC990000 */  sw          $t9, 0x0($a0)
-/* 01D984 8001DDD4 3529001C */  ori         $t1, $t1, 0x1c
+/* 01D984 8001DDD4 3529001C */  ori         $t1, $t1, (0xE200001C & 0xFFFF)
 /* 01D988 8001DDD8 AC490000 */  sw          $t1, 0x0($v0)
 /* 01D98C 8001DDDC AC4A0004 */  sw          $t2, 0x4($v0)
 /* 01D990 8001DDE0 8C820000 */  lw          $v0, 0x0($a0)
-/* 01D994 8001DDE4 3C0CFCFF */  lui         $t4, 0xfcff
-/* 01D998 8001DDE8 3C0DF0FC */  lui         $t5, 0xf0fc
+/* 01D994 8001DDE4 3C0CFCFF */  lui         $t4, (0xFCFFFEAC >> 16)
+/* 01D998 8001DDE8 3C0DF0FC */  lui         $t5, (0xF0FCF238 >> 16)
 /* 01D99C 8001DDEC 244B0008 */  addiu       $t3, $v0, 0x8
 /* 01D9A0 8001DDF0 AC8B0000 */  sw          $t3, 0x0($a0)
-/* 01D9A4 8001DDF4 35ADF238 */  ori         $t5, $t5, 0xf238
-/* 01D9A8 8001DDF8 358CFEAC */  ori         $t4, $t4, 0xfeac
+/* 01D9A4 8001DDF4 35ADF238 */  ori         $t5, $t5, (0xF0FCF238 & 0xFFFF)
+/* 01D9A8 8001DDF8 358CFEAC */  ori         $t4, $t4, (0xFCFFFEAC & 0xFFFF)
 /* 01D9AC 8001DDFC AC4C0000 */  sw          $t4, 0x0($v0)
 /* 01D9B0 8001DE00 AC4D0004 */  sw          $t5, 0x4($v0)
 /* 01D9B4 8001DE04 8FA60028 */  lw          $a2, 0x28($sp)

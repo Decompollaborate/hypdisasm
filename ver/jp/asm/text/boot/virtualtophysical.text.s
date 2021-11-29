@@ -20,8 +20,8 @@ glabel osVirtualToPhysical # 0
 /* 04FF9C 800503EC 3C01A000 */   lui        $at, 0xa000
 /* 04FFA0 800503F0 01C1082B */  sltu        $at, $t6, $at
 /* 04FFA4 800503F4 10200004 */  beqz        $at, .L80050408
-/* 04FFA8 800503F8 3C011FFF */   lui        $at, 0x1fff
-/* 04FFAC 800503FC 3421FFFF */  ori         $at, $at, 0xffff
+/* 04FFA8 800503F8 3C011FFF */   lui        $at, (0x1FFFFFFF >> 16)
+/* 04FFAC 800503FC 3421FFFF */  ori         $at, $at, (0x1FFFFFFF & 0xFFFF)
 /* 04FFB0 80050400 1000000E */  b           .L8005043C
 /* 04FFB4 80050404 01C11024 */   and        $v0, $t6, $at
 .L80050408:
@@ -32,8 +32,8 @@ glabel osVirtualToPhysical # 0
 /* 04FFC8 80050418 3C01C000 */   lui        $at, 0xc000
 /* 04FFCC 8005041C 01E1082B */  sltu        $at, $t7, $at
 /* 04FFD0 80050420 10200004 */  beqz        $at, .L80050434
-/* 04FFD4 80050424 3C011FFF */   lui        $at, 0x1fff
-/* 04FFD8 80050428 3421FFFF */  ori         $at, $at, 0xffff
+/* 04FFD4 80050424 3C011FFF */   lui        $at, (0x1FFFFFFF >> 16)
+/* 04FFD8 80050428 3421FFFF */  ori         $at, $at, (0x1FFFFFFF & 0xFFFF)
 /* 04FFDC 8005042C 10000003 */  b           .L8005043C
 /* 04FFE0 80050430 01E11024 */   and        $v0, $t7, $at
 .L80050434:

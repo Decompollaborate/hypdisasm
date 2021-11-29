@@ -2248,10 +2248,10 @@ glabel func_8011C55C # 79
 /* 00E2A4 8011C604 8E0B0038 */  lw          $t3, 0x38($s0)
 /* 00E2A8 8011C608 8FAC002C */  lw          $t4, 0x2c($sp)
 /* 00E2AC 8011C60C 8FA20020 */  lw          $v0, 0x20($sp)
-/* 00E2B0 8011C610 3C01E3FF */  lui         $at, 0xe3ff
+/* 00E2B0 8011C610 3C01E3FF */  lui         $at, (0xE3FFFFFF >> 16)
 /* 00E2B4 8011C614 AD8B018C */  sw          $t3, 0x18c($t4)
 /* 00E2B8 8011C618 8C4D0000 */  lw          $t5, 0x0($v0)
-/* 00E2BC 8011C61C 3421FFFF */  ori         $at, $at, 0xffff
+/* 00E2BC 8011C61C 3421FFFF */  ori         $at, $at, (0xE3FFFFFF & 0xFFFF)
 /* 00E2C0 8011C620 01A17024 */  and         $t6, $t5, $at
 /* 00E2C4 8011C624 AC4E0000 */  sw          $t6, 0x0($v0)
 .L8011C628:
@@ -2354,12 +2354,12 @@ glabel func_8011C6E4 # 82
 .L8011C76C:
 /* 00E40C 8011C76C 10C00005 */  beqz        $a2, .L8011C784
 /* 00E410 8011C770 3C017FFF */   lui        $at, 0x7fff
-/* 00E414 8011C774 3C018000 */  lui         $at, 0x8000
+/* 00E414 8011C774 3C018000 */  lui         $at, (0x8000FFFF >> 16)
 /* 00E418 8011C778 00814825 */  or          $t1, $a0, $at
 /* 00E41C 8011C77C 10000007 */  b           .L8011C79C
 /* 00E420 8011C780 AC690000 */   sw         $t1, 0x0($v1)
 .L8011C784:
-/* 00E424 8011C784 3421FFFF */  ori         $at, $at, 0xffff
+/* 00E424 8011C784 3421FFFF */  ori         $at, $at, (0x8000FFFF & 0xFFFF)
 /* 00E428 8011C788 00815024 */  and         $t2, $a0, $at
 /* 00E42C 8011C78C 10000003 */  b           .L8011C79C
 /* 00E430 8011C790 AC6A0000 */   sw         $t2, 0x0($v1)

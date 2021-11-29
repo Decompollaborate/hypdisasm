@@ -528,8 +528,8 @@ glabel func_8005CD30 # 2
 /* 05CA94 8005CEE4 4620A507 */  neg.d       $f20, $f20
 .L8005CEE8:
 /* 05CA98 8005CEE8 03210019 */  multu       $t9, $at
-/* 05CA9C 8005CEEC 3C010001 */  lui         $at, 0x1
-/* 05CAA0 8005CEF0 342186A0 */  ori         $at, $at, 0x86a0
+/* 05CA9C 8005CEEC 3C010001 */  lui         $at, (0x186A0 >> 16)
+/* 05CAA0 8005CEF0 342186A0 */  ori         $at, $at, (0x186A0 & 0xFFFF)
 /* 05CAA4 8005CEF4 24050006 */  addiu       $a1, $zero, 0x6
 /* 05CAA8 8005CEF8 0000C012 */  mflo        $t8
 /* 05CAAC 8005CEFC 00000000 */  nop

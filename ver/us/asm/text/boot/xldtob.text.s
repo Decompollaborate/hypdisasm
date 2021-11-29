@@ -82,8 +82,8 @@ glabel _Ldtob # 0
 /* 05DA58 8005DEA8 4620A507 */  neg.d       $f20, $f20
 .L8005DEAC:
 /* 05DA5C 8005DEAC 01210019 */  multu       $t1, $at
-/* 05DA60 8005DEB0 3C010001 */  lui         $at, 0x1
-/* 05DA64 8005DEB4 342186A0 */  ori         $at, $at, 0x86a0
+/* 05DA60 8005DEB0 3C010001 */  lui         $at, (0x186A0 >> 16)
+/* 05DA64 8005DEB4 342186A0 */  ori         $at, $at, (0x186A0 & 0xFFFF)
 /* 05DA68 8005DEB8 00001825 */  move        $v1, $zero
 /* 05DA6C 8005DEBC 24050006 */  addiu       $a1, $zero, 0x6
 /* 05DA70 8005DEC0 00005012 */  mflo        $t2

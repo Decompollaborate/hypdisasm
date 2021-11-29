@@ -34,8 +34,8 @@ glabel func_8004C7B4 # 1
 /* 04C38C 8004C7DC 0C0130B7 */  jal         func_8004C2DC
 /* 04C390 8004C7E0 240600B8 */   addiu      $a2, $zero, 0xb8
 /* 04C394 8004C7E4 87B8003A */  lh          $t8, 0x3a($sp)
-/* 04C398 8004C7E8 3C0100FF */  lui         $at, 0xff
-/* 04C39C 8004C7EC 3421FFFF */  ori         $at, $at, 0xffff
+/* 04C398 8004C7E8 3C0100FF */  lui         $at, (0xFFFFFF >> 16)
+/* 04C39C 8004C7EC 3421FFFF */  ori         $at, $at, (0xFFFFFF & 0xFFFF)
 /* 04C3A0 8004C7F0 0301C824 */  and         $t9, $t8, $at
 /* 04C3A4 8004C7F4 3C010A00 */  lui         $at, 0xa00
 /* 04C3A8 8004C7F8 03214825 */  or          $t1, $t9, $at
@@ -105,8 +105,8 @@ glabel func_8004C7B4 # 1
 /* 04C4A0 8004C8F0 AFA20024 */  sw          $v0, 0x24($sp)
 /* 04C4A4 8004C8F4 0C0140F4 */  jal         osVirtualToPhysical
 /* 04C4A8 8004C8F8 AFA3003C */   sw         $v1, 0x3c($sp)
-/* 04C4AC 8004C8FC 3C0100FF */  lui         $at, 0xff
-/* 04C4B0 8004C900 3421FFFF */  ori         $at, $at, 0xffff
+/* 04C4AC 8004C8FC 3C0100FF */  lui         $at, (0xFFFFFF >> 16)
+/* 04C4B0 8004C900 3421FFFF */  ori         $at, $at, (0xFFFFFF & 0xFFFF)
 /* 04C4B4 8004C904 8FA50024 */  lw          $a1, 0x24($sp)
 /* 04C4B8 8004C908 00415824 */  and         $t3, $v0, $at
 /* 04C4BC 8004C90C 3C010500 */  lui         $at, 0x500

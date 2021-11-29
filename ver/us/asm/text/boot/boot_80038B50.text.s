@@ -1554,9 +1554,9 @@ glabel func_8003A18C # 30
 /* 039D4C 8003A19C 46262002 */  mul.d       $f0, $f4, $f6
 /* 039D50 8003A1A0 44804000 */  mtc1        $zero, $f8
 /* 039D54 8003A1A4 27BDFFE8 */  addiu       $sp, $sp, -0x18
-/* 039D58 8003A1A8 3C04FFFF */  lui         $a0, 0xffff
+/* 039D58 8003A1A8 3C04FFFF */  lui         $a0, (0xFFFF0001 >> 16)
 /* 039D5C 8003A1AC AFBF0014 */  sw          $ra, 0x14($sp)
-/* 039D60 8003A1B0 34840001 */  ori         $a0, $a0, 0x1
+/* 039D60 8003A1B0 34840001 */  ori         $a0, $a0, (0xFFFF0001 & 0xFFFF)
 /* 039D64 8003A1B4 3C013FE0 */  lui         $at, 0x3fe0
 /* 039D68 8003A1B8 3403FFFF */  ori         $v1, $zero, 0xffff
 /* 039D6C 8003A1BC 4620403E */  c.le.d      $f8, $f0
@@ -1618,9 +1618,9 @@ glabel func_8003A26C # 31
 /* 039E2C 8003A27C 46262002 */  mul.d       $f0, $f4, $f6
 /* 039E30 8003A280 44804000 */  mtc1        $zero, $f8
 /* 039E34 8003A284 27BDFFE8 */  addiu       $sp, $sp, -0x18
-/* 039E38 8003A288 3C04FFFF */  lui         $a0, 0xffff
+/* 039E38 8003A288 3C04FFFF */  lui         $a0, (0xFFFF0001 >> 16)
 /* 039E3C 8003A28C AFBF0014 */  sw          $ra, 0x14($sp)
-/* 039E40 8003A290 34840001 */  ori         $a0, $a0, 0x1
+/* 039E40 8003A290 34840001 */  ori         $a0, $a0, (0xFFFF0001 & 0xFFFF)
 /* 039E44 8003A294 3C013FE0 */  lui         $at, 0x3fe0
 /* 039E48 8003A298 3403FFFF */  ori         $v1, $zero, 0xffff
 /* 039E4C 8003A29C 4620403E */  c.le.d      $f8, $f0
@@ -2216,15 +2216,15 @@ glabel func_8003AA88 # 45
 /* 03A650 8003AAA0 24842970 */  addiu       $a0, $a0, %lo(D_800F2970)
 /* 03A654 8003AAA4 8C820008 */  lw          $v0, 0x8($a0)
 /* 03A658 8003AAA8 8C8E000C */  lw          $t6, 0xc($a0)
-/* 03A65C 8003AAAC 3C0500FF */  lui         $a1, 0xff
-/* 03A660 8003AAB0 34A5FFFF */  ori         $a1, $a1, 0xffff
+/* 03A65C 8003AAAC 3C0500FF */  lui         $a1, (0xFFFFFF >> 16)
+/* 03A660 8003AAB0 34A5FFFF */  ori         $a1, $a1, (0xFFFFFF & 0xFFFF)
 /* 03A664 8003AAB4 0002CE00 */  sll         $t9, $v0, 24
 /* 03A668 8003AAB8 01C57824 */  and         $t7, $t6, $a1
 /* 03A66C 8003AABC 01F94025 */  or          $t0, $t7, $t9
-/* 03A670 8003AAC0 3C0100FF */  lui         $at, 0xff
+/* 03A670 8003AAC0 3C0100FF */  lui         $at, (0xFFFF00 >> 16)
 /* 03A674 8003AAC4 8C8B0004 */  lw          $t3, 0x4($a0)
 /* 03A678 8003AAC8 8C8F0000 */  lw          $t7, 0x0($a0)
-/* 03A67C 8003AACC 3421FF00 */  ori         $at, $at, 0xff00
+/* 03A67C 8003AACC 3421FF00 */  ori         $at, $at, (0xFFFF00 & 0xFFFF)
 /* 03A680 8003AAD0 00414824 */  and         $t1, $v0, $at
 /* 03A684 8003AAD4 3C0100FF */  lui         $at, 0xff
 /* 03A688 8003AAD8 AC88000C */  sw          $t0, 0xc($a0)

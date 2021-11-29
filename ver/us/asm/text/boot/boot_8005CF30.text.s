@@ -36,8 +36,8 @@ glabel func_8005CF30 # 0
 /* 05CB38 8005CF88 0320F809 */  jalr        $t9
 /* 05CB3C 8005CF8C 02403025 */   move       $a2, $s2
 /* 05CB40 8005CF90 87A80056 */  lh          $t0, 0x56($sp)
-/* 05CB44 8005CF94 3C0100FF */  lui         $at, 0xff
-/* 05CB48 8005CF98 3421FFFF */  ori         $at, $at, 0xffff
+/* 05CB44 8005CF94 3C0100FF */  lui         $at, (0xFFFFFF >> 16)
+/* 05CB48 8005CF98 3421FFFF */  ori         $at, $at, (0xFFFFFF & 0xFFFF)
 /* 05CB4C 8005CF9C 01014824 */  and         $t1, $t0, $at
 /* 05CB50 8005CFA0 3C010A00 */  lui         $at, 0xa00
 /* 05CB54 8005CFA4 01215025 */  or          $t2, $t1, $at

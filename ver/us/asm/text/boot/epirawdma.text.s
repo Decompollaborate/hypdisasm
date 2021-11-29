@@ -11,8 +11,8 @@
 
 glabel __osEPiRawStartDma # 0
 /* 059CB0 8005A100 27BDFFE0 */  addiu       $sp, $sp, -0x20
-/* 059CB4 8005A104 3C03A460 */  lui         $v1, 0xa460
-/* 059CB8 8005A108 34630010 */  ori         $v1, $v1, 0x10
+/* 059CB4 8005A104 3C03A460 */  lui         $v1, (0xA4600010 >> 16)
+/* 059CB8 8005A108 34630010 */  ori         $v1, $v1, (0xA4600010 & 0xFFFF)
 /* 059CBC 8005A10C AFBF001C */  sw          $ra, 0x1c($sp)
 /* 059CC0 8005A110 AFB00018 */  sw          $s0, 0x18($sp)
 /* 059CC4 8005A114 AFA60028 */  sw          $a2, 0x28($sp)
@@ -113,8 +113,8 @@ glabel __osEPiRawStartDma # 0
 /* 059E10 8005A260 AD420000 */  sw          $v0, %lo(D_A4600000)($t2)
 /* 059E14 8005A264 8FAC0028 */  lw          $t4, 0x28($sp)
 /* 059E18 8005A268 8E0B000C */  lw          $t3, 0xc($s0)
-/* 059E1C 8005A26C 3C011FFF */  lui         $at, 0x1fff
-/* 059E20 8005A270 3421FFFF */  ori         $at, $at, 0xffff
+/* 059E1C 8005A26C 3C011FFF */  lui         $at, (0x1FFFFFFF >> 16)
+/* 059E20 8005A270 3421FFFF */  ori         $at, $at, (0x1FFFFFFF & 0xFFFF)
 /* 059E24 8005A274 016C6825 */  or          $t5, $t3, $t4
 /* 059E28 8005A278 01A17024 */  and         $t6, $t5, $at
 /* 059E2C 8005A27C 3C0FA460 */  lui         $t7, %hi(D_A4600004)

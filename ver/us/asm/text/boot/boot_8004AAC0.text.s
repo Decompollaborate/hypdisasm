@@ -16,11 +16,11 @@ glabel func_8004AAC0 # 0
 /* 04A67C 8004AACC 01034820 */  add         $t1, $t0, $v1
 /* 04A680 8004AAD0 91380004 */  lbu         $t8, 0x4($t1)
 /* 04A684 8004AAD4 91390005 */  lbu         $t9, 0x5($t1)
-/* 04A688 8004AAD8 3C010007 */  lui         $at, 0x7
+/* 04A688 8004AAD8 3C010007 */  lui         $at, (0x7EE80 >> 16)
 /* 04A68C 8004AADC ACB80000 */  sw          $t8, 0x0($a1)
 /* 04A690 8004AAE0 ACD90000 */  sw          $t9, 0x0($a2)
 /* 04A694 8004AAE4 85280006 */  lh          $t0, 0x6($t1)
-/* 04A698 8004AAE8 3421EE80 */  ori         $at, $at, 0xee80
+/* 04A698 8004AAE8 3421EE80 */  ori         $at, $at, (0x7EE80 & 0xFFFF)
 /* 04A69C 8004AAEC ACE80000 */  sw          $t0, 0x0($a3)
 /* 04A6A0 8004AAF0 8D220000 */  lw          $v0, 0x0($t1)
 /* 04A6A4 8004AAF4 03E00008 */  jr          $ra

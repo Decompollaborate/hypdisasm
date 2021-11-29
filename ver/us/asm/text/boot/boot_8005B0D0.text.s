@@ -437,8 +437,8 @@ glabel func_8005B6CC # 7
 glabel func_8005B6F4 # 8
 /* 05B2A4 8005B6F4 ACA00000 */  sw          $zero, 0x0($a1)
 /* 05B2A8 8005B6F8 8C830000 */  lw          $v1, 0x0($a0)
-/* 05B2AC 8005B6FC 3C027FFF */  lui         $v0, 0x7fff
-/* 05B2B0 8005B700 3442FFFF */  ori         $v0, $v0, 0xffff
+/* 05B2AC 8005B6FC 3C027FFF */  lui         $v0, (0x7FFFFFFF >> 16)
+/* 05B2B0 8005B700 3442FFFF */  ori         $v0, $v0, (0x7FFFFFFF & 0xFFFF)
 /* 05B2B4 8005B704 5060000F */  beql        $v1, $zero, .L8005B744
 /* 05B2B8 8005B708 8CB90000 */   lw         $t9, 0x0($a1)
 /* 05B2BC 8005B70C 8C860020 */  lw          $a2, 0x20($a0)

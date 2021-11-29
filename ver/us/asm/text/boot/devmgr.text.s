@@ -17,14 +17,14 @@ glabel __osDevMgrMain # 0
 /* 059EA0 8005A2F0 AFB60038 */  sw          $s6, 0x38($sp)
 /* 059EA4 8005A2F4 AFB50034 */  sw          $s5, 0x34($sp)
 /* 059EA8 8005A2F8 AFB40030 */  sw          $s4, 0x30($sp)
-/* 059EAC 8005A2FC 3C130500 */  lui         $s3, 0x500
+/* 059EAC 8005A2FC 3C130500 */  lui         $s3, (0x5000510 >> 16)
 /* 059EB0 8005A300 0080A025 */  move        $s4, $a0
 /* 059EB4 8005A304 AFBF0044 */  sw          $ra, 0x44($sp)
 /* 059EB8 8005A308 AFB20028 */  sw          $s2, 0x28($sp)
 /* 059EBC 8005A30C AFB10024 */  sw          $s1, 0x24($sp)
 /* 059EC0 8005A310 AFB00020 */  sw          $s0, 0x20($sp)
 /* 059EC4 8005A314 AFA00074 */  sw          $zero, 0x74($sp)
-/* 059EC8 8005A318 36730510 */  ori         $s3, $s3, 0x510
+/* 059EC8 8005A318 36730510 */  ori         $s3, $s3, (0x5000510 & 0xFFFF)
 /* 059ECC 8005A31C 24150024 */  addiu       $s5, $zero, 0x24
 /* 059ED0 8005A320 27B60070 */  addiu       $s6, $sp, 0x70
 /* 059ED4 8005A324 24170001 */  addiu       $s7, $zero, 0x1
@@ -82,9 +82,9 @@ glabel __osDevMgrMain # 0
 .L8005A3E4:
 /* 059F94 8005A3E4 0C014554 */  jal         osRecvMesg
 /* 059F98 8005A3E8 8E840010 */   lw         $a0, 0x10($s4)
-/* 059F9C 8005A3EC 3C040010 */  lui         $a0, 0x10
+/* 059F9C 8005A3EC 3C040010 */  lui         $a0, (0x100401 >> 16)
 /* 059FA0 8005A3F0 0C017A30 */  jal         __osResetGlobalIntMask
-/* 059FA4 8005A3F4 34840401 */   ori        $a0, $a0, 0x401
+/* 059FA4 8005A3F4 34840401 */   ori        $a0, $a0, (0x100401 & 0xFFFF)
 /* 059FA8 8005A3F8 8E060010 */  lw          $a2, 0x10($s0)
 /* 059FAC 8005A3FC 8FAF0074 */  lw          $t7, 0x74($sp)
 /* 059FB0 8005A400 3C018000 */  lui         $at, 0x8000
@@ -121,8 +121,8 @@ glabel __osDevMgrMain # 0
 /* 05A028 8005A478 0C017A48 */  jal         __osEPiRawWriteIo
 /* 05A02C 8005A47C 8D840014 */   lw         $a0, 0x14($t4)
 /* 05A030 8005A480 8FAD0074 */  lw          $t5, 0x74($sp)
-/* 05A034 8005A484 3C050500 */  lui         $a1, 0x500
-/* 05A038 8005A488 34A50508 */  ori         $a1, $a1, 0x508
+/* 05A034 8005A484 3C050500 */  lui         $a1, (0x5000508 >> 16)
+/* 05A038 8005A488 34A50508 */  ori         $a1, $a1, (0x5000508 & 0xFFFF)
 /* 05A03C 8005A48C 27A60054 */  addiu       $a2, $sp, 0x54
 /* 05A040 8005A490 0C017AA0 */  jal         __osEPiRawReadIo
 /* 05A044 8005A494 8DA40014 */   lw         $a0, 0x14($t5)
@@ -143,10 +143,10 @@ glabel __osDevMgrMain # 0
 /* 05A07C 8005A4CC AE280000 */  sw          $t0, 0x0($s1)
 /* 05A080 8005A4D0 24090002 */  addiu       $t1, $zero, 0x2
 /* 05A084 8005A4D4 3C0AA460 */  lui         $t2, %hi(D_A4600010)
-/* 05A088 8005A4D8 3C040010 */  lui         $a0, 0x10
+/* 05A088 8005A4D8 3C040010 */  lui         $a0, (0x100C01 >> 16)
 /* 05A08C 8005A4DC AD490010 */  sw          $t1, %lo(D_A4600010)($t2)
 /* 05A090 8005A4E0 0C017AF8 */  jal         __osSetGlobalIntMask
-/* 05A094 8005A4E4 34840C01 */   ori        $a0, $a0, 0xc01
+/* 05A094 8005A4E4 34840C01 */   ori        $a0, $a0, (0x100C01 & 0xFFFF)
 /* 05A098 8005A4E8 8FA50074 */  lw          $a1, 0x74($sp)
 .L8005A4EC:
 /* 05A09C 8005A4EC 00003025 */  move        $a2, $zero

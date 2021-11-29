@@ -46,8 +46,8 @@ glabel __osProbeTLB # 0
 /* 056FAC 800573FC 304D0002 */  andi        $t5, $v0, 0x2
 /* 056FB0 80057400 11A00009 */  beqz        $t5, .L80057428
 /* 056FB4 80057404 00000000 */   nop
-/* 056FB8 80057408 3C013FFF */  lui         $at, 0x3fff
-/* 056FBC 8005740C 3421FFC0 */  ori         $at, $at, 0xffc0
+/* 056FB8 80057408 3C013FFF */  lui         $at, (0x3FFFFFC0 >> 16)
+/* 056FBC 8005740C 3421FFC0 */  ori         $at, $at, (0x3FFFFFC0 & 0xFFFF)
 /* 056FC0 80057410 00411024 */  and         $v0, $v0, $at
 /* 056FC4 80057414 00021180 */  sll         $v0, $v0, 6
 /* 056FC8 80057418 008B6824 */  and         $t5, $a0, $t3

@@ -20,8 +20,8 @@ glabel func_8004B9A0 # 0
 /* 04B56C 8004B9BC AFB1001C */  sw          $s1, 0x1c($sp)
 /* 04B570 8004B9C0 AFB00018 */  sw          $s0, 0x18($sp)
 /* 04B574 8004B9C4 8DD30040 */  lw          $s3, 0x40($t6)
-/* 04B578 8004B9C8 3C0F0200 */  lui         $t7, 0x200
-/* 04B57C 8004B9CC 35EF07C0 */  ori         $t7, $t7, 0x7c0
+/* 04B578 8004B9C8 3C0F0200 */  lui         $t7, (0x20007C0 >> 16)
+/* 04B57C 8004B9CC 35EF07C0 */  ori         $t7, $t7, (0x20007C0 & 0xFFFF)
 /* 04B580 8004B9D0 8E62001C */  lw          $v0, 0x1c($s3)
 /* 04B584 8004B9D4 241802E0 */  addiu       $t8, $zero, 0x2e0
 /* 04B588 8004B9D8 ACB80004 */  sw          $t8, 0x4($a1)

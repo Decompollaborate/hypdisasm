@@ -103,8 +103,8 @@ glabel func_8005B55C # 1
 /* 05B15C 8005B5AC 0320F809 */  jalr        $t9
 /* 05B160 8005B5B0 01403025 */   move       $a2, $t2
 /* 05B164 8005B5B4 87AB0046 */  lh          $t3, 0x46($sp)
-/* 05B168 8005B5B8 3C0100FF */  lui         $at, 0xff
-/* 05B16C 8005B5BC 3421FFFF */  ori         $at, $at, 0xffff
+/* 05B168 8005B5B8 3C0100FF */  lui         $at, (0xFFFFFF >> 16)
+/* 05B16C 8005B5BC 3421FFFF */  ori         $at, $at, (0xFFFFFF & 0xFFFF)
 /* 05B170 8005B5C0 01616024 */  and         $t4, $t3, $at
 /* 05B174 8005B5C4 3C010A00 */  lui         $at, 0xa00
 /* 05B178 8005B5C8 8FAA0058 */  lw          $t2, 0x58($sp)

@@ -79,9 +79,9 @@ glabel __osException # 1
 /* 0572B0 80057700 8D080000 */  lw          $t0, 0x0($t0)
 /* 0572B4 80057704 2401FFFF */  addiu       $at, $zero, -0x1
 /* 0572B8 80057708 01015026 */  xor         $t2, $t0, $at
-/* 0572BC 8005770C 3C01FFFF */  lui         $at, 0xffff
+/* 0572BC 8005770C 3C01FFFF */  lui         $at, (0xFFFF00FF >> 16)
 /* 0572C0 80057710 314AFF00 */  andi        $t2, $t2, 0xff00
-/* 0572C4 80057714 342100FF */  ori         $at, $at, 0xff
+/* 0572C4 80057714 342100FF */  ori         $at, $at, (0xFFFF00FF & 0xFFFF)
 /* 0572C8 80057718 012A6025 */  or          $t4, $t1, $t2
 /* 0572CC 8005771C 03615824 */  and         $t3, $k1, $at
 /* 0572D0 80057720 3108FF00 */  andi        $t0, $t0, 0xff00
@@ -176,8 +176,8 @@ glabel L80057860
 /* 057414 80057864 40895800 */  mtc0        $t1, Compare
 /* 057418 80057868 0C015ED7 */  jal         send_mesg
 /* 05741C 8005786C 24040018 */   addiu      $a0, $zero, 0x18
-/* 057420 80057870 3C01FFFF */  lui         $at, 0xffff
-/* 057424 80057874 34217FFF */  ori         $at, $at, 0x7fff
+/* 057420 80057870 3C01FFFF */  lui         $at, (0xFFFF7FFF >> 16)
+/* 057424 80057874 34217FFF */  ori         $at, $at, (0xFFFF7FFF & 0xFFFF)
 /* 057428 80057878 1000FFE5 */  b           .L80057810
 /* 05742C 8005787C 02018024 */   and        $s0, $s0, $at
 glabel L80057880
@@ -488,9 +488,9 @@ glabel __osEnqueueAndYield # 4
 /* 05787C 80057CCC 8D080000 */  lw          $t0, 0x0($t0)
 /* 057880 80057CD0 2401FFFF */  addiu       $at, $zero, -0x1
 /* 057884 80057CD4 01014026 */  xor         $t0, $t0, $at
-/* 057888 80057CD8 3C01FFFF */  lui         $at, 0xffff
+/* 057888 80057CD8 3C01FFFF */  lui         $at, (0xFFFF00FF >> 16)
 /* 05788C 80057CDC 3108FF00 */  andi        $t0, $t0, 0xff00
-/* 057890 80057CE0 342100FF */  ori         $at, $at, 0xff
+/* 057890 80057CE0 342100FF */  ori         $at, $at, (0xFFFF00FF & 0xFFFF)
 /* 057894 80057CE4 01284825 */  or          $t1, $t1, $t0
 /* 057898 80057CE8 0361D824 */  and         $k1, $k1, $at
 /* 05789C 80057CEC 0369D825 */  or          $k1, $k1, $t1
@@ -564,9 +564,9 @@ glabel __osDispatchThread # 8
 /* 057978 80057DC8 8F5B0118 */  lw          $k1, 0x118($k0)
 /* 05797C 80057DCC 2508DC80 */  addiu       $t0, $t0, %lo(__OSGlobalIntMask)
 /* 057980 80057DD0 8D080000 */  lw          $t0, 0x0($t0)
-/* 057984 80057DD4 3C01FFFF */  lui         $at, 0xffff
+/* 057984 80057DD4 3C01FFFF */  lui         $at, (0xFFFF00FF >> 16)
 /* 057988 80057DD8 3369FF00 */  andi        $t1, $k1, 0xff00
-/* 05798C 80057DDC 342100FF */  ori         $at, $at, 0xff
+/* 05798C 80057DDC 342100FF */  ori         $at, $at, (0xFFFF00FF & 0xFFFF)
 /* 057990 80057DE0 3108FF00 */  andi        $t0, $t0, 0xff00
 /* 057994 80057DE4 01284824 */  and         $t1, $t1, $t0
 /* 057998 80057DE8 0361D824 */  and         $k1, $k1, $at

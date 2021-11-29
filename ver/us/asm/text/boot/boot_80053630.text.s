@@ -82,8 +82,8 @@ glabel func_80053630 # 0
 /* 0532D8 80053728 5320000F */  beql        $t9, $zero, .L80053768
 /* 0532DC 8005372C 8C620000 */   lw         $v0, 0x0($v1)
 /* 0532E0 80053730 8C620000 */  lw          $v0, 0x0($v1)
-/* 0532E4 80053734 3C01FFFE */  lui         $at, 0xfffe
-/* 0532E8 80053738 3421FFFF */  ori         $at, $at, 0xffff
+/* 0532E4 80053734 3C01FFFE */  lui         $at, (0xFFFEFFFF >> 16)
+/* 0532E8 80053738 3421FFFF */  ori         $at, $at, (0xFFFEFFFF & 0xFFFF)
 /* 0532EC 8005373C 8C48000C */  lw          $t0, 0xc($v0)
 /* 0532F0 80053740 01014824 */  and         $t1, $t0, $at
 /* 0532F4 80053744 AC49000C */  sw          $t1, 0xc($v0)

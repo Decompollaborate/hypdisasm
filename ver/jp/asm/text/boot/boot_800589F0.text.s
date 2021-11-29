@@ -37,8 +37,8 @@ glabel func_800589F0 # 0
 /* 0585F8 80058A48 3C098000 */  lui         $t1, %hi(osRomBase)
 /* 0585FC 80058A4C 8D290308 */  lw          $t1, %lo(osRomBase)($t1)
 /* 058600 80058A50 8FAA002C */  lw          $t2, 0x2c($sp)
-/* 058604 80058A54 3C011FFF */  lui         $at, 0x1fff
-/* 058608 80058A58 3421FFFF */  ori         $at, $at, 0xffff
+/* 058604 80058A54 3C011FFF */  lui         $at, (0x1FFFFFFF >> 16)
+/* 058608 80058A58 3421FFFF */  ori         $at, $at, (0x1FFFFFFF & 0xFFFF)
 /* 05860C 80058A5C 012A5825 */  or          $t3, $t1, $t2
 /* 058610 80058A60 01616024 */  and         $t4, $t3, $at
 /* 058614 80058A64 3C0DA460 */  lui         $t5, %hi(D_A4600004)
@@ -191,9 +191,9 @@ glabel func_80058AD0 # 1
 /* 058818 80058C68 AF020000 */  sw          $v0, %lo(D_A4600000)($t8)
 /* 05881C 80058C6C 8FB90030 */  lw          $t9, 0x30($sp)
 /* 058820 80058C70 8FA90038 */  lw          $t1, 0x38($sp)
-/* 058824 80058C74 3C011FFF */  lui         $at, 0x1fff
+/* 058824 80058C74 3C011FFF */  lui         $at, (0x1FFFFFFF >> 16)
 /* 058828 80058C78 8F28000C */  lw          $t0, 0xc($t9)
-/* 05882C 80058C7C 3421FFFF */  ori         $at, $at, 0xffff
+/* 05882C 80058C7C 3421FFFF */  ori         $at, $at, (0x1FFFFFFF & 0xFFFF)
 /* 058830 80058C80 3C0CA460 */  lui         $t4, %hi(D_A4600004)
 /* 058834 80058C84 01095025 */  or          $t2, $t0, $t1
 /* 058838 80058C88 01416824 */  and         $t5, $t2, $at
