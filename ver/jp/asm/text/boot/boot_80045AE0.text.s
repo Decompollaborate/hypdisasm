@@ -594,7 +594,7 @@ glabel func_80046350 # 8
 /* 045F18 80046368 03E00008 */  jr          $ra
 /* 045F1C 8004636C 00000000 */   nop
 
-glabel func_80046370 # 9
+glabel memcpy # 9
 /* 045F20 80046370 27BDFFE8 */  addiu       $sp, $sp, -0x18
 /* 045F24 80046374 AFA40018 */  sw          $a0, 0x18($sp)
 /* 045F28 80046378 00A02025 */  move        $a0, $a1

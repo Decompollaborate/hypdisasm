@@ -306,7 +306,7 @@ glabel func_8005DCCC # 4
 .L8005DD40:
 /* 05D8F0 8005DD40 02802025 */  move        $a0, $s4
 /* 05D8F4 8005DD44 02202825 */  move        $a1, $s1
-/* 05D8F8 8005DD48 0C0118DC */  jal         func_80046370
+/* 05D8F8 8005DD48 0C0118DC */  jal         memcpy
 /* 05D8FC 8005DD4C 02A03025 */   move       $a2, $s5
 /* 05D900 8005DD50 8E780000 */  lw          $t8, 0x0($s3)
 /* 05D904 8005DD54 02201025 */  move        $v0, $s1

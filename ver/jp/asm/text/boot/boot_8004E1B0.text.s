@@ -138,7 +138,7 @@ glabel func_8004E1B0 # 0
 /* 04DF40 8004E390 8FA50024 */  lw          $a1, 0x24($sp)
 /* 04DF44 8004E394 8FA40020 */  lw          $a0, 0x20($sp)
 /* 04DF48 8004E398 24060000 */  addiu       $a2, $zero, 0x0
-/* 04DF4C 8004E39C 0C014476 */  jal         func_800511D8
+/* 04DF4C 8004E39C 0C014476 */  jal         __ull_div
 /* 04DF50 8004E3A0 24070004 */   addiu      $a3, $zero, 0x4
 /* 04DF54 8004E3A4 3C098000 */  lui         $t1, %hi(osResetType)
 /* 04DF58 8004E3A8 8D29030C */  lw          $t1, %lo(osResetType)($t1)

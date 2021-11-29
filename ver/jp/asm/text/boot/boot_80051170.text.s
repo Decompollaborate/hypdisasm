@@ -22,7 +22,7 @@ glabel func_80051170 # 0
 /* 050D44 80051194 03E00008 */  jr          $ra
 /* 050D48 80051198 0002103F */   dsra32     $v0, $v0, 0
 
-glabel func_8005119C # 1
+glabel __ull_rem # 1
 /* 050D4C 8005119C AFA40000 */  sw          $a0, 0x0($sp)
 /* 050D50 800511A0 AFA50004 */  sw          $a1, 0x4($sp)
 /* 050D54 800511A4 AFA60008 */  sw          $a2, 0x8($sp)
@@ -40,7 +40,7 @@ glabel func_8005119C # 1
 /* 050D80 800511D0 03E00008 */  jr          $ra
 /* 050D84 800511D4 0002103F */   dsra32     $v0, $v0, 0
 
-glabel func_800511D8 # 2
+glabel __ull_div # 2
 /* 050D88 800511D8 AFA40000 */  sw          $a0, 0x0($sp)
 /* 050D8C 800511DC AFA50004 */  sw          $a1, 0x4($sp)
 /* 050D90 800511E0 AFA60008 */  sw          $a2, 0x8($sp)

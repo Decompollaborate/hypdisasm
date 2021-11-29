@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005C510 # 0
+glabel __osSetCompare # 0
 /* 05C0C0 8005C510 40845800 */  mtc0        $a0, Compare
 /* 05C0C4 8005C514 03E00008 */  jr          $ra
 /* 05C0C8 8005C518 00000000 */   nop

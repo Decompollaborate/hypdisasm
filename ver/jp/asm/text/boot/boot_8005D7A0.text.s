@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_8005D7A0 # 0
+glabel lldiv # 0
 /* 05D350 8005D7A0 27BDFFD0 */  addiu       $sp, $sp, -0x30
 /* 05D354 8005D7A4 AFA40030 */  sw          $a0, 0x30($sp)
 /* 05D358 8005D7A8 AFBF0014 */  sw          $ra, 0x14($sp)

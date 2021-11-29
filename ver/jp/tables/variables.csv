@@ -15,3 +15,5 @@
 80104A00,tmpTask,OSTask,0x40
 80104C00,__osThreadSave,OSThread,0x1B0
 80126694,D_80126694_RomRamTable,UNK_TYPE24,0x33C
+800A50A0,ldigs,char,0x10
+800A50B4,udigs,char,0x10

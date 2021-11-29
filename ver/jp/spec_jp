@@ -197,8 +197,8 @@ beginseg
     include "ver/jp/build/asm/text/boot/boot_8005B880.text.o"
     include "ver/jp/build/asm/text/boot/boot_8005BAC0.text.o"
     include "ver/jp/build/asm/text/boot/boot_8005C2C0.text.o"
-    include "ver/jp/build/asm/text/boot/boot_8005C510.text.o"
-    include "ver/jp/build/asm/text/boot/boot_8005C520.text.o"
+    include "ver/jp/build/asm/text/boot/setcompare.text.o"
+    include "ver/jp/build/asm/text/boot/xlitob.text.o"
     include "ver/jp/build/asm/text/boot/boot_8005C7C0.text.o"
     include "ver/jp/build/asm/text/boot/boot_8005D280.text.o"
     include "ver/jp/build/asm/text/boot/boot_8005D2E0.text.o"
@@ -216,6 +216,8 @@ beginseg
     include "ver/jp/build/asm/data/boot/boot_800A4D60.data.o"
     include "ver/jp/build/asm/data/boot/xprintf.data.o"
     include "ver/jp/build/asm/data/boot/boot_800A4E70.data.o"
+    include "ver/jp/build/asm/data/boot/xlitob.data.o"
+    include "ver/jp/build/asm/data/boot/boot_800A50D0.data.o"
 
     // rodata
     include "ver/jp/build/asm/data/boot/boot_800A50E0.rodata.o"

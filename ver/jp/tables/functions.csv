@@ -27,3 +27,9 @@
 800594B0,__osSpGetStatus
 800594C0,__osSpRawStartDma
 80059550,__osSpDeviceBusy
+8005C510,__osSetCompare
+80046370,memcpy
+8005D7A0,lldiv
+800511D8,__ull_div
+8005119C,__ull_rem
+8005C520,_Litob
