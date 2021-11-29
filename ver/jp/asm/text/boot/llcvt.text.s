@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80050CF0 # 0
+glabel __d_to_ll # 0
 /* 0508A0 80050CF0 46206109 */  trunc.l.d   $f4, $f12
 /* 0508A4 80050CF4 44222000 */  dmfc1       $v0, $f4
 /* 0508A8 80050CF8 00000000 */  nop
@@ -18,7 +18,7 @@ glabel func_80050CF0 # 0
 /* 0508B4 80050D04 03E00008 */  jr          $ra
 /* 0508B8 80050D08 0002103F */   dsra32     $v0, $v0, 0
 
-glabel func_80050D0C # 1
+glabel __f_to_ll # 1
 /* 0508BC 80050D0C 46006109 */  trunc.l.s   $f4, $f12
 /* 0508C0 80050D10 44222000 */  dmfc1       $v0, $f4
 /* 0508C4 80050D14 00000000 */  nop
@@ -27,7 +27,7 @@ glabel func_80050D0C # 1
 /* 0508D0 80050D20 03E00008 */  jr          $ra
 /* 0508D4 80050D24 0002103F */   dsra32     $v0, $v0, 0
 
-glabel func_80050D28 # 2
+glabel __d_to_ull # 2
 /* 0508D8 80050D28 444EF800 */  cfc1        $t6, $31
 /* 0508DC 80050D2C 24020001 */  addiu       $v0, $zero, 0x1
 /* 0508E0 80050D30 44C2F800 */  ctc1        $v0, $31
@@ -72,7 +72,7 @@ glabel func_80050D28 # 2
 /* 050970 80050DC0 03E00008 */  jr          $ra
 /* 050974 80050DC4 0002103F */   dsra32     $v0, $v0, 0
 
-glabel func_80050DC8 # 3
+glabel __f_to_ull # 3
 /* 050978 80050DC8 444EF800 */  cfc1        $t6, $31
 /* 05097C 80050DCC 24020001 */  addiu       $v0, $zero, 0x1
 /* 050980 80050DD0 44C2F800 */  ctc1        $v0, $31
@@ -116,7 +116,7 @@ glabel func_80050DC8 # 3
 /* 050A0C 80050E5C 03E00008 */  jr          $ra
 /* 050A10 80050E60 0002103F */   dsra32     $v0, $v0, 0
 
-glabel func_80050E64 # 4
+glabel __ll_to_d # 4
 /* 050A14 80050E64 AFA40000 */  sw          $a0, 0x0($sp)
 /* 050A18 80050E68 AFA50004 */  sw          $a1, 0x4($sp)
 /* 050A1C 80050E6C DFAE0000 */  ld          $t6, 0x0($sp)
@@ -124,7 +124,7 @@ glabel func_80050E64 # 4
 /* 050A24 80050E74 03E00008 */  jr          $ra
 /* 050A28 80050E78 46A02021 */   cvt.d.l    $f0, $f4
 
-glabel func_80050E7C # 5
+glabel __ll_to_f # 5
 /* 050A2C 80050E7C AFA40000 */  sw          $a0, 0x0($sp)
 /* 050A30 80050E80 AFA50004 */  sw          $a1, 0x4($sp)
 /* 050A34 80050E84 DFAE0000 */  ld          $t6, 0x0($sp)
@@ -132,7 +132,7 @@ glabel func_80050E7C # 5
 /* 050A3C 80050E8C 03E00008 */  jr          $ra
 /* 050A40 80050E90 46A02020 */   cvt.s.l    $f0, $f4
 
-glabel func_80050E94 # 6
+glabel __ull_to_d # 6
 /* 050A44 80050E94 AFA40000 */  sw          $a0, 0x0($sp)
 /* 050A48 80050E98 AFA50004 */  sw          $a1, 0x4($sp)
 /* 050A4C 80050E9C DFAE0000 */  ld          $t6, 0x0($sp)
@@ -148,7 +148,7 @@ glabel func_80050E94 # 6
 /* 050A70 80050EC0 03E00008 */  jr          $ra
 /* 050A74 80050EC4 00000000 */   nop
 
-glabel func_80050EC8 # 7
+glabel __ull_to_f # 7
 /* 050A78 80050EC8 AFA40000 */  sw          $a0, 0x0($sp)
 /* 050A7C 80050ECC AFA50004 */  sw          $a1, 0x4($sp)
 /* 050A80 80050ED0 DFAE0000 */  ld          $t6, 0x0($sp)

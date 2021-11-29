@@ -5566,7 +5566,7 @@ glabel func_8000FDF0 # 118
 /* 00F9C0 8000FE10 0C002671 */  jal         func_800099C4
 /* 00F9C4 8000FE14 E7A80034 */   swc1       $f8, 0x34($sp)
 /* 00F9C8 8000FE18 00402025 */  move        $a0, $v0
-/* 00F9CC 8000FE1C 0C0143B2 */  jal         func_80050EC8
+/* 00F9CC 8000FE1C 0C0143B2 */  jal         __ull_to_f
 /* 00F9D0 8000FE20 00602825 */   move       $a1, $v1
 /* 00F9D4 8000FE24 3C0143B4 */  lui         $at, 0x43b4
 /* 00F9D8 8000FE28 44811000 */  mtc1        $at, $f2

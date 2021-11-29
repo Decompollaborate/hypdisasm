@@ -7,6 +7,14 @@
 8004FA10,bcopy
 8004FD20,func_8004FD20
 800503D0,osVirtualToPhysical
+80050CF0,__d_to_ll
+80050D0C,__f_to_ll
+80050D28,__d_to_ull
+80050DC8,__f_to_ull
+80050E64,__ll_to_d
+80050E7C,__ll_to_f
+80050E94,__ull_to_d
+80050EC8,__ull_to_f
 80051170,__ull_rshift
 8005119C,__ull_rem
 800511D8,__ull_div
@@ -17,6 +25,7 @@
 80051308,__ull_divremi
 80051368,__ll_mod
 80051404,__ll_rshift
+80051720,osSetIntMask
 80052220,osSpTaskYield
 80052240,osSpTaskYielded
 800522C0,_VirtualToPhysicalTask
@@ -41,3 +50,5 @@
 8005C510,__osSetCompare
 8005C520,_Litob
 8005D7A0,lldiv
+80052900,__cosf
+80052740,__sinf
