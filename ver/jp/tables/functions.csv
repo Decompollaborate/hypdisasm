@@ -1,5 +1,6 @@
 80000400,entrypoint
 80000450,bootproc
+80011D80,func_80011D80_LoadOverlay
 8003528C,func_8003528C_RomToRam
 800458F0,func_800458F0
 80046370,memcpy
@@ -31,6 +32,8 @@
 800522C0,_VirtualToPhysicalTask
 800523DC,osSpTaskLoad
 8005256C,func_8005256C
+80052740,__sinf
+80052900,__cosf
 80054C80,__osExceptionPreamble
 80054C90,__osException
 800551C4,send_mesg
@@ -50,5 +53,3 @@
 8005C510,__osSetCompare
 8005C520,_Litob
 8005D7A0,lldiv
-80052900,__cosf
-80052740,__sinf

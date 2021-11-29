@@ -1493,7 +1493,7 @@ glabel func_8000A618 # 20
 /* 00A29C 8000A6EC AFB90018 */  sw          $t9, 0x18($sp)
 /* 00A2A0 8000A6F0 AFA8001C */  sw          $t0, 0x1c($sp)
 /* 00A2A4 8000A6F4 AFA90020 */  sw          $t1, 0x20($sp)
-/* 00A2A8 8000A6F8 0C004760 */  jal         func_80011D80
+/* 00A2A8 8000A6F8 0C004760 */  jal         func_80011D80_LoadOverlay
 /* 00A2AC 8000A6FC 24A504F0 */   addiu      $a1, $a1, 0x4f0
 /* 00A2B0 8000A700 0C04479A */  jal         func_80111E68
 /* 00A2B4 8000A704 00000000 */   nop

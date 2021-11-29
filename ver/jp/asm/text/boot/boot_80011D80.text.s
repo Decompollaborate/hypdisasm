@@ -9,7 +9,7 @@
 
 .balign 16
 
-glabel func_80011D80 # 0
+glabel func_80011D80_LoadOverlay # 0
 /* 011930 80011D80 27BDFFE0 */  addiu       $sp, $sp, -0x20
 /* 011934 80011D84 8FAE0030 */  lw          $t6, 0x30($sp)
 /* 011938 80011D88 AFA50024 */  sw          $a1, 0x24($sp)

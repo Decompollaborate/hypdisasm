@@ -1595,7 +1595,7 @@ glabel func_8000BD70 # 20
 /* 00BA14 8000BE64 AFB80014 */  sw          $t8, 0x14($sp)
 /* 00BA18 8000BE68 AFB90018 */  sw          $t9, 0x18($sp)
 /* 00BA1C 8000BE6C AFA8001C */  sw          $t0, 0x1c($sp)
-/* 00BA20 8000BE70 0C004D70 */  jal         func_800135C0
+/* 00BA20 8000BE70 0C004D70 */  jal         func_800135C0_LoadOverlay
 /* 00BA24 8000BE74 AFA90020 */   sw         $t1, 0x20($sp)
 /* 00BA28 8000BE78 3C04800A */  lui         $a0, %hi(D_800A0B54)
 /* 00BA2C 8000BE7C 24840B54 */  addiu       $a0, $a0, %lo(D_800A0B54)

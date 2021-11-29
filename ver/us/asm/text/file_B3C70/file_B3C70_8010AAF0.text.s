@@ -4171,7 +4171,7 @@ glabel func_8010E650 # 55
 /* 003BB0 8010E6A0 8C4A001C */  lw          $t2, 0x1c($v0)
 /* 003BB4 8010E6A4 AFAA001C */  sw          $t2, 0x1c($sp)
 /* 003BB8 8010E6A8 8C4B0020 */  lw          $t3, 0x20($v0)
-/* 003BBC 8010E6AC 0C004D70 */  jal         func_800135C0
+/* 003BBC 8010E6AC 0C004D70 */  jal         func_800135C0_LoadOverlay
 /* 003BC0 8010E6B0 AFAB0020 */   sw         $t3, 0x20($sp)
 /* 003BC4 8010E6B4 8FBF002C */  lw          $ra, 0x2c($sp)
 /* 003BC8 8010E6B8 27BD0030 */  addiu       $sp, $sp, 0x30
