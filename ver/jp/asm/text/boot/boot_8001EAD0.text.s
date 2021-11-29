@@ -208,17 +208,17 @@ glabel func_8001EAD0 # 0
 /* 01E95C 8001EDAC 8D050030 */  lw          $a1, 0x30($t0)
 /* 01E960 8001EDB0 8D070034 */  lw          $a3, 0x34($t0)
 /* 01E964 8001EDB4 000527C3 */  sra         $a0, $a1, 31
-/* 01E968 8001EDB8 0C0144B6 */  jal         func_800512D8
+/* 01E968 8001EDB8 0C0144B6 */  jal         __ll_mul
 /* 01E96C 8001EDBC 000737C3 */   sra        $a2, $a3, 31
 /* 01E970 8001EDC0 8E270020 */  lw          $a3, 0x20($s1)
 /* 01E974 8001EDC4 00402025 */  move        $a0, $v0
 /* 01E978 8001EDC8 00602825 */  move        $a1, $v1
-/* 01E97C 8001EDCC 0C0144B6 */  jal         func_800512D8
+/* 01E97C 8001EDCC 0C0144B6 */  jal         __ll_mul
 /* 01E980 8001EDD0 000737C3 */   sra        $a2, $a3, 31
 /* 01E984 8001EDD4 00402025 */  move        $a0, $v0
 /* 01E988 8001EDD8 00602825 */  move        $a1, $v1
 /* 01E98C 8001EDDC 24060000 */  addiu       $a2, $zero, 0x0
-/* 01E990 8001EDE0 0C014501 */  jal         func_80051404
+/* 01E990 8001EDE0 0C014501 */  jal         __ll_rshift
 /* 01E994 8001EDE4 2407000F */   addiu      $a3, $zero, 0xf
 /* 01E998 8001EDE8 AFA20058 */  sw          $v0, 0x58($sp)
 /* 01E99C 8001EDEC 04400009 */  bltz        $v0, .L8001EE14
@@ -595,17 +595,17 @@ glabel func_8001F264 # 5
 /* 01EECC 8001F31C 8C450030 */  lw          $a1, 0x30($v0)
 /* 01EED0 8001F320 8C470034 */  lw          $a3, 0x34($v0)
 /* 01EED4 8001F324 000527C3 */  sra         $a0, $a1, 31
-/* 01EED8 8001F328 0C0144B6 */  jal         func_800512D8
+/* 01EED8 8001F328 0C0144B6 */  jal         __ll_mul
 /* 01EEDC 8001F32C 000737C3 */   sra        $a2, $a3, 31
 /* 01EEE0 8001F330 8E070020 */  lw          $a3, 0x20($s0)
 /* 01EEE4 8001F334 00402025 */  move        $a0, $v0
 /* 01EEE8 8001F338 00602825 */  move        $a1, $v1
-/* 01EEEC 8001F33C 0C0144B6 */  jal         func_800512D8
+/* 01EEEC 8001F33C 0C0144B6 */  jal         __ll_mul
 /* 01EEF0 8001F340 000737C3 */   sra        $a2, $a3, 31
 /* 01EEF4 8001F344 00402025 */  move        $a0, $v0
 /* 01EEF8 8001F348 00602825 */  move        $a1, $v1
 /* 01EEFC 8001F34C 24060000 */  addiu       $a2, $zero, 0x0
-/* 01EF00 8001F350 0C014501 */  jal         func_80051404
+/* 01EF00 8001F350 0C014501 */  jal         __ll_rshift
 /* 01EF04 8001F354 2407000F */   addiu      $a3, $zero, 0xf
 /* 01EF08 8001F358 AFA20038 */  sw          $v0, 0x38($sp)
 /* 01EF0C 8001F35C 04400009 */  bltz        $v0, .L8001F384

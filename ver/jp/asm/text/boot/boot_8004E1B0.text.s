@@ -131,7 +131,7 @@ glabel func_8004E1B0 # 0
 /* 04DF24 8004E374 8CA53124 */  lw          $a1, %lo(D_800A3124)($a1)
 /* 04DF28 8004E378 8C843120 */  lw          $a0, %lo(D_800A3120)($a0)
 /* 04DF2C 8004E37C 24060000 */  addiu       $a2, $zero, 0x0
-/* 04DF30 8004E380 0C0144B6 */  jal         func_800512D8
+/* 04DF30 8004E380 0C0144B6 */  jal         __ll_mul
 /* 04DF34 8004E384 24070003 */   addiu      $a3, $zero, 0x3
 /* 04DF38 8004E388 AFA20020 */  sw          $v0, 0x20($sp)
 /* 04DF3C 8004E38C AFA30024 */  sw          $v1, 0x24($sp)

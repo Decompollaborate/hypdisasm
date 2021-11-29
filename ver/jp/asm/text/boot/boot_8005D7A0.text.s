@@ -18,14 +18,14 @@ glabel lldiv # 0
 /* 05D364 8005D7B4 00C02025 */  move        $a0, $a2
 /* 05D368 8005D7B8 00E02825 */  move        $a1, $a3
 /* 05D36C 8005D7BC 8FA70044 */  lw          $a3, 0x44($sp)
-/* 05D370 8005D7C0 0C01449F */  jal         func_8005127C
+/* 05D370 8005D7C0 0C01449F */  jal         __ll_div
 /* 05D374 8005D7C4 8FA60040 */   lw         $a2, 0x40($sp)
 /* 05D378 8005D7C8 AFA20020 */  sw          $v0, 0x20($sp)
 /* 05D37C 8005D7CC AFA30024 */  sw          $v1, 0x24($sp)
 /* 05D380 8005D7D0 8FA40040 */  lw          $a0, 0x40($sp)
 /* 05D384 8005D7D4 8FA50044 */  lw          $a1, 0x44($sp)
 /* 05D388 8005D7D8 00403025 */  move        $a2, $v0
-/* 05D38C 8005D7DC 0C0144B6 */  jal         func_800512D8
+/* 05D38C 8005D7DC 0C0144B6 */  jal         __ll_mul
 /* 05D390 8005D7E0 00603825 */   move       $a3, $v1
 /* 05D394 8005D7E4 8FAE0038 */  lw          $t6, 0x38($sp)
 /* 05D398 8005D7E8 8FAF003C */  lw          $t7, 0x3c($sp)

@@ -33,3 +33,11 @@
 800511D8,__ull_div
 8005119C,__ull_rem
 8005C520,_Litob
+80051170,__ull_rshift
+80051214,__ll_lshift
+80051240,__ll_rem
+8005127C,__ll_div
+800512D8,__ll_mul
+80051308,__ull_divremi
+80051368,__ll_mod
+80051404,__ll_rshift
