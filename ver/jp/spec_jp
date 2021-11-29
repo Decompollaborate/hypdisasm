@@ -222,9 +222,27 @@ beginseg
 
     // rodata
     include "ver/jp/build/asm/data/boot/boot_800A50E0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A52D0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A53A0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A53B0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A55E0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A56B0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A56E0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A5D90.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A5DF0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A76C0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A76F0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A7730.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A7740.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A7850.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A7900.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800A8800.rodata.o"
     include "ver/jp/build/asm/data/boot/exceptasm.rodata.o"
     include "ver/jp/build/asm/data/boot/xprintf.rodata.o"
     include "ver/jp/build/asm/data/boot/boot_800ACC40.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800ACC60.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800ACCD0.rodata.o"
+    include "ver/jp/build/asm/data/boot/boot_800ACD10.rodata.o"
 
     // bss
     include "ver/jp/build/asm/data/boot/boot_800AD840.bss.o"
