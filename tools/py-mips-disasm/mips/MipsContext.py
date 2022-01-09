@@ -31,6 +31,7 @@ class ContextSymbol:
         self.size: int = 4
         self.isDefined = False
         self.isUserDefined = False
+        self.isBss = False
 
 class Context:
     def __init__(self):
@@ -390,10 +391,10 @@ class Context:
             if len(row) == 0:
                 continue
 
-            vram, varName, varType, varSize = row
+            vramStr, varName, varType, varSizeStr = row
 
-            vram = int(vram, 16)
-            varSize = int(varSize, 0)
+            vram = int(vramStr, 16)
+            varSize = int(varSizeStr, 16)
             contVar = ContextSymbol(vram, varName)
             contVar.type = varType
             contVar.size = varSize
@@ -409,9 +410,9 @@ class Context:
             if len(row) == 0:
                 continue
 
-            vram, funcName = row
+            vramStr, funcName = row
 
-            vram = int(vram, 16)
+            vram = int(vramStr, 16)
             self.addFunction(None, vram, funcName)
             self.funcAddresses[vram].isUserDefined = True
 
@@ -424,9 +425,9 @@ class Context:
             if len(row) == 0:
                 continue
 
-            constantValue, constantName = row
+            constantValueStr, constantName = row
 
-            constantValue = int(constantValue, 16)
+            constantValue = int(constantValueStr, 16)
             self.constants[constantValue] = constantName
 
 
