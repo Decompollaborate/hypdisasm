@@ -1388,18 +1388,3 @@ glabel __osViIntrCount
 
 glabel __osTimerCounter
 /* 0FFF10 80100360 */  .space  0x10
-
-glabel D_80100370
-/* 0FFF20 80100370 */  .space  0x08
-
-glabel __osPiAccessQueue
-/* 0FFF28 80100378 */  .space  0x18
-
-glabel __osPfsPifRam
-/* 0FFF40 80100390 */  .space  0x40
-
-glabel __osThreadSave
-/* 0FFF80 801003D0 */  .space  0x1B0
-
-glabel __osPfsInodeCache
-/* 100130 80100580 */  .space  0x100

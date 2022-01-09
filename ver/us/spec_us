@@ -263,7 +263,8 @@ beginseg
     include "ver/us/build/asm/data/boot/osViModeMpalLan1.data.o"
     include "ver/us/build/asm/data/boot/osViModeNtscLan1.data.o"
     include "ver/us/build/asm/data/boot/xlitob.data.o"
-    include "ver/us/build/asm/data/boot/boot_8009FC10.data.o"
+    include "ver/us/build/asm/data/boot/contpfs.data.o"
+    include "ver/us/build/asm/data/boot/boot_8009FC20.data.o"
 
     // rodata
     include "ver/us/build/asm/data/boot/boot_8009FC30.rodata.o"
@@ -302,6 +303,9 @@ beginseg
 
     // bss
     include "ver/us/build/asm/data/boot/boot_800A8C00.bss.o"
+    include "ver/us/build/asm/data/boot/piacs.bss.o"
+    include "ver/us/build/asm/data/boot/boot_80100390.bss.o"
+    include "ver/us/build/asm/data/boot/contpfs.bss.o"
 endseg
 
 beginseg
