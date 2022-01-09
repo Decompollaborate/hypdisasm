@@ -1333,7 +1333,10 @@ glabel D_800FDDE4
 /* 0FD994 800FDDE4 */  .space  0x04
 
 glabel D_800FDDE8
-/* 0FD998 800FDDE8 */  .space  0x74
+/* 0FD998 800FDDE8 */  .space  0x70
+
+glabel D_800FDE58
+/* 0FDA08 800FDE58 */  .space  0x04
 
 glabel D_800FDE5C
 /* 0FDA0C 800FDE5C */  .space  0x04
@@ -1351,7 +1354,10 @@ glabel D_800FF098
 /* 0FEC48 800FF098 */  .space  0x08
 
 glabel viThread
-/* 0FEC50 800FF0A0 */  .space  0x11B0
+/* 0FEC50 800FF0A0 */  .space  0x1171
+
+glabel D_80100211
+/* 0FFDC1 80100211 */  .space  0x3F
 
 glabel viEventQueue
 /* 0FFE00 80100250 */  .space  0x18
@@ -1375,7 +1381,10 @@ glabel siAccessBuf
 /* 0FFEC0 80100310 */  .space  0x08
 
 glabel __osSiAccessQueue
-/* 0FFEC8 80100318 */  .space  0x38
+/* 0FFEC8 80100318 */  .space  0x18
+
+glabel D_80100330
+/* 0FFEE0 80100330 */  .space  0x20
 
 glabel __osCurrentTime
 /* 0FFF00 80100350 */  .space  0x08

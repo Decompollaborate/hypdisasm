@@ -27,7 +27,7 @@ glabel __osPiDevMgr
 
 glabel __osCurrentHandle
 /* 09EA10 8009EE60 */ .word D_800FDDE0
-/* 09EA14 8009EE64 */ .word 0x800FDE58
+/* 09EA14 8009EE64 */ .word D_800FDE58
 /* 09EA18 8009EE68 */ .word 0x00000000
 /* 09EA1C 8009EE6C */ .word 0x00000000
 

@@ -1159,7 +1159,10 @@ glabel D_800FFE90
 /* 0FFA40 800FFE90 */  .space  0x200
 
 glabel D_80100090
-/* 0FFC40 80100090 */  .space  0x2200
+/* 0FFC40 80100090 */  .space  0x181
+
+glabel D_80100211
+/* 0FFDC1 80100211 */  .space  0x207F
 
 glabel D_80102290
 /* 101E40 80102290 */  .space  0x10
@@ -1249,7 +1252,10 @@ glabel D_80104A9C
 /* 10464C 80104A9C */  .space  0x04
 
 glabel D_80104AA0
-/* 104650 80104AA0 */  .space  0x120
+/* 104650 80104AA0 */  .space  0x100
+
+glabel D_80104BA0
+/* 104750 80104BA0 */  .space  0x20
 
 glabel D_80104BC0
 /* 104770 80104BC0 */  .space  0x04

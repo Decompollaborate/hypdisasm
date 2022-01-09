@@ -40,7 +40,7 @@ glabel __osPfsLastChannel
 /* 09F47C 8009F8CC */ .word 0x00000000
 
 glabel __osTimerList
-/* 09F480 8009F8D0 */ .word 0x80100330
+/* 09F480 8009F8D0 */ .word D_80100330
 /* 09F484 8009F8D4 */ .word 0x00000000
 /* 09F488 8009F8D8 */ .word 0x00000000
 /* 09F48C 8009F8DC */ .word 0x00000000
