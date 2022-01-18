@@ -8,10 +8,9 @@
 .section .rodata
 
 .balign 16
-/* 0AAD30 800AB180 556E6B6E */  .float  16384073400320.0
 
-glabel _string_800AB184
-/* 0AAD34 800AB184  */  .asciz  "own speakerType %d\n"
+glabel D_800AB180
+/* 0AAD30 800AB180  */  .asciz  "Unknown speakerType %d\n"
                         .balign 4
 
 glabel D_800AB198

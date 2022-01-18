@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800AC820
 /* 0AC3D0 800AC820  */  .asciz  "error: strcpy: dst or src is NULL pointer. dst:%p src:%p\n"
                         .balign 4
 /* 0AC40C 800AC85C  */  .asciz  ""

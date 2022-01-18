@@ -451,6 +451,7 @@ glabel func_80060028 # 12
 /* 05FBF8 80060048 03E00008 */  jr          $ra
 /* 05FBFC 8006004C 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel func_80060050 # 13
 /* 05FC00 80060050 09000419 */  j           fakefunc_84001064
 /* 05FC04 80060054 20010FC0 */   addi       $at, $zero, 0xfc0
@@ -511,6 +512,7 @@ glabel func_80060050 # 13
 /* 05FCC8 80060118 00000000 */   nop
 /* 05FCCC 8006011C 00000000 */  nop
 
+/* Possibly handwritten function */
 glabel func_80060120 # 14
 /* 05FCD0 80060120 40055800 */  mfc0        $a1, Compare
 /* 05FCD4 80060124 8C3C0030 */  lw          $gp, 0x30($at)
@@ -584,6 +586,7 @@ glabel func_80060120 # 14
 /* 05FDBC 8006020C 03E00008 */  jr          $ra
 /* 05FDC0 80060210 40831000 */   mtc0       $v1, EntryLo0
 
+/* Possibly handwritten function */
 glabel func_80060214 # 15
 /* 05FDC4 80060214 40043800 */  mfc0        $a0, Reserved07
 .L80060218:
@@ -612,6 +615,7 @@ glabel D_8006023C
 /* 05FE10 80060260 0900043B */  .word  0x0900043B
 /* 05FE14 80060264 23DEFFF8 */  .word  0x23DEFFF8
 
+/* Possibly handwritten function */
 glabel func_80060268 # 17
 /* 05FE18 80060268 001A1A00 */  sll         $v1, $k0, 8
 /* 05FE1C 8006026C 00031D02 */  srl         $v1, $v1, 20
@@ -631,6 +635,7 @@ glabel func_80060268 # 17
 /* 05FE50 800602A0 0900043B */  j           fakefunc_840010EC
 /* 05FE54 800602A4 40803800 */   mtc0       $zero, Reserved07
 
+/* Possibly handwritten function */
 glabel func_800602A8 # 18
 /* 05FE58 800602A8 001A1A00 */  sll         $v1, $k0, 8
 /* 05FE5C 800602AC 00031D02 */  srl         $v1, $v1, 20
@@ -650,6 +655,7 @@ glabel func_800602A8 # 18
 /* 05FE90 800602E0 0900043B */  j           fakefunc_840010EC
 /* 05FE94 800602E4 40803800 */   mtc0       $zero, Reserved07
 
+/* Possibly handwritten function */
 glabel func_800602E8 # 19
 /* 05FE98 800602E8 00191200 */  sll         $v0, $t9, 8
 /* 05FE9C 800602EC 00021202 */  srl         $v0, $v0, 8
@@ -666,6 +672,7 @@ glabel func_800602E8 # 19
 /* 05FEC4 80060314 0900043B */  j           fakefunc_840010EC
 /* 05FEC8 80060318 23DEFFF8 */   addi       $fp, $fp, -0x8
 
+/* Possibly handwritten function */
 glabel func_8006031C # 20
 /* 05FECC 8006031C 001A1C02 */  srl         $v1, $k0, 16
 /* 05FED0 80060320 30610004 */  andi        $at, $v1, 0x4
@@ -692,6 +699,7 @@ glabel func_8006031C # 20
 /* 05FF1C 8006036C 0900043B */  j           fakefunc_840010EC
 /* 05FF20 80060370 23DEFFF8 */   addi       $fp, $fp, -0x8
 
+/* Possibly handwritten function */
 glabel func_80060374 # 21
 /* 05FF24 80060374 20010170 */  addi        $at, $zero, 0x170
 /* 05FF28 80060378 200404F0 */  addi        $a0, $zero, 0x4f0
@@ -2340,6 +2348,7 @@ glabel D_80060D80
 /* 061884 80061CD4 03E00008 */  .word  0x03E00008
 /* 061888 80061CD8 400B2800 */  .word  0x400B2800
 
+/* Possibly handwritten function */
 glabel func_80061CDC # 28
 /* 06188C 80061CDC 1560FFFF */  bnez        $t3, func_80061CDC
 /* 061890 80061CE0 400B2800 */   mfc0       $t3, PageMask
@@ -3602,6 +3611,7 @@ glabel D_80061D00
 /* 062C24 80063074 03E00008 */  .word  0x03E00008
 /* 062C28 80063078 400B2800 */  .word  0x400B2800
 
+/* Possibly handwritten function */
 glabel func_8006307C # 30
 /* 062C2C 8006307C 1560FFFF */  bnez        $t3, func_8006307C
 /* 062C30 80063080 400B2800 */   mfc0       $t3, PageMask

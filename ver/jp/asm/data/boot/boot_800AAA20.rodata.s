@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800AAA20
 /* 0AA5D0 800AAA20  */  .asciz  "voice %d\n"
                         .balign 4
 /* 0AA5DC 800AAA2C  */  .asciz  "index = %d, map = %d\n"

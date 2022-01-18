@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel osInvalDCache # 0
 /* 052EF0 80053340 18A0001F */  blez        $a1, .L800533C0
 /* 052EF4 80053344 00000000 */   nop

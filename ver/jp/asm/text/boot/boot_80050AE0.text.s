@@ -36,6 +36,7 @@ glabel func_80050AE0 # 0
 /* 0506D8 80050B28 03E00008 */  jr          $ra
 /* 0506DC 80050B2C 46001006 */   mov.s      $f0, $f2
 
+/* Possibly handwritten function */
 glabel func_80050B30 # 1
 /* 0506E0 80050B30 18A0001F */  blez        $a1, .L80050BB0
 /* 0506E4 80050B34 00000000 */   nop

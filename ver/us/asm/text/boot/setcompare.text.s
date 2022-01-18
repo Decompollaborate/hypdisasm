@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel __osSetCompare # 0
 /* 05D6B0 8005DB00 40845800 */  mtc0        $a0, Compare
 /* 05D6B4 8005DB04 03E00008 */  jr          $ra

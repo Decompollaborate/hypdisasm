@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel osGetCount # 0
 /* 052E90 800532E0 40024800 */  mfc0        $v0, Count
 /* 052E94 800532E4 03E00008 */  jr          $ra

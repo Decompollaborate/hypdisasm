@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_80132D70
 /* 028280 80132D70  */  .asciz  "warning: item %p(%s) is out of maze\n"
                         .balign 4
 /* 0282A8 80132D98  */  .asciz  "%s = (%3.2f, %3.2f, %3.2f)\n"

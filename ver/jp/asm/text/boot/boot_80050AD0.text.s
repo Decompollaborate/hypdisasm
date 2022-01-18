@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_80050AD0 # 0
 /* 050680 80050AD0 40024800 */  mfc0        $v0, Count
 /* 050684 80050AD4 03E00008 */  jr          $ra

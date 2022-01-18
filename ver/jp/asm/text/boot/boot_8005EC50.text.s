@@ -995,6 +995,7 @@ glabel D_8005EC50
 /* 05F754 8005FBA4 03E00008 */  .word  0x03E00008
 /* 05F758 8005FBA8 400B2800 */  .word  0x400B2800
 
+/* Possibly handwritten function */
 glabel func_8005FBAC # 1
 /* 05F75C 8005FBAC 1560FFFF */  bnez        $t3, func_8005FBAC
 /* 05F760 8005FBB0 400B2800 */   mfc0       $t3, PageMask
@@ -2257,6 +2258,7 @@ glabel D_8005FBD0
 /* 060AF4 80060F44 03E00008 */  .word  0x03E00008
 /* 060AF8 80060F48 400B2800 */  .word  0x400B2800
 
+/* Possibly handwritten function */
 glabel func_80060F4C # 3
 /* 060AFC 80060F4C 1560FFFF */  bnez        $t3, func_80060F4C
 /* 060B00 80060F50 400B2800 */   mfc0       $t3, PageMask

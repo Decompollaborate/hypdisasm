@@ -24,7 +24,8 @@ glabel _string_800A7704
                         .balign 4
 
 glabel D_800A7718
-/* 0A72C8 800A7718 0A000000 */  .word  0x0A000000
+/* 0A72C8 800A7718  */  .asciz  "\n"
+                        .balign 4
 
 glabel D_800A771C
 /* 0A72CC 800A771C 00000000 */  .word  0x00000000

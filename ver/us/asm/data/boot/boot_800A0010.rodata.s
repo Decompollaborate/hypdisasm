@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800A0010
 /* 09FBC0 800A0010  */  .asciz  "mic toggle %s\n"
                         .balign 4
 /* 09FBD0 800A0020  */  .asciz  "ON"

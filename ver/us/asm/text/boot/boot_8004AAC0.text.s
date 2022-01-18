@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_8004AAC0 # 0
 /* 04A670 8004AAC0 3C038005 */  lui         $v1, %hi(D_8004B5DC)
 /* 04A674 8004AAC4 000440C0 */  sll         $t0, $a0, 3
@@ -26,6 +27,7 @@ glabel func_8004AAC0 # 0
 /* 04A6A4 8004AAF4 03E00008 */  jr          $ra
 /* 04A6A8 8004AAF8 00411020 */   add        $v0, $v0, $at
 
+/* Possibly handwritten function */
 glabel func_8004AAFC # 1
 /* 04A6AC 8004AAFC 34018800 */  ori         $at, $zero, 0x8800
 /* 04A6B0 8004AB00 0081082A */  slt         $at, $a0, $at

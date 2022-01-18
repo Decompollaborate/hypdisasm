@@ -8,10 +8,9 @@
 .section .rodata
 
 .balign 16
-/* 0AB1B0 800AB600 496E7661 */  .float  976742.0625
 
-glabel _string_800AB604
-/* 0AB1B4 800AB604  */  .asciz  "lid eyeCatch table.\n_eyeCatchTbl[%d].catch = %d\n"
+glabel D_800AB600
+/* 0AB1B0 800AB600  */  .asciz  "Invalid eyeCatch table.\n_eyeCatchTbl[%d].catch = %d\n"
                         .balign 4
 /* 0AB1E8 800AB638  */  .asciz  "ecInit(%d)\n"
                         .balign 4

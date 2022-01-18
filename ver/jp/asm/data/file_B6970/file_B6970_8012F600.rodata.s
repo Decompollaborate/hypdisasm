@@ -190,65 +190,22 @@ glabel D_8012F8D0
                         .balign 4
 
 glabel D_8012F990
-/* 021630 8012F990 7072655F */  .word  0x7072655F
-/* 021634 8012F994 6368616E */  .word  0x6368616E
-/* 021638 8012F998 67654D61 */  .word  0x67654D61
-/* 02163C 8012F99C 7A65426C */  .word  0x7A65426C
-/* 021640 8012F9A0 6F636B00 */  .word  0x6F636B00
-/* 021644 8012F9A4 626C6F63 */  .word  0x626C6F63
-/* 021648 8012F9A8 6B206C65 */  .word  0x6B206C65
-/* 02164C 8012F9AC 76656C20 */  .word  0x76656C20
-/* 021650 8012F9B0 6D69736D */  .word  0x6D69736D
-/* 021654 8012F9B4 61746368 */  .word  0x61746368
-/* 021658 8012F9B8 20286C65 */  .word  0x20286C65
-/* 02165C 8012F9BC 76656C20 */  .word  0x76656C20
-/* 021660 8012F9C0 25642C20 */  .word  0x25642C20
-/* 021664 8012F9C4 5B25332E */  .word  0x5B25332E
-/* 021668 8012F9C8 32662C20 */  .word  0x32662C20
-/* 02166C 8012F9CC 25332E32 */  .word  0x25332E32
-/* 021670 8012F9D0 662C2025 */  .word  0x662C2025
-/* 021674 8012F9D4 332E3266 */  .word  0x332E3266
-/* 021678 8012F9D8 5D292C20 */  .word  0x5D292C20
-/* 02167C 8012F9DC 666F7263 */  .word  0x666F7263
-/* 021680 8012F9E0 6520746F */  .word  0x6520746F
-/* 021684 8012F9E4 20646967 */  .word  0x20646967
-/* 021688 8012F9E8 67696E67 */  .word  0x67696E67
-/* 02168C 8012F9EC 2E2E2E0A */  .word  0x2E2E2E0A
-/* 021690 8012F9F0 00000000 */  .word  0x00000000
+/* 021630 8012F990  */  .asciz  "pre_changeMazeBlock"
+                        .balign 4
+/* 021644 8012F9A4  */  .asciz  "block level mismatch (level %d, [%3.2f, %3.2f, %3.2f]), force to digging...\n"
+                        .balign 4
 
 glabel D_8012F9F4
-/* 021694 8012F9F4 6166745F */  .word  0x6166745F
-/* 021698 8012F9F8 6368616E */  .word  0x6368616E
-/* 02169C 8012F9FC 67654D61 */  .word  0x67654D61
-/* 0216A0 8012FA00 7A65426C */  .word  0x7A65426C
-/* 0216A4 8012FA04 6F636B00 */  .word  0x6F636B00
-/* 0216A8 8012FA08 746F7461 */  .word  0x746F7461
-/* 0216AC 8012FA0C 6C426C6F */  .word  0x6C426C6F
-/* 0216B0 8012FA10 636B4E75 */  .word  0x636B4E75
-/* 0216B4 8012FA14 6D203D20 */  .word  0x6D203D20
-/* 0216B8 8012FA18 25640A00 */  .word  0x25640A00
-/* 0216BC 8012FA1C 73697A65 */  .word  0x73697A65
-/* 0216C0 8012FA20 6F66286D */  .word  0x6F66286D
-/* 0216C4 8012FA24 617A6542 */  .word  0x617A6542
-/* 0216C8 8012FA28 6C6F636B */  .word  0x6C6F636B
-/* 0216CC 8012FA2C 5429203D */  .word  0x5429203D
-/* 0216D0 8012FA30 2025640A */  .word  0x2025640A
-/* 0216D4 8012FA34 00000000 */  .word  0x00000000
-/* 0216D8 8012FA38 696E6974 */  .word  0x696E6974
-/* 0216DC 8012FA3C 41726561 */  .word  0x41726561
-/* 0216E0 8012FA40 28257029 */  .word  0x28257029
-/* 0216E4 8012FA44 20637572 */  .word  0x20637572
-/* 0216E8 8012FA48 41726561 */  .word  0x41726561
-/* 0216EC 8012FA4C 4E756D3A */  .word  0x4E756D3A
-/* 0216F0 8012FA50 25640A00 */  .word  0x25640A00
-/* 0216F4 8012FA54 4552524F */  .word  0x4552524F
-/* 0216F8 8012FA58 52203A20 */  .word  0x52203A20
-/* 0216FC 8012FA5C 6E6F7420 */  .word  0x6E6F7420
-/* 021700 8012FA60 6B656570 */  .word  0x6B656570
-/* 021704 8012FA64 696E6720 */  .word  0x696E6720
-/* 021708 8012FA68 6974656D */  .word  0x6974656D
-/* 02170C 8012FA6C 2C202573 */  .word  0x2C202573
-/* 021710 8012FA70 0A000000 */  .word  0x0A000000
+/* 021694 8012F9F4  */  .asciz  "aft_changeMazeBlock"
+                        .balign 4
+/* 0216A8 8012FA08  */  .asciz  "totalBlockNum = %d\n"
+                        .balign 4
+/* 0216BC 8012FA1C  */  .asciz  "sizeof(mazeBlockT) = %d\n"
+                        .balign 4
+/* 0216D8 8012FA38  */  .asciz  "initArea(%p) curAreaNum:%d\n"
+                        .balign 4
+/* 0216F4 8012FA54  */  .asciz  "ERROR : not keeping item, %s\n"
+                        .balign 4
 
 glabel D_8012FA74
 /* 021714 8012FA74 3A83126F */  .float  0.0010000000474974513
@@ -357,72 +314,32 @@ glabel D_8012FB7C
                         .balign 4
 
 glabel D_8012FC50
-/* 0218F0 8012FC50 A1CAA4B7 */  .word  0xA1CAA4B7
-/* 0218F4 8012FC54 A4E9A4D9 */  .word  0xA4E9A4D9
-/* 0218F8 8012FC58 A4EB20A4 */  .word  0xA4EB20A4
-/* 0218FC 8012FC5C E2A4CEA4 */  .word  0xE2A4CEA4
-/* 021900 8012FC60 AC20A4CA */  .word  0xAC20A4CA
-/* 021904 8012FC64 A4A4A1CB */  .word  0xA4A4A1CB
-/* 021908 8012FC68 0AA4B7A4 */  .word  0x0AA4B7A4
-/* 02190C 8012FC6C E9A4D9A4 */  .word  0xE9A4D9A4
-/* 021910 8012FC70 BFA4A420 */  .word  0xBFA4A420
-/* 021914 8012FC74 A4E2A4CE */  .word  0xA4E2A4CE
-/* 021918 8012FC78 A4CB20A1 */  .word  0xA4CB20A1
-/* 02191C 8012FC7C A7A1A8A5 */  .word  0xA7A1A8A5
-/* 021920 8012FC80 DEA1BCA5 */  .word  0xDEA1BCA5
-/* 021924 8012FC84 AFA4F20A */  .word  0xAFA4F20A
-/* 021928 8012FC88 A4C4A4B1 */  .word  0xA4C4A4B1
-/* 02192C 8012FC8C A4C620A1 */  .word  0xA4C620A1
-/* 021930 8012FC90 D0A1D1A5 */  .word  0xD0A1D1A5
-/* 021934 8012FC94 DCA5BFA5 */  .word  0xDCA5BFA5
-/* 021938 8012FC98 F3A4F220 */  .word  0xF3A4F220
-/* 02193C 8012FC9C A4AAA4B9 */  .word  0xA4AAA4B9
-/* 021940 8012FCA0 A4C80AA4 */  .word  0xA4C80AA4
-/* 021944 8012FCA4 BBA4C4A4 */  .word  0xBBA4C4A4
-/* 021948 8012FCA8 E1A4A4A4 */  .word  0xE1A4A4A4
-/* 02194C 8012FCAC F220A4E8 */  .word  0xF220A4E8
-/* 021950 8012FCB0 A4E0A4B3 */  .word  0xA4E0A4B3
-/* 021954 8012FCB4 A4C8A4AC */  .word  0xA4C8A4AC
-/* 021958 8012FCB8 20A4C7A4 */  .word  0x20A4C7A4
-/* 02195C 8012FCBC ADA4EB00 */  .word  0xADA4EB00
+/* 0218F0 8012FC50  */  .asciz  "（しらべる ものが ない）\nしらべたい ものに ：；マークを\nつけて ｛｝ボタンを おすと\nせつめいを よむことが できる"
+                        .balign 4
 
 glabel D_8012FCC0
-/* 021960 8012FCC0 A1A9A1A9 */  .word  0xA1A9A1A9
-/* 021964 8012FCC4 A1A90000 */  .word  0xA1A90000
+/* 021960 8012FCC0  */  .asciz  "？？？"
+                        .balign 4
 
 glabel D_8012FCC8
-/* 021968 8012FCC8 5E34252D */  .word  0x5E34252D
-/* 02196C 8012FCCC 3232735E */  .word  0x3232735E
-/* 021970 8012FCD0 5E25730A */  .word  0x5E25730A
-/* 021974 8012FCD4 25732573 */  .word  0x25732573
-/* 021978 8012FCD8 00000000 */  .word  0x00000000
+/* 021968 8012FCC8  */  .asciz  "^4%-22s^^%s\n%s%s"
+                        .balign 4
 
 glabel D_8012FCDC
-/* 02197C 8012FCDC 5E342573 */  .word  0x5E342573
-/* 021980 8012FCE0 5E5EA1A9 */  .word  0x5E5EA1A9
-/* 021984 8012FCE4 0A257325 */  .word  0x0A257325
-/* 021988 8012FCE8 73000000 */  .word  0x73000000
+/* 02197C 8012FCDC  */  .asciz  "^4%s^^？\n%s%s"
+                        .balign 4
 
 glabel D_8012FCEC
-/* 02198C 8012FCEC 0AA1CAA4 */  .word  0x0AA1CAA4
-/* 021990 8012FCF0 B3A4B3A4 */  .word  0xB3A4B3A4
-/* 021994 8012FCF4 ABA4E9A4 */  .word  0xABA4E9A4
-/* 021998 8012FCF8 C0A4C820 */  .word  0xC0A4C820
-/* 02199C 8012FCFC A4C6A4AC */  .word  0xA4C6A4AC
-/* 0219A0 8012FD00 20A4C8A4 */  .word  0x20A4C8A4
-/* 0219A4 8012FD04 C9A4ABA4 */  .word  0xC9A4ABA4
-/* 0219A8 8012FD08 CAA4A4A1 */  .word  0xCAA4A4A1
-/* 0219AC 8012FD0C CB000000 */  .word  0xCB000000
+/* 02198C 8012FCEC  */  .asciz  "\n（ここからだと てが とどかない）"
+                        .balign 4
 
 glabel D_8012FD10
-/* 0219B0 8012FD10 5E342573 */  .word  0x5E342573
-/* 0219B4 8012FD14 5E5E0A25 */  .word  0x5E5E0A25
-/* 0219B8 8012FD18 73000000 */  .word  0x73000000
+/* 0219B0 8012FD10  */  .asciz  "^4%s^^\n%s"
+                        .balign 4
 
 glabel D_8012FD1C
-/* 0219BC 8012FD1C 5E342573 */  .word  0x5E342573
-/* 0219C0 8012FD20 5E5EA1A9 */  .word  0x5E5EA1A9
-/* 0219C4 8012FD24 0A257300 */  .word  0x0A257300
+/* 0219BC 8012FD1C  */  .asciz  "^4%s^^？\n%s"
+                        .balign 4
 
 glabel D_8012FD28
 /* 0219C8 8012FD28 0AA1CEA1 */  .word  0x0AA1CEA1
@@ -436,61 +353,46 @@ glabel D_8012FD28
 /* 0219E8 8012FD48 EB000000 */  .word  0xEB000000
 
 glabel D_8012FD4C
-/* 0219EC 8012FD4C 25732573 */  .word  0x25732573
-/* 0219F0 8012FD50 00000000 */  .word  0x00000000
+/* 0219EC 8012FD4C  */  .asciz  "%s%s"
+                        .balign 4
 
 glabel D_8012FD54
-/* 0219F4 8012FD54 25732573 */  .word  0x25732573
-/* 0219F8 8012FD58 00000000 */  .word  0x00000000
+/* 0219F4 8012FD54  */  .asciz  "%s%s"
+                        .balign 4
 
 glabel D_8012FD5C
-/* 0219FC 8012FD5C 0AA1CAA4 */  .word  0x0AA1CAA4
-/* 021A00 8012FD60 B3A4B3A4 */  .word  0xB3A4B3A4
-/* 021A04 8012FD64 ABA4E9A4 */  .word  0xABA4E9A4
-/* 021A08 8012FD68 C0A4C820 */  .word  0xC0A4C820
-/* 021A0C 8012FD6C A4C6A4AC */  .word  0xA4C6A4AC
-/* 021A10 8012FD70 20A4C8A4 */  .word  0x20A4C8A4
-/* 021A14 8012FD74 C9A4ABA4 */  .word  0xC9A4ABA4
-/* 021A18 8012FD78 CAA4A4A1 */  .word  0xCAA4A4A1
-/* 021A1C 8012FD7C CB000000 */  .word  0xCB000000
+/* 0219FC 8012FD5C  */  .asciz  "\n（ここからだと てが とどかない）"
+                        .balign 4
 
 glabel D_8012FD80
 /* 021A20 8012FD80  */  .asciz  "？？？"
                         .balign 4
 
 glabel D_8012FD88
-/* 021A28 8012FD88 25732573 */  .word  0x25732573
-/* 021A2C 8012FD8C 00000000 */  .word  0x00000000
+/* 021A28 8012FD88  */  .asciz  "%s%s"
+                        .balign 4
 
 glabel D_8012FD90
-/* 021A30 8012FD90 25732573 */  .word  0x25732573
-/* 021A34 8012FD94 00000000 */  .word  0x00000000
+/* 021A30 8012FD90  */  .asciz  "%s%s"
+                        .balign 4
 
 glabel D_8012FD98
-/* 021A38 8012FD98 0AA1CAA4 */  .word  0x0AA1CAA4
-/* 021A3C 8012FD9C B3A4B3A4 */  .word  0xB3A4B3A4
-/* 021A40 8012FDA0 ABA4E9A4 */  .word  0xABA4E9A4
-/* 021A44 8012FDA4 C0A4C820 */  .word  0xC0A4C820
-/* 021A48 8012FDA8 A4C6A4AC */  .word  0xA4C6A4AC
-/* 021A4C 8012FDAC 20A4C8A4 */  .word  0x20A4C8A4
-/* 021A50 8012FDB0 C9A4ABA4 */  .word  0xC9A4ABA4
-/* 021A54 8012FDB4 CAA4A4A1 */  .word  0xCAA4A4A1
-/* 021A58 8012FDB8 CB000000 */  .word  0xCB000000
+/* 021A38 8012FD98  */  .asciz  "\n（ここからだと てが とどかない）"
+                        .balign 4
 
 glabel D_8012FDBC
-/* 021A5C 8012FDBC 25730000 */  .word  0x25730000
+/* 021A5C 8012FDBC  */  .asciz  "%s"
+                        .balign 4
 
 glabel D_8012FDC0
-/* 021A60 8012FDC0 25730000 */  .word  0x25730000
+/* 021A60 8012FDC0  */  .asciz  "%s"
+                        .balign 4
 
 glabel D_8012FDC4
-/* 021A64 8012FDC4 25730000 */  .word  0x25730000
-/* 021A68 8012FDC8 496C6C65 */  .word  0x496C6C65
-/* 021A6C 8012FDCC 67616C20 */  .word  0x67616C20
-/* 021A70 8012FDD0 64696666 */  .word  0x64696666
-/* 021A74 8012FDD4 6963756C */  .word  0x6963756C
-/* 021A78 8012FDD8 74793A25 */  .word  0x74793A25
-/* 021A7C 8012FDDC 640A0000 */  .word  0x640A0000
+/* 021A64 8012FDC4  */  .asciz  "%s"
+                        .balign 4
+/* 021A68 8012FDC8  */  .asciz  "Illegal difficulty:%d\n"
+                        .balign 4
 
 glabel D_8012FDE0
 /* 021A80 8012FDE0 00000000 */  .word  0x00000000
@@ -508,25 +410,14 @@ glabel D_8012FE24
                         .balign 4
 
 glabel D_8012FE40
-/* 021AE0 8012FE40 A5BFA1BC */  .word  0xA5BFA1BC
-/* 021AE4 8012FE44 A5B2A5C3 */  .word  0xA5B2A5C3
-/* 021AE8 8012FE48 A5C820A4 */  .word  0xA5C820A4
-/* 021AEC 8012FE4C D5A4E1A4 */  .word  0xD5A4E1A4
-/* 021AF0 8012FE50 A4000000 */  .word  0xA4000000
-/* 021AF4 8012FE54 68656C70 */  .word  0x68656C70
-/* 021AF8 8012FE58 28257329 */  .word  0x28257329
-/* 021AFC 8012FE5C 0A000000 */  .word  0x0A000000
-/* 021B00 8012FE60 706C6179 */  .word  0x706C6179
-/* 021B04 8012FE64 65725061 */  .word  0x65725061
-/* 021B08 8012FE68 73734368 */  .word  0x73734368
-/* 021B0C 8012FE6C 65636B50 */  .word  0x65636B50
-/* 021B10 8012FE70 6F696E74 */  .word  0x6F696E74
-/* 021B14 8012FE74 28256429 */  .word  0x28256429
-/* 021B18 8012FE78 0A000000 */  .word  0x0A000000
-/* 021B1C 8012FE7C 6C657665 */  .word  0x6C657665
-/* 021B20 8012FE80 6C202564 */  .word  0x6C202564
-/* 021B24 8012FE84 202D3E20 */  .word  0x202D3E20
-/* 021B28 8012FE88 25640A00 */  .word  0x25640A00
+/* 021AE0 8012FE40  */  .asciz  "ターゲット ふめい"
+                        .balign 4
+/* 021AF4 8012FE54  */  .asciz  "help(%s)\n"
+                        .balign 4
+/* 021B00 8012FE60  */  .asciz  "playerPassCheckPoint(%d)\n"
+                        .balign 4
+/* 021B1C 8012FE7C  */  .asciz  "level %d -> %d\n"
+                        .balign 4
 
 glabel D_8012FE8C
 /* 021B2C 8012FE8C  */  .asciz  "ピカチュウを\n　　　みつけた"
@@ -611,27 +502,12 @@ glabel D_801300C0
                         .balign 4
 
 glabel D_801300EC
-/* 021D8C 801300EC A1A90000 */  .word  0xA1A90000
-/* 021D90 801300F0 73657453 */  .word  0x73657453
-/* 021D94 801300F4 6F6E6756 */  .word  0x6F6E6756
-/* 021D98 801300F8 6F6C756D */  .word  0x6F6C756D
-/* 021D9C 801300FC 65282566 */  .word  0x65282566
-/* 021DA0 80130100 29207663 */  .word  0x29207663
-/* 021DA4 80130104 75723A20 */  .word  0x75723A20
-/* 021DA8 80130108 25642F25 */  .word  0x25642F25
-/* 021DAC 8013010C 6420766F */  .word  0x6420766F
-/* 021DB0 80130110 6C3A2564 */  .word  0x6C3A2564
-/* 021DB4 80130114 0A000000 */  .word  0x0A000000
-/* 021DB8 80130118 73657453 */  .word  0x73657453
-/* 021DBC 8013011C 6678566F */  .word  0x6678566F
-/* 021DC0 80130120 6C756D65 */  .word  0x6C756D65
-/* 021DC4 80130124 28256629 */  .word  0x28256629
-/* 021DC8 80130128 20766375 */  .word  0x20766375
-/* 021DCC 8013012C 723A2025 */  .word  0x723A2025
-/* 021DD0 80130130 642F2564 */  .word  0x642F2564
-/* 021DD4 80130134 20766F6C */  .word  0x20766F6C
-/* 021DD8 80130138 3A25640A */  .word  0x3A25640A
-/* 021DDC 8013013C 00000000 */  .word  0x00000000
+/* 021D8C 801300EC  */  .asciz  "？"
+                        .balign 4
+/* 021D90 801300F0  */  .asciz  "setSongVolume(%f) vcur: %d/%d vol:%d\n"
+                        .balign 4
+/* 021DB8 80130118  */  .asciz  "setSfxVolume(%f) vcur: %d/%d vol:%d\n"
+                        .balign 4
 
 glabel D_80130140
 /* 021DE0 80130140 3C40C0C1 */  .float  0.0117647061124444
@@ -2938,27 +2814,12 @@ glabel D_801348B0
 /* 026550 801348B0 00000000 */  .word  0x00000000
 
 glabel D_801348B4
-/* 026554 801348B4 A1CAA4C9 */  .word  0xA1CAA4C9
-/* 026558 801348B8 A4A6A4B0 */  .word  0xA4A6A4B0
-/* 02655C 801348BC A1CB0000 */  .word  0xA1CB0000
-/* 026560 801348C0 4572726F */  .word  0x4572726F
-/* 026564 801348C4 723A2049 */  .word  0x723A2049
-/* 026568 801348C8 6E76616C */  .word  0x6E76616C
-/* 02656C 801348CC 69642063 */  .word  0x69642063
-/* 026570 801348D0 6F6E7465 */  .word  0x6F6E7465
-/* 026574 801348D4 6E745479 */  .word  0x6E745479
-/* 026578 801348D8 70653A25 */  .word  0x70653A25
-/* 02657C 801348DC 640A0000 */  .word  0x640A0000
-/* 026580 801348E0 496E7661 */  .word  0x496E7661
-/* 026584 801348E4 6C696420 */  .word  0x6C696420
-/* 026588 801348E8 6974656D */  .word  0x6974656D
-/* 02658C 801348EC 48656C70 */  .word  0x48656C70
-/* 026590 801348F0 54797065 */  .word  0x54797065
-/* 026594 801348F4 28256429 */  .word  0x28256429
-/* 026598 801348F8 20697465 */  .word  0x20697465
-/* 02659C 801348FC 6D547970 */  .word  0x6D547970
-/* 0265A0 80134900 65203D20 */  .word  0x65203D20
-/* 0265A4 80134904 25640A00 */  .word  0x25640A00
+/* 026554 801348B4  */  .asciz  "（どうぐ）"
+                        .balign 4
+/* 026560 801348C0  */  .asciz  "Error: Invalid contentType:%d\n"
+                        .balign 4
+/* 026580 801348E0  */  .asciz  "Invalid itemHelpType(%d) itemType = %d\n"
+                        .balign 4
 
 glabel D_80134908
 /* 0265A8 80134908 3E99999A */  .float  0.30000001192092896
@@ -3029,10 +2890,12 @@ glabel jtbl_80134988
 /* 026674 801349D4 640A0000 */  .word  0x640A0000
 
 glabel D_801349D8
-/* 026678 801349D8 25640000 */  .word  0x25640000
+/* 026678 801349D8  */  .asciz  "%d"
+                        .balign 4
 
 glabel D_801349DC
-/* 02667C 801349DC 25660000 */  .word  0x25660000
+/* 02667C 801349DC  */  .asciz  "%f"
+                        .balign 4
 
 glabel D_801349E0
 /* 026680 801349E0 4E6F2050 */  .word  0x4E6F2050
@@ -3883,8 +3746,8 @@ glabel D_801357BC
                         .balign 4
 
 glabel D_801357E8
-/* 027488 801357E8 2D2D2D2D */  .word  0x2D2D2D2D
-/* 02748C 801357EC 2D2D0000 */  .word  0x2D2D0000
+/* 027488 801357E8  */  .asciz  "------"
+                        .balign 4
 
 glabel D_801357F0
 /* 027490 801357F0 00000000 */  .word  0x00000000
@@ -3917,197 +3780,167 @@ glabel D_801357F0
 /* 0274FC 8013585C 652E0A00 */  .word  0x652E0A00
 
 glabel D_80135860
-/* 027500 80135860 0AA3D4A3 */  .word  0x0AA3D4A3
-/* 027504 80135864 CFA3D4A3 */  .word  0xCFA3D4A3
-/* 027508 80135868 C1A3CC0A */  .word  0xC1A3CC0A
-/* 02750C 8013586C 25640AA3 */  .word  0x25640AA3
-/* 027510 80135870 CDA3C1A3 */  .word  0xCDA3C1A3
-/* 027514 80135874 D80A2564 */  .word  0xD80A2564
-/* 027518 80135878 0A000000 */  .word  0x0A000000
+/* 027500 80135860  */  .asciz  "\nＴＯＴＡＬ\n%d\nＭＡＸ\n%d\n"
+                        .balign 4
 
 glabel D_8013587C
-/* 02751C 8013587C 0A257325 */  .word  0x0A257325
-/* 027520 80135880 73257325 */  .word  0x73257325
-/* 027524 80135884 730A2573 */  .word  0x730A2573
-/* 027528 80135888 25732573 */  .word  0x25732573
-/* 02752C 8013588C 25730A25 */  .word  0x25730A25
-/* 027530 80135890 73257325 */  .word  0x73257325
-/* 027534 80135894 730AA4A4 */  .word  0x730AA4A4
-/* 027538 80135898 A4A82025 */  .word  0xA4A82025
-/* 02753C 8013589C 6420A5E0 */  .word  0x6420A5E0
-/* 027540 801358A0 A5AB2025 */  .word  0xA5AB2025
-/* 027544 801358A4 640AA4AA */  .word  0x640AA4AA
-/* 027548 801358A8 A4C42025 */  .word  0xA4C42025
-/* 02754C 801358AC 640A0000 */  .word  0x640A0000
+/* 02751C 8013587C  */  .asciz  "\n%s%s%s%s\n%s%s%s%s\n%s%s%s\nいえ %d ムカ %d\nおつ %d\n"
+                        .balign 4
 
 glabel D_801358B0
-/* 027550 801358B0 A5CB0000 */  .word  0xA5CB0000
+/* 027550 801358B0  */  .asciz  "ニ"
+                        .balign 4
 
 glabel D_801358B4
-/* 027554 801358B4 A3F80000 */  .word  0xA3F80000
+/* 027554 801358B4  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358B8
-/* 027558 801358B8 A4EA0000 */  .word  0xA4EA0000
+/* 027558 801358B8  */  .asciz  "り"
+                        .balign 4
 
 glabel D_801358BC
-/* 02755C 801358BC A3F80000 */  .word  0xA3F80000
+/* 02755C 801358BC  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358C0
-/* 027560 801358C0 A4BF0000 */  .word  0xA4BF0000
+/* 027560 801358C0  */  .asciz  "た"
+                        .balign 4
 
 glabel D_801358C4
-/* 027564 801358C4 A3F80000 */  .word  0xA3F80000
+/* 027564 801358C4  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358C8
-/* 027568 801358C8 A4B90000 */  .word  0xA4B90000
+/* 027568 801358C8  */  .asciz  "す"
+                        .balign 4
 
 glabel D_801358CC
-/* 02756C 801358CC A3F80000 */  .word  0xA3F80000
+/* 02756C 801358CC  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358D0
-/* 027570 801358D0 A4AB0000 */  .word  0xA4AB0000
+/* 027570 801358D0  */  .asciz  "か"
+                        .balign 4
 
 glabel D_801358D4
-/* 027574 801358D4 A3F80000 */  .word  0xA3F80000
+/* 027574 801358D4  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358D8
-/* 027578 801358D8 A5C70000 */  .word  0xA5C70000
+/* 027578 801358D8  */  .asciz  "デ"
+                        .balign 4
 
 glabel D_801358DC
-/* 02757C 801358DC A3F80000 */  .word  0xA3F80000
+/* 02757C 801358DC  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358E0
-/* 027580 801358E0 A5C80000 */  .word  0xA5C80000
+/* 027580 801358E0  */  .asciz  "ト"
+                        .balign 4
 
 glabel D_801358E4
-/* 027584 801358E4 A3F80000 */  .word  0xA3F80000
+/* 027584 801358E4  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358E8
-/* 027588 801358E8 A5A20000 */  .word  0xA5A20000
+/* 027588 801358E8  */  .asciz  "ア"
+                        .balign 4
 
 glabel D_801358EC
-/* 02758C 801358EC A3F80000 */  .word  0xA3F80000
+/* 02758C 801358EC  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_801358F0
-/* 027590 801358F0 A5B20000 */  .word  0xA5B20000
+/* 027590 801358F0  */  .asciz  "ゲ"
+                        .balign 4
 
 glabel D_801358F4
 /* 027594 801358F4 A3F80000 */  .word  0xA3F80000
 
 glabel D_801358F8
-/* 027598 801358F8 A4AA0000 */  .word  0xA4AA0000
+/* 027598 801358F8  */  .asciz  "お"
+                        .balign 4
 
 glabel D_801358FC
 /* 02759C 801358FC A3F80000 */  .word  0xA3F80000
 
 glabel D_80135900
-/* 0275A0 80135900 A4DF0000 */  .word  0xA4DF0000
+/* 0275A0 80135900  */  .asciz  "み"
+                        .balign 4
 
 glabel D_80135904
 /* 0275A4 80135904 A3F80000 */  .word  0xA3F80000
 
 glabel D_80135908
-/* 0275A8 80135908 A5D4A5AB */  .word  0xA5D4A5AB
-/* 0275AC 8013590C A5C1A5E5 */  .word  0xA5C1A5E5
-/* 0275B0 80135910 A5A6A4C8 */  .word  0xA5A6A4C8
-/* 0275B4 80135914 0AA4A2A4 */  .word  0x0AA4A2A4
-/* 0275B8 80135918 BDA4F3A4 */  .word  0xBDA4F3A4
-/* 0275BC 8013591C C0A1F3A4 */  .word  0xC0A1F3A4
-/* 0275C0 80135920 CBA4C10A */  .word  0xCBA4C10A
-/* 0275C4 80135924 0A202025 */  .word  0x0A202025
-/* 0275C8 80135928 73257325 */  .word  0x73257325
-/* 0275CC 8013592C 73257325 */  .word  0x73257325
-/* 0275D0 80135930 6420A1F3 */  .word  0x6420A1F3
-/* 0275D4 80135934 00000000 */  .word  0x00000000
+/* 0275A8 80135908  */  .asciz  "ピカチュウと\nあそんだ％にち\n\n  %s%s%s%s%d ％"
+                        .balign 4
 
 glabel D_80135938
-/* 0275D8 80135938 A1A10000 */  .word  0xA1A10000
+/* 0275D8 80135938  */  .asciz  "　"
+                        .balign 4
 
 glabel D_8013593C
 /* 0275DC 8013593C 00000000 */  .word  0x00000000
 
 glabel D_80135940
-/* 0275E0 80135940 A1A10000 */  .word  0xA1A10000
+/* 0275E0 80135940  */  .asciz  "　"
+                        .balign 4
 
 glabel D_80135944
 /* 0275E4 80135944 00000000 */  .word  0x00000000
 
 glabel D_80135948
-/* 0275E8 80135948 A1A10000 */  .word  0xA1A10000
+/* 0275E8 80135948  */  .asciz  "　"
+                        .balign 4
 
 glabel D_8013594C
 /* 0275EC 8013594C 00000000 */  .word  0x00000000
 
 glabel D_80135950
-/* 0275F0 80135950 A1A10000 */  .word  0xA1A10000
+/* 0275F0 80135950  */  .asciz  "　"
+                        .balign 4
 
 glabel D_80135954
 /* 0275F4 80135954 00000000 */  .word  0x00000000
 
 glabel D_80135958
-/* 0275F8 80135958 25730A00 */  .word  0x25730A00
+/* 0275F8 80135958  */  .asciz  "%s\n"
+                        .balign 4
 
 glabel D_8013595C
-/* 0275FC 8013595C A1EFA1F0 */  .word  0xA1EFA1F0
-/* 027600 80135960 0A000000 */  .word  0x0A000000
+/* 0275FC 8013595C  */  .asciz  "￥＄\n"
+                        .balign 4
 
 glabel D_80135964
-/* 027604 80135964 20202564 */  .word  0x20202564
-/* 027608 80135968 0A000000 */  .word  0x0A000000
+/* 027604 80135964  */  .asciz  "  %d\n"
+                        .balign 4
 
 glabel D_8013596C
-/* 02760C 8013596C A4B3A4A8 */  .word  0xA4B3A4A8
-/* 027610 80135970 0A000000 */  .word  0x0A000000
+/* 02760C 8013596C  */  .asciz  "こえ\n"
+                        .balign 4
 
 glabel D_80135974
-/* 027614 80135974 20202564 */  .word  0x20202564
-/* 027618 80135978 A4ABA4A4 */  .word  0xA4ABA4A4
-/* 02761C 8013597C 0A000000 */  .word  0x0A000000
-/* 027620 80135980 73656C65 */  .word  0x73656C65
-/* 027624 80135984 63744247 */  .word  0x63744247
-/* 027628 80135988 4D203A20 */  .word  0x4D203A20
-/* 02762C 8013598C 25642025 */  .word  0x25642025
-/* 027630 80135990 730A0000 */  .word  0x730A0000
-/* 027634 80135994 73656C65 */  .word  0x73656C65
-/* 027638 80135998 6374536F */  .word  0x6374536F
-/* 02763C 8013599C 756E6420 */  .word  0x756E6420
-/* 027640 801359A0 3A202564 */  .word  0x3A202564
-/* 027644 801359A4 2025730A */  .word  0x2025730A
-/* 027648 801359A8 00000000 */  .word  0x00000000
-/* 02764C 801359AC 73656C43 */  .word  0x73656C43
-/* 027650 801359B0 68616E6E */  .word  0x68616E6E
-/* 027654 801359B4 656C2025 */  .word  0x656C2025
-/* 027658 801359B8 640A0000 */  .word  0x640A0000
-/* 02765C 801359BC 73656C43 */  .word  0x73656C43
-/* 027660 801359C0 68617365 */  .word  0x68617365
-/* 027664 801359C4 2025640A */  .word  0x2025640A
-/* 027668 801359C8 00000000 */  .word  0x00000000
-/* 02766C 801359CC 73656C44 */  .word  0x73656C44
-/* 027670 801359D0 69666669 */  .word  0x69666669
-/* 027674 801359D4 63756C74 */  .word  0x63756C74
-/* 027678 801359D8 79202564 */  .word  0x79202564
-/* 02767C 801359DC 0A000000 */  .word  0x0A000000
-/* 027680 801359E0 73656C49 */  .word  0x73656C49
-/* 027684 801359E4 65646546 */  .word  0x65646546
-/* 027688 801359E8 6C616720 */  .word  0x6C616720
-/* 02768C 801359EC 25640A00 */  .word  0x25640A00
-/* 027690 801359F0 73656C45 */  .word  0x73656C45
-/* 027694 801359F4 61737943 */  .word  0x61737943
-/* 027698 801359F8 6F756E74 */  .word  0x6F756E74
-/* 02769C 801359FC 466C6167 */  .word  0x466C6167
-/* 0276A0 80135A00 2025640A */  .word  0x2025640A
-/* 0276A4 80135A04 00000000 */  .word  0x00000000
-/* 0276A8 80135A08 73656C47 */  .word  0x73656C47
-/* 0276AC 80135A0C 616D6543 */  .word  0x616D6543
-/* 0276B0 80135A10 6C656172 */  .word  0x6C656172
-/* 0276B4 80135A14 466C6167 */  .word  0x466C6167
-/* 0276B8 80135A18 2025640A */  .word  0x2025640A
-/* 0276BC 80135A1C 00000000 */  .word  0x00000000
-/* 0276C0 80135A20 73656C53 */  .word  0x73656C53
-/* 0276C4 80135A24 7469636B */  .word  0x7469636B
-/* 0276C8 80135A28 52657665 */  .word  0x52657665
-/* 0276CC 80135A2C 72736520 */  .word  0x72736520
-/* 0276D0 80135A30 25640A00 */  .word  0x25640A00
+/* 027614 80135974  */  .asciz  "  %dかい\n"
+                        .balign 4
+/* 027620 80135980  */  .asciz  "selectBGM : %d %s\n"
+                        .balign 4
+/* 027634 80135994  */  .asciz  "selectSound : %d %s\n"
+                        .balign 4
+/* 02764C 801359AC  */  .asciz  "selChannel %d\n"
+                        .balign 4
+/* 02765C 801359BC  */  .asciz  "selChase %d\n"
+                        .balign 4
+/* 02766C 801359CC  */  .asciz  "selDifficulty %d\n"
+                        .balign 4
+/* 027680 801359E0  */  .asciz  "selIedeFlag %d\n"
+                        .balign 4
+/* 027690 801359F0  */  .asciz  "selEasyCountFlag %d\n"
+                        .balign 4
+/* 0276A8 80135A08  */  .asciz  "selGameClearFlag %d\n"
+                        .balign 4
+/* 0276C0 80135A20  */  .asciz  "selStickReverse %d\n"
+                        .balign 4
 
 glabel D_80135A34
 /* 0276D4 80135A34  */  .asciz  "つうじょう"
@@ -4136,36 +3969,34 @@ glabel D_80135A80
                         .balign 4
 
 glabel D_80135A9C
-/* 02773C 80135A9C A5D5A5A1 */  .word  0xA5D5A5A1
-/* 027740 80135AA0 A5A4A5EB */  .word  0xA5A4A5EB
-/* 027744 80135AA4 25730AA1 */  .word  0x25730AA1
-/* 027748 80135AA8 A125730A */  .word  0xA125730A
-/* 02774C 80135AAC A3C6A3C3 */  .word  0xA3C6A3C3
-/* 027750 80135AB0 A3C22025 */  .word  0xA3C22025
-/* 027754 80135AB4 7325730A */  .word  0x7325730A
-/* 027758 80135AB8 00000000 */  .word  0x00000000
+/* 02773C 80135A9C  */  .asciz  "ファイル%s\n　%s\nＦＣＢ %s%s\n"
+                        .balign 4
 
 glabel D_80135ABC
-/* 02775C 80135ABC A3B10000 */  .word  0xA3B10000
+/* 02775C 80135ABC  */  .asciz  "１"
+                        .balign 4
 
 glabel D_80135AC0
-/* 027760 80135AC0 A3B20000 */  .word  0xA3B20000
+/* 027760 80135AC0  */  .asciz  "２"
+                        .balign 4
 
 glabel D_80135AC4
-/* 027764 80135AC4 A3B10000 */  .word  0xA3B10000
+/* 027764 80135AC4  */  .asciz  "１"
+                        .balign 4
 
 glabel D_80135AC8
-/* 027768 80135AC8 A3F80000 */  .word  0xA3F80000
+/* 027768 80135AC8  */  .asciz  "ｘ"
+                        .balign 4
 
 glabel D_80135ACC
-/* 02776C 80135ACC A3B20000 */  .word  0xA3B20000
+/* 02776C 80135ACC  */  .asciz  "２"
+                        .balign 4
 
 glabel D_80135AD0
-/* 027770 80135AD0 A3F80000 */  .word  0xA3F80000
-/* 027774 80135AD4 73656C45 */  .word  0x73656C45
-/* 027778 80135AD8 4550524F */  .word  0x4550524F
-/* 02777C 80135ADC 4D202564 */  .word  0x4D202564
-/* 027780 80135AE0 0A000000 */  .word  0x0A000000
+/* 027770 80135AD0  */  .asciz  "ｘ"
+                        .balign 4
+/* 027774 80135AD4  */  .asciz  "selEEPROM %d\n"
+                        .balign 4
 
 glabel D_80135AE4
 /* 027784 80135AE4  */  .asciz  "じぶんのへや"
@@ -5302,11 +5133,14 @@ glabel D_80136AC4
                         .balign 4
 
 glabel D_80136B0C
-/* 0287AC 80136B0C A1F90000 */  .word  0xA1F90000
+/* 0287AC 80136B0C  */  .asciz  "☆"
+                        .balign 4
 
 glabel D_80136B10
-/* 0287B0 80136B10 A1EE0000 */  .word  0xA1EE0000
-/* 0287B4 80136B14 00000000 */  .word  0x00000000
+/* 0287B0 80136B10  */  .asciz  "℃"
+                        .balign 4
+/* 0287B4 80136B14  */  .asciz  ""
+                        .balign 4
 
 glabel D_80136B18
 /* 0287B8 80136B18 3F50624DE0000000 */  .double  0.0010000000474974513

@@ -806,6 +806,7 @@ glabel func_8003EA68 # 22
 /* 03E648 8003EA98 03E00008 */  jr          $ra
 /* 03E64C 8003EA9C 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel func_8003EAA0 # 23
 /* 03E650 8003EAA0 8C870000 */  lw          $a3, 0x0($a0)
 /* 03E654 8003EAA4 3C060800 */  lui         $a2, 0x800

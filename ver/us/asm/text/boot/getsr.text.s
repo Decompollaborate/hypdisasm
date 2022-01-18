@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel __osGetSR # 0
 /* 0570E0 80057530 40026000 */  mfc0        $v0, Status
 /* 0570E4 80057534 03E00008 */  jr          $ra

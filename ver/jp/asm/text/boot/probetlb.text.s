@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel __osProbeTLB # 0
 /* 056F30 80057380 40085000 */  mfc0        $t0, EntryHi
 /* 056F34 80057384 310900FF */  andi        $t1, $t0, 0xff

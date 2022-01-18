@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_80053550 # 0
 /* 053100 80053550 40028000 */  mfc0        $v0, Config
 /* 053104 80053554 03E00008 */  jr          $ra

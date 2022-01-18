@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800AC7F0
 /* 0AC3A0 800AC7F0  */  .asciz  "ERROR: Can't alloc %d bytes from heap.\n"
                         .balign 4
 /* 0AC3C8 800AC818  */  .asciz  ""

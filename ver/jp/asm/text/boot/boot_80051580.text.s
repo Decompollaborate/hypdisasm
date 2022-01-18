@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_80051580 # 0
 /* 051130 80051580 18A00011 */  blez        $a1, .L800515C8
 /* 051134 80051584 00000000 */   nop

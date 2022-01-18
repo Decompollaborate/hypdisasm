@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel __osGetCause # 0
 /* 057B90 80057FE0 40026800 */  mfc0        $v0, Cause
 /* 057B94 80057FE4 03E00008 */  jr          $ra

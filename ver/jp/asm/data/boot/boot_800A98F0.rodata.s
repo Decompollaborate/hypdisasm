@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800A98F0
 /* 0A94A0 800A98F0  */  .asciz  "micStateChange: %d -> %d\n"
                         .balign 4
 

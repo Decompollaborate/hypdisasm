@@ -451,6 +451,7 @@ glabel func_8005DEF8 # 12
 /* 05DAC8 8005DF18 03E00008 */  jr          $ra
 /* 05DACC 8005DF1C 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel func_8005DF20 # 13
 /* 05DAD0 8005DF20 09000419 */  j           fakefunc_84001064
 /* 05DAD4 8005DF24 20010FC0 */   addi       $at, $zero, 0xfc0

@@ -15,6 +15,7 @@ glabel __osExceptionPreamble # 0
 /* 054838 80054C88 03400008 */  jr          $k0
 /* 05483C 80054C8C 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel __osException # 1
 /* 054840 80054C90 3C1A8010 */  lui         $k0, %hi(__osThreadSave)
 /* 054844 80054C94 275A4C00 */  addiu       $k0, $k0, %lo(__osThreadSave)
@@ -112,7 +113,7 @@ glabel __osException # 1
 /* 0549AC 80054DFC 8F480018 */  lw          $t0, 0x18($k0)
 /* 0549B0 80054E00 11000014 */  beqz        $t0, .L80054E54
 /* 0549B4 80054E04 00000000 */   nop
-/* 0549B8 80054E08 4448F800 */  cfc1        $t0, $31
+/* 0549B8 80054E08 4448F800 */  cfc1        $t0, FpcCsr
 /* 0549BC 80054E0C 00000000 */  nop
 /* 0549C0 80054E10 AF48012C */  sw          $t0, 0x12c($k0)
 /* 0549C4 80054E14 F7400130 */  sdc1        $f0, 0x130($k0)
@@ -441,6 +442,7 @@ glabel handle_CpU # 3
 /* 054E54 800552A4 1000FFB5 */  b           .L8005517C
 /* 054E58 800552A8 AF5B0118 */   sw         $k1, 0x118($k0)
 
+/* Possibly handwritten function */
 glabel __osEnqueueAndYield # 4
 /* 054E5C 800552AC 3C05800A */  lui         $a1, %hi(__osRunningThread)
 /* 054E60 800552B0 8CA54D70 */  lw          $a1, %lo(__osRunningThread)($a1)
@@ -462,7 +464,7 @@ glabel __osEnqueueAndYield # 4
 /* 054EA0 800552F0 FCBF0100 */  sd          $ra, 0x100($a1)
 /* 054EA4 800552F4 13600009 */  beqz        $k1, .L8005531C
 /* 054EA8 800552F8 ACBF011C */   sw         $ra, 0x11c($a1)
-/* 054EAC 800552FC 445BF800 */  cfc1        $k1, $31
+/* 054EAC 800552FC 445BF800 */  cfc1        $k1, FpcCsr
 /* 054EB0 80055300 F4B40180 */  sdc1        $f20, 0x180($a1)
 /* 054EB4 80055304 F4B60188 */  sdc1        $f22, 0x188($a1)
 /* 054EB8 80055308 F4B80190 */  sdc1        $f24, 0x190($a1)
@@ -539,6 +541,7 @@ glabel __osPopThread # 6
 /* 054FAC 800553FC 03E00008 */  jr          $ra
 /* 054FB0 80055400 AC990000 */   sw         $t9, 0x0($a0)
 
+/* Possibly handwritten function */
 glabel __osDispatchThread # 7
 /* 054FB4 80055404 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 054FB8 80055408 0C0154FD */  jal         __osPopThread
@@ -599,7 +602,7 @@ glabel __osDispatchThread # 7
 /* 055094 800554E4 13600013 */  beqz        $k1, .L80055534
 /* 055098 800554E8 00000000 */   nop
 /* 05509C 800554EC 8F5B012C */  lw          $k1, 0x12c($k0)
-/* 0550A0 800554F0 44DBF800 */  ctc1        $k1, $31
+/* 0550A0 800554F0 44DBF800 */  ctc1        $k1, FpcCsr
 /* 0550A4 800554F4 D7400130 */  ldc1        $f0, 0x130($k0)
 /* 0550A8 800554F8 D7420138 */  ldc1        $f2, 0x138($k0)
 /* 0550AC 800554FC D7440140 */  ldc1        $f4, 0x140($k0)

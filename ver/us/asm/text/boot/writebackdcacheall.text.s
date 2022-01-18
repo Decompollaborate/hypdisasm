@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel osWritebackDCacheAll # 0
 /* 053F80 800543D0 3C088000 */  lui         $t0, 0x8000
 /* 053F84 800543D4 240A2000 */  addiu       $t2, $zero, 0x2000

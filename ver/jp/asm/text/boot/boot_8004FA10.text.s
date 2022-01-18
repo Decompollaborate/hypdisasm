@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel bcopy # 0
 /* 04F5C0 8004FA10 10C0001A */  beqz        $a2, .L8004FA7C
 /* 04F5C4 8004FA14 00A03825 */   move       $a3, $a1

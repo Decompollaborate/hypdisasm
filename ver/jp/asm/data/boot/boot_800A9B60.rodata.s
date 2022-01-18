@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800A9B60
 /* 0A9710 800A9B60  */  .asciz  "ERROR: Unknown status:%d\n"
                         .balign 4
 /* 0A972C 800A9B7C  */  .asciz  "sendMessenger(%d, (%.3f, %.3f, %.3f), (%.3f, %.3f, %.3f), %.3f,\n\t\t(%d, %d, 0x%x, %d, %d), %d, %d)\n"

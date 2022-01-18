@@ -17,7 +17,8 @@ glabel _string_WindowTypeError
                         .balign 4
 
 glabel D_800A2688
-/* 0A2238 800A2688 0A000000 */  .word  0x0A000000
+/* 0A2238 800A2688  */  .asciz  "\n"
+                        .balign 4
 
 glabel D_800A268C
 /* 0A223C 800A268C 00000000 */  .word  0x00000000

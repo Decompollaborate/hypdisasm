@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel __osGetWatchLo # 0
 /* 057100 80057550 40849000 */  mtc0        $a0, WatchLo
 /* 057104 80057554 00000000 */  nop

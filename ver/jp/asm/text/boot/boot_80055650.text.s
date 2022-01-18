@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_80055650 # 0
 /* 055200 80055650 40086000 */  mfc0        $t0, Status
 /* 055204 80055654 2401FFFE */  addiu       $at, $zero, -0x2
@@ -19,6 +20,7 @@ glabel func_80055650 # 0
 /* 055218 80055668 03E00008 */  jr          $ra
 /* 05521C 8005566C 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel func_80055670 # 1
 /* 055220 80055670 40086000 */  mfc0        $t0, Status
 /* 055224 80055674 01044025 */  or          $t0, $t0, $a0

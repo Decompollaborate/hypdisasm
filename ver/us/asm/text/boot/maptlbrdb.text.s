@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel osMapTLBRdb # 0
 /* 057B30 80057F80 40085000 */  mfc0        $t0, EntryHi
 /* 057B34 80057F84 2409001F */  addiu       $t1, $zero, 0x1f

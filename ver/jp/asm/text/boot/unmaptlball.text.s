@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_80055590 # 0
 /* 055140 80055590 40085000 */  mfc0        $t0, EntryHi
 /* 055144 80055594 2409001F */  addiu       $t1, $zero, 0x1f

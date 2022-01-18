@@ -2518,11 +2518,11 @@ glabel L8003AE5C
 /* 03AA80 8003AED0 240D0001 */  addiu       $t5, $zero, 0x1
 /* 03AA84 8003AED4 3C014F00 */  lui         $at, 0x4f00
 /* 03AA88 8003AED8 46025100 */  add.s       $f4, $f10, $f2
-/* 03AA8C 8003AEDC 444CF800 */  cfc1        $t4, $31
-/* 03AA90 8003AEE0 44CDF800 */  ctc1        $t5, $31
+/* 03AA8C 8003AEDC 444CF800 */  cfc1        $t4, FpcCsr
+/* 03AA90 8003AEE0 44CDF800 */  ctc1        $t5, FpcCsr
 /* 03AA94 8003AEE4 00000000 */  nop
 /* 03AA98 8003AEE8 460021A4 */  cvt.w.s     $f6, $f4
-/* 03AA9C 8003AEEC 444DF800 */  cfc1        $t5, $31
+/* 03AA9C 8003AEEC 444DF800 */  cfc1        $t5, FpcCsr
 /* 03AAA0 8003AEF0 00000000 */  nop
 /* 03AAA4 8003AEF4 31AD0078 */  andi        $t5, $t5, 0x78
 /* 03AAA8 8003AEF8 51A00013 */  beql        $t5, $zero, .L8003AF48
@@ -2530,10 +2530,10 @@ glabel L8003AE5C
 /* 03AAB0 8003AF00 44813000 */  mtc1        $at, $f6
 /* 03AAB4 8003AF04 240D0001 */  addiu       $t5, $zero, 0x1
 /* 03AAB8 8003AF08 46062181 */  sub.s       $f6, $f4, $f6
-/* 03AABC 8003AF0C 44CDF800 */  ctc1        $t5, $31
+/* 03AABC 8003AF0C 44CDF800 */  ctc1        $t5, FpcCsr
 /* 03AAC0 8003AF10 00000000 */  nop
 /* 03AAC4 8003AF14 460031A4 */  cvt.w.s     $f6, $f6
-/* 03AAC8 8003AF18 444DF800 */  cfc1        $t5, $31
+/* 03AAC8 8003AF18 444DF800 */  cfc1        $t5, FpcCsr
 /* 03AACC 8003AF1C 00000000 */  nop
 /* 03AAD0 8003AF20 31AD0078 */  andi        $t5, $t5, 0x78
 /* 03AAD4 8003AF24 15A00005 */  bnez        $t5, .L8003AF3C
@@ -2552,18 +2552,18 @@ glabel L8003AE5C
 /* 03AB00 8003AF50 00000000 */   nop
 .L8003AF54:
 /* 03AB04 8003AF54 A0AD0000 */  sb          $t5, 0x0($a1)
-/* 03AB08 8003AF58 44CCF800 */  ctc1        $t4, $31
+/* 03AB08 8003AF58 44CCF800 */  ctc1        $t4, FpcCsr
 /* 03AB0C 8003AF5C C7A80004 */  lwc1        $f8, 0x4($sp)
 /* 03AB10 8003AF60 240F0001 */  addiu       $t7, $zero, 0x1
 /* 03AB14 8003AF64 24A50001 */  addiu       $a1, $a1, 0x1
 /* 03AB18 8003AF68 46004282 */  mul.s       $f10, $f8, $f0
 /* 03AB1C 8003AF6C 3C014F00 */  lui         $at, 0x4f00
 /* 03AB20 8003AF70 46025100 */  add.s       $f4, $f10, $f2
-/* 03AB24 8003AF74 444EF800 */  cfc1        $t6, $31
-/* 03AB28 8003AF78 44CFF800 */  ctc1        $t7, $31
+/* 03AB24 8003AF74 444EF800 */  cfc1        $t6, FpcCsr
+/* 03AB28 8003AF78 44CFF800 */  ctc1        $t7, FpcCsr
 /* 03AB2C 8003AF7C 00000000 */  nop
 /* 03AB30 8003AF80 460021A4 */  cvt.w.s     $f6, $f4
-/* 03AB34 8003AF84 444FF800 */  cfc1        $t7, $31
+/* 03AB34 8003AF84 444FF800 */  cfc1        $t7, FpcCsr
 /* 03AB38 8003AF88 00000000 */  nop
 /* 03AB3C 8003AF8C 31EF0078 */  andi        $t7, $t7, 0x78
 /* 03AB40 8003AF90 51E00013 */  beql        $t7, $zero, .L8003AFE0
@@ -2571,10 +2571,10 @@ glabel L8003AE5C
 /* 03AB48 8003AF98 44813000 */  mtc1        $at, $f6
 /* 03AB4C 8003AF9C 240F0001 */  addiu       $t7, $zero, 0x1
 /* 03AB50 8003AFA0 46062181 */  sub.s       $f6, $f4, $f6
-/* 03AB54 8003AFA4 44CFF800 */  ctc1        $t7, $31
+/* 03AB54 8003AFA4 44CFF800 */  ctc1        $t7, FpcCsr
 /* 03AB58 8003AFA8 00000000 */  nop
 /* 03AB5C 8003AFAC 460031A4 */  cvt.w.s     $f6, $f6
-/* 03AB60 8003AFB0 444FF800 */  cfc1        $t7, $31
+/* 03AB60 8003AFB0 444FF800 */  cfc1        $t7, FpcCsr
 /* 03AB64 8003AFB4 00000000 */  nop
 /* 03AB68 8003AFB8 31EF0078 */  andi        $t7, $t7, 0x78
 /* 03AB6C 8003AFBC 15E00005 */  bnez        $t7, .L8003AFD4
@@ -2593,7 +2593,7 @@ glabel L8003AE5C
 /* 03AB98 8003AFE8 00000000 */   nop
 .L8003AFEC:
 /* 03AB9C 8003AFEC A0AF0000 */  sb          $t7, 0x0($a1)
-/* 03ABA0 8003AFF0 44CEF800 */  ctc1        $t6, $31
+/* 03ABA0 8003AFF0 44CEF800 */  ctc1        $t6, FpcCsr
 /* 03ABA4 8003AFF4 C7A80000 */  lwc1        $f8, 0x0($sp)
 /* 03ABA8 8003AFF8 24190001 */  addiu       $t9, $zero, 0x1
 /* 03ABAC 8003AFFC 24A50001 */  addiu       $a1, $a1, 0x1
@@ -2601,11 +2601,11 @@ glabel L8003AE5C
 /* 03ABB4 8003B004 3C014F00 */  lui         $at, 0x4f00
 /* 03ABB8 8003B008 27BD0018 */  addiu       $sp, $sp, 0x18
 /* 03ABBC 8003B00C 46025100 */  add.s       $f4, $f10, $f2
-/* 03ABC0 8003B010 4458F800 */  cfc1        $t8, $31
-/* 03ABC4 8003B014 44D9F800 */  ctc1        $t9, $31
+/* 03ABC0 8003B010 4458F800 */  cfc1        $t8, FpcCsr
+/* 03ABC4 8003B014 44D9F800 */  ctc1        $t9, FpcCsr
 /* 03ABC8 8003B018 00000000 */  nop
 /* 03ABCC 8003B01C 460021A4 */  cvt.w.s     $f6, $f4
-/* 03ABD0 8003B020 4459F800 */  cfc1        $t9, $31
+/* 03ABD0 8003B020 4459F800 */  cfc1        $t9, FpcCsr
 /* 03ABD4 8003B024 00000000 */  nop
 /* 03ABD8 8003B028 33390078 */  andi        $t9, $t9, 0x78
 /* 03ABDC 8003B02C 53200013 */  beql        $t9, $zero, .L8003B07C
@@ -2613,10 +2613,10 @@ glabel L8003AE5C
 /* 03ABE4 8003B034 44813000 */  mtc1        $at, $f6
 /* 03ABE8 8003B038 24190001 */  addiu       $t9, $zero, 0x1
 /* 03ABEC 8003B03C 46062181 */  sub.s       $f6, $f4, $f6
-/* 03ABF0 8003B040 44D9F800 */  ctc1        $t9, $31
+/* 03ABF0 8003B040 44D9F800 */  ctc1        $t9, FpcCsr
 /* 03ABF4 8003B044 00000000 */  nop
 /* 03ABF8 8003B048 460031A4 */  cvt.w.s     $f6, $f6
-/* 03ABFC 8003B04C 4459F800 */  cfc1        $t9, $31
+/* 03ABFC 8003B04C 4459F800 */  cfc1        $t9, FpcCsr
 /* 03AC00 8003B050 00000000 */  nop
 /* 03AC04 8003B054 33390078 */  andi        $t9, $t9, 0x78
 /* 03AC08 8003B058 17200005 */  bnez        $t9, .L8003B070
@@ -2634,7 +2634,7 @@ glabel L8003AE5C
 /* 03AC30 8003B080 0720FFFB */  bltz        $t9, .L8003B070
 /* 03AC34 8003B084 00000000 */   nop
 .L8003B088:
-/* 03AC38 8003B088 44D8F800 */  ctc1        $t8, $31
+/* 03AC38 8003B088 44D8F800 */  ctc1        $t8, FpcCsr
 /* 03AC3C 8003B08C 03E00008 */  jr          $ra
 /* 03AC40 8003B090 A0B90000 */   sb         $t9, 0x0($a1)
 

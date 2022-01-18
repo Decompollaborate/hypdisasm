@@ -17,6 +17,7 @@ glabel func_800458E8 # 1
 /* 045498 800458E8 46206005 */  abs.d       $f0, $f12
 /* 04549C 800458EC 00000000 */  nop
 
+/* Possibly handwritten function */
 glabel func_800458F0 # 2
 /* 0454A0 800458F0 23BDFFD0 */  addi        $sp, $sp, -0x30
 /* 0454A4 800458F4 F7B40000 */  sdc1        $f20, 0x0($sp)

@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel entrypoint # 0
 /* 001000 80000400 3C08800B */  lui         $t0, %hi(_bootSegmentBssStart)
 /* 001004 80000404 3C090005 */  lui         $t1, (0x585F0 >> 16)

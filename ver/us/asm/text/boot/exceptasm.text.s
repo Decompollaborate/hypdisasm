@@ -15,6 +15,7 @@ glabel __osExceptionPreamble # 0
 /* 0571B8 80057608 03400008 */  jr          $k0
 /* 0571BC 8005760C 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel __osException # 1
 /* 0571C0 80057610 3C1A8010 */  lui         $k0, %hi(__osThreadSave)
 /* 0571C4 80057614 275A03D0 */  addiu       $k0, $k0, %lo(__osThreadSave)
@@ -112,7 +113,7 @@ glabel __osException # 1
 /* 05732C 8005777C 8F480018 */  lw          $t0, 0x18($k0)
 /* 057330 80057780 11000014 */  beqz        $t0, .L800577D4
 /* 057334 80057784 00000000 */   nop
-/* 057338 80057788 4448F800 */  cfc1        $t0, $31
+/* 057338 80057788 4448F800 */  cfc1        $t0, FpcCsr
 /* 05733C 8005778C 00000000 */  nop
 /* 057340 80057790 AF48012C */  sw          $t0, 0x12c($k0)
 /* 057344 80057794 F7400130 */  sdc1        $f0, 0x130($k0)
@@ -449,6 +450,7 @@ glabel handle_CpU # 3
 /* 0577EC 80057C3C 1000FFB5 */  b           .L80057B14
 /* 0577F0 80057C40 AF5B0118 */   sw         $k1, 0x118($k0)
 
+/* Possibly handwritten function */
 glabel __osEnqueueAndYield # 4
 /* 0577F4 80057C44 3C05800A */  lui         $a1, %hi(__osRunningThread)
 /* 0577F8 80057C48 8CA5F8A0 */  lw          $a1, %lo(__osRunningThread)($a1)
@@ -470,7 +472,7 @@ glabel __osEnqueueAndYield # 4
 /* 057838 80057C88 FCBF0100 */  sd          $ra, 0x100($a1)
 /* 05783C 80057C8C 13600009 */  beqz        $k1, .L80057CB4
 /* 057840 80057C90 ACBF011C */   sw         $ra, 0x11c($a1)
-/* 057844 80057C94 445BF800 */  cfc1        $k1, $31
+/* 057844 80057C94 445BF800 */  cfc1        $k1, FpcCsr
 /* 057848 80057C98 F4B40180 */  sdc1        $f20, 0x180($a1)
 /* 05784C 80057C9C F4B60188 */  sdc1        $f22, 0x188($a1)
 /* 057850 80057CA0 F4B80190 */  sdc1        $f24, 0x190($a1)
@@ -551,6 +553,7 @@ glabel __osNop # 7
 /* 05794C 80057D9C 03E00008 */  jr          $ra
 /* 057950 80057DA0 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel __osDispatchThread # 8
 /* 057954 80057DA4 3C04800A */  lui         $a0, %hi(__osRunQueue)
 /* 057958 80057DA8 0C015F63 */  jal         __osPopThread
@@ -611,7 +614,7 @@ glabel __osDispatchThread # 8
 /* 057A34 80057E84 13600013 */  beqz        $k1, .L80057ED4
 /* 057A38 80057E88 00000000 */   nop
 /* 057A3C 80057E8C 8F5B012C */  lw          $k1, 0x12c($k0)
-/* 057A40 80057E90 44DBF800 */  ctc1        $k1, $31
+/* 057A40 80057E90 44DBF800 */  ctc1        $k1, FpcCsr
 /* 057A44 80057E94 D7400130 */  ldc1        $f0, 0x130($k0)
 /* 057A48 80057E98 D7420138 */  ldc1        $f2, 0x138($k0)
 /* 057A4C 80057E9C D7440140 */  ldc1        $f4, 0x140($k0)

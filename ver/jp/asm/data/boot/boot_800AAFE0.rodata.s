@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800AAFE0
 /* 0AAB90 800AAFE0  */  .asciz  " _eepromIdx[%d] = %d\n"
                         .balign 4
 /* 0AABA8 800AAFF8  */  .asciz  "\npreserved data   size: %d\n"

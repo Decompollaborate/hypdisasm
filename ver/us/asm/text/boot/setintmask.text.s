@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel osSetIntMask # 0
 /* 0535B0 80053A00 400C6000 */  mfc0        $t4, Status
 /* 0535B4 80053A04 3182FF01 */  andi        $v0, $t4, 0xff01

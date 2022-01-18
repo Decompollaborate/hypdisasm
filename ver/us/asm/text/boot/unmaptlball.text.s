@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel osUnmapTLBAll # 0
 /* 057AE0 80057F30 40085000 */  mfc0        $t0, EntryHi
 /* 057AE4 80057F34 2409001E */  addiu       $t1, $zero, 0x1e

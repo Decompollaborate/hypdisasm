@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800AB700
 /* 0AB2B0 800AB700  */  .asciz  "Initializing Mic failed.\n"
                         .balign 4
 /* 0AB2CC 800AB71C  */  .asciz  "mic64Init() End\n"

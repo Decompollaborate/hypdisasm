@@ -8,6 +8,8 @@
 .section .rodata
 
 .balign 16
+
+glabel D_800AC050
 /* 0ABC00 800AC050  */  .asciz  "\n"
                         .balign 4
 /* 0ABC04 800AC054  */  .asciz  "|    "

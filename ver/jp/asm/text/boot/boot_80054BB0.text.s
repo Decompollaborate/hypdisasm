@@ -9,12 +9,14 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_80054BB0 # 0
 /* 054760 80054BB0 40846000 */  mtc0        $a0, Status
 /* 054764 80054BB4 00000000 */  nop
 /* 054768 80054BB8 03E00008 */  jr          $ra
 /* 05476C 80054BBC 00000000 */   nop
 
+/* Possibly handwritten function */
 glabel func_80054BC0 # 1
 /* 054770 80054BC0 40026000 */  mfc0        $v0, Status
 /* 054774 80054BC4 03E00008 */  jr          $ra

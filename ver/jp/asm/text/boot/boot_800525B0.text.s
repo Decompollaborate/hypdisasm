@@ -45,6 +45,7 @@ glabel func_800525F0 # 1
 /* 0521D8 80052628 03E00008 */  jr          $ra
 /* 0521DC 8005262C 27BD0028 */   addiu      $sp, $sp, 0x28
 
+/* Possibly handwritten function */
 glabel func_80052630 # 2
 /* 0521E0 80052630 40026000 */  mfc0        $v0, Status
 /* 0521E4 80052634 3042FF01 */  andi        $v0, $v0, 0xff01

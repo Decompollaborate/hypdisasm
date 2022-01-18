@@ -9,6 +9,7 @@
 
 .balign 16
 
+/* Possibly handwritten function */
 glabel func_8005DFF0 # 0
 /* 05DBA0 8005DFF0 40055800 */  mfc0        $a1, Compare
 /* 05DBA4 8005DFF4 8C3C0030 */  lw          $gp, 0x30($at)
@@ -82,6 +83,7 @@ glabel func_8005DFF0 # 0
 /* 05DC8C 8005E0DC 03E00008 */  jr          $ra
 /* 05DC90 8005E0E0 40831000 */   mtc0       $v1, EntryLo0
 
+/* Possibly handwritten function */
 glabel func_8005E0E4 # 1
 /* 05DC94 8005E0E4 40043800 */  mfc0        $a0, Reserved07
 .L8005E0E8:
@@ -110,6 +112,7 @@ glabel D_8005E10C
 /* 05DCE0 8005E130 0900043B */  .word  0x0900043B
 /* 05DCE4 8005E134 23DEFFF8 */  .word  0x23DEFFF8
 
+/* Possibly handwritten function */
 glabel func_8005E138 # 3
 /* 05DCE8 8005E138 001A1A00 */  sll         $v1, $k0, 8
 /* 05DCEC 8005E13C 00031D02 */  srl         $v1, $v1, 20
@@ -129,6 +132,7 @@ glabel func_8005E138 # 3
 /* 05DD20 8005E170 0900043B */  j           fakefunc_840010EC
 /* 05DD24 8005E174 40803800 */   mtc0       $zero, Reserved07
 
+/* Possibly handwritten function */
 glabel func_8005E178 # 4
 /* 05DD28 8005E178 001A1A00 */  sll         $v1, $k0, 8
 /* 05DD2C 8005E17C 00031D02 */  srl         $v1, $v1, 20
@@ -148,6 +152,7 @@ glabel func_8005E178 # 4
 /* 05DD60 8005E1B0 0900043B */  j           fakefunc_840010EC
 /* 05DD64 8005E1B4 40803800 */   mtc0       $zero, Reserved07
 
+/* Possibly handwritten function */
 glabel func_8005E1B8 # 5
 /* 05DD68 8005E1B8 00191200 */  sll         $v0, $t9, 8
 /* 05DD6C 8005E1BC 00021202 */  srl         $v0, $v0, 8
@@ -164,6 +169,7 @@ glabel func_8005E1B8 # 5
 /* 05DD94 8005E1E4 0900043B */  j           fakefunc_840010EC
 /* 05DD98 8005E1E8 23DEFFF8 */   addi       $fp, $fp, -0x8
 
+/* Possibly handwritten function */
 glabel func_8005E1EC # 6
 /* 05DD9C 8005E1EC 001A1C02 */  srl         $v1, $k0, 16
 /* 05DDA0 8005E1F0 30610004 */  andi        $at, $v1, 0x4
@@ -190,6 +196,7 @@ glabel func_8005E1EC # 6
 /* 05DDEC 8005E23C 0900043B */  j           fakefunc_840010EC
 /* 05DDF0 8005E240 23DEFFF8 */   addi       $fp, $fp, -0x8
 
+/* Possibly handwritten function */
 glabel func_8005E244 # 7
 /* 05DDF4 8005E244 20010170 */  addi        $at, $zero, 0x170
 /* 05DDF8 8005E248 200404F0 */  addi        $a0, $zero, 0x4f0
