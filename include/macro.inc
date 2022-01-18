@@ -37,3 +37,7 @@
 .set TagHi,         $29
 .set ErrorEPC,      $30
 .set Reserved31,    $31
+
+# COP1 register aliases
+
+.set FpcCsr,        $31
