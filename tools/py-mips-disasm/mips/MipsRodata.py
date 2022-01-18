@@ -19,10 +19,21 @@ class Rodata(Section):
 
     def analyze(self):
         if self.vRamStart > -1:
+            # Check if the very start of the file has a rodata variable and create it if it doesn't exist yet
+            startVram = self.getVramOffset(0)
+            if self.context.getSymbol(startVram, False) is None and startVram not in self.context.newPointersInData:
+                contextSym = ContextSymbol(startVram, f"D_{startVram:08X}")
+                contextSym.isDefined = True
+                if self.newStuffSuffix:
+                    contextSym.name += f"_{self.newStuffSuffix}"
+                self.context.symbols[startVram] = contextSym
+
             offset = 0
             partOfJumpTable = False
             for w in self.words:
                 currentVram = self.getVramOffset(offset)
+                contextSym = self.context.getAnySymbol(currentVram)
+
                 if currentVram in self.context.jumpTables:
                     partOfJumpTable = True
 
@@ -38,7 +49,7 @@ class Rodata(Section):
 
                 if partOfJumpTable:
                     if w not in self.context.jumpTablesLabels:
-                        self.context.jumpTablesLabels[w] = f"L{toHex(w, 8)[2:]}"
+                        self.context.addJumpTableLabel(w, f"L{w:08X}")
                 elif currentVram in self.context.newPointersInData:
                     if self.context.getAnySymbol(currentVram) is None:
                         contextSym = ContextSymbol(currentVram, "D_" + toHex(currentVram, 8)[2:])
@@ -47,10 +58,23 @@ class Rodata(Section):
                             if self.bytes[offset] != 0:
                                 # Filter out empty strings
                                 contextSym.type = "char"
-                        except UnicodeDecodeError:
+                        except (UnicodeDecodeError, RuntimeError):
                             pass
                         self.context.symbols[currentVram] = contextSym
                         self.context.newPointersInData.remove(currentVram)
+                elif contextSym is not None:
+                    # String guesser
+                    if contextSym.type == "" and contextSym.referenceCounter <= 1:
+                        contextSym.isMaybeString = True
+                        # This would mean the string is an empty string, which is not very likely
+                        if self.bytes[offset] == 0:
+                            contextSym.isMaybeString = False
+                        if contextSym.isMaybeString:
+                            try:
+                                decodeString(self.bytes, offset)
+                            except (UnicodeDecodeError, RuntimeError):
+                                # String can't be decoded
+                                contextSym.isMaybeString = False
 
                 auxLabel = self.context.getGenericLabel(currentVram)
                 if auxLabel is not None:
@@ -104,22 +128,28 @@ class Rodata(Section):
             if auxLabel is None:
                 auxLabel = self.context.getGenericSymbol(currentVram, tryPlusOffset=False)
             if auxLabel is not None:
-                label = "\nglabel " + auxLabel + "\n"
+                label = "\nglabel " + auxLabel.name + "\n"
 
             contextVar = self.context.getSymbol(currentVram, True, False)
             if contextVar is not None:
+                # Uncomment this line to force unknown rodata to be extracted as strings
+                # isAsciz = True
                 type = contextVar.type
                 if type in ("f32", "Vec3f"):
                     # Filter out NaN and infinity
                     if (w & 0x7F800000) != 0x7F800000:
                         isFloat = True
+                    contextVar.isLateRodata = True
                 elif type == "f64":
                     # Filter out NaN and infinity
                     if (((w << 32) | self.words[i+1]) & 0x7FF0000000000000) != 0x7FF0000000000000:
                         # Prevent accidentally losing symbols
                         if self.context.getGenericSymbol(currentVram+4, False) is None:
                             isDouble = True
+                    contextVar.isLateRodata = True
                 elif type == "char":
+                    isAsciz = True
+                elif GlobalConfig.STRING_GUESSER and contextVar.isMaybeString:
                     isAsciz = True
 
                 if contextVar.vram == currentVram:
@@ -134,6 +164,8 @@ class Rodata(Section):
             value = qwordToDouble((w << 32) | otherHalf)
             rodataHex += toHex(otherHalf, 8)[2:]
             skip = 1
+        elif w in self.context.jumpTablesLabels:
+            value = self.context.jumpTablesLabels[w].name
         elif isAsciz:
             try:
                 decodedValue, rawStringSize = decodeString(self.bytes, 4*i)
@@ -142,12 +174,10 @@ class Rodata(Section):
                 value += "\n" + (24 * " ") + ".balign 4"
                 rodataHex = ""
                 skip = rawStringSize // 4
-            except UnicodeDecodeError:
+            except (UnicodeDecodeError, RuntimeError):
                 # Not a string
                 isAsciz = False
                 pass
-        elif w in self.context.jumpTablesLabels:
-            value = self.context.jumpTablesLabels[w]
 
         comment = ""
         if GlobalConfig.ASM_COMMENT:
@@ -156,29 +186,35 @@ class Rodata(Section):
         return f"{label}{comment} {dotType}  {value}", skip
 
 
+    def disassembleToFile(self, f: TextIO):
+        f.write(".include \"macro.inc\"\n")
+        f.write("\n")
+        f.write("# assembler directives\n")
+        f.write(".set noat      # allow manual use of $at\n")
+        f.write(".set noreorder # don't insert nops after branches\n")
+        f.write(".set gp=64     # allow use of 64-bit general purpose registers\n")
+        f.write("\n")
+        f.write(".section .rodata\n")
+        f.write("\n")
+        f.write(".balign 16\n")
+
+        i = 0
+        while i < len(self.words):
+            data, skip = self.getNthWord(i)
+            f.write(data + "\n")
+
+            i += skip
+
+            i += 1
+
     def saveToFile(self, filepath: str):
         super().saveToFile(filepath + ".rodata")
 
         if self.size == 0:
             return
 
-        with open(filepath + ".rodata.s", "w") as f:
-            f.write(".include \"macro.inc\"\n")
-            f.write("\n")
-            f.write("# assembler directives\n")
-            f.write(".set noat      # allow manual use of $at\n")
-            f.write(".set noreorder # don't insert nops after branches\n")
-            f.write(".set gp=64     # allow use of 64-bit general purpose registers\n")
-            f.write("\n")
-            f.write(".section .rodata\n")
-            f.write("\n")
-            f.write(".balign 16\n")
-
-            i = 0
-            while i < len(self.words):
-                data, skip = self.getNthWord(i)
-                f.write(data + "\n")
-
-                i += skip
-
-                i += 1
+        if filepath == "-":
+            self.disassembleToFile(sys.stdout)
+        else:
+            with open(filepath + ".rodata.s", "w") as f:
+                self.disassembleToFile(f)

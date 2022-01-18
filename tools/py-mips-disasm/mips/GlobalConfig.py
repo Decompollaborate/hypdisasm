@@ -7,9 +7,7 @@ import sys
 class GlobalConfig:
     REMOVE_POINTERS: bool = False
     IGNORE_BRANCHES: bool = False # Ignores the address of every branch, jump and jal
-    IGNORE_80: bool = False # Ignores words that starts in 0x80
-    IGNORE_06: bool = False # Ignores words that starts in 0x06
-    IGNORE_04: bool = False # Ignores words that starts in 0x04
+    IGNORE_WORD_LIST: set = set() # Ignores words that starts in 0xXX
 
     WRITE_BINARY: bool = False # write to files splitted binaries
 
@@ -21,9 +19,14 @@ class GlobalConfig:
 
     TRUST_USER_FUNCTIONS: bool = True
     DISASSEMBLE_UNKNOWN_INSTRUCTIONS: bool = False
+    DISASSEMBLE_RSP: bool = False
+
+    STRING_GUESSER: bool = False
 
     QUIET: bool = False
     VERBOSE: bool = False
+    PRINT_FUNCTION_ANALYSIS_DEBUG_INFO: bool = False
+    PRINT_SYMBOL_FINDER_DEBUG_INFO: bool = False
 
 def printQuietless(*args, **kwargs):
     if not GlobalConfig.QUIET:
